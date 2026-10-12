@@ -1,6 +1,6 @@
 """
 ===============================================================================
- FOOTBALL VALUE DASHBOARD (22 European leagues + national teams)
+ FOOTBALL VALUE DASHBOARD (25 leagues, UEFA cups + national teams)
 ===============================================================================
  A self-updating football prediction dashboard for the English Premier League.
 
@@ -2092,7 +2092,7 @@ def render_match_search(directory: dict, all_models: dict, uefa_model, intl_mode
     neutral = q3.toggle("Neutral venue", key="q_neutral",
                         help="Finals and tournament games at a neutral ground.")
     if not (home_q and away_q):
-        st.caption("Type two teams from any of the 22 leagues, the UEFA cups or "
+        st.caption("Type two teams from any of the 25 leagues, the UEFA cups or "
                    "national teams (e.g. 'Man Utd' and 'PSG', or 'Cameroon' and "
                    "'Nigeria') to get advice for that match.")
         return
@@ -2252,7 +2252,7 @@ def main():
 
     # ---------------- Data + models ----------------
     st.title("⚽ Football Value Engine")
-    st.caption(f"{len(LEAGUES)} European leagues + national teams. BET advice only "
+    st.caption(f"{len(LEAGUES)} leagues (Europe, Russia, Japan, China), UEFA cups and national teams. BET advice only "
                "where testing showed a profit; everywhere else you get predictions.")
     with st.spinner("Fetching fixtures..."):
         fixtures = load_fixtures()
@@ -2369,7 +2369,7 @@ def main():
     # ================= TAB 0: This week, every league =================
     with tab_week, safe_section("This Week"):
         st.markdown("### What to do — match by match, day by day")
-        st.caption("Every match in the next 7 days from all 22 leagues, the UEFA cups "
+        st.caption("Every match in the next 7 days from all 25 leagues, the UEFA cups "
                    "and national-team tournaments, with advice.")
         if week_adv.empty:
             render_day_by_day(week_adv, tz, "week")
