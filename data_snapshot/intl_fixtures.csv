@@ -1,0 +1,157 @@
+Comp,Season,Kickoff,HomeTeam,AwayTeam,FTHG,FTAG,Round,Neutral,Date
+UNL,2026,2026-09-24 16:00:00+00:00,Andorra,Malta,1.0,2.0,1,False,2026-09-24
+UNL,2026,2026-09-24 18:45:00+00:00,Portugal,Wales,1.0,0.0,1,False,2026-09-24
+UNL,2026,2026-09-24 18:45:00+00:00,Netherlands,Germany,1.0,1.0,1,False,2026-09-24
+UNL,2026,2026-09-24 18:45:00+00:00,Serbia,Greece,1.0,2.0,1,False,2026-09-24
+UNL,2026,2026-09-24 18:45:00+00:00,Norway,Denmark,3.0,2.0,1,False,2026-09-24
+UNL,2026,2026-09-24 18:45:00+00:00,Austria,Israel,3.0,1.0,1,False,2026-09-24
+UNL,2026,2026-09-24 18:45:00+00:00,Kosovo,Republic of Ireland,1.0,0.0,1,False,2026-09-24
+UNL,2026,2026-09-24 18:45:00+00:00,Liechtenstein,Lithuania,0.0,2.0,1,False,2026-09-24
+UNL,2026,2026-09-25 16:00:00+00:00,Armenia,Latvia,2.0,0.0,1,False,2026-09-25
+UNL,2026,2026-09-25 16:00:00+00:00,Georgia,Northern Ireland,0.0,1.0,1,False,2026-09-25
+UNL,2026,2026-09-25 18:45:00+00:00,Italy,Belgium,0.0,2.0,1,False,2026-09-25
+UNL,2026,2026-09-25 18:45:00+00:00,Turkey,France,0.0,1.0,1,False,2026-09-25
+UNL,2026,2026-09-25 18:45:00+00:00,Hungary,Ukraine,0.0,1.0,1,False,2026-09-25
+UNL,2026,2026-09-25 18:45:00+00:00,Poland,Bosnia and Herzegovina,0.0,0.0,1,False,2026-09-25
+UNL,2026,2026-09-25 18:45:00+00:00,Sweden,Romania,2.0,1.0,1,False,2026-09-25
+UNL,2026,2026-09-25 18:45:00+00:00,Montenegro,Cyprus,2.0,1.0,1,False,2026-09-25
+UNL,2026,2026-09-26 13:00:00+00:00,Slovenia,Scotland,0.0,0.0,1,False,2026-09-26
+UNL,2026,2026-09-26 16:00:00+00:00,Bulgaria,Luxembourg,1.0,2.0,1,False,2026-09-26
+UNL,2026,2026-09-26 16:00:00+00:00,San Marino,Finland,0.0,7.0,1,False,2026-09-26
+UNL,2026,2026-09-26 16:00:00+00:00,Iceland,Estonia,1.0,1.0,1,False,2026-09-26
+UNL,2026,2026-09-26 16:00:00+00:00,Faroe Islands,Kazakhstan,1.0,1.0,1,False,2026-09-26
+UNL,2026,2026-09-26 18:45:00+00:00,England,Spain,2.0,3.0,1,False,2026-09-26
+UNL,2026,2026-09-26 18:45:00+00:00,Albania,Belarus,2.0,0.0,1,False,2026-09-26
+UNL,2026,2026-09-26 18:45:00+00:00,Slovakia,Moldova,2.0,0.0,1,False,2026-09-26
+UNL,2026,2026-09-26 18:45:00+00:00,North Macedonia,Switzerland,0.0,3.0,1,False,2026-09-26
+UNL,2026,2026-09-26 18:45:00+00:00,Czech Republic,Croatia,1.0,2.0,1,False,2026-09-26
+UNL,2026,2026-09-27 13:00:00+00:00,Lithuania,Azerbaijan,1.0,1.0,2,False,2026-09-27
+UNL,2026,2026-09-27 16:00:00+00:00,Austria,Kosovo,3.0,1.0,2,False,2026-09-27
+UNL,2026,2026-09-27 16:00:00+00:00,Serbia,Netherlands,1.0,2.0,2,False,2026-09-27
+UNL,2026,2026-09-27 16:00:00+00:00,Denmark,Wales,2.0,0.0,2,False,2026-09-27
+UNL,2026,2026-09-27 16:00:00+00:00,Gibraltar,Andorra,0.0,0.0,2,False,2026-09-27
+UNL,2026,2026-09-27 18:45:00+00:00,Germany,Greece,0.0,1.0,2,False,2026-09-27
+UNL,2026,2026-09-27 18:45:00+00:00,Norway,Portugal,1.0,2.0,2,False,2026-09-27
+UNL,2026,2026-09-27 18:45:00+00:00,Israel,Republic of Ireland,0.0,3.0,2,False,2026-09-27
+UNL,2026,2026-09-28 16:00:00+00:00,Latvia,Cyprus,0.0,0.0,2,False,2026-09-28
+UNL,2026,2026-09-28 16:00:00+00:00,Armenia,Montenegro,2.0,3.0,2,False,2026-09-28
+UNL,2026,2026-09-28 16:00:00+00:00,Georgia,Ukraine,0.0,0.0,2,False,2026-09-28
+UNL,2026,2026-09-28 18:45:00+00:00,Turkey,Italy,1.0,4.0,2,False,2026-09-28
+UNL,2026,2026-09-28 18:45:00+00:00,Belgium,France,0.0,1.0,2,False,2026-09-28
+UNL,2026,2026-09-28 18:45:00+00:00,Romania,Bosnia and Herzegovina,2.0,4.0,2,False,2026-09-28
+UNL,2026,2026-09-28 18:45:00+00:00,Sweden,Poland,3.0,1.0,2,False,2026-09-28
+UNL,2026,2026-09-28 18:45:00+00:00,Northern Ireland,Hungary,0.0,0.0,2,False,2026-09-28
+UNL,2026,2026-09-29 16:00:00+00:00,Finland,Belarus,0.0,0.0,2,False,2026-09-29
+UNL,2026,2026-09-29 16:00:00+00:00,Moldova,Faroe Islands,1.0,1.0,2,False,2026-09-29
+UNL,2026,2026-09-29 18:45:00+00:00,Slovenia,North Macedonia,2.0,0.0,2,False,2026-09-29
+UNL,2026,2026-09-29 18:45:00+00:00,San Marino,Albania,0.0,3.0,2,False,2026-09-29
+UNL,2026,2026-09-29 18:45:00+00:00,Slovakia,Kazakhstan,2.0,1.0,2,False,2026-09-29
+UNL,2026,2026-09-29 18:45:00+00:00,Bulgaria,Estonia,0.0,0.0,2,False,2026-09-29
+UNL,2026,2026-09-29 18:45:00+00:00,Luxembourg,Iceland,0.0,3.0,2,False,2026-09-29
+UNL,2026,2026-09-29 18:45:00+00:00,Spain,Croatia,4.0,1.0,2,False,2026-09-29
+UNL,2026,2026-09-29 18:45:00+00:00,Czech Republic,England,0.0,2.0,2,False,2026-09-29
+UNL,2026,2026-09-29 18:45:00+00:00,Scotland,Switzerland,0.0,3.0,2,False,2026-09-29
+UNL,2026,2026-10-01 16:00:00+00:00,Azerbaijan,Liechtenstein,0.0,0.0,3,False,2026-10-01
+UNL,2026,2026-10-01 18:45:00+00:00,Denmark,Portugal,2.0,4.0,3,False,2026-10-01
+UNL,2026,2026-10-01 18:45:00+00:00,Malta,Gibraltar,1.0,1.0,3,False,2026-10-01
+UNL,2026,2026-10-01 18:45:00+00:00,Republic of Ireland,Austria,2.0,2.0,3,False,2026-10-01
+UNL,2026,2026-10-01 18:45:00+00:00,Germany,Serbia,2.0,0.0,3,False,2026-10-01
+UNL,2026,2026-10-01 18:45:00+00:00,Greece,Netherlands,2.0,2.0,3,False,2026-10-01
+UNL,2026,2026-10-01 18:45:00+00:00,Wales,Norway,2.0,1.0,3,False,2026-10-01
+UNL,2026,2026-10-01 18:45:00+00:00,Israel,Kosovo,0.0,0.0,3,False,2026-10-01
+UNL,2026,2026-10-02 14:00:00+00:00,Kazakhstan,Moldova,1.0,2.0,3,False,2026-10-02
+UNL,2026,2026-10-02 16:00:00+00:00,Latvia,Montenegro,1.0,2.0,3,False,2026-10-02
+UNL,2026,2026-10-02 16:00:00+00:00,Cyprus,Armenia,2.0,0.0,3,False,2026-10-02
+UNL,2026,2026-10-02 18:45:00+00:00,Faroe Islands,Slovakia,1.0,1.0,3,False,2026-10-02
+UNL,2026,2026-10-02 18:45:00+00:00,Bosnia and Herzegovina,Sweden,1.0,1.0,3,False,2026-10-02
+UNL,2026,2026-10-02 18:45:00+00:00,Poland,Romania,6.0,0.0,3,False,2026-10-02
+UNL,2026,2026-10-02 18:45:00+00:00,Hungary,Georgia,1.0,0.0,3,False,2026-10-02
+UNL,2026,2026-10-02 18:45:00+00:00,France,Italy,1.0,1.0,3,False,2026-10-02
+UNL,2026,2026-10-02 18:45:00+00:00,Ukraine,Northern Ireland,0.0,3.0,3,False,2026-10-02
+UNL,2026,2026-10-02 18:45:00+00:00,Belgium,Turkey,3.0,0.0,3,False,2026-10-02
+UNL,2026,2026-10-03 13:00:00+00:00,Finland,Albania,2.0,1.0,3,False,2026-10-03
+UNL,2026,2026-10-03 16:00:00+00:00,Estonia,Luxembourg,1.0,0.0,3,False,2026-10-03
+UNL,2026,2026-10-03 16:00:00+00:00,Croatia,England,0.0,7.0,3,False,2026-10-03
+UNL,2026,2026-10-03 16:00:00+00:00,Iceland,Bulgaria,3.0,0.0,3,False,2026-10-03
+UNL,2026,2026-10-03 16:00:00+00:00,Belarus,San Marino,4.0,0.0,3,False,2026-10-03
+UNL,2026,2026-10-03 18:45:00+00:00,Switzerland,Slovenia,2.0,1.0,3,False,2026-10-03
+UNL,2026,2026-10-03 18:45:00+00:00,North Macedonia,Scotland,0.0,2.0,3,False,2026-10-03
+UNL,2026,2026-10-03 18:45:00+00:00,Spain,Czech Republic,3.0,1.0,3,False,2026-10-03
+UNL,2026,2026-10-04 13:00:00+00:00,Azerbaijan,Lithuania,1.0,0.0,4,False,2026-10-04
+UNL,2026,2026-10-04 16:00:00+00:00,Kosovo,Austria,1.0,1.0,4,False,2026-10-04
+UNL,2026,2026-10-04 16:00:00+00:00,Malta,Andorra,1.0,0.0,4,False,2026-10-04
+UNL,2026,2026-10-04 18:45:00+00:00,Portugal,Norway,2.0,1.0,4,False,2026-10-04
+UNL,2026,2026-10-04 18:45:00+00:00,Netherlands,Serbia,2.0,1.0,4,False,2026-10-04
+UNL,2026,2026-10-04 18:45:00+00:00,Greece,Germany,0.0,0.0,4,False,2026-10-04
+UNL,2026,2026-10-04 18:45:00+00:00,Republic of Ireland,Israel,1.0,1.0,4,False,2026-10-04
+UNL,2026,2026-10-04 18:45:00+00:00,Wales,Denmark,0.0,1.0,4,False,2026-10-04
+UNL,2026,2026-10-05 16:00:00+00:00,Cyprus,Latvia,2.0,1.0,4,False,2026-10-05
+UNL,2026,2026-10-05 18:45:00+00:00,Bosnia and Herzegovina,Poland,1.0,0.0,4,False,2026-10-05
+UNL,2026,2026-10-05 18:45:00+00:00,Italy,Turkey,3.0,1.0,4,False,2026-10-05
+UNL,2026,2026-10-05 18:45:00+00:00,France,Belgium,4.0,1.0,4,False,2026-10-05
+UNL,2026,2026-10-05 18:45:00+00:00,Romania,Sweden,0.0,1.0,4,False,2026-10-05
+UNL,2026,2026-10-05 18:45:00+00:00,Northern Ireland,Georgia,0.0,0.0,4,False,2026-10-05
+UNL,2026,2026-10-05 18:45:00+00:00,Ukraine,Hungary,1.0,2.0,4,False,2026-10-05
+UNL,2026,2026-10-05 18:45:00+00:00,Montenegro,Armenia,0.0,0.0,4,False,2026-10-05
+UNL,2026,2026-10-06 14:00:00+00:00,Kazakhstan,Faroe Islands,2.0,2.0,4,False,2026-10-06
+UNL,2026,2026-10-06 18:45:00+00:00,England,Czech Republic,3.0,0.0,4,False,2026-10-06
+UNL,2026,2026-10-06 18:45:00+00:00,Belarus,Finland,1.0,0.0,4,False,2026-10-06
+UNL,2026,2026-10-06 18:45:00+00:00,Croatia,Spain,1.0,2.0,4,False,2026-10-06
+UNL,2026,2026-10-06 18:45:00+00:00,Scotland,Slovenia,1.0,2.0,4,False,2026-10-06
+UNL,2026,2026-10-06 18:45:00+00:00,Estonia,Iceland,0.0,0.0,4,False,2026-10-06
+UNL,2026,2026-10-06 18:45:00+00:00,Switzerland,North Macedonia,3.0,0.0,4,False,2026-10-06
+UNL,2026,2026-10-06 18:45:00+00:00,Luxembourg,Bulgaria,0.0,2.0,4,False,2026-10-06
+UNL,2026,2026-10-06 18:45:00+00:00,Albania,San Marino,2.0,1.0,4,False,2026-10-06
+UNL,2026,2026-10-06 18:45:00+00:00,Moldova,Slovakia,0.0,4.0,4,False,2026-10-06
+UNL,2026,2026-11-12 17:00:00+00:00,Turkey,Belgium,,,5,False,2026-11-12
+UNL,2026,2026-11-12 17:00:00+00:00,Armenia,Cyprus,,,5,False,2026-11-12
+UNL,2026,2026-11-12 19:45:00+00:00,Czech Republic,Spain,,,5,False,2026-11-12
+UNL,2026,2026-11-12 19:45:00+00:00,Albania,Finland,,,5,False,2026-11-12
+UNL,2026,2026-11-12 19:45:00+00:00,Montenegro,Latvia,,,5,False,2026-11-12
+UNL,2026,2026-11-12 19:45:00+00:00,San Marino,Belarus,,,5,False,2026-11-12
+UNL,2026,2026-11-12 19:45:00+00:00,Italy,France,,,5,False,2026-11-12
+UNL,2026,2026-11-12 19:45:00+00:00,England,Croatia,,,5,False,2026-11-12
+UNL,2026,2026-11-13 17:00:00+00:00,Moldova,Kazakhstan,,,5,False,2026-11-13
+UNL,2026,2026-11-13 19:45:00+00:00,Serbia,Germany,,,5,False,2026-11-13
+UNL,2026,2026-11-13 19:45:00+00:00,Andorra,Gibraltar,,,5,False,2026-11-13
+UNL,2026,2026-11-13 19:45:00+00:00,Slovenia,Switzerland,,,5,False,2026-11-13
+UNL,2026,2026-11-13 19:45:00+00:00,Scotland,North Macedonia,,,5,False,2026-11-13
+UNL,2026,2026-11-13 19:45:00+00:00,Netherlands,Greece,,,5,False,2026-11-13
+UNL,2026,2026-11-13 19:45:00+00:00,Slovakia,Faroe Islands,,,5,False,2026-11-13
+UNL,2026,2026-11-13 19:45:00+00:00,Bulgaria,Iceland,,,5,False,2026-11-13
+UNL,2026,2026-11-13 19:45:00+00:00,Luxembourg,Estonia,,,5,False,2026-11-13
+UNL,2026,2026-11-13 19:45:00+00:00,Liechtenstein,Azerbaijan,,,5,False,2026-11-13
+UNL,2026,2026-11-14 14:00:00+00:00,Kosovo,Israel,,,5,False,2026-11-14
+UNL,2026,2026-11-14 17:00:00+00:00,Norway,Wales,,,5,False,2026-11-14
+UNL,2026,2026-11-14 17:00:00+00:00,Georgia,Hungary,,,5,False,2026-11-14
+UNL,2026,2026-11-14 19:45:00+00:00,Northern Ireland,Ukraine,,,5,False,2026-11-14
+UNL,2026,2026-11-14 19:45:00+00:00,Austria,Republic of Ireland,,,5,False,2026-11-14
+UNL,2026,2026-11-14 19:45:00+00:00,Portugal,Denmark,,,5,False,2026-11-14
+UNL,2026,2026-11-14 19:45:00+00:00,Sweden,Bosnia and Herzegovina,,,5,False,2026-11-14
+UNL,2026,2026-11-14 19:45:00+00:00,Romania,Poland,,,5,False,2026-11-14
+UNL,2026,2026-11-15 14:00:00+00:00,Latvia,Armenia,,,6,False,2026-11-15
+UNL,2026,2026-11-15 14:00:00+00:00,Cyprus,Montenegro,,,6,False,2026-11-15
+UNL,2026,2026-11-15 17:00:00+00:00,Finland,San Marino,,,6,False,2026-11-15
+UNL,2026,2026-11-15 17:00:00+00:00,Belarus,Albania,,,6,False,2026-11-15
+UNL,2026,2026-11-15 19:45:00+00:00,Spain,England,,,6,False,2026-11-15
+UNL,2026,2026-11-15 19:45:00+00:00,Croatia,Czech Republic,,,6,False,2026-11-15
+UNL,2026,2026-11-15 19:45:00+00:00,France,Turkey,,,6,False,2026-11-15
+UNL,2026,2026-11-15 19:45:00+00:00,Belgium,Italy,,,6,False,2026-11-15
+UNL,2026,2026-11-16 15:00:00+00:00,Faroe Islands,Moldova,,,6,False,2026-11-16
+UNL,2026,2026-11-16 15:00:00+00:00,Kazakhstan,Slovakia,,,6,False,2026-11-16
+UNL,2026,2026-11-16 17:00:00+00:00,Iceland,Luxembourg,,,6,False,2026-11-16
+UNL,2026,2026-11-16 17:00:00+00:00,Estonia,Bulgaria,,,6,False,2026-11-16
+UNL,2026,2026-11-16 17:00:00+00:00,Lithuania,Liechtenstein,,,6,False,2026-11-16
+UNL,2026,2026-11-16 19:45:00+00:00,Gibraltar,Malta,,,6,False,2026-11-16
+UNL,2026,2026-11-16 19:45:00+00:00,Germany,Netherlands,,,6,False,2026-11-16
+UNL,2026,2026-11-16 19:45:00+00:00,Greece,Serbia,,,6,False,2026-11-16
+UNL,2026,2026-11-16 19:45:00+00:00,Switzerland,Scotland,,,6,False,2026-11-16
+UNL,2026,2026-11-16 19:45:00+00:00,North Macedonia,Slovenia,,,6,False,2026-11-16
+UNL,2026,2026-11-17 19:45:00+00:00,Wales,Portugal,,,6,False,2026-11-17
+UNL,2026,2026-11-17 19:45:00+00:00,Hungary,Northern Ireland,,,6,False,2026-11-17
+UNL,2026,2026-11-17 19:45:00+00:00,Denmark,Norway,,,6,False,2026-11-17
+UNL,2026,2026-11-17 19:45:00+00:00,Poland,Sweden,,,6,False,2026-11-17
+UNL,2026,2026-11-17 19:45:00+00:00,Bosnia and Herzegovina,Romania,,,6,False,2026-11-17
+UNL,2026,2026-11-17 19:45:00+00:00,Israel,Austria,,,6,False,2026-11-17
+UNL,2026,2026-11-17 19:45:00+00:00,Ukraine,Georgia,,,6,False,2026-11-17
+UNL,2026,2026-11-17 19:45:00+00:00,Republic of Ireland,Kosovo,,,6,False,2026-11-17
