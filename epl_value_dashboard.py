@@ -92,9 +92,14 @@ DEFAULTS = {
     "goals_pct": 50,        # % weight on actual goals (rest = shot quality)
     "half_life": 400,       # days
     "seasons_back": 2,      # previous seasons blended in
+    "bankroll": 100.0,      # your betting bank (any currency)
+    "kelly_fraction": 0.25, # stake = 1/4 Kelly ...
+    "max_stake_pct": 2.0,   # ... never more than 2% of bankroll on one bet
 }
 PAPER_LOG = Path(os.environ.get("EPL_PAPER_LOG",
                                 Path(__file__).with_name("paper_bets.csv")))
+PREDICTIONS_MD = Path(os.environ.get("EPL_PREDICTIONS",
+                                     Path(__file__).with_name("predictions.md")))
 UK_TZ = "Europe/London"
 
 # Odds columns available in the Football-Data feed, per bookmaker source.
@@ -473,6 +478,123 @@ def predict(model, home, away, adj=None):
     return lam_h, lam_a, m, market_probs(m)
 
 
+def top_scores(m: np.ndarray, k: int = 3) -> list[tuple[str, float]]:
+    """The k most likely exact scores as [("1-1", 0.12), ...]."""
+    flat = np.argsort(m, axis=None)[::-1][:k]
+    return [(f"{i}-{j}", float(m[i, j]))
+            for i, j in zip(*np.unravel_index(flat, m.shape))]
+
+
+def predicted_score(m: np.ndarray, probs: dict) -> tuple[str, float]:
+    """
+    Most likely score WITHIN the most likely result (home win / draw / away
+    win). The single most likely score is 1-1 in ~80% of matches, so it
+    rarely calls the right winner; this version picked the correct result
+    ~50% of the time and the exact score ~11% (2024/25-2025/26 backtest).
+    """
+    best = max(("H", "D", "A"), key=lambda k: probs[k])
+    i, j = np.indices(m.shape)
+    mask = {"H": i > j, "D": i == j, "A": i < j}[best]
+    sub = np.where(mask, m, -1)
+    hi, ai = np.unravel_index(np.argmax(sub), m.shape)
+    return f"{hi}-{ai}", float(m[hi, ai])
+
+
+def score_predictions(window: pd.DataFrame, model: dict) -> pd.DataFrame:
+    """Predicted score, top-3 scores and key probabilities per fixture."""
+    rows = []
+    for _, fx in window.iterrows():
+        lh, la, m, p = predict(model, fx["HomeTeam"], fx["AwayTeam"])
+        pred, pp = predicted_score(m, p)
+        rows.append({
+            "Kickoff (UK)": fx["Kickoff"].tz_convert(UK_TZ).strftime("%a %d %b %H:%M"),
+            "Match": f"{fx['HomeTeam']} v {fx['AwayTeam']}",
+            "Predicted score": pred,
+            "Top 3 scores": ", ".join(f"{sc} ({pr*100:.0f}%)" for sc, pr in top_scores(m)),
+            "Home %": p["H"] * 100, "Draw %": p["D"] * 100, "Away %": p["A"] * 100,
+            "Over 2.5 %": p["O25"] * 100, "BTTS %": p["BTTS_Y"] * 100,
+            "xG": f"{lh:.2f} - {la:.2f}",
+        })
+    return pd.DataFrame(rows)
+
+
+def stake_pct(edge_pct: float, net_odds_: float) -> float:
+    """Quarter-Kelly stake as % of bankroll, capped (protects against
+    over-betting when the model is wrong, which it often is)."""
+    if net_odds_ <= 1 or edge_pct <= 0:
+        return 0.0
+    kelly = (edge_pct / 100) / (net_odds_ - 1)
+    return min(kelly * DEFAULTS["kelly_fraction"] * 100, DEFAULTS["max_stake_pct"])
+
+
+def match_advice(preds: pd.DataFrame, flags: pd.DataFrame,
+                 bankroll: float) -> pd.DataFrame:
+    """
+    One plain-English verdict per fixture: the single best value bet with a
+    stake, or NO BET. Most matches should be NO BET - that is normal.
+    """
+    preds = preds.copy()
+    advice, stakes = [], []
+    for _, r in preds.iterrows():
+        home, away = r["Match"].split(" v ", 1)
+        f = flags[(flags["HomeTeam"] == home) & (flags["AwayTeam"] == away)] \
+            if not flags.empty else flags
+        if f.empty:
+            advice.append("NO BET (price is fair)")
+            stakes.append("")
+            continue
+        b = f.sort_values("Edge %", ascending=False).iloc[0]
+        pct = stake_pct(b["Edge %"], b["Net odds"])
+        advice.append(f"BET {MARKET_LABELS[b['Market']]} @ {b['Price']:.2f} "
+                      f"({b['Book']}, edge +{b['Edge %']:.1f}%)")
+        stakes.append(f"{pct:.1f}% = {bankroll * pct / 100:,.2f}")
+    preds.insert(2, "Advice", advice)
+    preds.insert(3, "Stake", stakes)
+    return preds
+
+
+def write_predictions_md(preds: pd.DataFrame, flags: pd.DataFrame, path: Path,
+                         bankroll: float = DEFAULTS["bankroll"]):
+    """Phone-friendly summary file (shown nicely on GitHub)."""
+    stamp = pd.Timestamp.now(tz=UK_TZ).strftime("%a %d %b %Y %H:%M UK time")
+    lines = [f"# EPL predictions", f"_Updated {stamp}_", ""]
+    if preds.empty:
+        lines += ["No Premier League fixtures in the next 7 days yet. "
+                  "The feed usually publishes the next round mid-week.", ""]
+    else:
+        adv = match_advice(preds, flags, bankroll)
+        lines += [f"## What to do (bankroll {bankroll:,.2f})", "",
+                  "| Kick-off | Match | Advice | Stake |", "|---|---|---|---|"]
+        for _, r in adv.iterrows():
+            lines.append(f"| {r['Kickoff (UK)']} | {r['Match']} | **{r['Advice']}** | "
+                         f"{r['Stake'] or '-'} |")
+        lines += ["", "## Score predictions", "",
+                  "| Kick-off | Match | Predicted | Top 3 scores | H / D / A % | Over 2.5 | BTTS |",
+                  "|---|---|---|---|---|---|---|"]
+        for _, r in preds.iterrows():
+            lines.append(f"| {r['Kickoff (UK)']} | {r['Match']} | **{r['Predicted score']}** | "
+                         f"{r['Top 3 scores']} | {r['Home %']:.0f} / {r['Draw %']:.0f} / "
+                         f"{r['Away %']:.0f} | {r['Over 2.5 %']:.0f}% | {r['BTTS %']:.0f}% |")
+        lines.append("")
+    lines += ["## All value bets found", ""]
+    if flags.empty:
+        lines.append("None right now.")
+    else:
+        lines += ["| Match | Bet | Price | Fair odds | Edge |", "|---|---|---|---|---|"]
+        for _, f in flags.iterrows():
+            lines.append(f"| {f['HomeTeam']} v {f['AwayTeam']} | {MARKET_LABELS[f['Market']]} | "
+                         f"{f['Price']:.2f} ({f['Book']}) | {100 / f['Model %']:.2f} | "
+                         f"+{f['Edge %']:.1f}% |")
+    lines += ["", "_How to read this: BET = the bookmaker's price is higher than the "
+              "model's fair price. Stakes are 1/4 Kelly, capped at "
+              f"{DEFAULTS['max_stake_pct']:.0f}% of bankroll. Check team news first. "
+              "Exact scores are hard: the predicted score was right ~1 in 9 matches in "
+              "testing, the top 3 together ~1 in 3, the winner ~1 in 2. The edge is not "
+              "yet proven - paper-trade before staking real money._", ""]
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text("\n".join(lines), encoding="utf-8")
+
+
 # =============================================================================
 # 3. BETTING VALUE LOGIC
 # =============================================================================
@@ -799,6 +921,11 @@ def main():
                                        "higher = more stable ratings. 400 tested best.")
     seasons_back = st.sidebar.slider("Previous seasons to include", 0, 3,
                                      DEFAULTS["seasons_back"])
+    bankroll = st.sidebar.number_input("Bankroll (for stake sizes)", min_value=1.0,
+                                       value=DEFAULTS["bankroll"], step=10.0,
+                                       help="Your total betting bank in any currency. "
+                                            "Stakes are 1/4 Kelly, max "
+                                            f"{DEFAULTS['max_stake_pct']:.0f}% per bet.")
     autolog = st.sidebar.toggle("Auto-log value bets (paper trading)", value=True,
                                 help=f"Saves every green flag to {PAPER_LOG.name} "
                                      "so you can check real results later.")
@@ -902,6 +1029,28 @@ def main():
                            "¼ Kelly % = suggested stake as % of bankroll (quarter-Kelly). "
                            "What-If sliders do not affect this table.")
 
+        if not window.empty:
+            st.markdown("### What to do — match by match")
+            sp = score_predictions(window, model)
+            adv = match_advice(sp, flagged_bets(window, model, book, min_edge, max_edge),
+                               bankroll)
+
+            def _adv_style(row):
+                green = "background-color: #1e7b34; color: white; font-weight: 600"
+                return [green if row["Advice"].startswith("BET") and c in ("Advice", "Stake")
+                        else "" for c in row.index]
+
+            show_df(adv.style.apply(_adv_style, axis=1).format(
+                {c: "{:.0f}" for c in ["Home %", "Draw %", "Away %", "Over 2.5 %", "BTTS %"]}),
+                hide_index=True)
+            st.caption("Advice = the single best value bet for each match, or NO BET. "
+                       "Most matches should be NO BET. Stakes are 1/4 Kelly, capped at "
+                       f"{DEFAULTS['max_stake_pct']:.0f}% of bankroll. Always check team "
+                       "news first (use the What-If sliders in the Match Analyzer).")
+            st.caption("Predicted score = most likely score within the most likely "
+                       "result. In testing it got the winner right ~50% of the time "
+                       "and the exact score ~11%; the top 3 scores covered ~32%.")
+
     # ================= TAB 2: Match analyzer =================
     with tab_match:
         st.markdown("### Upcoming Match Selector")
@@ -940,10 +1089,12 @@ def main():
                     f"→ adjusted {lam_h:.2f} v {lam_a:.2f}")
 
         st.markdown(f"## {home} vs {away}")
-        x1, x2, x3 = st.columns(3)
+        x1, x2, x3, x4 = st.columns(4)
         x1.metric(f"{home} xG", f"{lam_h:.2f}")
         x2.metric(f"{away} xG", f"{lam_a:.2f}")
         x3.metric("Total xG", f"{lam_h + lam_a:.2f}")
+        ps, pp = predicted_score(m, probs)
+        x4.metric("Predicted score", ps, delta=f"{pp*100:.0f}% chance", delta_color="off")
 
         st.markdown("#### Match outcome")
         o1, o2, o3 = st.columns(3)
@@ -1176,7 +1327,8 @@ def run_headless_log(argv=None) -> int:
     """
     Headless mode for a daily scheduled task (no browser needed):
         python epl_value_dashboard.py --log
-    Fetches data, logs new value flags and prints a paper-trading summary.
+    Fetches data, logs new value flags, writes predictions.md (predicted
+    scores + value bets) and prints a paper-trading summary.
     """
     ap = argparse.ArgumentParser(description="Log EPL value bets (paper trading).")
     ap.add_argument("--log", action="store_true")
@@ -1187,6 +1339,7 @@ def run_headless_log(argv=None) -> int:
     ap.add_argument("--goals-pct", type=int, default=DEFAULTS["goals_pct"])
     ap.add_argument("--half-life", type=int, default=DEFAULTS["half_life"])
     ap.add_argument("--seasons-back", type=int, default=DEFAULTS["seasons_back"])
+    ap.add_argument("--bankroll", type=float, default=DEFAULTS["bankroll"])
     args = ap.parse_args(argv)
     logging.getLogger("streamlit").setLevel(logging.ERROR)
 
@@ -1197,8 +1350,13 @@ def run_headless_log(argv=None) -> int:
     model = fit_model(results, args.half_life, args.goals_pct / 100)
     max_edge = np.inf if args.max_edge >= 100 else args.max_edge
     window = upcoming_fixtures(load_fixtures())
-    _, added, err = update_paper_log(
-        flagged_bets(window, model, args.book, args.min_edge, max_edge))
+    flags = flagged_bets(window, model, args.book, args.min_edge, max_edge)
+    _, added, err = update_paper_log(flags)
+    try:
+        write_predictions_md(score_predictions(window, model), flags, PREDICTIONS_MD,
+                             args.bankroll)
+    except Exception as exc:
+        print(f"WARNING: could not write {PREDICTIONS_MD}: {exc}")
     if err:
         print(f"ERROR writing {PAPER_LOG}: {err}")
         return 1

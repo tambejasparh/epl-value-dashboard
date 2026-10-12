@@ -10,7 +10,31 @@ No API keys, no manual downloads, no data entry.
 
 ---
 
-## 1. Install (once)
+## Fully automatic mode (recommended): GitHub + Streamlit
+
+1. Upload all files in this folder to a GitHub repository (including
+   `.github/workflows/daily.yml`).
+2. Deploy the repository on share.streamlit.io (main file
+   `epl_value_dashboard.py`) to get your dashboard link.
+3. In the repository's **Actions** tab, open **Daily EPL predictions** and
+   click **Run workflow** once to test it.
+
+From then on GitHub runs the system twice a day (08:00 and 16:00 Douala time)
+with no computer needed. Each run updates two files in the repository:
+
+- **predictions.md** - open it on GitHub (or the GitHub phone app) for a
+  match-by-match "BET ... / NO BET" verdict with stake, the predicted score,
+  the top 3 scores and win/draw/loss chances.
+- **paper_bets.csv** - the permanent paper-trading record. The dashboard
+  reads it, so the Paper Trading tab no longer resets.
+
+To change the bankroll used for stakes in predictions.md, edit the line
+`run: python epl_value_dashboard.py --log` in `.github/workflows/daily.yml`
+to e.g. `run: python epl_value_dashboard.py --log --bankroll 50000`.
+
+## Run it on your own computer instead
+
+### 1. Install (once)
 
 You need **Python 3.10 or newer** (python.org; on Windows tick "Add Python to PATH").
 
@@ -19,7 +43,7 @@ cd epl-value-dashboard
 pip install -r requirements.txt
 ```
 
-## 2. Launch
+### 2. Launch
 
 ```bash
 streamlit run epl_value_dashboard.py
@@ -28,7 +52,7 @@ streamlit run epl_value_dashboard.py
 It opens at http://localhost:8501. On Windows you can double-click
 `run_dashboard.bat` instead (`run_dashboard.sh` on macOS/Linux).
 
-## 3. Automate the paper-trading log (recommended)
+### 3. Automate the paper-trading log
 
 Value flags are logged whenever the dashboard is open. To log them even when
 it isn't, schedule the headless run once or twice a day:
@@ -53,7 +77,7 @@ hand: `python epl_value_dashboard.py --log` (options: `--book`, `--min-edge`,
 
 | Tab | Purpose |
 |---|---|
-| 📋 Master Fixtures Value Table | Every fixture still to kick off in the next 7 days, all 1X2 and O/U 2.5 markets, ranked by edge. Green = value. |
+| 📋 Master Fixtures Value Table | Every fixture still to kick off in the next 7 days, ranked by edge (green = value), plus **What to do — match by match**: one BET/NO BET verdict per game with stake, predicted score and top 3 scores. |
 | 🔍 Match Analyzer | One match in depth: xG, outcome / goals / BTTS probabilities, fair odds, likely scorelines. Sidebar What-If sliders apply here. |
 | 📊 Team Ratings | Attack and defence strength of every team (1.00 = league average). |
 | 🧾 Backtest | Replays a past season week by week with no look-ahead: profit, ROI with 95% range, closing-line value, model-vs-market accuracy, calibration. |
@@ -69,6 +93,21 @@ hand: `python epl_value_dashboard.py --log` (options: `--book`, `--min-edge`,
 | Weight on actual goals | 50% | Remaining 50% is shot quality (xG when the feed has it, else shots on target). Best in testing. |
 | Form half-life | 400 days | Best in testing. |
 | Previous seasons | 2 | Needed for stable early-season ratings and for the backtest. |
+| Bankroll | 100 | Stakes are 1/4 Kelly, never more than 2% of bankroll per bet. |
+
+## How accurate are the score predictions?
+
+Backtested over 760 matches (2024/25 and 2025/26):
+
+| Prediction | Right |
+|---|---|
+| Winner (or draw) of the predicted score | ~50% |
+| One of the top 3 most likely scores | ~32% |
+| Exact predicted score | ~11% (about 1 in 9) |
+
+No model gets exact scores right much more often - football has too much
+randomness. The value of the system is in the BET / NO BET prices, not in
+calling exact scores.
 
 ## Backtest evidence (walk-forward; tuned on 2024/25, tested once on 2025/26)
 
