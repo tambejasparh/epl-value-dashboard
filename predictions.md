@@ -1,27 +1,11 @@
 # Football predictions — day by day
-_Updated Mon 12 Oct 2026 15:42 (Africa/Douala time). Bankroll for stakes: 100.00_
+_Updated Mon 12 Oct 2026 22:34 (Africa/Douala time). Bankroll for stakes: 100.00_
 
 ## ✅ This week's bets
 
-**Monday 12 October**
-- 20:00 · Coventry v Newcastle (England - Premier League) — **Under 2.5 @ 2.20 (Bet365, edge +10.5%)** — stake 2.0% = 2.00
+No bets this week - the prices are fair. That is normal.
 
 ## 📅 Every match, day by day
-
-### Monday 12 October (10 matches)
-
-| Time | Competition | Match | Advice | Stake | Predicted | H / D / A % | Over 0.5 / 1.5 / 2.5 % | Under 0.5 / 1.5 / 2.5 % |
-|---|---|---|---|---|---|---|---|---|
-| 16:00 | Greece - Super League | PAOK v Kalamata | NO BET (model not profitable in this league) | - | 2-0 | 71 / 19 / 10 | 95 / 84 / 62 | 5 / 16 / 38 |
-| 17:30 | Italy - Serie A | Atalanta v Venezia | NO BET (model not profitable in this league) | - | 2-0 | 64 / 21 / 15 | 95 / 79 / 56 | 5 / 21 / 44 |
-| 17:30 | Spain - Segunda Division | Oviedo v Eibar | NO BET (model not profitable in this league) | - | 1-0 | 38 / 30 / 32 | 88 / 62 / 35 | 12 / 38 / 65 |
-| 18:00 | Turkey - Super Lig | Eyupspor v Goztep | NO BET (model not profitable in this league) | - | 1-2 | 30 / 28 / 42 | 92 / 76 / 50 | 8 / 24 / 50 |
-| 19:45 | France - Ligue 2 | Dijon v Metz | NO BET (model not profitable in this league) | - | 1-2 | 32 / 24 / 44 | 95 / 82 / 60 | 5 / 18 / 40 |
-| 19:45 | Italy - Serie A | Torino v Udinese | NO BET (model not profitable in this league) | - | 1-0 | 37 / 27 / 36 | 92 / 73 / 48 | 8 / 27 / 52 |
-| 20:00 | England - Premier League | Coventry v Newcastle | **BET Under 2.5 @ 2.20 (Bet365, edge +10.5%)** | 2.0% = 2.00 | 0-1 | 26 / 28 / 47 | 92 / 76 / 50 | 8 / 24 / 50 |
-| 20:00 | Spain - La Liga | Levante v Sevilla | NO BET (model not profitable in this league) | - | 1-0 | 43 / 26 / 31 | 93 / 75 / 51 | 7 / 25 / 49 |
-| 20:00 | Spain - Segunda Division | Tenerife v Girona | NO BET (model not profitable in this league) | - | 0-1 | 31 / 28 / 41 | 90 / 67 / 41 | 10 / 33 / 59 |
-| 20:15 | Portugal - Primeira Liga | Famalicao v Alverca | NO BET (model not profitable in this league) | - | 1-0 | 52 / 25 / 23 | 92 / 70 / 44 | 8 / 30 / 56 |
 
 ### Tuesday 13 October (17 matches)
 
@@ -229,6 +213,18 @@ _Updated Mon 12 Oct 2026 15:42 (Africa/Douala time). Bankroll for stakes: 100.00
 | 19:45 | France - Ligue 1 | Lyon v Nice | NO BET (model not profitable in this league) | - | 2-1 | 57 / 22 / 21 | 95 / 81 / 59 | 5 / 19 / 41 |
 | 19:45 | Italy - Serie A | Juventus v Lazio | NO BET (model not profitable in this league) | - | 1-0 | 52 / 26 / 22 | 92 / 71 / 45 | 8 / 29 / 55 |
 | 20:00 | Spain - La Liga | Real Madrid v Sevilla | NO BET (model not profitable in this league) | - | 2-0 | 72 / 17 / 11 | 96 / 82 / 60 | 4 / 18 / 40 |
+
+### Monday 19 October (7 matches)
+
+| Time | Competition | Match | Advice | Stake | Predicted | H / D / A % | Over 0.5 / 1.5 / 2.5 % | Under 0.5 / 1.5 / 2.5 % |
+|---|---|---|---|---|---|---|---|---|
+| 17:30 | Italy - Serie A | Monza v Cagliari | NO BET (model not profitable in this league) | - | 0-1 | 33 / 27 / 40 | 92 / 72 / 46 | 8 / 28 / 54 |
+| 18:00 | Turkey - Super Lig | Trabzonspor v Besiktas | NO BET (model not profitable in this league) | - | 2-1 | 41 / 27 / 32 | 94 / 80 / 56 | 6 / 20 / 44 |
+| 19:45 | France - Ligue 2 | Rodez v Montpellier | NO BET (model not profitable in this league) | - | 0-1 | 34 / 27 / 39 | 92 / 71 / 46 | 8 / 29 / 54 |
+| 19:45 | Italy - Serie A | Parma v Torino | NO BET (model not profitable in this league) | - | 0-1 | 35 / 29 / 35 | 89 / 66 / 39 | 11 / 34 / 61 |
+| 20:00 | England - Premier League | Tottenham v Coventry | Odds not out yet: back Tottenham only at 2.07+ (re-check when odds appear) | - | 1-0 | 50 / 28 / 22 | 91 / 73 / 46 | 9 / 27 / 54 |
+| 20:00 | Spain - La Liga | Getafe v Vallecano | NO BET (model not profitable in this league) | - | 1-0 | 34 / 32 / 34 | 85 / 57 / 30 | 15 / 43 / 70 |
+| 20:15 | Portugal - Primeira Liga | Sp Braga v Gil Vicente | NO BET (model not profitable in this league) | - | 1-0 | 50 / 26 / 24 | 91 / 69 / 43 | 9 / 31 / 57 |
 
 ## ☑️ Before you place any bet
 1. Your bookmaker's odds must be **at least** the price shown (for 🏆 games: at least the 'back only at' price). Lower odds = skip the bet.
