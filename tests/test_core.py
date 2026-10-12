@@ -390,3 +390,39 @@ def test_gap_fill_adds_newer_results_from_backup_site():
         assert len(app.gap_fill_results(df, "E0")) == 2
     finally:
         app._fetch_json = orig
+
+
+def test_schedule_adds_matches_the_odds_feed_has_not_published():
+    """Weekend league games appear before the odds feed publishes them,
+    with every goal line, and never as a BET (no odds yet)."""
+    res = LEAGUE_DATA["E0"]
+    teams = sorted(set(res["HomeTeam"]))
+    h, a, h2, a2 = teams[:4]
+    soon = (pd.Timestamp.now(tz="UTC") + pd.Timedelta(days=3)).strftime("%Y-%m-%d 14:00:00Z")
+    feed = [{"DateUtc": soon, "HomeTeam": h, "AwayTeam": a, "HomeTeamScore": None,
+             "AwayTeamScore": None},
+            {"DateUtc": soon, "HomeTeam": h2, "AwayTeam": a2, "HomeTeamScore": None,
+             "AwayTeamScore": None}]
+    orig = app._fetch_json
+    app._fetch_json = lambda url: feed if "/epl-" in url else None
+    try:
+        sched = app._load_schedule_live()
+    finally:
+        app._fetch_json = orig
+    assert len(sched) == 2 and set(sched["Div"]) == {"E0"}
+    # the odds feed already has the first match -> only the second is added
+    fx = make_fixtures().head(0)
+    known = pd.DataFrame({"Div": ["E0"], "HomeTeam": [h], "AwayTeam": [a],
+                          "Date": [pd.Timestamp(soon[:10])],
+                          "Kickoff": [pd.Timestamp(soon)], "B365H": [2.0]})
+    out = app.add_schedule(pd.concat([fx, known], ignore_index=True), sched, {"E0": res})
+    assert len(out) == 2
+    added = out[out["NoOdds"] == True]  # noqa: E712
+    assert list(zip(added["HomeTeam"], added["AwayTeam"])) == [(h2, a2)]
+    adv, flags, _ = app.weekly_overview(out, {"E0": res}, 400, 0.5, "Bet365", 3, 20, 100)
+    row = adv[adv["Match"] == f"{h2} v {a2}"].iloc[0]
+    assert row["Advice"].startswith("Odds not out yet")
+    for c in app.GOAL_COLS:
+        assert 0 <= row[c] <= 100
+    assert abs(row["Over 0.5 %"] + row["Under 0.5 %"] - 100) < 1e-6
+    assert row["Over 0.5 %"] > row["Over 1.5 %"] > row["Over 2.5 %"]

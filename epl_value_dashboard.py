@@ -353,6 +353,7 @@ ODDS_COLUMNS = sorted({c for d in (BOOKMAKERS, CLOSING_BOOKMAKERS)
 
 MARKET_LABELS = {
     "H": "Home Win", "D": "Draw", "A": "Away Win",
+    "O05": "Over 0.5", "U05": "Under 0.5",
     "O15": "Over 1.5", "U15": "Under 1.5",
     "O25": "Over 2.5", "U25": "Under 2.5",
     "O35": "Over 3.5", "U35": "Under 3.5",
@@ -774,6 +775,88 @@ def _load_fixtures_live() -> pd.DataFrame:
     return df.sort_values(["Kickoff"]).reset_index(drop=True)
 
 
+@st.cache_data(ttl=3600, show_spinner=False)
+def load_schedule() -> pd.DataFrame:
+    """Full-season fixture lists (no odds) for the leagues fixturedownload.com
+    covers. Football-Data only publishes the next round, mid-week."""
+    return _live_or_backup("schedule", _load_schedule_live, prefer_backup=True)
+
+
+def _load_schedule_live() -> pd.DataFrame:
+    from concurrent.futures import ThreadPoolExecutor
+    start = _season_start_year(dt.date.today())
+
+    def one(item):
+        lg, slug = item
+        data = _fetch_json(UEFA_FEED.format(slug=f"{slug}-{start}"))
+        if not data:
+            return None
+        f = pd.DataFrame(data)
+        if not {"DateUtc", "HomeTeam", "AwayTeam"}.issubset(f.columns):
+            return None
+        if "HomeTeamScore" in f.columns:
+            f = f[f["HomeTeamScore"].isna()]
+        f = f.assign(Div=lg)[["Div", "DateUtc", "HomeTeam", "AwayTeam"]]
+        return f
+    with ThreadPoolExecutor(max_workers=8) as ex:
+        frames = [f for f in ex.map(one, GAPFILL_FEEDS.items()) if f is not None]
+    if not frames:
+        return pd.DataFrame()
+    df = pd.concat(frames, ignore_index=True)
+    df["Kickoff"] = pd.to_datetime(df["DateUtc"], utc=True, errors="coerce")
+    df = df.dropna(subset=["Kickoff", "HomeTeam", "AwayTeam"])
+    return df.drop(columns="DateUtc").reset_index(drop=True)
+
+
+def add_schedule(fixtures: pd.DataFrame, schedule: pd.DataFrame,
+                 all_results: dict) -> pd.DataFrame:
+    """Add every scheduled league match that the odds feed has not published
+    yet (marked NoOdds). Club names are mapped to the results' spelling."""
+    if schedule is None or schedule.empty:
+        return fixtures
+    try:
+        sch = schedule.copy()
+        sch["Kickoff"] = pd.to_datetime(sch["Kickoff"], utc=True)
+        add = []
+        for lg, grp in sch.groupby("Div"):
+            res = all_results.get(lg)
+            if res is None or res.empty:
+                continue
+            current = season_codes(dt.date.today(), 0)[0]
+            cur = res[res["Season"].astype(str) == current]
+            cur = cur if not cur.empty else res
+            names = match_club_names(set(grp["HomeTeam"]) | set(grp["AwayTeam"]),
+                                     set(cur["HomeTeam"]) | set(cur["AwayTeam"]))
+            g = grp[grp["HomeTeam"].isin(names) & grp["AwayTeam"].isin(names)].copy()
+            g["HomeTeam"] = g["HomeTeam"].map(names)
+            g["AwayTeam"] = g["AwayTeam"].map(names)
+            add.append(g)
+        if not add:
+            return fixtures
+        add = pd.concat(add, ignore_index=True)
+        add["Date"] = (add["Kickoff"].dt.tz_convert(UK_TZ).dt.tz_localize(None)
+                       .dt.normalize())
+        if fixtures is not None and not fixtures.empty:
+            known = fixtures[["Div", "HomeTeam", "AwayTeam", "Date"]]
+            m = add.merge(known, on=["Div", "HomeTeam", "AwayTeam"], how="left",
+                          suffixes=("", "_fd"))
+            dup = (m["Date_fd"].notna()
+                   & ((m["Date"] - m["Date_fd"]).abs() <= pd.Timedelta(days=3)))
+            dup_keys = set(zip(m.loc[dup, "Div"], m.loc[dup, "HomeTeam"],
+                               m.loc[dup, "AwayTeam"], m.loc[dup, "Date"]))
+            add = add[[k not in dup_keys for k in
+                       zip(add["Div"], add["HomeTeam"], add["AwayTeam"], add["Date"])]]
+        if add.empty:
+            return fixtures
+        add = add.assign(NoOdds=True)
+        base = fixtures if fixtures is not None else pd.DataFrame()
+        out = pd.concat([base, add], ignore_index=True) if not base.empty else add
+        out.attrs.update(getattr(fixtures, "attrs", {}) or {})
+        return out.sort_values("Kickoff").reset_index(drop=True)
+    except Exception:
+        return fixtures                # the schedule is a bonus - never break fixtures
+
+
 def upcoming_fixtures(fixtures: pd.DataFrame, days: int = 7) -> pd.DataFrame:
     """Fixtures that have not kicked off yet, within the next `days`."""
     if fixtures.empty or "Kickoff" not in fixtures.columns:
@@ -1068,7 +1151,7 @@ def market_probs(m: np.ndarray) -> dict:
         "BTTS_Y": m[1:, 1:].sum(),
     }
     probs["BTTS_N"] = 1 - probs["BTTS_Y"]
-    for line, key in [(1.5, "15"), (2.5, "25"), (3.5, "35")]:
+    for line, key in [(0.5, "05"), (1.5, "15"), (2.5, "25"), (3.5, "35")]:
         probs[f"O{key}"] = m[total > line].sum()
         probs[f"U{key}"] = 1 - probs[f"O{key}"]
     return {k: float(v) for k, v in probs.items()}
@@ -1102,6 +1185,20 @@ def predicted_score(m: np.ndarray, probs: dict) -> tuple[str, float]:
     return f"{hi}-{ai}", float(m[hi, ai])
 
 
+GOAL_LINES = ["0.5", "1.5", "2.5"]
+GOAL_COLS = [f"{side} {g} %" for g in GOAL_LINES for side in ("Over", "Under")]
+
+
+def goal_line_cols(p: dict) -> dict:
+    """Over / Under 0.5, 1.5 and 2.5 goals, in %."""
+    out = {}
+    for g in GOAL_LINES:
+        k = g.replace(".", "")
+        out[f"Over {g} %"] = p[f"O{k}"] * 100
+        out[f"Under {g} %"] = p[f"U{k}"] * 100
+    return out
+
+
 def score_predictions(window: pd.DataFrame, model: dict) -> pd.DataFrame:
     """Predicted score, top-3 scores and key probabilities per fixture."""
     rows = []
@@ -1116,8 +1213,11 @@ def score_predictions(window: pd.DataFrame, model: dict) -> pd.DataFrame:
             "Predicted score": pred,
             "Top 3 scores": ", ".join(f"{sc} ({pr*100:.0f}%)" for sc, pr in top_scores(m)),
             "Home %": p["H"] * 100, "Draw %": p["D"] * 100, "Away %": p["A"] * 100,
-            "Over 2.5 %": p["O25"] * 100, "BTTS %": p["BTTS_Y"] * 100,
+            **goal_line_cols(p), "BTTS %": p["BTTS_Y"] * 100,
             "xG": f"{lh:.2f} - {la:.2f}",
+            "NoOdds": str(fx.get("NoOdds", "")) == "True",
+            "_best": max(("H", "D", "A"), key=lambda k: p[k]),
+            "_pbest": max(p["H"], p["D"], p["A"]),
         })
     return pd.DataFrame(rows)
 
@@ -1151,7 +1251,15 @@ def match_advice(preds: pd.DataFrame, flags: pd.DataFrame, bankroll: float,
             if "League" in flags.columns:
                 f = f[f["League"] == lg]
         if f.empty:
-            advice.append("NO BET (price is fair)")
+            if status == "predict":
+                advice.append("NO BET (model not profitable in this league)")
+            elif r.get("NoOdds", False):
+                lab = {"H": home, "D": "Draw", "A": away}[r["_best"]]
+                floor = (1 / r["_pbest"]) * (1 + DEFAULTS["min_edge"] / 100)
+                advice.append(f"Odds not out yet: back {lab} only at {floor:.2f}+ "
+                              "(re-check when odds appear)")
+            else:
+                advice.append("NO BET (price is fair)")
             stakes.append("")
             continue
         b = f.sort_values("Edge %", ascending=False).iloc[0]
@@ -1170,7 +1278,7 @@ def match_advice(preds: pd.DataFrame, flags: pd.DataFrame, bankroll: float,
     preds.insert(1, "Status", status_col)
     preds.insert(4, "Advice", advice)
     preds.insert(5, "Stake", stakes)
-    return preds
+    return preds.drop(columns=["NoOdds", "_best", "_pbest"], errors="ignore")
 
 
 def weekly_overview(fixtures: pd.DataFrame, all_results: dict, half_life: int,
@@ -1237,15 +1345,20 @@ def write_predictions_md(adv: pd.DataFrame, flags: pd.DataFrame, path: Path,
         lines += ["## 📅 Every match, day by day", ""]
         for day, grp in d.groupby("_day", sort=True):
             lines += [f"### {grp['Day'].iloc[0]} ({len(grp)} matches)", "",
-                      "| Time | Competition | Match | Advice | Stake | Predicted | H / D / A % |",
-                      "|---|---|---|---|---|---|---|"]
+                      "| Time | Competition | Match | Advice | Stake | Predicted | H / D / A % "
+                      "| Over 0.5 / 1.5 / 2.5 % | Under 0.5 / 1.5 / 2.5 % |",
+                      "|---|---|---|---|---|---|---|---|---|"]
             for _, r in grp.iterrows():
                 adv_txt = r["Advice"]
                 if adv_txt.startswith(("BET", "WATCH")):
                     adv_txt = f"**{adv_txt}**"
                 lines.append(f"| {r['Time']} | {r['Competition']} | {r['Match']} | {adv_txt} | "
                              f"{r['Stake'] or '-'} | {r['Predicted score']} | "
-                             f"{r['Home %']:.0f} / {r['Draw %']:.0f} / {r['Away %']:.0f} |")
+                             f"{r['Home %']:.0f} / {r['Draw %']:.0f} / {r['Away %']:.0f} | "
+                             + " / ".join(f"{r.get(f'Over {g} %', np.nan):.0f}" for g in GOAL_LINES)
+                             + " | "
+                             + " / ".join(f"{r.get(f'Under {g} %', np.nan):.0f}" for g in GOAL_LINES)
+                             + " |")
             lines.append("")
     lines += [BEFORE_YOU_BET.replace("**Before you place any bet**",
                                      "## ☑️ Before you place any bet"), "",
@@ -1512,7 +1625,7 @@ def cup_predictions(fixtures: pd.DataFrame, model: dict, code_col: str = "Comp",
             "Predicted score": pred,
             "Top 3 scores": ", ".join(f"{sc} ({pr*100:.0f}%)" for sc, pr in top_scores(m)),
             "Home %": p["H"] * 100, "Draw %": p["D"] * 100, "Away %": p["A"] * 100,
-            "Over 2.5 %": p["O25"] * 100, "BTTS %": p["BTTS_Y"] * 100,
+            **goal_line_cols(p), "BTTS %": p["BTTS_Y"] * 100,
             "xG": f"{lh:.2f} - {la:.2f}",
             "Advice": (f"No odds feed: back {lab} only at "
                        f"{(1 / p[best]) * (1 + min_edge / 100):.2f}+"),
@@ -1619,8 +1732,9 @@ def render_day_by_day(adv: pd.DataFrame, tz: str, key: str):
         return [css if c in ("Advice", "Stake") else "" for c in row.index]
 
     cols = ["Time", "Competition", "Match", "Advice", "Stake", "Predicted score",
-            "Top 3 scores", "Home %", "Draw %", "Away %", "Over 2.5 %", "BTTS %"]
-    pct_cols = ["Home %", "Draw %", "Away %", "Over 2.5 %", "BTTS %"]
+            "Top 3 scores", "Home %", "Draw %", "Away %", *GOAL_COLS, "BTTS %"]
+    pct_cols = ["Home %", "Draw %", "Away %", *GOAL_COLS, "BTTS %"]
+    cols = [c for c in cols if c in view.columns]
     if view.empty:
         st.caption("No matches to show with this filter.")
     else:
@@ -2225,11 +2339,13 @@ def match_query(home: str, away: str, directory: dict, all_models: dict, uefa_mo
 def render_match_search(directory: dict, all_models: dict, uefa_model, intl_model,
                         fixtures, book, min_edge, max_edge, bankroll, allow_all):
     st.markdown("#### 🔎 Ask about any match")
-    q1, q2, q3 = st.columns([3, 3, 1])
-    home_q = q1.text_input("Home team", key="q_home", placeholder="e.g. Arsenal")
-    away_q = q2.text_input("Away team", key="q_away", placeholder="e.g. Chelsea")
-    neutral = q3.toggle("Neutral venue", key="q_neutral",
-                        help="Finals and tournament games at a neutral ground.")
+    with st.form("match_search_form", border=False):
+        q1, q2, q3 = st.columns([3, 3, 1])
+        home_q = q1.text_input("Home team", key="q_home", placeholder="e.g. Arsenal")
+        away_q = q2.text_input("Away team", key="q_away", placeholder="e.g. Chelsea")
+        neutral = q3.toggle("Neutral venue", key="q_neutral",
+                            help="Finals and tournament games at a neutral ground.")
+        st.form_submit_button("🔎 Get betting advice", type="primary")
     if not (home_q and away_q):
         st.caption("Type two teams from any of the 25 leagues, the UEFA cups or "
                    "national teams (e.g. 'Man Utd' and 'PSG', or 'Cameroon' and "
@@ -2287,7 +2403,8 @@ def render_match_search(directory: dict, all_models: dict, uefa_model, intl_mode
     c4.metric("H / D / A", f"{p['H']*100:.0f} / {p['D']*100:.0f} / {p['A']*100:.0f}%")
     odds = res.get("odds", {})
     rows = []
-    for k in ["H", "D", "A", "O15", "O25", "U25", "O35", "BTTS_Y", "BTTS_N"]:
+    for k in ["H", "D", "A", "O05", "U05", "O15", "U15", "O25", "U25", "O35",
+              "BTTS_Y", "BTTS_N"]:
         pr = p[k]
         bo = odds.get(k, np.nan)
         rows.append({"Market": MARKET_LABELS[k].replace("Home Win", f"{home} win")
@@ -2407,6 +2524,8 @@ def main():
     with st.spinner(f"Downloading results for {len(needed)} league(s) "
                     "(the first load can take about 30 seconds)..."):
         all_results = load_all_results(tuple(sorted(needed)), seasons_back)
+    fixtures = add_schedule(fixtures, load_schedule(), all_results)
+    window_all = upcoming_fixtures(fixtures)
     results = all_results.get(league, pd.DataFrame())
 
     if results.empty:
@@ -2640,6 +2759,13 @@ def main():
                        delta=f"Fair odds {1/probs[k]:.2f}", delta_color="off")
 
         st.markdown("#### Goals markets")
+        u1, u2, u3 = st.columns(3)
+        for col, g in zip((u1, u2, u3), GOAL_LINES):
+            k = g.replace(".", "")
+            col.metric(f"Over / Under {g}",
+                       f"{probs['O' + k]*100:.0f}% / {probs['U' + k]*100:.0f}%",
+                       delta=f"Fair {1/probs['O' + k]:.2f} / {1/probs['U' + k]:.2f}",
+                       delta_color="off")
         g1, g2, g3, g4 = st.columns(4)
         g1.metric("Over 1.5", f"{probs['O15']*100:.1f}%",
                   delta=f"Fair {1/probs['O15']:.2f}", delta_color="off")
@@ -2651,7 +2777,7 @@ def main():
                   delta=f"Fair {1/probs['BTTS_Y']:.2f}", delta_color="off")
 
         st.markdown(f"#### Value check vs {book}")
-        keys = ["H", "D", "A", "O15", "U15", "O25", "U25", "O35", "U35",
+        keys = ["H", "D", "A", "O05", "U05", "O15", "U15", "O25", "U25", "O35", "U35",
                 "BTTS_Y", "BTTS_N"]
         vt = pd.DataFrame(value_rows(probs, odds, keys))
         show_df(style_value(vt, min_edge, max_edge), hide_index=True)
@@ -2877,8 +3003,7 @@ def main():
             else:
                 cup_tab = cup_predictions(uefa, uefa_model, "Comp", 14, min_edge)
                 show_df(cup_tab.drop(columns=["League", "Status", "Stake", "Kickoff UTC"]).style.format(
-                    {c: "{:.0f}" for c in ["Home %", "Draw %", "Away %", "Over 2.5 %",
-                                           "BTTS %"]}), hide_index=True,
+                    {c: "{:.0f}" for c in ["Home %", "Draw %", "Away %", *GOAL_COLS, "BTTS %"]}), hide_index=True,
                     height=min(700, 38 + 35 * max(len(cup_tab), 1)))
             st.markdown("#### Any two clubs")
             clubs_u = sorted(uefa_model["teams"])
@@ -2946,7 +3071,7 @@ def main():
             else:
                 show_df(nl_up.drop(columns=["League", "Status", "Stake", "Kickoff UTC"])
                         .style.format({c: "{:.0f}" for c in
-                                       ["Home %", "Draw %", "Away %", "Over 2.5 %", "BTTS %"]}),
+                                       ["Home %", "Draw %", "Away %", *GOAL_COLS, "BTTS %"]}),
                         hide_index=True)
             st.markdown("#### Any two national teams")
             st.caption(f"Ratings from {im['n_matches']:,} internationals over the last "
@@ -3105,6 +3230,12 @@ def run_headless_log(argv=None) -> int:
                 saved.append(lg)
         if fixtures.attrs.get("source") == "live" and save_snapshot("fixtures", fixtures):
             saved.append("fixtures")
+    schedule = load_schedule()
+    if (not args.no_backup and schedule.attrs.get("source") == "live"
+            and save_snapshot("schedule", schedule)):
+        saved.append("schedule")
+    fixtures = add_schedule(fixtures, schedule, all_results)
+    window = upcoming_fixtures(fixtures)
     # Safety switch from paper-trading results
     STATUS_OVERRIDES.clear()
     if not log.empty:
