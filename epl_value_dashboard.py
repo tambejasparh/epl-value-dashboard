@@ -1995,7 +1995,10 @@ def team_directory(all_models: dict, uefa_model, intl_model) -> dict:
             d.setdefault(t, []).append(("league", lg))
     if uefa_model:
         for t in uefa_model["teams"]:
-            d.setdefault(t, []).append(("uefa", None))
+            # list UEFA clubs under their league spelling ("Man Utd" -> "Man United")
+            # so a match between two league clubs is always treated as a league match
+            name = UEFA_CLUB_MAP[t][1] if t in UEFA_CLUB_MAP else t
+            d.setdefault(name, []).append(("uefa", t))
     if intl_model:
         for t in intl_model["current_teams"]:
             d.setdefault(t, []).append(("intl", None))
@@ -2047,7 +2050,7 @@ def match_query(home: str, away: str, directory: dict, all_models: dict, uefa_mo
     lh = {lg for k, lg in kh if k == "league"}
     la = {lg for k, lg in ka if k == "league"}
     common = sorted(lh & la, key=lambda c: STATUS_RANK[league_status(c, allow_all)])
-    out = {"home": home, "away": away, "neutral": neutral}
+    out = {"home": home, "away": away, "neutral": neutral, "mh": home, "ma": away}
     if common:
         lg = common[0]
         model = all_models[lg]
@@ -2067,9 +2070,11 @@ def match_query(home: str, away: str, directory: dict, all_models: dict, uefa_mo
     if any(k == "intl" for k, _ in kh) and any(k == "intl" for k, _ in ka):
         out.update(model=intl_model, competition="National teams", league=None, status="cup")
         return out
-    in_uefa = uefa_model is not None and home in uefa_model["teams"] and away in uefa_model["teams"]
-    if in_uefa:
-        out.update(model=uefa_model, competition="European club match", league=None, status="cup")
+    uh = next((u for k, u in kh if k == "uefa"), None)
+    ua = next((u for k, u in ka if k == "uefa"), None)
+    if uefa_model is not None and uh and ua:
+        out.update(model=uefa_model, competition="European club match", league=None,
+                   status="cup", mh=uh, ma=ua)          # UEFA-feed spellings
         return out
     if uefa_model is not None and lh and la:
         m = _cross_league_model(uefa_model, all_models,
@@ -2118,7 +2123,7 @@ def render_match_search(directory: dict, all_models: dict, uefa_model, intl_mode
         st.warning(res["error"])
         return
     model = res["model"]
-    lh_, la_, m, p = predict(model, home, away, neutral=neutral)
+    lh_, la_, m, p = predict(model, res["mh"], res["ma"], neutral=neutral)
     ps, pp = predicted_score(m, p)
     st.markdown(f"**{home} v {away}** — {res['competition']} "
                 f"({STATUS_LABEL[res['status']]})")

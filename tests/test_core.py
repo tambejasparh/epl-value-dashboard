@@ -334,3 +334,16 @@ def test_extra_league_format_and_fixtures():
         assert app.league_status("JPN") == "predict" and app.league_status("RUS") == "predict"
     finally:
         app._fetch_csv = original
+
+
+def test_search_prefers_league_over_uefa_spelling():
+    """'Man Utd' (UEFA feed) and 'Man United' (league data) are the same club:
+    two league clubs must always be treated as a league match."""
+    models = {"E0": app._fit_model(LEAGUE_DATA["E0"], 400, 0.5)}
+    fake_uefa = {"teams": ["Man Utd", "Arsenal", "Salzburg"]}
+    d = app.team_directory(models, fake_uefa, None)
+    assert "Man Utd" not in d and ("uefa", "Man Utd") in d["Man United"]
+    assert app.resolve_team("Man Utd", list(d))[0] == "Man United"
+    r = app.match_query("Man United", "Arsenal", d, models, fake_uefa, None, pd.DataFrame(),
+                        "Bet365", 3, 20, 100, False, False)
+    assert r["league"] == "E0"
