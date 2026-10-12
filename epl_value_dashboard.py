@@ -1,6 +1,6 @@
 """
 ===============================================================================
- EPL POISSON VALUE DASHBOARD
+ FOOTBALL VALUE DASHBOARD (22 European leagues + national teams)
 ===============================================================================
  A self-updating football prediction dashboard for the English Premier League.
 
@@ -58,10 +58,13 @@
 import argparse
 import datetime as dt
 import io
+import json
 import logging
 import os
 import sys
 import tempfile
+import time
+from contextlib import contextmanager
 from pathlib import Path
 
 import numpy as np
@@ -75,7 +78,87 @@ from scipy.stats import poisson
 # CONFIGURATION
 # -----------------------------------------------------------------------------
 BASE_URL = "https://www.football-data.co.uk"
-LEAGUE = "E0"                      # Football-Data code for the Premier League
+INTL_URL = ("https://raw.githubusercontent.com/martj42/"
+            "international_results/master/results.csv")
+
+# Leagues covered (Football-Data.co.uk main files): code -> (country, name)
+LEAGUES = {
+    "E0": ("England", "Premier League"), "E1": ("England", "Championship"),
+    "E2": ("England", "League One"), "E3": ("England", "League Two"),
+    "EC": ("England", "National League"),
+    "SC0": ("Scotland", "Premiership"), "SC1": ("Scotland", "Championship"),
+    "SC2": ("Scotland", "League One"), "SC3": ("Scotland", "League Two"),
+    "D1": ("Germany", "Bundesliga"), "D2": ("Germany", "2. Bundesliga"),
+    "I1": ("Italy", "Serie A"), "I2": ("Italy", "Serie B"),
+    "SP1": ("Spain", "La Liga"), "SP2": ("Spain", "Segunda Division"),
+    "F1": ("France", "Ligue 1"), "F2": ("France", "Ligue 2"),
+    "N1": ("Netherlands", "Eredivisie"), "B1": ("Belgium", "Pro League"),
+    "P1": ("Portugal", "Primeira Liga"), "T1": ("Turkey", "Super Lig"),
+    "G1": ("Greece", "Super League"),
+    # Second Football-Data format: all seasons in one file, closing odds only
+    "RUS": ("Russia", "Premier League"), "JPN": ("Japan", "J1 League"),
+    "CHN": ("China", "Super League"),
+}
+# (Country, League) as written in Football-Data's extra-leagues files -> code
+NEW_FORMAT = {"RUS": ("Russia", "Premier League"), "JPN": ("Japan", "J1 League"),
+              "CHN": ("China", "Super League")}
+DEFAULT_LEAGUE = "E0"
+
+# Betting status per league, from walk-forward backtests (edge 3-20%, Betfair
+# Exchange prices, model refitted weekly on past matches only):
+#   "bet"     - profitable in BOTH test seasons -> BET advice with stakes
+#   "watch"   - about break-even -> advice logged for paper trading only
+#   "predict" - lost money in testing -> predictions only, never BET advice
+LEAGUE_STATUS = {"E0": "bet", "E1": "watch"}
+# Automatic safety switch: a BET league drops to WATCH when paper trading shows
+# no edge (filled at run time from the settled paper-trading log)
+SAFETY = {"min_bets": 150, "min_avg_clv": 0.0}
+STATUS_OVERRIDES: dict = {}
+STATUS_LABEL = {"bet": "✅ Bet", "watch": "👀 Watch (paper only)",
+                "predict": "📊 Predictions only",
+                "cup": "🏆 Predictions only (no odds feed)"}
+STATUS_RANK = {"bet": 0, "watch": 1, "predict": 2, "cup": 3}
+# Flagged-bet ROI in testing: 2025/26 (and 2024/25 where tested)
+LEAGUE_EVIDENCE = {
+    "E0": "+16.7% (2025/26), +18.8% (2024/25)", "E1": "+5.2% (2025/26), +2.0% (2024/25)",
+    "E2": "-4.5% (2025/26)", "E3": "-9.0% (2025/26)", "EC": "-4.5% (2025/26)",
+    "SC0": "+8.7% (2025/26, 1 season only)", "SC1": "-4.5% (2025/26)",
+    "SC2": "+1.3% (2025/26), -8.4% (2024/25)", "SC3": "-1.1% (2025/26)",
+    "D1": "-17.0% (2025/26)", "D2": "-15.1% (2025/26)", "I1": "-6.1% (2025/26)",
+    "I2": "-31.8% (2025/26)", "SP1": "-14.9% (2025/26)", "SP2": "-12.2% (2025/26)",
+    "F1": "-16.1% (2025/26)", "F2": "-4.6% (2025/26)",
+    "N1": "+5.7% (2025/26), -18.6% (2024/25)", "B1": "+2.3% (2025/26), -19.2% (2024/25)",
+    "P1": "+3.2% (2025/26), -34.9% (2024/25)", "T1": "-11.9% (2025/26)",
+    "G1": "-17.0% (2025/26), -21.4% (2024/25)",
+    "RUS": "-15.3% (2023/24), -26.8% (2024/25), +7.7% (2025/26) - average closing odds",
+    "JPN": "-23.6% (2025, Betfair closing odds)", "CHN": "-7.8% (2025, Betfair closing odds)",
+}
+
+
+CUP_CODES = set()          # filled below: every code that has no odds feed
+
+
+def league_name(code: str) -> str:
+    if code in UEFA_COMPS:
+        return UEFA_COMPS[code][0]
+    if code == NATIONS_LEAGUE[0]:
+        return NATIONS_LEAGUE[1]
+    for c, name, _ in NATION_TOURNAMENTS:
+        if code == c:
+            return name
+    country, name = LEAGUES.get(code, ("", code))
+    return f"{country} - {name}" if country else name
+
+
+def league_status(code: str, allow_all: bool = False) -> str:
+    if code in CUP_CODES:
+        return "cup"                     # no odds feed -> predictions only
+    if allow_all:
+        return "bet"
+    if code in STATUS_OVERRIDES:         # safety switch from paper-trading results
+        return STATUS_OVERRIDES[code][0]
+    return LEAGUE_STATUS.get(code, "predict")
+
 MAX_GOALS = 10                     # Score matrix runs 0..10 goals per team
 SHRINKAGE = 2.0                    # L2 penalty on team ratings (regularisation)
 HTTP_HEADERS = {
@@ -95,12 +178,135 @@ DEFAULTS = {
     "bankroll": 100.0,      # your betting bank (any currency)
     "kelly_fraction": 0.25, # stake = 1/4 Kelly ...
     "max_stake_pct": 2.0,   # ... never more than 2% of bankroll on one bet
+    "timezone": "Africa/Douala",   # times in the day-by-day view
 }
+TIMEZONES = ["Africa/Douala", "Africa/Lagos", "Africa/Accra", "Africa/Abidjan",
+             "Africa/Cairo", "Africa/Johannesburg", "Africa/Nairobi",
+             "Europe/London", "Europe/Paris", "UTC"]
+# National-team model (tested on 1,915 competitive internationals, 2024-2026)
+INTL_DEFAULTS = {"half_life": 1825, "years": 10, "friendly_weight": 1.0}
+# ---- UEFA competitions (fixtures + results: fixturedownload.com JSON feeds) ----
+UEFA_FEED = "https://fixturedownload.com/feed/json/{slug}"
+UEFA_COMPS = {"UCL": ("UEFA Champions League", "champions-league"),
+              "UEL": ("UEFA Europa League", "europa-league"),
+              "UECL": ("UEFA Conference League", "conference-league")}
+NATIONS_LEAGUE = ("UNL", "UEFA Nations League", "nations-league")
+# Tested on the 2025/26 European season (531 matches, refitted monthly on past
+# matches only): right result 56.5%, log-loss 0.944 vs 1.022 naive baseline.
+UEFA_DEFAULTS = {"half_life": 730, "offset_penalty": 1.0, "club_penalty": 5.0,
+                 "seasons": 3}
+# Older / alternative spellings in the UEFA feed -> current spelling
+UEFA_ALIASES = {"Atlético de Madrid": "Atleti", "Dortmund": "B. Dortmund",
+                "Crvena zvezda": "Crvena Zvezda", "Shakhtar Donetsk": "Shakhtar",
+                "FC Porto": "Porto", "Bayern": "Bayern München", "Man United": "Man Utd",
+                "Omonoia": "Omonia"}
+# UEFA club name -> (league code, Football-Data name) for clubs in covered leagues
+UEFA_CLUB_MAP = {
+    "AEK Athens": ("G1", "AEK"), "AZ Alkmaar": ("N1", "AZ Alkmaar"),
+    "Aberdeen": ("SC0", "Aberdeen"), "Ajax": ("N1", "Ajax"),
+    "Anderlecht": ("B1", "Anderlecht"), "Antwerp": ("B1", "Antwerp"),
+    "Arsenal": ("E0", "Arsenal"), "Aston Villa": ("E0", "Aston Villa"),
+    "Atalanta": ("I1", "Atalanta"), "Athletic Club": ("SP1", "Ath Bilbao"),
+    "Atleti": ("SP1", "Ath Madrid"), "B. Dortmund": ("D1", "Dortmund"),
+    "Barcelona": ("SP1", "Barcelona"), "Basaksehir": ("T1", "Buyuksehyr"),
+    "Bayern München": ("D1", "Bayern Munich"), "Benfica": ("P1", "Benfica"),
+    "Besiktas": ("T1", "Besiktas"), "Bologna": ("I1", "Bologna"),
+    "Bournemouth": ("E0", "Bournemouth"), "Braga": ("P1", "Sp Braga"),
+    "Brest": ("F1", "Brest"), "Brighton": ("E0", "Brighton"),
+    "Celta": ("SP1", "Celta"), "Celtic": ("SC0", "Celtic"),
+    "Cercle Brugge": ("B1", "Cercle Brugge"), "Chelsea": ("E0", "Chelsea"),
+    "Club Brugge": ("B1", "Club Brugge"), "Como": ("I1", "Como"),
+    "Crystal Palace": ("E0", "Crystal Palace"), "Fenerbahçe": ("T1", "Fenerbahce"),
+    "Feyenoord": ("N1", "Feyenoord"), "Fiorentina": ("I1", "Fiorentina"),
+    "Frankfurt": ("D1", "Ein Frankfurt"), "Freiburg": ("D1", "Freiburg"),
+    "Galatasaray": ("T1", "Galatasaray"), "Genk": ("B1", "Genk"), "Gent": ("B1", "Gent"),
+    "Getafe": ("SP1", "Getafe"), "Girona": ("SP1", "Girona"),
+    "Go Ahead Eagles": ("N1", "Go Ahead Eagles"), "Hearts": ("SC0", "Hearts"),
+    "Heidenheim": ("D1", "Heidenheim"), "Hoffenheim": ("D1", "Hoffenheim"),
+    "Inter": ("I1", "Inter"), "Juventus": ("I1", "Juventus"), "Lazio": ("I1", "Lazio"),
+    "Leipzig": ("D1", "RB Leipzig"), "Lens": ("F1", "Lens"),
+    "Leverkusen": ("D1", "Leverkusen"), "Lille": ("F1", "Lille"),
+    "Liverpool": ("E0", "Liverpool"), "Lyon": ("F1", "Lyon"), "Mainz": ("D1", "Mainz"),
+    "Man City": ("E0", "Man City"), "Man Utd": ("E0", "Man United"),
+    "Marseille": ("F1", "Marseille"), "Milan": ("I1", "Milan"), "Monaco": ("F1", "Monaco"),
+    "N.E.C.": ("N1", "Nijmegen"), "Napoli": ("I1", "Napoli"),
+    "Newcastle": ("E0", "Newcastle"), "Nice": ("F1", "Nice"),
+    "Nott'm Forest": ("E0", "Nott'm Forest"), "OFI Crete": ("G1", "OFI Crete"),
+    "Olympiacos": ("G1", "Olympiakos"), "PAOK": ("G1", "PAOK"),
+    "PSV": ("N1", "PSV Eindhoven"), "Panathinaikos": ("G1", "Panathinaikos"),
+    "Paris": ("F1", "Paris SG"), "Porto": ("P1", "Porto"), "Rangers": ("SC0", "Rangers"),
+    "Rayo Vallecano": ("SP1", "Vallecano"), "Real Betis": ("SP1", "Betis"),
+    "Real Madrid": ("SP1", "Real Madrid"), "Real Sociedad": ("SP1", "Sociedad"),
+    "Rennes": ("F1", "Rennes"), "Roma": ("I1", "Roma"), "Samsunspor": ("T1", "Samsunspor"),
+    "Sevilla": ("SP1", "Sevilla"), "Sint-Truidense": ("B1", "St Truiden"),
+    "Sporting CP": ("P1", "Sp Lisbon"), "Strasbourg": ("F1", "Strasbourg"),
+    "Stuttgart": ("D1", "Stuttgart"), "Sunderland": ("E0", "Sunderland"),
+    "Tottenham": ("E0", "Tottenham"), "Toulouse": ("F1", "Toulouse"),
+    "Trabzonspor": ("T1", "Trabzonspor"), "Twente": ("N1", "Twente"),
+    "Union Berlin": ("D1", "Union Berlin"), "Union SG": ("B1", "St. Gilloise"),
+    "Utrecht": ("N1", "Utrecht"), "Villarreal": ("SP1", "Villarreal"),
+    "Vitória SC": ("P1", "Guimaraes"), "West Ham": ("E0", "West Ham"),
+}
+# Clubs from countries without a covered league -> country group
+UEFA_CLUB_COUNTRY = {
+    "AEK Larnaca": "CYP", "APOEL": "CYP", "Aarhus": "DEN", "Ararat-Armenia": "ARM",
+    "Aris Limassol": "CYP", "Astana": "KAZ", "Basel": "SUI", "Bodø/Glimt": "NOR",
+    "Borac": "BIH", "Brann": "NOR", "Breiðablik": "ISL", "CSKA Sofia": "BUL",
+    "Celje": "SVN", "Copenhagen": "DEN", "Crvena Zvezda": "SRB", "Dinamo-Minsk": "BLR",
+    "Djurgården": "SWE", "Drita": "KOS", "Dynamo Kyiv": "UKR", "Egnatia": "ALB",
+    "Elfsborg": "SWE", "FCSB": "ROU", "Ferencváros": "HUN", "GNK Dinamo": "CRO",
+    "H. Beer-Sheva": "ISR", "HJK": "FIN", "Hajduk Split": "CRO", "Hamrun Spartans": "MLT",
+    "Häcken": "SWE", "Iberia Tbilisi": "GEO", "Inter Escaldes": "AND", "Jablonec": "CZE",
+    "Jagiellonia": "POL", "Kairat Almaty": "KAZ", "Kauno Žalgiris": "LTU",
+    "KuPS Kuopio": "FIN", "L. Red Imps": "GIB", "LASK": "AUT", "Larne": "NIR",
+    "Lausanne-Sport": "SUI", "Lech Poznan": "POL", "Legia Warszawa": "POL",
+    "Levski Sofia": "BUL", "Lillestrøm": "NOR", "Ludogorets": "BUL", "Lugano": "SUI",
+    "M. Tel-Aviv": "ISR", "Maccabi Haifa": "ISR", "Malmö": "SWE", "Midtjylland": "DEN",
+    "Mjällby": "SWE", "Mladá Boleslav": "CZE", "Molde": "NOR", "Noah": "ARM",
+    "Nordsjælland": "DEN", "Olimpija": "SVN", "Omonia": "CYP", "Pafos": "CYP",
+    "Petrocub": "MDA", "Qarabag": "AZE", "RFS": "LVA", "Raków": "POL", "Riga": "LVA",
+    "Rijeka": "CRO", "S. Bratislava": "SVK", "SK Rapid": "AUT", "Sabah": "AZE",
+    "Salzburg": "AUT", "Servette": "SUI", "Shakhtar": "UKR", "Shamrock Rovers": "IRL",
+    "Shelbourne": "IRL", "Sheriff": "MDA", "Shkëndija": "MKD", "Sigma Olomouc": "CZE",
+    "Slavia Praha": "CZE", "Sparta Praha": "CZE", "St. Gallen": "SUI", "Sturm Graz": "AUT",
+    "TSC": "SRB", "The New Saints": "WAL", "Thun": "SUI", "Torreense": "POR2",
+    "U. Craiova": "ROU", "Viking": "NOR", "Viktoria Plzen": "CZE", "Víkingur R.": "ISL",
+    "Young Boys": "SUI", "Zrinjski": "BIH",
+}
+UEFA_LEAGUES = sorted({lg for lg, _ in UEFA_CLUB_MAP.values()})
+# National-team tournaments picked up automatically as soon as their fixtures
+# are published (code, name, feed slug prefix). Played at neutral venues.
+NATION_TOURNAMENTS = [("AFCON", "Africa Cup of Nations", "afcon"),
+                      ("WC", "FIFA World Cup", "fifa-world-cup"),
+                      ("EURO", "UEFA European Championship", "uefa-euro"),
+                      ("COPA", "Copa America", "copa-america")]
+# Fixture-feed names -> names in the international results dataset
+NATION_ALIASES = {"Czechia": "Czech Republic", "Türkiye": "Turkey",
+                  "Côte d'Ivoire": "Ivory Coast", "Cabo Verde": "Cape Verde",
+                  "Congo DR": "DR Congo", "Korea Republic": "South Korea",
+                  "USA": "United States", "IR Iran": "Iran"}
+# Region of each national team, from the tournaments it plays in
+CONFEDERATIONS = [("Africa", r"African Cup of Nations|African Nations Championship"),
+                  ("Europe", r"UEFA Euro|UEFA Nations League"),
+                  ("Asia", r"AFC Asian Cup|Gulf Cup|Arab Cup|WAFF|EAFF|AFF Championship|SAFF"),
+                  ("North & Central America", r"Gold Cup|CONCACAF"),
+                  ("South America", r"Copa América"),
+                  ("Oceania", r"OFC Nations Cup|Oceania Nations Cup")]
+CUP_CODES.update(UEFA_COMPS, [NATIONS_LEAGUE[0]], [c for c, _, _ in NATION_TOURNAMENTS])
+MIDDLE_EAST = {"Saudi Arabia", "Qatar", "United Arab Emirates", "Iran", "Iraq", "Kuwait",
+               "Bahrain", "Oman", "Jordan", "Syria", "Lebanon", "Palestine", "Yemen"}
+
 PAPER_LOG = Path(os.environ.get("EPL_PAPER_LOG",
                                 Path(__file__).with_name("paper_bets.csv")))
 PREDICTIONS_MD = Path(os.environ.get("EPL_PREDICTIONS",
                                      Path(__file__).with_name("predictions.md")))
 UK_TZ = "Europe/London"
+# Backup copy of every data source, refreshed by the scheduled GitHub run
+SNAPSHOT_DIR = Path(os.environ.get("EPL_SNAPSHOT_DIR",
+                                   Path(__file__).with_name("data_snapshot")))
+SNAPSHOT_FRESH_HOURS = 30       # backups younger than this are used for history
+OFFLINE = os.environ.get("EPL_OFFLINE") == "1"   # self-tests: never use the network
+PREFER_SNAPSHOT = True          # the scheduled run switches this off (it downloads)
 
 # Odds columns available in the Football-Data feed, per bookmaker source.
 # (BTTS and O/U 1.5 / 3.5 are NOT published in this feed.)
@@ -167,8 +373,9 @@ def season_codes(today: dt.date, seasons_back: int) -> list[str]:
 def _fetch_csv(url: str) -> pd.DataFrame:
     """Download a CSV silently. Any failure returns an empty DataFrame."""
     try:
-        resp = requests.get(url, headers=HTTP_HEADERS, timeout=20)
-        resp.raise_for_status()
+        resp = _http_get(url)
+        if resp is None:
+            return pd.DataFrame()
         try:
             text = resp.content.decode("utf-8-sig")
         except UnicodeDecodeError:
@@ -178,6 +385,124 @@ def _fetch_csv(url: str) -> pd.DataFrame:
         return df.dropna(how="all")
     except Exception:
         return pd.DataFrame()
+
+
+# -----------------------------------------------------------------------------
+# Downloads with retries + a backup copy of every source (data_snapshot/)
+# -----------------------------------------------------------------------------
+def _http_get(url: str):
+    """GET with 3 attempts and back-off. None on failure (or in offline mode)."""
+    if OFFLINE:
+        return None
+    for attempt in range(3):
+        try:
+            resp = requests.get(url, headers=HTTP_HEADERS, timeout=20)
+            if resp.status_code == 404:
+                return None                      # not published (yet) - no retry
+            resp.raise_for_status()
+            return resp
+        except Exception:
+            time.sleep(1.5 * (attempt + 1))
+    return None
+
+
+def _with_source(df: pd.DataFrame, source: str) -> pd.DataFrame:
+    df.attrs["source"] = source
+    return df
+
+
+def _snap_file(name: str) -> Path:
+    return SNAPSHOT_DIR / f"{name}.csv"
+
+
+def snapshot_meta() -> dict:
+    try:
+        return json.loads((SNAPSHOT_DIR / "meta.json").read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+
+def snapshot_age_hours(name: str):
+    info = snapshot_meta().get("files", {}).get(name)
+    if not info:
+        return None
+    try:
+        saved = pd.Timestamp(info["saved_at"])
+        return (pd.Timestamp.now(tz="UTC") - saved).total_seconds() / 3600
+    except Exception:
+        return None
+
+
+def save_snapshot(name: str, df: pd.DataFrame) -> bool:
+    """Write one source to the backup folder (plain CSV: git stores changes
+    compactly) and record when it was saved."""
+    if df is None or df.empty:
+        return False
+    try:
+        SNAPSHOT_DIR.mkdir(parents=True, exist_ok=True)
+        df.to_csv(_snap_file(name), index=False)
+        meta = snapshot_meta()
+        meta.setdefault("files", {})[name] = {
+            "saved_at": pd.Timestamp.now(tz="UTC").isoformat(), "rows": int(len(df))}
+        meta["saved_at"] = pd.Timestamp.now(tz="UTC").isoformat()
+        (SNAPSHOT_DIR / "meta.json").write_text(json.dumps(meta, indent=1, sort_keys=True),
+                                               encoding="utf-8")
+        return True
+    except Exception:
+        return False
+
+
+def load_snapshot(name: str) -> pd.DataFrame:
+    """Read one source from the backup folder (empty if missing/unreadable)."""
+    try:
+        f = _snap_file(name)
+        if not f.exists():
+            return pd.DataFrame()
+        df = pd.read_csv(f, dtype={"Season": str} if name.startswith("results_") else None,
+                         low_memory=False)
+        if "Kickoff" in df.columns:
+            df["Kickoff"] = pd.to_datetime(df["Kickoff"], utc=True, errors="coerce")
+        if "Date" in df.columns:
+            df["Date"] = pd.to_datetime(df["Date"], errors="coerce")
+        if "Neutral" in df.columns:
+            df["Neutral"] = df["Neutral"].astype(str).str.upper().eq("TRUE")
+        return df
+    except Exception:
+        return pd.DataFrame()
+
+
+def _live_or_backup(name: str, live_fn, prefer_backup: bool) -> pd.DataFrame:
+    """
+    Slow-changing data: use the backup if it is fresh (fast start-up).
+    Otherwise download; if the source is down, fall back to the backup.
+    The returned frame says where it came from in .attrs["source"].
+    """
+    if prefer_backup and PREFER_SNAPSHOT:
+        age = snapshot_age_hours(name)
+        if age is not None and age < SNAPSHOT_FRESH_HOURS:
+            snap = load_snapshot(name)
+            if not snap.empty:
+                return _with_source(snap, "backup copy")
+    live = live_fn()
+    if live is not None and not live.empty:
+        return _with_source(live, "live")
+    snap = load_snapshot(name)
+    if not snap.empty:
+        return _with_source(snap, "backup copy (source down)")
+    return _with_source(pd.DataFrame() if live is None else live, "unavailable")
+
+
+def filter_seasons(df: pd.DataFrame, seasons_back: int) -> pd.DataFrame:
+    if df.empty or "Season" not in df.columns:
+        return df
+    lg = str(df["League"].iloc[0]) if "League" in df.columns else ""
+    if lg in NEW_FORMAT:                       # extra leagues: keep by date
+        cutoff = pd.Timestamp(dt.date.today()) - pd.Timedelta(days=365 * (seasons_back + 1))
+        out = df[df["Date"] >= cutoff].reset_index(drop=True)
+        return _with_source(out, df.attrs.get("source", "live"))
+    wanted = set(season_codes(dt.date.today(), seasons_back))
+    out = df[df["Season"].astype(str).isin(wanted)].reset_index(drop=True)
+    return _with_source(out, df.attrs.get("source", "live"))
 
 
 def _parse_dates(series: pd.Series) -> pd.Series:
@@ -190,12 +515,34 @@ def _parse_dates(series: pd.Series) -> pd.Series:
     return out
 
 
-@st.cache_data(ttl=3600, show_spinner=False)
-def load_results(seasons_back: int) -> pd.DataFrame:
-    """Fetch and clean completed EPL results for the current + past seasons."""
+def _load_new_format(league: str, seasons_back: int) -> pd.DataFrame:
+    """Extra leagues (Russia, Japan, China): one file with every season."""
+    df = _fetch_csv(f"{BASE_URL}/new/{league}.csv")
+    need = {"Date", "Home", "Away", "HG", "AG", "Season"}
+    if df.empty or not need.issubset(df.columns):
+        return pd.DataFrame()
+    df = df.rename(columns={"Home": "HomeTeam", "Away": "AwayTeam",
+                            "HG": "FTHG", "AG": "FTAG"})
+    keep = (["Date", "HomeTeam", "AwayTeam", "FTHG", "FTAG", "Season"]
+            + [c for c in ODDS_COLUMNS if c in df.columns])
+    df = df[keep].copy()
+    df["Season"] = df["Season"].astype(str).str.strip()
+    df["Date"] = _parse_dates(df["Date"])
+    cutoff = pd.Timestamp(dt.date.today()) - pd.Timedelta(days=365 * (seasons_back + 1))
+    df = df[df["Date"] >= cutoff]
+    df["Date"] = df["Date"].dt.strftime("%d/%m/%Y")          # cleaned below like the rest
+    return df
+
+
+def _load_results_uncached(league: str, seasons_back: int) -> pd.DataFrame:
+    """Fetch and clean completed results of one league, current + past seasons."""
     frames = []
-    for code in season_codes(dt.date.today(), seasons_back):
-        df = _fetch_csv(f"{BASE_URL}/mmz4281/{code}/{LEAGUE}.csv")
+    if league in NEW_FORMAT:
+        nf = _load_new_format(league, seasons_back)
+        if not nf.empty:
+            frames.append(nf)
+    for code in ([] if league in NEW_FORMAT else season_codes(dt.date.today(), seasons_back)):
+        df = _fetch_csv(f"{BASE_URL}/mmz4281/{code}/{league}.csv")
         required = {"Date", "HomeTeam", "AwayTeam", "FTHG", "FTAG"}
         if df.empty or not required.issubset(df.columns):
             continue  # season file not yet published / unreachable -> skip
@@ -217,19 +564,61 @@ def load_results(seasons_back: int) -> pd.DataFrame:
     df = df.dropna(subset=["Date", "FTHG", "FTAG"])
     df = df[(df["HomeTeam"] != "") & (df["HomeTeam"] != "nan")]
     df[["FTHG", "FTAG"]] = df[["FTHG", "FTAG"]].astype(int)
+    # Sanity checks: impossible scores, future dates, duplicated rows
+    df = df[df["FTHG"].between(0, 15) & df["FTAG"].between(0, 15)]
+    df = df[df["Date"] <= pd.Timestamp(dt.date.today()) + pd.Timedelta(days=1)]
+    df = df.drop_duplicates(["Date", "HomeTeam", "AwayTeam"], keep="last")
     for col in SHOT_COLUMNS + ODDS_COLUMNS:        # shots/xG + odds as numbers
         if col in df.columns:
             df[col] = pd.to_numeric(df[col], errors="coerce")
+    df["League"] = league
     return df.sort_values("Date").reset_index(drop=True)
+
+
+def _results_with_backup(league: str, seasons_back: int) -> pd.DataFrame:
+    """Results of one league: fresh backup -> download -> any backup."""
+    df = _live_or_backup(f"results_{league}",
+                         lambda: _load_results_uncached(league, max(seasons_back, 3)),
+                         prefer_backup=True)
+    return filter_seasons(df, seasons_back)
+
+
+@st.cache_data(ttl=3600, show_spinner=False)
+def load_results(league: str = DEFAULT_LEAGUE, seasons_back: int = 2) -> pd.DataFrame:
+    """Cached results of one league."""
+    return _results_with_backup(league, seasons_back)
+
+
+@st.cache_data(ttl=3600, show_spinner=False)
+def load_all_results(leagues: tuple, seasons_back: int) -> dict:
+    """Results for several leagues, in parallel. {code: DataFrame}"""
+    from concurrent.futures import ThreadPoolExecutor
+    with ThreadPoolExecutor(max_workers=8) as ex:
+        frames = list(ex.map(lambda lg: _results_with_backup(lg, seasons_back), leagues))
+    return {lg: df for lg, df in zip(leagues, frames) if not df.empty}
 
 
 @st.cache_data(ttl=3600, show_spinner=False)
 def load_fixtures() -> pd.DataFrame:
-    """Fetch upcoming EPL fixtures (with pre-match bookmaker odds)."""
+    """Upcoming fixtures + odds: always downloaded fresh (odds move); the
+    backup is only used if the source is down."""
+    return _live_or_backup("fixtures", _load_fixtures_live, prefer_backup=False)
+
+
+def _load_fixtures_live() -> pd.DataFrame:
     df = _fetch_csv(f"{BASE_URL}/fixtures.csv")
+    extra = _fetch_csv(f"{BASE_URL}/new_league_fixtures.csv")
+    if not extra.empty and {"Country", "League", "Home", "Away"}.issubset(extra.columns):
+        names = {v: k for k, v in NEW_FORMAT.items()}
+        extra["Div"] = [names.get((str(c).strip(), str(l).strip()))
+                        for c, l in zip(extra["Country"], extra["League"])]
+        extra = extra.dropna(subset=["Div"]).rename(columns={"Home": "HomeTeam",
+                                                              "Away": "AwayTeam"})
+        df = pd.concat([df, extra], ignore_index=True) if not df.empty else extra
     if df.empty or "Div" not in df.columns:
         return pd.DataFrame()
-    df = df[df["Div"].astype(str).str.strip() == LEAGUE].copy()
+    df["Div"] = df["Div"].astype(str).str.strip()
+    df = df[df["Div"].isin(LEAGUES)].copy()
     if df.empty:
         return df
     df["Date"] = _parse_dates(df["Date"])
@@ -261,6 +650,32 @@ def upcoming_fixtures(fixtures: pd.DataFrame, days: int = 7) -> pd.DataFrame:
     now = pd.Timestamp.now(tz="UTC")
     return fixtures[(fixtures["Kickoff"] > now)
                     & (fixtures["Kickoff"] <= now + pd.Timedelta(days=days))]
+
+
+@st.cache_data(ttl=6 * 3600, show_spinner=False)
+def load_international() -> pd.DataFrame:
+    """All men's full internationals (open dataset, updated after each window)."""
+    return _live_or_backup("international", _load_international_live, prefer_backup=True)
+
+
+def _load_international_live() -> pd.DataFrame:
+    df = _fetch_csv(INTL_URL)
+    need = {"date", "home_team", "away_team", "home_score", "away_score",
+            "tournament", "neutral"}
+    if df.empty or not need.issubset(df.columns):
+        return pd.DataFrame()
+    out = pd.DataFrame({
+        "Date": pd.to_datetime(df["date"], errors="coerce"),
+        "HomeTeam": df["home_team"].astype(str).str.strip(),
+        "AwayTeam": df["away_team"].astype(str).str.strip(),
+        "FTHG": pd.to_numeric(df["home_score"], errors="coerce"),
+        "FTAG": pd.to_numeric(df["away_score"], errors="coerce"),
+        "Tournament": df["tournament"].astype(str),
+        "Neutral": df["neutral"].astype(str).str.upper().eq("TRUE"),
+    })
+    out = out.dropna(subset=["Date", "FTHG", "FTAG"])
+    out = out[out["Date"] >= pd.Timestamp(dt.date.today()) - pd.Timedelta(days=365 * 12)]
+    return out.sort_values("Date").reset_index(drop=True)
 
 
 # =============================================================================
@@ -316,6 +731,105 @@ def goal_signal(results: pd.DataFrame, w: np.ndarray, goals_weight: float):
     return yh, ya, float(per_sot), n_xg
 
 
+def _poisson_mle(hi, ai, yh, ya, w, n, home_flag=None):
+    """
+    Weighted Poisson maximum likelihood with an L2 penalty on team ratings.
+    Parameters: [mu, home, attack(n), defence(n)]. home_flag (0/1 per match)
+    switches home advantage off for neutral venues. Returns (params, ok).
+    """
+    hf = np.ones(len(hi)) if home_flag is None else np.asarray(home_flag, float)
+
+    def nll_and_grad(p):
+        mu, home = p[0], p[1]
+        att, dfn = p[2:2 + n], p[2 + n:]
+        eta_h = mu + home * hf + att[hi] - dfn[ai]
+        eta_a = mu + att[ai] - dfn[hi]
+        lam_h, lam_a = np.exp(eta_h), np.exp(eta_a)
+
+        nll = np.sum(w * (lam_h - yh * eta_h + lam_a - ya * eta_a))
+        nll += SHRINKAGE * (att @ att + dfn @ dfn)
+
+        # Analytic gradient (fast + exact)
+        rh, ra = w * (lam_h - yh), w * (lam_a - ya)
+        g = np.zeros_like(p)
+        g[0] = rh.sum() + ra.sum()
+        g[1] = (rh * hf).sum()
+        g_att, g_def = np.zeros(n), np.zeros(n)
+        np.add.at(g_att, hi, rh)
+        np.add.at(g_att, ai, ra)
+        np.add.at(g_def, ai, -rh)
+        np.add.at(g_def, hi, -ra)
+        g[2:2 + n] = g_att + 2 * SHRINKAGE * att
+        g[2 + n:] = g_def + 2 * SHRINKAGE * dfn
+        return nll, g
+
+    x0 = np.zeros(2 + 2 * n)
+    x0[0] = np.log(max(np.average(ya, weights=w), 0.1))
+    x0[1] = 0.25
+    res = minimize(nll_and_grad, x0, jac=True, method="L-BFGS-B",
+                   options={"maxiter": 5000, "ftol": 1e-15, "gtol": 1e-9})
+    return res.x, bool(res.success)
+
+
+def _dixon_coles_rho(gh, ga, lam_h, lam_a, w) -> float:
+    """Dixon-Coles low-score correction, by 1-D profile likelihood."""
+    best_rho, best_ll = 0.0, -np.inf
+    m00 = (gh == 0) & (ga == 0)
+    m01 = (gh == 0) & (ga == 1)
+    m10 = (gh == 1) & (ga == 0)
+    m11 = (gh == 1) & (ga == 1)
+    for rho in np.arange(-0.25, 0.1001, 0.0025):
+        tau = np.ones_like(lam_h)
+        tau[m00] = 1 - lam_h[m00] * lam_a[m00] * rho
+        tau[m01] = 1 + lam_h[m01] * rho
+        tau[m10] = 1 + lam_a[m10] * rho
+        tau[m11] = 1 - rho
+        if np.any(tau <= 0):
+            continue
+        ll = np.sum(w * np.log(tau))
+        if ll > best_ll:
+            best_ll, best_rho = ll, rho
+    return float(best_rho)
+
+
+@st.cache_data(ttl=6 * 3600, show_spinner=False)
+def fit_international(df: pd.DataFrame, half_life_days: int = INTL_DEFAULTS["half_life"],
+                      years: int = INTL_DEFAULTS["years"],
+                      friendly_weight: float = INTL_DEFAULTS["friendly_weight"]) -> dict:
+    """National-team ratings: same Poisson model, goals only, home advantage
+    only when the match is not at a neutral venue."""
+    last = df["Date"].max()
+    train = df[df["Date"] >= last - pd.Timedelta(days=365 * years)].reset_index(drop=True)
+    teams = sorted(set(train["HomeTeam"]) | set(train["AwayTeam"]))
+    idx = {t: i for i, t in enumerate(teams)}
+    n = len(teams)
+    hi = train["HomeTeam"].map(idx).to_numpy()
+    ai = train["AwayTeam"].map(idx).to_numpy()
+    gh = train["FTHG"].to_numpy(float)
+    ga = train["FTAG"].to_numpy(float)
+    age = (last - train["Date"]).dt.days.to_numpy()
+    w = np.exp(-np.log(2) / half_life_days * age)
+    w = w * np.where(train["Tournament"].eq("Friendly"), friendly_weight, 1.0)
+    hf = (~train["Neutral"]).to_numpy(float)
+    p, ok = _poisson_mle(hi, ai, gh, ga, w, n, home_flag=hf)
+    mu, home = p[0], p[1]
+    att, dfn = p[2:2 + n], p[2 + n:]
+    lam_h = np.exp(mu + home * hf + att[hi] - dfn[ai])
+    lam_a = np.exp(mu + att[ai] - dfn[hi])
+    recent = train[train["Date"] >= last - pd.Timedelta(days=3 * 365)]
+    current = sorted(set(recent["HomeTeam"]) | set(recent["AwayTeam"]))
+    return {
+        "mu": float(mu), "home": float(home),
+        "rho": _dixon_coles_rho(gh, ga, lam_h, lam_a, w),
+        "prior": {"attack": 0.0, "defence": 0.0},
+        "attack": {t: float(att[i]) for t, i in idx.items()},
+        "defence": {t: float(dfn[i]) for t, i in idx.items()},
+        "teams": teams, "current_teams": current or teams,
+        "n_matches": int(len(train)), "last_date": last, "converged": ok,
+        "goals_weight": 1.0,
+    }
+
+
 def _fit_model(results: pd.DataFrame, half_life_days: int,
                goals_weight: float = 0.5) -> dict:
     """
@@ -339,58 +853,14 @@ def _fit_model(results: pd.DataFrame, half_life_days: int,
     # What the attack/defence ratings are fitted to (goals + shot quality)
     yh, ya, per_sot, n_xg = goal_signal(results, w, goals_weight)
 
-    def nll_and_grad(p):
-        mu, home = p[0], p[1]
-        att, dfn = p[2:2 + n], p[2 + n:]
-        eta_h = mu + home + att[hi] - dfn[ai]
-        eta_a = mu + att[ai] - dfn[hi]
-        lam_h, lam_a = np.exp(eta_h), np.exp(eta_a)
-
-        nll = np.sum(w * (lam_h - yh * eta_h + lam_a - ya * eta_a))
-        nll += SHRINKAGE * (att @ att + dfn @ dfn)
-
-        # Analytic gradient (fast + exact)
-        rh, ra = w * (lam_h - yh), w * (lam_a - ya)
-        g = np.zeros_like(p)
-        g[0] = rh.sum() + ra.sum()
-        g[1] = rh.sum()
-        g_att, g_def = np.zeros(n), np.zeros(n)
-        np.add.at(g_att, hi, rh)
-        np.add.at(g_att, ai, ra)
-        np.add.at(g_def, ai, -rh)
-        np.add.at(g_def, hi, -ra)
-        g[2:2 + n] = g_att + 2 * SHRINKAGE * att
-        g[2 + n:] = g_def + 2 * SHRINKAGE * dfn
-        return nll, g
-
-    x0 = np.zeros(2 + 2 * n)
-    x0[0] = np.log(max(np.average(ya, weights=w), 0.1))
-    x0[1] = 0.25
-    res = minimize(nll_and_grad, x0, jac=True, method="L-BFGS-B",
-                   options={"maxiter": 5000, "ftol": 1e-15, "gtol": 1e-9})
-    p = res.x
+    p, converged = _poisson_mle(hi, ai, yh, ya, w, n)
     mu, home = p[0], p[1]
     att, dfn = p[2:2 + n], p[2 + n:]
 
     # ---- Dixon-Coles rho: 1-D profile likelihood on low scorelines ----------
     lam_h = np.exp(mu + home + att[hi] - dfn[ai])
     lam_a = np.exp(mu + att[ai] - dfn[hi])
-    best_rho, best_ll = 0.0, -np.inf
-    for rho in np.arange(-0.25, 0.1001, 0.0025):
-        tau = np.ones_like(lam_h)
-        m00 = (gh == 0) & (ga == 0)
-        m01 = (gh == 0) & (ga == 1)
-        m10 = (gh == 1) & (ga == 0)
-        m11 = (gh == 1) & (ga == 1)
-        tau[m00] = 1 - lam_h[m00] * lam_a[m00] * rho
-        tau[m01] = 1 + lam_h[m01] * rho
-        tau[m10] = 1 + lam_a[m10] * rho
-        tau[m11] = 1 - rho
-        if np.any(tau <= 0):
-            continue
-        ll = np.sum(w * np.log(tau))
-        if ll > best_ll:
-            best_ll, best_rho = ll, rho
+    best_rho = _dixon_coles_rho(gh, ga, lam_h, lam_a, w)
 
     # Teams that appear in the most recent season = current EPL teams
     latest = results["Season"].max()
@@ -416,14 +886,15 @@ def _fit_model(results: pd.DataFrame, half_life_days: int,
         "n_matches": int(len(results)),
         "n_current": int((results["Season"] == latest).sum()),
         "last_date": results["Date"].max(),
-        "converged": bool(res.success),
+        "converged": converged,
         "goals_per_sot": per_sot,
         "n_xg": n_xg,
         "goals_weight": goals_weight,
     }
 
 
-def expected_goals(model: dict, home: str, away: str, adj: dict | None = None):
+def expected_goals(model: dict, home: str, away: str, adj: dict | None = None,
+                   neutral: bool = False):
     """
     Expected goals (lambda) for each side, with optional 'What If' multipliers.
     adj keys: h_att, h_def, a_att, a_def  (fractions, e.g. -0.15 = -15%)
@@ -433,7 +904,7 @@ def expected_goals(model: dict, home: str, away: str, adj: dict | None = None):
     def r(kind, team):  # unknown team -> promoted-team prior
         return model[kind].get(team, model["prior"][kind])
 
-    lam_h = np.exp(model["mu"] + model["home"]
+    lam_h = np.exp(model["mu"] + (0.0 if neutral else model["home"])
                    + r("attack", home) - r("defence", away))
     lam_a = np.exp(model["mu"] + r("attack", away) - r("defence", home))
     if adj:
@@ -472,8 +943,8 @@ def market_probs(m: np.ndarray) -> dict:
     return {k: float(v) for k, v in probs.items()}
 
 
-def predict(model, home, away, adj=None):
-    lam_h, lam_a = expected_goals(model, home, away, adj)
+def predict(model, home, away, adj=None, neutral=False):
+    lam_h, lam_a = expected_goals(model, home, away, adj, neutral)
     m = score_matrix(lam_h, lam_a, model["rho"])
     return lam_h, lam_a, m, market_probs(m)
 
@@ -507,7 +978,9 @@ def score_predictions(window: pd.DataFrame, model: dict) -> pd.DataFrame:
         lh, la, m, p = predict(model, fx["HomeTeam"], fx["AwayTeam"])
         pred, pp = predicted_score(m, p)
         rows.append({
+            "League": fx.get("Div", fx.get("League", DEFAULT_LEAGUE)),
             "Kickoff (UK)": fx["Kickoff"].tz_convert(UK_TZ).strftime("%a %d %b %H:%M"),
+            "Kickoff UTC": fx["Kickoff"],
             "Match": f"{fx['HomeTeam']} v {fx['AwayTeam']}",
             "Predicted score": pred,
             "Top 3 scores": ", ".join(f"{sc} ({pr*100:.0f}%)" for sc, pr in top_scores(m)),
@@ -527,72 +1000,504 @@ def stake_pct(edge_pct: float, net_odds_: float) -> float:
     return min(kelly * DEFAULTS["kelly_fraction"] * 100, DEFAULTS["max_stake_pct"])
 
 
-def match_advice(preds: pd.DataFrame, flags: pd.DataFrame,
-                 bankroll: float) -> pd.DataFrame:
+def match_advice(preds: pd.DataFrame, flags: pd.DataFrame, bankroll: float,
+                 allow_all: bool = False) -> pd.DataFrame:
     """
-    One plain-English verdict per fixture: the single best value bet with a
-    stake, or NO BET. Most matches should be NO BET - that is normal.
+    One plain-English verdict per fixture, depending on the league's tested
+    status: BET (with stake), WATCH (paper-trade only) or NO BET.
+    Most matches should be NO BET - that is normal.
     """
     preds = preds.copy()
-    advice, stakes = [], []
+    advice, stakes, status_col = [], [], []
     for _, r in preds.iterrows():
+        lg = r.get("League", DEFAULT_LEAGUE)
+        status = league_status(lg, allow_all)
+        status_col.append(STATUS_LABEL[status])
         home, away = r["Match"].split(" v ", 1)
-        f = flags[(flags["HomeTeam"] == home) & (flags["AwayTeam"] == away)] \
-            if not flags.empty else flags
+        f = flags
+        if not flags.empty:
+            f = flags[(flags["HomeTeam"] == home) & (flags["AwayTeam"] == away)]
+            if "League" in flags.columns:
+                f = f[f["League"] == lg]
         if f.empty:
             advice.append("NO BET (price is fair)")
             stakes.append("")
             continue
         b = f.sort_values("Edge %", ascending=False).iloc[0]
-        pct = stake_pct(b["Edge %"], b["Net odds"])
-        advice.append(f"BET {MARKET_LABELS[b['Market']]} @ {b['Price']:.2f} "
-                      f"({b['Book']}, edge +{b['Edge %']:.1f}%)")
-        stakes.append(f"{pct:.1f}% = {bankroll * pct / 100:,.2f}")
-    preds.insert(2, "Advice", advice)
-    preds.insert(3, "Stake", stakes)
+        what = (f"{MARKET_LABELS[b['Market']]} @ {b['Price']:.2f} "
+                f"({b['Book']}, edge +{b['Edge %']:.1f}%)")
+        if status == "bet":
+            pct = stake_pct(b["Edge %"], b["Net odds"])
+            advice.append(f"BET {what}")
+            stakes.append(f"{pct:.1f}% = {bankroll * pct / 100:,.2f}")
+        elif status == "watch":
+            advice.append(f"WATCH {what} - paper only")
+            stakes.append("")
+        else:
+            advice.append("NO BET (model not profitable in this league)")
+            stakes.append("")
+    preds.insert(1, "Status", status_col)
+    preds.insert(4, "Advice", advice)
+    preds.insert(5, "Stake", stakes)
     return preds
 
 
-def write_predictions_md(preds: pd.DataFrame, flags: pd.DataFrame, path: Path,
-                         bankroll: float = DEFAULTS["bankroll"]):
-    """Phone-friendly summary file (shown nicely on GitHub)."""
-    stamp = pd.Timestamp.now(tz=UK_TZ).strftime("%a %d %b %Y %H:%M UK time")
-    lines = [f"# EPL predictions", f"_Updated {stamp}_", ""]
-    if preds.empty:
-        lines += ["No Premier League fixtures in the next 7 days yet. "
-                  "The feed usually publishes the next round mid-week.", ""]
+def weekly_overview(fixtures: pd.DataFrame, all_results: dict, half_life: int,
+                    goals_weight: float, book: str, min_edge: float,
+                    max_edge: float, bankroll: float, allow_all: bool = False):
+    """
+    Predictions + advice for every upcoming fixture in every covered league.
+    Returns (advice table, value flags, {league: model}).
+    """
+    window = upcoming_fixtures(fixtures)
+    adv_frames, flag_frames, models = [], [], {}
+    if window.empty:
+        return pd.DataFrame(), pd.DataFrame(columns=PAPER_COLS), models
+    for lg in LEAGUES:
+        w = window[window["Div"] == lg]
+        res = all_results.get(lg)
+        if w.empty or res is None or res.empty:
+            continue
+        try:
+            model = fit_model(res, half_life, goals_weight)
+            flags = flagged_bets(w, model, book, min_edge, max_edge)
+            adv_frames.append(match_advice(score_predictions(w, model), flags,
+                                           bankroll, allow_all))
+        except Exception:
+            continue                       # one broken league never blocks the rest
+        models[lg] = model
+        flag_frames.append(flags)
+    if not adv_frames:
+        return pd.DataFrame(), pd.DataFrame(columns=PAPER_COLS), models
+    adv = pd.concat(adv_frames, ignore_index=True)
+    adv["_rank"] = adv["League"].map(lambda c: STATUS_RANK[league_status(c, allow_all)])
+    adv = adv.sort_values(["_rank", "League", "Kickoff (UK)"]).drop(columns="_rank")
+    adv.insert(0, "Competition", adv["League"].map(league_name))
+    flags = pd.concat(flag_frames, ignore_index=True) if flag_frames else \
+        pd.DataFrame(columns=PAPER_COLS)
+    return adv.reset_index(drop=True), flags, models
+
+
+def write_predictions_md(adv: pd.DataFrame, flags: pd.DataFrame, path: Path,
+                         bankroll: float = DEFAULTS["bankroll"],
+                         allow_all: bool = False, tz: str = DEFAULTS["timezone"]):
+    """Phone-friendly summary of the week, day by day (shown nicely on GitHub)."""
+    stamp = pd.Timestamp.now(tz=tz).strftime("%a %d %b %Y %H:%M")
+    lines = ["# Football predictions — day by day",
+             f"_Updated {stamp} ({tz} time). Bankroll for stakes: {bankroll:,.2f}_", ""]
+    if adv.empty:
+        lines += ["No fixtures in the next 7 days are in the feeds yet. League rounds "
+                  "are usually published mid-week.", ""]
     else:
-        adv = match_advice(preds, flags, bankroll)
-        lines += [f"## What to do (bankroll {bankroll:,.2f})", "",
-                  "| Kick-off | Match | Advice | Stake |", "|---|---|---|---|"]
-        for _, r in adv.iterrows():
-            lines.append(f"| {r['Kickoff (UK)']} | {r['Match']} | **{r['Advice']}** | "
-                         f"{r['Stake'] or '-'} |")
-        lines += ["", "## Score predictions", "",
-                  "| Kick-off | Match | Predicted | Top 3 scores | H / D / A % | Over 2.5 | BTTS |",
-                  "|---|---|---|---|---|---|---|"]
-        for _, r in preds.iterrows():
-            lines.append(f"| {r['Kickoff (UK)']} | {r['Match']} | **{r['Predicted score']}** | "
-                         f"{r['Top 3 scores']} | {r['Home %']:.0f} / {r['Draw %']:.0f} / "
-                         f"{r['Away %']:.0f} | {r['Over 2.5 %']:.0f}% | {r['BTTS %']:.0f}% |")
-        lines.append("")
-    lines += ["## All value bets found", ""]
-    if flags.empty:
-        lines.append("None right now.")
-    else:
-        lines += ["| Match | Bet | Price | Fair odds | Edge |", "|---|---|---|---|---|"]
-        for _, f in flags.iterrows():
-            lines.append(f"| {f['HomeTeam']} v {f['AwayTeam']} | {MARKET_LABELS[f['Market']]} | "
-                         f"{f['Price']:.2f} ({f['Book']}) | {100 / f['Model %']:.2f} | "
-                         f"+{f['Edge %']:.1f}% |")
-    lines += ["", "_How to read this: BET = the bookmaker's price is higher than the "
-              "model's fair price. Stakes are 1/4 Kelly, capped at "
-              f"{DEFAULTS['max_stake_pct']:.0f}% of bankroll. Check team news first. "
-              "Exact scores are hard: the predicted score was right ~1 in 9 matches in "
-              "testing, the top 3 together ~1 in 3, the winner ~1 in 2. The edge is not "
-              "yet proven - paper-trade before staking real money._", ""]
+        d = add_local_time(adv, tz)
+        # 1) the week's bets at a glance
+        lines += ["## ✅ This week's bets", ""]
+        any_bet = False
+        for day, grp in d.groupby("_day", sort=True):
+            slip = bet_slip_lines(grp)
+            if slip:
+                any_bet = True
+                lines.append(f"**{grp['Day'].iloc[0]}**")
+                lines += [f"- {s_}" for s_ in slip]
+                lines.append("")
+        if not any_bet:
+            lines += ["No bets this week - the prices are fair. That is normal.", ""]
+        # 2) every match, every day
+        lines += ["## 📅 Every match, day by day", ""]
+        for day, grp in d.groupby("_day", sort=True):
+            lines += [f"### {grp['Day'].iloc[0]} ({len(grp)} matches)", "",
+                      "| Time | Competition | Match | Advice | Stake | Predicted | H / D / A % |",
+                      "|---|---|---|---|---|---|---|"]
+            for _, r in grp.iterrows():
+                adv_txt = r["Advice"]
+                if adv_txt.startswith(("BET", "WATCH")):
+                    adv_txt = f"**{adv_txt}**"
+                lines.append(f"| {r['Time']} | {r['Competition']} | {r['Match']} | {adv_txt} | "
+                             f"{r['Stake'] or '-'} | {r['Predicted score']} | "
+                             f"{r['Home %']:.0f} / {r['Draw %']:.0f} / {r['Away %']:.0f} |")
+            lines.append("")
+    lines += [BEFORE_YOU_BET.replace("**Before you place any bet**",
+                                     "## ☑️ Before you place any bet"), "",
+              "_BET = the bookmaker's price is higher than the model's fair price, in a "
+              "league where that made money in testing (currently the Premier League "
+              "only). WATCH = paper-trade only. Cups and national teams have no odds "
+              "feed: bet only at or above the 'back only at' price. Stakes are 1/4 "
+              f"Kelly, capped at {DEFAULTS['max_stake_pct']:.0f}% of bankroll. Exact "
+              "scores are hard: the predicted score was right ~1 in 9 matches in "
+              "testing, the winner ~1 in 2. The edge is not yet proven - paper-trade "
+              "before staking real money._", ""]
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text("\n".join(lines), encoding="utf-8")
+
+
+# =============================================================================
+# UEFA CLUB COMPETITIONS + NATIONS LEAGUE
+# =============================================================================
+def _season_start_year(today: dt.date) -> int:
+    return today.year if today.month >= 7 else today.year - 1
+
+
+def _fetch_json(url: str):
+    try:
+        resp = _http_get(url)
+        return None if resp is None else resp.json()
+    except Exception:
+        return None
+
+
+def _feed_to_frame(data, code: str, season: int) -> pd.DataFrame:
+    if not data:
+        return pd.DataFrame()
+    df = pd.DataFrame(data)
+    need = {"DateUtc", "HomeTeam", "AwayTeam", "HomeTeamScore", "AwayTeamScore",
+            "RoundNumber"}
+    if not need.issubset(df.columns):
+        return pd.DataFrame()
+    df = df.dropna(subset=["HomeTeam", "AwayTeam"])
+    df = df[~df["HomeTeam"].astype(str).str.match(r"^(To be|TBD|Winner|Loser|\d)", case=False)]
+    out = pd.DataFrame({
+        "Comp": code, "Season": season,
+        "Kickoff": pd.to_datetime(df["DateUtc"], utc=True, errors="coerce"),
+        "HomeTeam": df["HomeTeam"].astype(str).str.strip().replace(UEFA_ALIASES),
+        "AwayTeam": df["AwayTeam"].astype(str).str.strip().replace(UEFA_ALIASES),
+        "FTHG": pd.to_numeric(df["HomeTeamScore"], errors="coerce"),
+        "FTAG": pd.to_numeric(df["AwayTeamScore"], errors="coerce"),
+        "Round": pd.to_numeric(df["RoundNumber"], errors="coerce"),
+    })
+    # The final (last round, a single match) is played at a neutral venue
+    last = out["Round"].max()
+    out["Neutral"] = (out["Round"] == last) & ((out["Round"] == last).sum() == 1)
+    out["Date"] = out["Kickoff"].dt.tz_convert(None).dt.normalize()
+    return out.dropna(subset=["Kickoff"])
+
+
+@st.cache_data(ttl=3600, show_spinner=False)
+def load_uefa() -> pd.DataFrame:
+    """Champions / Europa / Conference League fixtures and results,
+    current season + previous ones (for the model)."""
+    return _live_or_backup("uefa", _load_uefa_live, prefer_backup=True)
+
+
+def _load_uefa_live() -> pd.DataFrame:
+    start = _season_start_year(dt.date.today())
+    jobs = [(code, slug, start - k) for code, (_, slug) in UEFA_COMPS.items()
+            for k in range(UEFA_DEFAULTS["seasons"])]
+    from concurrent.futures import ThreadPoolExecutor
+    with ThreadPoolExecutor(max_workers=6) as ex:
+        datas = list(ex.map(lambda j: _fetch_json(UEFA_FEED.format(slug=f"{j[1]}-{j[2]}")),
+                            jobs))
+    frames = [_feed_to_frame(d, code, yr) for d, (code, _, yr) in zip(datas, jobs)]
+    frames = [f for f in frames if not f.empty]
+    if not frames:
+        return pd.DataFrame()
+    return pd.concat(frames, ignore_index=True).sort_values("Kickoff").reset_index(drop=True)
+
+
+@st.cache_data(ttl=3600, show_spinner=False)
+def load_nations_league() -> pd.DataFrame:
+    """Current UEFA Nations League fixtures (names mapped to the results dataset)."""
+    start = _season_start_year(dt.date.today())
+    code, _, slug = NATIONS_LEAGUE
+    for yr in (start, start - 1):
+        df = _feed_to_frame(_fetch_json(UEFA_FEED.format(slug=f"{slug}-{yr}")), code, yr)
+        if not df.empty:
+            df["HomeTeam"] = df["HomeTeam"].replace(NATION_ALIASES)
+            df["AwayTeam"] = df["AwayTeam"].replace(NATION_ALIASES)
+            df["Neutral"] = False      # league-phase games are home and away
+            return df
+    return pd.DataFrame()
+
+
+@st.cache_data(ttl=3600, show_spinner=False)
+def load_intl_fixtures() -> pd.DataFrame:
+    """Nations League + any published major tournament (AFCON, World Cup,
+    Euros, Copa America) - names mapped to the results dataset."""
+    return _live_or_backup("intl_fixtures", _load_intl_fixtures_live, prefer_backup=True)
+
+
+def _load_intl_fixtures_live() -> pd.DataFrame:
+    frames = [load_nations_league()]
+    year = dt.date.today().year
+    for code, _, slug in NATION_TOURNAMENTS:
+        for yr in range(year - 1, year + 3):
+            df = _feed_to_frame(_fetch_json(UEFA_FEED.format(slug=f"{slug}-{yr}")), code, yr)
+            if df.empty or df["FTHG"].notna().all():
+                continue                       # not published, or already finished
+            df["HomeTeam"] = df["HomeTeam"].replace(NATION_ALIASES)
+            df["AwayTeam"] = df["AwayTeam"].replace(NATION_ALIASES)
+            df["Neutral"] = True
+            frames.append(df)
+    frames = [f for f in frames if f is not None and not f.empty]
+    if not frames:
+        return pd.DataFrame()
+    return pd.concat(frames, ignore_index=True).sort_values("Kickoff").reset_index(drop=True)
+
+
+def nation_confederations(intl: pd.DataFrame) -> dict:
+    """{national team: region} from the tournaments it has played since 2010."""
+    recent = intl[intl["Date"] >= "2010-01-01"]
+    counts = {}
+    for region, pattern in CONFEDERATIONS:
+        m = recent[recent["Tournament"].str.contains(pattern, regex=True)]
+        for t in pd.concat([m["HomeTeam"], m["AwayTeam"]]):
+            counts.setdefault(t, {}).setdefault(region, 0)
+            counts[t][region] += 1
+    # the region whose tournaments the team plays most often
+    return {t: max(c, key=c.get) for t, c in counts.items()}
+
+
+def uefa_group(team: str, league_teams: dict) -> str:
+    """League code (covered leagues) or country code for a UEFA club."""
+    if team in UEFA_CLUB_MAP:
+        return UEFA_CLUB_MAP[team][0]
+    if team in league_teams:                     # same spelling in a covered league
+        return league_teams[team]
+    return UEFA_CLUB_COUNTRY.get(team, "OTHER")
+
+
+def uefa_domestic(teams, models: dict) -> dict:
+    """{UEFA club: (group, domestic attack, domestic defence)} from league models."""
+    league_teams = {t: lg for lg, m in models.items() for t in m.get("attack", {})}
+    out = {}
+    for t in teams:
+        g = uefa_group(t, league_teams)
+        fd = UEFA_CLUB_MAP[t][1] if t in UEFA_CLUB_MAP else t
+        m = models.get(g)
+        if m is not None and fd in m["attack"]:
+            out[t] = (g, float(m["attack"][fd]), float(m["defence"][fd]))
+        else:
+            out[t] = (g, 0.0, 0.0)
+    return out
+
+
+@st.cache_data(ttl=3600, show_spinner=False)
+def fit_uefa(uefa: pd.DataFrame, dom: dict,
+             half_life_days: int = UEFA_DEFAULTS["half_life"],
+             offset_penalty: float = UEFA_DEFAULTS["offset_penalty"],
+             club_penalty: float = UEFA_DEFAULTS["club_penalty"]) -> dict:
+    """
+    European-cup model. A club's strength = its domestic rating (if its league
+    is covered) + how strong its league/country is in Europe + a small
+    club-specific adjustment, all fitted on past UEFA matches.
+    """
+    from scipy.sparse import csr_matrix
+    played = uefa.dropna(subset=["FTHG", "FTAG"]).reset_index(drop=True)
+    teams_all = sorted(set(uefa["HomeTeam"]) | set(uefa["AwayTeam"]))
+    groups = sorted({dom[t][0] for t in teams_all})
+    clubs = sorted(set(played["HomeTeam"]) | set(played["AwayTeam"]))
+    gi = {g: i for i, g in enumerate(groups)}
+    ci = {c: i for i, c in enumerate(clubs)}
+    G, C = len(groups), len(clubs)
+    P = 2 + 2 * G + 2 * C
+    iA = lambda g: 2 + gi[g]                       # noqa: E731
+    iD = lambda g: 2 + G + gi[g]                   # noqa: E731
+    iRa = lambda c: 2 + 2 * G + ci[c]              # noqa: E731
+    iRd = lambda c: 2 + 2 * G + C + ci[c]          # noqa: E731
+
+    last = played["Kickoff"].max()
+    rows, cols, vals, off, y, w = [], [], [], [], [], []
+    r = 0
+    for _, m in played.iterrows():
+        h, a = m["HomeTeam"], m["AwayTeam"]
+        gh, ga = dom[h][0], dom[a][0]
+        wt = float(np.exp(-np.log(2) / half_life_days
+                          * (last - m["Kickoff"]).total_seconds() / 86400))
+        hf = 0.0 if m["Neutral"] else 1.0
+        for (j, c) in [(0, 1.0), (1, hf), (iA(gh), 1.0), (iRa(h), 1.0),
+                       (iD(ga), -1.0), (iRd(a), -1.0)]:
+            rows.append(r); cols.append(j); vals.append(c)
+        off.append(dom[h][1] - dom[a][2]); y.append(m["FTHG"]); w.append(wt); r += 1
+        for (j, c) in [(0, 1.0), (iA(ga), 1.0), (iRa(a), 1.0),
+                       (iD(gh), -1.0), (iRd(h), -1.0)]:
+            rows.append(r); cols.append(j); vals.append(c)
+        off.append(dom[a][1] - dom[h][2]); y.append(m["FTAG"]); w.append(wt); r += 1
+    X = csr_matrix((vals, (rows, cols)), shape=(r, P))
+    off, y, w = np.array(off), np.array(y, float), np.array(w)
+    pen = np.zeros(P)
+    pen[2:2 + 2 * G] = offset_penalty
+    pen[2 + 2 * G:] = club_penalty
+
+    def nll_and_grad(p):
+        eta = X @ p + off
+        lam = np.exp(eta)
+        nll = np.sum(w * (lam - y * eta)) + np.sum(pen * p * p)
+        g = X.T @ (w * (lam - y)) + 2 * pen * p
+        return nll, g
+
+    x0 = np.zeros(P)
+    x0[0], x0[1] = 0.2, 0.2
+    res = minimize(nll_and_grad, x0, jac=True, method="L-BFGS-B",
+                   options={"maxiter": 5000, "ftol": 1e-15, "gtol": 1e-9})
+    p = res.x
+
+    def strength(t):
+        g, da, dd = dom.get(t, ("OTHER", 0.0, 0.0))
+        A = p[iA(g)] if g in gi else 0.0
+        D = p[iD(g)] if g in gi else 0.0
+        ra = p[iRa(t)] if t in ci else 0.0
+        rd = p[iRd(t)] if t in ci else 0.0
+        return da + A + ra, dd + D + rd
+
+    att = {t: strength(t)[0] for t in teams_all}
+    dfn = {t: strength(t)[1] for t in teams_all}
+    hf = (~played["Neutral"]).to_numpy(float)
+    lam_h = np.exp(p[0] + p[1] * hf + np.array([att[t] for t in played["HomeTeam"]])
+                   - np.array([dfn[t] for t in played["AwayTeam"]]))
+    lam_a = np.exp(p[0] + np.array([att[t] for t in played["AwayTeam"]])
+                   - np.array([dfn[t] for t in played["HomeTeam"]]))
+    rho = _dixon_coles_rho(played["FTHG"].to_numpy(float), played["FTAG"].to_numpy(float),
+                           lam_h, lam_a, w[::2])      # one weight per match
+    group_strength = {g: (float(p[iA(g)]), float(p[iD(g)])) for g in groups}
+    return {"mu": float(p[0]), "home": float(p[1]), "rho": rho,
+            "attack": {k: float(v) for k, v in att.items()},
+            "defence": {k: float(v) for k, v in dfn.items()},
+            "prior": {"attack": 0.0, "defence": 0.0},
+            "teams": teams_all, "current_teams": teams_all,
+            "groups": group_strength, "dom": dom,
+            "n_matches": int(len(played)),
+            "last_date": played["Kickoff"].max(), "converged": bool(res.success),
+            "goals_weight": 1.0}
+
+
+def cup_predictions(fixtures: pd.DataFrame, model: dict, code_col: str = "Comp",
+                    days: int = 7, min_edge: float = DEFAULTS["min_edge"]) -> pd.DataFrame:
+    """Prediction rows (same columns as the league advice table) for cup or
+    international fixtures that have no odds feed."""
+    if fixtures is None or fixtures.empty or model is None:
+        return pd.DataFrame()
+    up = upcoming_fixtures(fixtures, days)
+    rows = []
+    for _, fx in up.iterrows():
+        neutral = bool(fx.get("Neutral", False))
+        lh, la, m, p = predict(model, fx["HomeTeam"], fx["AwayTeam"], neutral=neutral)
+        pred, _ = predicted_score(m, p)
+        best = max(("H", "D", "A"), key=lambda k: p[k])
+        lab = {"H": fx["HomeTeam"], "D": "Draw", "A": fx["AwayTeam"]}[best]
+        rows.append({
+            "League": fx[code_col],
+            "Kickoff (UK)": fx["Kickoff"].tz_convert(UK_TZ).strftime("%a %d %b %H:%M"),
+            "Kickoff UTC": fx["Kickoff"],
+            "Match": f"{fx['HomeTeam']} v {fx['AwayTeam']}",
+            "Predicted score": pred,
+            "Top 3 scores": ", ".join(f"{sc} ({pr*100:.0f}%)" for sc, pr in top_scores(m)),
+            "Home %": p["H"] * 100, "Draw %": p["D"] * 100, "Away %": p["A"] * 100,
+            "Over 2.5 %": p["O25"] * 100, "BTTS %": p["BTTS_Y"] * 100,
+            "xG": f"{lh:.2f} - {la:.2f}",
+            "Advice": (f"No odds feed: back {lab} only at "
+                       f"{(1 / p[best]) * (1 + min_edge / 100):.2f}+"),
+            "Stake": "",
+        })
+    if not rows:
+        return pd.DataFrame()
+    out = pd.DataFrame(rows)
+    out.insert(1, "Status", STATUS_LABEL["cup"])
+    out.insert(0, "Competition", out["League"].map(league_name))
+    return out
+
+
+
+def league_models(all_results: dict, half_life: int, goals_weight: float) -> dict:
+    """Fitted model for every loaded league (each fit is cached)."""
+    return {lg: fit_model(df, half_life, goals_weight)
+            for lg, df in all_results.items() if not df.empty}
+
+
+def combine_overview(*frames) -> pd.DataFrame:
+    """Join league advice and cup predictions; best opportunities first."""
+    frames = [f for f in frames if f is not None and not f.empty]
+    if not frames:
+        return pd.DataFrame()
+    out = pd.concat(frames, ignore_index=True)
+    out["_rank"] = out["League"].map(lambda c: STATUS_RANK[league_status(c)])
+    out.loc[out["Advice"].str.startswith("BET"), "_rank"] = 0
+    out = out.sort_values(["_rank", "Competition", "Kickoff UTC"]).drop(columns=["_rank"])
+    return out.reset_index(drop=True)
+
+
+def add_local_time(adv: pd.DataFrame, tz: str) -> pd.DataFrame:
+    """Add the local day and time of each kick-off, sorted by kick-off."""
+    out = adv.copy()
+    local = pd.to_datetime(out["Kickoff UTC"], utc=True).dt.tz_convert(tz)
+    out["_day"] = local.dt.date
+    out["Day"] = local.dt.strftime("%A %d %B")
+    out["Time"] = local.dt.strftime("%H:%M")
+    return out.sort_values(["_day", "Kickoff UTC", "Competition"]).reset_index(drop=True)
+
+
+def bet_slip_lines(day_rows: pd.DataFrame) -> list[str]:
+    """One line per BET for a day's bet slip."""
+    bets = day_rows[day_rows["Advice"].str.startswith("BET")]
+    return [f"{r['Time']} · {r['Match']} ({r['Competition']}) — "
+            f"**{r['Advice'][4:]}** — stake {r['Stake']}" for _, r in bets.iterrows()]
+
+
+BEFORE_YOU_BET = (
+    "**Before you place any bet**\n"
+    "1. Your bookmaker's odds must be **at least** the price shown (for 🏆 games: at "
+    "least the 'back only at' price). Lower odds = skip the bet.\n"
+    "2. Check team news: injuries, suspensions, rotation. If a key player is out, "
+    "re-check the match in the Match Analyzer with the What-If sliders.\n"
+    "3. Stake no more than shown, and never chase losses.\n"
+    "4. Bets are logged automatically - check the Paper Trading tab to see if the "
+    "edge is real before risking real money.")
+
+
+def render_day_by_day(adv: pd.DataFrame, tz: str, key: str):
+    """Every match from every competition, one day at a time, with advice."""
+    if adv is None or adv.empty:
+        st.info("No fixtures in the next 7 days are in the feeds yet. League rounds "
+                "are usually published mid-week.")
+        return
+    d = add_local_time(adv, tz)
+    days = list(dict.fromkeys(d["_day"]))
+
+    def _label(day):
+        sub = d[d["_day"] == day]
+        nb = int(sub["Advice"].str.startswith("BET").sum())
+        return (f"{pd.Timestamp(day):%A %d %B} — {len(sub)} matches"
+                + (f", {nb} ✅ BET" if nb else ""))
+
+    c1, c2 = st.columns([2, 2])
+    day = c1.selectbox("Day", days, format_func=_label, key=f"{key}_day")
+    comps = ["All competitions"] + list(dict.fromkeys(d.loc[d["_day"] == day, "Competition"]))
+    comp = c2.selectbox("Competition", comps, key=f"{key}_comp")
+    only = st.toggle("Only matches with BET or WATCH advice", value=False, key=f"{key}_only")
+
+    sub = d[d["_day"] == day]
+    if comp != comps[0]:
+        sub = sub[sub["Competition"] == comp]
+    slip = bet_slip_lines(sub)
+    if slip:
+        st.success(f"**Bet slip — {pd.Timestamp(day):%A %d %B}**\n\n"
+                   + "\n".join(f"- {line}" for line in slip))
+    else:
+        st.info("No ✅ BET advice for this day: the prices are fair. That is normal - "
+                "don't force bets.")
+    n_watch = int(sub["Advice"].str.startswith("WATCH").sum())
+    if n_watch:
+        st.caption(f"👀 {n_watch} watch-list match(es): logged for paper trading, "
+                   "not advised for real money.")
+    view = sub[sub["Advice"].str.match(r"^(BET|WATCH)")] if only else sub
+
+    def _style(row):
+        txt = row["Advice"]
+        css = ("background-color: #1e7b34; color: white; font-weight: 600"
+               if txt.startswith("BET") else
+               "background-color: #8a6d0b; color: white" if txt.startswith("WATCH")
+               else "")
+        return [css if c in ("Advice", "Stake") else "" for c in row.index]
+
+    cols = ["Time", "Competition", "Match", "Advice", "Stake", "Predicted score",
+            "Top 3 scores", "Home %", "Draw %", "Away %", "Over 2.5 %", "BTTS %"]
+    pct_cols = ["Home %", "Draw %", "Away %", "Over 2.5 %", "BTTS %"]
+    if view.empty:
+        st.caption("No matches to show with this filter.")
+    else:
+        show_df(view[cols].style.apply(_style, axis=1)
+                .format({c: "{:.0f}" for c in pct_cols}), hide_index=True,
+                height=min(800, 38 + 35 * len(view)))
+    st.caption(f"Times shown in {tz} (change it in the sidebar).")
+    st.markdown(BEFORE_YOU_BET)
 
 
 # =============================================================================
@@ -762,9 +1667,10 @@ def market_benchmark(preds: pd.DataFrame, book: str):
 # =============================================================================
 # 5. PAPER TRADING (automatic log + settlement)
 # =============================================================================
-PAPER_COLS = ["Logged (UTC)", "Kickoff (UTC)", "Date", "HomeTeam", "AwayTeam",
-              "Market", "Book", "Price", "Net odds", "Model %", "Edge %",
-              "Goals weight", "Min edge", "Max edge"]
+PAPER_COLS = ["Logged (UTC)", "League", "Kickoff (UTC)", "Date", "HomeTeam",
+              "AwayTeam", "Market", "Book", "Price", "Net odds", "Model %",
+              "Edge %", "Goals weight", "Min edge", "Max edge"]
+PAPER_KEY = ["League", "Date", "HomeTeam", "AwayTeam", "Market", "Book"]
 
 
 def flagged_bets(window: pd.DataFrame, model: dict, book: str,
@@ -785,6 +1691,7 @@ def flagged_bets(window: pd.DataFrame, model: dict, book: str,
                 continue
             rows.append({
                 "Logged (UTC)": now,
+                "League": fx.get("Div", fx.get("League", DEFAULT_LEAGUE)),
                 "Kickoff (UTC)": fx["Kickoff"].strftime("%Y-%m-%d %H:%M"),
                 "Date": fx["Date"].strftime("%Y-%m-%d"),
                 "HomeTeam": fx["HomeTeam"], "AwayTeam": fx["AwayTeam"],
@@ -801,24 +1708,30 @@ def flagged_bets(window: pd.DataFrame, model: dict, book: str,
 def read_paper_log() -> pd.DataFrame:
     try:
         if PAPER_LOG.exists():
-            return pd.read_csv(PAPER_LOG)
+            log = pd.read_csv(PAPER_LOG)
+            if "League" not in log.columns:          # logs from the EPL-only version
+                log.insert(1, "League", DEFAULT_LEAGUE)
+            return log
     except Exception:
         pass
     return pd.DataFrame(columns=PAPER_COLS)
 
 
-def update_paper_log(new_rows: pd.DataFrame):
+def update_paper_log(new_rows: pd.DataFrame, allow_all: bool = False):
     """
-    Append new flags; the FIRST price seen for a match/market/book is kept
-    (that is the bet you would have placed). Returns (log, n_added, error).
+    Append new flags from 'bet' and 'watch' leagues; the FIRST price seen for
+    a match/market/book is kept (that is the bet you would have placed).
+    Returns (log, n_added, error).
     """
     log = read_paper_log()
+    if not new_rows.empty:
+        new_rows = new_rows[new_rows["League"].map(
+            lambda c: league_status(c, allow_all) in ("bet", "watch"))]
     if new_rows.empty:
         return log, 0, None
-    key = ["Date", "HomeTeam", "AwayTeam", "Market", "Book"]
     before = len(log)
     merged = (pd.concat([log, new_rows], ignore_index=True)
-              .drop_duplicates(subset=key, keep="first")
+              .drop_duplicates(subset=PAPER_KEY, keep="first")
               .reset_index(drop=True))
     added = len(merged) - before
     if added == 0:
@@ -834,18 +1747,32 @@ def update_paper_log(new_rows: pd.DataFrame):
     return merged, added, None
 
 
-def settle_paper_log(log: pd.DataFrame, results: pd.DataFrame) -> pd.DataFrame:
-    """Attach final score, win/loss, profit (1 unit) and closing-line value."""
+def settle_paper_log(log: pd.DataFrame, results) -> pd.DataFrame:
+    """Attach final score, win/loss, profit (1 unit) and closing-line value.
+    `results` is {league: DataFrame} (or one DataFrame of Premier League results)."""
     if log.empty:
         return log.assign(Score=[], Won=[], Profit=[], Close=[], **{"CLV %": []})
-    res = results.copy()
-    res["Date"] = res["Date"].dt.strftime("%Y-%m-%d")
-    keep = ["Date", "HomeTeam", "AwayTeam", "FTHG", "FTAG"] + [
-        c for c in res.columns if c in ODDS_COLUMNS]
-    res = res[keep].drop_duplicates(["Date", "HomeTeam", "AwayTeam"])
-    out = log.merge(res, on=["Date", "HomeTeam", "AwayTeam"], how="left")
+    if isinstance(results, pd.DataFrame):
+        results = {DEFAULT_LEAGUE: results}
+    frames = []
+    for lg, df in results.items():
+        if df is None or df.empty:
+            continue
+        d = df.copy()
+        d["League"] = lg
+        d["Date"] = d["Date"].dt.strftime("%Y-%m-%d")
+        keep = ["League", "Date", "HomeTeam", "AwayTeam", "FTHG", "FTAG"] + [
+            c for c in d.columns if c in ODDS_COLUMNS]
+        frames.append(d[keep])
+    if frames:
+        res = pd.concat(frames, ignore_index=True).drop_duplicates(
+            ["League", "Date", "HomeTeam", "AwayTeam"])
+    else:
+        res = pd.DataFrame(columns=["League", "Date", "HomeTeam", "AwayTeam", "FTHG", "FTAG"])
+    out = log.merge(res, on=["League", "Date", "HomeTeam", "AwayTeam"], how="left")
 
-    hg, ag = out["FTHG"], out["FTAG"]
+    hg = pd.to_numeric(out["FTHG"], errors="coerce")
+    ag = pd.to_numeric(out["FTAG"], errors="coerce")
     won_map = {"H": hg > ag, "D": hg == ag, "A": hg < ag,
                "O25": (hg + ag) > 2.5, "U25": (hg + ag) < 2.5}
     played = hg.notna() & ag.notna()
@@ -882,6 +1809,374 @@ def paper_summary(settled: pd.DataFrame) -> dict:
     return out
 
 
+# =============================================================================
+# SAFETY SWITCH + DATA HEALTH
+# =============================================================================
+def safety_overrides(settled: pd.DataFrame) -> dict:
+    """
+    Downgrade a BET league to WATCH when real paper-trading results say the
+    edge is not there: 150+ bets with closing prices and an average CLV below
+    zero, or 150+ settled bets with an ROI that is clearly negative.
+    """
+    out = {}
+    if settled is None or settled.empty or "League" not in settled.columns:
+        return out
+    n_min = SAFETY["min_bets"]
+    for lg, base in LEAGUE_STATUS.items():
+        if base != "bet":
+            continue
+        s = settled[settled["League"] == lg]
+        clv = pd.to_numeric(s["CLV %"], errors="coerce").dropna()
+        done = pd.to_numeric(s["Profit"], errors="coerce").dropna()
+        if len(clv) >= n_min and clv.mean() < SAFETY["min_avg_clv"]:
+            out[lg] = ("watch", f"Auto-downgraded to WATCH: {len(clv)} paper bets with an "
+                                f"average CLV of {clv.mean():+.2f}% - not beating the "
+                                "closing odds.")
+        elif len(done) >= n_min:
+            roi = done.mean() * 100
+            hi = roi + 1.96 * done.std(ddof=1) / np.sqrt(len(done)) * 100
+            if hi < 0:
+                out[lg] = ("watch", f"Auto-downgraded to WATCH: ROI {roi:+.1f}% over "
+                                    f"{len(done)} paper bets is clearly negative.")
+    return out
+
+
+def promotion_candidates(settled: pd.DataFrame) -> list[str]:
+    """Watch leagues whose paper results now look genuinely positive (never
+    promoted automatically - shown for your decision)."""
+    notes = []
+    if settled is None or settled.empty or "League" not in settled.columns:
+        return notes
+    for lg, base in LEAGUE_STATUS.items():
+        if base != "watch":
+            continue
+        s = settled[settled["League"] == lg]
+        clv = pd.to_numeric(s["CLV %"], errors="coerce").dropna()
+        done = pd.to_numeric(s["Profit"], errors="coerce").dropna()
+        if len(clv) >= SAFETY["min_bets"] and clv.mean() > 1.0 and len(done) > 1:
+            lo = done.mean() * 100 - 1.96 * done.std(ddof=1) / np.sqrt(len(done)) * 100
+            if lo > 0:
+                notes.append(f"{league_name(lg)}: {len(clv)} paper bets, average CLV "
+                             f"{clv.mean():+.2f}% and a positive ROI range - a candidate "
+                             "for BET status.")
+    return notes
+
+
+def data_health(all_results: dict, fixtures, uefa, intl, intl_fx) -> pd.DataFrame:
+    """One row per data source: ✅ fine, ⚠️ check, ❌ problem."""
+    rows = []
+    today = pd.Timestamp(dt.date.today())
+    off_season = today.month in (6, 7)
+
+    def grade(age, ok, warn):
+        return "✅" if age <= ok else "⚠️" if age <= warn else "❌"
+
+    def src(df):
+        return getattr(df, "attrs", {}).get("source", "live") if df is not None else "-"
+
+    for lg in LEAGUES:
+        df = all_results.get(lg)
+        if df is None or df.empty:
+            continue
+        last = df["Date"].max()
+        age = (today - last).days
+        rows.append({"Source": f"Results: {league_name(lg)}",
+                     "Status": grade(age, 90 if off_season else 10, 120 if off_season else 21),
+                     "Latest data": f"{last:%d %b %Y}", "From": src(df),
+                     "Details": f"{len(df):,} matches"})
+    if fixtures is None or fixtures.empty:
+        rows.append({"Source": "Fixtures & odds (all leagues)", "Status": "❌",
+                     "Latest data": "-", "From": src(fixtures),
+                     "Details": "No fixtures file - league advice unavailable"})
+    else:
+        n7 = len(upcoming_fixtures(fixtures))
+        rows.append({"Source": "Fixtures & odds (all leagues)", "Status": "✅" if n7 else "⚠️",
+                     "Latest data": f"{fixtures['Kickoff'].max():%d %b %Y}", "From": src(fixtures),
+                     "Details": f"{n7} matches in the next 7 days"
+                                + ("" if n7 else " (normal mid-week or in international breaks)")})
+    if uefa is None or uefa.empty:
+        rows.append({"Source": "UEFA cups", "Status": "❌", "Latest data": "-",
+                     "From": src(uefa), "Details": "No UEFA data"})
+    else:
+        played = uefa.dropna(subset=["FTHG"])
+        n14 = len(upcoming_fixtures(uefa, 14))
+        rows.append({"Source": "UEFA cups (UCL / UEL / UECL)", "Status": "✅",
+                     "Latest data": f"{played['Kickoff'].max():%d %b %Y}" if not played.empty else "-",
+                     "From": src(uefa), "Details": f"{len(played):,} results, {n14} fixtures in 14 days"})
+    if intl is None or intl.empty:
+        rows.append({"Source": "National-team results", "Status": "❌", "Latest data": "-",
+                     "From": src(intl), "Details": "No international data"})
+    else:
+        last = intl["Date"].max()
+        rows.append({"Source": "National-team results", "Status": grade((today - last).days, 60, 120),
+                     "Latest data": f"{last:%d %b %Y}", "From": src(intl),
+                     "Details": f"{len(intl):,} matches"})
+    n30 = len(upcoming_fixtures(intl_fx, 30)) if intl_fx is not None and not intl_fx.empty else 0
+    rows.append({"Source": "National-team fixtures (Nations League, AFCON, ...)",
+                 "Status": "✅" if intl_fx is not None and not intl_fx.empty else "⚠️",
+                 "Latest data": "-", "From": src(intl_fx),
+                 "Details": f"{n30} fixtures in the next 30 days"})
+    meta = snapshot_meta()
+    if not meta.get("saved_at"):
+        rows.append({"Source": "Backup copy (data_snapshot)", "Status": "⚠️", "Latest data": "-",
+                     "From": "-", "Details": "Not created yet - the scheduled GitHub run "
+                                             "creates it on its first run"})
+    else:
+        age_h = (pd.Timestamp.now(tz="UTC") - pd.Timestamp(meta["saved_at"])).total_seconds() / 3600
+        rows.append({"Source": "Backup copy (data_snapshot)",
+                     "Status": "✅" if age_h < 13 else "⚠️" if age_h < 48 else "❌",
+                     "Latest data": pd.Timestamp(meta["saved_at"]).strftime("%d %b %Y %H:%M UTC"),
+                     "From": "-", "Details": f"{len(meta.get('files', {}))} sources saved, "
+                                             f"{age_h:.0f} h ago"})
+    return pd.DataFrame(rows)
+
+
+# =============================================================================
+# MATCH SEARCH: type a home and an away team, get advice for that match
+# =============================================================================
+# Common ways people write team names -> the name used in the data
+SEARCH_ALIASES = {
+    "manchester united": "Man United", "man utd": "Man United", "man u": "Man United",
+    "manchester city": "Man City", "mancity": "Man City", "spurs": "Tottenham",
+    "tottenham hotspur": "Tottenham", "nottingham forest": "Nott'm Forest",
+    "forest": "Nott'm Forest", "wolverhampton": "Wolves", "wolverhampton wanderers": "Wolves",
+    "west ham united": "West Ham", "newcastle united": "Newcastle", "leeds united": "Leeds",
+    "brighton and hove albion": "Brighton", "brighton & hove albion": "Brighton",
+    "sheffield wednesday": "Sheffield Weds", "sheffield utd": "Sheffield United",
+    "qpr": "QPR", "queens park rangers": "QPR", "west bromwich albion": "West Brom",
+    "psg": "Paris SG", "paris saint-germain": "Paris SG", "paris saint germain": "Paris SG",
+    "olympique de marseille": "Marseille", "om": "Marseille", "olympique lyonnais": "Lyon",
+    "ol": "Lyon", "as monaco": "Monaco", "losc": "Lille", "saint-etienne": "St Etienne",
+    "saint etienne": "St Etienne", "inter milan": "Inter", "internazionale": "Inter",
+    "ac milan": "Milan", "as roma": "Roma", "ss lazio": "Lazio", "juve": "Juventus",
+    "ssc napoli": "Napoli", "hellas verona": "Verona",
+    "atletico madrid": "Ath Madrid", "atletico de madrid": "Ath Madrid", "atleti": "Ath Madrid",
+    "athletic bilbao": "Ath Bilbao", "athletic club": "Ath Bilbao", "real betis": "Betis",
+    "real sociedad": "Sociedad", "rayo vallecano": "Vallecano", "espanyol": "Espanol",
+    "celta vigo": "Celta", "deportivo la coruna": "La Coruna", "fc barcelona": "Barcelona",
+    "barca": "Barcelona", "bayern munich": "Bayern Munich", "bayern munchen": "Bayern Munich",
+    "bayern": "Bayern Munich", "borussia dortmund": "Dortmund", "bvb": "Dortmund",
+    "bayer leverkusen": "Leverkusen", "eintracht frankfurt": "Ein Frankfurt",
+    "borussia monchengladbach": "M'gladbach", "gladbach": "M'gladbach",
+    "rb leipzig": "RB Leipzig", "leipzig": "RB Leipzig", "fc koln": "FC Koln",
+    "cologne": "FC Koln", "koln": "FC Koln", "werder": "Werder Bremen",
+    "sporting lisbon": "Sp Lisbon", "sporting cp": "Sp Lisbon", "sporting": "Sp Lisbon",
+    "sc braga": "Sp Braga", "braga": "Sp Braga", "fc porto": "Porto", "sl benfica": "Benfica",
+    "vitoria guimaraes": "Guimaraes", "psv": "PSV Eindhoven", "az": "AZ Alkmaar",
+    "nec nijmegen": "Nijmegen", "nec": "Nijmegen", "union saint-gilloise": "St. Gilloise",
+    "union sg": "St. Gilloise", "olympiacos": "Olympiakos", "aek athens": "AEK",
+    "fenerbahce": "Fenerbahce", "besiktas": "Besiktas", "basaksehir": "Buyuksehyr",
+    "istanbul basaksehir": "Buyuksehyr", "celtic glasgow": "Celtic", "glasgow rangers": "Rangers",
+    "cote d'ivoire": "Ivory Coast", "cote divoire": "Ivory Coast", "cameroun": "Cameroon",
+    "rd congo": "DR Congo", "congo dr": "DR Congo", "drc": "DR Congo",
+    "cabo verde": "Cape Verde", "usa": "United States", "turkiye": "Turkey",
+    "czechia": "Czech Republic", "korea republic": "South Korea", "ir iran": "Iran",
+    "holland": "Netherlands", "republic of ireland": "Republic of Ireland",
+    "ksa": "Saudi Arabia", "uae": "United Arab Emirates", "emirates": "United Arab Emirates",
+    "korea": "South Korea", "china pr": "China", "zenit st petersburg": "Zenit",
+}
+
+
+def _norm(name: str) -> str:
+    import unicodedata
+    s = unicodedata.normalize("NFKD", str(name)).encode("ascii", "ignore").decode()
+    s = s.lower().replace(".", "").replace("’", "'").strip()
+    for junk in (" fc", "fc ", " cf", " afc", " sc"):
+        if s.endswith(junk) or s.startswith(junk.strip() + " "):
+            s = s.replace(junk.strip(), "", 1).strip()
+    return " ".join(s.split())
+
+
+def team_directory(all_models: dict, uefa_model, intl_model) -> dict:
+    """{team name: [(kind, league code or None), ...]} for every team we can rate."""
+    d = {}
+    for lg, m in all_models.items():
+        for t in m.get("current_teams", m.get("teams", [])):
+            d.setdefault(t, []).append(("league", lg))
+    if uefa_model:
+        for t in uefa_model["teams"]:
+            d.setdefault(t, []).append(("uefa", None))
+    if intl_model:
+        for t in intl_model["current_teams"]:
+            d.setdefault(t, []).append(("intl", None))
+    return d
+
+
+def resolve_team(query: str, names: list) -> tuple:
+    """(team, suggestions, exact). exact=True only for an exact or alias match -
+    anything fuzzy must be confirmed by the user, never silently guessed."""
+    import difflib
+    q = _norm(query)
+    if not q:
+        return None, [], False
+    by_norm = {}
+    for n in names:
+        by_norm.setdefault(_norm(n), n)
+    if q in by_norm:
+        return by_norm[q], [by_norm[q]], True
+    if q in SEARCH_ALIASES:
+        target = _norm(SEARCH_ALIASES[q])
+        if target in by_norm:
+            return by_norm[target], [by_norm[target]], True
+    partial = [n for k, n in by_norm.items()
+               if len(q) >= 3 and (k.startswith(q) or f" {q}" in f" {k}")]
+    close = [by_norm[k] for k in difflib.get_close_matches(q, list(by_norm), n=5, cutoff=0.75)]
+    sugg = list(dict.fromkeys(partial + close if len(q) <= 4 else close + partial))[:6]
+    return (sugg[0] if sugg else None), sugg, False
+
+
+def _cross_league_model(uefa_model: dict, all_models: dict, teams: dict) -> dict:
+    """Clubs from different leagues: domestic rating + how strong each league is
+    in Europe (from the UEFA model)."""
+    m = dict(uefa_model)
+    att, dfn = dict(uefa_model["attack"]), dict(uefa_model["defence"])
+    for t, lg in teams.items():
+        lm = all_models.get(lg)
+        a, d = uefa_model["groups"].get(lg, (0.0, 0.0))
+        if lm is not None and t in lm["attack"]:
+            att[t], dfn[t] = lm["attack"][t] + a, lm["defence"][t] + d
+    m["attack"], m["defence"] = att, dfn
+    return m
+
+
+def match_query(home: str, away: str, directory: dict, all_models: dict, uefa_model,
+                intl_model, fixtures: pd.DataFrame, book: str, min_edge: float,
+                max_edge: float, bankroll: float, allow_all: bool, neutral: bool) -> dict:
+    """Pick the right model for the two teams and build the advice."""
+    kh, ka = directory.get(home, []), directory.get(away, [])
+    lh = {lg for k, lg in kh if k == "league"}
+    la = {lg for k, lg in ka if k == "league"}
+    common = sorted(lh & la, key=lambda c: STATUS_RANK[league_status(c, allow_all)])
+    out = {"home": home, "away": away, "neutral": neutral}
+    if common:
+        lg = common[0]
+        model = all_models[lg]
+        out.update(model=model, competition=league_name(lg), league=lg,
+                   status=league_status(lg, allow_all))
+        fx = pd.DataFrame()
+        if fixtures is not None and not fixtures.empty:
+            up = upcoming_fixtures(fixtures, 14)
+            fx = up[(up["Div"] == lg) & (up["HomeTeam"] == home) & (up["AwayTeam"] == away)]
+        if not fx.empty and not neutral:
+            fx = fx.head(1)
+            flags = flagged_bets(fx, model, book, min_edge, max_edge)
+            adv = match_advice(score_predictions(fx, model), flags, bankroll, allow_all)
+            out.update(fixture=fx.iloc[0], advice=adv.iloc[0]["Advice"],
+                       stake=adv.iloc[0]["Stake"], odds=fixture_odds(fx.iloc[0], book))
+        return out
+    if any(k == "intl" for k, _ in kh) and any(k == "intl" for k, _ in ka):
+        out.update(model=intl_model, competition="National teams", league=None, status="cup")
+        return out
+    in_uefa = uefa_model is not None and home in uefa_model["teams"] and away in uefa_model["teams"]
+    if in_uefa:
+        out.update(model=uefa_model, competition="European club match", league=None, status="cup")
+        return out
+    if uefa_model is not None and lh and la:
+        m = _cross_league_model(uefa_model, all_models,
+                                {home: sorted(lh)[0], away: sorted(la)[0]})
+        out.update(model=m, competition=f"{league_name(sorted(lh)[0])} v "
+                                        f"{league_name(sorted(la)[0])} (cross-league)",
+                   league=None, status="cup")
+        return out
+    out["error"] = ("These two teams can't be compared (for example a club against a "
+                    "national team).")
+    return out
+
+
+def render_match_search(directory: dict, all_models: dict, uefa_model, intl_model,
+                        fixtures, book, min_edge, max_edge, bankroll, allow_all):
+    st.markdown("#### 🔎 Ask about any match")
+    q1, q2, q3 = st.columns([3, 3, 1])
+    home_q = q1.text_input("Home team", key="q_home", placeholder="e.g. Arsenal")
+    away_q = q2.text_input("Away team", key="q_away", placeholder="e.g. Chelsea")
+    neutral = q3.toggle("Neutral venue", key="q_neutral",
+                        help="Finals and tournament games at a neutral ground.")
+    if not (home_q and away_q):
+        st.caption("Type two teams from any of the 22 leagues, the UEFA cups or "
+                   "national teams (e.g. 'Man Utd' and 'PSG', or 'Cameroon' and "
+                   "'Nigeria') to get advice for that match.")
+        return
+    names = list(directory)
+    picks = []
+    for label, q, k in (("Home team", home_q, "q_home_pick"), ("Away team", away_q, "q_away_pick")):
+        best, sugg, exact = resolve_team(q, names)
+        if best is None:
+            st.warning(f"No team found for '{q}'. Check the spelling, or try the "
+                       "short name (e.g. 'Man United', 'Paris SG', 'Ivory Coast').")
+            return
+        if not exact:                     # never guess silently - ask
+            best = st.selectbox(f"{label}: no exact match for '{q}' - did you mean...",
+                                sugg, key=k)
+        picks.append(best)
+    home, away = picks
+    if home == away:
+        st.warning("Pick two different teams.")
+        return
+    res = match_query(home, away, directory, all_models, uefa_model, intl_model, fixtures,
+                      book, min_edge, max_edge, bankroll, allow_all, neutral)
+    if "error" in res:
+        st.warning(res["error"])
+        return
+    model = res["model"]
+    lh_, la_, m, p = predict(model, home, away, neutral=neutral)
+    ps, pp = predicted_score(m, p)
+    st.markdown(f"**{home} v {away}** — {res['competition']} "
+                f"({STATUS_LABEL[res['status']]})")
+    adv = res.get("advice")
+    if adv is not None:
+        if adv.startswith("BET"):
+            st.success(f"✅ **{adv}** — stake {res['stake']}")
+        elif adv.startswith("WATCH"):
+            st.warning(f"👀 **{adv}** (not advised for real money)")
+        else:
+            st.info(f"**{adv}**")
+    else:
+        best = max(("H", "D", "A"), key=lambda k: p[k])
+        lab = {"H": f"{home} win", "D": "Draw", "A": f"{away} win"}[best]
+        why = ("this match isn't in the odds feed in the next 14 days"
+               if res["league"] else "there is no odds feed for this kind of match")
+        st.info(f"No bookmaker odds available ({why}). Most likely: **{lab}** "
+                f"({p[best]*100:.0f}%). Bet only if your bookmaker offers at least "
+                f"**{(1 / p[best]) * (1 + min_edge / 100):.2f}**.")
+        if res["status"] == "predict":
+            st.caption("Note: the model lost money in this league in testing, so treat "
+                       "these numbers as information, not betting advice.")
+    c1, c2, c3, c4 = st.columns(4)
+    c1.metric(f"{home} xG", f"{lh_:.2f}")
+    c2.metric(f"{away} xG", f"{la_:.2f}")
+    c3.metric("Predicted score", ps, delta=f"{pp*100:.0f}% chance", delta_color="off")
+    c4.metric("H / D / A", f"{p['H']*100:.0f} / {p['D']*100:.0f} / {p['A']*100:.0f}%")
+    odds = res.get("odds", {})
+    rows = []
+    for k in ["H", "D", "A", "O15", "O25", "U25", "O35", "BTTS_Y", "BTTS_N"]:
+        pr = p[k]
+        bo = odds.get(k, np.nan)
+        rows.append({"Market": MARKET_LABELS[k].replace("Home Win", f"{home} win")
+                                               .replace("Away Win", f"{away} win"),
+                     "Model %": pr * 100, "Fair odds": 1 / pr,
+                     "Bet only at odds of at least": (1 / pr) * (1 + min_edge / 100),
+                     f"{book} odds": bo,
+                     "Edge %": (pr * bo - 1) * 100 if pd.notna(bo) else np.nan})
+    show_df(pd.DataFrame(rows).style.format(
+        {"Model %": "{:.1f}", "Fair odds": "{:.2f}", "Bet only at odds of at least": "{:.2f}",
+         f"{book} odds": "{:.2f}", "Edge %": "{:+.1f}"}, na_rep="—"), hide_index=True)
+    st.caption("Top 3 scores: " + ", ".join(f"{sc} ({pr*100:.0f}%)" for sc, pr in top_scores(m))
+               + ". Check team news before betting; adjust for injuries in the Match "
+                 "Analyzer.")
+
+
+@contextmanager
+def safe_section(name: str):
+    """Keep one failing section from taking down the whole app."""
+    try:
+        yield
+    except Exception as exc:
+        if type(exc).__name__ in ("StopException", "RerunException", "RerunData"):
+            raise                                  # Streamlit control flow
+        st.error(f"Something went wrong in '{name}': {exc}. The rest of the app still "
+                 "works, and this is retried automatically on the next refresh.")
+
+
 def show_df(data, **kwargs):
     """st.dataframe at full width, compatible with old and new Streamlit."""
     try:
@@ -894,10 +2189,18 @@ def show_df(data, **kwargs):
 # 6. STREAMLIT INTERFACE
 # =============================================================================
 def main():
-    st.set_page_config(page_title="EPL Value Engine", page_icon="⚽", layout="wide")
+    st.set_page_config(page_title="Football Value Engine", page_icon="⚽", layout="wide")
 
     # ---------------- Sidebar: global settings ----------------
     st.sidebar.header("⚙️ Model settings")
+    codes = list(LEAGUES)
+    league = st.sidebar.selectbox(
+        "League for the detailed tabs", codes, index=codes.index(DEFAULT_LEAGUE),
+        format_func=lambda c: f"{league_name(c)}  {STATUS_LABEL[league_status(c)].split()[0]}",
+        help="✅ = BET advice, 👀 = paper-trade only, 📊 = predictions only.")
+    allow_all = st.sidebar.toggle(
+        "Show BET advice in every league (not recommended)", value=False,
+        help="Overrides the backtest results. The model lost money in most leagues.")
     book = st.sidebar.selectbox("Bookmaker odds source", list(BOOKMAKERS),
                                 index=list(BOOKMAKERS).index(DEFAULTS["book"]))
     min_edge = st.sidebar.slider("Minimum edge to flag as VALUE (%)", 0.0, 15.0,
@@ -926,6 +2229,8 @@ def main():
                                        help="Your total betting bank in any currency. "
                                             "Stakes are 1/4 Kelly, max "
                                             f"{DEFAULTS['max_stake_pct']:.0f}% per bet.")
+    tz = st.sidebar.selectbox("Your time zone", TIMEZONES,
+                              index=TIMEZONES.index(DEFAULTS["timezone"]))
     autolog = st.sidebar.toggle("Auto-log value bets (paper trading)", value=True,
                                 help=f"Saves every green flag to {PAPER_LOG.name} "
                                      "so you can check real results later.")
@@ -945,60 +2250,169 @@ def main():
            "a_att": a_att / 100, "a_def": a_def / 100}
     adj_active = any(v != 0 for v in adj.values())
 
-    # ---------------- Data + model ----------------
-    st.title("⚽ EPL Poisson Value Engine")
-    with st.spinner("Fetching data and fitting model..."):
-        results = load_results(seasons_back)
+    # ---------------- Data + models ----------------
+    st.title("⚽ Football Value Engine")
+    st.caption(f"{len(LEAGUES)} European leagues + national teams. BET advice only "
+               "where testing showed a profit; everywhere else you get predictions.")
+    with st.spinner("Fetching fixtures..."):
         fixtures = load_fixtures()
+    window_all = upcoming_fixtures(fixtures)
+    log_existing = read_paper_log()
+    # Every league: the match search covers all teams, and the UEFA model uses
+    # domestic ratings (fast when the backup copy is fresh)
+    needed = {league} | set(UEFA_LEAGUES) | set(LEAGUES)
+    if not window_all.empty:
+        needed |= set(window_all["Div"])
+    if not log_existing.empty:
+        needed |= set(log_existing["League"].dropna().astype(str)) & set(LEAGUES)
+    with st.spinner(f"Downloading results for {len(needed)} league(s) "
+                    "(the first load can take about 30 seconds)..."):
+        all_results = load_all_results(tuple(sorted(needed)), seasons_back)
+    results = all_results.get(league, pd.DataFrame())
 
     if results.empty:
-        st.error("Could not reach Football-Data.co.uk right now. "
-                 "The app will retry automatically; or press 'Force data refresh'.")
+        st.error(f"Could not download {league_name(league)} results from "
+                 "Football-Data.co.uk right now. The app retries automatically; "
+                 "or press 'Force data refresh'.")
         st.stop()
 
-    model = fit_model(results, half_life, goals_weight)
+    # Safety switch: paper-trading results can downgrade a BET league
+    settled_all = (settle_paper_log(log_existing, all_results) if not log_existing.empty
+                   else pd.DataFrame())
+    STATUS_OVERRIDES.clear()
+    STATUS_OVERRIDES.update(safety_overrides(settled_all))
 
-    c1, c2, c3, c4, c5 = st.columns(5)
-    c1.metric("Matches in model", f"{model['n_matches']:,}")
-    c2.metric("This-season matches", model["n_current"])
-    c3.metric("Latest result", model["last_date"].strftime("%d %b %Y"))
-    c4.metric("Home advantage", f"×{np.exp(model['home']):.2f}")
-    c5.metric("Dixon-Coles ρ", f"{model['rho']:+.3f}")
+    with st.spinner("Fitting models for every league..."):
+        ov_adv, ov_flags, ov_models = weekly_overview(
+            fixtures, all_results, half_life, goals_weight, book, min_edge,
+            max_edge, bankroll, allow_all)
+    model = ov_models.get(league) or fit_model(results, half_life, goals_weight)
+
+    with st.spinner("Loading UEFA competitions and national teams..."):
+        uefa = load_uefa()
+        nations_fx = load_intl_fixtures()
+        intl = load_international()
+        all_models = league_models(all_results, half_life, goals_weight)
+        uefa_model = None
+        if not uefa.empty:
+            uefa_teams = sorted(set(uefa["HomeTeam"]) | set(uefa["AwayTeam"]))
+            uefa_model = fit_uefa(uefa, uefa_domestic(uefa_teams, all_models))
+        intl_model = fit_international(intl) if not intl.empty else None
+    week_adv = combine_overview(
+        ov_adv, cup_predictions(uefa, uefa_model, "Comp", 7, min_edge),
+        cup_predictions(nations_fx, intl_model, "Comp", 7, min_edge))
+
     age_days = (pd.Timestamp(dt.date.today()) - model["last_date"]).days
+    with st.expander(f"📈 Model status - {league_name(league)} "
+                     f"({STATUS_LABEL[league_status(league, allow_all)]})"):
+        c1, c2, c3, c4, c5 = st.columns(5)
+        c1.metric("Matches in model", f"{model['n_matches']:,}")
+        c2.metric("This-season matches", model["n_current"])
+        c3.metric("Latest result", model["last_date"].strftime("%d %b %Y"))
+        c4.metric("Home advantage", f"×{np.exp(model['home']):.2f}")
+        c5.metric("Dixon-Coles ρ", f"{model['rho']:+.3f}")
+        xg_note = (f"{model['n_xg']} matches use real xG" if model["n_xg"]
+                   else "shots on target used as xG stand-in")
+        sot = model["goals_per_sot"]
+        st.caption(f"Rating signal: {goals_pct}% actual goals, {100 - goals_pct}% shot "
+                   f"quality ({xg_note}"
+                   + (f"; {sot:.2f} goals per shot on target" if np.isfinite(sot) else
+                      "; no shot data in this league, goals only") + ").")
+        st.caption(f"Backtest of flagged bets in this league: "
+                   f"{LEAGUE_EVIDENCE.get(league, 'not tested')}.")
+        if not model["converged"]:
+            st.warning("Optimiser reported non-convergence; ratings may be approximate.")
     if age_days > 10:
-        st.warning(f"The newest result in the feed is {age_days} days old, so the "
-                   "ratings miss recent matches. Football-Data.co.uk usually "
-                   "updates twice a week; the app picks it up automatically.")
-    xg_note = (f"{model['n_xg']} matches use real xG" if model["n_xg"]
-               else "shots on target used as xG stand-in")
-    st.caption(f"Rating signal: {goals_pct}% actual goals, {100 - goals_pct}% shot "
-               f"quality ({xg_note}; {model['goals_per_sot']:.2f} goals per shot on target).")
-    if not model["converged"]:
-        st.warning("Optimiser reported non-convergence; ratings may be approximate.")
+        st.warning(f"The newest {league_name(league)} result in the feed is {age_days} "
+                   "days old, so ratings miss recent matches. Football-Data.co.uk "
+                   "usually updates twice a week; the app picks it up automatically.")
 
-    # Only fixtures that have not kicked off yet (next 7 days).
+    # Fixtures of the selected league that have not kicked off (next 7 days).
     # Teams unknown to the model fall back to the promoted-team prior.
-    window = upcoming_fixtures(fixtures)
+    window = (window_all[window_all["Div"] == league] if not window_all.empty
+              else window_all)
 
-    # Paper trading: log today's flags, settle older ones from results
+    # Paper trading: log flags from 'bet' and 'watch' leagues
     log_note = None
-    if autolog and not window.empty:
-        _, added, err = update_paper_log(
-            flagged_bets(window, model, book, min_edge, max_edge))
+    if autolog and not ov_flags.empty:
+        _, added, err = update_paper_log(ov_flags, allow_all)
         log_note = (f"Could not write {PAPER_LOG}: {err}" if err
                     else f"{added} new value bet(s) logged." if added else None)
 
-    tab_value, tab_match, tab_ratings, tab_bt, tab_paper = st.tabs(
-        ["📋 Master Fixtures Value Table", "🔍 Match Analyzer", "📊 Team Ratings",
-         "🧾 Backtest", "📒 Paper Trading"])
+    # Data health: sidebar indicator + full table in its own tab
+    health = data_health(all_results, fixtures, uefa, intl, nations_fx)
+    n_bad = int((health["Status"] == "❌").sum())
+    n_warn = int((health["Status"] == "⚠️").sum())
+    st.sidebar.markdown("---")
+    if n_bad:
+        st.sidebar.error(f"Data health: {n_bad} problem(s) - see the 🩺 System Health tab")
+    elif n_warn:
+        st.sidebar.warning(f"Data health: {n_warn} warning(s) - see the 🩺 System Health tab")
+    else:
+        st.sidebar.success("Data health: all sources OK")
+    for lg, (_, why) in STATUS_OVERRIDES.items():
+        st.warning(f"🛡️ {league_name(lg)}: {why}")
+
+    # Match search at the top of the page
+    with safe_section("Match search"):
+        directory = team_directory(all_models, uefa_model, intl_model)
+        render_match_search(directory, all_models, uefa_model, intl_model, fixtures,
+                            book, min_edge, max_edge, bankroll, allow_all)
+    st.markdown("---")
+
+    (tab_week, tab_value, tab_match, tab_ratings, tab_bt, tab_paper, tab_uefa,
+     tab_intl, tab_health) = st.tabs(["🗓️ This Week: Everything", "📋 Value Table",
+                                      "🔍 Match Analyzer", "📊 Team Ratings", "🧾 Backtest",
+                                      "📒 Paper Trading", "🏆 UEFA Cups", "🌍 National Teams",
+                                      "🩺 System Health"])
+
+    # ================= TAB 0: This week, every league =================
+    with tab_week, safe_section("This Week"):
+        st.markdown("### What to do — match by match, day by day")
+        st.caption("Every match in the next 7 days from all 22 leagues, the UEFA cups "
+                   "and national-team tournaments, with advice.")
+        if week_adv.empty:
+            render_day_by_day(week_adv, tz, "week")
+        else:
+            n_bet = int(week_adv["Advice"].str.startswith("BET").sum())
+            n_watch = int(week_adv["Advice"].str.startswith("WATCH").sum())
+            k1, k2, k3, k4 = st.columns(4)
+            k1.metric("Matches", len(week_adv))
+            k2.metric("Leagues", week_adv["League"].nunique())
+            k3.metric("✅ Bets", n_bet)
+            k4.metric("👀 Watch", n_watch)
+            render_day_by_day(week_adv, tz, "week")
+            st.caption("✅ BET = value price in a league where the model made money in "
+                       "testing (stake = 1/4 Kelly, max "
+                       f"{DEFAULTS['max_stake_pct']:.0f}% of bankroll). 👀 WATCH = "
+                       "about break-even in testing: logged for paper trading only. "
+                       "NO BET (model not profitable) = the model lost money in that "
+                       "league in testing. 🏆 cups and national teams have no odds "
+                       "feed: compare the 'back only at' odds with your bookmaker.")
+        with st.expander("Why only some leagues get BET advice"):
+            ev = pd.DataFrame([{"Competition": league_name(c),
+                                "Status": STATUS_LABEL[league_status(c)],
+                                "ROI of flagged bets in testing": LEAGUE_EVIDENCE.get(c, "-")}
+                               for c in LEAGUES])
+            show_df(ev, hide_index=True)
+            st.caption("Each season was replayed week by week using only past matches, "
+                       "betting every 3-20% edge at Betfair Exchange prices. Only the "
+                       "Premier League made money in both seasons tested; the same "
+                       "model lost money in most other leagues, where the bookmakers' "
+                       "prices were more accurate than it is.")
 
     # ================= TAB 1: Master value table =================
-    with tab_value:
-        st.markdown(f"### This week's fixtures ranked by edge — odds: **{book}**")
+    with tab_value, safe_section("Value Table"):
+        st.markdown(f"### {league_name(league)}: fixtures ranked by edge — odds: **{book}**")
+        if league_status(league, allow_all) == "predict":
+            st.warning("The model lost money in this league in testing, so these edges "
+                       "are shown for information only and are never turned into BET "
+                       "advice.")
         if window.empty:
-            st.info("No EPL fixtures still to kick off in the next 7 days are in the "
-                    "feed yet (it is usually published mid-week, and it is empty "
-                    "during international breaks). Use the Match Analyzer meanwhile.")
+            st.info(f"No {league_name(league)} fixtures still to kick off in the next "
+                    "7 days are in the feed yet (it is usually published mid-week, and "
+                    "it is empty during international breaks). Use the Match Analyzer "
+                    "meanwhile.")
         else:
             rows = []
             for _, fx in window.iterrows():
@@ -1029,30 +2443,14 @@ def main():
                            "¼ Kelly % = suggested stake as % of bankroll (quarter-Kelly). "
                            "What-If sliders do not affect this table.")
 
-        if not window.empty:
-            st.markdown("### What to do — match by match")
-            sp = score_predictions(window, model)
-            adv = match_advice(sp, flagged_bets(window, model, book, min_edge, max_edge),
-                               bankroll)
-
-            def _adv_style(row):
-                green = "background-color: #1e7b34; color: white; font-weight: 600"
-                return [green if row["Advice"].startswith("BET") and c in ("Advice", "Stake")
-                        else "" for c in row.index]
-
-            show_df(adv.style.apply(_adv_style, axis=1).format(
-                {c: "{:.0f}" for c in ["Home %", "Draw %", "Away %", "Over 2.5 %", "BTTS %"]}),
-                hide_index=True)
-            st.caption("Advice = the single best value bet for each match, or NO BET. "
-                       "Most matches should be NO BET. Stakes are 1/4 Kelly, capped at "
-                       f"{DEFAULTS['max_stake_pct']:.0f}% of bankroll. Always check team "
-                       "news first (use the What-If sliders in the Match Analyzer).")
-            st.caption("Predicted score = most likely score within the most likely "
-                       "result. In testing it got the winner right ~50% of the time "
-                       "and the exact score ~11%; the top 3 scores covered ~32%.")
+        st.markdown("### What to do — match by match (all competitions, day by day)")
+        render_day_by_day(week_adv, tz, "value")
+        st.caption("Predicted score = most likely score within the most likely "
+                   "result. In testing it got the winner right ~50% of the time "
+                   "and the exact score ~11%; the top 3 scores covered ~32%.")
 
     # ================= TAB 2: Match analyzer =================
-    with tab_match:
+    with tab_match, safe_section("Match Analyzer"):
         st.markdown("### Upcoming Match Selector")
         mode = st.radio("Pick from", ["This week's fixtures", "Any two teams"],
                         horizontal=True,
@@ -1133,7 +2531,7 @@ def main():
         show_df(top[["Score", "Prob %", "Fair Odds"]], hide_index=True)
 
     # ================= TAB 3: Ratings =================
-    with tab_ratings:
+    with tab_ratings, safe_section("Team Ratings"):
         st.markdown("### Team strength (1.00 = league average)")
         rt = pd.DataFrame({
             "Team": model["current_teams"],
@@ -1151,7 +2549,7 @@ def main():
                    f"away {lg_away:.2f}.")
 
     # ================= TAB 4: Backtest =================
-    with tab_bt:
+    with tab_bt, safe_section("Backtest"):
         st.markdown("### Walk-forward backtest")
         st.caption("Replays a season week by week. Each week the model is refitted "
                    "using only matches already played, then bets 1 unit on every "
@@ -1167,7 +2565,8 @@ def main():
             b1, b2 = st.columns(2)
             bt_season = b1.selectbox("Season to test", options,
                                      index=min(1, len(options) - 1),
-                                     format_func=lambda c: f"20{c[:2]}/{c[2:]}")
+                                     format_func=lambda c: c if league in NEW_FORMAT
+                                     else f"20{c[:2]}/{c[2:]}")
             timing = b2.radio("Bet at", ["Pre-match odds", "Closing odds"],
                               horizontal=True,
                               help="Pre-match = prices like the ones the live table "
@@ -1270,7 +2669,7 @@ def main():
                                      hide_index=True)
 
     # ================= TAB 5: Paper trading =================
-    with tab_paper:
+    with tab_paper, safe_section("Paper Trading"):
         st.markdown("### Paper trading — is the edge real?")
         st.caption("Every green flag is saved with the price on offer when it was "
                    "first seen, then settled automatically from the results feed. "
@@ -1283,7 +2682,7 @@ def main():
             st.info("No bets logged yet. Flags are logged whenever the app (or the "
                     "scheduled `--log` run) sees a value bet before kick-off.")
         else:
-            settled = settle_paper_log(log, results)
+            settled = settle_paper_log(log, all_results)
             sm = paper_summary(settled)
             p1, p2, p3, p4, p5 = st.columns(5)
             p1.metric("Logged", sm["logged"])
@@ -1308,7 +2707,8 @@ def main():
                 st.caption("Cumulative profit (units), settled bets in kick-off order.")
             view = settled.sort_values("Kickoff (UTC)", ascending=False).copy()
             view["Market"] = view["Market"].map(MARKET_LABELS).fillna(view["Market"])
-            show_df(view[["Kickoff (UTC)", "HomeTeam", "AwayTeam", "Market", "Book",
+            view["League"] = view["League"].map(league_name)
+            show_df(view[["Kickoff (UTC)", "League", "HomeTeam", "AwayTeam", "Market", "Book",
                           "Price", "Model %", "Edge %", "Score", "Profit", "Close",
                           "CLV %"]].style.format(
                 {"Price": "{:.2f}", "Model %": "{:.1f}", "Edge %": "{:+.1f}",
@@ -1318,8 +2718,206 @@ def main():
                                file_name="paper_bets_settled.csv", mime="text/csv")
             st.caption(f"Log file: {PAPER_LOG}")
 
+    # ================= TAB: UEFA club competitions =================
+    with tab_uefa, safe_section("UEFA Cups"):
+        st.markdown("### UEFA Champions League, Europa League & Conference League")
+        if uefa_model is None:
+            st.error("Could not download the UEFA fixtures right now. The app retries "
+                     "automatically.")
+        else:
+            st.caption(f"Model fitted on {uefa_model['n_matches']:,} European matches "
+                       f"(last {UEFA_DEFAULTS['seasons']} seasons) on top of the domestic "
+                       "league ratings. In testing on the whole 2025/26 European season "
+                       "it picked the right result 56.5% of the time. There is no free "
+                       "odds feed for these games, so it never says BET: compare the "
+                       "'back only at' odds with your bookmaker.")
+            up = upcoming_fixtures(uefa, 14)
+            st.markdown("#### Next 14 days")
+            if up.empty:
+                st.info("No UEFA club fixtures in the next 14 days.")
+            else:
+                cup_tab = cup_predictions(uefa, uefa_model, "Comp", 14, min_edge)
+                show_df(cup_tab.drop(columns=["League", "Status", "Stake", "Kickoff UTC"]).style.format(
+                    {c: "{:.0f}" for c in ["Home %", "Draw %", "Away %", "Over 2.5 %",
+                                           "BTTS %"]}), hide_index=True,
+                    height=min(700, 38 + 35 * max(len(cup_tab), 1)))
+            st.markdown("#### Any two clubs")
+            clubs_u = sorted(uefa_model["teams"])
+            u1, u2, u3 = st.columns([2, 2, 1])
+            ch = u1.selectbox("Home club", clubs_u, index=clubs_u.index("Real Madrid")
+                              if "Real Madrid" in clubs_u else 0)
+            ca = u2.selectbox("Away club", clubs_u, index=clubs_u.index("Man City")
+                              if "Man City" in clubs_u else 1)
+            neutral_u = u3.toggle("Neutral venue (final)", value=False)
+            if ch != ca:
+                lh_u, la_u, m_u, p_u = predict(uefa_model, ch, ca, neutral=neutral_u)
+                ps_u, pp_u = predicted_score(m_u, p_u)
+                v1, v2, v3, v4 = st.columns(4)
+                v1.metric(f"{ch} xG", f"{lh_u:.2f}")
+                v2.metric(f"{ca} xG", f"{la_u:.2f}")
+                v3.metric("Predicted score", ps_u, delta=f"{pp_u*100:.0f}% chance",
+                          delta_color="off")
+                v4.metric("Over 2.5 goals", f"{p_u['O25']*100:.0f}%")
+                rows_u = []
+                for k in ["H", "D", "A", "O25", "U25", "BTTS_Y", "BTTS_N"]:
+                    pr = p_u[k]
+                    label = (MARKET_LABELS[k].replace("Home Win", f"{ch} win")
+                             .replace("Away Win", f"{ca} win"))
+                    rows_u.append({"Market": label, "Model %": pr * 100, "Fair odds": 1 / pr,
+                                   "Bet only at odds of at least": (1 / pr) * (1 + min_edge / 100)})
+                show_df(pd.DataFrame(rows_u).style.format(
+                    {"Model %": "{:.1f}", "Fair odds": "{:.2f}",
+                     "Bet only at odds of at least": "{:.2f}"}), hide_index=True)
+                st.caption("Knockout games are predicted for 90 minutes (extra time and "
+                           "penalties not included).")
+            with st.expander("How strong each league / country is in Europe"):
+                gs = pd.DataFrame([{"League / country": league_name(g) if g in LEAGUES else g,
+                                    "Attack ×": np.exp(a), "Defence ×": np.exp(d),
+                                    "Net strength": np.exp(a + d)}
+                                   for g, (a, d) in uefa_model["groups"].items()])
+                gs = gs.sort_values("Net strength", ascending=False)
+                show_df(gs.style.format({c: "{:.2f}" for c in
+                                         ["Attack ×", "Defence ×", "Net strength"]}),
+                        hide_index=True)
+                st.caption("Relative to an average European-cup team, on top of each "
+                           "club's domestic rating. Country codes are leagues the app "
+                           "doesn't cover domestically (e.g. AUT = Austria).")
+
+    # ================= TAB 7: National teams =================
+    with tab_intl, safe_section("National Teams"):
+        st.markdown("### National teams — AFCON, World Cup, Euros, Nations League, qualifiers")
+        if intl.empty or intl_model is None:
+            st.error("Could not download the international results right now. "
+                     "The app retries automatically.")
+        else:
+            im = intl_model
+            nl_up = cup_predictions(nations_fx, im, "Comp", 30, min_edge)
+            st.markdown("#### Upcoming fixtures (next 30 days)")
+            st.caption("Accuracy in testing (Jul 2024 - Oct 2026, model refitted on past "
+                       "matches only): right result in 62.9% of 423 competitive games "
+                       "between African teams and 69.2% of the 52 AFCON 2025 games; "
+                       "61.6% across all 1,909 competitive internationals.")
+            st.caption("Listed automatically: UEFA Nations League, plus the Africa Cup "
+                       "of Nations, World Cup, Euros and Copa America finals as soon as "
+                       "their fixtures are published. AFCON qualifiers and CAF club "
+                       "competitions have no free fixture feed: use 'Any two national "
+                       "teams' below for those.")
+            if nl_up.empty:
+                st.caption("None in the next 30 days.")
+            else:
+                show_df(nl_up.drop(columns=["League", "Status", "Stake", "Kickoff UTC"])
+                        .style.format({c: "{:.0f}" for c in
+                                       ["Home %", "Draw %", "Away %", "Over 2.5 %", "BTTS %"]}),
+                        hide_index=True)
+            st.markdown("#### Any two national teams")
+            st.caption(f"Ratings from {im['n_matches']:,} internationals over the last "
+                       f"{INTL_DEFAULTS['years']} years (recent matches count more). "
+                       f"Latest result in the data: {im['last_date']:%d %b %Y}.")
+            teams_i = im["current_teams"]
+
+            def _ix(name, fallback):
+                return teams_i.index(name) if name in teams_i else fallback
+
+            i1, i2, i3 = st.columns([2, 2, 1])
+            t_home = i1.selectbox("Team 1 (home side if not neutral)", teams_i,
+                                  index=_ix("England", 0))
+            t_away = i2.selectbox("Team 2", teams_i, index=_ix("France", 1))
+            venue = i3.radio("Venue", ["Neutral", "Team 1 at home"])
+            if t_home == t_away:
+                st.warning("Pick two different teams.")
+            else:
+                neutral = venue == "Neutral"
+                lh_i, la_i, m_i, p_i = predict(im, t_home, t_away, neutral=neutral)
+                ps_i, pp_i = predicted_score(m_i, p_i)
+                n1, n2, n3, n4 = st.columns(4)
+                n1.metric(f"{t_home} xG", f"{lh_i:.2f}")
+                n2.metric(f"{t_away} xG", f"{la_i:.2f}")
+                n3.metric("Predicted score", ps_i, delta=f"{pp_i*100:.0f}% chance",
+                          delta_color="off")
+                n4.metric("Over 2.5 goals", f"{p_i['O25']*100:.0f}%")
+                o1, o2, o3 = st.columns(3)
+                o1.metric(f"{t_home} win", f"{p_i['H']*100:.1f}%")
+                o2.metric("Draw (90 min)", f"{p_i['D']*100:.1f}%")
+                o3.metric(f"{t_away} win", f"{p_i['A']*100:.1f}%")
+
+                st.markdown("#### Minimum odds worth taking")
+                rows_i = []
+                for k in ["H", "D", "A", "O15", "O25", "U25", "O35", "BTTS_Y", "BTTS_N"]:
+                    pr = p_i[k]
+                    label = (MARKET_LABELS[k].replace("Home Win", f"{t_home} win")
+                             .replace("Away Win", f"{t_away} win"))
+                    rows_i.append({"Market": label, "Model %": pr * 100,
+                                   "Fair odds": 1 / pr,
+                                   "Bet only at odds of at least": (1 / pr) * (1 + min_edge / 100)})
+                show_df(pd.DataFrame(rows_i).style.format(
+                    {"Model %": "{:.1f}", "Fair odds": "{:.2f}",
+                     "Bet only at odds of at least": "{:.2f}"}), hide_index=True)
+                st.caption("No free feed publishes international fixtures or their odds, "
+                           "so compare these with your bookmaker yourself. In testing on "
+                           "1,915 competitive internationals (Jul 2024 - Oct 2026) the "
+                           "model picked the right result 61% of the time, but its "
+                           "profit against bookmakers is untested - treat the minimum "
+                           "odds as a filter, not a guarantee. Knockout games are "
+                           "predicted for 90 minutes (extra time and penalties not included).")
+                st.markdown("#### Most likely scores")
+                show_df(pd.DataFrame([{"Score": sc, "Chance %": round(pr * 100, 1),
+                                       "Fair odds": round(1 / pr, 1)}
+                                      for sc, pr in top_scores(m_i, 6)]), hide_index=True)
+
+            st.markdown("#### Strongest national teams right now")
+            confed = nation_confederations(intl)
+            region = st.selectbox("Region", ["All"] + [r for r, _ in CONFEDERATIONS]
+                                  + ["Middle East"])
+            teams_r = [t for t in teams_i if region == "All" or confed.get(t) == region
+                       or (region == "Middle East" and t in MIDDLE_EAST)]
+            rk = pd.DataFrame({
+                "Team": teams_r,
+                "Attack ×": [np.exp(im["attack"][t]) for t in teams_r],
+                "Defence × (conceded, lower=better)": [np.exp(-im["defence"][t]) for t in teams_r],
+            })
+            rk["Net strength"] = rk["Attack ×"] / rk["Defence × (conceded, lower=better)"]
+            rk = rk.sort_values("Net strength", ascending=False).head(30)
+            rk.insert(0, "Rank", range(1, len(rk) + 1))
+            show_df(rk.style.format({c: "{:.2f}" for c in rk.columns
+                                     if c not in ("Team", "Rank")}), hide_index=True)
+            with st.expander("Latest international results in the data"):
+                last = intl.tail(20).iloc[::-1].copy()
+                last["Score"] = (last["FTHG"].astype(int).astype(str) + "-"
+                                 + last["FTAG"].astype(int).astype(str))
+                last["Date"] = last["Date"].dt.strftime("%d %b %Y")
+                show_df(last[["Date", "HomeTeam", "Score", "AwayTeam", "Tournament"]],
+                        hide_index=True)
+
+    # ================= TAB: System health =================
+    with tab_health, safe_section("System Health"):
+        st.markdown("### 🩺 System health")
+        st.caption("Every data source the system depends on. ✅ fine · ⚠️ check · ❌ problem. "
+                   "'backup copy' = read from the copy saved by the scheduled GitHub run "
+                   "(fast start-up, or because the source was down).")
+        show_df(health, hide_index=True, height=min(900, 38 + 35 * len(health)))
+        st.markdown("#### 🛡️ Safety switch")
+        if STATUS_OVERRIDES:
+            for lg, (_, why) in STATUS_OVERRIDES.items():
+                st.warning(f"{league_name(lg)}: {why}")
+        else:
+            st.success(f"No league downgraded. A BET league is automatically moved to WATCH "
+                       f"once {SAFETY['min_bets']}+ paper bets show it is not beating the "
+                       "closing odds (average CLV below zero) or its ROI is clearly negative.")
+        for note in promotion_candidates(settled_all):
+            st.info("📈 " + note)
+        st.markdown("#### If something shows ❌")
+        st.markdown(
+            "- **A source is down:** the app keeps working from the backup copy; nothing to do.\n"
+            "- **Results are weeks old in season:** the source has stopped updating that "
+            "league; advice there uses older form, so be more careful.\n"
+            "- **Backup copy is old:** open your GitHub repository → **Actions** → "
+            "**Daily football predictions** and check the latest run (GitHub also emails "
+            "you when a scheduled run fails).")
+
     st.markdown("---")
-    st.caption("Data: Football-Data.co.uk (auto-refreshed hourly). "
+    st.caption("Data: Football-Data.co.uk (leagues, refreshed hourly), fixturedownload.com "
+               "(UEFA competitions) and the open international_results dataset by "
+               "martj42 (national teams). "
                "Statistical estimates only — no outcome is guaranteed. Bet responsibly.")
 
 
@@ -1327,10 +2925,11 @@ def run_headless_log(argv=None) -> int:
     """
     Headless mode for a daily scheduled task (no browser needed):
         python epl_value_dashboard.py --log
-    Fetches data, logs new value flags, writes predictions.md (predicted
-    scores + value bets) and prints a paper-trading summary.
+    Fetches every league, logs new value flags (bet / watch leagues), writes
+    predictions.md (advice + predicted scores for all leagues) and prints a
+    paper-trading summary.
     """
-    ap = argparse.ArgumentParser(description="Log EPL value bets (paper trading).")
+    ap = argparse.ArgumentParser(description="Log football value bets (paper trading).")
     ap.add_argument("--log", action="store_true")
     ap.add_argument("--book", default=DEFAULTS["book"], choices=list(BOOKMAKERS))
     ap.add_argument("--min-edge", type=float, default=DEFAULTS["min_edge"])
@@ -1340,34 +2939,91 @@ def run_headless_log(argv=None) -> int:
     ap.add_argument("--half-life", type=int, default=DEFAULTS["half_life"])
     ap.add_argument("--seasons-back", type=int, default=DEFAULTS["seasons_back"])
     ap.add_argument("--bankroll", type=float, default=DEFAULTS["bankroll"])
+    ap.add_argument("--timezone", default=DEFAULTS["timezone"],
+                    help="time zone for predictions.md (e.g. Africa/Douala)")
+    ap.add_argument("--all-leagues-bet", action="store_true",
+                    help="give BET advice in every league (not recommended)")
+    ap.add_argument("--no-backup", action="store_true",
+                    help="do not refresh the data_snapshot backup folder")
     args = ap.parse_args(argv)
     logging.getLogger("streamlit").setLevel(logging.ERROR)
+    global PREFER_SNAPSHOT
+    PREFER_SNAPSHOT = False                # the scheduled run always downloads fresh data
 
-    results = load_results(args.seasons_back)
-    if results.empty:
+    fixtures = load_fixtures()
+    window = upcoming_fixtures(fixtures)
+    log = read_paper_log()
+    # Every league (3 seasons) so the backup covers the whole app
+    full = load_all_results(tuple(LEAGUES), 3)
+    if not full:
         print("ERROR: could not download results from Football-Data.co.uk")
         return 1
-    model = fit_model(results, args.half_life, args.goals_pct / 100)
+    all_results = {lg: filter_seasons(df, args.seasons_back) for lg, df in full.items()}
+    saved = []
+    if not args.no_backup:
+        for lg, df in full.items():
+            if df.attrs.get("source") == "live" and save_snapshot(f"results_{lg}", df):
+                saved.append(lg)
+        if fixtures.attrs.get("source") == "live" and save_snapshot("fixtures", fixtures):
+            saved.append("fixtures")
+    # Safety switch from paper-trading results
+    STATUS_OVERRIDES.clear()
+    if not log.empty:
+        STATUS_OVERRIDES.update(safety_overrides(settle_paper_log(log, all_results)))
+    for lg, (_, why) in STATUS_OVERRIDES.items():
+        print(f"SAFETY: {league_name(lg)} - {why}")
     max_edge = np.inf if args.max_edge >= 100 else args.max_edge
-    window = upcoming_fixtures(load_fixtures())
-    flags = flagged_bets(window, model, args.book, args.min_edge, max_edge)
-    _, added, err = update_paper_log(flags)
+    adv, flags, models = weekly_overview(
+        fixtures, all_results, args.half_life, args.goals_pct / 100, args.book,
+        args.min_edge, max_edge, args.bankroll, args.all_leagues_bet)
+    _, added, err = update_paper_log(flags, args.all_leagues_bet)
+    cups = []
     try:
-        write_predictions_md(score_predictions(window, model), flags, PREDICTIONS_MD,
-                             args.bankroll)
+        uefa = load_uefa()
+        if not args.no_backup and uefa.attrs.get("source") == "live" and save_snapshot("uefa", uefa):
+            saved.append("uefa")
+        if not uefa.empty:
+            all_models = league_models(all_results, args.half_life, args.goals_pct / 100)
+            teams = sorted(set(uefa["HomeTeam"]) | set(uefa["AwayTeam"]))
+            cups.append(cup_predictions(uefa, fit_uefa(uefa, uefa_domestic(teams, all_models)),
+                                        "Comp", 7, args.min_edge))
+        intl = load_international()
+        intl_fx = load_intl_fixtures()
+        if not args.no_backup:
+            if intl.attrs.get("source") == "live" and save_snapshot("international", intl):
+                saved.append("international")
+            if intl_fx.attrs.get("source") == "live" and save_snapshot("intl_fixtures", intl_fx):
+                saved.append("intl_fixtures")
+        if not intl.empty:
+            cups.append(cup_predictions(intl_fx, fit_international(intl),
+                                        "Comp", 7, args.min_edge))
+    except Exception as exc:
+        print(f"WARNING: UEFA / national-team predictions failed: {exc}")
+    adv = combine_overview(adv, *cups)
+    try:
+        write_predictions_md(adv, flags, PREDICTIONS_MD, args.bankroll,
+                             args.all_leagues_bet, args.timezone)
     except Exception as exc:
         print(f"WARNING: could not write {PREDICTIONS_MD}: {exc}")
     if err:
         print(f"ERROR writing {PAPER_LOG}: {err}")
         return 1
-    sm = paper_summary(settle_paper_log(read_paper_log(), results))
+    sm = paper_summary(settle_paper_log(read_paper_log(), all_results))
+    n_bet = int(adv["Advice"].str.startswith("BET").sum()) if not adv.empty else 0
     stamp = pd.Timestamp.now(tz="UTC").strftime("%Y-%m-%d %H:%M UTC")
-    print(f"[{stamp}] fixtures checked: {len(window)} | new flags logged: {added}")
+    n_cup = int(adv["League"].isin(list(UEFA_COMPS) + [NATIONS_LEAGUE[0]]).sum()) \
+        if not adv.empty else 0
+    print(f"[{stamp}] leagues: {len(models)} | fixtures: {len(window)} | cup/intl: {n_cup} | "
+          f"BET advice: {n_bet} | new flags logged: {added}")
+    print(f"  backup refreshed: {len(saved)} sources"
+          + ("" if len(saved) >= len(LEAGUES) else
+             " (some sources unavailable - the app falls back to the previous copy)"))
     print(f"  logged {sm['logged']} | settled {sm['settled']} | "
           f"profit {sm['profit']:+.2f}u | ROI "
           + ("n/a" if np.isnan(sm["roi"]) else f"{sm['roi']:+.1f}%")
           + " | avg CLV " + ("n/a" if np.isnan(sm["clv"]) else f"{sm['clv']:+.2f}%"))
     return 0
+
 
 
 if __name__ == "__main__":

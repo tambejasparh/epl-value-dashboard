@@ -1,0 +1,48 @@
+# Runs the system automatically on GitHub's servers - no computer needed.
+# Four times a day it downloads the latest data, refits every model, writes
+# predictions.md (day-by-day advice), updates paper_bets.csv and refreshes the
+# backup copy in data_snapshot/, then saves them back into this repository.
+# GitHub emails you automatically if a run fails.
+name: Daily football predictions
+
+on:
+  schedule:
+    - cron: "0 5 * * *"     # 06:00 Douala time
+    - cron: "0 9 * * *"     # 10:00 Douala time
+    - cron: "0 13 * * *"    # 14:00 Douala time
+    - cron: "0 17 * * *"    # 18:00 Douala time
+  workflow_dispatch:         # adds a "Run workflow" button for manual runs
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-football
+  cancel-in-progress: false
+
+jobs:
+  predict:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install libraries
+        run: pip install -r requirements.txt
+
+      - name: Fetch data, predict, log value bets, refresh backup
+        run: python epl_value_dashboard.py --log
+
+      - name: Save results to the repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for f in predictions.md paper_bets.csv data_snapshot; do [ -e "$f" ] && git add "$f"; done
+          git diff --cached --quiet || git commit -m "Update predictions, paper-trading log and data backup"
+          git pull --rebase --autostash
+          git push

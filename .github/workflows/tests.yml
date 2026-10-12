@@ -1,0 +1,28 @@
+# Self-tests: run automatically on every change pushed to GitHub.
+# A red cross on the commit means a change broke something - the live app
+# keeps running the previous version's data, and GitHub emails you.
+name: Self-tests
+
+on:
+  push:
+    paths-ignore:
+      - "predictions.md"
+      - "paper_bets.csv"
+      - "data_snapshot/**"
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install libraries
+        run: pip install -r requirements.txt pytest
+      - name: Run self-tests (offline, simulated data)
+        run: pytest -q tests
