@@ -534,6 +534,136 @@ def _load_new_format(league: str, seasons_back: int) -> pd.DataFrame:
     return df
 
 
+# -----------------------------------------------------------------------------
+# Gap-filling: when Football-Data.co.uk is behind, add the newest results from
+# fixturedownload.com (scores only - no shots or odds) for the big leagues
+# -----------------------------------------------------------------------------
+GAPFILL_FEEDS = {"E0": "epl", "E1": "championship", "E2": "efl-league-one",
+                 "E3": "efl-league-two", "SP1": "la-liga", "I1": "serie-a",
+                 "D1": "bundesliga", "F1": "ligue-1", "F2": "ligue-2", "N1": "eredivisie",
+                 "P1": "primeira-liga", "T1": "super-lig", "SC0": "scottish-premiership"}
+# fixturedownload spelling -> Football-Data spelling (names too different to match)
+FEED_ALIASES = {
+    "Spurs": "Tottenham", "Man Utd": "Man United", "Queens Park Rangers": "QPR",
+    "West Bromwich Albion": "West Brom", "Wolverhampton Wanderers": "Wolves",
+    "MK Dons": "Milton Keynes Dons", "Peterborough United": "Peterboro",
+    "Sheffield Wednesday": "Sheffield Weds", "Bristol Rovers": "Bristol Rvs",
+    "Athletic Club": "Ath Bilbao", "Atlético de Madrid": "Ath Madrid",
+    "RCD Espanyol de Barcelona": "Espanol", "RC Deportivo": "La Coruna",
+    "R. Racing Club": "Santander", "Real Betis": "Betis", "Real Sociedad": "Sociedad",
+    "Rayo Vallecano": "Vallecano", "Deportivo Alavés": "Alaves", "Internazionale": "Inter",
+    "FC Bayern München": "Bayern Munich", "Bayer 04 Leverkusen": "Leverkusen",
+    "Borussia Dortmund": "Dortmund", "Borussia Mönchengladbach": "M'gladbach",
+    "Eintracht Frankfurt": "Ein Frankfurt", "1. FC Köln": "FC Koln", "Hamburger SV": "Hamburg",
+    "Sport-Club Freiburg": "Freiburg", "Havre Athletic Club": "Le Havre",
+    "Paris Saint-Germain": "Paris SG", "Olympique Lyonnais": "Lyon",
+    "Olympique de Marseille": "Marseille", "Stade Brestois 29": "Brest",
+    "Stade Rennais FC": "Rennes", "Estac Troyes": "Troyes", "Stade Lavallois MFC": "Laval",
+    "AS Saint-Étienne": "St Etienne", "EN Avant Guingamp": "Guingamp",
+    "US Boulogne CO": "Boulogne", "Stade DE Reims": "Reims", "N.E.C. Nijmegen": "Nijmegen",
+    "PSV": "PSV Eindhoven", "AZ": "AZ Alkmaar", "ADO Den Haag": "Den Haag",
+    "Fortuna Sittard": "For Sittard", "PEC Zwolle": "Zwolle", "Académico": "Academico Viseu",
+    "SC Braga": "Sp Braga", "Sporting CP": "Sp Lisbon", "Vitória SC": "Guimaraes",
+    "Marítimo M.": "Maritimo", "Istanbul Basaksehir": "Buyuksehyr", "Göztepe": "Goztep",
+    "Çaykur Rizespor": "Rizespor", "Heart of Midlothian": "Hearts",
+}
+_GENERIC_TOKENS = {
+    "fc", "cf", "sc", "afc", "ac", "ud", "cd", "rc", "rcd", "sv", "vfb", "fsv", "tsg", "as",
+    "ogc", "losc", "sl", "ca", "club", "de", "del", "la", "1", "04", "05", "07", "29", "38",
+    "63", "calcio", "sco", "aj", "stade", "us", "usl", "en", "foot", "football", "mfc", "co",
+    "cp", "fco", "pec", "s", "r", "m", "city", "town", "athletic", "rovers", "united",
+    "county", "wanderers", "albion", "alexandra", "argyle", "stanley", "utd"}
+
+
+def _name_key(s: str, core: bool = False) -> str:
+    import re
+    import unicodedata
+    s = unicodedata.normalize("NFKD", str(s)).encode("ascii", "ignore").decode().lower()
+    words = re.sub(r"[^a-z0-9 ]", " ", s.replace("'", "")).split()
+    if core:
+        kept = [w for w in words if w not in _GENERIC_TOKENS]
+        words = kept or words
+    return " ".join(words)
+
+
+def match_club_names(feed_names, fd_names) -> dict:
+    """{feed name: Football-Data name} - only confident, one-to-one matches;
+    anything uncertain is left out (its games are skipped, never guessed)."""
+    import difflib
+    from collections import Counter
+    fd = list(fd_names)
+    by_norm = {_name_key(n): n for n in fd}
+    by_core = {}
+    for n in fd:
+        by_core.setdefault(_name_key(n, True), []).append(n)
+    out = {}
+    for f in feed_names:
+        alias = FEED_ALIASES.get(f)
+        if alias in fd:
+            out[f] = alias
+            continue
+        if _name_key(f) in by_norm:
+            out[f] = by_norm[_name_key(f)]
+            continue
+        c = _name_key(f, True)
+        if len(by_core.get(c, [])) == 1:
+            out[f] = by_core[c][0]
+            continue
+        best, score = None, 0.0
+        for n in fd:
+            cn = _name_key(n, True)
+            sc_ = difflib.SequenceMatcher(None, c, cn).ratio()
+            if cn and (c.startswith(cn) or cn.startswith(c)):
+                sc_ = max(sc_, 0.9)
+            if sc_ > score:
+                best, score = n, sc_
+        if best is not None and score >= 0.8:
+            out[f] = best
+    counts = Counter(out.values())
+    return {f: n for f, n in out.items() if counts[n] == 1}
+
+
+def gap_fill_results(df: pd.DataFrame, league: str) -> pd.DataFrame:
+    """Append results newer than Football-Data's latest, from fixturedownload."""
+    if df.empty or league not in GAPFILL_FEEDS:
+        return df
+    try:
+        start = _season_start_year(dt.date.today())
+        data = _fetch_json(UEFA_FEED.format(slug=f"{GAPFILL_FEEDS[league]}-{start}"))
+        if not data:
+            return df
+        feed = pd.DataFrame(data)
+        feed = feed.dropna(subset=["HomeTeamScore", "AwayTeamScore", "HomeTeam", "AwayTeam"])
+        if feed.empty:
+            return df
+        feed["Date"] = (pd.to_datetime(feed["DateUtc"], utc=True, errors="coerce")
+                        .dt.tz_convert(UK_TZ).dt.tz_localize(None).dt.normalize())
+        newer = feed[feed["Date"] > df["Date"].max()]
+        if newer.empty:
+            return df
+        current = season_codes(dt.date.today(), 0)[0]
+        cur_teams = df.loc[df["Season"].astype(str) == current, ["HomeTeam", "AwayTeam"]]
+        fd_names = set(cur_teams["HomeTeam"]) | set(cur_teams["AwayTeam"]) or \
+            set(df["HomeTeam"]) | set(df["AwayTeam"])
+        names = match_club_names(set(newer["HomeTeam"]) | set(newer["AwayTeam"]), fd_names)
+        newer = newer[newer["HomeTeam"].isin(names) & newer["AwayTeam"].isin(names)]
+        if newer.empty:
+            return df
+        add = pd.DataFrame({
+            "Date": newer["Date"], "HomeTeam": newer["HomeTeam"].map(names),
+            "AwayTeam": newer["AwayTeam"].map(names),
+            "FTHG": pd.to_numeric(newer["HomeTeamScore"]).astype(int),
+            "FTAG": pd.to_numeric(newer["AwayTeamScore"]).astype(int),
+            "Season": current, "League": league, "Filled": True})
+        add = add[add["FTHG"].between(0, 15) & add["FTAG"].between(0, 15)]
+        out = pd.concat([df.assign(Filled=False) if "Filled" not in df.columns else df, add],
+                        ignore_index=True)
+        out = out.drop_duplicates(["Date", "HomeTeam", "AwayTeam"], keep="first")
+        return out.sort_values("Date").reset_index(drop=True)
+    except Exception:
+        return df                      # gap-filling is a bonus - never break the load
+
+
 def _load_results_uncached(league: str, seasons_back: int) -> pd.DataFrame:
     """Fetch and clean completed results of one league, current + past seasons."""
     frames = []
@@ -572,7 +702,8 @@ def _load_results_uncached(league: str, seasons_back: int) -> pd.DataFrame:
         if col in df.columns:
             df[col] = pd.to_numeric(df[col], errors="coerce")
     df["League"] = league
-    return df.sort_values("Date").reset_index(drop=True)
+    df = gap_fill_results(df.sort_values("Date").reset_index(drop=True), league)
+    return df
 
 
 def _results_with_backup(league: str, seasons_back: int) -> pd.DataFrame:
@@ -1880,10 +2011,13 @@ def data_health(all_results: dict, fixtures, uefa, intl, intl_fx) -> pd.DataFram
             continue
         last = df["Date"].max()
         age = (today - last).days
+        n_fill = int(df["Filled"].fillna(False).astype(bool).sum()) if "Filled" in df.columns else 0
         rows.append({"Source": f"Results: {league_name(lg)}",
                      "Status": grade(age, 90 if off_season else 10, 120 if off_season else 21),
                      "Latest data": f"{last:%d %b %Y}", "From": src(df),
-                     "Details": f"{len(df):,} matches"})
+                     "Details": f"{len(df):,} matches"
+                                + (f" ({n_fill} newest from fixturedownload.com - main "
+                                   "source behind)" if n_fill else "")})
     if fixtures is None or fixtures.empty:
         rows.append({"Source": "Fixtures & odds (all leagues)", "Status": "❌",
                      "Latest data": "-", "From": src(fixtures),

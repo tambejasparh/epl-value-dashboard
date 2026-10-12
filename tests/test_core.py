@@ -347,3 +347,46 @@ def test_search_prefers_league_over_uefa_spelling():
     r = app.match_query("Man United", "Arsenal", d, models, fake_uefa, None, pd.DataFrame(),
                         "Bet365", 3, 20, 100, False, False)
     assert r["league"] == "E0"
+
+
+def test_gap_fill_adds_newer_results_from_backup_site():
+    """When the main source is behind, newer results come from fixturedownload,
+    with the feed's club names mapped to the main source's spelling."""
+    season = app.season_codes(TODAY.date(), 0)[0]
+    last = TODAY - pd.Timedelta(days=20)
+    df = pd.DataFrame({"Date": [last, last], "HomeTeam": ["Man United", "Tottenham"],
+                       "AwayTeam": ["Wolves", "Nott'm Forest"], "FTHG": [1, 2], "FTAG": [0, 2],
+                       "Season": season, "League": "E0"})
+
+    def iso(days_ago):
+        return (TODAY - pd.Timedelta(days=days_ago)).strftime("%Y-%m-%d 14:00:00Z")
+
+    feed = [
+        {"DateUtc": iso(20), "HomeTeam": "Man Utd", "AwayTeam": "Wolves",
+         "HomeTeamScore": 1, "AwayTeamScore": 0},                     # already known
+        {"DateUtc": iso(5), "HomeTeam": "Spurs", "AwayTeam": "Man Utd",
+         "HomeTeamScore": 3, "AwayTeamScore": 1},                     # new -> added
+        {"DateUtc": iso(4), "HomeTeam": "Nottingham Forest", "AwayTeam": "Wolves",
+         "HomeTeamScore": 0, "AwayTeamScore": 0},                     # new -> added
+        {"DateUtc": iso(3), "HomeTeam": "Unknown FC", "AwayTeam": "Wolves",
+         "HomeTeamScore": 2, "AwayTeamScore": 2},                     # unmatched -> skipped
+        {"DateUtc": iso(-3), "HomeTeam": "Wolves", "AwayTeam": "Spurs",
+         "HomeTeamScore": None, "AwayTeamScore": None},               # not played
+    ]
+    orig = app._fetch_json
+    app._fetch_json = lambda url: feed
+    try:
+        out = app.gap_fill_results(df, "E0")
+    finally:
+        app._fetch_json = orig
+    assert len(out) == 4
+    new = out[out["Filled"] == True]  # noqa: E712
+    assert set(zip(new["HomeTeam"], new["AwayTeam"])) == {
+        ("Tottenham", "Man United"), ("Nott'm Forest", "Wolves")}
+    assert (new["Season"] == season).all() and (new["League"] == "E0").all()
+    # a broken feed never breaks loading
+    app._fetch_json = lambda url: (_ for _ in ()).throw(RuntimeError("down"))
+    try:
+        assert len(app.gap_fill_results(df, "E0")) == 2
+    finally:
+        app._fetch_json = orig
