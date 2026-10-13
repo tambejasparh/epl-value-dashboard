@@ -1,34 +1,11 @@
 # Football predictions — day by day
-_Updated Tue 13 Oct 2026 17:36 (Africa/Douala time). Bankroll for stakes: 100.00_
+_Updated Tue 13 Oct 2026 20:46 (Africa/Douala time). Bankroll for stakes: 100.00_
 
 ## ✅ This week's bets
 
 No bets this week - the prices are fair. That is normal.
 
 ## 📅 Every match, day by day
-
-### Tuesday 13 October (18 matches)
-
-| Time | Competition | Match | Advice | Stake | Predicted | H / D / A % | Over 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 / 6.5 % | Under 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 / 6.5 % |
-|---|---|---|---|---|---|---|---|---|
-| 17:45 | UEFA Champions League | Sabah v Slavia Praha | No odds feed: back Sabah only at 2.32+ | - | 1-0 | 44 / 23 / 33 | 95 / 75 / 52 / 30 / 15 / 6 / 2 | 5 / 25 / 48 / 70 / 85 / 94 / 98 |
-| 17:45 | UEFA Champions League | Lens v Sporting CP | No odds feed: back Sporting CP only at 2.64+ | - | 1-2 | 39 / 22 / 39 | 96 / 80 / 60 / 37 / 20 / 9 / 4 | 4 / 20 / 40 / 63 / 80 / 91 / 96 |
-| 19:45 | England - Championship | Burnley v Charlton | NO BET (price is fair) | - | 1-0 | 58 / 27 / 16 | 89 / 66 / 39 / 19 / 8 / 3 / 1 | 11 / 34 / 61 / 81 / 92 / 97 / 99 |
-| 19:45 | England - Championship | Cardiff v Watford | **WATCH Draw @ 4.10 (Bet365, edge +7.4%) - paper only** | - | 2-1 | 44 / 26 / 30 | 93 / 78 / 53 / 31 / 15 / 7 / 2 | 7 / 22 / 47 / 69 / 85 / 93 / 98 |
-| 19:45 | England - Championship | Millwall v Swansea | **WATCH Under 2.5 @ 1.98 (Bet365, edge +7.5%) - paper only** | - | 1-0 | 46 / 28 / 26 | 91 / 72 / 46 / 24 / 11 / 4 / 1 | 9 / 28 / 54 / 76 / 89 / 96 / 99 |
-| 19:45 | England - Championship | Wolves v Bolton | **WATCH Away Win @ 7.50 (Bet365, edge +5.7%) - paper only** | - | 2-1 | 67 / 19 / 14 | 96 / 85 / 66 / 44 / 25 / 13 / 6 | 4 / 15 / 34 / 56 / 75 / 87 / 94 |
-| 19:45 | England - Championship | Wrexham v West Brom | NO BET (price is fair) | - | 1-0 | 40 / 29 / 31 | 90 / 70 / 43 / 22 / 9 / 4 / 1 | 10 / 30 / 57 / 78 / 91 / 96 / 99 |
-| 19:45 | England - Championship | Bristol City v Blackburn | **WATCH Under 2.5 @ 1.91 (Bet365, edge +10.7%) - paper only** | - | 1-0 | 45 / 29 / 26 | 90 / 69 / 42 / 21 / 9 / 3 / 1 | 10 / 31 / 58 / 79 / 91 / 97 / 99 |
-| 19:45 | Scotland - Championship | Queens Park v Inverness C | NO BET (model not profitable in this league) | - | 0-1 | 19 / 30 / 52 | 89 / 70 / 42 / 21 / 9 / 3 / 1 | 11 / 30 / 58 / 79 / 91 / 97 / 99 |
-| 20:00 | England - Championship | Stoke v Middlesbrough | **WATCH Under 2.5 @ 2.10 (Bet365, edge +9.3%) - paper only** | - | 0-1 | 28 / 27 / 44 | 92 / 74 / 48 / 26 / 12 / 5 / 2 | 8 / 26 / 52 / 74 / 88 / 95 / 98 |
-| 20:00 | England - Championship | Birmingham v Preston | **WATCH Under 2.5 @ 2.10 (Bet365, edge +12.2%) - paper only** | - | 1-0 | 53 / 26 / 21 | 91 / 73 / 47 / 25 / 11 / 4 / 2 | 9 / 27 / 53 / 75 / 89 / 96 / 98 |
-| 20:00 | UEFA Champions League | Galatasaray v Barcelona | No odds feed: back Barcelona only at 1.60+ | - | 1-3 | 20 / 15 / 64 | 100 / 95 / 86 / 71 / 53 / 35 / 21 | 0 / 5 / 14 / 29 / 47 / 65 / 79 |
-| 20:00 | UEFA Champions League | Arsenal v Lille | No odds feed: back Arsenal only at 1.30+ | - | 2-0 | 79 / 15 / 6 | 93 / 72 / 48 / 26 / 12 / 5 / 2 | 7 / 28 / 52 / 74 / 88 / 95 / 98 |
-| 20:00 | UEFA Champions League | Atleti v Man Utd | No odds feed: back Atleti only at 2.15+ | - | 2-1 | 48 / 20 / 32 | 98 / 86 / 69 / 47 / 28 / 15 / 7 | 2 / 14 / 31 / 53 / 72 / 85 / 93 |
-| 20:00 | UEFA Champions League | Leipzig v PSV | No odds feed: back PSV only at 2.48+ | - | 1-2 | 39 / 20 / 42 | 99 / 90 / 75 / 55 / 36 / 21 / 10 | 1 / 10 / 25 / 45 / 64 / 79 / 90 |
-| 20:00 | UEFA Champions League | Villarreal v Napoli | No odds feed: back Napoli only at 2.70+ | - | 0-1 | 38 / 24 / 38 | 94 / 73 / 50 / 28 / 13 / 5 / 2 | 6 / 27 / 50 / 72 / 87 / 95 / 98 |
-| 20:00 | UEFA Champions League | Viking v Bayern München | No odds feed: back Bayern München only at 1.21+ | - | 0-3 | 6 / 9 / 85 | 99 / 94 / 83 / 66 / 47 / 30 / 17 | 1 / 6 / 17 / 34 / 53 / 70 / 83 |
-| 20:00 | UEFA Champions League | Inter v Club Brugge | No odds feed: back Inter only at 1.53+ | - | 2-1 | 67 / 17 / 16 | 98 / 86 / 68 / 46 / 27 / 14 / 7 | 2 / 14 / 32 / 54 / 73 / 86 / 93 |
 
 ### Wednesday 14 October (13 matches)
 
@@ -226,6 +203,44 @@ No bets this week - the prices are fair. That is normal.
 | 20:00 | England - Premier League | Tottenham v Coventry | Odds not out yet: back Tottenham only at 2.28+ (re-check when odds appear) | - | 2-1 | 45 / 28 / 27 | 92 / 76 / 51 / 29 / 14 / 6 / 2 | 8 / 24 / 49 / 71 / 86 / 94 / 98 |
 | 20:00 | Spain - La Liga | Getafe v Vallecano | NO BET (model not profitable in this league) | - | 1-0 | 34 / 32 / 33 | 85 / 57 / 30 / 13 / 4 / 1 / 0 | 15 / 43 / 70 / 87 / 96 / 99 / 100 |
 | 20:15 | Portugal - Primeira Liga | Sp Braga v Gil Vicente | NO BET (model not profitable in this league) | - | 1-0 | 51 / 25 / 24 | 91 / 69 / 43 / 22 / 10 / 4 / 1 | 9 / 31 / 57 / 78 / 90 / 96 / 99 |
+
+### Tuesday 20 October (33 matches)
+
+| Time | Competition | Match | Advice | Stake | Predicted | H / D / A % | Over 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 / 6.5 % | Under 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 / 6.5 % |
+|---|---|---|---|---|---|---|---|---|
+| 17:45 | UEFA Champions League | Fenerbahçe v Slavia Praha | No odds feed: back Fenerbahçe only at 1.53+ | - | 1-0 | 67 / 19 / 14 | 94 / 75 / 51 / 29 / 14 / 6 / 2 | 6 / 25 / 49 / 71 / 86 / 94 / 98 |
+| 17:45 | UEFA Champions League | Sabah v B. Dortmund | No odds feed: back B. Dortmund only at 1.39+ | - | 1-2 | 12 / 13 / 74 | 99 / 90 / 76 / 56 / 37 / 21 / 11 | 1 / 10 / 24 / 44 / 63 / 79 / 89 |
+| 19:45 | England - Championship | Wolves v Portsmouth | Odds not out yet: back Wolves only at 1.62+ (re-check when odds appear) | - | 2-0 | 64 / 21 / 15 | 94 / 80 / 57 / 35 / 18 / 8 / 3 | 6 / 20 / 43 / 65 / 82 / 92 / 97 |
+| 19:45 | England - League One | Doncaster v Stockport | NO BET (model not profitable in this league) | - | 0-1 | 29 / 26 / 45 | 93 / 74 / 49 / 28 / 13 / 5 / 2 | 7 / 26 / 51 / 72 / 87 / 95 / 98 |
+| 19:45 | England - League One | Huddersfield v Peterboro | NO BET (model not profitable in this league) | - | 2-1 | 56 / 22 / 22 | 96 / 83 / 62 / 39 / 22 / 10 / 4 | 4 / 17 / 38 / 61 / 78 / 90 / 96 |
+| 19:45 | England - League One | Luton v Barnsley | NO BET (model not profitable in this league) | - | 2-1 | 54 / 22 / 24 | 96 / 83 / 62 / 39 / 22 / 10 / 4 | 4 / 17 / 38 / 61 / 78 / 90 / 96 |
+| 19:45 | England - League One | Notts County v Sheffield Weds | NO BET (model not profitable in this league) | - | 0-1 | 30 / 26 / 44 | 93 / 74 / 50 / 28 / 13 / 5 / 2 | 7 / 26 / 50 / 72 / 87 / 95 / 98 |
+| 19:45 | England - League One | Cambridge v Wycombe | NO BET (model not profitable in this league) | - | 0-1 | 30 / 25 / 45 | 93 / 76 / 51 / 29 / 14 / 6 / 2 | 7 / 24 / 49 / 71 / 86 / 94 / 98 |
+| 19:45 | England - League One | AFC Wimbledon v Mansfield | NO BET (model not profitable in this league) | - | 0-1 | 32 / 28 / 40 | 91 / 69 / 43 / 22 / 9 / 4 / 1 | 9 / 31 / 57 / 78 / 91 / 96 / 99 |
+| 19:45 | England - League One | Stevenage v Plymouth | NO BET (model not profitable in this league) | - | 1-0 | 37 / 28 / 35 | 91 / 69 / 43 / 22 / 10 / 4 / 1 | 9 / 31 / 57 / 78 / 90 / 96 / 99 |
+| 19:45 | England - League One | Burton v Bradford | NO BET (model not profitable in this league) | - | 0-1 | 30 / 30 / 40 | 88 / 62 / 35 / 16 / 6 / 2 / 1 | 12 / 38 / 65 / 84 / 94 / 98 / 99 |
+| 19:45 | England - League One | Bromley v Leicester | NO BET (model not profitable in this league) | - | 1-2 | 28 / 24 / 48 | 95 / 81 / 59 / 36 / 19 / 9 / 4 | 5 / 19 / 41 / 64 / 81 / 91 / 96 |
+| 19:45 | England - League One | Blackpool v Milton Keynes Dons | NO BET (model not profitable in this league) | - | 2-1 | 52 / 23 / 25 | 95 / 81 / 59 / 37 / 20 / 9 / 4 | 5 / 19 / 41 / 63 / 80 / 91 / 96 |
+| 19:45 | England - League One | Oxford v Wigan | NO BET (model not profitable in this league) | - | 1-0 | 53 / 25 / 22 | 92 / 73 / 48 / 26 / 12 / 5 / 2 | 8 / 27 / 52 / 74 / 88 / 95 / 98 |
+| 19:45 | England - League Two | Barnet v Swindon | NO BET (model not profitable in this league) | - | 2-1 | 53 / 23 / 24 | 95 / 81 / 59 / 36 / 19 / 9 / 4 | 5 / 19 / 41 / 64 / 81 / 91 / 96 |
+| 19:45 | England - League Two | Bristol Rvs v Salford | NO BET (model not profitable in this league) | - | 0-1 | 36 / 27 / 37 | 92 / 72 / 47 / 25 / 12 / 5 / 2 | 8 / 28 / 53 / 75 / 88 / 95 / 98 |
+| 19:45 | England - League Two | Chesterfield v Colchester | NO BET (model not profitable in this league) | - | 1-0 | 48 / 26 / 26 | 92 / 72 / 47 / 25 / 11 / 4 / 2 | 8 / 28 / 53 / 75 / 89 / 96 / 98 |
+| 19:45 | England - League Two | Crawley Town v Shrewsbury | NO BET (model not profitable in this league) | - | 1-0 | 43 / 27 / 30 | 92 / 72 / 46 / 25 / 11 / 4 / 1 | 8 / 28 / 54 / 75 / 89 / 96 / 99 |
+| 19:45 | England - League Two | Exeter v Crewe | NO BET (model not profitable in this league) | - | 1-0 | 39 / 33 / 29 | 83 / 54 / 27 / 11 / 4 / 1 / 0 | 17 / 46 / 73 / 89 / 96 / 99 / 100 |
+| 19:45 | England - League Two | Northampton v Tranmere | NO BET (model not profitable in this league) | - | 1-0 | 36 / 32 / 31 | 84 / 56 / 29 / 12 / 4 / 1 / 0 | 16 / 44 / 71 / 88 / 96 / 99 / 100 |
+| 19:45 | England - League Two | Rochdale v Grimsby | NO BET (model not profitable in this league) | - | 0-1 | 25 / 26 / 49 | 92 / 71 / 45 / 24 / 11 / 4 / 1 | 8 / 29 / 55 / 76 / 89 / 96 / 99 |
+| 19:45 | England - League Two | Rotherham v Newport County | NO BET (model not profitable in this league) | - | 1-0 | 51 / 24 / 25 | 94 / 77 / 54 / 32 / 16 / 7 / 3 | 6 / 23 / 46 / 68 / 84 / 93 / 97 |
+| 19:45 | England - League Two | Walsall v Oldham | NO BET (model not profitable in this league) | - | 1-0 | 41 / 27 / 32 | 91 / 71 / 45 / 24 / 10 / 4 / 1 | 9 / 29 / 55 / 76 / 90 / 96 / 99 |
+| 19:45 | England - League Two | York v Accrington | NO BET (model not profitable in this league) | - | 2-1 | 60 / 21 / 19 | 95 / 80 / 58 / 35 / 19 / 8 / 3 | 5 / 20 / 42 / 65 / 81 / 92 / 97 |
+| 19:45 | England - League Two | Cheltenham v Fleetwood Town | NO BET (model not profitable in this league) | - | 0-1 | 35 / 26 / 39 | 93 / 74 / 49 / 27 / 12 / 5 / 2 | 7 / 26 / 51 / 73 / 88 / 95 / 98 |
+| 20:00 | England - League Two | Gillingham v Port Vale | NO BET (model not profitable in this league) | - | 0-1 | 34 / 29 / 37 | 89 / 65 / 39 / 19 / 8 / 3 / 1 | 11 / 35 / 61 / 81 / 92 / 97 / 99 |
+| 20:00 | UEFA Champions League | Stuttgart v Atleti | No odds feed: back Atleti only at 1.92+ | - | 1-2 | 27 / 19 / 54 | 98 / 86 / 69 / 48 / 29 / 15 / 7 | 2 / 14 / 31 / 52 / 71 / 85 / 93 |
+| 20:00 | UEFA Champions League | Napoli v Bodø/Glimt | No odds feed: back Napoli only at 2.11+ | - | 1-0 | 49 / 22 / 29 | 96 / 78 / 56 / 34 / 18 / 8 / 3 | 4 / 22 / 44 / 66 / 82 / 92 / 97 |
+| 20:00 | UEFA Champions League | Porto v PSV | No odds feed: back Porto only at 2.20+ | - | 2-1 | 47 / 21 / 32 | 97 / 83 / 64 / 42 / 24 / 12 / 5 | 3 / 17 / 36 / 58 / 76 / 88 / 95 |
+| 20:00 | UEFA Champions League | Roma v S. Bratislava | No odds feed: back Roma only at 1.20+ | - | 3-0 | 86 / 9 / 5 | 98 / 88 / 72 / 51 / 32 / 17 / 8 | 2 / 12 / 28 / 49 / 68 / 83 / 92 |
+| 20:00 | UEFA Champions League | Liverpool v Villarreal | No odds feed: back Liverpool only at 1.22+ | - | 2-0 | 84 / 10 / 6 | 97 / 85 / 67 / 45 / 26 / 13 / 6 | 3 / 15 / 33 / 55 / 74 / 87 / 94 |
+| 20:00 | UEFA Champions League | Paris v Barcelona | No odds feed: back Paris only at 1.48+ | - | 3-1 | 70 / 14 / 17 | 100 / 95 / 86 / 71 / 53 / 35 / 21 | 0 / 5 / 14 / 29 / 47 / 65 / 79 |
+| 20:00 | UEFA Champions League | Man City v AEK Athens | No odds feed: back Man City only at 1.46+ | - | 2-0 | 70 / 17 / 13 | 96 / 80 / 59 / 37 / 20 / 9 / 4 | 4 / 20 / 41 / 63 / 80 / 91 / 96 |
 
 ## ☑️ Before you place any bet
 1. Your bookmaker's odds must be **at least** the price shown (for 🏆 games: at least the 'back only at' price). Lower odds = skip the bet.
