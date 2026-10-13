@@ -1,5 +1,4 @@
 Div,HomeTeam,AwayTeam,Kickoff
-E0,Coventry,Newcastle,2026-10-12 19:00:00+00:00
 E0,Everton,Chelsea,2026-10-17 11:30:00+00:00
 E0,Brentford,Liverpool,2026-10-17 14:00:00+00:00
 E0,Fulham,Hull,2026-10-17 14:00:00+00:00
@@ -1655,7 +1654,6 @@ E3,Swindon Town,Gillingham,2027-05-08 14:00:00+00:00
 E3,Walsall,Newport County,2027-05-08 14:00:00+00:00
 SP1,Levante UD,Athletic Club,2026-10-21 18:00:00+00:00
 SP1,Rayo Vallecano,Athletic Club,2026-10-10 12:00:00+00:00
-SP1,Levante UD,Sevilla FC,2026-10-12 19:00:00+00:00
 SP1,RC Deportivo,Levante UD,2026-10-16 19:00:00+00:00
 SP1,RCD Espanyol de Barcelona,Atlético de Madrid,2026-10-17 12:00:00+00:00
 SP1,Villarreal CF,Elche CF,2026-10-17 14:15:00+00:00
@@ -1956,8 +1954,6 @@ SP1,Málaga CF,Sevilla FC,2027-05-30 00:00:00+00:00
 SP1,CA Osasuna,Valencia CF,2027-05-30 00:00:00+00:00
 SP1,Real Madrid,RC Deportivo,2027-05-30 00:00:00+00:00
 SP1,Real Sociedad,Villarreal CF,2027-05-30 00:00:00+00:00
-I1,Atalanta,Venezia,2026-10-12 16:30:00+00:00
-I1,Torino,Udinese,2026-10-12 18:45:00+00:00
 I1,Frosinone,Sassuolo,2026-10-16 18:45:00+00:00
 I1,Venezia,Napoli,2026-10-17 13:00:00+00:00
 I1,Bologna,Internazionale,2026-10-17 16:00:00+00:00
@@ -2791,7 +2787,6 @@ F1,AS Monaco,Estac Troyes,2027-05-28 22:00:00+00:00
 F1,Paris Saint-Germain,Toulouse FC,2027-05-28 22:00:00+00:00
 F1,Stade Rennais FC,Angers SCO,2027-05-28 22:00:00+00:00
 F1,RC Strasbourg Alsace,OGC Nice,2027-05-28 22:00:00+00:00
-F2,Dijon FCO,FC Metz,2026-10-12 18:45:00+00:00
 F2,FC Annecy,AS Nancy Lorraine,2026-10-16 18:00:00+00:00
 F2,Grenoble Foot 38,US Boulogne CO,2026-10-16 18:00:00+00:00
 F2,EN Avant Guingamp,Pau FC,2026-10-16 18:00:00+00:00
@@ -3262,7 +3257,6 @@ N1,PEC Zwolle,FC Twente,2027-05-23 12:30:00+00:00
 N1,Feyenoord,FC Groningen,2027-05-23 12:30:00+00:00
 N1,ADO Den Haag,AZ,2027-05-23 12:30:00+00:00
 P1,SC Braga,Gil Vicente FC,2026-10-19 19:15:00+00:00
-P1,FC Famalicão,FC Alverca,2026-10-12 19:15:00+00:00
 P1,Vitória SC,Marítimo M.,2026-10-23 19:45:00+00:00
 P1,Estrela Amadora,Casa Pia AC,2026-10-24 14:30:00+00:00
 P1,FC Alverca,FC Arouca,2026-10-24 17:00:00+00:00
@@ -3497,7 +3491,6 @@ P1,Vitória SC,FC Famalicão,2027-05-15 23:00:00+00:00
 P1,Gil Vicente FC,CD Nacional,2027-05-15 23:00:00+00:00
 P1,Moreirense FC,Rio Ave FC,2027-05-15 23:00:00+00:00
 P1,Santa Clara,Sporting CP,2027-05-15 23:00:00+00:00
-T1,Eyüpspor,Göztepe,2026-10-12 17:00:00+00:00
 T1,Çorum,Çaykur Rizespor,2026-10-16 17:00:00+00:00
 T1,Erzurumspor,Eyüpspor,2026-10-17 10:30:00+00:00
 T1,Amedspor,Konyaspor,2026-10-17 13:00:00+00:00
