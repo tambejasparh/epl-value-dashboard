@@ -357,6 +357,8 @@ MARKET_LABELS = {
     "O15": "Over 1.5", "U15": "Under 1.5",
     "O25": "Over 2.5", "U25": "Under 2.5",
     "O35": "Over 3.5", "U35": "Under 3.5",
+    "O45": "Over 4.5", "U45": "Under 4.5",
+    "O55": "Over 5.5", "U55": "Under 5.5",
     "BTTS_Y": "BTTS Yes", "BTTS_N": "BTTS No",
 }
 
@@ -1151,7 +1153,8 @@ def market_probs(m: np.ndarray) -> dict:
         "BTTS_Y": m[1:, 1:].sum(),
     }
     probs["BTTS_N"] = 1 - probs["BTTS_Y"]
-    for line, key in [(0.5, "05"), (1.5, "15"), (2.5, "25"), (3.5, "35")]:
+    for line, key in [(0.5, "05"), (1.5, "15"), (2.5, "25"), (3.5, "35"), (4.5, "45"),
+                      (5.5, "55")]:
         probs[f"O{key}"] = m[total > line].sum()
         probs[f"U{key}"] = 1 - probs[f"O{key}"]
     return {k: float(v) for k, v in probs.items()}
@@ -1186,7 +1189,7 @@ def predicted_score(m: np.ndarray, probs: dict) -> tuple[str, float]:
     return f"{hi}-{ai}", float(m[hi, ai])
 
 
-GOAL_LINES = ["0.5", "1.5", "2.5"]
+GOAL_LINES = ["0.5", "1.5", "2.5", "3.5", "4.5", "5.5"]
 GOAL_COLS = [f"{side} {g} %" for g in GOAL_LINES for side in ("Over", "Under")]
 
 
@@ -1347,7 +1350,8 @@ def write_predictions_md(adv: pd.DataFrame, flags: pd.DataFrame, path: Path,
         for day, grp in d.groupby("_day", sort=True):
             lines += [f"### {grp['Day'].iloc[0]} ({len(grp)} matches)", "",
                       "| Time | Competition | Match | Advice | Stake | Predicted | H / D / A % "
-                      "| Over 0.5 / 1.5 / 2.5 % | Under 0.5 / 1.5 / 2.5 % |",
+                      "| Over 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 % "
+                      "| Under 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 % |",
                       "|---|---|---|---|---|---|---|---|---|"]
             for _, r in grp.iterrows():
                 adv_txt = r["Advice"]
@@ -2404,7 +2408,7 @@ def render_match_search(directory: dict, all_models: dict, uefa_model, intl_mode
     c4.metric("H / D / A", f"{p['H']*100:.0f} / {p['D']*100:.0f} / {p['A']*100:.0f}%")
     odds = res.get("odds", {})
     rows = []
-    for k in ["H", "D", "A", "O05", "U05", "O15", "U15", "O25", "U25", "O35",
+    for k in ["H", "D", "A", *[k for g in GOAL_LINES for k in ("O" + g.replace(".", ""), "U" + g.replace(".", ""))],
               "BTTS_Y", "BTTS_N"]:
         pr = p[k]
         bo = odds.get(k, np.nan)
@@ -2760,32 +2764,28 @@ def main():
                        delta=f"Fair odds {1/probs[k]:.2f}", delta_color="off")
 
         st.markdown("#### Goals markets")
-        u1, u2, u3 = st.columns(3)
-        for col, g in zip((u1, u2, u3), GOAL_LINES):
+        gcols = st.columns(3) + st.columns(3)
+        for col, g in zip(gcols, GOAL_LINES):
             k = g.replace(".", "")
             col.metric(f"Over / Under {g}",
                        f"{probs['O' + k]*100:.0f}% / {probs['U' + k]*100:.0f}%",
                        delta=f"Fair {1/probs['O' + k]:.2f} / {1/probs['U' + k]:.2f}",
                        delta_color="off")
-        g1, g2, g3, g4 = st.columns(4)
-        g1.metric("Over 1.5", f"{probs['O15']*100:.1f}%",
-                  delta=f"Fair {1/probs['O15']:.2f}", delta_color="off")
-        g2.metric("Over 2.5", f"{probs['O25']*100:.1f}%",
-                  delta=f"Fair {1/probs['O25']:.2f}", delta_color="off")
-        g3.metric("Over 3.5", f"{probs['O35']*100:.1f}%",
-                  delta=f"Fair {1/probs['O35']:.2f}", delta_color="off")
-        g4.metric("BTTS Yes", f"{probs['BTTS_Y']*100:.1f}%",
+        b1, b2, _ = st.columns(3)
+        b1.metric("BTTS Yes", f"{probs['BTTS_Y']*100:.1f}%",
                   delta=f"Fair {1/probs['BTTS_Y']:.2f}", delta_color="off")
+        b2.metric("BTTS No", f"{probs['BTTS_N']*100:.1f}%",
+                  delta=f"Fair {1/probs['BTTS_N']:.2f}", delta_color="off")
 
         st.markdown(f"#### Value check vs {book}")
-        keys = ["H", "D", "A", "O05", "U05", "O15", "U15", "O25", "U25", "O35", "U35",
+        keys = ["H", "D", "A", *[k for g in GOAL_LINES for k in ("O" + g.replace(".", ""), "U" + g.replace(".", ""))],
                 "BTTS_Y", "BTTS_N"]
         vt = pd.DataFrame(value_rows(probs, odds, keys))
         show_df(style_value(vt, min_edge, max_edge), hide_index=True)
         if not odds:
             st.caption("No bookmaker odds in the feed for this pairing — fair odds only.")
         st.caption("The Football-Data feed publishes 1X2 and O/U 2.5 odds only; "
-                   "compare the fair odds for O/U 1.5, 3.5 and BTTS against your "
+                   "compare the fair odds for the other goal lines and BTTS against your "
                    "bookmaker yourself.")
 
         st.markdown("#### Most likely scorelines")
