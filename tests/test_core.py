@@ -426,5 +426,5 @@ def test_schedule_adds_matches_the_odds_feed_has_not_published():
         assert 0 <= row[c] <= 100
     assert abs(row["Over 0.5 %"] + row["Under 0.5 %"] - 100) < 1e-6
     overs = [row[f"Over {g} %"] for g in app.GOAL_LINES]
-    assert app.GOAL_LINES[-1] == "5.5" and overs == sorted(overs, reverse=True)
-    assert abs(row["Over 5.5 %"] + row["Under 5.5 %"] - 100) < 1e-6
+    assert app.GOAL_LINES[-1] == "6.5" and overs == sorted(overs, reverse=True)
+    assert abs(row["Over 6.5 %"] + row["Under 6.5 %"] - 100) < 1e-6

@@ -359,6 +359,7 @@ MARKET_LABELS = {
     "O35": "Over 3.5", "U35": "Under 3.5",
     "O45": "Over 4.5", "U45": "Under 4.5",
     "O55": "Over 5.5", "U55": "Under 5.5",
+    "O65": "Over 6.5", "U65": "Under 6.5",
     "BTTS_Y": "BTTS Yes", "BTTS_N": "BTTS No",
 }
 
@@ -1154,7 +1155,7 @@ def market_probs(m: np.ndarray) -> dict:
     }
     probs["BTTS_N"] = 1 - probs["BTTS_Y"]
     for line, key in [(0.5, "05"), (1.5, "15"), (2.5, "25"), (3.5, "35"), (4.5, "45"),
-                      (5.5, "55")]:
+                      (5.5, "55"), (6.5, "65")]:
         probs[f"O{key}"] = m[total > line].sum()
         probs[f"U{key}"] = 1 - probs[f"O{key}"]
     return {k: float(v) for k, v in probs.items()}
@@ -1189,7 +1190,7 @@ def predicted_score(m: np.ndarray, probs: dict) -> tuple[str, float]:
     return f"{hi}-{ai}", float(m[hi, ai])
 
 
-GOAL_LINES = ["0.5", "1.5", "2.5", "3.5", "4.5", "5.5"]
+GOAL_LINES = ["0.5", "1.5", "2.5", "3.5", "4.5", "5.5", "6.5"]
 GOAL_COLS = [f"{side} {g} %" for g in GOAL_LINES for side in ("Over", "Under")]
 
 
@@ -1350,8 +1351,8 @@ def write_predictions_md(adv: pd.DataFrame, flags: pd.DataFrame, path: Path,
         for day, grp in d.groupby("_day", sort=True):
             lines += [f"### {grp['Day'].iloc[0]} ({len(grp)} matches)", "",
                       "| Time | Competition | Match | Advice | Stake | Predicted | H / D / A % "
-                      "| Over 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 % "
-                      "| Under 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 % |",
+                      f"| Over {' / '.join(GOAL_LINES)} % "
+                      f"| Under {' / '.join(GOAL_LINES)} % |",
                       "|---|---|---|---|---|---|---|---|---|"]
             for _, r in grp.iterrows():
                 adv_txt = r["Advice"]
@@ -2764,7 +2765,7 @@ def main():
                        delta=f"Fair odds {1/probs[k]:.2f}", delta_color="off")
 
         st.markdown("#### Goals markets")
-        gcols = st.columns(3) + st.columns(3)
+        gcols = st.columns(4) + st.columns(4)
         for col, g in zip(gcols, GOAL_LINES):
             k = g.replace(".", "")
             col.metric(f"Over / Under {g}",
