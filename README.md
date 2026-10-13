@@ -87,7 +87,7 @@ guessing.
 
 | Tab | Purpose |
 |---|---|
-| 🗓️ This Week: Everything | Pick a day: its bet slip, then every match that day from all 22 leagues, UEFA cups and national-team tournaments, with a before-you-bet checklist: BET / WATCH / NO BET, stake, predicted score, top 3 scores, win/draw/loss %. |
+| 🗓️ This Week: Everything | Pick a day: its bet slip, then every match that day from all 22 leagues, UEFA cups and national-team tournaments, with a before-you-bet checklist: BET / WATCH / NO BET, stake, predicted score, top 5 scores, win/draw/loss %. |
 | 📋 Value Table | The selected league's fixtures ranked by edge, plus "What to do — match by match": every competition, day by day. |
 | 🔍 Match Analyzer | One match in depth, with What-If sliders for injuries. |
 | 📊 Team Ratings | Attack and defence strength of every team in the selected league. |
@@ -102,7 +102,7 @@ guessing.
 | Prediction | Right in testing |
 |---|---|
 | Club matches: winner (or draw) of the predicted score | ~50% |
-| Club matches: one of the top 3 most likely scores | ~32% |
+| Club matches: one of the top 5 most likely scores | ~50% (top 3: ~33%) |
 | Club matches: exact predicted score | ~11% (about 1 in 9) |
 | UEFA club cups: most likely result (all 531 games of 2025/26) | 56.5% |
 | National teams: most likely result (1,909 competitive games, 2024-2026) | 61.6% |

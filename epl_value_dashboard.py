@@ -1163,8 +1163,9 @@ def predict(model, home, away, adj=None, neutral=False):
     return lam_h, lam_a, m, market_probs(m)
 
 
-def top_scores(m: np.ndarray, k: int = 3) -> list[tuple[str, float]]:
-    """The k most likely exact scores as [("1-1", 0.12), ...]."""
+def top_scores(m: np.ndarray, k: int = 5) -> list[tuple[str, float]]:
+    """The k most likely exact scores as [("1-1", 0.12), ...]. In testing the
+    top 5 contained the real score ~50% of the time (top 3: ~33%)."""
     flat = np.argsort(m, axis=None)[::-1][:k]
     return [(f"{i}-{j}", float(m[i, j]))
             for i, j in zip(*np.unravel_index(flat, m.shape))]
@@ -1211,7 +1212,7 @@ def score_predictions(window: pd.DataFrame, model: dict) -> pd.DataFrame:
             "Kickoff UTC": fx["Kickoff"],
             "Match": f"{fx['HomeTeam']} v {fx['AwayTeam']}",
             "Predicted score": pred,
-            "Top 3 scores": ", ".join(f"{sc} ({pr*100:.0f}%)" for sc, pr in top_scores(m)),
+            "Top 5 scores": ", ".join(f"{sc} ({pr*100:.0f}%)" for sc, pr in top_scores(m)),
             "Home %": p["H"] * 100, "Draw %": p["D"] * 100, "Away %": p["A"] * 100,
             **goal_line_cols(p), "BTTS %": p["BTTS_Y"] * 100,
             "xG": f"{lh:.2f} - {la:.2f}",
@@ -1623,7 +1624,7 @@ def cup_predictions(fixtures: pd.DataFrame, model: dict, code_col: str = "Comp",
             "Kickoff UTC": fx["Kickoff"],
             "Match": f"{fx['HomeTeam']} v {fx['AwayTeam']}",
             "Predicted score": pred,
-            "Top 3 scores": ", ".join(f"{sc} ({pr*100:.0f}%)" for sc, pr in top_scores(m)),
+            "Top 5 scores": ", ".join(f"{sc} ({pr*100:.0f}%)" for sc, pr in top_scores(m)),
             "Home %": p["H"] * 100, "Draw %": p["D"] * 100, "Away %": p["A"] * 100,
             **goal_line_cols(p), "BTTS %": p["BTTS_Y"] * 100,
             "xG": f"{lh:.2f} - {la:.2f}",
@@ -1732,7 +1733,7 @@ def render_day_by_day(adv: pd.DataFrame, tz: str, key: str):
         return [css if c in ("Advice", "Stake") else "" for c in row.index]
 
     cols = ["Time", "Competition", "Match", "Advice", "Stake", "Predicted score",
-            "Top 3 scores", "Home %", "Draw %", "Away %", *GOAL_COLS, "BTTS %"]
+            "Top 5 scores", "Home %", "Draw %", "Away %", *GOAL_COLS, "BTTS %"]
     pct_cols = ["Home %", "Draw %", "Away %", *GOAL_COLS, "BTTS %"]
     cols = [c for c in cols if c in view.columns]
     if view.empty:
@@ -2416,7 +2417,7 @@ def render_match_search(directory: dict, all_models: dict, uefa_model, intl_mode
     show_df(pd.DataFrame(rows).style.format(
         {"Model %": "{:.1f}", "Fair odds": "{:.2f}", "Bet only at odds of at least": "{:.2f}",
          f"{book} odds": "{:.2f}", "Edge %": "{:+.1f}"}, na_rep="—"), hide_index=True)
-    st.caption("Top 3 scores: " + ", ".join(f"{sc} ({pr*100:.0f}%)" for sc, pr in top_scores(m))
+    st.caption("Top 5 scores: " + ", ".join(f"{sc} ({pr*100:.0f}%)" for sc, pr in top_scores(m))
                + ". Check team news before betting; adjust for injuries in the Match "
                  "Analyzer.")
 
@@ -2705,7 +2706,7 @@ def main():
         render_day_by_day(week_adv, tz, "value")
         st.caption("Predicted score = most likely score within the most likely "
                    "result. In testing it got the winner right ~50% of the time "
-                   "and the exact score ~11%; the top 3 scores covered ~32%.")
+                   "and the exact score ~11%; the top 5 scores covered ~50%.")
 
     # ================= TAB 2: Match analyzer =================
     with tab_match, safe_section("Match Analyzer"):
