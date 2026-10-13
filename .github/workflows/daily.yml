@@ -44,5 +44,10 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           for f in predictions.md paper_bets.csv data_snapshot; do [ -e "$f" ] && git add "$f"; done
           git diff --cached --quiet || git commit -m "Update predictions, paper-trading log and data backup"
-          git pull --rebase --autostash
-          git push
+          # Another run may have saved in the meantime: keep this (newer) run's files
+          for i in 1 2 3; do
+            if git pull --rebase -X theirs --autostash && git push; then exit 0; fi
+            git rebase --abort 2>/dev/null || true
+            sleep 10
+          done
+          exit 1
