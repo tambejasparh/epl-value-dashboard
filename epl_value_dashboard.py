@@ -1726,8 +1726,11 @@ MOBILE_CSS = """
     flex-wrap: wrap !important; gap: .4rem !important;}
   [data-testid="stHorizontalBlock"]:has([data-testid="stMetric"]) > div {
     flex: 1 1 calc(50% - .4rem) !important; min-width: calc(50% - .4rem) !important;}
-  [data-testid="stFormSubmitButton"] button, .stButton button {
-    width: 100% !important; min-height: 46px;}
+  [data-testid="stElementContainer"]:has([data-testid="stFormSubmitButton"]),
+  [data-testid="stFormSubmitButton"], [data-testid="stFormSubmitButton"] button,
+  .stButton button {width: 100% !important; min-height: 46px;}
+  [data-testid="stTab"] {padding: 0 .5rem !important; flex: 0 0 auto !important;}
+  [data-testid="stTab"] p {font-size: .85rem !important; white-space: nowrap !important;}
   input, textarea {font-size: 16px !important;}
   [data-testid="stCaptionContainer"] {font-size: .8rem !important;}
 }
@@ -2742,6 +2745,8 @@ def main():
                             book, min_edge, max_edge, bankroll, allow_all)
     st.markdown("---")
 
+    if phone_mode():
+        st.caption("👉 Swipe the tab bar sideways to see all 9 sections.")
     (tab_week, tab_value, tab_match, tab_ratings, tab_bt, tab_paper, tab_uefa,
      tab_intl, tab_health) = st.tabs(["🗓️ This Week: Everything", "📋 Value Table",
                                       "🔍 Match Analyzer", "📊 Team Ratings", "🧾 Backtest",
