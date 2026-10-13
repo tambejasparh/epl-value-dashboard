@@ -2451,7 +2451,7 @@ def show_df(data, **kwargs):
 # 6. STREAMLIT INTERFACE
 # =============================================================================
 def main():
-    st.set_page_config(page_title="Football Value Engine", page_icon="⚽", layout="wide")
+    st.set_page_config(page_title="BOUBA's Football Engine", page_icon="⚽", layout="wide")
 
     # ---------------- Sidebar: global settings ----------------
     st.sidebar.header("⚙️ Model settings")
@@ -2513,7 +2513,7 @@ def main():
     adj_active = any(v != 0 for v in adj.values())
 
     # ---------------- Data + models ----------------
-    st.title("⚽ Football Value Engine")
+    st.title("⚽ BOUBA's Football Engine")
     st.caption(f"{len(LEAGUES)} leagues (Europe, Russia, Japan, China), UEFA cups and national teams. BET advice only "
                "where testing showed a profit; everywhere else you get predictions.")
     with st.spinner("Fetching fixtures..."):

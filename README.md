@@ -1,4 +1,4 @@
-# Football Value Dashboard
+# BOUBA's Football Engine
 
 A self-updating football prediction and value-betting system covering
 **25 leagues** (22 European + Russia, Japan and China), **all UEFA club competitions** (Champions League,
