@@ -428,3 +428,17 @@ def test_schedule_adds_matches_the_odds_feed_has_not_published():
     overs = [row[f"Over {g} %"] for g in app.GOAL_LINES]
     assert app.GOAL_LINES[-1] == "6.5" and overs == sorted(overs, reverse=True)
     assert abs(row["Over 6.5 %"] + row["Under 6.5 %"] - 100) < 1e-6
+
+
+def test_phone_cards_show_every_match_safely():
+    """Phone layout: one card per match, with advice, odds lines, and escaped names."""
+    adv = app.cup_predictions(make_intl_fixtures(), app.fit_international(make_international()),
+                              "Comp", 14, 3)
+    adv.loc[0, "Match"] = "<b>A</b> v B&C"
+    adv.loc[0, "Advice"] = "BET Over 2.5 @ 2.10"
+    d = app.add_local_time(adv, "Africa/Douala")
+    out = app.match_cards_html(d)
+    assert out.count("class='bfe-card") == len(adv)
+    assert "bfe-card bet" in out and "&lt;b&gt;A&lt;/b&gt; v B&amp;C" in out
+    assert all(f"<th>{g}</th>" in out for g in app.GOAL_LINES)
+    assert not app.phone_mode() or True          # never raises outside a browser

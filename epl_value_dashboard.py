@@ -57,6 +57,7 @@
 
 import argparse
 import datetime as dt
+import html
 import io
 import json
 import logging
@@ -1692,6 +1693,105 @@ BEFORE_YOU_BET = (
     "edge is real before risking real money.")
 
 
+MOBILE_CSS = """
+<style>
+.bfe-card {border-left: 5px solid rgba(128,128,128,.45); background: rgba(128,128,128,.08);
+  border-radius: 10px; padding: .6rem .75rem; margin: 0 0 .6rem 0; line-height: 1.35;}
+.bfe-card.bet {border-left-color: #1e9e45; background: rgba(30,158,69,.12);}
+.bfe-card.watch {border-left-color: #c9a227; background: rgba(201,162,39,.12);}
+.bfe-top {font-size: .78rem; opacity: .75;}
+.bfe-match {font-size: 1.02rem; font-weight: 700; margin: .1rem 0 .25rem;}
+.bfe-adv {font-size: .9rem; font-weight: 600; margin-bottom: .3rem;}
+.bfe-card.bet .bfe-adv {color: #1e9e45;} .bfe-card.watch .bfe-adv {color: #b08d17;}
+.bfe-row {font-size: .86rem; margin: .1rem 0;}
+.bfe-small {font-size: .78rem; opacity: .85;}
+.bfe-ou {width: 100%; border-collapse: collapse; font-size: .74rem; margin-top: .3rem;
+  text-align: center; table-layout: fixed;}
+.bfe-ou td, .bfe-ou th {border: 1px solid rgba(128,128,128,.25); padding: 2px 0;}
+.bfe-ou th {font-weight: 600; opacity: .8;}
+@media (max-width: 640px) {
+  [data-testid="stMainBlockContainer"], .block-container {
+    padding: 2.6rem .65rem 3rem !important;}
+  h1 {font-size: 1.5rem !important; line-height: 1.25 !important; padding-top: 0 !important;}
+  h2 {font-size: 1.25rem !important;} h3 {font-size: 1.1rem !important;}
+  h4 {font-size: 1rem !important;}
+  [data-baseweb="tab-list"] {overflow-x: auto !important; flex-wrap: nowrap !important;
+    scrollbar-width: none; -webkit-overflow-scrolling: touch;}
+  [data-baseweb="tab-list"]::-webkit-scrollbar {display: none;}
+  [data-baseweb="tab"] {flex: 0 0 auto !important; padding: 0 .5rem !important;}
+  [data-baseweb="tab"] p {font-size: .85rem !important; white-space: nowrap !important;}
+  [data-testid="stMetricValue"] {font-size: 1.2rem !important;}
+  [data-testid="stMetricLabel"] p {font-size: .78rem !important;}
+  [data-testid="stHorizontalBlock"]:has([data-testid="stMetric"]) {
+    flex-wrap: wrap !important; gap: .4rem !important;}
+  [data-testid="stHorizontalBlock"]:has([data-testid="stMetric"]) > div {
+    flex: 1 1 calc(50% - .4rem) !important; min-width: calc(50% - .4rem) !important;}
+  [data-testid="stFormSubmitButton"] button, .stButton button {
+    width: 100% !important; min-height: 46px;}
+  input, textarea {font-size: 16px !important;}
+  [data-testid="stCaptionContainer"] {font-size: .8rem !important;}
+}
+</style>
+"""
+
+
+def is_phone_browser() -> bool:
+    """Best guess from the browser's user agent (the sidebar switch overrides it)."""
+    try:
+        ua = st.context.headers.get("User-Agent", "") or ""
+    except Exception:
+        return False
+    import re
+    return bool(re.search(r"Mobi|Android|iPhone|iPod|Windows Phone", ua))
+
+
+def phone_mode() -> bool:
+    try:
+        return bool(st.session_state.get("phone_layout", False))
+    except Exception:
+        return False
+
+
+def match_cards_html(d: pd.DataFrame) -> str:
+    """One card per match - readable on a phone without sideways scrolling.
+    `d` must already have the local 'Time' column (see add_local_time)."""
+    e = html.escape
+    cards = []
+    for _, r in d.iterrows():
+        adv = str(r.get("Advice", ""))
+        cls = "bet" if adv.startswith("BET") else "watch" if adv.startswith("WATCH") else ""
+        stake = r.get("Stake", "")
+        stake_txt = f" — stake {e(str(stake))}" if isinstance(stake, str) and stake else ""
+        lines = [g for g in GOAL_LINES if f"Over {g} %" in r.index and pd.notna(r[f"Over {g} %"])]
+        ou = ""
+        if lines:
+            ou = ("<table class='bfe-ou'><tr><th>Goals</th>"
+                  + "".join(f"<th>{g}</th>" for g in lines) + "</tr><tr><th>Over</th>"
+                  + "".join(f"<td>{r[f'Over {g} %']:.0f}</td>" for g in lines)
+                  + "</tr><tr><th>Under</th>"
+                  + "".join(f"<td>{r[f'Under {g} %']:.0f}</td>" for g in lines)
+                  + "</tr></table>")
+        btts = (f" · BTTS {r['BTTS %']:.0f}%" if "BTTS %" in r.index and pd.notna(r["BTTS %"])
+                else "")
+        top = r.get("Top 5 scores", "")
+        cards.append(
+            f"<div class='bfe-card {cls}'>"
+            f"<div class='bfe-top'>{e(str(r.get('Time', '')))} · {e(str(r.get('Competition', '')))}</div>"
+            f"<div class='bfe-match'>{e(str(r['Match']))}</div>"
+            f"<div class='bfe-adv'>{e(adv)}{stake_txt}</div>"
+            f"<div class='bfe-row'>Predicted <b>{e(str(r.get('Predicted score', '')))}</b> · "
+            f"H {r['Home %']:.0f}% · D {r['Draw %']:.0f}% · A {r['Away %']:.0f}%{btts}</div>"
+            + (f"<div class='bfe-row bfe-small'>Top 5: {e(str(top))}</div>" if top else "")
+            + ou + "</div>")
+    return "".join(cards)
+
+
+def render_match_cards(adv: pd.DataFrame, tz: str):
+    if adv is None or adv.empty:
+        return
+    st.markdown(match_cards_html(add_local_time(adv, tz)), unsafe_allow_html=True)
+
+
 def render_day_by_day(adv: pd.DataFrame, tz: str, key: str):
     """Every match from every competition, one day at a time, with advice."""
     if adv is None or adv.empty:
@@ -1743,6 +1843,8 @@ def render_day_by_day(adv: pd.DataFrame, tz: str, key: str):
     cols = [c for c in cols if c in view.columns]
     if view.empty:
         st.caption("No matches to show with this filter.")
+    elif phone_mode():
+        st.markdown(match_cards_html(view), unsafe_allow_html=True)
     else:
         show_df(view[cols].style.apply(_style, axis=1)
                 .format({c: "{:.0f}" for c in pct_cols}), hide_index=True,
@@ -2419,7 +2521,16 @@ def render_match_search(directory: dict, all_models: dict, uefa_model, intl_mode
                      "Bet only at odds of at least": (1 / pr) * (1 + min_edge / 100),
                      f"{book} odds": bo,
                      "Edge %": (pr * bo - 1) * 100 if pd.notna(bo) else np.nan})
-    show_df(pd.DataFrame(rows).style.format(
+    mk = pd.DataFrame(rows)
+    if phone_mode():
+        mk = mk.rename(columns={"Bet only at odds of at least": "Bet at ≥"})
+        keep = ["Market", "Model %", "Bet at ≥"] + (
+            [f"{book} odds", "Edge %"] if mk[f"{book} odds"].notna().any() else [])
+        show_df(mk[keep].style.format({"Model %": "{:.0f}", "Bet at ≥": "{:.2f}",
+                                       f"{book} odds": "{:.2f}", "Edge %": "{:+.1f}"},
+                                      na_rep="—"), hide_index=True)
+    else:
+      show_df(mk.style.format(
         {"Model %": "{:.1f}", "Fair odds": "{:.2f}", "Bet only at odds of at least": "{:.2f}",
          f"{book} odds": "{:.2f}", "Edge %": "{:+.1f}"}, na_rep="—"), hide_index=True)
     st.caption("Top 5 scores: " + ", ".join(f"{sc} ({pr*100:.0f}%)" for sc, pr in top_scores(m))
@@ -2451,9 +2562,16 @@ def show_df(data, **kwargs):
 # 6. STREAMLIT INTERFACE
 # =============================================================================
 def main():
-    st.set_page_config(page_title="BOUBA's Football Engine", page_icon="⚽", layout="wide")
+    st.set_page_config(page_title="BOUBA's Football Engine", page_icon="⚽", layout="wide",
+                       initial_sidebar_state="auto")
+    st.markdown(MOBILE_CSS, unsafe_allow_html=True)
+    if "phone_layout" not in st.session_state:
+        st.session_state["phone_layout"] = is_phone_browser()
 
     # ---------------- Sidebar: global settings ----------------
+    st.sidebar.toggle("📱 Phone layout (match cards)", key="phone_layout",
+                      help="Shows each match as a card instead of a wide table. "
+                           "Switched on automatically on phones.")
     st.sidebar.header("⚙️ Model settings")
     codes = list(LEAGUES)
     league = st.sidebar.selectbox(
@@ -2701,6 +2819,8 @@ def main():
                 cap_txt = "" if np.isinf(max_edge) else f" and < {max_edge}%"
                 st.metric("Value bets flagged", n_value,
                           help=f"Rows with edge ≥ {min_edge}%{cap_txt} are green.")
+                if phone_mode():
+                    table = table[["Match", "Market", "Book Odds", "Fair Odds", "Edge %"]]
                 show_df(style_value(table, min_edge, max_edge), hide_index=True,
                              height=600)
                 st.caption("Edge % = model probability × book odds − 1. "
@@ -3004,7 +3124,10 @@ def main():
                 st.info("No UEFA club fixtures in the next 14 days.")
             else:
                 cup_tab = cup_predictions(uefa, uefa_model, "Comp", 14, min_edge)
-                show_df(cup_tab.drop(columns=["League", "Status", "Stake", "Kickoff UTC"]).style.format(
+                if phone_mode():
+                    render_match_cards(cup_tab, tz)
+                else:
+                  show_df(cup_tab.drop(columns=["League", "Status", "Stake", "Kickoff UTC"]).style.format(
                     {c: "{:.0f}" for c in ["Home %", "Draw %", "Away %", *GOAL_COLS, "BTTS %"]}), hide_index=True,
                     height=min(700, 38 + 35 * max(len(cup_tab), 1)))
             st.markdown("#### Any two clubs")
@@ -3070,6 +3193,8 @@ def main():
                        "teams' below for those.")
             if nl_up.empty:
                 st.caption("None in the next 30 days.")
+            elif phone_mode():
+                render_match_cards(nl_up, tz)
             else:
                 show_df(nl_up.drop(columns=["League", "Status", "Stake", "Kickoff UTC"])
                         .style.format({c: "{:.0f}" for c in
