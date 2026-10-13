@@ -442,3 +442,15 @@ def test_phone_cards_show_every_match_safely():
     assert "bfe-card bet" in out and "&lt;b&gt;A&lt;/b&gt; v B&amp;C" in out
     assert all(f"<th>{g}</th>" in out for g in app.GOAL_LINES)
     assert not app.phone_mode() or True          # never raises outside a browser
+
+
+def test_best_pick_is_most_likely_option_worth_betting():
+    model = app._fit_model(LEAGUE_DATA["E0"], 400, 0.5)
+    _, _, _, p = app.predict(model, "Arsenal", "Fulham")
+    assert abs(p["1X"] - (p["H"] + p["D"])) < 1e-9 and abs(p["12"] + p["D"] - 1) < 1e-9
+    bp = app.best_pick(p, "Arsenal", "Fulham")
+    allowed = [k for k in app.BEST_PICK_KEYS if p[k] <= app.BEST_PICK_MAX_P]
+    assert bp["key"] in allowed and bp["prob"] == max(p[k] for k in allowed)
+    assert bp["floor"] >= 1 / app.BEST_PICK_MAX_P and "bet at" in bp["text"]
+    rows = app.score_predictions(make_fixtures().head(2), model)
+    assert rows["Best pick"].str.contains("bet at").all()
