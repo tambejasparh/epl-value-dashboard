@@ -1286,8 +1286,57 @@ def best_pick(p: dict, home: str, away: str,
     stars, tier, tier_hit = next((st_, t, h) for lim, st_, t, h in BEST_PICK_TIERS
                                  if p[k] >= lim)
     return {"key": k, "label": label, "prob": p[k], "floor": floor, "stars": stars,
-            "tier": tier, "tier_hit": tier_hit,
+            "tier": tier, "tier_hit": tier_hit, "how": how_to_bet(k, home, away, floor),
             "text": f"{stars} {label} · {p[k]*100:.0f}% · bet at {floor:.2f}+"}
+
+
+def how_to_bet(k: str, home: str, away: str, floor: float) -> str:
+    """Plain-English instruction: which market to open, what to pick, when it
+    wins and when it loses."""
+    goals = {"O15": ("Over 1.5", "2 or more goals", "0 or 1 goal"),
+             "U15": ("Under 1.5", "0 or 1 goal", "2 or more goals"),
+             "O25": ("Over 2.5", "3 or more goals", "0, 1 or 2 goals"),
+             "U25": ("Under 2.5", "0, 1 or 2 goals", "3 or more goals"),
+             "O35": ("Over 3.5", "4 or more goals", "0 to 3 goals"),
+             "U35": ("Under 3.5", "0, 1, 2 or 3 goals", "4 or more goals"),
+             "U45": ("Under 4.5", "0, 1, 2, 3 or 4 goals", "5 or more goals")}
+    if k in goals:
+        pick, win, lose = goals[k]
+        how = (f"Open the 'Total goals' (Over/Under) market and choose '{pick}'. "
+               f"You WIN if the match has {win} in total (both teams added together). "
+               f"You LOSE if it has {lose}.")
+    else:
+        how = {
+            "H": f"Open the 'Match result' (1X2) market and choose '1' ({home} to win). "
+                 f"You WIN only if {home} wins. You LOSE if it is a draw or {away} wins.",
+            "D": "Open the 'Match result' (1X2) market and choose 'X' (draw). You WIN "
+                 "only if the match ends level. You LOSE if either team wins.",
+            "A": f"Open the 'Match result' (1X2) market and choose '2' ({away} to win). "
+                 f"You WIN only if {away} wins. You LOSE if it is a draw or {home} wins.",
+            "1X": f"Open the 'Double chance' market and choose '1X' ({home} or draw). "
+                  f"You WIN if {home} wins OR it is a draw. You LOSE only if {away} wins.",
+            "X2": f"Open the 'Double chance' market and choose 'X2' ({away} or draw). "
+                  f"You WIN if {away} wins OR it is a draw. You LOSE only if {home} wins.",
+            "12": f"Open the 'Double chance' market and choose '12' (either team wins). "
+                  f"You WIN if {home} wins OR {away} wins - it does not matter which. "
+                  "You LOSE only if the match is a draw.",
+            "BTTS_Y": "Open the 'Both teams to score' (GG/NG) market and choose 'Yes' "
+                      f"(GG). You WIN if {home} AND {away} each score at least 1 goal. "
+                      "You LOSE if either team scores 0.",
+            "BTTS_N": "Open the 'Both teams to score' (GG/NG) market and choose 'No' "
+                      "(NG). You WIN if at least one team scores 0 goals. You LOSE if "
+                      "both teams score.",
+            "HS": f"Open the '{home} total goals' (team goals) market and choose 'Over 0.5' "
+                  f"(some bookmakers call it '{home} to score: Yes'). You WIN if {home} "
+                  f"scores at least 1 goal - the final result does not matter. You LOSE "
+                  f"only if {home} scores 0.",
+            "AS": f"Open the '{away} total goals' (team goals) market and choose 'Over 0.5' "
+                  f"(some bookmakers call it '{away} to score: Yes'). You WIN if {away} "
+                  f"scores at least 1 goal - the final result does not matter. You LOSE "
+                  f"only if {away} scores 0.",
+        }[k]
+    return (how + f" Only place it if your bookmaker's odds for this choice are "
+            f"{floor:.2f} or higher.")
 
 
 def score_predictions(window: pd.DataFrame, model: dict) -> pd.DataFrame:
@@ -1303,7 +1352,7 @@ def score_predictions(window: pd.DataFrame, model: dict) -> pd.DataFrame:
             "Kickoff (UK)": fx["Kickoff"].tz_convert(UK_TZ).strftime("%a %d %b %H:%M"),
             "Kickoff UTC": fx["Kickoff"],
             "Match": f"{fx['HomeTeam']} v {fx['AwayTeam']}",
-            "Best pick": bp["text"], "Best pick %": bp["prob"] * 100,
+            "Best pick": bp["text"], "Best pick %": bp["prob"] * 100, "How to bet": bp["how"],
             "Predicted score": pred,
             "Top 5 scores": ", ".join(f"{sc} ({pr*100:.0f}%)" for sc, pr in top_scores(m)),
             "Home %": p["H"] * 100, "Draw %": p["D"] * 100, "Away %": p["A"] * 100,
@@ -1446,7 +1495,9 @@ def write_predictions_md(adv: pd.DataFrame, flags: pd.DataFrame, path: Path,
                     continue
                 any_pick = True
                 lines.append(f"**{grp['Day'].iloc[0]}**")
-                lines += [f"- {r['Time']} · {r['Match']} ({r['Competition']}) — {r['Best pick']}"
+                lines += [f"- {r['Time']} · **{r['Match']}** ({r['Competition']}) — {r['Best pick']}"
+                          + (f"  \n  📝 {r['How to bet']}" if isinstance(r.get("How to bet"), str)
+                             else "")
                           for _, r in top.iterrows()]
                 lines.append("")
             if not any_pick:
@@ -1734,7 +1785,7 @@ def cup_predictions(fixtures: pd.DataFrame, model: dict, code_col: str = "Comp",
             "Kickoff (UK)": fx["Kickoff"].tz_convert(UK_TZ).strftime("%a %d %b %H:%M"),
             "Kickoff UTC": fx["Kickoff"],
             "Match": f"{fx['HomeTeam']} v {fx['AwayTeam']}",
-            "Best pick": bp["text"], "Best pick %": bp["prob"] * 100,
+            "Best pick": bp["text"], "Best pick %": bp["prob"] * 100, "How to bet": bp["how"],
             "Predicted score": pred,
             "Top 5 scores": ", ".join(f"{sc} ({pr*100:.0f}%)" for sc, pr in top_scores(m)),
             "Home %": p["H"] * 100, "Draw %": p["D"] * 100, "Away %": p["A"] * 100,
@@ -1894,7 +1945,9 @@ def match_cards_html(d: pd.DataFrame) -> str:
             f"<div class='bfe-match'>{e(str(r['Match']))}</div>"
             f"<div class='bfe-adv'>{e(adv)}{stake_txt}</div>"
             + (f"<div class='bfe-row'>🎯 Best pick: <b>{e(str(r['Best pick']))}</b></div>"
-               if isinstance(r.get("Best pick"), str) else "") +
+               if isinstance(r.get("Best pick"), str) else "")
+            + (f"<div class='bfe-row bfe-small'>📝 <b>How to bet:</b> {e(str(r['How to bet']))}</div>"
+               if isinstance(r.get("How to bet"), str) else "") +
             f"<div class='bfe-row'>Predicted <b>{e(str(r.get('Predicted score', '')))}</b> · "
             f"H {r['Home %']:.0f}% · D {r['Draw %']:.0f}% · A {r['Away %']:.0f}%{btts}</div>"
             + (f"<div class='bfe-row bfe-small'>Top 5: {e(str(top))}</div>" if top else "")
@@ -1950,7 +2003,8 @@ def render_day_by_day(adv: pd.DataFrame, tz: str, key: str):
         top = top[top["Best pick %"] >= BEST_PICK_STRONG * 100].head(5)
         if not top.empty:
             st.success("**🎯 Strongest best picks today**\n\n" + "\n".join(
-                f"- {r['Time']} · {r['Match']} — **{r['Best pick']}**"
+                f"- {r['Time']} · **{r['Match']}** — **{r['Best pick']}**"
+                + (f"  \n  📝 {r['How to bet']}" if isinstance(r.get("How to bet"), str) else "")
                 for _, r in top.iterrows()))
     view = sub[sub["Advice"].str.match(r"^(BET|WATCH)")] if only else sub
     if strong and "Best pick %" in view.columns:
@@ -1964,7 +2018,8 @@ def render_day_by_day(adv: pd.DataFrame, tz: str, key: str):
                else "")
         return [css if c in ("Advice", "Stake") else "" for c in row.index]
 
-    cols = ["Time", "Competition", "Match", "Advice", "Stake", "Best pick", "Predicted score",
+    cols = ["Time", "Competition", "Match", "Advice", "Stake", "Best pick", "How to bet",
+            "Predicted score",
             "Top 5 scores", "Home %", "Draw %", "Away %", *GOAL_COLS, "BTTS %"]
     pct_cols = ["Home %", "Draw %", "Away %", *GOAL_COLS, "BTTS %"]
     cols = [c for c in cols if c in view.columns]
@@ -2617,8 +2672,8 @@ def render_match_search(directory: dict, all_models: dict, uefa_model, intl_mode
     st.success(f"🎯 **Best pick: {bp['label']}** {bp['stars']} ({bp['tier']}) — "
                f"{bp['prob']*100:.0f}% chance"
                + (" (model + bookmaker odds)" if used_odds else "")
-               + f". Bet it only at odds of **{bp['floor']:.2f} or more**. {bp['tier']} picks "
-               f"won {bp['tier_hit']} of the time in testing.")
+               + f". {bp['tier']} picks won {bp['tier_hit']} of the time in testing.\n\n"
+               f"📝 **How to bet:** {bp['how']}")
     adv = res.get("advice")
     if adv is not None:
         if adv.startswith("BET"):
@@ -3018,7 +3073,7 @@ def main():
         st.success(f"🎯 **Best pick: {bp['label']}** {bp['stars']} ({bp['tier']}) — "
                    f"{bp['prob']*100:.0f}% chance"
                    + (" (model + bookmaker odds)" if used_odds else "")
-                   + f". Bet it only at odds of **{bp['floor']:.2f} or more**.")
+                   + f".\n\n📝 **How to bet:** {bp['how']}")
 
         st.markdown("#### Match outcome")
         o1, o2, o3 = st.columns(3)

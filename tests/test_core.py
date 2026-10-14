@@ -465,3 +465,11 @@ def test_best_pick_is_most_likely_option_worth_betting():
     assert app.pick_probs(m, model["rho"], {})[1] is False
     rows = app.score_predictions(make_fixtures().head(2), model)
     assert rows["Best pick"].str.contains("bet at").all()
+
+
+def test_every_best_pick_has_plain_english_instructions():
+    for k in app.BEST_PICK_KEYS:
+        txt = app.how_to_bet(k, "LASK", "Liverpool", 1.15)
+        assert "WIN" in txt and "1.15 or higher" in txt
+    assert "'12'" in app.how_to_bet("12", "LASK", "Liverpool", 1.15)
+    assert "LOSE only if the match is a draw" in app.how_to_bet("12", "LASK", "Liverpool", 1.15)
