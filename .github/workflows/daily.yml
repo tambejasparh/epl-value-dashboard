@@ -42,7 +42,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          for f in predictions.md paper_bets.csv data_snapshot; do [ -e "$f" ] && git add "$f"; done
+          for f in predictions.md paper_bets.csv best_picks_log.csv data_snapshot; do [ -e "$f" ] && git add "$f"; done
           git diff --cached --quiet || git commit -m "Update predictions, paper-trading log and data backup"
           # Another run may have saved in the meantime: keep this (newer) run's files
           for i in 1 2 3; do

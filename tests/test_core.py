@@ -21,6 +21,7 @@ os.environ["EPL_OFFLINE"] = "1"
 os.environ["EPL_SNAPSHOT_DIR"] = str(TMP / "snap")
 os.environ["EPL_PAPER_LOG"] = str(TMP / "paper_bets.csv")
 os.environ["EPL_PREDICTIONS"] = str(TMP / "predictions.md")
+os.environ["EPL_PICK_LOG"] = str(TMP / "best_picks_log.csv")
 
 APP_PATH = Path(__file__).resolve().parents[1] / "epl_value_dashboard.py"
 sys.path.insert(0, str(APP_PATH.parent))
@@ -485,3 +486,45 @@ def test_cup_and_international_picks_are_corrected_for_overconfidence():
     _, _, _, raw = app.predict(im, "Cameroon", "Ivory Coast", neutral=True)
     shr = app.shrink_probs(raw, im["pick_shrink"])
     assert abs(rows["Best pick %"].iloc[0] / 100 - app.best_pick(shr, "Cameroon", "Ivory Coast")["prob"]) < 1e-9
+
+
+def test_pick_won_covers_every_market():
+    assert app.pick_won("U45", 2, 2) and not app.pick_won("U45", 3, 2)
+    assert app.pick_won("O15", 1, 1) and not app.pick_won("O15", 1, 0)
+    assert app.pick_won("12", 0, 1) and not app.pick_won("12", 1, 1)
+    assert app.pick_won("AS", 3, 1) and not app.pick_won("HS", 0, 2)
+    for k in app.BEST_PICK_KEYS:
+        app.pick_won(k, 1, 0)
+
+
+def test_best_pick_log_records_freezes_and_settles():
+    if app.PICK_LOG.exists():
+        app.PICK_LOG.unlink()
+    model = app._fit_model(LEAGUE_DATA["E0"], 400, 0.5)
+    fx = make_fixtures()
+    fx = fx[fx["Div"] == "E0"].head(2).copy()
+    adv = app.match_advice(app.score_predictions(fx, model), pd.DataFrame(), 100)
+    adv.insert(0, "Competition", "England - Premier League")
+    t0 = pd.Timestamp.now(tz="UTC")
+    log, n, err = app.update_pick_log(adv, now=t0)
+    assert err is None and n == 2 and len(log) == 2
+    # before kick-off a newer pick replaces the old one (no duplicates)
+    log, n, _ = app.update_pick_log(adv, now=t0)
+    assert n == 0 and len(app.read_pick_log()) == 2
+    # after kick-off the pick is frozen and then settled from the result
+    first = app.read_pick_log().iloc[0]
+    later = pd.Timestamp(first["Kickoff (UTC)"], tz="UTC") + pd.Timedelta(hours=3)
+    changed = adv.copy()
+    changed["Best pick"] = "changed"
+    app.update_pick_log(changed, now=later)
+    assert app.read_pick_log().iloc[0]["Best pick"] == first["Best pick"]
+    res = pd.DataFrame({"League": ["E0"], "Date": [pd.Timestamp(first["Match day"])],
+                        "HomeTeam": [first["HomeTeam"]], "AwayTeam": [first["AwayTeam"]],
+                        "FTHG": [2], "FTAG": [1]})
+    st_ = app.settle_pick_log(app.read_pick_log(), res)
+    row = st_.iloc[0]
+    assert row["Score"] == "2-1" and row["Won"] == app.pick_won(first["Pick key"], 2, 1)
+    sm = app.pick_summary(st_)
+    assert sm["n"] == 1 and sm["pending"] == 1 and "best picks won" in app.pick_record_lines(sm)[0]
+    day, top = app.safest_picks(adv, "Africa/Douala")
+    assert day is not None
