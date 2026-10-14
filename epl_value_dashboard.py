@@ -363,6 +363,7 @@ MARKET_LABELS = {
     "O65": "Over 6.5", "U65": "Under 6.5",
     "BTTS_Y": "BTTS Yes", "BTTS_N": "BTTS No",
     "1X": "Home or Draw (1X)", "X2": "Draw or Away (X2)", "12": "Home or Away (12)",
+    "HS": "Home team to score", "AS": "Away team to score",
 }
 
 
@@ -1159,6 +1160,8 @@ def market_probs(m: np.ndarray) -> dict:
     probs["1X"] = probs["H"] + probs["D"]          # double chance
     probs["X2"] = probs["D"] + probs["A"]
     probs["12"] = probs["H"] + probs["A"]
+    probs["HS"] = float(1 - m[0, :].sum())          # home team scores at least once
+    probs["AS"] = float(1 - m[:, 0].sum())          # away team scores at least once
     for line, key in [(0.5, "05"), (1.5, "15"), (2.5, "25"), (3.5, "35"), (4.5, "45"),
                       (5.5, "55"), (6.5, "65")]:
         probs[f"O{key}"] = m[total > line].sum()
@@ -1209,19 +1212,22 @@ def goal_line_cols(p: dict) -> dict:
     return out
 
 
-# "Best pick": the option most likely to win that still pays fair odds of at
-# least ~1.18. Where bookmaker odds exist, the model's score matrix is blended
-# 50/50 with one fitted to those odds (more accurate). Backtest 2025/26, six
-# top leagues, 2,304 matches: picks won 80.6% (expected 79.1%); the 22% rated
-# STRONG (>= 82%) won 84.5%, GOOD (78-82%) 80.6%, FAIR 78.8%. Short odds -
-# about -4% at Bet365 prices overall, so NOT a value signal on its own.
+# "Best pick": the option most likely to win, among 17 common markets, capped
+# at fair odds ~1.09 (92%). Where bookmaker odds exist, the model's score
+# matrix is blended 50/50 with one fitted to those odds (more accurate).
+# Walk-forward backtest, 12 leagues, 2024/25 + 2025/26, 8,591 matches:
+# picks won 88.3% overall (same in both seasons); BANKER (>= 90%) 92.5%,
+# STRONG (88-90%) 90.4%, GOOD (85-88%) 88.1%, FAIR 84.2%. Bookmakers almost
+# never pay the fair price on such short odds (about -4% at Bet365), so this
+# is a "most likely to win" pick, NOT a value signal.
 BEST_PICK_KEYS = ["H", "D", "A", "1X", "X2", "12", "O15", "U15", "O25", "U25",
-                  "O35", "U35", "BTTS_Y", "BTTS_N"]
-BEST_PICK_MAX_P = 0.85
+                  "O35", "U35", "U45", "BTTS_Y", "BTTS_N", "HS", "AS"]
+BEST_PICK_MAX_P = 0.92
 BEST_PICK_BLEND = 0.5
-BEST_PICK_TIERS = [(0.82, "⭐⭐⭐", "Strong", "~85%"), (0.78, "⭐⭐", "Good", "~81%"),
-                   (0.0, "⭐", "Fair", "~79%")]
-BEST_PICK_HIT = "81%"
+BEST_PICK_TIERS = [(0.90, "🔒", "Banker", "~92%"), (0.88, "⭐⭐⭐", "Strong", "~90%"),
+                   (0.85, "⭐⭐", "Good", "~88%"), (0.0, "⭐", "Fair", "~84%")]
+BEST_PICK_STRONG = 0.88             # 'strongest picks' lists: Banker + Strong (~91%)
+BEST_PICK_HIT = "88%"
 
 
 def raw_odds(row) -> dict:
@@ -1267,13 +1273,14 @@ def pick_probs(m: np.ndarray, rho: float, odds) -> tuple:
 
 def best_pick(p: dict, home: str, away: str,
               min_edge: float = DEFAULTS["min_edge"]) -> dict:
-    """The most likely option among the main markets, capped at fair odds ~1.18."""
+    """The most likely option among the main markets, capped at fair odds ~1.09."""
     ok = [k for k in BEST_PICK_KEYS if p[k] <= BEST_PICK_MAX_P]
     k = max(ok or BEST_PICK_KEYS, key=lambda x: p[x])
     label = {"H": f"{home} win", "D": "Draw", "A": f"{away} win",
              "1X": f"{home} or draw", "X2": f"{away} or draw",
              "12": f"{home} or {away} (no draw)",
              "BTTS_Y": "Both teams to score", "BTTS_N": "Not both teams to score",
+             "HS": f"{home} to score", "AS": f"{away} to score",
              }.get(k, MARKET_LABELS[k] + " goals")
     floor = (1 / p[k]) * (1 + min_edge / 100)
     stars, tier, tier_hit = next((st_, t, h) for lim, st_, t, h in BEST_PICK_TIERS
@@ -1430,10 +1437,10 @@ def write_predictions_md(adv: pd.DataFrame, flags: pd.DataFrame, path: Path,
             lines += ["No bets this week - the prices are fair. That is normal.", ""]
         # 2) strongest best picks per day
         if "Best pick %" in d.columns:
-            lines += ["## 🎯 Strongest best picks (⭐⭐⭐ won ~85% in testing)", ""]
+            lines += ["## 🎯 Strongest best picks (🔒 Banker + ⭐⭐⭐ Strong: won ~91% in testing)", ""]
             any_pick = False
             for day, grp in d.groupby("_day", sort=True):
-                top = grp[grp["Best pick %"] >= BEST_PICK_TIERS[0][0] * 100].sort_values(
+                top = grp[grp["Best pick %"] >= BEST_PICK_STRONG * 100].sort_values(
                     "Best pick %", ascending=False).head(8)
                 if top.empty:
                     continue
@@ -1443,7 +1450,7 @@ def write_predictions_md(adv: pd.DataFrame, flags: pd.DataFrame, path: Path,
                           for _, r in top.iterrows()]
                 lines.append("")
             if not any_pick:
-                lines += ["No ⭐⭐⭐ picks this week.", ""]
+                lines += ["No 🔒 / ⭐⭐⭐ picks this week.", ""]
         # 3) every match, every day
         lines += ["## 📅 Every match, day by day", ""]
         for day, grp in d.groupby("_day", sort=True):
@@ -1788,9 +1795,11 @@ BEFORE_YOU_BET = (
     "2. Check team news: injuries, suspensions, rotation. If a key player is out, "
     "re-check the match in the Match Analyzer with the What-If sliders.\n"
     "3. Stake no more than shown, and never chase losses.\n"
-    "4. 🎯 Best pick = the option most likely to win. In testing ⭐⭐⭐ Strong picks "
-    "won ~85%, ⭐⭐ Good ~81%, ⭐ Fair ~79%. They pay short odds, so only take them "
-    "at or above the odds shown - an 85% pick still loses about 1 time in 7.\n"
+    "4. 🎯 Best pick = the option most likely to win. In testing (8,591 matches) 🔒 "
+    "Banker picks won ~92%, ⭐⭐⭐ Strong ~90%, ⭐⭐ Good ~88%, ⭐ Fair ~84%. The "
+    "catch: they pay very short odds and bookmakers almost never offer the 'bet at' "
+    "price, so over time they lose a little (about -4%). One loss wipes out about "
+    "ten wins - stake small, and only bet at or above the odds shown.\n"
     "5. Bets are logged automatically - check the Paper Trading tab to see if the "
     "edge is real before risking real money.")
 
@@ -1919,7 +1928,7 @@ def render_day_by_day(adv: pd.DataFrame, tz: str, key: str):
     comps = ["All competitions"] + list(dict.fromkeys(d.loc[d["_day"] == day, "Competition"]))
     comp = c2.selectbox("Competition", comps, key=f"{key}_comp")
     only = st.toggle("Only matches with BET or WATCH advice", value=False, key=f"{key}_only")
-    strong = st.toggle("Only ⭐⭐⭐ Strong best picks (won ~85% in testing)", value=False,
+    strong = st.toggle("Only 🔒 Banker and ⭐⭐⭐ Strong best picks (won ~91% in testing)", value=False,
                        key=f"{key}_strong")
 
     sub = d[d["_day"] == day]
@@ -1938,14 +1947,14 @@ def render_day_by_day(adv: pd.DataFrame, tz: str, key: str):
                    "not advised for real money.")
     if "Best pick %" in sub.columns:
         top = sub.dropna(subset=["Best pick %"]).sort_values("Best pick %", ascending=False)
-        top = top[top["Best pick %"] >= BEST_PICK_TIERS[0][0] * 100].head(5)
+        top = top[top["Best pick %"] >= BEST_PICK_STRONG * 100].head(5)
         if not top.empty:
             st.success("**🎯 Strongest best picks today**\n\n" + "\n".join(
                 f"- {r['Time']} · {r['Match']} — **{r['Best pick']}**"
                 for _, r in top.iterrows()))
     view = sub[sub["Advice"].str.match(r"^(BET|WATCH)")] if only else sub
     if strong and "Best pick %" in view.columns:
-        view = view[view["Best pick %"] >= BEST_PICK_TIERS[0][0] * 100]
+        view = view[view["Best pick %"] >= BEST_PICK_STRONG * 100]
 
     def _style(row):
         txt = row["Advice"]

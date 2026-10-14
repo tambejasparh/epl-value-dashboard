@@ -452,7 +452,11 @@ def test_best_pick_is_most_likely_option_worth_betting():
     allowed = [k for k in app.BEST_PICK_KEYS if p[k] <= app.BEST_PICK_MAX_P]
     assert bp["key"] in allowed and bp["prob"] == max(p[k] for k in allowed)
     assert bp["floor"] >= 1 / app.BEST_PICK_MAX_P and "bet at" in bp["text"]
-    assert bp["stars"].startswith("⭐") and bp["tier"] in ("Strong", "Good", "Fair")
+    assert bp["tier"] in ("Banker", "Strong", "Good", "Fair")
+    assert abs(p["HS"] - (1 - app.predict(model, "Arsenal", "Fulham")[2][0, :].sum())) < 1e-9
+    assert "HS" in app.BEST_PICK_KEYS and app.best_pick(
+        {**{k: 0.1 for k in app.BEST_PICK_KEYS}, "HS": 0.91}, "Arsenal", "Fulham")["label"] \
+        == "Arsenal to score"
     # with bookmaker odds the pick blends model and market
     odds = {"H": 1.5, "D": 4.2, "A": 6.5, "O25": 1.7, "U25": 2.2}
     m = app.predict(model, "Arsenal", "Fulham")[2]
