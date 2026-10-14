@@ -1044,7 +1044,7 @@ def fit_international(df: pd.DataFrame, half_life_days: int = INTL_DEFAULTS["hal
         "prior": {"attack": 0.0, "defence": 0.0},
         "attack": {t: float(att[i]) for t, i in idx.items()},
         "defence": {t: float(dfn[i]) for t, i in idx.items()},
-        "teams": teams, "current_teams": current or teams,
+        "teams": teams, "current_teams": current or teams, "pick_shrink": INTL_PICK_SHRINK,
         "n_matches": int(len(train)), "last_date": last, "converged": ok,
         "goals_weight": 1.0,
     }
@@ -1228,6 +1228,22 @@ BEST_PICK_TIERS = [(0.90, "🔒", "Banker", "~92%"), (0.88, "⭐⭐⭐", "Strong
                    (0.85, "⭐⭐", "Good", "~88%"), (0.0, "⭐", "Fair", "~84%")]
 BEST_PICK_STRONG = 0.88             # 'strongest picks' lists: Banker + Strong (~91%)
 BEST_PICK_HIT = "88%"
+# European cups: walk-forward test of all 531 UEFA games of 2025/26 showed the
+# cup model ~5 points over-confident on best picks (expected 87.4%, won 82.1%),
+# so cup pick probabilities are shrunk towards 50% by this factor.
+UEFA_PICK_SHRINK = 0.86
+# Out-of-sample check on 2024/25 (441 games): 77.6% -> 82.5% won with it.
+# Both seasons together (972 games): best picks won ~85%.
+# National teams: 1,315 competitive games 2025-26, model ~3 points
+# over-confident (87.5% expected, 84.7% won). With 0.92: 88.2% won, 87.3% expected.
+INTL_PICK_SHRINK = 0.92
+
+
+def shrink_probs(p: dict, k: float) -> dict:
+    """Pull every probability towards 50% (k=1: unchanged)."""
+    if k is None or k >= 1:
+        return p
+    return {key: 0.5 + (v - 0.5) * k for key, v in p.items()}
 
 
 def raw_odds(row) -> dict:
@@ -1759,7 +1775,7 @@ def fit_uefa(uefa: pd.DataFrame, dom: dict,
             "defence": {k: float(v) for k, v in dfn.items()},
             "prior": {"attack": 0.0, "defence": 0.0},
             "teams": teams_all, "current_teams": teams_all,
-            "groups": group_strength, "dom": dom,
+            "groups": group_strength, "dom": dom, "pick_shrink": UEFA_PICK_SHRINK,
             "n_matches": int(len(played)),
             "last_date": played["Kickoff"].max(), "converged": bool(res.success),
             "goals_weight": 1.0}
@@ -1779,7 +1795,8 @@ def cup_predictions(fixtures: pd.DataFrame, model: dict, code_col: str = "Comp",
         pred, _ = predicted_score(m, p)
         best = max(("H", "D", "A"), key=lambda k: p[k])
         lab = {"H": fx["HomeTeam"], "D": "Draw", "A": fx["AwayTeam"]}[best]
-        bp = best_pick(p, fx["HomeTeam"], fx["AwayTeam"])
+        bp = best_pick(shrink_probs(p, model.get("pick_shrink", 1.0)),
+                       fx["HomeTeam"], fx["AwayTeam"])
         rows.append({
             "League": fx[code_col],
             "Kickoff (UK)": fx["Kickoff"].tz_convert(UK_TZ).strftime("%a %d %b %H:%M"),
@@ -1846,8 +1863,11 @@ BEFORE_YOU_BET = (
     "2. Check team news: injuries, suspensions, rotation. If a key player is out, "
     "re-check the match in the Match Analyzer with the What-If sliders.\n"
     "3. Stake no more than shown, and never chase losses.\n"
-    "4. 🎯 Best pick = the option most likely to win. In testing (8,591 matches) 🔒 "
-    "Banker picks won ~92%, ⭐⭐⭐ Strong ~90%, ⭐⭐ Good ~88%, ⭐ Fair ~84%. The "
+    "4. 🎯 Best pick = the option most likely to win. In testing, best picks won "
+    "~88% in leagues (8,591 matches: 🔒 Banker ~92%, ⭐⭐⭐ Strong ~90%, ⭐⭐ Good "
+    "~88%, ⭐ Fair ~84%), ~85% in European cups (972 games) and ~88% for national "
+    "teams (1,315 games). Combining picks on one slip multiplies the risk: 4 picks "
+    "at 85% all win only ~52% of the time. The "
     "catch: they pay very short odds and bookmakers almost never offer the 'bet at' "
     "price, so over time they lose a little (about -4%). One loss wipes out about "
     "ten wins - stake small, and only bet at or above the odds shown.\n"
@@ -2668,7 +2688,7 @@ def render_match_search(directory: dict, all_models: dict, uefa_model, intl_mode
     st.markdown(f"**{home} v {away}** — {res['competition']} "
                 f"({STATUS_LABEL[res['status']]})")
     pp_, used_odds = pick_probs(m, model["rho"], res.get("odds") or {})
-    bp = best_pick(pp_, home, away, min_edge)
+    bp = best_pick(shrink_probs(pp_, model.get("pick_shrink", 1.0)), home, away, min_edge)
     st.success(f"🎯 **Best pick: {bp['label']}** {bp['stars']} ({bp['tier']}) — "
                f"{bp['prob']*100:.0f}% chance"
                + (" (model + bookmaker odds)" if used_odds else "")

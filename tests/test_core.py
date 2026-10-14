@@ -473,3 +473,15 @@ def test_every_best_pick_has_plain_english_instructions():
         assert "WIN" in txt and "1.15 or higher" in txt
     assert "'12'" in app.how_to_bet("12", "LASK", "Liverpool", 1.15)
     assert "LOSE only if the match is a draw" in app.how_to_bet("12", "LASK", "Liverpool", 1.15)
+
+
+def test_cup_and_international_picks_are_corrected_for_overconfidence():
+    p = {"A": 0.9, "B": 0.5, "C": 0.1}
+    q = app.shrink_probs(p, 0.86)
+    assert abs(q["A"] - 0.844) < 1e-9 and q["B"] == 0.5 and app.shrink_probs(p, 1.0) is p
+    im = app.fit_international(make_international())
+    assert im["pick_shrink"] == app.INTL_PICK_SHRINK < 1
+    rows = app.cup_predictions(make_intl_fixtures(), im, "Comp", 14, 3)
+    _, _, _, raw = app.predict(im, "Cameroon", "Ivory Coast", neutral=True)
+    shr = app.shrink_probs(raw, im["pick_shrink"])
+    assert abs(rows["Best pick %"].iloc[0] / 100 - app.best_pick(shr, "Cameroon", "Ivory Coast")["prob"]) < 1e-9
