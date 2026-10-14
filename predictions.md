@@ -1,22 +1,22 @@
 # Football predictions — day by day
-_Updated Wed 14 Oct 2026 15:13 (Africa/Douala time). Bankroll for stakes: 100.00_
+_Updated Wed 14 Oct 2026 18:48 (Africa/Douala time). Bankroll for stakes: 100.00_
 
 ## 🏆 Top 5 picks for each day (highest to lowest win chance)
 
 ### Wednesday 14 October
 
-1. 17:45 · **LASK v Liverpool** (UEFA Champions League) — ⭐⭐⭐ Liverpool or draw · 89% · bet at 1.15+  
-   📝 Open the 'Double chance' market and choose 'X2' (Liverpool or draw). You WIN if Liverpool wins OR it is a draw. You LOSE only if LASK wins. Only place it if your bookmaker's odds for this choice are 1.15 or higher.
-2. 19:45 · **Portsmouth v Sheffield United** (England - Championship) — ⭐⭐ Under 4.5 goals · 88% · bet at 1.18+  
+1. 19:45 · **Portsmouth v Sheffield United** (England - Championship) — ⭐⭐ Under 4.5 goals · 88% · bet at 1.18+  
    📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.18 or higher.
-3. 19:45 · **QPR v Derby** (England - Championship) — ⭐⭐ Under 4.5 goals · 87% · bet at 1.19+  
+2. 19:45 · **QPR v Derby** (England - Championship) — ⭐⭐ Under 4.5 goals · 87% · bet at 1.19+  
    📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.19 or higher.
-4. 20:00 · **Aston Villa v Fenerbahçe** (UEFA Champions League) — ⭐ Aston Villa or draw · 85% · bet at 1.22+  
+3. 20:00 · **Aston Villa v Fenerbahçe** (UEFA Champions League) — ⭐ Aston Villa or draw · 85% · bet at 1.22+  
    📝 Open the 'Double chance' market and choose '1X' (Aston Villa or draw). You WIN if Aston Villa wins OR it is a draw. You LOSE only if Fenerbahçe wins. Only place it if your bookmaker's odds for this choice are 1.22 or higher.
-5. 19:45 · **Norwich v Southampton** (England - Championship) — ⭐ Over 1.5 goals · 84% · bet at 1.23+  
+4. 19:45 · **Norwich v Southampton** (England - Championship) — ⭐ Over 1.5 goals · 84% · bet at 1.23+  
+   📝 Open the 'Total goals' (Over/Under) market and choose 'Over 1.5'. You WIN if the match has 2 or more goals in total (both teams added together). You LOSE if it has 0 or 1 goal. Only place it if your bookmaker's odds for this choice are 1.23 or higher.
+5. 20:00 · **Bodø/Glimt v B. Dortmund** (UEFA Champions League) — ⭐ Over 1.5 goals · 83% · bet at 1.23+  
    📝 Open the 'Total goals' (Over/Under) market and choose 'Over 1.5'. You WIN if the match has 2 or more goals in total (both teams added together). You LOSE if it has 0 or 1 goal. Only place it if your bookmaker's odds for this choice are 1.23 or higher.
 
-🎟️ All 5 on one ticket: all 5 win about **48%** of the time (lose about 52%). Take it only if the ticket's total odds are at least **2.40**. A 2-pick ticket (#1 + #2) wins about 78%.
+🎟️ All 5 on one ticket: all 5 win about **45%** of the time (lose about 55%). Take it only if the ticket's total odds are at least **2.57**. A 2-pick ticket (#1 + #2) wins about 76%.
 
 ### Thursday 15 October
 
@@ -108,6 +108,15 @@ _Updated Wed 14 Oct 2026 15:13 (Africa/Douala time). Bankroll for stakes: 100.00
 
 🎟️ All 5 on one ticket: all 5 win about **58%** of the time (lose about 42%). Take it only if the ticket's total odds are at least **1.98**. A 2-pick ticket (#1 + #2) wins about 82%.
 
+### Wednesday 21 October
+
+1. 17:45 · **Lille v Galatasaray** (UEFA Champions League) — ⭐ Lille to score · 81% · bet at 1.27+  
+   📝 Open the 'Lille total goals' (team goals) market and choose 'Over 0.5' (some bookmakers call it 'Lille to score: Yes'). You WIN if Lille scores at least 1 goal - the final result does not matter. You LOSE only if Lille scores 0. Only place it if your bookmaker's odds for this choice are 1.27 or higher.
+2. 17:45 · **Como v Man Utd** (UEFA Champions League) — ⭐ Over 1.5 goals · 78% · bet at 1.32+  
+   📝 Open the 'Total goals' (Over/Under) market and choose 'Over 1.5'. You WIN if the match has 2 or more goals in total (both teams added together). You LOSE if it has 0 or 1 goal. Only place it if your bookmaker's odds for this choice are 1.32 or higher.
+
+🎟️ All 2 on one ticket: all 2 win about **63%** of the time (lose about 37%). Take it only if the ticket's total odds are at least **1.69**.
+
 ## 📈 Live track record of best picks
 
 Track record starts now: every best pick is saved before kick-off and marked won/lost after the match. Check back after the next matchday.
@@ -125,10 +134,6 @@ Track record starts now: every best pick is saved before kick-off and marked won
 No bets this week - the prices are fair. That is normal.
 
 ## 🎯 Strongest best picks (🔒 Banker + ⭐⭐⭐ Strong: won ~91% in testing)
-
-**Wednesday 14 October**
-- 17:45 · **LASK v Liverpool** (UEFA Champions League) — ⭐⭐⭐ Liverpool or draw · 89% · bet at 1.15+  
-  📝 Open the 'Double chance' market and choose 'X2' (Liverpool or draw). You WIN if Liverpool wins OR it is a draw. You LOSE only if LASK wins. Only place it if your bookmaker's odds for this choice are 1.15 or higher.
 
 **Thursday 15 October**
 - 20:00 · **Brighton v Kauno Žalgiris** (UEFA Conference League) — 🔒 Brighton or draw · 90% · bet at 1.14+  
@@ -218,12 +223,10 @@ No bets this week - the prices are fair. That is normal.
 
 ## 📅 Every match, day by day
 
-### Wednesday 14 October (13 matches)
+### Wednesday 14 October (11 matches)
 
 | Time | Competition | Match | Advice | Stake | 🎯 Best pick | Predicted | H / D / A % | Over 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 / 6.5 % | Under 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 / 6.5 % |
 |---|---|---|---|---|---|---|---|---|---|
-| 17:45 | UEFA Champions League | Feyenoord v Como | No odds feed: back Como only at 1.91+ | - | ⭐ Como to score · 83% · bet at 1.24+ | 1-2 | 27 / 19 / 54 | 98 / 87 / 71 / 50 / 31 / 17 / 8 | 2 / 13 / 29 / 50 / 69 / 83 / 92 |
-| 17:45 | UEFA Champions League | LASK v Liverpool | No odds feed: back Liverpool only at 1.21+ | - | ⭐⭐⭐ Liverpool or draw · 89% · bet at 1.15+ | 0-2 | 4 / 11 / 85 | 96 / 80 / 58 / 36 / 19 / 9 / 3 | 4 / 20 / 42 / 64 / 81 / 91 / 97 |
 | 19:45 | England - Championship | Portsmouth v Sheffield United | **WATCH Away Win @ 3.20 (Bet365, edge +15.2%) - paper only** | - | ⭐⭐ Under 4.5 goals · 88% · bet at 1.18+ | 1-0 | 36 / 28 / 36 | 92 / 73 / 47 / 25 / 12 / 5 / 2 | 8 / 27 / 53 / 75 / 88 / 95 / 98 |
 | 19:45 | England - Championship | QPR v Derby | **WATCH Under 2.5 @ 2.00 (Bet365, edge +6.4%) - paper only** | - | ⭐⭐ Under 4.5 goals · 87% · bet at 1.19+ | 1-0 | 45 / 27 / 28 | 92 / 73 / 47 / 25 / 11 / 5 / 2 | 8 / 27 / 53 / 75 / 89 / 95 / 98 |
 | 19:45 | England - Championship | Norwich v Southampton | NO BET (price is fair) | - | ⭐ Over 1.5 goals · 84% · bet at 1.23+ | 1-2 | 36 / 24 / 40 | 95 / 84 / 62 / 40 / 22 / 11 / 5 | 5 / 16 / 38 / 60 / 78 / 89 / 95 |
@@ -452,6 +455,13 @@ No bets this week - the prices are fair. That is normal.
 | 20:00 | UEFA Champions League | Liverpool v Villarreal | No odds feed: back Liverpool only at 1.25+ | - | ⭐⭐ Liverpool to score · 88% · bet at 1.17+ | 2-0 | 83 / 11 / 6 | 97 / 85 / 67 / 45 / 27 / 14 / 6 | 3 / 15 / 33 / 55 / 73 / 86 / 94 |
 | 20:00 | UEFA Champions League | Paris v Barcelona | No odds feed: back Paris only at 1.52+ | - | ⭐⭐⭐ Paris to score · 89% · bet at 1.15+ | 3-1 | 68 / 14 / 18 | 100 / 95 / 85 / 70 / 52 / 34 / 20 | 0 / 5 / 15 / 30 / 48 / 66 / 80 |
 | 20:00 | UEFA Champions League | Man City v AEK Athens | No odds feed: back Man City only at 1.46+ | - | ⭐ Man City to score · 84% · bet at 1.23+ | 2-0 | 71 / 16 / 13 | 96 / 80 / 59 / 37 / 19 / 9 / 4 | 4 / 20 / 41 / 63 / 81 / 91 / 96 |
+
+### Wednesday 21 October (2 matches)
+
+| Time | Competition | Match | Advice | Stake | 🎯 Best pick | Predicted | H / D / A % | Over 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 / 6.5 % | Under 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 / 6.5 % |
+|---|---|---|---|---|---|---|---|---|---|
+| 17:45 | UEFA Champions League | Lille v Galatasaray | No odds feed: back Lille only at 1.86+ | - | ⭐ Lille to score · 81% · bet at 1.27+ | 2-1 | 55 / 20 / 24 | 97 / 82 / 61 / 39 / 21 / 10 / 4 | 3 / 18 / 39 / 61 / 79 / 90 / 96 |
+| 17:45 | UEFA Champions League | Como v Man Utd | No odds feed: back Como only at 2.47+ | - | ⭐ Over 1.5 goals · 78% · bet at 1.32+ | 2-1 | 42 / 21 / 37 | 97 / 82 / 63 / 41 / 23 / 11 / 5 | 3 / 18 / 37 / 59 / 77 / 89 / 95 |
 
 ## ☑️ Before you place any bet
 1. Your bookmaker's odds must be **at least** the price shown (for 🏆 games: at least the 'back only at' price). Lower odds = skip the bet.
