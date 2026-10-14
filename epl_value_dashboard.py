@@ -1651,6 +1651,23 @@ def pick_record_lines(sm: dict) -> list:
             + f" · {sm['pending']} waiting for results", tiers]
 
 
+def top_picks_by_day(adv: pd.DataFrame, tz: str, n: int = 5) -> list:
+    """[(day, DataFrame)] - for every upcoming day, its n best picks ranked from
+    the highest to the lowest win probability (matches not yet kicked off)."""
+    if adv is None or adv.empty or "Best pick %" not in adv.columns:
+        return []
+    d = add_local_time(adv, tz)
+    d = d[pd.to_datetime(d["Kickoff UTC"], utc=True) > pd.Timestamp.now(tz="UTC")]
+    d = d.dropna(subset=["Best pick %"])
+    out = []
+    for day in sorted(d["_day"].unique()):
+        top = (d[d["_day"] == day].sort_values(["Best pick %", "Kickoff UTC"],
+                                                ascending=[False, True]).head(n).copy())
+        top.insert(0, "Rank", range(1, len(top) + 1))
+        out.append((day, top))
+    return out
+
+
 def safest_picks(adv: pd.DataFrame, tz: str, n: int = 6) -> tuple:
     """Today's (or the next match day's) most likely picks, safest first."""
     if adv is None or adv.empty or "Best pick %" not in adv.columns:
@@ -1680,13 +1697,16 @@ def write_predictions_md(adv: pd.DataFrame, flags: pd.DataFrame, path: Path,
     else:
         d = add_local_time(adv, tz)
         # 0) safest picks + rules + live track record
-        day, top = safest_picks(adv, tz)
-        if day is not None and not top.empty:
-            lines += [f"## 🛡️ Safest picks — {pd.Timestamp(day):%A %d %B}", ""]
-            for _, r in top.iterrows():
-                lines += [f"- {r['Time']} · **{r['Match']}** ({r['Competition']}) — {r['Best pick']}",
-                          f"  📝 {r['How to bet']}"]
-            lines.append("")
+        days = top_picks_by_day(adv, tz, 5)
+        if days:
+            lines += ["## 🏆 Top 5 picks for each day (highest to lowest win chance)", ""]
+            for day, top in days:
+                lines += [f"### {pd.Timestamp(day):%A %d %B}", ""]
+                for _, r in top.iterrows():
+                    lines += [f"{int(r['Rank'])}. {r['Time']} · **{r['Match']}** "
+                              f"({r['Competition']}) — {r['Best pick']}  ",
+                              f"   📝 {r['How to bet']}"]
+                lines.append("")
         lines += ["## 📈 Live track record of best picks", ""] + record_lines + [""]
         lines += [SAFE_RULES, ""]
         # 1) the week's bets at a glance
@@ -2084,6 +2104,7 @@ MOBILE_CSS = """
 .bfe-card.bet {border-left-color: #1e9e45; background: rgba(30,158,69,.12);}
 .bfe-card.watch {border-left-color: #c9a227; background: rgba(201,162,39,.12);}
 .bfe-top {font-size: .78rem; opacity: .75;}
+.bfe-rank {font-size: .95rem; opacity: 1;}
 .bfe-match {font-size: 1.02rem; font-weight: 700; margin: .1rem 0 .25rem;}
 .bfe-adv {font-size: .9rem; font-weight: 600; margin-bottom: .3rem;}
 .bfe-card.bet .bfe-adv {color: #1e9e45;} .bfe-card.watch .bfe-adv {color: #b08d17;}
@@ -2163,7 +2184,9 @@ def match_cards_html(d: pd.DataFrame) -> str:
         top = r.get("Top 5 scores", "")
         cards.append(
             f"<div class='bfe-card {cls}'>"
-            f"<div class='bfe-top'>{e(str(r.get('Time', '')))} · {e(str(r.get('Competition', '')))}</div>"
+            f"<div class='bfe-top'>"
+            + (f"<b class='bfe-rank'>#{int(r['Rank'])}</b> " if pd.notna(r.get("Rank", np.nan)) else "")
+            + f"{e(str(r.get('Time', '')))} · {e(str(r.get('Competition', '')))}</div>"
             f"<div class='bfe-match'>{e(str(r['Match']))}</div>"
             f"<div class='bfe-adv'>{e(adv)}{stake_txt}</div>"
             + (f"<div class='bfe-row'>🎯 Best pick: <b>{e(str(r['Best pick']))}</b></div>"
@@ -2184,17 +2207,17 @@ def render_match_cards(adv: pd.DataFrame, tz: str):
 
 
 def render_safest_picks(adv: pd.DataFrame, tz: str, all_results: dict, uefa, nations_fx):
-    day, top = safest_picks(adv, tz)
-    st.markdown("#### 🛡️ Safest picks" + (f" — {pd.Timestamp(day):%A %d %B}" if day else ""))
-    if top is None or top.empty:
-        st.info("No 🔒 / ⭐⭐⭐ / ⭐⭐ picks for the next match day yet. Check back later - "
-                "the list updates four times a day.")
-    elif phone_mode():
-        st.markdown(match_cards_html(top), unsafe_allow_html=True)
-    else:
-        for _, r in top.iterrows():
-            st.success(f"**{r['Time']} · {r['Match']}** ({r['Competition']}) — "
-                       f"**{r['Best pick']}**\n\n📝 {r['How to bet']}")
+    st.markdown("#### 🏆 Top 5 picks for each day")
+    st.caption("Ranked from the highest to the lowest chance of winning. Tap a day to "
+               "open it. Each pick says exactly what to bet and the lowest odds to accept.")
+    days = top_picks_by_day(adv, tz, 5)
+    if not days:
+        st.info("No upcoming matches in the feeds yet. The list updates four times a day.")
+    for k, (day, top) in enumerate(days):
+        best = top["Best pick %"].iloc[0]
+        with st.expander(f"📅 {pd.Timestamp(day):%A %d %B} — top {len(top)} "
+                         f"(best: {best:.0f}%)", expanded=(k == 0)):
+            st.markdown(match_cards_html(top), unsafe_allow_html=True)
     sm = pick_summary(settle_pick_log(read_pick_log(),
                                       result_frames(all_results, uefa, nations_fx)))
     with st.expander("📈 Live track record of best picks (real picks, saved before kick-off)",

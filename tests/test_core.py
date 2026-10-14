@@ -528,3 +528,22 @@ def test_best_pick_log_records_freezes_and_settles():
     assert sm["n"] == 1 and sm["pending"] == 1 and "best picks won" in app.pick_record_lines(sm)[0]
     day, top = app.safest_picks(adv, "Africa/Douala")
     assert day is not None
+
+
+def test_top_five_picks_per_day_are_ranked_highest_first():
+    model = app._fit_model(LEAGUE_DATA["E0"], 400, 0.5)
+    rows = []
+    for code, df in LEAGUE_DATA.items():
+        m = app._fit_model(df, 400, 0.5)
+        fx = make_fixtures()
+        rows.append(app.match_advice(app.score_predictions(fx[fx["Div"] == code], m),
+                                     pd.DataFrame(), 100))
+    adv = pd.concat(rows, ignore_index=True)
+    adv.insert(0, "Competition", adv["League"])
+    days = app.top_picks_by_day(adv, "Africa/Douala", 5)
+    assert days and all(len(t) <= 5 for _, t in days)
+    for _, t in days:
+        assert list(t["Rank"]) == list(range(1, len(t) + 1))
+        assert t["Best pick %"].is_monotonic_decreasing
+    html_ = app.match_cards_html(days[0][1])
+    assert "#1</b>" in html_
