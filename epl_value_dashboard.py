@@ -1210,17 +1210,64 @@ def goal_line_cols(p: dict) -> dict:
 
 
 # "Best pick": the option most likely to win that still pays fair odds of at
-# least ~1.30. Backtest 2025/26, 6 top leagues, 2,304 matches: it won 74.3%
-# of the time (the model expected ~75%). Short odds - NOT a value signal.
+# least ~1.18. Where bookmaker odds exist, the model's score matrix is blended
+# 50/50 with one fitted to those odds (more accurate). Backtest 2025/26, six
+# top leagues, 2,304 matches: picks won 80.6% (expected 79.1%); the 22% rated
+# STRONG (>= 82%) won 84.5%, GOOD (78-82%) 80.6%, FAIR 78.8%. Short odds -
+# about -4% at Bet365 prices overall, so NOT a value signal on its own.
 BEST_PICK_KEYS = ["H", "D", "A", "1X", "X2", "12", "O15", "U15", "O25", "U25",
                   "O35", "U35", "BTTS_Y", "BTTS_N"]
-BEST_PICK_MAX_P = 0.77
-BEST_PICK_HIT = "74%"
+BEST_PICK_MAX_P = 0.85
+BEST_PICK_BLEND = 0.5
+BEST_PICK_TIERS = [(0.82, "⭐⭐⭐", "Strong", "~85%"), (0.78, "⭐⭐", "Good", "~81%"),
+                   (0.0, "⭐", "Fair", "~79%")]
+BEST_PICK_HIT = "81%"
+
+
+def raw_odds(row) -> dict:
+    """1X2 + O/U 2.5 decimal odds of a fixture (Bet365, else market average)."""
+    for book in ("Bet365", "Market average"):
+        cols = BOOKMAKERS[book]
+        try:
+            o = {k: float(row[c]) for k, c in cols.items()}
+        except (KeyError, TypeError, ValueError):
+            continue
+        if all(np.isfinite(v) and v > 1 for v in o.values()):
+            return o
+    return {}
+
+
+def market_matrix(odds: dict, rho: float):
+    """Score matrix whose 1X2 and O/U 2.5 match the bookmaker's (margin removed)."""
+    if not odds or any(not (odds.get(k, 0) or 0) > 1 for k in ("H", "D", "A", "O25", "U25")):
+        return None
+    ih, idr, ia = 1 / odds["H"], 1 / odds["D"], 1 / odds["A"]
+    s_ = ih + idr + ia
+    ph, pa = ih / s_, ia / s_
+    po = (1 / odds["O25"]) / (1 / odds["O25"] + 1 / odds["U25"])
+
+    def loss(x):
+        pr = market_probs(score_matrix(np.exp(x[0]), np.exp(x[1]), rho))
+        return (pr["H"] - ph) ** 2 + (pr["A"] - pa) ** 2 + (pr["O25"] - po) ** 2
+    try:
+        x = minimize(loss, [0.3, 0.1], method="Nelder-Mead",
+                     options={"xatol": 1e-4, "fatol": 1e-10}).x
+        return score_matrix(np.exp(x[0]), np.exp(x[1]), rho)
+    except Exception:
+        return None
+
+
+def pick_probs(m: np.ndarray, rho: float, odds) -> tuple:
+    """Probabilities for the best pick: model blended with the odds when known."""
+    mm = market_matrix(odds or {}, rho)
+    if mm is None:
+        return market_probs(m), False
+    return market_probs((1 - BEST_PICK_BLEND) * m + BEST_PICK_BLEND * mm), True
 
 
 def best_pick(p: dict, home: str, away: str,
               min_edge: float = DEFAULTS["min_edge"]) -> dict:
-    """The most likely option among the main markets, capped at fair odds 1.30."""
+    """The most likely option among the main markets, capped at fair odds ~1.18."""
     ok = [k for k in BEST_PICK_KEYS if p[k] <= BEST_PICK_MAX_P]
     k = max(ok or BEST_PICK_KEYS, key=lambda x: p[x])
     label = {"H": f"{home} win", "D": "Draw", "A": f"{away} win",
@@ -1229,8 +1276,11 @@ def best_pick(p: dict, home: str, away: str,
              "BTTS_Y": "Both teams to score", "BTTS_N": "Not both teams to score",
              }.get(k, MARKET_LABELS[k] + " goals")
     floor = (1 / p[k]) * (1 + min_edge / 100)
-    return {"key": k, "label": label, "prob": p[k], "floor": floor,
-            "text": f"{label} · {p[k]*100:.0f}% · bet at {floor:.2f}+"}
+    stars, tier, tier_hit = next((st_, t, h) for lim, st_, t, h in BEST_PICK_TIERS
+                                 if p[k] >= lim)
+    return {"key": k, "label": label, "prob": p[k], "floor": floor, "stars": stars,
+            "tier": tier, "tier_hit": tier_hit,
+            "text": f"{stars} {label} · {p[k]*100:.0f}% · bet at {floor:.2f}+"}
 
 
 def score_predictions(window: pd.DataFrame, model: dict) -> pd.DataFrame:
@@ -1239,12 +1289,14 @@ def score_predictions(window: pd.DataFrame, model: dict) -> pd.DataFrame:
     for _, fx in window.iterrows():
         lh, la, m, p = predict(model, fx["HomeTeam"], fx["AwayTeam"])
         pred, pp = predicted_score(m, p)
+        bp = best_pick(pick_probs(m, model["rho"], raw_odds(fx))[0],
+                       fx["HomeTeam"], fx["AwayTeam"])
         rows.append({
             "League": fx.get("Div", fx.get("League", DEFAULT_LEAGUE)),
             "Kickoff (UK)": fx["Kickoff"].tz_convert(UK_TZ).strftime("%a %d %b %H:%M"),
             "Kickoff UTC": fx["Kickoff"],
             "Match": f"{fx['HomeTeam']} v {fx['AwayTeam']}",
-            "Best pick": best_pick(p, fx["HomeTeam"], fx["AwayTeam"])["text"],
+            "Best pick": bp["text"], "Best pick %": bp["prob"] * 100,
             "Predicted score": pred,
             "Top 5 scores": ", ".join(f"{sc} ({pr*100:.0f}%)" for sc, pr in top_scores(m)),
             "Home %": p["H"] * 100, "Draw %": p["D"] * 100, "Away %": p["A"] * 100,
@@ -1376,7 +1428,23 @@ def write_predictions_md(adv: pd.DataFrame, flags: pd.DataFrame, path: Path,
                 lines.append("")
         if not any_bet:
             lines += ["No bets this week - the prices are fair. That is normal.", ""]
-        # 2) every match, every day
+        # 2) strongest best picks per day
+        if "Best pick %" in d.columns:
+            lines += ["## 🎯 Strongest best picks (⭐⭐⭐ won ~85% in testing)", ""]
+            any_pick = False
+            for day, grp in d.groupby("_day", sort=True):
+                top = grp[grp["Best pick %"] >= BEST_PICK_TIERS[0][0] * 100].sort_values(
+                    "Best pick %", ascending=False).head(8)
+                if top.empty:
+                    continue
+                any_pick = True
+                lines.append(f"**{grp['Day'].iloc[0]}**")
+                lines += [f"- {r['Time']} · {r['Match']} ({r['Competition']}) — {r['Best pick']}"
+                          for _, r in top.iterrows()]
+                lines.append("")
+            if not any_pick:
+                lines += ["No ⭐⭐⭐ picks this week.", ""]
+        # 3) every match, every day
         lines += ["## 📅 Every match, day by day", ""]
         for day, grp in d.groupby("_day", sort=True):
             lines += [f"### {grp['Day'].iloc[0]} ({len(grp)} matches)", "",
@@ -1653,12 +1721,13 @@ def cup_predictions(fixtures: pd.DataFrame, model: dict, code_col: str = "Comp",
         pred, _ = predicted_score(m, p)
         best = max(("H", "D", "A"), key=lambda k: p[k])
         lab = {"H": fx["HomeTeam"], "D": "Draw", "A": fx["AwayTeam"]}[best]
+        bp = best_pick(p, fx["HomeTeam"], fx["AwayTeam"])
         rows.append({
             "League": fx[code_col],
             "Kickoff (UK)": fx["Kickoff"].tz_convert(UK_TZ).strftime("%a %d %b %H:%M"),
             "Kickoff UTC": fx["Kickoff"],
             "Match": f"{fx['HomeTeam']} v {fx['AwayTeam']}",
-            "Best pick": best_pick(p, fx["HomeTeam"], fx["AwayTeam"])["text"],
+            "Best pick": bp["text"], "Best pick %": bp["prob"] * 100,
             "Predicted score": pred,
             "Top 5 scores": ", ".join(f"{sc} ({pr*100:.0f}%)" for sc, pr in top_scores(m)),
             "Home %": p["H"] * 100, "Draw %": p["D"] * 100, "Away %": p["A"] * 100,
@@ -1719,9 +1788,9 @@ BEFORE_YOU_BET = (
     "2. Check team news: injuries, suspensions, rotation. If a key player is out, "
     "re-check the match in the Match Analyzer with the What-If sliders.\n"
     "3. Stake no more than shown, and never chase losses.\n"
-    "4. 🎯 Best pick = the option most likely to win (it won ~74% of the time in "
-    "testing). It is a safe-looking pick, not a value bet: only take it at or above "
-    "the odds shown, and remember a 74% pick still loses 1 time in 4.\n"
+    "4. 🎯 Best pick = the option most likely to win. In testing ⭐⭐⭐ Strong picks "
+    "won ~85%, ⭐⭐ Good ~81%, ⭐ Fair ~79%. They pay short odds, so only take them "
+    "at or above the odds shown - an 85% pick still loses about 1 time in 7.\n"
     "5. Bets are logged automatically - check the Paper Trading tab to see if the "
     "edge is real before risking real money.")
 
@@ -1850,6 +1919,8 @@ def render_day_by_day(adv: pd.DataFrame, tz: str, key: str):
     comps = ["All competitions"] + list(dict.fromkeys(d.loc[d["_day"] == day, "Competition"]))
     comp = c2.selectbox("Competition", comps, key=f"{key}_comp")
     only = st.toggle("Only matches with BET or WATCH advice", value=False, key=f"{key}_only")
+    strong = st.toggle("Only ⭐⭐⭐ Strong best picks (won ~85% in testing)", value=False,
+                       key=f"{key}_strong")
 
     sub = d[d["_day"] == day]
     if comp != comps[0]:
@@ -1865,7 +1936,16 @@ def render_day_by_day(adv: pd.DataFrame, tz: str, key: str):
     if n_watch:
         st.caption(f"👀 {n_watch} watch-list match(es): logged for paper trading, "
                    "not advised for real money.")
+    if "Best pick %" in sub.columns:
+        top = sub.dropna(subset=["Best pick %"]).sort_values("Best pick %", ascending=False)
+        top = top[top["Best pick %"] >= BEST_PICK_TIERS[0][0] * 100].head(5)
+        if not top.empty:
+            st.success("**🎯 Strongest best picks today**\n\n" + "\n".join(
+                f"- {r['Time']} · {r['Match']} — **{r['Best pick']}**"
+                for _, r in top.iterrows()))
     view = sub[sub["Advice"].str.match(r"^(BET|WATCH)")] if only else sub
+    if strong and "Best pick %" in view.columns:
+        view = view[view["Best pick %"] >= BEST_PICK_TIERS[0][0] * 100]
 
     def _style(row):
         txt = row["Advice"]
@@ -2523,9 +2603,13 @@ def render_match_search(directory: dict, all_models: dict, uefa_model, intl_mode
     ps, pp = predicted_score(m, p)
     st.markdown(f"**{home} v {away}** — {res['competition']} "
                 f"({STATUS_LABEL[res['status']]})")
-    bp = best_pick(p, home, away, min_edge)
-    st.success(f"🎯 **Best pick: {bp['label']}** — {bp['prob']*100:.0f}% chance. Bet it only "
-               f"at odds of **{bp['floor']:.2f} or more**.")
+    pp_, used_odds = pick_probs(m, model["rho"], res.get("odds") or {})
+    bp = best_pick(pp_, home, away, min_edge)
+    st.success(f"🎯 **Best pick: {bp['label']}** {bp['stars']} ({bp['tier']}) — "
+               f"{bp['prob']*100:.0f}% chance"
+               + (" (model + bookmaker odds)" if used_odds else "")
+               + f". Bet it only at odds of **{bp['floor']:.2f} or more**. {bp['tier']} picks "
+               f"won {bp['tier_hit']} of the time in testing.")
     adv = res.get("advice")
     if adv is not None:
         if adv.startswith("BET"):
@@ -2920,9 +3004,12 @@ def main():
         x3.metric("Total xG", f"{lam_h + lam_a:.2f}")
         ps, pp = predicted_score(m, probs)
         x4.metric("Predicted score", ps, delta=f"{pp*100:.0f}% chance", delta_color="off")
-        bp = best_pick(probs, home, away, min_edge)
-        st.success(f"🎯 **Best pick: {bp['label']}** — {bp['prob']*100:.0f}% chance. Bet it "
-                   f"only at odds of **{bp['floor']:.2f} or more**.")
+        pp_, used_odds = pick_probs(m, model["rho"], odds)
+        bp = best_pick(pp_, home, away, min_edge)
+        st.success(f"🎯 **Best pick: {bp['label']}** {bp['stars']} ({bp['tier']}) — "
+                   f"{bp['prob']*100:.0f}% chance"
+                   + (" (model + bookmaker odds)" if used_odds else "")
+                   + f". Bet it only at odds of **{bp['floor']:.2f} or more**.")
 
         st.markdown("#### Match outcome")
         o1, o2, o3 = st.columns(3)

@@ -103,7 +103,7 @@ guessing.
 |---|---|
 | Club matches: winner (or draw) of the predicted score | ~50% |
 | Club matches: one of the top 5 most likely scores | ~50% (top 3: ~33%) |
-| Club matches: 🎯 Best pick (most likely option with odds of ~1.30+) | ~74% |
+| Club matches: 🎯 Best pick (most likely option, odds ~1.18+, blended with bookmaker odds) | ~81% overall; ⭐⭐⭐ Strong ~85%, ⭐⭐ Good ~81%, ⭐ Fair ~79% |
 | Club matches: exact predicted score | ~11% (about 1 in 9) |
 | UEFA club cups: most likely result (all 531 games of 2025/26) | 56.5% |
 | National teams: most likely result (1,909 competitive games, 2024-2026) | 61.6% |
