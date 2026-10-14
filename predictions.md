@@ -1,5 +1,26 @@
 # Football predictions — day by day
-_Updated Wed 14 Oct 2026 07:08 (Africa/Douala time). Bankroll for stakes: 100.00_
+_Updated Wed 14 Oct 2026 09:47 (Africa/Douala time). Bankroll for stakes: 100.00_
+
+## 🛡️ Safest picks — Wednesday 14 October
+
+- 17:45 · **LASK v Liverpool** (UEFA Champions League) — ⭐⭐⭐ Liverpool or draw · 89% · bet at 1.15+
+  📝 Open the 'Double chance' market and choose 'X2' (Liverpool or draw). You WIN if Liverpool wins OR it is a draw. You LOSE only if LASK wins. Only place it if your bookmaker's odds for this choice are 1.15 or higher.
+- 19:45 · **Portsmouth v Sheffield United** (England - Championship) — ⭐⭐ Under 4.5 goals · 88% · bet at 1.18+
+  📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.18 or higher.
+- 19:45 · **QPR v Derby** (England - Championship) — ⭐⭐ Under 4.5 goals · 87% · bet at 1.19+
+  📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.19 or higher.
+
+## 📈 Live track record of best picks
+
+Track record starts now: every best pick is saved before kick-off and marked won/lost after the match. Check back after the next matchday.
+
+**🛡️ Rules for low-odds betting (read every time)**
+1. **Bet singles** (one match per bet). If you combine, use at most 2-3 picks: 4 picks at 85% all win only ~52% of the time.
+2. **Only bet when your bookmaker's odds are at least the 'bet at' number.** Below it, you lose money over time even if most bets win.
+3. **Prefer 🔒 Banker and ⭐⭐⭐ Strong picks, and league matches** (tested on the most games). Skip ⭐ Fair picks unless the odds are clearly above 'bet at'.
+4. **Stake the same small amount every time** - about 1-2% of your betting money per pick. Never raise stakes to win back a loss.
+5. **Expect losses.** At odds of 1.20 you must win 5 bets out of 6 just to break even; one loss cancels about five wins. Judge the system on 50+ bets, not one day.
+6. **Check team news** before kick-off; skip a pick if a key player is missing.
 
 ## ✅ This week's bets
 
