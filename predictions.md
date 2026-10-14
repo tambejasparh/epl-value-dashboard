@@ -1,5 +1,5 @@
 # Football predictions — day by day
-_Updated Wed 14 Oct 2026 09:58 (Africa/Douala time). Bankroll for stakes: 100.00_
+_Updated Wed 14 Oct 2026 10:02 (Africa/Douala time). Bankroll for stakes: 100.00_
 
 ## 🏆 Top 5 picks for each day (highest to lowest win chance)
 
@@ -16,6 +16,8 @@ _Updated Wed 14 Oct 2026 09:58 (Africa/Douala time). Bankroll for stakes: 100.00
 5. 19:45 · **Norwich v Southampton** (England - Championship) — ⭐ Over 1.5 goals · 84% · bet at 1.23+  
    📝 Open the 'Total goals' (Over/Under) market and choose 'Over 1.5'. You WIN if the match has 2 or more goals in total (both teams added together). You LOSE if it has 0 or 1 goal. Only place it if your bookmaker's odds for this choice are 1.23 or higher.
 
+🎟️ All 5 on one ticket: all 5 win about **48%** of the time (lose about 52%). Take it only if the ticket's total odds are at least **2.40**. A 2-pick ticket (#1 + #2) wins about 78%.
+
 ### Thursday 15 October
 
 1. 20:00 · **Brighton v Kauno Žalgiris** (UEFA Conference League) — 🔒 Brighton or draw · 90% · bet at 1.14+  
@@ -28,6 +30,8 @@ _Updated Wed 14 Oct 2026 09:58 (Africa/Douala time). Bankroll for stakes: 100.00
    📝 Open the 'Jagiellonia total goals' (team goals) market and choose 'Over 0.5' (some bookmakers call it 'Jagiellonia to score: Yes'). You WIN if Jagiellonia scores at least 1 goal - the final result does not matter. You LOSE only if Jagiellonia scores 0. Only place it if your bookmaker's odds for this choice are 1.16 or higher.
 5. 17:45 · **U. Craiova v Getafe** (UEFA Conference League) — ⭐⭐⭐ Under 4.5 goals · 89% · bet at 1.16+  
    📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.16 or higher.
+
+🎟️ All 5 on one ticket: all 5 win about **57%** of the time (lose about 43%). Take it only if the ticket's total odds are at least **2.02**. A 2-pick ticket (#1 + #2) wins about 81%.
 
 ### Friday 16 October
 
@@ -42,6 +46,8 @@ _Updated Wed 14 Oct 2026 09:58 (Africa/Douala time). Bankroll for stakes: 100.00
 5. 19:30 · **Ein Frankfurt v FC Koln** (Germany - Bundesliga) — ⭐⭐⭐ Over 1.5 goals · 88% · bet at 1.17+  
    📝 Open the 'Total goals' (Over/Under) market and choose 'Over 1.5'. You WIN if the match has 2 or more goals in total (both teams added together). You LOSE if it has 0 or 1 goal. Only place it if your bookmaker's odds for this choice are 1.17 or higher.
 
+🎟️ All 5 on one ticket: all 5 win about **58%** of the time (lose about 42%). Take it only if the ticket's total odds are at least **2.00**. A 2-pick ticket (#1 + #2) wins about 84%.
+
 ### Saturday 17 October
 
 1. 20:00 · **Valencia v Ath Bilbao** (Spain - La Liga) — 🔒 Under 4.5 goals · 92% · bet at 1.12+  
@@ -54,6 +60,8 @@ _Updated Wed 14 Oct 2026 09:58 (Africa/Douala time). Bankroll for stakes: 100.00
    📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.12 or higher.
 5. 15:00 · **Aberdeen v St Mirren** (Scotland - Premiership) — 🔒 Under 4.5 goals · 92% · bet at 1.13+  
    📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.13 or higher.
+
+🎟️ All 5 on one ticket: all 5 win about **65%** of the time (lose about 35%). Take it only if the ticket's total odds are at least **1.79**. A 2-pick ticket (#1 + #2) wins about 84%.
 
 ### Sunday 18 October
 
@@ -68,6 +76,8 @@ _Updated Wed 14 Oct 2026 09:58 (Africa/Douala time). Bankroll for stakes: 100.00
 5. 15:15 · **Celta v Alaves** (Spain - La Liga) — 🔒 Under 4.5 goals · 90% · bet at 1.14+  
    📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.14 or higher.
 
+🎟️ All 5 on one ticket: all 5 win about **61%** of the time (lose about 39%). Take it only if the ticket's total odds are at least **1.89**. A 2-pick ticket (#1 + #2) wins about 83%.
+
 ### Monday 19 October
 
 1. 20:15 · **Sp Braga v Gil Vicente** (Portugal - Primeira Liga) — 🔒 Under 4.5 goals · 90% · bet at 1.14+  
@@ -81,6 +91,8 @@ _Updated Wed 14 Oct 2026 09:58 (Africa/Douala time). Bankroll for stakes: 100.00
 5. 20:00 · **Tottenham v Coventry** (England - Premier League) — ⭐⭐ Under 4.5 goals · 86% · bet at 1.20+  
    📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.20 or higher.
 
+🎟️ All 5 on one ticket: all 5 win about **54%** of the time (lose about 46%). Take it only if the ticket's total odds are at least **2.15**. A 2-pick ticket (#1 + #2) wins about 81%.
+
 ### Tuesday 20 October
 
 1. 19:45 · **AFC Wimbledon v Mansfield** (England - League One) — 🔒 Under 4.5 goals · 91% · bet at 1.14+  
@@ -93,6 +105,8 @@ _Updated Wed 14 Oct 2026 09:58 (Africa/Douala time). Bankroll for stakes: 100.00
    📝 Open the 'Paris total goals' (team goals) market and choose 'Over 0.5' (some bookmakers call it 'Paris to score: Yes'). You WIN if Paris scores at least 1 goal - the final result does not matter. You LOSE only if Paris scores 0. Only place it if your bookmaker's odds for this choice are 1.15 or higher.
 5. 19:45 · **Rochdale v Grimsby** (England - League Two) — ⭐⭐⭐ Under 4.5 goals · 89% · bet at 1.15+  
    📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.15 or higher.
+
+🎟️ All 5 on one ticket: all 5 win about **59%** of the time (lose about 41%). Take it only if the ticket's total odds are at least **1.98**. A 2-pick ticket (#1 + #2) wins about 82%.
 
 ## 📈 Live track record of best picks
 
