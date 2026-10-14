@@ -547,3 +547,9 @@ def test_top_five_picks_per_day_are_ranked_highest_first():
         assert t["Best pick %"].is_monotonic_decreasing
     html_ = app.match_cards_html(days[0][1])
     assert "#1</b>" in html_
+
+
+def test_ticket_line_multiplies_chances():
+    top = pd.DataFrame({"Best pick %": [90.0, 90.0, 90.0, 90.0, 90.0]})
+    txt = app.ticket_line(top)
+    assert "about **59%**" in txt and "All 5" in txt

@@ -1668,6 +1668,20 @@ def top_picks_by_day(adv: pd.DataFrame, tz: str, n: int = 5) -> list:
     return out
 
 
+def ticket_line(top: pd.DataFrame) -> str:
+    """What happens if all of a day's top picks go on one ticket."""
+    if top is None or top.empty:
+        return ""
+    p = top["Best pick %"].to_numpy() / 100
+    floors = (1 / p) * (1 + DEFAULTS["min_edge"] / 100)
+    n = len(p)
+    two = (f" A 2-pick ticket (#1 + #2) wins about {100*p[:2].prod():.0f}%."
+           if n > 2 else "")
+    return (f"🎟️ All {n} on one ticket: all {n} win about **{100*p.prod():.0f}%** of the time "
+            f"(lose about {100*(1-p.prod()):.0f}%). Take it only if the ticket's total odds "
+            f"are at least **{floors.prod():.2f}**.{two}")
+
+
 def safest_picks(adv: pd.DataFrame, tz: str, n: int = 6) -> tuple:
     """Today's (or the next match day's) most likely picks, safest first."""
     if adv is None or adv.empty or "Best pick %" not in adv.columns:
@@ -1706,7 +1720,7 @@ def write_predictions_md(adv: pd.DataFrame, flags: pd.DataFrame, path: Path,
                     lines += [f"{int(r['Rank'])}. {r['Time']} · **{r['Match']}** "
                               f"({r['Competition']}) — {r['Best pick']}  ",
                               f"   📝 {r['How to bet']}"]
-                lines.append("")
+                lines += ["", ticket_line(top), ""]
         lines += ["## 📈 Live track record of best picks", ""] + record_lines + [""]
         lines += [SAFE_RULES, ""]
         # 1) the week's bets at a glance
@@ -2218,6 +2232,7 @@ def render_safest_picks(adv: pd.DataFrame, tz: str, all_results: dict, uefa, nat
         with st.expander(f"📅 {pd.Timestamp(day):%A %d %B} — top {len(top)} "
                          f"(best: {best:.0f}%)", expanded=(k == 0)):
             st.markdown(match_cards_html(top), unsafe_allow_html=True)
+            st.warning(ticket_line(top))
     sm = pick_summary(settle_pick_log(read_pick_log(),
                                       result_frames(all_results, uefa, nations_fx)))
     with st.expander("📈 Live track record of best picks (real picks, saved before kick-off)",
