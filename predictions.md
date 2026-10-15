@@ -1,5 +1,5 @@
 # Football predictions — day by day
-_Updated Thu 15 Oct 2026 18:37 (Africa/Douala time). Bankroll for stakes: 100.00_
+_Updated Thu 15 Oct 2026 18:38 (Africa/Douala time). Bankroll for stakes: 100.00_
 
 ## 🏆 Top 5 picks for each day (highest to lowest win chance)
 
@@ -261,7 +261,7 @@ No bets this week - the prices are fair. That is normal.
 | 20:00 | UEFA Europa League | GNK Dinamo v Anderlecht | Bookmakers: GNK Dinamo 2.00 · draw 3.67 · Anderlecht 3.62. Model: back GNK Dinamo only at 2.17+ | - | ⭐ GNK Dinamo to score · 81% · bet at 1.27+ | 2-1 | 47 / 20 / 32 | 98 / 85 / 67 / 46 / 27 / 14 / 6 | 2 / 15 / 33 / 54 / 73 / 86 / 94 |
 | 20:00 | UEFA Europa League | Ferencváros v Viktoria Plzen | Bookmakers: Ferencváros 1.91 · draw 3.83 · Viktoria Plzen 3.75. Model: back Ferencváros only at 2.22+ | - | ⭐ Under 4.5 goals · 83% · bet at 1.25+ | 1-0 | 46 / 24 / 30 | 94 / 72 / 48 / 26 / 12 / 5 / 2 | 6 / 28 / 52 / 74 / 88 / 95 / 98 |
 | 20:00 | UEFA Europa League | Marseille v Olympiacos | Bookmakers: Marseille 2.38 · draw 3.47 · Olympiacos 2.89. Model: back Marseille only at 2.19+ | - | ⭐ Under 4.5 goals · 85% · bet at 1.21+ | 1-0 | 47 / 24 / 29 | 92 / 68 / 44 / 23 / 10 / 4 / 1 | 8 / 32 / 56 / 77 / 90 / 96 / 99 |
-| 20:00 | UEFA Europa League | Benfica v Celtic | Bookmakers: Benfica 1.19 · draw 7.65 · Celtic 12.55. Model: back Benfica only at 1.42+ | - | ⭐⭐⭐ Benfica to score · 90% · bet at 1.15+ | 2-0 | 73 / 16 / 12 | 96 / 81 / 61 / 38 / 21 / 10 / 4 | 4 / 19 / 39 / 62 / 79 / 90 / 96 |
+| 20:00 | UEFA Europa League | Benfica v Celtic | Bookmakers: Benfica 1.19 · draw 7.68 · Celtic 12.55. Model: back Benfica only at 1.42+ | - | ⭐⭐⭐ Benfica to score · 90% · bet at 1.15+ | 2-0 | 73 / 16 / 12 | 96 / 81 / 61 / 38 / 21 / 10 / 4 | 4 / 19 / 39 / 62 / 79 / 90 / 96 |
 | 20:00 | UEFA Europa League | N.E.C. v Levski Sofia | No odds feed: back N.E.C. only at 1.91+ | - | ⭐ Under 4.5 goals · 81% · bet at 1.27+ | 1-0 | 54 / 22 / 24 | 94 / 74 / 51 / 29 / 14 / 6 / 2 | 6 / 26 / 49 / 71 / 86 / 94 / 98 |
 
 ### Friday 16 October (12 matches)
