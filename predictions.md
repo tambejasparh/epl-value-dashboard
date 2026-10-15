@@ -1,5 +1,5 @@
 # Football predictions — day by day
-_Updated Wed 14 Oct 2026 21:33 (Africa/Douala time). Bankroll for stakes: 100.00_
+_Updated Thu 15 Oct 2026 10:44 (Africa/Douala time). Bankroll for stakes: 100.00_
 
 ## 🏆 Top 5 picks for each day (highest to lowest win chance)
 
@@ -28,10 +28,10 @@ _Updated Wed 14 Oct 2026 21:33 (Africa/Douala time). Bankroll for stakes: 100.00
    📝 Open the 'Corum total goals' (team goals) market and choose 'Over 0.5' (some bookmakers call it 'Corum to score: Yes'). You WIN if Corum scores at least 1 goal - the final result does not matter. You LOSE only if Corum scores 0. Only place it if your bookmaker's odds for this choice are 1.17 or higher.
 4. 19:30 · **Ein Frankfurt v FC Koln** (Germany - Bundesliga) — ⭐⭐⭐ Over 1.5 goals · 88% · bet at 1.17+  
    📝 Open the 'Total goals' (Over/Under) market and choose 'Over 1.5'. You WIN if the match has 2 or more goals in total (both teams added together). You LOSE if it has 0 or 1 goal. Only place it if your bookmaker's odds for this choice are 1.17 or higher.
-5. 20:00 · **Burnley v Wolves** (England - Championship) — ⭐⭐ Under 4.5 goals · 87% · bet at 1.19+  
-   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.19 or higher.
+5. 20:00 · **Burnley v Wolves** (England - Championship) — ⭐⭐ Under 4.5 goals · 87% · bet at 1.18+  
+   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.18 or higher.
 
-🎟️ All 5 on one ticket: all 5 win about **57%** of the time (lose about 43%). Take it only if the ticket's total odds are at least **2.05**. A 2-pick ticket (#1 + #2) wins about 84%.
+🎟️ All 5 on one ticket: all 5 win about **57%** of the time (lose about 43%). Take it only if the ticket's total odds are at least **2.03**. A 2-pick ticket (#1 + #2) wins about 84%.
 
 ### Saturday 17 October
 
@@ -110,7 +110,8 @@ _Updated Wed 14 Oct 2026 21:33 (Africa/Douala time). Bankroll for stakes: 100.00
 
 ## 📈 Live track record of best picks
 
-Track record starts now: every best pick is saved before kick-off and marked won/lost after the match. Check back after the next matchday.
+**1 of 4 best picks won (25%)** · 207 waiting for results
+Good 0/2 (0%) · Fair 1/2 (50%)
 
 **🛡️ Rules for low-odds betting (read every time)**
 1. **Bet singles** (one match per bet). If you combine, use at most 2-3 picks: 4 picks at 85% all win only ~52% of the time.
@@ -163,8 +164,8 @@ No bets this week - the prices are fair. That is normal.
   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.13 or higher.
 - 15:00 · **Accrington v Gillingham** (England - League Two) — 🔒 Under 4.5 goals · 91% · bet at 1.13+  
   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.13 or higher.
-- 12:30 · **Watford v Charlton** (England - Championship) — 🔒 Under 4.5 goals · 91% · bet at 1.14+  
-  📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.14 or higher.
+- 12:30 · **Watford v Charlton** (England - Championship) — 🔒 Under 4.5 goals · 91% · bet at 1.13+  
+  📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.13 or higher.
 - 15:30 · **Den Haag v PSV Eindhoven** (Netherlands - Eredivisie) — 🔒 PSV Eindhoven or draw · 91% · bet at 1.14+  
   📝 Open the 'Double chance' market and choose 'X2' (PSV Eindhoven or draw). You WIN if PSV Eindhoven wins OR it is a draw. You LOSE only if Den Haag wins. Only place it if your bookmaker's odds for this choice are 1.14 or higher.
 
@@ -237,7 +238,7 @@ No bets this week - the prices are fair. That is normal.
 | 17:45 | UEFA Conference League | Egnatia v Midtjylland | No odds feed: back Midtjylland only at 2.10+ | - | ⭐ Under 4.5 goals · 80% · bet at 1.29+ | 0-1 | 29 / 22 / 49 | 95 / 76 / 53 / 31 / 15 / 7 / 2 | 5 / 24 / 47 / 69 / 85 / 93 / 98 |
 | 17:45 | UEFA Conference League | Hajduk Split v Ajax | No odds feed: back Hajduk Split only at 2.10+ | - | ⭐ Under 4.5 goals · 79% · bet at 1.31+ | 1-0 | 49 / 22 / 29 | 95 / 77 / 55 / 33 / 16 / 7 / 3 | 5 / 23 / 45 / 67 / 84 / 93 / 97 |
 | 17:45 | UEFA Europa League | Celje v Omonia | No odds feed: back Celje only at 2.10+ | - | ⭐ Under 4.5 goals · 83% · bet at 1.24+ | 1-0 | 49 / 23 / 27 | 93 / 71 / 47 / 26 / 12 / 5 / 2 | 7 / 29 / 53 / 74 / 88 / 95 / 98 |
-| 17:45 | UEFA Europa League | Torreense v Sunderland | No odds feed: back Sunderland only at 2.34+ | - | ⭐⭐ Under 4.5 goals · 87% · bet at 1.18+ | 0-1 | 30 / 27 / 44 | 90 / 62 / 37 / 17 / 7 / 2 / 1 | 10 / 38 / 63 / 83 / 93 / 98 / 99 |
+| 17:45 | UEFA Europa League | Torreense v Sunderland | No odds feed: back Sunderland only at 2.35+ | - | ⭐⭐ Under 4.5 goals · 87% · bet at 1.18+ | 0-1 | 30 / 27 / 44 | 90 / 62 / 37 / 17 / 7 / 2 / 1 | 10 / 38 / 63 / 83 / 93 / 98 / 99 |
 | 17:45 | UEFA Europa League | Lech Poznan v Leverkusen | No odds feed: back Leverkusen only at 2.08+ | - | ⭐ Under 4.5 goals · 80% · bet at 1.28+ | 0-1 | 28 / 22 / 49 | 95 / 75 / 52 / 30 / 15 / 6 / 2 | 5 / 25 / 48 / 70 / 85 / 94 / 98 |
 | 17:45 | UEFA Europa League | AZ Alkmaar v H. Beer-Sheva | No odds feed: back AZ Alkmaar only at 1.42+ | - | ⭐⭐ Under 4.5 goals · 85% · bet at 1.21+ | 1-0 | 72 / 18 / 9 | 91 / 68 / 42 / 21 / 9 / 3 / 1 | 9 / 32 / 58 / 79 / 91 / 97 / 99 |
 | 17:45 | UEFA Europa League | Salzburg v Milan | No odds feed: back Milan only at 1.82+ | - | ⭐ Under 4.5 goals · 83% · bet at 1.24+ | 0-1 | 21 / 22 / 57 | 93 / 71 / 47 / 26 / 12 / 5 / 2 | 7 / 29 / 53 / 74 / 88 / 95 / 98 |
@@ -278,7 +279,7 @@ No bets this week - the prices are fair. That is normal.
 | 19:30 | Germany - Bundesliga | Ein Frankfurt v FC Koln | NO BET (model not profitable in this league) | - | ⭐⭐⭐ Over 1.5 goals · 88% · bet at 1.17+ | 2-1 | 50 / 22 / 27 | 97 / 88 / 70 / 49 / 30 / 16 / 7 | 3 / 12 / 30 / 51 / 70 / 84 / 93 |
 | 19:45 | France - Ligue 1 | Le Mans v Toulouse | NO BET (model not profitable in this league) | - | ⭐ Over 1.5 goals · 84% · bet at 1.23+ | 2-1 | 40 / 24 / 37 | 96 / 84 / 63 / 41 / 23 / 11 / 5 | 4 / 16 / 37 / 59 / 77 / 89 / 95 |
 | 19:45 | Italy - Serie A | Frosinone v Sassuolo | NO BET (model not profitable in this league) | - | ⭐ Over 1.5 goals · 82% · bet at 1.26+ | 2-1 | 43 / 24 / 33 | 95 / 82 / 60 / 38 / 20 / 9 / 4 | 5 / 18 / 40 / 62 / 80 / 91 / 96 |
-| 20:00 | England - Championship | Burnley v Wolves | Odds not out yet: back Burnley only at 2.33+ (re-check when odds appear) | - | ⭐⭐ Under 4.5 goals · 87% · bet at 1.19+ | 1-0 | 44 / 27 / 29 | 93 / 75 / 50 / 28 / 13 / 6 / 2 | 7 / 25 / 50 / 72 / 87 / 94 / 98 |
+| 20:00 | England - Championship | Burnley v Wolves | Odds not out yet: back Burnley only at 2.52+ (re-check when odds appear) | - | ⭐⭐ Under 4.5 goals · 87% · bet at 1.18+ | 1-0 | 41 / 27 / 32 | 92 / 74 / 49 / 27 / 13 / 5 / 2 | 8 / 26 / 51 / 73 / 87 / 95 / 98 |
 | 20:00 | Spain - La Liga | La Coruna v Levante | NO BET (model not profitable in this league) | - | ⭐ La Coruna to score · 83% · bet at 1.24+ | 2-1 | 51 / 24 / 26 | 95 / 80 / 57 / 35 / 18 / 8 / 3 | 5 / 20 / 43 / 65 / 82 / 92 / 97 |
 
 ### Saturday 17 October (70 matches)
@@ -286,9 +287,9 @@ No bets this week - the prices are fair. That is normal.
 | Time | Competition | Match | Advice | Stake | 🎯 Best pick | Predicted | H / D / A % | Over 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 / 6.5 % | Under 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 / 6.5 % |
 |---|---|---|---|---|---|---|---|---|---|
 | 11:30 | Turkey - Super Lig | Erzurumspor v Eyupspor | NO BET (model not profitable in this league) | - | ⭐ Under 3.5 goals · 83% · bet at 1.23+ | 1-0 | 40 / 32 / 28 | 87 / 64 / 36 / 17 / 6 / 2 / 1 | 13 / 36 / 64 / 83 / 94 / 98 / 99 |
-| 12:30 | England - Championship | Watford v Charlton | Odds not out yet: back Watford only at 2.46+ (re-check when odds appear) | - | 🔒 Under 4.5 goals · 91% · bet at 1.14+ | 1-0 | 42 / 29 / 29 | 90 / 69 / 42 / 22 / 9 / 3 / 1 | 10 / 31 / 58 / 78 / 91 / 97 / 99 |
-| 12:30 | England - Championship | Millwall v Lincoln | Odds not out yet: back Millwall only at 2.30+ (re-check when odds appear) | - | ⭐ Under 3.5 goals · 82% · bet at 1.26+ | 1-0 | 45 / 30 / 26 | 88 / 66 / 38 / 18 / 7 / 3 / 1 | 12 / 34 / 62 / 82 / 93 / 97 / 99 |
-| 12:30 | England - Championship | Middlesbrough v Cardiff | Odds not out yet: back Middlesbrough only at 1.75+ (re-check when odds appear) | - | ⭐⭐ Middlesbrough to score · 88% · bet at 1.17+ | 2-1 | 59 / 22 / 19 | 96 / 84 / 63 / 41 / 23 / 11 / 5 | 4 / 16 / 37 / 59 / 77 / 89 / 95 |
+| 12:30 | England - Championship | Watford v Charlton | Odds not out yet: back Watford only at 2.47+ (re-check when odds appear) | - | 🔒 Under 4.5 goals · 91% · bet at 1.13+ | 1-0 | 42 / 29 / 30 | 90 / 69 / 42 / 21 / 9 / 3 / 1 | 10 / 31 / 58 / 79 / 91 / 97 / 99 |
+| 12:30 | England - Championship | Millwall v Lincoln | Odds not out yet: back Millwall only at 1.94+ (re-check when odds appear) | - | 🔒 Under 4.5 goals · 90% · bet at 1.14+ | 1-0 | 53 / 27 / 20 | 90 / 70 / 43 / 22 / 10 / 4 / 1 | 10 / 30 / 57 / 78 / 90 / 96 / 99 |
+| 12:30 | England - Championship | Middlesbrough v Cardiff | Odds not out yet: back Middlesbrough only at 1.72+ (re-check when odds appear) | - | ⭐⭐ Middlesbrough to score · 88% · bet at 1.17+ | 2-1 | 60 / 21 / 19 | 96 / 83 / 62 / 40 / 22 / 11 / 5 | 4 / 17 / 38 / 60 / 78 / 89 / 95 |
 | 12:30 | England - League One | Peterboro v Burton | NO BET (model not profitable in this league) | - | ⭐ Under 4.5 goals · 84% · bet at 1.22+ | 1-0 | 45 / 25 / 31 | 94 / 77 / 54 / 31 / 16 / 7 / 3 | 6 / 23 / 46 / 69 / 84 / 93 / 97 |
 | 12:30 | England - League One | Milton Keynes Dons v Luton | NO BET (model not profitable in this league) | - | ⭐ Luton to score · 83% · bet at 1.23+ | 1-2 | 27 / 23 / 49 | 95 / 81 / 59 / 37 / 20 / 9 / 4 | 5 / 19 / 41 / 63 / 80 / 91 / 96 |
 | 12:30 | England - League Two | Shrewsbury v Bristol Rvs | NO BET (model not profitable in this league) | - | ⭐⭐⭐ Under 4.5 goals · 90% · bet at 1.15+ | 0-1 | 34 / 28 / 38 | 91 / 70 / 44 / 23 / 10 / 4 / 1 | 9 / 30 / 56 / 77 / 90 / 96 / 99 |
@@ -305,14 +306,14 @@ No bets this week - the prices are fair. That is normal.
 | 14:30 | Germany - Bundesliga | Schalke 04 v Mainz | NO BET (model not profitable in this league) | - | ⭐⭐ Under 4.5 goals · 87% · bet at 1.18+ | 1-0 | 38 / 28 / 35 | 92 / 75 / 49 / 27 / 13 / 5 / 2 | 8 / 25 / 51 / 73 / 87 / 95 / 98 |
 | 14:30 | Germany - Bundesliga | Elversberg v Augsburg | NO BET (model not profitable in this league) | - | ⭐ Elversberg to score · 83% · bet at 1.25+ | 2-1 | 48 / 25 / 27 | 94 / 81 / 58 / 36 / 19 / 9 / 3 | 6 / 19 / 42 / 64 / 81 / 91 / 97 |
 | 14:30 | Germany - Bundesliga | Werder Bremen v Paderborn | NO BET (model not profitable in this league) | - | ⭐⭐⭐ Under 4.5 goals · 90% · bet at 1.15+ | 1-0 | 46 / 28 / 25 | 91 / 71 / 44 / 23 / 10 / 4 / 1 | 9 / 29 / 56 / 77 / 90 / 96 / 99 |
-| 15:00 | England - Championship | Swansea v West Ham | Odds not out yet: back West Ham only at 2.26+ (re-check when odds appear) | - | ⭐ Over 1.5 goals · 83% · bet at 1.24+ | 1-2 | 30 / 24 / 46 | 95 / 83 / 62 / 40 / 22 / 11 / 4 | 5 / 17 / 38 / 60 / 78 / 89 / 96 |
-| 15:00 | England - Championship | Birmingham v QPR | Odds not out yet: back Birmingham only at 2.03+ (re-check when odds appear) | - | ⭐⭐ Under 4.5 goals · 87% · bet at 1.19+ | 1-0 | 51 / 26 / 23 | 92 / 75 / 50 / 28 / 13 / 5 / 2 | 8 / 25 / 50 / 72 / 87 / 95 / 98 |
-| 15:00 | England - Championship | Bristol City v Sheffield United | Odds not out yet: back Bristol City only at 2.59+ (re-check when odds appear) | - | ⭐⭐ Under 4.5 goals · 87% · bet at 1.18+ | 1-0 | 40 / 27 / 33 | 92 / 74 / 49 / 27 / 13 / 5 / 2 | 8 / 26 / 51 / 73 / 87 / 95 / 98 |
-| 15:00 | England - Championship | Derby v Stoke | Odds not out yet: back Derby only at 2.38+ (re-check when odds appear) | - | 🔒 Under 4.5 goals · 90% · bet at 1.14+ | 1-0 | 43 / 28 / 28 | 91 / 70 / 44 / 23 / 10 / 4 / 1 | 9 / 30 / 56 / 77 / 90 / 96 / 99 |
-| 15:00 | England - Championship | Norwich v Portsmouth | Odds not out yet: back Norwich only at 2.00+ (re-check when odds appear) | - | ⭐ Under 4.5 goals · 84% · bet at 1.22+ | 2-1 | 51 / 25 / 24 | 94 / 78 / 54 / 31 / 16 / 7 / 3 | 6 / 22 / 46 / 69 / 84 / 93 / 97 |
-| 15:00 | England - Championship | Southampton v Bolton | Odds not out yet: back Southampton only at 1.74+ (re-check when odds appear) | - | ⭐⭐⭐ Southampton to score · 89% · bet at 1.15+ | 2-1 | 59 / 21 / 20 | 96 / 87 / 67 / 46 / 27 / 14 / 6 | 4 / 13 / 33 / 54 / 73 / 86 / 94 |
-| 15:00 | England - Championship | Wrexham v Preston | Odds not out yet: back Wrexham only at 2.12+ (re-check when odds appear) | - | ⭐⭐ Under 4.5 goals · 87% · bet at 1.18+ | 1-0 | 49 / 26 / 25 | 92 / 75 / 49 / 27 / 13 / 5 / 2 | 8 / 25 / 51 / 73 / 87 / 95 / 98 |
-| 15:00 | England - Championship | West Brom v Blackburn | Odds not out yet: back West Brom only at 2.34+ (re-check when odds appear) | - | ⭐ Under 3.5 goals · 85% · bet at 1.22+ | 1-0 | 44 / 31 / 25 | 87 / 62 / 34 / 15 / 6 / 2 / 1 | 13 / 38 / 66 / 85 / 94 / 98 / 99 |
+| 15:00 | England - Championship | Swansea v West Ham | Odds not out yet: back West Ham only at 1.96+ (re-check when odds appear) | - | ⭐⭐ West Ham to score · 87% · bet at 1.19+ | 1-2 | 25 / 22 / 53 | 96 / 85 / 65 / 43 / 25 / 12 / 5 | 4 / 15 / 35 / 57 / 75 / 88 / 95 |
+| 15:00 | England - Championship | Birmingham v QPR | Odds not out yet: back Birmingham only at 2.08+ (re-check when odds appear) | - | ⭐⭐ Under 4.5 goals · 87% · bet at 1.19+ | 1-0 | 49 / 26 / 25 | 93 / 75 / 50 / 28 / 13 / 5 / 2 | 7 / 25 / 50 / 72 / 87 / 95 / 98 |
+| 15:00 | England - Championship | Bristol City v Sheffield United | Odds not out yet: back Bristol City only at 2.52+ (re-check when odds appear) | - | ⭐⭐ Under 4.5 goals · 87% · bet at 1.19+ | 1-0 | 41 / 27 / 32 | 93 / 75 / 50 / 28 / 13 / 5 / 2 | 7 / 25 / 50 / 72 / 87 / 95 / 98 |
+| 15:00 | England - Championship | Derby v Stoke | Odds not out yet: back Derby only at 2.40+ (re-check when odds appear) | - | 🔒 Under 4.5 goals · 90% · bet at 1.14+ | 1-0 | 43 / 28 / 29 | 91 / 70 / 44 / 23 / 10 / 4 / 1 | 9 / 30 / 56 / 77 / 90 / 96 / 99 |
+| 15:00 | England - Championship | Norwich v Portsmouth | Odds not out yet: back Norwich only at 2.02+ (re-check when odds appear) | - | ⭐ Under 4.5 goals · 84% · bet at 1.23+ | 2-1 | 51 / 25 / 24 | 94 / 78 / 54 / 32 / 16 / 7 / 3 | 6 / 22 / 46 / 68 / 84 / 93 / 97 |
+| 15:00 | England - Championship | Southampton v Bolton | Odds not out yet: back Southampton only at 1.67+ (re-check when odds appear) | - | ⭐⭐⭐ Southampton to score · 90% · bet at 1.15+ | 2-1 | 62 / 20 / 18 | 96 / 86 / 67 / 45 / 26 / 13 / 6 | 4 / 14 / 33 / 55 / 74 / 87 / 94 |
+| 15:00 | England - Championship | Wrexham v Preston | Odds not out yet: back Wrexham only at 2.13+ (re-check when odds appear) | - | ⭐⭐ Under 4.5 goals · 88% · bet at 1.18+ | 1-0 | 48 / 26 / 25 | 92 / 74 / 48 / 27 / 12 / 5 / 2 | 8 / 26 / 52 / 73 / 88 / 95 / 98 |
+| 15:00 | England - Championship | West Brom v Blackburn | Odds not out yet: back West Brom only at 2.31+ (re-check when odds appear) | - | ⭐ Under 3.5 goals · 85% · bet at 1.22+ | 1-0 | 45 / 31 / 25 | 87 / 62 / 34 / 15 / 6 / 2 / 1 | 13 / 38 / 66 / 85 / 94 / 98 / 99 |
 | 15:00 | England - League One | Stockport v Bromley | NO BET (model not profitable in this league) | - | 🔒 Stockport or draw · 90% · bet at 1.14+ | 2-0 | 76 / 15 / 10 | 97 / 86 / 68 / 46 / 27 / 14 / 6 | 3 / 14 / 32 / 54 / 73 / 86 / 94 |
 | 15:00 | England - League One | Leicester v Doncaster | NO BET (model not profitable in this league) | - | ⭐⭐ Under 4.5 goals · 87% · bet at 1.18+ | 1-0 | 41 / 26 / 32 | 93 / 74 / 49 / 28 / 13 / 5 / 2 | 7 / 26 / 51 / 72 / 87 / 95 / 98 |
 | 15:00 | England - League One | Bradford v Stevenage | NO BET (model not profitable in this league) | - | ⭐⭐⭐ Under 3.5 goals · 89% · bet at 1.16+ | 1-0 | 41 / 32 / 27 | 84 / 55 / 28 / 11 / 4 / 1 / 0 | 16 / 45 / 72 / 89 / 96 / 99 / 100 |
@@ -407,7 +408,7 @@ No bets this week - the prices are fair. That is normal.
 |---|---|---|---|---|---|---|---|---|---|
 | 17:45 | UEFA Champions League | Fenerbahçe v Slavia Praha | No odds feed: back Fenerbahçe only at 1.49+ | - | ⭐ Fenerbahçe or draw · 82% · bet at 1.26+ | 1-0 | 69 / 18 / 13 | 94 / 75 / 51 / 29 / 14 / 6 / 2 | 6 / 25 / 49 / 71 / 86 / 94 / 98 |
 | 17:45 | UEFA Champions League | Sabah v B. Dortmund | No odds feed: back B. Dortmund only at 1.51+ | - | ⭐⭐ B. Dortmund to score · 86% · bet at 1.19+ | 1-2 | 16 / 16 / 68 | 98 / 88 / 72 / 52 / 32 / 18 / 9 | 2 / 12 / 28 / 48 / 68 / 82 / 91 |
-| 19:45 | England - Championship | Wolves v Portsmouth | Odds not out yet: back Wolves only at 1.79+ (re-check when odds appear) | - | ⭐⭐ Wolves to score · 85% · bet at 1.21+ | 2-1 | 58 / 23 / 19 | 94 / 80 / 56 / 34 / 18 / 8 / 3 | 6 / 20 / 44 / 66 / 82 / 92 / 97 |
+| 19:45 | England - Championship | Wolves v Portsmouth | Odds not out yet: back Wolves only at 1.70+ (re-check when odds appear) | - | ⭐⭐ Wolves to score · 87% · bet at 1.19+ | 2-0 | 60 / 22 / 18 | 95 / 81 / 58 / 35 / 19 / 8 / 3 | 5 / 19 / 42 / 65 / 81 / 92 / 97 |
 | 19:45 | England - League One | Doncaster v Stockport | NO BET (model not profitable in this league) | - | ⭐⭐ Under 4.5 goals · 87% · bet at 1.18+ | 0-1 | 29 / 26 / 45 | 93 / 74 / 49 / 28 / 13 / 5 / 2 | 7 / 26 / 51 / 72 / 87 / 95 / 98 |
 | 19:45 | England - League One | Huddersfield v Peterboro | NO BET (model not profitable in this league) | - | ⭐⭐ Huddersfield to score · 86% · bet at 1.19+ | 2-1 | 56 / 22 / 22 | 96 / 83 / 62 / 39 / 22 / 10 / 4 | 4 / 17 / 38 / 61 / 78 / 90 / 96 |
 | 19:45 | England - League One | Luton v Barnsley | NO BET (model not profitable in this league) | - | ⭐⭐ Luton to score · 86% · bet at 1.20+ | 2-1 | 54 / 22 / 24 | 96 / 83 / 62 / 39 / 22 / 10 / 4 | 4 / 17 / 38 / 61 / 78 / 90 / 96 |
