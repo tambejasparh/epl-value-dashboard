@@ -1,5 +1,5 @@
 # Football predictions — day by day
-_Updated Thu 15 Oct 2026 20:17 (Africa/Douala time). Bankroll for stakes: 100.00_
+_Updated Thu 15 Oct 2026 20:26 (Africa/Douala time). Bankroll for stakes: 100.00_
 
 ## ✅ Your bets for each day (already checked - just place them)
 
@@ -285,6 +285,68 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 - ⚠️ 20:00 · **Olympiacos v Sparta Praha** (UEFA Europa League) — BET: Over/Under (total goals) → Under 4.5 · 85%
 - ⚠️ 20:00 · **Omonia v Benfica** (UEFA Europa League) — BET: Over/Under (total goals) → Under 4.5 · 88%
 - ⚠️ 20:00 · **Viktoria Plzen v Levski Sofia** (UEFA Europa League) — BET: Over/Under (total goals) → Under 4.5 · 88%
+
+## 🧾 Results of the last days (bets given before kick-off)
+
+### Thursday 15 October
+
+⏳ No finished results for this day yet.
+
+- ⚠️ 17:45 · **U. Craiova v Getafe** — Over/Under (total goals) → Under 4.5 (89%) → ⏳ playing / waiting for result
+- ⚠️ 17:45 · **KuPS Kuopio v Trabzonspor** — Over/Under (total goals) → Under 4.5 (89%) → ⏳ playing / waiting for result
+- ⚠️ 17:45 · **Lugano v Crvena Zvezda** — Lugano total goals → Over 0.5 (78%) → ⏳ playing / waiting for result
+- ⚠️ 17:45 · **Panathinaikos v Borac** — Over/Under (total goals) → Under 4.5 (86%) → ⏳ playing / waiting for result
+- ⚠️ 17:45 · **Gent v Aarhus** — Over/Under (total goals) → Under 4.5 (81%) → ⏳ playing / waiting for result
+- ⚠️ 17:45 · **CSKA Sofia v Monaco** — Over/Under (total goals) → Under 4.5 (83%) → ⏳ playing / waiting for result
+- ⚠️ 17:45 · **Mjällby v Inter Escaldes** — Over/Under (total goals) → Under 4.5 (84%) → ⏳ playing / waiting for result
+- ⚠️ 17:45 · **Riga v Kairat Almaty** — Over/Under (total goals) → Under 4.5 (86%) → ⏳ playing / waiting for result
+- ⚠️ 17:45 · **Egnatia v Midtjylland** — Over/Under (total goals) → Under 4.5 (80%) → ⏳ playing / waiting for result
+- ⚠️ 17:45 · **Hajduk Split v Ajax** — Over/Under (total goals) → Under 4.5 (79%) → ⏳ playing / waiting for result
+- ⚠️ 17:45 · **Celje v Omonia** — Over/Under (total goals) → Under 4.5 (83%) → ⏳ playing / waiting for result
+- ⚠️ 17:45 · **Torreense v Sunderland** — Over/Under (total goals) → Under 4.5 (87%) → ⏳ playing / waiting for result
+- ⚠️ 17:45 · **Lech Poznan v Leverkusen** — Over/Under (total goals) → Under 4.5 (81%) → ⏳ playing / waiting for result
+- ⚠️ 17:45 · **AZ Alkmaar v H. Beer-Sheva** — Over/Under (total goals) → Under 4.5 (85%) → ⏳ playing / waiting for result
+- ⚠️ 17:45 · **Salzburg v Milan** — Over/Under (total goals) → Under 4.5 (82%) → ⏳ playing / waiting for result
+- ⚠️ 17:45 · **Lyon v Crystal Palace** — Over/Under (total goals) → Under 4.5 (81%) → ⏳ playing / waiting for result
+- ⚠️ 17:45 · **Union SG v Real Sociedad** — Over/Under (total goals) → Under 4.5 (81%) → ⏳ playing / waiting for result
+- ⚠️ 17:45 · **Sparta Praha v Lillestrøm** — Over/Under (total goals) → Under 4.5 (77%) → ⏳ playing / waiting for result
+- ⚠️ 20:00 · **Mansfield v Oxford** — Over/Under (total goals) → Under 4.5 (84%) → ⏳ playing / waiting for result
+- ⚠️ 20:00 · **Freiburg v Jablonec** — Double Chance → 1X (Freiburg or draw) (87%) → ⏳ playing / waiting for result
+- ⚠️ 20:00 · **Copenhagen v Braga** — Over/Under (total goals) → Under 4.5 (84%) → ⏳ playing / waiting for result
+- ⚠️ 20:00 · **Brighton v Kauno Žalgiris** — Double Chance → 12 (no draw) (92%) → ⏳ playing / waiting for result
+- ⚠️ 20:00 · **Twente v Thun** — Twente total goals → Over 0.5 (88%) → ⏳ playing / waiting for result
+- ⚠️ 20:00 · **Sint-Truidense v Iberia Tbilisi** — Sint-Truidense total goals → Over 0.5 (86%) → ⏳ playing / waiting for result
+- ⚠️ 20:00 · **Brann v L. Red Imps** — Brann total goals → Over 0.5 (92%) → ⏳ playing / waiting for result
+- ⚠️ 20:00 · **Hearts v Nordsjælland** — Over/Under (total goals) → Under 4.5 (80%) → ⏳ playing / waiting for result
+- ⚠️ 20:00 · **Atalanta v Pafos** — Atalanta total goals → Over 0.5 (85%) → ⏳ playing / waiting for result
+- ⚠️ 20:00 · **Hoffenheim v Besiktas** — Hoffenheim total goals → Over 0.5 (80%) → ⏳ playing / waiting for result
+- ⚠️ 20:00 · **Celta v Juventus** — Over/Under (total goals) → Under 4.5 (89%) → ⏳ playing / waiting for result
+- ⚠️ 20:00 · **Jagiellonia v Ararat-Armenia** — Jagiellonia total goals → Over 0.5 (89%) → ⏳ playing / waiting for result
+- ⚠️ 20:00 · **Bournemouth v Sturm Graz** — Bournemouth total goals → Over 0.5 (91%) → ⏳ playing / waiting for result
+- ⚠️ 20:00 · **Rennes v OFI Crete** — Rennes total goals → Over 0.5 (89%) → ⏳ playing / waiting for result
+- ⚠️ 20:00 · **GNK Dinamo v Anderlecht** — GNK Dinamo total goals → Over 0.5 (81%) → ⏳ playing / waiting for result
+- ⚠️ 20:00 · **Ferencváros v Viktoria Plzen** — Over/Under (total goals) → Under 4.5 (83%) → ⏳ playing / waiting for result
+- ⚠️ 20:00 · **Marseille v Olympiacos** — Over/Under (total goals) → Under 4.5 (86%) → ⏳ playing / waiting for result
+- ⚠️ 20:00 · **Benfica v Celtic** — Benfica total goals → Over 0.5 (90%) → ⏳ playing / waiting for result
+- ⚠️ 20:00 · **N.E.C. v Levski Sofia** — Over/Under (total goals) → Under 4.5 (84%) → ⏳ playing / waiting for result
+
+### Wednesday 14 October
+
+Results: **8 of 13 bets won** (62%)
+
+- ⚠️ 17:45 · **Feyenoord v Como** — Como total goals → Over 0.5 (83%) → ✅ WON 3-2
+- ⚠️ 17:45 · **LASK v Liverpool** — Double Chance → X2 (Liverpool or draw) (89%) → ✅ WON 3-6
+- ⚠️ 19:45 · **Portsmouth v Sheffield United** — Over/Under (total goals) → Under 4.5 (88%) → ❌ LOST 3-2
+- ⚠️ 19:45 · **QPR v Derby** — Over/Under (total goals) → Under 4.5 (87%) → ❌ LOST 4-1
+- ⚠️ 19:45 · **Norwich v Southampton** — Over/Under (total goals) → Over 1.5 (84%) → ❌ LOST 0-1
+- ⚠️ 20:00 · **Lincoln v West Ham** — West Ham total goals → Over 0.5 (83%) → ✅ WON 0-6
+- ⚠️ 20:00 · **S. Bratislava v Stuttgart** — Stuttgart total goals → Over 0.5 (83%) → ✅ WON 0-3
+- ⚠️ 20:00 · **Shakhtar v AEK Athens** — Over/Under (total goals) → Under 4.5 (82%) → ✅ WON 3-1
+- ⚠️ 20:00 · **Bodø/Glimt v B. Dortmund** — Over/Under (total goals) → Over 1.5 (84%) → ❌ LOST 1-0
+- ⚠️ 20:00 · **Man City v Paris** — Paris total goals → Over 0.5 (80%) → ✅ WON 2-4
+- ⚠️ 20:00 · **Aston Villa v Fenerbahçe** — Double Chance → 1X (Aston Villa or draw) (85%) → ✅ WON 6-0
+- ⚠️ 20:00 · **Roma v Real Madrid** — Real Madrid total goals → Over 0.5 (79%) → ✅ WON 3-4
+- ⚠️ 20:00 · **Real Betis v Porto** — Over/Under (total goals) → Under 4.5 (83%) → ❌ LOST 3-2
 
 ## 📈 Live track record of best picks
 
