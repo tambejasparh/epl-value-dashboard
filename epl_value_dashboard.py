@@ -2182,6 +2182,53 @@ def match_fixture_odds(fx, cup_odds: pd.DataFrame) -> dict:
     return o
 
 
+# -----------------------------------------------------------------------------
+# API-Football (free key stored as the GitHub secret APIFOOTBALL_KEY): line-ups
+# and injuries. First step: a cheap probe (3 requests of the 100/day) that
+# records whether the free plan covers the current season.
+# -----------------------------------------------------------------------------
+APIFOOTBALL = "https://v3.football.api-sports.io"
+APIFOOTBALL_STATUS = "apifootball_status"
+
+
+def _apifootball_get(path: str, key: str, **params):
+    if OFFLINE or not key:
+        return None
+    try:
+        r = requests.get(f"{APIFOOTBALL}{path}", params=params,
+                         headers={"x-apisports-key": key, **HTTP_HEADERS}, timeout=20)
+        return r.json() if r.status_code == 200 else {"errors": {"http": r.status_code}}
+    except Exception as exc:
+        return {"errors": {"request": type(exc).__name__}}
+
+
+def probe_apifootball(key: str) -> dict:
+    """Is the key valid, and does the free plan cover the current season?"""
+    out = {"time": pd.Timestamp.now(tz="UTC").strftime("%Y-%m-%d %H:%M UTC"),
+           "key_present": bool(key)}
+    if not key:
+        out["result"] = "no APIFOOTBALL_KEY secret"
+        return out
+    st_ = _apifootball_get("/status", key) or {}
+    resp = st_.get("response") or {}
+    out["plan"] = (resp.get("subscription") or {}).get("plan") if isinstance(resp, dict) else None
+    out["requests_today"] = (resp.get("requests") or {}) if isinstance(resp, dict) else None
+    out["status_errors"] = st_.get("errors") or None
+    season = _season_start_year(dt.date.today())
+    fx = _apifootball_get("/fixtures", key, league=39, season=season, next=3) or {}
+    out["fixtures_errors"] = fx.get("errors") or None
+    out["fixtures_found"] = len(fx.get("response") or [])
+    inj = _apifootball_get("/injuries", key, league=39, season=season) or {}
+    out["injuries_errors"] = inj.get("errors") or None
+    out["injuries_found"] = len(inj.get("response") or [])
+    out["season"] = season
+    ok = out["fixtures_found"] > 0 and not out["fixtures_errors"]
+    out["result"] = ("current season available" if ok else
+                     "current season NOT available on this plan" if out["fixtures_errors"]
+                     else "no data returned")
+    return out
+
+
 def load_cup_odds() -> pd.DataFrame:
     df = load_snapshot("cup_odds")
     if not df.empty:
@@ -4070,6 +4117,21 @@ def run_headless_log(argv=None) -> int:
           + (f" | credits left: {odds_status['credits_remaining']}"
              if odds_status.get("credits_remaining") else ""))
     cup_odds = load_cup_odds()
+    # API-Football: one cheap check per day until line-ups/injuries are built in
+    try:
+        afk = os.environ.get("APIFOOTBALL_KEY", "").strip()
+        f = SNAPSHOT_DIR / f"{APIFOOTBALL_STATUS}.json"
+        prev = json.loads(f.read_text()) if f.exists() else {}
+        last = pd.Timestamp(prev["time"].replace(" UTC", ""), tz="UTC") if prev.get("time") else None
+        stale = last is None or (pd.Timestamp.now(tz="UTC") - last) > pd.Timedelta(hours=20)
+        if (afk and (stale or not prev.get("key_present"))) or not prev:
+            ap = probe_apifootball(afk)
+            if not args.no_backup:
+                f.parent.mkdir(parents=True, exist_ok=True)
+                f.write_text(json.dumps(ap, indent=1, default=str))
+            print(f"  API-Football: {ap.get('result')}")
+    except Exception as exc:
+        print(f"WARNING: API-Football check failed: {type(exc).__name__}")
     try:
         uefa = load_uefa()
         if not args.no_backup and uefa.attrs.get("source") == "live" and save_snapshot("uefa", uefa):
