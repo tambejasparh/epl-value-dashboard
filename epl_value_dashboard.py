@@ -1760,6 +1760,8 @@ def ready_picks_by_day(adv: pd.DataFrame, tz: str, n: int = 5) -> list:
         return []
     d["Skip reason"] = [ready_filter(r) for _, r in d.iterrows()]
     d = d[d["Skip reason"] == ""]
+    if d.empty:
+        return []
     teams = d["Match"].str.split(" v ", n=1, expand=True)
     d["Bet"] = [short_bet(k, h, a) for k, h, a in zip(d["Pick key"], teams[0], teams[1])]
     d["Min odds"] = (100 / d["Best pick %"]) * (1 + DEFAULTS["min_edge"] / 100)
@@ -1893,10 +1895,12 @@ def write_predictions_md(adv: pd.DataFrame, flags: pd.DataFrame, path: Path,
             lines += ["No bets this week - the prices are fair. That is normal.", ""]
         # 2) strongest best picks per day
         if "Best pick %" in d.columns:
-            lines += ["## 🎯 Strongest best picks (🔒 Banker + ⭐⭐⭐ Strong: won ~91% in testing)", ""]
+            lines += ["## 🎯 Strongest best picks (🔒 Banker + ⭐⭐⭐ Strong, same safety checks "
+                      "as 'Your bets'; won ~91% in testing)", ""]
             any_pick = False
             for day, grp in d.groupby("_day", sort=True):
-                top = grp[grp["Best pick %"] >= BEST_PICK_STRONG * 100].sort_values(
+                top = grp[(grp["Best pick %"] >= BEST_PICK_STRONG * 100)
+                          & np.array([ready_filter(r) == "" for _, r in grp.iterrows()], dtype=bool)].sort_values(
                     "Best pick %", ascending=False).head(8)
                 if top.empty:
                     continue
@@ -2977,15 +2981,18 @@ def render_day_by_day(adv: pd.DataFrame, tz: str, key: str):
                    "not advised for real money.")
     if "Best pick %" in sub.columns:
         top = sub.dropna(subset=["Best pick %"]).sort_values("Best pick %", ascending=False)
-        top = top[top["Best pick %"] >= BEST_PICK_STRONG * 100].head(5)
+        top = top[(top["Best pick %"] >= BEST_PICK_STRONG * 100)
+                  & np.array([ready_filter(r) == "" for _, r in top.iterrows()], dtype=bool)].head(5)
         if not top.empty:
-            st.success("**🎯 Strongest best picks today**\n\n" + "\n".join(
+            st.success("**🎯 Strongest best picks today** (same safety checks as 'Your bets')"
+                       "\n\n" + "\n".join(
                 f"- {r['Time']} · **{r['Match']}** — **{r['Best pick']}**"
                 + (f"  \n  📝 {r['How to bet']}" if isinstance(r.get("How to bet"), str) else "")
                 for _, r in top.iterrows()))
     view = sub[sub["Advice"].str.match(r"^(BET|WATCH)")] if only else sub
     if strong and "Best pick %" in view.columns:
-        view = view[view["Best pick %"] >= BEST_PICK_STRONG * 100]
+        view = view[(view["Best pick %"] >= BEST_PICK_STRONG * 100)
+                    & np.array([ready_filter(r) == "" for _, r in view.iterrows()], dtype=bool)]
 
     def _style(row):
         txt = row["Advice"]

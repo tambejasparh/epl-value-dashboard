@@ -716,3 +716,19 @@ def test_append_feed_uses_the_league_own_season_label():
     new = out[out["Filled"] == True]  # noqa: E712
     assert len(new) == 1 and new["Season"].iloc[0] == "2026/2027"
     assert new["HomeTeam"].iloc[0] == "Zenit" and new["FilledFrom"].iloc[0] == "API-Football"
+
+
+def test_strongest_picks_use_the_same_safety_checks(tmp_path=None):
+    model = app._fit_model(LEAGUE_DATA["E0"], 400, 0.5)
+    fx = make_fixtures()
+    adv = app.match_advice(app.score_predictions(fx[fx["Div"] == "E0"], model),
+                           pd.DataFrame(), 100)
+    adv.insert(0, "Competition", "England - Premier League")
+    adv["Best pick %"] = 95.0
+    adv["Pick key"] = "1X"
+    adv["Key out H"] = 1                       # every pick fails the injury check
+    out = TMP / "strong.md"
+    app.write_predictions_md(adv, pd.DataFrame(), out)
+    txt = out.read_text()
+    sec = txt.split("## 🎯 Strongest best picks")[1].split("##")[0]
+    assert "No 🔒 / ⭐⭐⭐ picks this week." in sec
