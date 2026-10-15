@@ -1,5 +1,5 @@
 # Football predictions — day by day
-_Updated Thu 15 Oct 2026 20:31 (Africa/Douala time). Bankroll for stakes: 100.00_
+_Updated Thu 15 Oct 2026 20:51 (Africa/Douala time). Bankroll for stakes: 100.00_
 
 ## ✅ Your bets for each day (already checked - just place them)
 
@@ -655,7 +655,7 @@ No bets this week - the prices are fair. That is normal.
 
 ## ☑️ Before you place any bet
 1. Your bookmaker's odds must be **at least** the price shown (for 🏆 games: at least the 'back only at' price). Lower odds = skip the bet.
-2. Check team news: injuries, suspensions, rotation. If a key player is out, re-check the match in the Match Analyzer with the What-If sliders.
+2. Team news: the system already removes picks where a key player is missing (injury or suspension data, updated 4 times a day). Late news (rotation, line-ups an hour before kick-off) is not included - skip a bet if big news breaks.
 3. Stake no more than shown, and never chase losses.
 4. 🎯 Best pick = the option most likely to win. In testing, best picks won ~88% in leagues (8,591 matches: 🔒 Banker ~92%, ⭐⭐⭐ Strong ~90%, ⭐⭐ Good ~88%, ⭐ Fair ~84%), ~85% in European cups (972 games) and ~88% for national teams (1,315 games). Combining picks on one slip multiplies the risk: 4 picks at 85% all win only ~52% of the time. The catch: they pay very short odds and bookmakers almost never offer the 'bet at' price, so over time they lose a little (about -4%). One loss wipes out about ten wins - stake small, and only bet at or above the odds shown.
 5. Bets are logged automatically - check the Paper Trading tab to see if the edge is real before risking real money.

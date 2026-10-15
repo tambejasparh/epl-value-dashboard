@@ -1,5 +1,5 @@
 {
- "time": "2026-10-15 19:29 UTC",
+ "time": "2026-10-15 19:50 UTC",
  "key_present": true,
  "leagues_found": {
   "CHN": "Super League (China)",
@@ -30,7 +30,7 @@
  "players_fetched": 0,
  "requests_used": 8,
  "result": "480 missing players across 186 fixtures",
- "odds_time": "2026-10-15 19:29 UTC",
+ "odds_time": "2026-10-15 19:50 UTC",
  "odds_calls": 186,
  "odds_rows": 23032,
  "odds_fixtures": 185,
