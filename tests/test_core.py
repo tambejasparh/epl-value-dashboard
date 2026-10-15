@@ -797,3 +797,12 @@ def test_inplay_chance_updates_with_score_and_time():
     st_ = app.settle_pick_log(log, pd.DataFrame())
     g = list(app.past_matches_by_day(st_, "UTC", live=live).values())[0]
     assert g["Result"].iloc[0].startswith("🔴 LIVE 63' · 1-0") and "already won" in g["Result"].iloc[0]
+
+
+def test_every_match_list_is_sorted_by_chance():
+    model = app._fit_model(LEAGUE_DATA["E0"], 400, 0.5)
+    fx = make_fixtures()
+    adv = app.match_advice(app.score_predictions(fx, model), pd.DataFrame(), 100)
+    adv.insert(0, "Competition", adv["League"])
+    for _, g in app.all_matches_by_day(adv, "Africa/Douala"):
+        assert g["Best pick %"].is_monotonic_decreasing

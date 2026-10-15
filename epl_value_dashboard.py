@@ -1797,7 +1797,8 @@ def all_matches_by_day(adv: pd.DataFrame, tz: str) -> list:
     d["Check"] = [ready_filter(r) for _, r in d.iterrows()]
     out = []
     for day in sorted(d["_day"].unique()):
-        g = d[d["_day"] == day].sort_values(["Kickoff UTC", "Competition", "Match"])
+        g = d[d["_day"] == day].sort_values(["Best pick %", "Kickoff UTC"],
+                                            ascending=[False, True])
         out.append((day, g))
     return out
 
@@ -1889,7 +1890,8 @@ def past_matches_by_day(settled: pd.DataFrame, tz: str, days_back: int = 14,
                 txt += (" · ✅ already won" if c > 0.999 else " · ❌ can no longer win"
                         if c < 0.001 else f" · chance now {100*c:.0f}%")
             d.loc[idx, "Result"] = txt
-    return {day: g.sort_values(["Kickoff (UTC)", "Competition"]) for day, g in d.groupby("_day")}
+    return {day: g.sort_values(["Best pick %", "Kickoff (UTC)"], ascending=[False, True])
+            for day, g in d.groupby("_day")}
 
 
 def past_cards_html(g: pd.DataFrame) -> str:
@@ -3110,8 +3112,9 @@ def render_safest_picks(adv: pd.DataFrame, tz: str, all_results: dict, uefa, nat
             st.markdown(ready_cards_html(top), unsafe_allow_html=True)
             st.warning(ticket_line(top))
     st.markdown("#### 📋 Every match: what to bet")
-    st.caption("Every match of the day from all leagues and tournaments, with the one bet "
-               "the system would make - whatever the odds. ✅ = passes all checks (same as "
+    st.caption("Every match of the day from all leagues and tournaments, highest winning "
+               "chance first, with the one bet the system would make - whatever the odds. "
+               "✅ = passes all checks (same as "
                "'Your bets'); ⚠️ = riskier, with the reason. Past days show the bet given "
                "before kick-off and whether it won.")
     settled = settle_pick_log(read_pick_log(), result_frames(all_results, uefa, nations_fx))
