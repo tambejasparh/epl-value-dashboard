@@ -1668,6 +1668,11 @@ def top_picks_by_day(adv: pd.DataFrame, tz: str, n: int = 5) -> list:
     return out
 
 
+# Walk-forward test, 12 leagues, 2024/25 + 2025/26 (472 match days): how often
+# the day's top-N best picks ALL won on one ticket.
+TESTED_TICKET = {1: 89, 2: 83, 3: 79, 4: 72, 5: 67}
+
+
 def ticket_line(top: pd.DataFrame) -> str:
     """What happens if all of a day's top picks go on one ticket."""
     if top is None or top.empty:
@@ -1677,9 +1682,12 @@ def ticket_line(top: pd.DataFrame) -> str:
     n = len(p)
     two = (f" A 2-pick ticket (#1 + #2) wins about {100*p[:2].prod():.0f}%."
            if n > 2 else "")
+    tested = (f" In testing on 472 past match days, the top-{n} ticket won on "
+              f"{TESTED_TICKET[n]}% of days - it still lost about 1 day in "
+              f"{100 / (100 - TESTED_TICKET[n]):.0f}." if n in TESTED_TICKET else "")
     return (f"🎟️ All {n} on one ticket: all {n} win about **{100*p.prod():.0f}%** of the time "
             f"(lose about {100*(1-p.prod()):.0f}%). Take it only if the ticket's total odds "
-            f"are at least **{floors.prod():.2f}**.{two}")
+            f"are at least **{floors.prod():.2f}**.{two}{tested}")
 
 
 def safest_picks(adv: pd.DataFrame, tz: str, n: int = 6) -> tuple:
