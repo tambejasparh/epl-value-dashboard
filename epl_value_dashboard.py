@@ -1262,17 +1262,21 @@ def raw_odds(row) -> dict:
 
 
 def market_matrix(odds: dict, rho: float):
-    """Score matrix whose 1X2 and O/U 2.5 match the bookmaker's (margin removed)."""
-    if not odds or any(not (odds.get(k, 0) or 0) > 1 for k in ("H", "D", "A", "O25", "U25")):
+    """Score matrix whose 1X2 (and O/U 2.5 when given) match the bookmaker's,
+    margin removed."""
+    ok = lambda k: (odds or {}).get(k) is not None and np.isfinite(odds[k]) and odds[k] > 1
+    if not odds or not all(ok(k) for k in ("H", "D", "A")):
         return None
     ih, idr, ia = 1 / odds["H"], 1 / odds["D"], 1 / odds["A"]
     s_ = ih + idr + ia
     ph, pa = ih / s_, ia / s_
-    po = (1 / odds["O25"]) / (1 / odds["O25"] + 1 / odds["U25"])
+    has_ou = ok("O25") and ok("U25")       # some books publish only 1X2
+    po = (1 / odds["O25"]) / (1 / odds["O25"] + 1 / odds["U25"]) if has_ou else None
 
     def loss(x):
         pr = market_probs(score_matrix(np.exp(x[0]), np.exp(x[1]), rho))
-        return (pr["H"] - ph) ** 2 + (pr["A"] - pa) ** 2 + (pr["O25"] - po) ** 2
+        return ((pr["H"] - ph) ** 2 + (pr["A"] - pa) ** 2
+                + ((pr["O25"] - po) ** 2 if has_ou else 0.0))
     try:
         x = minimize(loss, [0.3, 0.1], method="Nelder-Mead",
                      options={"xatol": 1e-4, "fatol": 1e-10}).x
@@ -2202,7 +2206,7 @@ def cup_predictions(fixtures: pd.DataFrame, model: dict, code_col: str = "Comp",
         lab = {"H": fx["HomeTeam"], "D": "Draw", "A": fx["AwayTeam"]}[best]
         odds = match_fixture_odds(fx, cup_odds)
         k_shr = model.get("pick_shrink", 1.0)
-        if len(odds) == 5:
+        if all(k in odds for k in ("H", "D", "A")):
             # bookmaker odds known: blend model + market; the market needs no
             # over-confidence correction, so only half of it is kept
             pb, _ = pick_probs(m, model["rho"], odds)
@@ -2224,7 +2228,8 @@ def cup_predictions(fixtures: pd.DataFrame, model: dict, code_col: str = "Comp",
             "xG": f"{lh:.2f} - {la:.2f}",
             "Advice": ((f"Bookmakers: {fx['HomeTeam']} {odds['H']:.2f} · draw {odds['D']:.2f} · "
                         f"{fx['AwayTeam']} {odds['A']:.2f}. Model: back {lab} only at "
-                        f"{(1 / p[best]) * (1 + min_edge / 100):.2f}+") if len(odds) == 5 else
+                        f"{(1 / p[best]) * (1 + min_edge / 100):.2f}+")
+                       if all(k in odds for k in ("H", "D", "A")) else
                        (f"No odds feed: back {lab} only at "
                         f"{(1 / p[best]) * (1 + min_edge / 100):.2f}+")),
             "Stake": "",
