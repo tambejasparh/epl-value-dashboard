@@ -1,5 +1,5 @@
 {
- "time": "2026-10-15 18:37 UTC",
+ "time": "2026-10-15 18:50 UTC",
  "key_present": true,
  "leagues_found": {
   "E2": "League One (England)",
@@ -32,10 +32,10 @@
  "players_fetched": 0,
  "requests_used": 8,
  "result": "592 missing players across 205 fixtures",
- "odds_time": "2026-10-15 18:37 UTC",
- "odds_calls": 201,
- "odds_rows": 25034,
- "odds_fixtures": 200,
+ "odds_time": "2026-10-15 18:50 UTC",
+ "odds_calls": 203,
+ "odds_rows": 25289,
+ "odds_fixtures": 202,
  "books_seen": [
   "1xBet",
   "Bet365",
@@ -110,6 +110,6 @@
   "Offsides Handicap",
   "Offsides Home Total"
  ],
- "my_book_fixtures": 200,
- "odds_result": "prices for 200 fixtures"
+ "my_book_fixtures": 202,
+ "odds_result": "prices for 202 fixtures"
 }
