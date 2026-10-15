@@ -1774,6 +1774,48 @@ def ready_picks_by_day(adv: pd.DataFrame, tz: str, n: int = 5) -> list:
     return out
 
 
+def all_matches_by_day(adv: pd.DataFrame, tz: str) -> list:
+    """[(day, DataFrame)] - EVERY upcoming match with the one bet the system
+    would make, whatever the odds, plus whether it passes the safety checks."""
+    if adv is None or adv.empty or "Pick key" not in adv.columns:
+        return []
+    d = add_local_time(adv, tz)
+    d = d[pd.to_datetime(d["Kickoff UTC"], utc=True) > pd.Timestamp.now(tz="UTC")]
+    d = d.dropna(subset=["Best pick %", "Pick key"]).copy()
+    if d.empty:
+        return []
+    teams = d["Match"].str.split(" v ", n=1, expand=True)
+    d["Bet"] = [short_bet(k, h, a) for k, h, a in zip(d["Pick key"], teams[0], teams[1])]
+    d["Min odds"] = (100 / d["Best pick %"]) * (1 + DEFAULTS["min_edge"] / 100)
+    d["Check"] = [ready_filter(r) for _, r in d.iterrows()]
+    out = []
+    for day in sorted(d["_day"].unique()):
+        g = d[d["_day"] == day].sort_values(["Kickoff UTC", "Competition", "Match"])
+        out.append((day, g))
+    return out
+
+
+def all_matches_cards_html(g: pd.DataFrame) -> str:
+    e = html.escape
+    cards = []
+    for _, r in g.iterrows():
+        ok = r["Check"] == ""
+        price = r.get("1xBet odds", np.nan)
+        cards.append(
+            f"<div class='bfe-card {'bet' if ok else ''}'>"
+            f"<div class='bfe-top'>{e(str(r['Time']))} · {e(str(r['Competition']))}</div>"
+            f"<div class='bfe-match'>{e(str(r['Match']))}</div>"
+            f"<div class='bfe-adv'>BET: {e(str(r['Bet']))}</div>"
+            f"<div class='bfe-row'>{r['Best pick %']:.0f}% chance · fair minimum odds "
+            f"{r['Min odds']:.2f}"
+            + (f" · 1xBet {float(price):.2f}" if pd.notna(price) else "") + "</div>"
+            + (f"<div class='bfe-row bfe-small'>✅ passes all checks (also in 'Your bets')</div>"
+               if ok else
+               f"<div class='bfe-row bfe-small'>⚠️ riskier: {e(str(r['Check']))}</div>")
+            + "</div>")
+    return "".join(cards)
+
+
 def ready_cards_html(top: pd.DataFrame) -> str:
     """Big, simple cards: what to select and the minimum odds - nothing else."""
     e = html.escape
@@ -1879,6 +1921,19 @@ def write_predictions_md(adv: pd.DataFrame, flags: pd.DataFrame, path: Path,
                               + (f" · 💚 1xBet pays {float(r['1xBet odds']):.2f}"
                                  if pd.notna(r.get("1xBet odds", np.nan)) else "")]
                 lines += ["", ticket_line(top), ""]
+        all_days = all_matches_by_day(adv, tz)
+        if all_days:
+            lines += ["## 📋 Every match: what to bet (whatever the odds)", "",
+                      "_✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._", ""]
+            for day, g in all_days:
+                lines += [f"### {pd.Timestamp(day):%A %d %B} ({len(g)} matches)", ""]
+                for _, r in g.iterrows():
+                    price = r.get("1xBet odds", np.nan)
+                    lines.append(f"- {'✅' if r['Check'] == '' else '⚠️'} {r['Time']} · "
+                                 f"**{r['Match']}** ({r['Competition']}) — BET: {r['Bet']} · "
+                                 f"{r['Best pick %']:.0f}%"
+                                 + (f" · 1xBet {float(price):.2f}" if pd.notna(price) else ""))
+                lines.append("")
         lines += ["## 📈 Live track record of best picks", ""] + record_lines + [""]
         lines += [SAFE_RULES, ""]
         # 1) the week's bets at a glance
@@ -2919,6 +2974,37 @@ def render_safest_picks(adv: pd.DataFrame, tz: str, all_results: dict, uefa, nat
                          f"{'s' if len(top) != 1 else ''}", expanded=(k == 0)):
             st.markdown(ready_cards_html(top), unsafe_allow_html=True)
             st.warning(ticket_line(top))
+    st.markdown("#### 📋 Every match: what to bet")
+    st.caption("Every match of the day from all leagues and tournaments, with the one bet "
+               "the system would make - whatever the odds. ✅ = passes all checks (same as "
+               "'Your bets'); ⚠️ = riskier, with the reason. Winning chance is the model's "
+               "estimate.")
+    all_days = all_matches_by_day(adv, tz)
+    if not all_days:
+        st.info("No upcoming matches in the feeds yet.")
+    else:
+        labels = {day: f"{pd.Timestamp(day):%A %d %B} — {len(g)} matches"
+                  for day, g in all_days}
+        pick_day = st.selectbox("Day", [d for d, _ in all_days], format_func=labels.get,
+                                key="all_matches_day")
+        g = dict(all_days)[pick_day]
+        comps = ["All competitions"] + sorted(g["Competition"].unique())
+        comp = st.selectbox("Competition", comps, key="all_matches_comp")
+        if comp != comps[0]:
+            g = g[g["Competition"] == comp]
+        if phone_mode():
+            st.markdown(all_matches_cards_html(g), unsafe_allow_html=True)
+        else:
+            tab = pd.DataFrame({
+                "Time": g["Time"], "Competition": g["Competition"], "Match": g["Match"],
+                "What to bet": g["Bet"], "Chance %": g["Best pick %"].round(0),
+                "Fair min odds": g["Min odds"].round(2),
+                "1xBet odds": g.get("1xBet odds", pd.Series(np.nan, index=g.index)),
+                "Check": np.where(g["Check"] == "", "✅ passes all checks",
+                                  "⚠️ " + g["Check"])})
+            show_df(tab.style.format({"Chance %": "{:.0f}", "Fair min odds": "{:.2f}",
+                                      "1xBet odds": "{:.2f}"}, na_rep="—"),
+                    hide_index=True, height=min(900, 38 + 35 * len(tab)))
     sm = pick_summary(settle_pick_log(read_pick_log(),
                                       result_frames(all_results, uefa, nations_fx)))
     with st.expander("📈 Live track record of best picks (real picks, saved before kick-off)",

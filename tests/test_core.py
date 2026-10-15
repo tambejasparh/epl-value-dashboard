@@ -732,3 +732,18 @@ def test_strongest_picks_use_the_same_safety_checks(tmp_path=None):
     txt = out.read_text()
     sec = txt.split("## 🎯 Strongest best picks")[1].split("##")[0]
     assert "No 🔒 / ⭐⭐⭐ picks this week." in sec
+
+
+def test_every_match_gets_a_bet_whatever_the_odds():
+    model = app._fit_model(LEAGUE_DATA["E0"], 400, 0.5)
+    fx = make_fixtures()
+    adv = app.match_advice(app.score_predictions(fx[fx["Div"] == "E0"], model),
+                           pd.DataFrame(), 100)
+    adv.insert(0, "Competition", "England - Premier League")
+    adv["1xBet odds"] = 1.01                   # terrible prices: excluded from 'Your bets'
+    days = app.all_matches_by_day(adv, "Africa/Douala")
+    allrows = pd.concat([g for _, g in days])
+    assert len(allrows) == len(adv) and allrows["Bet"].str.len().gt(0).all()
+    assert (allrows["Check"] != "").all()      # all flagged ⚠️, but still listed
+    html_ = app.all_matches_cards_html(allrows)
+    assert html_.count("BET:") == len(adv) and "⚠️ riskier" in html_
