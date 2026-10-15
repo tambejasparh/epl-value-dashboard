@@ -678,3 +678,28 @@ def test_ready_picks_by_day_only_contains_passing_picks():
     assert adv["Match"].iloc[0] not in set(allrows["Match"])
     assert allrows["Bet"].str.len().gt(0).all() and (allrows["Min odds"] > 1).all()
     assert "✅ BET:" in app.ready_cards_html(days[0][1])
+
+
+def test_bookmaker_prices_parse_match_and_filter():
+    item = {"fixture": {"id": 1}, "bookmakers": [
+        {"name": "1xBet", "bets": [
+            {"name": "Double Chance", "values": [{"value": "Home/Draw", "odd": "1.12"},
+                                                 {"value": "Home/Away", "odd": "1.30"}]},
+            {"name": "Goals Over/Under", "values": [{"value": "Under 4.5", "odd": "1.09"}]},
+            {"name": "Total - Home", "values": [{"value": "Over 0.5", "odd": "1.15"}]},
+            {"name": "Exact Score", "values": [{"value": "1:0", "odd": "7"}]}]},
+        {"name": "Bet365", "bets": [
+            {"name": "Double Chance", "values": [{"value": "Home/Draw", "odd": "1.14"}]}]}]}
+    rows = pd.DataFrame(app.af_odds_rows(item))
+    assert set(rows["Key"]) == {"1X", "12", "U45", "HS"} and len(rows) == 5
+    t, ko = _fake_injury_table()
+    fxs = t.drop_duplicates("FixtureId")[["FixtureId", "Kickoff", "HomeTeam", "AwayTeam", "_ko"]]
+    bo = rows.merge(fxs, on="FixtureId")
+    fx = {"Kickoff": ko, "HomeTeam": "Arsenal", "AwayTeam": "Chelsea"}
+    assert app.book_prices(fx, bo, "1X") == (1.12, 1.14)
+    assert all(np.isnan(v) for v in app.book_prices(fx, bo, "BTTS_Y"))
+    base = {"Best pick %": 90.0, "Pick key": "1X", "Odds used": True, "Key out H": 0,
+            "Key out A": 0}
+    assert "1xBet pays only 1.12" in app.ready_filter({**base, "1xBet odds": 1.12})
+    assert app.ready_filter({**base, "1xBet odds": 1.20}) == ""
+    assert app.ready_filter({**base, "1xBet odds": np.nan}) == ""
