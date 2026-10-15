@@ -1,5 +1,5 @@
 {
- "time": "2026-10-15 18:29 UTC",
+ "time": "2026-10-15 18:37 UTC",
  "key_present": true,
  "leagues_found": {
   "E2": "League One (England)",
@@ -29,10 +29,10 @@
  },
  "fixtures": 205,
  "injured": 592,
- "players_fetched": 87,
- "requests_used": 95,
+ "players_fetched": 0,
+ "requests_used": 8,
  "result": "592 missing players across 205 fixtures",
- "odds_time": "2026-10-15 18:30 UTC",
+ "odds_time": "2026-10-15 18:37 UTC",
  "odds_calls": 201,
  "odds_rows": 25034,
  "odds_fixtures": 200,
