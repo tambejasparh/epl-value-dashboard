@@ -772,3 +772,28 @@ def test_past_days_show_the_bet_given_and_the_result():
     assert "1 of 2 bets won" in line and "checked bets: **1 of 1 won**" in line
     sm = app.pick_summary(settled)
     assert sm["checked"] == (1, 1)
+
+
+def test_inplay_chance_updates_with_score_and_time():
+    # Under 4.5 at 0-0 late in the game is near certain; at 3-1 with time left it is risky
+    assert app.inplay_chance("U45", 1.5, 1.2, 85, 0, 0) > 0.99
+    assert app.inplay_chance("U45", 1.5, 1.2, 30, 3, 1) < 0.6
+    assert app.inplay_chance("HS", 1.5, 1.2, 10, 1, 0) == 1.0          # already won
+    assert app.inplay_chance("U45", 1.5, 1.2, 60, 4, 1) == 0.0         # already lost
+    pre = app.inplay_chance("1X", 1.5, 1.2, 0, 0, 0)
+    assert app.inplay_chance("1X", 1.5, 1.2, 70, 1, 0) > pre > app.inplay_chance("1X", 1.5, 1.2, 70, 0, 1)
+    live = pd.DataFrame([{"FixtureId": 9, "Kickoff": "2026-10-15T19:00:00+00:00",
+                          "HomeTeam": "Arsenal FC", "AwayTeam": "Chelsea FC", "Minute": 63,
+                          "Status": "2H", "GH": 1, "GA": 0}])
+    live["_ko"] = pd.to_datetime(live["Kickoff"], utc=True)
+    ko = pd.Timestamp.now(tz="UTC") - pd.Timedelta(minutes=70)
+    log = pd.DataFrame([{"Kickoff (UTC)": ko.strftime("%Y-%m-%d %H:%M"),
+                         "Match day": ko.strftime("%Y-%m-%d"), "League": "E0",
+                         "Competition": "PL", "HomeTeam": "Arsenal", "AwayTeam": "Chelsea",
+                         "Pick key": "HS", "Best pick": "x", "Prob %": 90.0, "Bet at": 1.14,
+                         "Tier": "Banker", "Check": "", "xG": "1.60 - 1.10"}])
+    live["Kickoff"] = ko.isoformat()
+    live["_ko"] = pd.to_datetime(live["Kickoff"], utc=True)
+    st_ = app.settle_pick_log(log, pd.DataFrame())
+    g = list(app.past_matches_by_day(st_, "UTC", live=live).values())[0]
+    assert g["Result"].iloc[0].startswith("🔴 LIVE 63' · 1-0") and "already won" in g["Result"].iloc[0]

@@ -1540,7 +1540,7 @@ SAFE_RULES = (
     "6. **Check team news** before kick-off; skip a pick if a key player is missing.")
 
 PICK_COLS = ["Kickoff (UTC)", "Match day", "League", "Competition", "HomeTeam", "AwayTeam",
-             "Pick key", "Best pick", "Prob %", "Bet at", "Tier", "Check"]
+             "Pick key", "Best pick", "Prob %", "Bet at", "Tier", "Check", "xG"]
 PICK_KEY = ["League", "Match day", "HomeTeam", "AwayTeam"]
 
 
@@ -1572,6 +1572,7 @@ def picks_from_overview(adv: pd.DataFrame) -> pd.DataFrame:
         "Bet at": ((1 / prob) * (1 + DEFAULTS["min_edge"] / 100)).round(2),
         "Tier": [next(t for lim, _, t, _ in BEST_PICK_TIERS if q >= lim) for q in prob],
         "Check": [ready_filter(r) for _, r in d.iterrows()],
+        "xG": d["xG"] if "xG" in d.columns else "",
     })[PICK_COLS]
 
 
@@ -1801,7 +1802,59 @@ def all_matches_by_day(adv: pd.DataFrame, tz: str) -> list:
     return out
 
 
-def past_matches_by_day(settled: pd.DataFrame, tz: str, days_back: int = 14) -> dict:
+def app_apifootball_key() -> str:
+    """API-Football key for the app itself (Streamlit secret or environment)."""
+    try:
+        k = st.secrets.get("APIFOOTBALL_KEY", "")
+    except Exception:
+        k = ""
+    return str(k or os.environ.get("APIFOOTBALL_KEY", "")).strip()
+
+
+@st.cache_data(ttl=60, show_spinner=False)
+def live_fixtures(key: str) -> pd.DataFrame:
+    """Matches being played right now in our competitions (refreshed every minute)."""
+    js = _apifootball_get("/fixtures", key, live="all") or {}
+    rows = []
+    for f in js.get("response") or []:
+        if (f.get("league") or {}).get("id") not in AF_LEAGUES:
+            continue
+        fx, g = f.get("fixture") or {}, f.get("goals") or {}
+        rows.append({"FixtureId": fx.get("id"), "Kickoff": fx.get("date"),
+                     "HomeTeam": f["teams"]["home"]["name"], "AwayTeam": f["teams"]["away"]["name"],
+                     "Minute": (fx.get("status") or {}).get("elapsed") or 0,
+                     "Status": (fx.get("status") or {}).get("short"),
+                     "GH": g.get("home") or 0, "GA": g.get("away") or 0})
+    df = pd.DataFrame(rows)
+    if not df.empty:
+        df["_ko"] = pd.to_datetime(df["Kickoff"], utc=True, errors="coerce")
+    return df
+
+
+def inplay_chance(k: str, lam_h: float, lam_a: float, minute: int, gh: int, ga: int,
+                  status: str = "") -> float:
+    """Chance the pick still wins from the current score, assuming goals keep
+    coming at the pre-match rate for the time left (about 95 minutes in all)."""
+    if status == "HT":
+        minute = 45
+    left = max(0.0, (95.0 - float(minute)) / 95.0)
+    g = np.arange(11)
+    ph, pa = poisson.pmf(g, lam_h * left), poisson.pmf(g, lam_a * left)
+    m = np.outer(ph, pa)
+    won = np.array([[pick_won(k, gh + i, ga + j) for j in g] for i in g])
+    return float((m * won).sum() / m.sum())
+
+
+def _parse_xg(x) -> tuple:
+    try:
+        a, b = str(x).split(" - ")
+        return float(a), float(b)
+    except Exception:
+        return np.nan, np.nan
+
+
+def past_matches_by_day(settled: pd.DataFrame, tz: str, days_back: int = 14,
+                        live: pd.DataFrame | None = None) -> dict:
     """{day: DataFrame} of matches already started, with the bet the system gave
     before kick-off (frozen in the pick log) and the result."""
     if settled is None or settled.empty:
@@ -1822,6 +1875,20 @@ def past_matches_by_day(settled: pd.DataFrame, tz: str, days_back: int = 14) -> 
     d["Result"] = [("✅ WON " if w is True else "❌ LOST " if w is False else "") + str(sc)
                    if sc != "pending" else "⏳ playing / waiting for result"
                    for w, sc in zip(d["Won"], d["Score"])]
+    if live is not None and not live.empty:
+        for idx, r in d[d["Score"] == "pending"].iterrows():
+            lv = match_fixture_row({"Kickoff": pd.Timestamp(r["Kickoff (UTC)"], tz="UTC"),
+                                    "HomeTeam": r["HomeTeam"], "AwayTeam": r["AwayTeam"]}, live)
+            if lv is None:
+                continue
+            gh, ga, mi = int(lv["GH"]), int(lv["GA"]), int(lv["Minute"])
+            lh, la = _parse_xg(r.get("xG"))
+            txt = f"🔴 LIVE {'HT' if lv['Status'] == 'HT' else str(mi) + chr(39)} · {gh}-{ga}"
+            if np.isfinite(lh) and np.isfinite(la):
+                c = inplay_chance(r["Pick key"], lh, la, mi, gh, ga, lv["Status"])
+                txt += (" · ✅ already won" if c > 0.999 else " · ❌ can no longer win"
+                        if c < 0.001 else f" · chance now {100*c:.0f}%")
+            d.loc[idx, "Result"] = txt
     return {day: g.sort_values(["Kickoff (UTC)", "Competition"]) for day, g in d.groupby("_day")}
 
 
@@ -3050,7 +3117,14 @@ def render_safest_picks(adv: pd.DataFrame, tz: str, all_results: dict, uefa, nat
     settled = settle_pick_log(read_pick_log(), result_frames(all_results, uefa, nations_fx))
     sm = pick_summary(settled)
     future = dict(all_matches_by_day(adv, tz))
-    past = past_matches_by_day(settled, tz)
+    afk = app_apifootball_key()
+    live = pd.DataFrame()
+    if afk:
+        try:
+            live = live_fixtures(afk)
+        except Exception:
+            live = pd.DataFrame()
+    past = past_matches_by_day(settled, tz, live=live)
     days_all = sorted(set(future) | set(past))
     if not days_all:
         st.info("No matches in the feeds yet.")
@@ -3073,7 +3147,17 @@ def render_safest_picks(adv: pd.DataFrame, tz: str, all_results: dict, uefa, nat
             gp = gp[gp["Competition"] == comp] if gp is not None else None
             gf = gf[gf["Competition"] == comp] if gf is not None else None
         if gp is not None and not gp.empty:
-            st.markdown("**Already played / started**")
+            c1, c2 = st.columns([3, 1])
+            c1.markdown("**Already played / started**"
+                        + (" — 🔴 live scores update every minute" if afk else ""))
+            if afk and c2.button("🔄 Refresh live", key="refresh_live"):
+                live_fixtures.clear()
+                st.rerun()
+            if not afk:
+                st.caption("Live scores: add your APIFOOTBALL_KEY to the app's secrets "
+                           "(Streamlit → Settings → Secrets) to see them here.")
+            st.caption("🔴 'Chance now' is the pre-match bet re-calculated from the current "
+                       "score and time left. Live odds move fast - compare before you bet.")
             st.info(day_result_line(gp))
             if phone_mode():
                 st.markdown(past_cards_html(gp), unsafe_allow_html=True)
