@@ -1,5 +1,5 @@
 {
- "time": "2026-10-15 19:50 UTC",
+ "time": "2026-10-15 20:15 UTC",
  "key_present": true,
  "leagues_found": {
   "CHN": "Super League (China)",
@@ -26,11 +26,11 @@
   "G1": "Super League 1 (Greece)"
  },
  "fixtures": 186,
- "injured": 480,
- "players_fetched": 0,
- "requests_used": 8,
- "result": "480 missing players across 186 fixtures",
- "odds_time": "2026-10-15 19:50 UTC",
+ "injured": 481,
+ "players_fetched": 10,
+ "requests_used": 18,
+ "result": "481 missing players across 186 fixtures",
+ "odds_time": "2026-10-15 20:15 UTC",
  "odds_calls": 186,
  "odds_rows": 23032,
  "odds_fixtures": 185,
