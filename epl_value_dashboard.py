@@ -1361,11 +1361,14 @@ def how_to_bet(k: str, home: str, away: str, floor: float) -> str:
             f"{floor:.2f} or higher.")
 
 
-def score_predictions(window: pd.DataFrame, model: dict) -> pd.DataFrame:
-    """Predicted score, top-3 scores and key probabilities per fixture."""
+def score_predictions(window: pd.DataFrame, model: dict,
+                      injuries: pd.DataFrame | None = None) -> pd.DataFrame:
+    """Predicted score, top-5 scores and key probabilities per fixture
+    (adjusted for missing players when that data is available)."""
     rows = []
     for _, fx in window.iterrows():
-        lh, la, m, p = predict(model, fx["HomeTeam"], fx["AwayTeam"])
+        adj, missing = fixture_injuries(fx, injuries, model)
+        lh, la, m, p = predict(model, fx["HomeTeam"], fx["AwayTeam"], adj)
         pred, pp = predicted_score(m, p)
         bp = best_pick(pick_probs(m, model["rho"], raw_odds(fx))[0],
                        fx["HomeTeam"], fx["AwayTeam"])
@@ -1375,7 +1378,7 @@ def score_predictions(window: pd.DataFrame, model: dict) -> pd.DataFrame:
             "Kickoff UTC": fx["Kickoff"],
             "Match": f"{fx['HomeTeam']} v {fx['AwayTeam']}",
             "Best pick": bp["text"], "Best pick %": bp["prob"] * 100, "How to bet": bp["how"],
-            "Pick key": bp["key"],
+            "Pick key": bp["key"], "Missing players": missing,
             "Predicted score": pred,
             "Top 5 scores": ", ".join(f"{sc} ({pr*100:.0f}%)" for sc, pr in top_scores(m)),
             "Home %": p["H"] * 100, "Draw %": p["D"] * 100, "Away %": p["A"] * 100,
@@ -1449,7 +1452,8 @@ def match_advice(preds: pd.DataFrame, flags: pd.DataFrame, bankroll: float,
 
 def weekly_overview(fixtures: pd.DataFrame, all_results: dict, half_life: int,
                     goals_weight: float, book: str, min_edge: float,
-                    max_edge: float, bankroll: float, allow_all: bool = False):
+                    max_edge: float, bankroll: float, allow_all: bool = False,
+                    injuries: pd.DataFrame | None = None):
     """
     Predictions + advice for every upcoming fixture in every covered league.
     Returns (advice table, value flags, {league: model}).
@@ -1466,7 +1470,7 @@ def weekly_overview(fixtures: pd.DataFrame, all_results: dict, half_life: int,
         try:
             model = fit_model(res, half_life, goals_weight)
             flags = flagged_bets(w, model, book, min_edge, max_edge)
-            adv_frames.append(match_advice(score_predictions(w, model), flags,
+            adv_frames.append(match_advice(score_predictions(w, model, injuries), flags,
                                            bankroll, allow_all))
         except Exception:
             continue                       # one broken league never blocks the rest
@@ -1731,7 +1735,10 @@ def write_predictions_md(adv: pd.DataFrame, flags: pd.DataFrame, path: Path,
                 for _, r in top.iterrows():
                     lines += [f"{int(r['Rank'])}. {r['Time']} · **{r['Match']}** "
                               f"({r['Competition']}) — {r['Best pick']}  ",
-                              f"   📝 {r['How to bet']}"]
+                              f"   📝 {r['How to bet']}"
+                              + (f"  \n   🚑 Missing: {r['Missing players']}"
+                                 if isinstance(r.get("Missing players"), str)
+                                 and r.get("Missing players") else "")]
                 lines += ["", ticket_line(top), ""]
         lines += ["## 📈 Live track record of best picks", ""] + record_lines + [""]
         lines += [SAFE_RULES, ""]
@@ -2147,39 +2154,233 @@ def save_odds_status(status: dict):
         pass
 
 
-def match_fixture_odds(fx, cup_odds: pd.DataFrame) -> dict:
-    """Bookmaker odds for one cup fixture: same kick-off (+/- 3 h) and both club
-    names clearly similar. Anything doubtful returns {} (never a wrong match)."""
-    if cup_odds is None or cup_odds.empty:
-        return {}
+def _team_sim(ours: str, theirs: str) -> float:
+    """0..1 similarity of two spellings of a club / national team."""
     import difflib
+    if FEED_ALIASES.get(theirs) == ours or theirs == ours:
+        return 1.0
+    a, b = _name_key(ours, core=True), _name_key(theirs, core=True)
+    if not a or not b:
+        return 0.0
+    if a in b or b in a:
+        return 1.0
+    return difflib.SequenceMatcher(None, a, b).ratio()
+
+
+def match_fixture_row(fx, df: pd.DataFrame, hours: int = 3):
+    """The row of `df` (Kickoff, HomeTeam, AwayTeam) that is the same match as
+    fixture `fx`: kick-off within +/- `hours` and both names similar enough.
+    Doubtful cases return None - a wrong match is worse than none."""
+    if df is None or df.empty:
+        return None
     ko = pd.Timestamp(fx["Kickoff"])
     ko = ko.tz_localize("UTC") if ko.tzinfo is None else ko.tz_convert("UTC")
-    c = cup_odds
-    if "_ko" not in c.columns:
-        c = c.assign(_ko=pd.to_datetime(c["Kickoff"], utc=True, errors="coerce"))
-    c = c[(c["_ko"] - ko).abs() <= pd.Timedelta(hours=3)]
-    if c.empty:
-        return {}
-
-    def sim(x, y):
-        a, b = _name_key(x, core=True), _name_key(y, core=True)
-        if not a or not b:
-            return 0.0
-        if a in b or b in a:
-            return 1.0
-        return difflib.SequenceMatcher(None, a, b).ratio()
+    c = df if "_ko" in df.columns else df.assign(
+        _ko=pd.to_datetime(df["Kickoff"], utc=True, errors="coerce"))
+    c = c[(c["_ko"] - ko).abs() <= pd.Timedelta(hours=hours)]
     best, best_score = None, 0.0
     for _, r in c.iterrows():
-        sh, sa = sim(fx["HomeTeam"], r["HomeTeam"]), sim(fx["AwayTeam"], r["AwayTeam"])
+        sh, sa = _team_sim(fx["HomeTeam"], r["HomeTeam"]), _team_sim(fx["AwayTeam"], r["AwayTeam"])
         score = (sh + sa) / 2
-        if min(sh, sa) >= 0.5 and score > best_score:
+        ok = (min(sh, sa) >= 0.5 and score >= 0.7) or (max(sh, sa) >= 0.95 and min(sh, sa) >= 0.25)
+        if ok and score > best_score:
             best, best_score = r, score
-    if best is None or best_score < 0.7:
+    return best
+
+
+def match_fixture_odds(fx, cup_odds: pd.DataFrame) -> dict:
+    """Bookmaker odds for one cup fixture (see match_fixture_row)."""
+    best = match_fixture_row(fx, cup_odds)
+    if best is None:
         return {}
-    o = {k: float(best[k]) for k in ("H", "D", "A", "O25", "U25")
-         if pd.notna(best.get(k)) and float(best[k]) > 1}
-    return o
+    return {k: float(best[k]) for k in ("H", "D", "A", "O25", "U25")
+            if pd.notna(best.get(k)) and float(best[k]) > 1}
+
+
+# -----------------------------------------------------------------------------
+# Missing players (API-Football Pro, GitHub secret APIFOOTBALL_KEY). The
+# scheduled run saves the next 3 days' injuries / suspensions and the missing
+# players' season stats; predictions lower a team's attack for missing scorers
+# and raise its leakiness for missing regular goalkeepers / defenders.
+# These sizes are deliberately cautious and not yet backtested.
+# -----------------------------------------------------------------------------
+AF_LEAGUES = {39: "E0", 40: "E1", 41: "E2", 42: "E3", 43: "EC", 140: "SP1", 141: "SP2",
+              135: "I1", 136: "I2", 78: "D1", 79: "D2", 61: "F1", 62: "F2", 88: "N1",
+              94: "P1", 203: "T1", 179: "SC0", 180: "SC1", 183: "SC2", 184: "SC3",
+              144: "B1", 197: "G1", 235: "RUS", 98: "JPN", 169: "CHN",
+              2: "UCL", 3: "UEL", 848: "UECL", 5: "UNL"}
+INJ_WEIGHT = {"Missing Fixture": 1.0, "Questionable": 0.5}
+INJ_ATT_KEEP = 0.6          # share of a missing player's goal threat that is lost
+INJ_ATT_CAP, INJ_DEF_CAP = 0.30, 0.15
+INJ_DEF_BUMP = {"Goalkeeper": 0.06, "Defender": 0.03, "Midfielder": 0.015}
+
+
+def refresh_injuries(key: str, now=None, days: int = 3, max_players: int = 400) -> dict:
+    """Fetch upcoming fixtures, injuries/suspensions and the missing players'
+    season stats from API-Football; save them in the backup folder."""
+    now = now or pd.Timestamp.now(tz="UTC")
+    status = {"time": now.strftime("%Y-%m-%d %H:%M UTC"), "key_present": bool(key)}
+    if not key:
+        status["result"] = "no APIFOOTBALL_KEY secret"
+        return status
+    dates = [(now + pd.Timedelta(days=d)).strftime("%Y-%m-%d") for d in range(days + 1)]
+    fx_rows, leagues_seen, used = [], {}, 0
+    for d in dates:
+        js = _apifootball_get("/fixtures", key, date=d, timezone="UTC") or {}
+        used += 1
+        if js.get("errors"):
+            status.setdefault("errors", []).append(f"fixtures {d}: {js['errors']}")
+            continue
+        for f in js.get("response") or []:
+            lg = (f.get("league") or {}).get("id")
+            if lg not in AF_LEAGUES:
+                continue
+            if ((f.get("fixture") or {}).get("status") or {}).get("short") not in ("NS", "TBD", "PST"):
+                continue
+            leagues_seen[AF_LEAGUES[lg]] = f"{f['league'].get('name')} ({f['league'].get('country')})"
+            fx_rows.append({"FixtureId": f["fixture"]["id"], "Kickoff": f["fixture"]["date"],
+                            "League": AF_LEAGUES[lg], "Season": f["league"].get("season"),
+                            "HomeId": f["teams"]["home"]["id"], "HomeTeam": f["teams"]["home"]["name"],
+                            "AwayId": f["teams"]["away"]["id"], "AwayTeam": f["teams"]["away"]["name"]})
+    fixtures = pd.DataFrame(fx_rows).drop_duplicates("FixtureId") if fx_rows else pd.DataFrame()
+    status["leagues_found"] = leagues_seen
+    status["fixtures"] = int(len(fixtures))
+    if fixtures.empty:
+        status["result"] = "no upcoming fixtures found"
+        status["requests_used"] = used
+        return status
+    ids = set(fixtures["FixtureId"])
+    inj_rows = []
+    for d in dates:
+        js = _apifootball_get("/injuries", key, date=d) or {}
+        used += 1
+        if js.get("errors"):
+            status.setdefault("errors", []).append(f"injuries {d}: {js['errors']}")
+            continue
+        for r in js.get("response") or []:
+            fid = (r.get("fixture") or {}).get("id")
+            if fid in ids:
+                pl = r.get("player") or {}
+                inj_rows.append({"FixtureId": fid, "TeamId": (r.get("team") or {}).get("id"),
+                                 "PlayerId": pl.get("id"), "Player": pl.get("name"),
+                                 "Type": pl.get("type"), "Reason": pl.get("reason")})
+    injuries = (pd.DataFrame(inj_rows).drop_duplicates(["FixtureId", "PlayerId"])
+                if inj_rows else pd.DataFrame(columns=["FixtureId", "TeamId", "PlayerId",
+                                                       "Player", "Type", "Reason"]))
+    # season stats of the missing players (cached for 6 days)
+    cache = load_snapshot("af_players")
+    need = (injuries.merge(fixtures[["FixtureId", "Season"]], on="FixtureId")
+            [["PlayerId", "Season"]].drop_duplicates()) if not injuries.empty else pd.DataFrame()
+    fresh = set()
+    if not cache.empty:
+        upd = pd.to_datetime(cache["Updated"], utc=True, errors="coerce")
+        ok = cache[upd > now - pd.Timedelta(days=6)]
+        fresh = set(zip(ok["PlayerId"].astype(int), ok["Season"].astype(int)))
+    new_rows = []
+    for _, r in need.iterrows():
+        if len(new_rows) >= max_players:
+            status["players_skipped"] = True
+            break
+        k = (int(r["PlayerId"]), int(r["Season"]))
+        if k in fresh:
+            continue
+        js = _apifootball_get("/players", key, id=k[0], season=k[1]) or {}
+        used += 1
+        app_, lin, mins, g, a, pos = 0, 0, 0, 0, 0, None
+        for st_ in ((js.get("response") or [{}])[0].get("statistics") or []):
+            gm = st_.get("games") or {}
+            app_ += gm.get("appearences") or 0
+            lin += gm.get("lineups") or 0
+            mins += gm.get("minutes") or 0
+            g += (st_.get("goals") or {}).get("total") or 0
+            a += (st_.get("goals") or {}).get("assists") or 0
+            pos = pos or gm.get("position")
+        new_rows.append({"PlayerId": k[0], "Season": k[1], "Position": pos, "Apps": app_,
+                         "Starts": lin, "Minutes": mins, "Goals": g, "Assists": a,
+                         "Updated": now.isoformat()})
+    players = pd.concat([cache, pd.DataFrame(new_rows)], ignore_index=True) if new_rows else cache
+    if not players.empty:
+        players = players.drop_duplicates(["PlayerId", "Season"], keep="last")
+    status.update(injured=int(len(injuries)), players_fetched=len(new_rows), requests_used=used)
+    save_snapshot("af_fixtures", fixtures)
+    if not injuries.empty:
+        save_snapshot("af_injuries", injuries)
+    if not players.empty:
+        save_snapshot("af_players", players)
+    status["result"] = f"{len(injuries)} missing players across {len(fixtures)} fixtures"
+    return status
+
+
+def load_injury_table() -> pd.DataFrame:
+    """One row per missing player of an upcoming fixture, with season stats and
+    which side (H/A) he plays for. Empty when no data is available."""
+    fx, inj, pl = load_snapshot("af_fixtures"), load_snapshot("af_injuries"), load_snapshot("af_players")
+    if fx.empty or inj.empty:
+        return pd.DataFrame()
+    t = inj.merge(fx, on="FixtureId", how="inner")
+    t["Side"] = np.where(t["TeamId"] == t["HomeId"], "H",
+                         np.where(t["TeamId"] == t["AwayId"], "A", ""))
+    t = t[t["Side"] != ""]
+    if not pl.empty:
+        t = t.merge(pl, on=["PlayerId", "Season"], how="left")
+    for c in ("Apps", "Starts", "Minutes", "Goals", "Assists"):
+        t[c] = pd.to_numeric(t[c], errors="coerce").fillna(0) if c in t.columns else 0
+    if "Position" not in t.columns:
+        t["Position"] = None
+    t["_ko"] = pd.to_datetime(t["Kickoff"], utc=True, errors="coerce")
+    return t
+
+
+def injury_effect(players: pd.DataFrame, team_xg: float) -> tuple:
+    """(attack change, defence-leakiness change, text, key players) for the
+    missing players of ONE team."""
+    if players is None or players.empty:
+        return 0.0, 0.0, "", 0
+    att = dfn = 0.0
+    parts, key = [], 0
+    for _, r in players.iterrows():
+        w = INJ_WEIGHT.get(str(r.get("Type")), 0.5)
+        apps, mins = float(r.get("Apps") or 0), float(r.get("Minutes") or 0)
+        g, a, starts = float(r.get("Goals") or 0), float(r.get("Assists") or 0), float(r.get("Starts") or 0)
+        per_match = (g + 0.5 * a) / apps if apps > 0 and mins >= 180 else 0.0
+        att += w * INJ_ATT_KEEP * per_match / max(team_xg, 0.5)
+        regular = starts >= 3
+        if regular:
+            dfn += w * INJ_DEF_BUMP.get(str(r.get("Position")), 0.0)
+        important = per_match >= 0.25 or (regular and r.get("Position") in ("Goalkeeper", "Defender"))
+        key += int(important and w >= 1)
+        tag = []
+        if g or a:
+            tag.append(f"{int(g)}G {int(a)}A")
+        if r.get("Position") == "Goalkeeper" and regular:
+            tag.append("first-choice GK")
+        if w < 1:
+            tag.append("doubtful")
+        name = str(r.get("Player"))
+        parts.append(("⚠️" if important else "") + name + (f" ({', '.join(tag)})" if tag else ""))
+    parts.sort(key=lambda x: not x.startswith("⚠️"))
+    text = ", ".join(parts[:5]) + (f" +{len(parts) - 5} more" if len(parts) > 5 else "")
+    return -min(att, INJ_ATT_CAP), min(dfn, INJ_DEF_CAP), text, key
+
+
+def fixture_injuries(fx, inj_table: pd.DataFrame, model, neutral: bool = False):
+    """(adj dict for predict(), short text) for one of our fixtures."""
+    if inj_table is None or inj_table.empty:
+        return None, ""
+    fxs = inj_table.drop_duplicates("FixtureId")
+    row = match_fixture_row(fx, fxs)
+    if row is None:
+        return None, ""
+    lh, la = expected_goals(model, fx["HomeTeam"], fx["AwayTeam"], neutral=neutral)
+    t = inj_table[inj_table["FixtureId"] == row["FixtureId"]]
+    ha, hd, ht, hk = injury_effect(t[t["Side"] == "H"], lh)
+    aa, ad, at, ak = injury_effect(t[t["Side"] == "A"], la)
+    if not ht and not at:
+        return None, ""
+    text = " | ".join(x for x in (f"{fx['HomeTeam']}: {ht}" if ht else "",
+                                  f"{fx['AwayTeam']}: {at}" if at else "") if x)
+    adj = {"h_att": ha, "h_def": hd, "a_att": aa, "a_def": ad}
+    return (adj if any(abs(v) > 1e-9 for v in adj.values()) else None), text
 
 
 # -----------------------------------------------------------------------------
@@ -2238,7 +2439,8 @@ def load_cup_odds() -> pd.DataFrame:
 
 def cup_predictions(fixtures: pd.DataFrame, model: dict, code_col: str = "Comp",
                     days: int = 7, min_edge: float = DEFAULTS["min_edge"],
-                    cup_odds: pd.DataFrame | None = None) -> pd.DataFrame:
+                    cup_odds: pd.DataFrame | None = None,
+                    injuries: pd.DataFrame | None = None) -> pd.DataFrame:
     """Prediction rows (same columns as the league advice table) for cup or
     international fixtures that have no odds feed."""
     if fixtures is None or fixtures.empty or model is None:
@@ -2247,7 +2449,8 @@ def cup_predictions(fixtures: pd.DataFrame, model: dict, code_col: str = "Comp",
     rows = []
     for _, fx in up.iterrows():
         neutral = bool(fx.get("Neutral", False))
-        lh, la, m, p = predict(model, fx["HomeTeam"], fx["AwayTeam"], neutral=neutral)
+        adj, missing = fixture_injuries(fx, injuries, model, neutral)
+        lh, la, m, p = predict(model, fx["HomeTeam"], fx["AwayTeam"], adj, neutral=neutral)
         pred, _ = predicted_score(m, p)
         best = max(("H", "D", "A"), key=lambda k: p[k])
         lab = {"H": fx["HomeTeam"], "D": "Draw", "A": fx["AwayTeam"]}[best]
@@ -2267,7 +2470,7 @@ def cup_predictions(fixtures: pd.DataFrame, model: dict, code_col: str = "Comp",
             "Kickoff UTC": fx["Kickoff"],
             "Match": f"{fx['HomeTeam']} v {fx['AwayTeam']}",
             "Best pick": bp["text"], "Best pick %": bp["prob"] * 100, "How to bet": bp["how"],
-            "Pick key": bp["key"],
+            "Pick key": bp["key"], "Missing players": missing,
             "Predicted score": pred,
             "Top 5 scores": ", ".join(f"{sc} ({pr*100:.0f}%)" for sc, pr in top_scores(m)),
             "Home %": p["H"] * 100, "Draw %": p["D"] * 100, "Away %": p["A"] * 100,
@@ -2439,7 +2642,9 @@ def match_cards_html(d: pd.DataFrame) -> str:
             + (f"<div class='bfe-row'>🎯 Best pick: <b>{e(str(r['Best pick']))}</b></div>"
                if isinstance(r.get("Best pick"), str) else "")
             + (f"<div class='bfe-row bfe-small'>📝 <b>How to bet:</b> {e(str(r['How to bet']))}</div>"
-               if isinstance(r.get("How to bet"), str) else "") +
+               if isinstance(r.get("How to bet"), str) else "")
+            + (f"<div class='bfe-row bfe-small'>🚑 <b>Missing:</b> {e(str(r['Missing players']))}</div>"
+               if isinstance(r.get("Missing players"), str) and r.get("Missing players") else "") +
             f"<div class='bfe-row'>Predicted <b>{e(str(r.get('Predicted score', '')))}</b> · "
             f"H {r['Home %']:.0f}% · D {r['Draw %']:.0f}% · A {r['Away %']:.0f}%{btts}</div>"
             + (f"<div class='bfe-row bfe-small'>Top 5: {e(str(top))}</div>" if top else "")
@@ -2547,7 +2752,7 @@ def render_day_by_day(adv: pd.DataFrame, tz: str, key: str):
         return [css if c in ("Advice", "Stake") else "" for c in row.index]
 
     cols = ["Time", "Competition", "Match", "Advice", "Stake", "Best pick", "How to bet",
-            "Predicted score",
+            "Missing players", "Predicted score",
             "Top 5 scores", "Home %", "Draw %", "Away %", *GOAL_COLS, "BTTS %"]
     pct_cols = ["Home %", "Draw %", "Away %", *GOAL_COLS, "BTTS %"]
     cols = [c for c in cols if c in view.columns]
@@ -3381,10 +3586,11 @@ def main():
     STATUS_OVERRIDES.clear()
     STATUS_OVERRIDES.update(safety_overrides(settled_all))
 
+    inj_table = load_injury_table()
     with st.spinner("Fitting models for every league..."):
         ov_adv, ov_flags, ov_models = weekly_overview(
             fixtures, all_results, half_life, goals_weight, book, min_edge,
-            max_edge, bankroll, allow_all)
+            max_edge, bankroll, allow_all, inj_table)
     model = ov_models.get(league) or fit_model(results, half_life, goals_weight)
 
     with st.spinner("Loading UEFA competitions and national teams..."):
@@ -3399,8 +3605,8 @@ def main():
         intl_model = fit_international(intl) if not intl.empty else None
         cup_odds = load_cup_odds()
     week_adv = combine_overview(
-        ov_adv, cup_predictions(uefa, uefa_model, "Comp", 7, min_edge, cup_odds),
-        cup_predictions(nations_fx, intl_model, "Comp", 7, min_edge, cup_odds))
+        ov_adv, cup_predictions(uefa, uefa_model, "Comp", 7, min_edge, cup_odds, inj_table),
+        cup_predictions(nations_fx, intl_model, "Comp", 7, min_edge, cup_odds, inj_table))
 
     age_days = (pd.Timestamp(dt.date.today()) - model["last_date"]).days
     with st.expander(f"📈 Model status - {league_name(league)} "
@@ -3853,7 +4059,8 @@ def main():
             if up.empty:
                 st.info("No UEFA club fixtures in the next 14 days.")
             else:
-                cup_tab = cup_predictions(uefa, uefa_model, "Comp", 14, min_edge, cup_odds)
+                cup_tab = cup_predictions(uefa, uefa_model, "Comp", 14, min_edge, cup_odds,
+                                          inj_table)
                 if phone_mode():
                     render_match_cards(cup_tab, tz)
                 else:
@@ -3910,7 +4117,7 @@ def main():
                      "The app retries automatically.")
         else:
             im = intl_model
-            nl_up = cup_predictions(nations_fx, im, "Comp", 30, min_edge, cup_odds)
+            nl_up = cup_predictions(nations_fx, im, "Comp", 30, min_edge, cup_odds, inj_table)
             st.markdown("#### Upcoming fixtures (next 30 days)")
             st.caption("Accuracy in testing (Jul 2024 - Oct 2026, model refitted on past "
                        "matches only): right result in 62.9% of 423 competitive games "
@@ -4100,9 +4307,23 @@ def run_headless_log(argv=None) -> int:
     for lg, (_, why) in STATUS_OVERRIDES.items():
         print(f"SAFETY: {league_name(lg)} - {why}")
     max_edge = np.inf if args.max_edge >= 100 else args.max_edge
+    # Missing players (needs the APIFOOTBALL_KEY secret on a paid plan)
+    try:
+        inj_status = refresh_injuries(os.environ.get("APIFOOTBALL_KEY", "").strip())
+    except Exception as exc:
+        inj_status = {"result": f"failed: {type(exc).__name__}"}
+    if not args.no_backup:
+        try:
+            SNAPSHOT_DIR.mkdir(parents=True, exist_ok=True)
+            (SNAPSHOT_DIR / "injuries_status.json").write_text(
+                json.dumps(inj_status, indent=1, default=str))
+        except Exception:
+            pass
+    print(f"  missing players: {inj_status.get('result')}")
+    inj_table = load_injury_table()
     adv, flags, models = weekly_overview(
         fixtures, all_results, args.half_life, args.goals_pct / 100, args.book,
-        args.min_edge, max_edge, args.bankroll, args.all_leagues_bet)
+        args.min_edge, max_edge, args.bankroll, args.all_leagues_bet, inj_table)
     _, added, err = update_paper_log(flags, args.all_leagues_bet)
     cups = []
     uefa = intl_fx = pd.DataFrame()
@@ -4140,7 +4361,7 @@ def run_headless_log(argv=None) -> int:
             all_models = league_models(all_results, args.half_life, args.goals_pct / 100)
             teams = sorted(set(uefa["HomeTeam"]) | set(uefa["AwayTeam"]))
             cups.append(cup_predictions(uefa, fit_uefa(uefa, uefa_domestic(teams, all_models)),
-                                        "Comp", 7, args.min_edge, cup_odds))
+                                        "Comp", 7, args.min_edge, cup_odds, inj_table))
         intl = load_international()
         intl_fx = load_intl_fixtures()
         if not args.no_backup:
@@ -4150,7 +4371,7 @@ def run_headless_log(argv=None) -> int:
                 saved.append("intl_fixtures")
         if not intl.empty:
             cups.append(cup_predictions(intl_fx, fit_international(intl),
-                                        "Comp", 7, args.min_edge, cup_odds))
+                                        "Comp", 7, args.min_edge, cup_odds, inj_table))
     except Exception as exc:
         print(f"WARNING: UEFA / national-team predictions failed: {exc}")
     adv = combine_overview(adv, *cups)

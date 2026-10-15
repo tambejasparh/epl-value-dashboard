@@ -593,3 +593,55 @@ def test_cup_odds_parsing_matching_and_blend():
 def test_odds_refresh_without_key_spends_nothing():
     st_ = app.refresh_cup_odds("")
     assert st_["key_present"] is False and "no ODDS_API_KEY" in st_["result"]
+
+
+def _fake_injury_table(home="Arsenal", away="Chelsea", api_home="Arsenal FC",
+                       api_away="Chelsea FC"):
+    ko = (TODAY + pd.Timedelta(days=1, hours=15)).tz_localize("UTC")
+    t = pd.DataFrame([
+        {"FixtureId": 1, "Kickoff": ko.isoformat(), "HomeId": 10, "AwayId": 20,
+         "HomeTeam": api_home, "AwayTeam": api_away, "Season": 2026, "League": "E0",
+         "TeamId": 10, "PlayerId": 100, "Player": "Top Scorer", "Type": "Missing Fixture",
+         "Reason": "Hamstring", "Position": "Attacker", "Apps": 8, "Starts": 8,
+         "Minutes": 700, "Goals": 6, "Assists": 2, "Side": "H"},
+        {"FixtureId": 1, "Kickoff": ko.isoformat(), "HomeId": 10, "AwayId": 20,
+         "HomeTeam": api_home, "AwayTeam": api_away, "Season": 2026, "League": "E0",
+         "TeamId": 20, "PlayerId": 200, "Player": "Keeper", "Type": "Missing Fixture",
+         "Reason": "Suspended", "Position": "Goalkeeper", "Apps": 8, "Starts": 8,
+         "Minutes": 720, "Goals": 0, "Assists": 0, "Side": "A"}])
+    t["_ko"] = pd.to_datetime(t["Kickoff"], utc=True)
+    return t, ko
+
+
+def test_missing_players_lower_attack_and_raise_leakiness():
+    t, ko = _fake_injury_table()
+    att, dfn, text, key = app.injury_effect(t[t["Side"] == "H"], 1.6)
+    assert -app.INJ_ATT_CAP <= att < 0 and dfn == 0 and key == 1 and "Top Scorer" in text
+    att2, dfn2, text2, _ = app.injury_effect(t[t["Side"] == "A"], 1.2)
+    assert att2 == 0 and dfn2 == app.INJ_DEF_BUMP["Goalkeeper"] and "first-choice GK" in text2
+    model = app._fit_model(LEAGUE_DATA["E0"], 400, 0.5)
+    fx = {"Kickoff": ko, "HomeTeam": "Arsenal", "AwayTeam": "Chelsea"}
+    adj, txt = app.fixture_injuries(fx, t, model)
+    assert adj["h_att"] < 0 and adj["a_def"] > 0 and "Arsenal:" in txt and "Chelsea:" in txt
+    base = app.predict(model, "Arsenal", "Chelsea")
+    hit = app.predict(model, "Arsenal", "Chelsea", adj)
+    assert abs(hit[0] - base[0] * (1 + adj["h_att"]) * (1 + adj["a_def"])) < 1e-9
+    assert abs(hit[1] - base[1]) < 1e-9
+    # rows carry the text; unknown fixture -> no adjustment
+    fxs = make_fixtures()
+    rows = app.score_predictions(fxs[fxs["Div"] == "E0"].head(1), model, t)
+    assert "Missing players" in rows.columns
+    assert app.fixture_injuries({"Kickoff": ko, "HomeTeam": "Everton", "AwayTeam": "Fulham"},
+                                t, model) == (None, "")
+
+
+def test_fixture_matching_handles_long_club_names():
+    t, ko = _fake_injury_table(api_home="Wolverhampton Wanderers", api_away="Chelsea FC")
+    assert app.match_fixture_row({"Kickoff": ko, "HomeTeam": "Wolves", "AwayTeam": "Chelsea"},
+                                 t) is not None
+    assert app.match_fixture_row({"Kickoff": ko, "HomeTeam": "Everton", "AwayTeam": "Brighton"},
+                                 t) is None
+
+
+def test_injury_refresh_without_key_spends_nothing():
+    assert "no APIFOOTBALL_KEY" in app.refresh_injuries("")["result"]
