@@ -747,3 +747,28 @@ def test_every_match_gets_a_bet_whatever_the_odds():
     assert (allrows["Check"] != "").all()      # all flagged ⚠️, but still listed
     html_ = app.all_matches_cards_html(allrows)
     assert html_.count("BET:") == len(adv) and "⚠️ riskier" in html_
+
+
+def test_past_days_show_the_bet_given_and_the_result():
+    ko = (pd.Timestamp.now(tz="UTC") - pd.Timedelta(hours=26)).floor("h")
+    log = pd.DataFrame([
+        {"Kickoff (UTC)": ko.strftime("%Y-%m-%d %H:%M"), "Match day": ko.strftime("%Y-%m-%d"),
+         "League": "E0", "Competition": "England - Premier League", "HomeTeam": "Arsenal",
+         "AwayTeam": "Chelsea", "Pick key": "U45", "Best pick": "x", "Prob %": 90.0,
+         "Bet at": 1.14, "Tier": "Banker", "Check": ""},
+        {"Kickoff (UTC)": ko.strftime("%Y-%m-%d %H:%M"), "Match day": ko.strftime("%Y-%m-%d"),
+         "League": "E0", "Competition": "England - Premier League", "HomeTeam": "Everton",
+         "AwayTeam": "Fulham", "Pick key": "O15", "Best pick": "x", "Prob %": 84.0,
+         "Bet at": 1.22, "Tier": "Fair", "Check": "below 85%"}])
+    res = pd.DataFrame({"League": ["E0", "E0"], "Date": [ko.tz_localize(None)] * 2,
+                        "HomeTeam": ["Arsenal", "Everton"], "AwayTeam": ["Chelsea", "Fulham"],
+                        "FTHG": [2, 1], "FTAG": [1, 0]})
+    settled = app.settle_pick_log(log, res)
+    past = app.past_matches_by_day(settled, "UTC")
+    g = list(past.values())[0]
+    assert list(g["Result"]) == ["✅ WON 2-1", "❌ LOST 1-0"]
+    assert list(g["Checked"]) == ["✅", "⚠️"]
+    line = app.day_result_line(g)
+    assert "1 of 2 bets won" in line and "checked bets: **1 of 1 won**" in line
+    sm = app.pick_summary(settled)
+    assert sm["checked"] == (1, 1)

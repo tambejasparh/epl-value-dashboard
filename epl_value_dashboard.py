@@ -1540,7 +1540,7 @@ SAFE_RULES = (
     "6. **Check team news** before kick-off; skip a pick if a key player is missing.")
 
 PICK_COLS = ["Kickoff (UTC)", "Match day", "League", "Competition", "HomeTeam", "AwayTeam",
-             "Pick key", "Best pick", "Prob %", "Bet at", "Tier"]
+             "Pick key", "Best pick", "Prob %", "Bet at", "Tier", "Check"]
 PICK_KEY = ["League", "Match day", "HomeTeam", "AwayTeam"]
 
 
@@ -1571,6 +1571,7 @@ def picks_from_overview(adv: pd.DataFrame) -> pd.DataFrame:
         "Prob %": (prob * 100).round(1),
         "Bet at": ((1 / prob) * (1 + DEFAULTS["min_edge"] / 100)).round(2),
         "Tier": [next(t for lim, _, t, _ in BEST_PICK_TIERS if q >= lim) for q in prob],
+        "Check": [ready_filter(r) for _, r in d.iterrows()],
     })[PICK_COLS]
 
 
@@ -1607,7 +1608,7 @@ def update_pick_log(adv: pd.DataFrame, now=None):
     new_keys = set(map(tuple, new[PICK_KEY].astype(str).values))
     keep_open = open_[[tuple(r) not in new_keys for r in open_[PICK_KEY].astype(str).values]] \
         if not open_.empty else open_
-    out = pd.concat([frozen, keep_open, new], ignore_index=True)[PICK_COLS]
+    out = pd.concat([frozen, keep_open, new], ignore_index=True).reindex(columns=PICK_COLS)
     out = out.sort_values("Kickoff (UTC)").reset_index(drop=True)
     try:
         PICK_LOG.parent.mkdir(parents=True, exist_ok=True)
@@ -1676,9 +1677,12 @@ def pick_summary(settled: pd.DataFrame) -> dict:
     done["Won"] = done["Won"].astype(bool)
     tiers = {t: (int(g["Won"].sum()), int(len(g))) for t, g in done.groupby("Tier")}
     strong = done[done["Tier"].isin(["Banker", "Strong"])]
+    chk = done[done["Check"].fillna("~").astype(str) == ""] if "Check" in done.columns \
+        else done.iloc[0:0]
     return {"n": int(len(done)), "won": int(done["Won"].sum()),
             "pct": 100 * done["Won"].mean(), "tiers": tiers,
             "strong": (int(strong["Won"].sum()), int(len(strong))),
+            "checked": (int(chk["Won"].sum()), int(len(chk))),
             "pending": int(settled["Won"].isna().sum()),
             "recent": done.sort_values("Kickoff (UTC)", ascending=False).head(20)}
 
@@ -1692,7 +1696,9 @@ def pick_record_lines(sm: dict) -> list:
     tiers = " · ".join(f"{t} {w}/{n} ({100*w/n:.0f}%)" for t in order
                        for w, n in [sm["tiers"].get(t, (0, 0))] if n)
     sw, sn = sm["strong"]
+    cw, cn = sm.get("checked", (0, 0))
     return [f"**{sm['won']} of {sm['n']} best picks won ({sm['pct']:.0f}%)**"
+            + (f" · ✅ 'Your bets' (passed all checks): {cw}/{cn} ({100*cw/cn:.0f}%)" if cn else "")
             + (f" · 🔒+⭐⭐⭐ picks: {sw}/{sn} ({100*sw/sn:.0f}%)" if sn else "")
             + f" · {sm['pending']} waiting for results", tiers]
 
@@ -1795,6 +1801,57 @@ def all_matches_by_day(adv: pd.DataFrame, tz: str) -> list:
     return out
 
 
+def past_matches_by_day(settled: pd.DataFrame, tz: str, days_back: int = 14) -> dict:
+    """{day: DataFrame} of matches already started, with the bet the system gave
+    before kick-off (frozen in the pick log) and the result."""
+    if settled is None or settled.empty:
+        return {}
+    d = settled.copy()
+    ko = pd.to_datetime(d["Kickoff (UTC)"], utc=True, errors="coerce")
+    now = pd.Timestamp.now(tz="UTC")
+    d = d[(ko <= now) & (ko > now - pd.Timedelta(days=days_back))].copy()
+    if d.empty:
+        return {}
+    local = pd.to_datetime(d["Kickoff (UTC)"], utc=True).dt.tz_convert(tz)
+    d["_day"], d["Time"] = local.dt.date, local.dt.strftime("%H:%M")
+    d["Match"] = d["HomeTeam"] + " v " + d["AwayTeam"]
+    d["Bet"] = [short_bet(k, h, a) for k, h, a in zip(d["Pick key"], d["HomeTeam"], d["AwayTeam"])]
+    d["Best pick %"] = pd.to_numeric(d["Prob %"], errors="coerce")
+    chk = d["Check"].astype(str) if "Check" in d.columns else pd.Series("nan", index=d.index)
+    d["Checked"] = np.where(chk == "", "✅", np.where(chk.isin(["nan", "None"]), "", "⚠️"))
+    d["Result"] = [("✅ WON " if w is True else "❌ LOST " if w is False else "") + str(sc)
+                   if sc != "pending" else "⏳ playing / waiting for result"
+                   for w, sc in zip(d["Won"], d["Score"])]
+    return {day: g.sort_values(["Kickoff (UTC)", "Competition"]) for day, g in d.groupby("_day")}
+
+
+def past_cards_html(g: pd.DataFrame) -> str:
+    e = html.escape
+    out = []
+    for _, r in g.iterrows():
+        cls = "bet" if str(r["Result"]).startswith("✅") else "watch" if str(r["Result"]).startswith("❌") else ""
+        out.append(f"<div class='bfe-card {cls}'>"
+                   f"<div class='bfe-top'>{e(str(r['Time']))} · {e(str(r['Competition']))} "
+                   f"{e(str(r['Checked']))}</div>"
+                   f"<div class='bfe-match'>{e(str(r['Match']))}</div>"
+                   f"<div class='bfe-row'>Bet given before kick-off: <b>{e(str(r['Bet']))}</b> "
+                   f"({r['Best pick %']:.0f}%)</div>"
+                   f"<div class='bfe-adv'>{e(str(r['Result']))}</div></div>")
+    return "".join(out)
+
+
+def day_result_line(g: pd.DataFrame) -> str:
+    done = g[g["Won"].isin([True, False])]
+    if done.empty:
+        return "⏳ No finished results for this day yet."
+    w = int((done["Won"] == True).sum())  # noqa: E712
+    chk = done[done["Checked"] == "✅"]
+    cw = int((chk["Won"] == True).sum())  # noqa: E712
+    return (f"Results: **{w} of {len(done)} bets won** ({100*w/len(done):.0f}%)"
+            + (f" · ✅ checked bets: **{cw} of {len(chk)} won**" if len(chk) else "")
+            + (f" · {len(g) - len(done)} still waiting" if len(g) > len(done) else ""))
+
+
 def all_matches_cards_html(g: pd.DataFrame) -> str:
     e = html.escape
     cards = []
@@ -1893,7 +1950,8 @@ def safest_picks(adv: pd.DataFrame, tz: str, n: int = 6) -> tuple:
 def write_predictions_md(adv: pd.DataFrame, flags: pd.DataFrame, path: Path,
                          bankroll: float = DEFAULTS["bankroll"],
                          allow_all: bool = False, tz: str = DEFAULTS["timezone"],
-                         record_lines: list | None = None):
+                         record_lines: list | None = None,
+                         settled_log: pd.DataFrame | None = None):
     """Phone-friendly summary of the week, day by day (shown nicely on GitHub)."""
     record_lines = record_lines or pick_record_lines({"n": 0})
     stamp = pd.Timestamp.now(tz=tz).strftime("%a %d %b %Y %H:%M")
@@ -1933,6 +1991,16 @@ def write_predictions_md(adv: pd.DataFrame, flags: pd.DataFrame, path: Path,
                                  f"**{r['Match']}** ({r['Competition']}) — BET: {r['Bet']} · "
                                  f"{r['Best pick %']:.0f}%"
                                  + (f" · 1xBet {float(price):.2f}" if pd.notna(price) else ""))
+                lines.append("")
+        past = past_matches_by_day(settled_log, tz, days_back=3) if settled_log is not None else {}
+        if past:
+            lines += ["## 🧾 Results of the last days (bets given before kick-off)", ""]
+            for day in sorted(past, reverse=True):
+                g = past[day]
+                lines += [f"### {pd.Timestamp(day):%A %d %B}", "", day_result_line(g), ""]
+                for _, r in g.iterrows():
+                    lines.append(f"- {r['Checked']} {r['Time']} · **{r['Match']}** — "
+                                 f"{r['Bet']} ({r['Best pick %']:.0f}%) → {r['Result']}")
                 lines.append("")
         lines += ["## 📈 Live track record of best picks", ""] + record_lines + [""]
         lines += [SAFE_RULES, ""]
@@ -2977,36 +3045,63 @@ def render_safest_picks(adv: pd.DataFrame, tz: str, all_results: dict, uefa, nat
     st.markdown("#### 📋 Every match: what to bet")
     st.caption("Every match of the day from all leagues and tournaments, with the one bet "
                "the system would make - whatever the odds. ✅ = passes all checks (same as "
-               "'Your bets'); ⚠️ = riskier, with the reason. Winning chance is the model's "
-               "estimate.")
-    all_days = all_matches_by_day(adv, tz)
-    if not all_days:
-        st.info("No upcoming matches in the feeds yet.")
+               "'Your bets'); ⚠️ = riskier, with the reason. Past days show the bet given "
+               "before kick-off and whether it won.")
+    settled = settle_pick_log(read_pick_log(), result_frames(all_results, uefa, nations_fx))
+    sm = pick_summary(settled)
+    future = dict(all_matches_by_day(adv, tz))
+    past = past_matches_by_day(settled, tz)
+    days_all = sorted(set(future) | set(past))
+    if not days_all:
+        st.info("No matches in the feeds yet.")
     else:
-        labels = {day: f"{pd.Timestamp(day):%A %d %B} — {len(g)} matches"
-                  for day, g in all_days}
-        pick_day = st.selectbox("Day", [d for d, _ in all_days], format_func=labels.get,
-                                key="all_matches_day")
-        g = dict(all_days)[pick_day]
-        comps = ["All competitions"] + sorted(g["Competition"].unique())
-        comp = st.selectbox("Competition", comps, key="all_matches_comp")
-        if comp != comps[0]:
-            g = g[g["Competition"] == comp]
-        if phone_mode():
-            st.markdown(all_matches_cards_html(g), unsafe_allow_html=True)
-        else:
-            tab = pd.DataFrame({
-                "Time": g["Time"], "Competition": g["Competition"], "Match": g["Match"],
-                "What to bet": g["Bet"], "Chance %": g["Best pick %"].round(0),
-                "Fair min odds": g["Min odds"].round(2),
-                "1xBet odds": g.get("1xBet odds", pd.Series(np.nan, index=g.index)),
-                "Check": np.where(g["Check"] == "", "✅ passes all checks",
-                                  "⚠️ " + g["Check"])})
-            show_df(tab.style.format({"Chance %": "{:.0f}", "Fair min odds": "{:.2f}",
-                                      "1xBet odds": "{:.2f}"}, na_rep="—"),
-                    hide_index=True, height=min(900, 38 + 35 * len(tab)))
-    sm = pick_summary(settle_pick_log(read_pick_log(),
-                                      result_frames(all_results, uefa, nations_fx)))
+        today = pd.Timestamp.now(tz=tz).date()
+        default = today if today in days_all else next((d_ for d_ in days_all if d_ >= today),
+                                                       days_all[-1])
+
+        def _lab(d_):
+            n_ = len(future.get(d_, [])) + len(past.get(d_, []))
+            tag = " (today)" if d_ == today else " (past)" if d_ < today else ""
+            return f"{pd.Timestamp(d_):%A %d %B}{tag} — {n_} matches"
+        pick_day = st.selectbox("Day", days_all, index=days_all.index(default),
+                                format_func=_lab, key="all_matches_day")
+        gp, gf = past.get(pick_day), future.get(pick_day)
+        comps = sorted((set(gp["Competition"]) if gp is not None else set())
+                       | (set(gf["Competition"]) if gf is not None else set()))
+        comp = st.selectbox("Competition", ["All competitions"] + comps, key="all_matches_comp")
+        if comp != "All competitions":
+            gp = gp[gp["Competition"] == comp] if gp is not None else None
+            gf = gf[gf["Competition"] == comp] if gf is not None else None
+        if gp is not None and not gp.empty:
+            st.markdown("**Already played / started**")
+            st.info(day_result_line(gp))
+            if phone_mode():
+                st.markdown(past_cards_html(gp), unsafe_allow_html=True)
+            else:
+                show_df(pd.DataFrame({"Time": gp["Time"], "Competition": gp["Competition"],
+                                      "Match": gp["Match"], "Bet given": gp["Bet"],
+                                      "Chance %": gp["Best pick %"].round(0),
+                                      "Checked": gp["Checked"], "Result": gp["Result"]}),
+                        hide_index=True, height=min(700, 38 + 35 * len(gp)))
+        if gf is not None and not gf.empty:
+            if gp is not None and not gp.empty:
+                st.markdown("**Still to play**")
+            g = gf
+            if phone_mode():
+                st.markdown(all_matches_cards_html(g), unsafe_allow_html=True)
+            else:
+                tab = pd.DataFrame({
+                    "Time": g["Time"], "Competition": g["Competition"], "Match": g["Match"],
+                    "What to bet": g["Bet"], "Chance %": g["Best pick %"].round(0),
+                    "Fair min odds": g["Min odds"].round(2),
+                    "1xBet odds": g.get("1xBet odds", pd.Series(np.nan, index=g.index)),
+                    "Check": np.where(g["Check"] == "", "✅ passes all checks",
+                                      "⚠️ " + g["Check"])})
+                show_df(tab.style.format({"Chance %": "{:.0f}", "Fair min odds": "{:.2f}",
+                                          "1xBet odds": "{:.2f}"}, na_rep="—"),
+                        hide_index=True, height=min(900, 38 + 35 * len(tab)))
+        if (gp is None or gp.empty) and (gf is None or gf.empty):
+            st.caption("No matches for this filter.")
     with st.expander("📈 Live track record of best picks (real picks, saved before kick-off)",
                      expanded=bool(sm.get("n"))):
         if not sm.get("n"):
@@ -4757,19 +4852,20 @@ def run_headless_log(argv=None) -> int:
         print(f"WARNING: UEFA / national-team predictions failed: {exc}")
     adv = combine_overview(adv, *cups)
     record = ["(track record unavailable this run)"]
+    settled_p = None
     try:
         _, n_picks, perr = update_pick_log(adv)
         if perr:
             print(f"WARNING: could not write {PICK_LOG}: {perr}")
-        sm_p = pick_summary(settle_pick_log(read_pick_log(),
-                                            result_frames(full, uefa, intl_fx)))
+        settled_p = settle_pick_log(read_pick_log(), result_frames(full, uefa, intl_fx))
+        sm_p = pick_summary(settled_p)
         record = pick_record_lines(sm_p)
         print(f"  best picks: {n_picks} new logged | " + " ".join(record).replace("**", ""))
     except Exception as exc:
         print(f"WARNING: best-pick log failed: {exc}")
     try:
         write_predictions_md(adv, flags, PREDICTIONS_MD, args.bankroll,
-                             args.all_leagues_bet, args.timezone, record)
+                             args.all_leagues_bet, args.timezone, record, settled_p)
     except Exception as exc:
         print(f"WARNING: could not write {PREDICTIONS_MD}: {exc}")
     if err:
