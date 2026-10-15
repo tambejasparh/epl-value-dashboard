@@ -3120,14 +3120,7 @@ def render_safest_picks(adv: pd.DataFrame, tz: str, all_results: dict, uefa, nat
     settled = settle_pick_log(read_pick_log(), result_frames(all_results, uefa, nations_fx))
     sm = pick_summary(settled)
     future = dict(all_matches_by_day(adv, tz))
-    afk = app_apifootball_key()
-    live = pd.DataFrame()
-    if afk:
-        try:
-            live = live_fixtures(afk)
-        except Exception:
-            live = pd.DataFrame()
-    past = past_matches_by_day(settled, tz, live=live)
+    past = past_matches_by_day(settled, tz)
     days_all = sorted(set(future) | set(past))
     if not days_all:
         st.info("No matches in the feeds yet.")
@@ -3150,17 +3143,7 @@ def render_safest_picks(adv: pd.DataFrame, tz: str, all_results: dict, uefa, nat
             gp = gp[gp["Competition"] == comp] if gp is not None else None
             gf = gf[gf["Competition"] == comp] if gf is not None else None
         if gp is not None and not gp.empty:
-            c1, c2 = st.columns([3, 1])
-            c1.markdown("**Already played / started**"
-                        + (" — 🔴 live scores update every minute" if afk else ""))
-            if afk and c2.button("🔄 Refresh live", key="refresh_live"):
-                live_fixtures.clear()
-                st.rerun()
-            if not afk:
-                st.caption("Live scores: add your APIFOOTBALL_KEY to the app's secrets "
-                           "(Streamlit → Settings → Secrets) to see them here.")
-            st.caption("🔴 'Chance now' is the pre-match bet re-calculated from the current "
-                       "score and time left. Live odds move fast - compare before you bet.")
+            st.markdown("**Already played / started**")
             st.info(day_result_line(gp))
             if phone_mode():
                 st.markdown(past_cards_html(gp), unsafe_allow_html=True)
