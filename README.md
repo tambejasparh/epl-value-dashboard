@@ -7,7 +7,23 @@ League, Africa Cup of Nations, World Cup, Euros, Copa America, qualifiers). It d
 automatically, rates every team with a Dixon-Coles Poisson model, and tells
 you match by match whether to bet, how much, and the most likely scores.
 
-No API keys, no manual downloads, no data entry.
+Works with no keys at all. Two optional keys (stored as GitHub **Secrets**,
+never in the code) make it much stronger - see "Optional keys" below.
+
+## What to use every day (top of the app)
+
+1. **✅ Your bets for each day** - up to 5 bets per day that pass every check:
+   85%+ chance, bookmaker odds behind them (88%+ without), no key player missing
+   for the team you back, and - where known - 1xBet pays at least the minimum
+   (💚). Each says exactly what to select ("Double Chance → 1X", "Over/Under →
+   Under 4.5", ...) and the lowest odds to accept.
+2. **📋 Every match: what to bet** - every match of every competition, highest
+   chance first, with one bet each whatever the odds, marked ✅ (passes the
+   checks) or ⚠️ (riskier, with the reason). Past days (last 14) show the bet
+   given before kick-off and whether it won.
+3. **🎯 Strongest best picks** - the 🔒 Banker / ⭐⭐⭐ Strong bets from the list above.
+4. **📈 Live track record** - every pick is saved before kick-off and marked
+   won/lost afterwards (best_picks_log.csv).
 
 ---
 
@@ -27,6 +43,8 @@ Douala time) with no computer needed, and saves these in the repository:
   bets at a glance, then every match of every competition day by day with its
   advice, predicted score and a before-you-bet checklist (times in Douala time;
   add `--timezone Africa/Lagos` etc. to the run line in daily.yml to change it).
+- **best_picks_log.csv** - every best pick, saved before kick-off and settled
+  won/lost automatically (the live track record).
 - **paper_bets.csv** - the permanent record of every advised bet, settled
   automatically with profit and closing-line value. The dashboard reads it.
 - **data_snapshot/** - a backup copy of every data source. The app starts in
@@ -39,6 +57,25 @@ means something broke; GitHub emails you about failed runs.
 To change the bankroll used for stakes in predictions.md, edit the line
 `run: python epl_value_dashboard.py --log` in `.github/workflows/daily.yml`
 to e.g. `run: python epl_value_dashboard.py --log --bankroll 50000`.
+
+---
+
+## Optional keys (GitHub → Settings → Secrets and variables → Actions)
+
+| Secret | Service | What it adds | Cost |
+|---|---|---|---|
+| `ODDS_API_KEY` | the-odds-api.com | Bookmaker odds for European cup and national-team games, blended into those picks | Free plan (500 credits/month; uses ~200) |
+| `APIFOOTBALL_KEY` | api-football.com | Injuries/suspensions (picks adjusted, risky ones removed), **1xBet and other bookmaker prices for every pick market**, and back-up results when the free source falls behind | Pro plan ($19/month; the free plan does not cover the current season) |
+
+The status of both is shown in the 🩺 System Health tab. Keys are only used by
+the scheduled GitHub run; the app reads the saved results.
+
+## Your own domain
+
+`docs/index.html` shows the app full-screen. GitHub Pages serves it (Settings →
+Pages → branch main, folder /docs) at the custom domain set there (aicamer.com),
+with these DNS records at the registrar: A @ → 185.199.108.153, 185.199.109.153,
+185.199.110.153 and 185.199.111.153 and CNAME www → tambejasparh.github.io.
 
 ---
 

@@ -2970,8 +2970,9 @@ BEFORE_YOU_BET = (
     "**Before you place any bet**\n"
     "1. Your bookmaker's odds must be **at least** the price shown (for 🏆 games: at "
     "least the 'back only at' price). Lower odds = skip the bet.\n"
-    "2. Check team news: injuries, suspensions, rotation. If a key player is out, "
-    "re-check the match in the Match Analyzer with the What-If sliders.\n"
+    "2. Team news: the system already removes picks where a key player is missing "
+    "(injury or suspension data, updated 4 times a day). Late news (rotation, "
+    "line-ups an hour before kick-off) is not included - skip a bet if big news breaks.\n"
     "3. Stake no more than shown, and never chase losses.\n"
     "4. 🎯 Best pick = the option most likely to win. In testing, best picks won "
     "~88% in leagues (8,591 matches: 🔒 Banker ~92%, ⭐⭐⭐ Strong ~90%, ⭐⭐ Good "
@@ -3667,7 +3668,8 @@ def data_health(all_results: dict, fixtures, uefa, intl, intl_fx) -> pd.DataFram
                      "Details": "No fixtures file - league advice unavailable"})
     else:
         n7 = len(upcoming_fixtures(fixtures))
-        rows.append({"Source": "Fixtures & odds (all leagues)", "Status": "✅" if n7 else "⚠️",
+        rows.append({"Source": "Fixtures (all leagues: odds feed + full schedules)",
+                     "Status": "✅" if n7 else "⚠️",
                      "Latest data": f"{fixtures['Kickoff'].max():%d %b %Y}", "From": src(fixtures),
                      "Details": f"{n7} matches in the next 7 days"
                                 + ("" if n7 else " (normal mid-week or in international breaks)")})
@@ -3898,7 +3900,8 @@ def match_query(home: str, away: str, directory: dict, all_models: dict, uefa_mo
 
 
 def render_match_search(directory: dict, all_models: dict, uefa_model, intl_model,
-                        fixtures, book, min_edge, max_edge, bankroll, allow_all):
+                        fixtures, book, min_edge, max_edge, bankroll, allow_all,
+                        week_adv: pd.DataFrame | None = None, tz: str = DEFAULTS["timezone"]):
     st.markdown("#### 🔎 Ask about any match")
     with st.form("match_search_form", border=False):
         q1, q2, q3 = st.columns([3, 3, 1])
@@ -3945,6 +3948,26 @@ def render_match_search(directory: dict, all_models: dict, uefa_model, intl_mode
                + (" (model + bookmaker odds)" if used_odds else "")
                + f". {bp['tier']} picks won {bp['tier_hit']} of the time in testing.\n\n"
                f"📝 **How to bet:** {bp['how']}")
+    # Same fixture in this week's list? Then show the system's checked verdict
+    # (it also uses missing players and 1xBet's price).
+    if week_adv is not None and not week_adv.empty and "Pick key" in week_adv.columns:
+        names = {f"{res['mh']} v {res['ma']}", f"{home} v {away}"}
+        hit = week_adv[week_adv["Match"].isin(names)]
+        if not hit.empty:
+            r = add_local_time(hit, tz).iloc[0]
+            h_, a_ = r["Match"].split(" v ", 1)
+            chk = ready_filter(r)
+            price = r.get("1xBet odds", np.nan)
+            msg = (f"📅 **This match is on {r['Day']} at {r['Time']}.** With missing players and "
+                   f"bookmaker prices included, the system's bet is: **{short_bet(r['Pick key'], h_, a_)}** "
+                   f"({r['Best pick %']:.0f}% chance"
+                   + (f", 1xBet {float(price):.2f}" if pd.notna(price) else "") + "). ")
+            if chk == "":
+                st.success(msg + "✅ It passes all checks - it is in 'Your bets'.")
+            else:
+                st.warning(msg + f"⚠️ Riskier: {chk}.")
+            if isinstance(r.get("Missing players"), str) and r.get("Missing players"):
+                st.caption(f"🚑 Missing: {r['Missing players']}")
     adv = res.get("advice")
     if adv is not None:
         if adv.startswith("BET"):
@@ -4206,7 +4229,7 @@ def main():
     with safe_section("Match search"):
         directory = team_directory(all_models, uefa_model, intl_model)
         render_match_search(directory, all_models, uefa_model, intl_model, fixtures,
-                            book, min_edge, max_edge, bankroll, allow_all)
+                            book, min_edge, max_edge, bankroll, allow_all, week_adv, tz)
     st.markdown("---")
 
     if phone_mode():

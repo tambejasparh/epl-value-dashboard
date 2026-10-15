@@ -806,3 +806,9 @@ def test_every_match_list_is_sorted_by_chance():
     adv.insert(0, "Competition", adv["League"])
     for _, g in app.all_matches_by_day(adv, "Africa/Douala"):
         assert g["Best pick %"].is_monotonic_decreasing
+
+
+def test_search_signature_accepts_week_list():
+    import inspect
+    sig = inspect.signature(app.render_match_search)
+    assert "week_adv" in sig.parameters and "tz" in sig.parameters
