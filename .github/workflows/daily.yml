@@ -37,6 +37,9 @@ jobs:
 
       - name: Fetch data, predict, log value bets, refresh backup
         run: python epl_value_dashboard.py --log
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          APIFOOTBALL_KEY: ${{ secrets.APIFOOTBALL_KEY }}
 
       - name: Save results to the repository
         run: |

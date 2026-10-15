@@ -553,3 +553,43 @@ def test_ticket_line_multiplies_chances():
     top = pd.DataFrame({"Best pick %": [90.0, 90.0, 90.0, 90.0, 90.0]})
     txt = app.ticket_line(top)
     assert "about **59%**" in txt and "All 5" in txt
+
+
+def test_cup_odds_parsing_matching_and_blend():
+    ko = (TODAY + pd.Timedelta(days=2, hours=19)).tz_localize("UTC")
+    ev = [{"commence_time": ko.strftime("%Y-%m-%dT%H:%M:%SZ"), "home_team": "Real Madrid CF",
+           "away_team": "FC Red Bull Salzburg", "bookmakers": [
+               {"markets": [{"key": "h2h", "outcomes": [
+                   {"name": "Real Madrid CF", "price": 1.30}, {"name": "Draw", "price": 6.0},
+                   {"name": "FC Red Bull Salzburg", "price": 9.0}]},
+                   {"key": "totals", "outcomes": [{"name": "Over", "price": 1.6, "point": 2.5},
+                                                  {"name": "Under", "price": 2.3, "point": 2.5}]}]},
+               {"markets": [{"key": "h2h", "outcomes": [
+                   {"name": "Real Madrid CF", "price": 1.34}, {"name": "Draw", "price": 5.8},
+                   {"name": "FC Red Bull Salzburg", "price": 8.6}]}]}]}]
+    df = app.odds_events_to_frame(ev, "UCL")
+    assert len(df) == 1 and abs(df["H"].iloc[0] - 1.32) < 1e-9 and df["O25"].iloc[0] == 1.6
+    df["_ko"] = pd.to_datetime(df["Kickoff"], utc=True)
+    fx = {"Kickoff": ko, "HomeTeam": "Real Madrid", "AwayTeam": "Salzburg"}
+    assert len(app.match_fixture_odds(fx, df)) == 5
+    # a different match at the same time is never matched
+    assert app.match_fixture_odds({"Kickoff": ko, "HomeTeam": "Arsenal",
+                                   "AwayTeam": "Basel"}, df) == {}
+    # wrong day -> no match
+    assert app.match_fixture_odds({**fx, "Kickoff": ko + pd.Timedelta(days=1)}, df) == {}
+    # cup predictions use the bookmaker odds when they match
+    im = app.fit_international(make_international())
+    nfx = make_intl_fixtures()
+    o = pd.DataFrame([{"Comp": "AFCON", "Kickoff": nfx["Kickoff"].iloc[0], "HomeTeam": "Cameroon",
+                       "AwayTeam": "Ivory Coast", "H": 2.6, "D": 3.0, "A": 2.9,
+                       "O25": 2.2, "U25": 1.7}])
+    o["_ko"] = pd.to_datetime(o["Kickoff"], utc=True)
+    with_odds = app.cup_predictions(nfx, im, "Comp", 14, 3, o)
+    without = app.cup_predictions(nfx, im, "Comp", 14, 3, None)
+    assert with_odds["Advice"].iloc[0].startswith("Bookmakers:")
+    assert without["Advice"].iloc[0].startswith("No odds feed")
+
+
+def test_odds_refresh_without_key_spends_nothing():
+    st_ = app.refresh_cup_odds("")
+    assert st_["key_present"] is False and "no ODDS_API_KEY" in st_["result"]

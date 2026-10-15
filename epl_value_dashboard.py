@@ -2024,8 +2024,170 @@ def fit_uefa(uefa: pd.DataFrame, dom: dict,
             "goals_weight": 1.0}
 
 
+# -----------------------------------------------------------------------------
+# Bookmaker odds for cups and national teams (The Odds API, free key stored as
+# the GitHub secret ODDS_API_KEY). Only the scheduled GitHub run calls the API;
+# it saves the odds in data_snapshot/cup_odds.csv and the app reads that file.
+# Free plan: 500 credits/month; one call = 2 credits (1X2 + totals, EU region).
+# -----------------------------------------------------------------------------
+ODDS_API = "https://api.the-odds-api.com/v4"
+ODDS_SPORTS = {"soccer_uefa_champs_league": "UCL", "soccer_uefa_europa_league": "UEL",
+               "soccer_uefa_europa_conference_league": "UECL",
+               "soccer_uefa_nations_league": "UNL", "soccer_africa_cup_of_nations": "AFCON",
+               "soccer_fifa_world_cup": "WC", "soccer_uefa_european_championship": "EURO",
+               "soccer_conmebol_copa_america": "COPA"}
+ODDS_STATUS = "odds_status"
+
+
+def _odds_api_get(path: str, key: str, **params):
+    """One GET (no retries: failed calls must not burn credits). (json, headers)."""
+    if OFFLINE or not key:
+        return None, {}
+    try:
+        r = requests.get(f"{ODDS_API}{path}", params={"apiKey": key, **params},
+                         headers=HTTP_HEADERS, timeout=20)
+        if r.status_code != 200:
+            return {"_error": f"HTTP {r.status_code}"}, dict(r.headers)
+        return r.json(), dict(r.headers)
+    except Exception as exc:
+        return {"_error": type(exc).__name__}, {}
+
+
+def _median_price(event: dict, market: str, name: str, point=None):
+    prices = []
+    for bk in event.get("bookmakers", []):
+        for mk in bk.get("markets", []):
+            if mk.get("key") != market:
+                continue
+            for o in mk.get("outcomes", []):
+                if o.get("name") == name and (point is None or o.get("point") == point):
+                    try:
+                        prices.append(float(o["price"]))
+                    except (KeyError, TypeError, ValueError):
+                        pass
+    return float(np.median(prices)) if prices else np.nan
+
+
+def odds_events_to_frame(events: list, comp: str) -> pd.DataFrame:
+    """The Odds API events -> one row per match with median 1X2 and O/U 2.5."""
+    rows = []
+    for ev in events or []:
+        h, a = ev.get("home_team"), ev.get("away_team")
+        if not h or not a:
+            continue
+        rows.append({"Comp": comp, "Kickoff": ev.get("commence_time"), "HomeTeam": h,
+                     "AwayTeam": a, "H": _median_price(ev, "h2h", h),
+                     "D": _median_price(ev, "h2h", "Draw"), "A": _median_price(ev, "h2h", a),
+                     "O25": _median_price(ev, "totals", "Over", 2.5),
+                     "U25": _median_price(ev, "totals", "Under", 2.5),
+                     "Books": len(ev.get("bookmakers", []))})
+    return pd.DataFrame(rows)
+
+
+def refresh_cup_odds(key: str, now=None) -> dict:
+    """Fetch cup / national-team odds when useful and save them. Spends credits
+    only for competitions with a match in the next 3 days, at most every 4 h
+    (every 20 h when nothing kicks off within 10 h). Returns a status dict."""
+    now = now or pd.Timestamp.now(tz="UTC")
+    status = {"time": now.strftime("%Y-%m-%d %H:%M UTC"), "key_present": bool(key)}
+    if not key:
+        status["result"] = "no ODDS_API_KEY secret"
+        return status
+    age = snapshot_age_hours("cup_odds")
+    sports, hdr = _odds_api_get("/sports", key)
+    if not isinstance(sports, list):
+        status["result"] = f"sports list failed: {(sports or {}).get('_error', 'no reply')}"
+        return status
+    active = [sp["key"] for sp in sports if sp.get("key") in ODDS_SPORTS and sp.get("active")]
+    soon, very_soon = [], False
+    for sk in active:                                   # /events is free
+        evs, _ = _odds_api_get(f"/sports/{sk}/events", key)
+        if not isinstance(evs, list):
+            continue
+        ko = pd.to_datetime([e.get("commence_time") for e in evs], utc=True, errors="coerce")
+        if ((ko > now) & (ko <= now + pd.Timedelta(days=3))).any():
+            soon.append(sk)
+        very_soon |= bool(((ko > now) & (ko <= now + pd.Timedelta(hours=10))).any())
+    status.update(active=active, with_matches_soon=soon)
+    if not soon:
+        status["result"] = "no cup / national-team matches in the next 3 days"
+        return status
+    if age is not None and (age < 4 or (age < 20 and not very_soon)):
+        status["result"] = f"odds still fresh ({age:.1f} h old) - no credits spent"
+        return status
+    frames, remaining = [], None
+    for sk in soon:
+        evs, hdr = _odds_api_get(f"/sports/{sk}/odds", key, regions="eu",
+                                 markets="h2h,totals", oddsFormat="decimal")
+        remaining = hdr.get("x-requests-remaining", remaining)
+        if isinstance(evs, list):
+            frames.append(odds_events_to_frame(evs, ODDS_SPORTS[sk]))
+        else:
+            status.setdefault("errors", []).append(f"{sk}: {(evs or {}).get('_error')}")
+    df = pd.concat([f for f in frames if not f.empty], ignore_index=True) if any(
+        not f.empty for f in frames) else pd.DataFrame()
+    status["credits_remaining"] = remaining
+    status["matches_with_odds"] = int(len(df))
+    if not df.empty and save_snapshot("cup_odds", df):
+        status["result"] = f"saved odds for {len(df)} matches"
+    else:
+        status.setdefault("result", "no odds returned")
+    return status
+
+
+def save_odds_status(status: dict):
+    try:
+        SNAPSHOT_DIR.mkdir(parents=True, exist_ok=True)
+        (SNAPSHOT_DIR / f"{ODDS_STATUS}.json").write_text(json.dumps(status, indent=1, default=str))
+    except Exception:
+        pass
+
+
+def match_fixture_odds(fx, cup_odds: pd.DataFrame) -> dict:
+    """Bookmaker odds for one cup fixture: same kick-off (+/- 3 h) and both club
+    names clearly similar. Anything doubtful returns {} (never a wrong match)."""
+    if cup_odds is None or cup_odds.empty:
+        return {}
+    import difflib
+    ko = pd.Timestamp(fx["Kickoff"])
+    ko = ko.tz_localize("UTC") if ko.tzinfo is None else ko.tz_convert("UTC")
+    c = cup_odds
+    if "_ko" not in c.columns:
+        c = c.assign(_ko=pd.to_datetime(c["Kickoff"], utc=True, errors="coerce"))
+    c = c[(c["_ko"] - ko).abs() <= pd.Timedelta(hours=3)]
+    if c.empty:
+        return {}
+
+    def sim(x, y):
+        a, b = _name_key(x, core=True), _name_key(y, core=True)
+        if not a or not b:
+            return 0.0
+        if a in b or b in a:
+            return 1.0
+        return difflib.SequenceMatcher(None, a, b).ratio()
+    best, best_score = None, 0.0
+    for _, r in c.iterrows():
+        sh, sa = sim(fx["HomeTeam"], r["HomeTeam"]), sim(fx["AwayTeam"], r["AwayTeam"])
+        score = (sh + sa) / 2
+        if min(sh, sa) >= 0.5 and score > best_score:
+            best, best_score = r, score
+    if best is None or best_score < 0.7:
+        return {}
+    o = {k: float(best[k]) for k in ("H", "D", "A", "O25", "U25")
+         if pd.notna(best.get(k)) and float(best[k]) > 1}
+    return o
+
+
+def load_cup_odds() -> pd.DataFrame:
+    df = load_snapshot("cup_odds")
+    if not df.empty:
+        df["_ko"] = pd.to_datetime(df["Kickoff"], utc=True, errors="coerce")
+    return df
+
+
 def cup_predictions(fixtures: pd.DataFrame, model: dict, code_col: str = "Comp",
-                    days: int = 7, min_edge: float = DEFAULTS["min_edge"]) -> pd.DataFrame:
+                    days: int = 7, min_edge: float = DEFAULTS["min_edge"],
+                    cup_odds: pd.DataFrame | None = None) -> pd.DataFrame:
     """Prediction rows (same columns as the league advice table) for cup or
     international fixtures that have no odds feed."""
     if fixtures is None or fixtures.empty or model is None:
@@ -2038,8 +2200,16 @@ def cup_predictions(fixtures: pd.DataFrame, model: dict, code_col: str = "Comp",
         pred, _ = predicted_score(m, p)
         best = max(("H", "D", "A"), key=lambda k: p[k])
         lab = {"H": fx["HomeTeam"], "D": "Draw", "A": fx["AwayTeam"]}[best]
-        bp = best_pick(shrink_probs(p, model.get("pick_shrink", 1.0)),
-                       fx["HomeTeam"], fx["AwayTeam"])
+        odds = match_fixture_odds(fx, cup_odds)
+        k_shr = model.get("pick_shrink", 1.0)
+        if len(odds) == 5:
+            # bookmaker odds known: blend model + market; the market needs no
+            # over-confidence correction, so only half of it is kept
+            pb, _ = pick_probs(m, model["rho"], odds)
+            bp = best_pick(shrink_probs(pb, 1 - (1 - k_shr) / 2),
+                           fx["HomeTeam"], fx["AwayTeam"])
+        else:
+            bp = best_pick(shrink_probs(p, k_shr), fx["HomeTeam"], fx["AwayTeam"])
         rows.append({
             "League": fx[code_col],
             "Kickoff (UK)": fx["Kickoff"].tz_convert(UK_TZ).strftime("%a %d %b %H:%M"),
@@ -2052,8 +2222,11 @@ def cup_predictions(fixtures: pd.DataFrame, model: dict, code_col: str = "Comp",
             "Home %": p["H"] * 100, "Draw %": p["D"] * 100, "Away %": p["A"] * 100,
             **goal_line_cols(p), "BTTS %": p["BTTS_Y"] * 100,
             "xG": f"{lh:.2f} - {la:.2f}",
-            "Advice": (f"No odds feed: back {lab} only at "
-                       f"{(1 / p[best]) * (1 + min_edge / 100):.2f}+"),
+            "Advice": ((f"Bookmakers: {fx['HomeTeam']} {odds['H']:.2f} · draw {odds['D']:.2f} · "
+                        f"{fx['AwayTeam']} {odds['A']:.2f}. Model: back {lab} only at "
+                        f"{(1 / p[best]) * (1 + min_edge / 100):.2f}+") if len(odds) == 5 else
+                       (f"No odds feed: back {lab} only at "
+                        f"{(1 / p[best]) * (1 + min_edge / 100):.2f}+")),
             "Stake": "",
         })
     if not rows:
@@ -3172,9 +3345,10 @@ def main():
             uefa_teams = sorted(set(uefa["HomeTeam"]) | set(uefa["AwayTeam"]))
             uefa_model = fit_uefa(uefa, uefa_domestic(uefa_teams, all_models))
         intl_model = fit_international(intl) if not intl.empty else None
+        cup_odds = load_cup_odds()
     week_adv = combine_overview(
-        ov_adv, cup_predictions(uefa, uefa_model, "Comp", 7, min_edge),
-        cup_predictions(nations_fx, intl_model, "Comp", 7, min_edge))
+        ov_adv, cup_predictions(uefa, uefa_model, "Comp", 7, min_edge, cup_odds),
+        cup_predictions(nations_fx, intl_model, "Comp", 7, min_edge, cup_odds))
 
     age_days = (pd.Timestamp(dt.date.today()) - model["last_date"]).days
     with st.expander(f"📈 Model status - {league_name(league)} "
@@ -3627,7 +3801,7 @@ def main():
             if up.empty:
                 st.info("No UEFA club fixtures in the next 14 days.")
             else:
-                cup_tab = cup_predictions(uefa, uefa_model, "Comp", 14, min_edge)
+                cup_tab = cup_predictions(uefa, uefa_model, "Comp", 14, min_edge, cup_odds)
                 if phone_mode():
                     render_match_cards(cup_tab, tz)
                 else:
@@ -3684,7 +3858,7 @@ def main():
                      "The app retries automatically.")
         else:
             im = intl_model
-            nl_up = cup_predictions(nations_fx, im, "Comp", 30, min_edge)
+            nl_up = cup_predictions(nations_fx, im, "Comp", 30, min_edge, cup_odds)
             st.markdown("#### Upcoming fixtures (next 30 days)")
             st.caption("Accuracy in testing (Jul 2024 - Oct 2026, model refitted on past "
                        "matches only): right result in 62.9% of 423 competitive games "
@@ -3880,6 +4054,17 @@ def run_headless_log(argv=None) -> int:
     _, added, err = update_paper_log(flags, args.all_leagues_bet)
     cups = []
     uefa = intl_fx = pd.DataFrame()
+    # Bookmaker odds for cups / national teams (needs the ODDS_API_KEY secret)
+    try:
+        odds_status = refresh_cup_odds(os.environ.get("ODDS_API_KEY", "").strip())
+    except Exception as exc:
+        odds_status = {"result": f"failed: {type(exc).__name__}"}
+    if not args.no_backup:
+        save_odds_status(odds_status)
+    print(f"  cup odds: {odds_status.get('result')}"
+          + (f" | credits left: {odds_status['credits_remaining']}"
+             if odds_status.get("credits_remaining") else ""))
+    cup_odds = load_cup_odds()
     try:
         uefa = load_uefa()
         if not args.no_backup and uefa.attrs.get("source") == "live" and save_snapshot("uefa", uefa):
@@ -3888,7 +4073,7 @@ def run_headless_log(argv=None) -> int:
             all_models = league_models(all_results, args.half_life, args.goals_pct / 100)
             teams = sorted(set(uefa["HomeTeam"]) | set(uefa["AwayTeam"]))
             cups.append(cup_predictions(uefa, fit_uefa(uefa, uefa_domestic(teams, all_models)),
-                                        "Comp", 7, args.min_edge))
+                                        "Comp", 7, args.min_edge, cup_odds))
         intl = load_international()
         intl_fx = load_intl_fixtures()
         if not args.no_backup:
@@ -3898,7 +4083,7 @@ def run_headless_log(argv=None) -> int:
                 saved.append("intl_fixtures")
         if not intl.empty:
             cups.append(cup_predictions(intl_fx, fit_international(intl),
-                                        "Comp", 7, args.min_edge))
+                                        "Comp", 7, args.min_edge, cup_odds))
     except Exception as exc:
         print(f"WARNING: UEFA / national-team predictions failed: {exc}")
     adv = combine_overview(adv, *cups)
