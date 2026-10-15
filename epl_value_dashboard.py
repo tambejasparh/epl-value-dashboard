@@ -632,45 +632,78 @@ def match_club_names(feed_names, fd_names) -> dict:
     return {f: n for f, n in out.items() if counts[n] == 1}
 
 
-def gap_fill_results(df: pd.DataFrame, league: str) -> pd.DataFrame:
-    """Append results newer than Football-Data's latest, from fixturedownload."""
-    if df.empty or league not in GAPFILL_FEEDS:
+def _fd_feed(league: str):
+    """Played matches from fixturedownload.com (DateUtc/HomeTeam/... columns)."""
+    if league not in GAPFILL_FEEDS:
+        return None
+    start = _season_start_year(dt.date.today())
+    data = _fetch_json(UEFA_FEED.format(slug=f"{GAPFILL_FEEDS[league]}-{start}"))
+    return pd.DataFrame(data) if data else None
+
+
+def _af_feed(league: str):
+    """Played matches from API-Football (only when the APIFOOTBALL_KEY secret is
+    set, i.e. in the scheduled GitHub run). Same columns as _fd_feed."""
+    key = os.environ.get("APIFOOTBALL_KEY", "").strip()
+    af_id = next((i for i, c in AF_LEAGUES.items() if c == league), None)
+    if not key or af_id is None:
+        return None
+    today = dt.date.today()
+    season = today.year if league in ("JPN", "CHN") else _season_start_year(today)
+    js = _apifootball_get("/fixtures", key, league=af_id, season=season, status="FT-AET-PEN")
+    rows = []
+    for f in (js or {}).get("response") or []:
+        g = f.get("goals") or {}
+        rows.append({"DateUtc": (f.get("fixture") or {}).get("date"),
+                     "HomeTeam": f["teams"]["home"]["name"], "AwayTeam": f["teams"]["away"]["name"],
+                     "HomeTeamScore": g.get("home"), "AwayTeamScore": g.get("away")})
+    return pd.DataFrame(rows) if rows else None
+
+
+def _append_feed(df: pd.DataFrame, feed, league: str, source: str) -> pd.DataFrame:
+    """Append the feed's matches that are newer than df's latest result."""
+    if feed is None or feed.empty:
         return df
-    try:
-        start = _season_start_year(dt.date.today())
-        data = _fetch_json(UEFA_FEED.format(slug=f"{GAPFILL_FEEDS[league]}-{start}"))
-        if not data:
-            return df
-        feed = pd.DataFrame(data)
-        feed = feed.dropna(subset=["HomeTeamScore", "AwayTeamScore", "HomeTeam", "AwayTeam"])
-        if feed.empty:
-            return df
-        feed["Date"] = (pd.to_datetime(feed["DateUtc"], utc=True, errors="coerce")
-                        .dt.tz_convert(UK_TZ).dt.tz_localize(None).dt.normalize())
-        newer = feed[feed["Date"] > df["Date"].max()]
-        if newer.empty:
-            return df
-        current = season_codes(dt.date.today(), 0)[0]
-        cur_teams = df.loc[df["Season"].astype(str) == current, ["HomeTeam", "AwayTeam"]]
-        fd_names = set(cur_teams["HomeTeam"]) | set(cur_teams["AwayTeam"]) or \
-            set(df["HomeTeam"]) | set(df["AwayTeam"])
-        names = match_club_names(set(newer["HomeTeam"]) | set(newer["AwayTeam"]), fd_names)
-        newer = newer[newer["HomeTeam"].isin(names) & newer["AwayTeam"].isin(names)]
-        if newer.empty:
-            return df
-        add = pd.DataFrame({
-            "Date": newer["Date"], "HomeTeam": newer["HomeTeam"].map(names),
-            "AwayTeam": newer["AwayTeam"].map(names),
-            "FTHG": pd.to_numeric(newer["HomeTeamScore"]).astype(int),
-            "FTAG": pd.to_numeric(newer["AwayTeamScore"]).astype(int),
-            "Season": current, "League": league, "Filled": True})
-        add = add[add["FTHG"].between(0, 15) & add["FTAG"].between(0, 15)]
-        out = pd.concat([df.assign(Filled=False) if "Filled" not in df.columns else df, add],
-                        ignore_index=True)
-        out = out.drop_duplicates(["Date", "HomeTeam", "AwayTeam"], keep="first")
-        return out.sort_values("Date").reset_index(drop=True)
-    except Exception:
-        return df                      # gap-filling is a bonus - never break the load
+    feed = feed.dropna(subset=["HomeTeamScore", "AwayTeamScore", "HomeTeam", "AwayTeam"]).copy()
+    if feed.empty:
+        return df
+    feed["Date"] = (pd.to_datetime(feed["DateUtc"], utc=True, errors="coerce")
+                    .dt.tz_convert(UK_TZ).dt.tz_localize(None).dt.normalize())
+    newer = feed[feed["Date"] > df["Date"].max()]
+    if newer.empty:
+        return df
+    current = str(df.loc[df["Date"].idxmax(), "Season"])
+    cur_teams = df.loc[df["Season"].astype(str) == current, ["HomeTeam", "AwayTeam"]]
+    fd_names = set(cur_teams["HomeTeam"]) | set(cur_teams["AwayTeam"]) or \
+        set(df["HomeTeam"]) | set(df["AwayTeam"])
+    names = match_club_names(set(newer["HomeTeam"]) | set(newer["AwayTeam"]), fd_names)
+    newer = newer[newer["HomeTeam"].isin(names) & newer["AwayTeam"].isin(names)]
+    if newer.empty:
+        return df
+    add = pd.DataFrame({
+        "Date": newer["Date"], "HomeTeam": newer["HomeTeam"].map(names),
+        "AwayTeam": newer["AwayTeam"].map(names),
+        "FTHG": pd.to_numeric(newer["HomeTeamScore"]).astype(int),
+        "FTAG": pd.to_numeric(newer["AwayTeamScore"]).astype(int),
+        "Season": current, "League": league, "Filled": True, "FilledFrom": source})
+    add = add[add["FTHG"].between(0, 15) & add["FTAG"].between(0, 15)]
+    out = pd.concat([df.assign(Filled=False) if "Filled" not in df.columns else df, add],
+                    ignore_index=True)
+    out = out.drop_duplicates(["Date", "HomeTeam", "AwayTeam"], keep="first")
+    return out.sort_values("Date").reset_index(drop=True)
+
+
+def gap_fill_results(df: pd.DataFrame, league: str) -> pd.DataFrame:
+    """Append results newer than Football-Data's latest: first from
+    fixturedownload.com (free), then from API-Football (paid key, GitHub run)."""
+    if df.empty:
+        return df
+    for source, getter in (("fixturedownload.com", _fd_feed), ("API-Football", _af_feed)):
+        try:
+            df = _append_feed(df, getter(league), league, source)
+        except Exception:
+            pass                       # gap-filling is a bonus - never break the load
+    return df
 
 
 def _load_results_uncached(league: str, seasons_back: int) -> pd.DataFrame:

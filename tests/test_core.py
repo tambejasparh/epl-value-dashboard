@@ -703,3 +703,16 @@ def test_bookmaker_prices_parse_match_and_filter():
     assert "1xBet pays only 1.12" in app.ready_filter({**base, "1xBet odds": 1.12})
     assert app.ready_filter({**base, "1xBet odds": 1.20}) == ""
     assert app.ready_filter({**base, "1xBet odds": np.nan}) == ""
+
+
+def test_append_feed_uses_the_league_own_season_label():
+    df = pd.DataFrame({"Date": [TODAY - pd.Timedelta(days=60)] * 2,
+                       "HomeTeam": ["Zenit", "Spartak Moscow"], "AwayTeam": ["CSKA Moscow", "Rostov"],
+                       "FTHG": [1, 2], "FTAG": [0, 2], "Season": "2026/2027", "League": "RUS"})
+    feed = pd.DataFrame([{"DateUtc": (TODAY - pd.Timedelta(days=3)).strftime("%Y-%m-%dT16:00:00+00:00"),
+                          "HomeTeam": "Zenit Saint Petersburg", "AwayTeam": "Rostov",
+                          "HomeTeamScore": 3, "AwayTeamScore": 1}])
+    out = app._append_feed(df, feed, "RUS", "API-Football")
+    new = out[out["Filled"] == True]  # noqa: E712
+    assert len(new) == 1 and new["Season"].iloc[0] == "2026/2027"
+    assert new["HomeTeam"].iloc[0] == "Zenit" and new["FilledFrom"].iloc[0] == "API-Football"
