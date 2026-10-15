@@ -1367,8 +1367,9 @@ def score_predictions(window: pd.DataFrame, model: dict,
     (adjusted for missing players when that data is available)."""
     rows = []
     for _, fx in window.iterrows():
-        adj, missing = fixture_injuries(fx, injuries, model)
+        adj, missing, key_h, key_a = fixture_injuries_full(fx, injuries, model)
         lh, la, m, p = predict(model, fx["HomeTeam"], fx["AwayTeam"], adj)
+        has_odds = bool(raw_odds(fx))
         pred, pp = predicted_score(m, p)
         bp = best_pick(pick_probs(m, model["rho"], raw_odds(fx))[0],
                        fx["HomeTeam"], fx["AwayTeam"])
@@ -1379,6 +1380,7 @@ def score_predictions(window: pd.DataFrame, model: dict,
             "Match": f"{fx['HomeTeam']} v {fx['AwayTeam']}",
             "Best pick": bp["text"], "Best pick %": bp["prob"] * 100, "How to bet": bp["how"],
             "Pick key": bp["key"], "Missing players": missing,
+            "Key out H": key_h, "Key out A": key_a, "Odds used": has_odds,
             "Predicted score": pred,
             "Top 5 scores": ", ".join(f"{sc} ({pr*100:.0f}%)" for sc, pr in top_scores(m)),
             "Home %": p["H"] * 100, "Draw %": p["D"] * 100, "Away %": p["A"] * 100,
@@ -1659,6 +1661,93 @@ def pick_record_lines(sm: dict) -> list:
             + f" · {sm['pending']} waiting for results", tiers]
 
 
+def short_bet(k: str, home: str, away: str) -> str:
+    """What to select on the betting site, in its own words."""
+    goals = {"O15": "Over 1.5", "U15": "Under 1.5", "O25": "Over 2.5", "U25": "Under 2.5",
+             "O35": "Over 3.5", "U35": "Under 3.5", "U45": "Under 4.5"}
+    if k in goals:
+        return f"Over/Under (total goals) → {goals[k]}"
+    return {"H": f"1X2 → 1 ({home} wins)", "D": "1X2 → X (draw)",
+            "A": f"1X2 → 2 ({away} wins)",
+            "1X": f"Double Chance → 1X ({home} or draw)",
+            "X2": f"Double Chance → X2 ({away} or draw)",
+            "12": "Double Chance → 12 (no draw)",
+            "BTTS_Y": "Both teams to score → Yes (GG)",
+            "BTTS_N": "Both teams to score → No (NG)",
+            "HS": f"{home} total goals → Over 0.5",
+            "AS": f"{away} total goals → Over 0.5"}[k]
+
+
+READY_MIN_P = 0.85            # 'Good' or better
+READY_MIN_P_NO_ODDS = 0.88    # cup / national games without bookmaker odds
+
+
+def ready_filter(row) -> str:
+    """'' if the pick passes every automatic safety check, else the reason."""
+    p = row.get("Best pick %", np.nan) / 100
+    k = row.get("Pick key")
+    if not isinstance(k, str) or not np.isfinite(p):
+        return "no pick"
+    if p < READY_MIN_P:
+        return "below 85%"
+    if not bool(row.get("Odds used", False)) and p < READY_MIN_P_NO_ODDS:
+        return "no bookmaker odds and below 88%"
+    kh, ka = int(row.get("Key out H", 0) or 0), int(row.get("Key out A", 0) or 0)
+    backs_home = k in ("H", "1X", "HS")
+    backs_away = k in ("A", "X2", "AS")
+    if backs_home and kh > 0:
+        return "key player missing for the team backed"
+    if backs_away and ka > 0:
+        return "key player missing for the team backed"
+    if k == "12" and kh + ka > 1:
+        return "several key players missing"
+    if k in ("O15", "O25", "O35", "BTTS_Y") and kh + ka > 1:
+        return "key attackers missing in a goals bet"
+    if kh + ka > 3:
+        return "too many key players missing"
+    return ""
+
+
+def ready_picks_by_day(adv: pd.DataFrame, tz: str, n: int = 5) -> list:
+    """[(day, DataFrame)] - every day's n safest picks that pass all automatic
+    checks, highest win chance first, with the exact selection to make."""
+    if adv is None or adv.empty or "Best pick %" not in adv.columns:
+        return []
+    d = add_local_time(adv, tz)
+    d = d[pd.to_datetime(d["Kickoff UTC"], utc=True) > pd.Timestamp.now(tz="UTC")]
+    d = d.dropna(subset=["Best pick %"]).copy()
+    if d.empty:
+        return []
+    d["Skip reason"] = [ready_filter(r) for _, r in d.iterrows()]
+    d = d[d["Skip reason"] == ""]
+    teams = d["Match"].str.split(" v ", n=1, expand=True)
+    d["Bet"] = [short_bet(k, h, a) for k, h, a in zip(d["Pick key"], teams[0], teams[1])]
+    d["Min odds"] = (100 / d["Best pick %"]) * (1 + DEFAULTS["min_edge"] / 100)
+    out = []
+    for day in sorted(d["_day"].unique()):
+        top = (d[d["_day"] == day].sort_values(["Best pick %", "Kickoff UTC"],
+                                                ascending=[False, True]).head(n).copy())
+        top.insert(0, "Rank", range(1, len(top) + 1))
+        out.append((day, top))
+    return out
+
+
+def ready_cards_html(top: pd.DataFrame) -> str:
+    """Big, simple cards: what to select and the minimum odds - nothing else."""
+    e = html.escape
+    cards = []
+    for _, r in top.iterrows():
+        cards.append(
+            "<div class='bfe-card bet'>"
+            f"<div class='bfe-top'><b class='bfe-rank'>#{int(r['Rank'])}</b> "
+            f"{e(str(r['Time']))} · {e(str(r['Competition']))}</div>"
+            f"<div class='bfe-match'>{e(str(r['Match']))}</div>"
+            f"<div class='bfe-adv'>✅ BET: {e(str(r['Bet']))}</div>"
+            f"<div class='bfe-row'>Only if the odds are <b>{r['Min odds']:.2f} or higher</b> · "
+            f"{r['Best pick %']:.0f}% chance</div></div>")
+    return "".join(cards)
+
+
 def top_picks_by_day(adv: pd.DataFrame, tz: str, n: int = 5) -> list:
     """[(day, DataFrame)] - for every upcoming day, its n best picks ranked from
     the highest to the lowest win probability (matches not yet kicked off)."""
@@ -1727,23 +1816,24 @@ def write_predictions_md(adv: pd.DataFrame, flags: pd.DataFrame, path: Path,
     else:
         d = add_local_time(adv, tz)
         # 0) safest picks + rules + live track record
-        days = top_picks_by_day(adv, tz, 5)
+        days = ready_picks_by_day(adv, tz, 5)
         if days:
-            lines += ["## 🏆 Top 5 picks for each day (highest to lowest win chance)", ""]
+            lines += ["## ✅ Your bets for each day (already checked - just place them)", "",
+                      "_Only 85%+ picks, backed by bookmaker odds (or 88%+ without), with no key "
+                      "player missing for the team you back. Skip a bet if your odds are lower "
+                      "than the number shown._", ""]
             for day, top in days:
                 lines += [f"### {pd.Timestamp(day):%A %d %B}", ""]
                 for _, r in top.iterrows():
                     lines += [f"{int(r['Rank'])}. {r['Time']} · **{r['Match']}** "
-                              f"({r['Competition']}) — {r['Best pick']}  ",
-                              f"   📝 {r['How to bet']}"
-                              + (f"  \n   🚑 Missing: {r['Missing players']}"
-                                 if isinstance(r.get("Missing players"), str)
-                                 and r.get("Missing players") else "")]
+                              f"({r['Competition']})  ",
+                              f"   ✅ **BET: {r['Bet']}** — only if odds are "
+                              f"**{r['Min odds']:.2f}+** ({r['Best pick %']:.0f}% chance)"]
                 lines += ["", ticket_line(top), ""]
         lines += ["## 📈 Live track record of best picks", ""] + record_lines + [""]
         lines += [SAFE_RULES, ""]
         # 1) the week's bets at a glance
-        lines += ["## ✅ This week's bets", ""]
+        lines += ["## 💰 Value bets (where the model beat the bookmaker in testing)", ""]
         any_bet = False
         for day, grp in d.groupby("_day", sort=True):
             slip = bet_slip_lines(grp)
@@ -2365,22 +2455,28 @@ def injury_effect(players: pd.DataFrame, team_xg: float) -> tuple:
 
 def fixture_injuries(fx, inj_table: pd.DataFrame, model, neutral: bool = False):
     """(adj dict for predict(), short text) for one of our fixtures."""
+    adj, text, _, _ = fixture_injuries_full(fx, inj_table, model, neutral)
+    return adj, text
+
+
+def fixture_injuries_full(fx, inj_table: pd.DataFrame, model, neutral: bool = False):
+    """(adj, text, key players missing at home, key players missing away)."""
     if inj_table is None or inj_table.empty:
-        return None, ""
+        return None, "", 0, 0
     fxs = inj_table.drop_duplicates("FixtureId")
     row = match_fixture_row(fx, fxs)
     if row is None:
-        return None, ""
+        return None, "", 0, 0
     lh, la = expected_goals(model, fx["HomeTeam"], fx["AwayTeam"], neutral=neutral)
     t = inj_table[inj_table["FixtureId"] == row["FixtureId"]]
     ha, hd, ht, hk = injury_effect(t[t["Side"] == "H"], lh)
     aa, ad, at, ak = injury_effect(t[t["Side"] == "A"], la)
     if not ht and not at:
-        return None, ""
+        return None, "", 0, 0
     text = " | ".join(x for x in (f"{fx['HomeTeam']}: {ht}" if ht else "",
                                   f"{fx['AwayTeam']}: {at}" if at else "") if x)
     adj = {"h_att": ha, "h_def": hd, "a_att": aa, "a_def": ad}
-    return (adj if any(abs(v) > 1e-9 for v in adj.values()) else None), text
+    return (adj if any(abs(v) > 1e-9 for v in adj.values()) else None), text, hk, ak
 
 
 # -----------------------------------------------------------------------------
@@ -2449,12 +2545,13 @@ def cup_predictions(fixtures: pd.DataFrame, model: dict, code_col: str = "Comp",
     rows = []
     for _, fx in up.iterrows():
         neutral = bool(fx.get("Neutral", False))
-        adj, missing = fixture_injuries(fx, injuries, model, neutral)
+        adj, missing, key_h, key_a = fixture_injuries_full(fx, injuries, model, neutral)
         lh, la, m, p = predict(model, fx["HomeTeam"], fx["AwayTeam"], adj, neutral=neutral)
         pred, _ = predicted_score(m, p)
         best = max(("H", "D", "A"), key=lambda k: p[k])
         lab = {"H": fx["HomeTeam"], "D": "Draw", "A": fx["AwayTeam"]}[best]
         odds = match_fixture_odds(fx, cup_odds)
+        has_odds = all(k in odds for k in ("H", "D", "A"))
         k_shr = model.get("pick_shrink", 1.0)
         if all(k in odds for k in ("H", "D", "A")):
             # bookmaker odds known: blend model + market; the market needs no
@@ -2471,6 +2568,7 @@ def cup_predictions(fixtures: pd.DataFrame, model: dict, code_col: str = "Comp",
             "Match": f"{fx['HomeTeam']} v {fx['AwayTeam']}",
             "Best pick": bp["text"], "Best pick %": bp["prob"] * 100, "How to bet": bp["how"],
             "Pick key": bp["key"], "Missing players": missing,
+            "Key out H": key_h, "Key out A": key_a, "Odds used": has_odds,
             "Predicted score": pred,
             "Top 5 scores": ", ".join(f"{sc} ({pr*100:.0f}%)" for sc, pr in top_scores(m)),
             "Home %": p["H"] * 100, "Draw %": p["D"] * 100, "Away %": p["A"] * 100,
@@ -2659,17 +2757,18 @@ def render_match_cards(adv: pd.DataFrame, tz: str):
 
 
 def render_safest_picks(adv: pd.DataFrame, tz: str, all_results: dict, uefa, nations_fx):
-    st.markdown("#### 🏆 Top 5 picks for each day")
-    st.caption("Ranked from the highest to the lowest chance of winning. Tap a day to "
-               "open it. Each pick says exactly what to bet and the lowest odds to accept.")
-    days = top_picks_by_day(adv, tz, 5)
+    st.markdown("#### ✅ Your bets for each day")
+    st.caption("Already checked for you: only picks with 85%+ chance, bookmaker odds "
+               "behind them (or 88%+ without), and no key player missing for the team "
+               "you back. Just place what you see - and skip a bet if your odds are "
+               "lower than the number shown.")
+    days = ready_picks_by_day(adv, tz, 5)
     if not days:
-        st.info("No upcoming matches in the feeds yet. The list updates four times a day.")
+        st.info("No bets pass all the checks yet. The list updates four times a day.")
     for k, (day, top) in enumerate(days):
-        best = top["Best pick %"].iloc[0]
-        with st.expander(f"📅 {pd.Timestamp(day):%A %d %B} — top {len(top)} "
-                         f"(best: {best:.0f}%)", expanded=(k == 0)):
-            st.markdown(match_cards_html(top), unsafe_allow_html=True)
+        with st.expander(f"📅 {pd.Timestamp(day):%A %d %B} — {len(top)} bet"
+                         f"{'s' if len(top) != 1 else ''}", expanded=(k == 0)):
+            st.markdown(ready_cards_html(top), unsafe_allow_html=True)
             st.warning(ticket_line(top))
     sm = pick_summary(settle_pick_log(read_pick_log(),
                                       result_frames(all_results, uefa, nations_fx)))

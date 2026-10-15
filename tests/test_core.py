@@ -645,3 +645,36 @@ def test_fixture_matching_handles_long_club_names():
 
 def test_injury_refresh_without_key_spends_nothing():
     assert "no APIFOOTBALL_KEY" in app.refresh_injuries("")["result"]
+
+
+def test_ready_to_bet_filter_removes_risky_picks():
+    base = {"Best pick %": 90.0, "Pick key": "1X", "Odds used": True, "Key out H": 0,
+            "Key out A": 0}
+    assert app.ready_filter(base) == ""
+    assert "below 85%" in app.ready_filter({**base, "Best pick %": 84.0})
+    assert "no bookmaker odds" in app.ready_filter({**base, "Odds used": False, "Best pick %": 86.0})
+    assert app.ready_filter({**base, "Odds used": False, "Best pick %": 89.0}) == ""
+    assert "key player" in app.ready_filter({**base, "Key out H": 1})
+    assert app.ready_filter({**base, "Key out A": 1}) == ""          # backing home: fine
+    assert "key player" in app.ready_filter({**base, "Pick key": "AS", "Key out A": 1})
+    assert "goals bet" in app.ready_filter({**base, "Pick key": "O15", "Key out H": 1,
+                                            "Key out A": 1})
+    assert app.short_bet("12", "LASK", "Liverpool") == "Double Chance → 12 (no draw)"
+    assert app.short_bet("HS", "Brann", "X") == "Brann total goals → Over 0.5"
+    assert app.short_bet("U45", "A", "B").endswith("Under 4.5")
+
+
+def test_ready_picks_by_day_only_contains_passing_picks():
+    model = app._fit_model(LEAGUE_DATA["E0"], 400, 0.5)
+    fx = make_fixtures()
+    adv = app.match_advice(app.score_predictions(fx[fx["Div"] == "E0"], model),
+                           pd.DataFrame(), 100)
+    adv.insert(0, "Competition", "England - Premier League")
+    adv["Best pick %"] = 90.0
+    adv.loc[adv.index[0], "Key out H"] = 2
+    adv.loc[adv.index[0], "Pick key"] = "1X"
+    days = app.ready_picks_by_day(adv, "Africa/Douala", 5)
+    allrows = pd.concat([t for _, t in days])
+    assert adv["Match"].iloc[0] not in set(allrows["Match"])
+    assert allrows["Bet"].str.len().gt(0).all() and (allrows["Min odds"] > 1).all()
+    assert "✅ BET:" in app.ready_cards_html(days[0][1])
