@@ -320,10 +320,6 @@ E0,Liverpool,Bournemouth,2027-05-30 15:00:00+00:00
 E0,Man Utd,Fulham,2027-05-30 15:00:00+00:00
 E0,Sunderland,Man City,2027-05-30 15:00:00+00:00
 E1,Wolverhampton Wanderers,Portsmouth,2026-10-20 18:45:00+00:00
-E1,Norwich City,Southampton,2026-10-14 18:45:00+00:00
-E1,Portsmouth,Sheffield United,2026-10-14 18:45:00+00:00
-E1,Queens Park Rangers,Derby County,2026-10-14 18:45:00+00:00
-E1,Lincoln City,West Ham United,2026-10-14 19:00:00+00:00
 E1,Burnley,Wolverhampton Wanderers,2026-10-16 19:00:00+00:00
 E1,Middlesbrough,Cardiff City,2026-10-17 11:30:00+00:00
 E1,Millwall,Lincoln City,2026-10-17 11:30:00+00:00
@@ -1676,16 +1672,16 @@ SP1,R. Racing Club,Real Madrid,2026-11-01 15:15:00+00:00
 SP1,Elche CF,Valencia CF,2026-11-01 17:30:00+00:00
 SP1,Athletic Club,Real Sociedad,2026-11-01 20:00:00+00:00
 SP1,RC Deportivo,CA Osasuna,2026-11-02 20:00:00+00:00
-SP1,Atlético de Madrid,FC Barcelona,2026-11-08 00:00:00+00:00
-SP1,Celta,Levante UD,2026-11-08 00:00:00+00:00
-SP1,Elche CF,Real Betis,2026-11-08 00:00:00+00:00
-SP1,RCD Espanyol de Barcelona,RC Deportivo,2026-11-08 00:00:00+00:00
-SP1,Málaga CF,R. Racing Club,2026-11-08 00:00:00+00:00
-SP1,CA Osasuna,Athletic Club,2026-11-08 00:00:00+00:00
-SP1,Real Sociedad,Rayo Vallecano,2026-11-08 00:00:00+00:00
-SP1,Sevilla FC,Deportivo Alavés,2026-11-08 00:00:00+00:00
-SP1,Valencia CF,Real Madrid,2026-11-08 00:00:00+00:00
-SP1,Villarreal CF,Getafe CF,2026-11-08 00:00:00+00:00
+SP1,Sevilla FC,Deportivo Alavés,2026-11-06 20:00:00+00:00
+SP1,Málaga CF,R. Racing Club,2026-11-07 13:00:00+00:00
+SP1,RCD Espanyol de Barcelona,RC Deportivo,2026-11-07 15:15:00+00:00
+SP1,CA Osasuna,Athletic Club,2026-11-07 17:30:00+00:00
+SP1,Valencia CF,Real Madrid,2026-11-07 20:00:00+00:00
+SP1,Elche CF,Real Betis,2026-11-08 13:00:00+00:00
+SP1,Real Sociedad,Rayo Vallecano,2026-11-08 15:15:00+00:00
+SP1,Celta,Levante UD,2026-11-08 17:30:00+00:00
+SP1,Villarreal CF,Getafe CF,2026-11-08 17:30:00+00:00
+SP1,Atlético de Madrid,FC Barcelona,2026-11-08 20:00:00+00:00
 SP1,Deportivo Alavés,RC Deportivo,2026-11-22 00:00:00+00:00
 SP1,Athletic Club,RCD Espanyol de Barcelona,2026-11-22 00:00:00+00:00
 SP1,FC Barcelona,Villarreal CF,2026-11-22 00:00:00+00:00
@@ -2833,15 +2829,15 @@ F2,USL Dunkerque,Red Star FC,2026-12-05 13:00:00+00:00
 F2,Montpellier Hérault SC,FC Nantes,2026-12-05 13:00:00+00:00
 F2,AS Saint-Étienne,AS Nancy Lorraine,2026-12-05 19:45:00+00:00
 F2,Rodez Aveyron Football,Stade DE Reims,2026-12-07 19:45:00+00:00
-F2,US Boulogne CO,Rodez Aveyron Football,2026-12-10 23:00:00+00:00
-F2,EN Avant Guingamp,Dijon FCO,2026-12-10 23:00:00+00:00
-F2,Stade Lavallois MFC,USL Dunkerque,2026-12-10 23:00:00+00:00
-F2,FC Metz,Stade DE Reims,2026-12-10 23:00:00+00:00
-F2,AS Nancy Lorraine,Clermont Foot 63,2026-12-10 23:00:00+00:00
-F2,FC Nantes,FC Annecy,2026-12-10 23:00:00+00:00
-F2,Pau FC,AS Saint-Étienne,2026-12-10 23:00:00+00:00
-F2,Red Star FC,Grenoble Foot 38,2026-12-10 23:00:00+00:00
-F2,FC Sochaux-Montbéliard,Montpellier Hérault SC,2026-12-10 23:00:00+00:00
+F2,US Boulogne CO,Rodez Aveyron Football,2026-12-11 19:00:00+00:00
+F2,EN Avant Guingamp,Dijon FCO,2026-12-11 19:00:00+00:00
+F2,Stade Lavallois MFC,USL Dunkerque,2026-12-11 19:00:00+00:00
+F2,AS Nancy Lorraine,Clermont Foot 63,2026-12-11 19:00:00+00:00
+F2,FC Nantes,FC Annecy,2026-12-11 19:00:00+00:00
+F2,Pau FC,AS Saint-Étienne,2026-12-12 13:00:00+00:00
+F2,Red Star FC,Grenoble Foot 38,2026-12-12 13:00:00+00:00
+F2,FC Metz,Stade DE Reims,2026-12-12 19:00:00+00:00
+F2,FC Sochaux-Montbéliard,Montpellier Hérault SC,2026-12-14 19:45:00+00:00
 F2,FC Annecy,AS Saint-Étienne,2027-01-01 23:00:00+00:00
 F2,Clermont Foot 63,Pau FC,2027-01-01 23:00:00+00:00
 F2,Dijon FCO,FC Nantes,2027-01-01 23:00:00+00:00
@@ -3777,21 +3773,21 @@ SC0,St. Johnstone,St. Mirren,2026-12-02 19:45:00+00:00
 SC0,Aberdeen,Dundee United,2026-12-05 15:00:00+00:00
 SC0,Celtic,St. Johnstone,2026-12-05 15:00:00+00:00
 SC0,Dundee,Falkirk,2026-12-05 15:00:00+00:00
-SC0,Hibernian,Rangers,2026-12-05 15:00:00+00:00
 SC0,Motherwell,Kilmarnock,2026-12-05 15:00:00+00:00
-SC0,St. Mirren,Heart of Midlothian,2026-12-05 15:00:00+00:00
+SC0,St. Mirren,Heart of Midlothian,2026-12-05 17:30:00+00:00
+SC0,Hibernian,Rangers,2026-12-07 20:00:00+00:00
 SC0,Dundee United,St. Mirren,2026-12-12 15:00:00+00:00
 SC0,Falkirk,Aberdeen,2026-12-12 15:00:00+00:00
 SC0,Kilmarnock,Dundee,2026-12-12 15:00:00+00:00
-SC0,St. Johnstone,Rangers,2026-12-12 15:00:00+00:00
+SC0,St. Johnstone,Rangers,2026-12-13 12:00:00+00:00
 SC0,Celtic,Hibernian,2026-12-13 15:00:00+00:00
 SC0,Heart of Midlothian,Motherwell,2026-12-13 15:00:00+00:00
-SC0,Aberdeen,Celtic,2026-12-19 15:00:00+00:00
 SC0,Dundee United,Kilmarnock,2026-12-19 15:00:00+00:00
 SC0,Hibernian,St. Johnstone,2026-12-19 15:00:00+00:00
 SC0,Motherwell,Dundee,2026-12-19 15:00:00+00:00
 SC0,St. Mirren,Falkirk,2026-12-19 15:00:00+00:00
-SC0,Rangers,Heart of Midlothian,2026-12-20 15:00:00+00:00
+SC0,Aberdeen,Celtic,2026-12-20 12:00:00+00:00
+SC0,Rangers,Heart of Midlothian,2026-12-20 14:30:00+00:00
 SC0,Celtic,Motherwell,2026-12-26 15:00:00+00:00
 SC0,Dundee,St. Mirren,2026-12-26 15:00:00+00:00
 SC0,Falkirk,Dundee United,2026-12-26 15:00:00+00:00
