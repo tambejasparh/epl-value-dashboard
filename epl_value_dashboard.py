@@ -2961,7 +2961,11 @@ def render_day_by_day(adv: pd.DataFrame, tz: str, key: str):
     day = c1.selectbox("Day", days, format_func=_label, key=f"{key}_day")
     comps = ["All competitions"] + list(dict.fromkeys(d.loc[d["_day"] == day, "Competition"]))
     comp = c2.selectbox("Competition", comps, key=f"{key}_comp")
-    only = st.toggle("Only matches with BET or WATCH advice", value=False, key=f"{key}_only")
+    only = st.toggle("Only value bets (BET / WATCH - leagues only, never cups)", value=False,
+                     key=f"{key}_only",
+                     help="Value bets come from the league odds model. European cups and "
+                          "national teams never get BET advice, so this hides them. For "
+                          "safe low-odds picks use '✅ Your bets for each day' at the top.")
     strong = st.toggle("Only 🔒 Banker and ⭐⭐⭐ Strong best picks (won ~91% in testing)", value=False,
                        key=f"{key}_strong")
 
@@ -2973,8 +2977,8 @@ def render_day_by_day(adv: pd.DataFrame, tz: str, key: str):
         st.success(f"**Bet slip — {pd.Timestamp(day):%A %d %B}**\n\n"
                    + "\n".join(f"- {line}" for line in slip))
     else:
-        st.info("No ✅ BET advice for this day: the prices are fair. That is normal - "
-                "don't force bets.")
+        st.info("No value bets (✅ BET) this day - that is normal. For safe low-odds "
+                "picks, see '✅ Your bets for each day' at the top of the page.")
     n_watch = int(sub["Advice"].str.startswith("WATCH").sum())
     if n_watch:
         st.caption(f"👀 {n_watch} watch-list match(es): logged for paper trading, "
