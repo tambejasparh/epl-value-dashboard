@@ -1,136 +1,104 @@
 # Football predictions — day by day
-_Updated Thu 15 Oct 2026 19:09 (Africa/Douala time). Bankroll for stakes: 100.00_
+_Updated Thu 15 Oct 2026 19:18 (Africa/Douala time). Bankroll for stakes: 100.00_
 
-## 🏆 Top 5 picks for each day (highest to lowest win chance)
+## ✅ Your bets for each day (already checked - just place them)
+
+_Only 85%+ picks, backed by bookmaker odds (or 88%+ without), with no key player missing for the team you back. Skip a bet if your odds are lower than the number shown._
 
 ### Thursday 15 October
 
-1. 20:00 · **Brann v L. Red Imps** (UEFA Conference League) — 🔒 Brann to score · 92% · bet at 1.12+  
-   📝 Open the 'Brann total goals' (team goals) market and choose 'Over 0.5' (some bookmakers call it 'Brann to score: Yes'). You WIN if Brann scores at least 1 goal - the final result does not matter. You LOSE only if Brann scores 0. Only place it if your bookmaker's odds for this choice are 1.12 or higher.
-2. 20:00 · **Brighton v Kauno Žalgiris** (UEFA Conference League) — 🔒 Brighton or Kauno Žalgiris (no draw) · 91% · bet at 1.13+  
-   📝 Open the 'Double chance' market and choose '12' (either team wins). You WIN if Brighton wins OR Kauno Žalgiris wins - it does not matter which. You LOSE only if the match is a draw. Only place it if your bookmaker's odds for this choice are 1.13 or higher.
-3. 20:00 · **Bournemouth v Sturm Graz** (UEFA Europa League) — 🔒 Bournemouth to score · 91% · bet at 1.13+  
-   📝 Open the 'Bournemouth total goals' (team goals) market and choose 'Over 0.5' (some bookmakers call it 'Bournemouth to score: Yes'). You WIN if Bournemouth scores at least 1 goal - the final result does not matter. You LOSE only if Bournemouth scores 0. Only place it if your bookmaker's odds for this choice are 1.13 or higher.  
-   🚑 Missing: Bournemouth: M. Aarons, J. Araujo, F. Forster, D. Jebbison (0G 2A), E. J. Kroupi +5 more | Sturm Graz: ⚠️E. Soglo (1G 1A), ⚠️N. Weiper (2G 0A), ⚠️A. Vallci (doubtful), N. Geyrhofer, L. Grgic +6 more
-4. 20:00 · **Benfica v Celtic** (UEFA Europa League) — ⭐⭐⭐ Benfica to score · 90% · bet at 1.15+  
-   📝 Open the 'Benfica total goals' (team goals) market and choose 'Over 0.5' (some bookmakers call it 'Benfica to score: Yes'). You WIN if Benfica scores at least 1 goal - the final result does not matter. You LOSE only if Benfica scores 0. Only place it if your bookmaker's odds for this choice are 1.15 or higher.  
-   🚑 Missing: Benfica: ⚠️D. Banjaqui, E. Barrenechea (0G 1A), J. Kaminski (3G 4A) | Celtic: ⚠️C. Carter-Vickers, ⚠️C. Duran (6G 3A), ⚠️A. Johnston, ⚠️J. van den Berg (2G 0A), S. Mheuka +2 more
-5. 20:00 · **Rennes v OFI Crete** (UEFA Europa League) — ⭐⭐⭐ Rennes to score · 89% · bet at 1.15+  
-   📝 Open the 'Rennes total goals' (team goals) market and choose 'Over 0.5' (some bookmakers call it 'Rennes to score: Yes'). You WIN if Rennes scores at least 1 goal - the final result does not matter. You LOSE only if Rennes scores 0. Only place it if your bookmaker's odds for this choice are 1.15 or higher.  
-   🚑 Missing: OFI Crete: ⚠️C. Sielis, A. Leya Iseka, N. Marinakis
+1. 20:00 · **Brann v L. Red Imps** (UEFA Conference League)  
+   ✅ **BET: Brann total goals → Over 0.5** — only if odds are **1.12+** (92% chance)
+2. 20:00 · **Brighton v Kauno Žalgiris** (UEFA Conference League)  
+   ✅ **BET: Double Chance → 12 (no draw)** — only if odds are **1.13+** (91% chance)
+3. 20:00 · **Bournemouth v Sturm Graz** (UEFA Europa League)  
+   ✅ **BET: Bournemouth total goals → Over 0.5** — only if odds are **1.13+** (91% chance)
+4. 20:00 · **Rennes v OFI Crete** (UEFA Europa League)  
+   ✅ **BET: Rennes total goals → Over 0.5** — only if odds are **1.15+** (89% chance)
+5. 20:00 · **Twente v Thun** (UEFA Conference League)  
+   ✅ **BET: Twente total goals → Over 0.5** — only if odds are **1.17+** (88% chance)
 
-🎟️ All 5 on one ticket: all 5 win about **61%** of the time (lose about 39%). Take it only if the ticket's total odds are at least **1.89**. A 2-pick ticket (#1 + #2) wins about 84%. In testing on 472 past match days, the top-5 ticket won on 67% of days - it still lost about 1 day in 3.
+🎟️ All 5 on one ticket: all 5 win about **60%** of the time (lose about 40%). Take it only if the ticket's total odds are at least **1.93**. A 2-pick ticket (#1 + #2) wins about 84%. In testing on 472 past match days, the top-5 ticket won on 67% of days - it still lost about 1 day in 3.
 
 ### Friday 16 October
 
-1. 19:00 · **Laval v Clermont** (France - Ligue 2) — 🔒 Under 4.5 goals · 92% · bet at 1.12+  
-   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.12 or higher.
-2. 19:00 · **Annecy v Nancy** (France - Ligue 2) — 🔒 Under 4.5 goals · 92% · bet at 1.12+  
-   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.12 or higher.
-3. 20:00 · **La Coruna v Levante** (Spain - La Liga) — ⭐⭐⭐ Under 4.5 goals · 90% · bet at 1.15+  
-   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.15 or higher.  
-   🚑 Missing: La Coruna: ⚠️P. Aubameyang (5G 2A), L. Amatucci (0G 1A), M. Casado, Z. Eddahchouri (1G 0A) | Levante: K. Etta Eyong (0G 1A), A. Primo, H. Sotelo
-4. 18:00 · **Corum v Rizespor** (Turkey - Super Lig) — ⭐⭐⭐ Corum to score · 89% · bet at 1.16+  
-   📝 Open the 'Corum total goals' (team goals) market and choose 'Over 0.5' (some bookmakers call it 'Corum to score: Yes'). You WIN if Corum scores at least 1 goal - the final result does not matter. You LOSE only if Corum scores 0. Only place it if your bookmaker's odds for this choice are 1.16 or higher.  
-   🚑 Missing: Rizespor: ⚠️K. Alikulov (2G 0A)
-5. 19:30 · **Ein Frankfurt v FC Koln** (Germany - Bundesliga) — ⭐⭐ Ein Frankfurt to score · 88% · bet at 1.18+  
-   📝 Open the 'Ein Frankfurt total goals' (team goals) market and choose 'Over 0.5' (some bookmakers call it 'Ein Frankfurt to score: Yes'). You WIN if Ein Frankfurt scores at least 1 goal - the final result does not matter. You LOSE only if Ein Frankfurt scores 0. Only place it if your bookmaker's odds for this choice are 1.18 or higher.  
-   🚑 Missing: Ein Frankfurt: ⚠️J. Maluze (0G 1A, doubtful), J. Ngankam, M. Pimpong (doubtful) | FC Koln: ⚠️R. Ache (1G 1A), ⚠️A. Castro-Montes (doubtful), T. Dallinga (2G 0A), T. Hubers, E. Skhiri (0G 2A) +1 more
+1. 19:00 · **Laval v Clermont** (France - Ligue 2)  
+   ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.12+** (92% chance)
+2. 19:00 · **Annecy v Nancy** (France - Ligue 2)  
+   ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.12+** (92% chance)
+3. 20:00 · **La Coruna v Levante** (Spain - La Liga)  
+   ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.15+** (90% chance)
+4. 18:00 · **Corum v Rizespor** (Turkey - Super Lig)  
+   ✅ **BET: Corum total goals → Over 0.5** — only if odds are **1.16+** (89% chance)
 
-🎟️ All 5 on one ticket: all 5 win about **59%** of the time (lose about 41%). Take it only if the ticket's total odds are at least **1.98**. A 2-pick ticket (#1 + #2) wins about 84%. In testing on 472 past match days, the top-5 ticket won on 67% of days - it still lost about 1 day in 3.
+🎟️ All 4 on one ticket: all 4 win about **67%** of the time (lose about 33%). Take it only if the ticket's total odds are at least **1.68**. A 2-pick ticket (#1 + #2) wins about 84%. In testing on 472 past match days, the top-4 ticket won on 72% of days - it still lost about 1 day in 4.
 
 ### Saturday 17 October
 
-1. 20:00 · **Valencia v Ath Bilbao** (Spain - La Liga) — 🔒 Under 4.5 goals · 92% · bet at 1.12+  
-   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.12 or higher.  
-   🚑 Missing: Valencia: S. Canos, J. Copete, D. Foulquier, D. Lopez, L. Rioja +1 more | Ath Bilbao: U. Egiluz, O. Sancet, N. Williams
-2. 17:30 · **Bayern Munich v RB Leipzig** (Germany - Bundesliga) — 🔒 Over 1.5 goals · 92% · bet at 1.12+  
-   📝 Open the 'Total goals' (Over/Under) market and choose 'Over 1.5'. You WIN if the match has 2 or more goals in total (both teams added together). You LOSE if it has 0 or 1 goal. Only place it if your bookmaker's odds for this choice are 1.12 or higher.  
-   🚑 Missing: Bayern Munich: T. Buchmann, J. Musiala | RB Leipzig: C. Baumgartner, M. Guiu, A. Ouedraogo
-3. 15:00 · **Man City v Ipswich** (England - Premier League) — 🔒 Man City or draw · 92% · bet at 1.12+  
-   📝 Open the 'Double chance' market and choose '1X' (Man City or draw). You WIN if Man City wins OR it is a draw. You LOSE only if Ipswich wins. Only place it if your bookmaker's odds for this choice are 1.12 or higher.
-4. 15:00 · **Aberdeen v St Mirren** (Scotland - Premiership) — 🔒 Under 4.5 goals · 92% · bet at 1.13+  
-   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.13 or higher.
-5. 15:00 · **Crewe v Rochdale** (England - League Two) — 🔒 Under 4.5 goals · 92% · bet at 1.13+  
-   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.13 or higher.
+1. 15:00 · **Man City v Ipswich** (England - Premier League)  
+   ✅ **BET: Double Chance → 1X (Man City or draw)** — only if odds are **1.12+** (92% chance)
+2. 15:00 · **Aberdeen v St Mirren** (Scotland - Premiership)  
+   ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.13+** (92% chance)
+3. 15:00 · **Crewe v Rochdale** (England - League Two)  
+   ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.13+** (92% chance)
+4. 15:00 · **Derby v Stoke** (England - Championship)  
+   ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.13+** (91% chance)
+5. 12:30 · **Watford v Charlton** (England - Championship)  
+   ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.13+** (91% chance)
 
-🎟️ All 5 on one ticket: all 5 win about **65%** of the time (lose about 35%). Take it only if the ticket's total odds are at least **1.79**. A 2-pick ticket (#1 + #2) wins about 84%. In testing on 472 past match days, the top-5 ticket won on 67% of days - it still lost about 1 day in 3.
+🎟️ All 5 on one ticket: all 5 win about **64%** of the time (lose about 36%). Take it only if the ticket's total odds are at least **1.81**. A 2-pick ticket (#1 + #2) wins about 84%. In testing on 472 past match days, the top-5 ticket won on 67% of days - it still lost about 1 day in 3.
 
 ### Sunday 18 October
 
-1. 11:30 · **Udinese v Lecce** (Italy - Serie A) — 🔒 Under 4.5 goals · 91% · bet at 1.13+  
-   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.13 or higher.  
-   🚑 Missing: Udinese: V. Bayo, I. Gueye, J. Piotrowski, N. Zaniolo, J. Abankwah (doubtful) | Lecce: M. Berisha, N. Stulic, I. Ilic (doubtful)
-2. 17:30 · **Malaga v Sociedad** (Spain - La Liga) — 🔒 Under 4.5 goals · 91% · bet at 1.13+  
-   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.13 or higher.
-3. 20:00 · **Real Madrid v Sevilla** (Spain - La Liga) — 🔒 Real Madrid to score · 91% · bet at 1.14+  
-   📝 Open the 'Real Madrid total goals' (team goals) market and choose 'Over 0.5' (some bookmakers call it 'Real Madrid to score: Yes'). You WIN if Real Madrid scores at least 1 goal - the final result does not matter. You LOSE only if Real Madrid scores 0. Only place it if your bookmaker's odds for this choice are 1.14 or higher.
-4. 16:30 · **Nott'm Forest v Arsenal** (England - Premier League) — 🔒 Under 4.5 goals · 91% · bet at 1.14+  
-   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.14 or higher.
-5. 15:15 · **Celta v Alaves** (Spain - La Liga) — 🔒 Under 4.5 goals · 90% · bet at 1.14+  
-   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.14 or higher.
+1. 17:30 · **Malaga v Sociedad** (Spain - La Liga)  
+   ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.13+** (91% chance)
+2. 20:00 · **Real Madrid v Sevilla** (Spain - La Liga)  
+   ✅ **BET: Real Madrid total goals → Over 0.5** — only if odds are **1.14+** (91% chance)
+3. 16:30 · **Nott'm Forest v Arsenal** (England - Premier League)  
+   ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.14+** (91% chance)
+4. 15:15 · **Celta v Alaves** (Spain - La Liga)  
+   ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.14+** (90% chance)
+5. 11:30 · **Kasimpasa v Samsunspor** (Turkey - Super Lig)  
+   ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.14+** (90% chance)
 
-🎟️ All 5 on one ticket: all 5 win about **61%** of the time (lose about 39%). Take it only if the ticket's total odds are at least **1.89**. A 2-pick ticket (#1 + #2) wins about 83%. In testing on 472 past match days, the top-5 ticket won on 67% of days - it still lost about 1 day in 3.
+🎟️ All 5 on one ticket: all 5 win about **61%** of the time (lose about 39%). Take it only if the ticket's total odds are at least **1.91**. A 2-pick ticket (#1 + #2) wins about 82%. In testing on 472 past match days, the top-5 ticket won on 67% of days - it still lost about 1 day in 3.
 
 ### Monday 19 October
 
-1. 20:15 · **Sp Braga v Gil Vicente** (Portugal - Primeira Liga) — 🔒 Under 4.5 goals · 90% · bet at 1.14+  
-   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.14 or higher.
-2. 17:30 · **Monza v Cagliari** (Italy - Serie A) — ⭐⭐⭐ Under 4.5 goals · 89% · bet at 1.16+  
-   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.16 or higher.
-3. 19:45 · **Rodez v Montpellier** (France - Ligue 2) — ⭐⭐⭐ Under 4.5 goals · 89% · bet at 1.16+  
-   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.16 or higher.
-4. 20:00 · **Getafe v Vallecano** (Spain - La Liga) — ⭐⭐ Under 3.5 goals · 87% · bet at 1.18+  
-   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 3.5'. You WIN if the match has 0, 1, 2 or 3 goals in total (both teams added together). You LOSE if it has 4 or more goals. Only place it if your bookmaker's odds for this choice are 1.18 or higher.
-5. 20:00 · **Tottenham v Coventry** (England - Premier League) — ⭐⭐ Under 4.5 goals · 86% · bet at 1.20+  
-   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.20 or higher.
+1. 20:15 · **Sp Braga v Gil Vicente** (Portugal - Primeira Liga)  
+   ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.14+** (90% chance)
+2. 17:30 · **Monza v Cagliari** (Italy - Serie A)  
+   ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.16+** (89% chance)
+3. 19:45 · **Rodez v Montpellier** (France - Ligue 2)  
+   ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.16+** (89% chance)
 
-🎟️ All 5 on one ticket: all 5 win about **54%** of the time (lose about 46%). Take it only if the ticket's total odds are at least **2.15**. A 2-pick ticket (#1 + #2) wins about 81%. In testing on 472 past match days, the top-5 ticket won on 67% of days - it still lost about 1 day in 3.
+🎟️ All 3 on one ticket: all 3 win about **72%** of the time (lose about 28%). Take it only if the ticket's total odds are at least **1.52**. A 2-pick ticket (#1 + #2) wins about 81%. In testing on 472 past match days, the top-3 ticket won on 79% of days - it still lost about 1 day in 5.
 
 ### Tuesday 20 October
 
-1. 19:45 · **AFC Wimbledon v Mansfield** (England - League One) — 🔒 Under 4.5 goals · 91% · bet at 1.14+  
-   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.14 or higher.
-2. 19:45 · **Stevenage v Plymouth** (England - League One) — 🔒 Under 4.5 goals · 90% · bet at 1.14+  
-   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.14 or higher.
-3. 20:00 · **Roma v S. Bratislava** (UEFA Champions League) — ⭐⭐⭐ Roma to score · 90% · bet at 1.15+  
-   📝 Open the 'Roma total goals' (team goals) market and choose 'Over 0.5' (some bookmakers call it 'Roma to score: Yes'). You WIN if Roma scores at least 1 goal - the final result does not matter. You LOSE only if Roma scores 0. Only place it if your bookmaker's odds for this choice are 1.15 or higher.
-4. 19:45 · **Walsall v Oldham** (England - League Two) — ⭐⭐⭐ Under 4.5 goals · 90% · bet at 1.15+  
-   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.15 or higher.
-5. 20:00 · **Paris v Barcelona** (UEFA Champions League) — ⭐⭐⭐ Paris to score · 90% · bet at 1.15+  
-   📝 Open the 'Paris total goals' (team goals) market and choose 'Over 0.5' (some bookmakers call it 'Paris to score: Yes'). You WIN if Paris scores at least 1 goal - the final result does not matter. You LOSE only if Paris scores 0. Only place it if your bookmaker's odds for this choice are 1.15 or higher.
+1. 19:45 · **AFC Wimbledon v Mansfield** (England - League One)  
+   ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.14+** (91% chance)
+2. 19:45 · **Stevenage v Plymouth** (England - League One)  
+   ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.14+** (90% chance)
+3. 20:00 · **Roma v S. Bratislava** (UEFA Champions League)  
+   ✅ **BET: Roma total goals → Over 0.5** — only if odds are **1.15+** (90% chance)
+4. 19:45 · **Walsall v Oldham** (England - League Two)  
+   ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.15+** (90% chance)
+5. 20:00 · **Paris v Barcelona** (UEFA Champions League)  
+   ✅ **BET: Paris total goals → Over 0.5** — only if odds are **1.15+** (90% chance)
 
 🎟️ All 5 on one ticket: all 5 win about **59%** of the time (lose about 41%). Take it only if the ticket's total odds are at least **1.97**. A 2-pick ticket (#1 + #2) wins about 82%. In testing on 472 past match days, the top-5 ticket won on 67% of days - it still lost about 1 day in 3.
 
 ### Wednesday 21 October
 
-1. 20:00 · **Sporting CP v LASK** (UEFA Champions League) — 🔒 Sporting CP to score · 91% · bet at 1.13+  
-   📝 Open the 'Sporting CP total goals' (team goals) market and choose 'Over 0.5' (some bookmakers call it 'Sporting CP to score: Yes'). You WIN if Sporting CP scores at least 1 goal - the final result does not matter. You LOSE only if Sporting CP scores 0. Only place it if your bookmaker's odds for this choice are 1.13 or higher.
-2. 20:00 · **Aston Villa v Viking** (UEFA Champions League) — ⭐⭐⭐ Aston Villa to score · 90% · bet at 1.15+  
-   📝 Open the 'Aston Villa total goals' (team goals) market and choose 'Over 0.5' (some bookmakers call it 'Aston Villa to score: Yes'). You WIN if Aston Villa scores at least 1 goal - the final result does not matter. You LOSE only if Aston Villa scores 0. Only place it if your bookmaker's odds for this choice are 1.15 or higher.
-3. 20:00 · **Real Madrid v Leipzig** (UEFA Champions League) — ⭐⭐⭐ Real Madrid to score · 89% · bet at 1.16+  
-   📝 Open the 'Real Madrid total goals' (team goals) market and choose 'Over 0.5' (some bookmakers call it 'Real Madrid to score: Yes'). You WIN if Real Madrid scores at least 1 goal - the final result does not matter. You LOSE only if Real Madrid scores 0. Only place it if your bookmaker's odds for this choice are 1.16 or higher.
-4. 19:00 · **Levante v Ath Bilbao** (Spain - La Liga) — ⭐⭐ Under 4.5 goals · 86% · bet at 1.20+  
-   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.20 or higher.
-5. 20:00 · **Real Betis v Feyenoord** (UEFA Champions League) — ⭐⭐ Real Betis to score · 85% · bet at 1.21+  
-   📝 Open the 'Real Betis total goals' (team goals) market and choose 'Over 0.5' (some bookmakers call it 'Real Betis to score: Yes'). You WIN if Real Betis scores at least 1 goal - the final result does not matter. You LOSE only if Real Betis scores 0. Only place it if your bookmaker's odds for this choice are 1.21 or higher.
+1. 20:00 · **Sporting CP v LASK** (UEFA Champions League)  
+   ✅ **BET: Sporting CP total goals → Over 0.5** — only if odds are **1.13+** (91% chance)
+2. 20:00 · **Aston Villa v Viking** (UEFA Champions League)  
+   ✅ **BET: Aston Villa total goals → Over 0.5** — only if odds are **1.15+** (90% chance)
+3. 20:00 · **Real Madrid v Leipzig** (UEFA Champions League)  
+   ✅ **BET: Real Madrid total goals → Over 0.5** — only if odds are **1.16+** (89% chance)
 
-🎟️ All 5 on one ticket: all 5 win about **53%** of the time (lose about 47%). Take it only if the ticket's total odds are at least **2.18**. A 2-pick ticket (#1 + #2) wins about 82%. In testing on 472 past match days, the top-5 ticket won on 67% of days - it still lost about 1 day in 3.
-
-### Thursday 22 October
-
-1. 17:45 · **Pafos v Riga** (UEFA Conference League) — ⭐⭐ Under 4.5 goals · 87% · bet at 1.18+  
-   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.18 or higher.
-2. 17:45 · **Ararat-Armenia v AZ Alkmaar** (UEFA Europa League) — ⭐⭐ AZ Alkmaar to score · 87% · bet at 1.19+  
-   📝 Open the 'AZ Alkmaar total goals' (team goals) market and choose 'Over 0.5' (some bookmakers call it 'AZ Alkmaar to score: Yes'). You WIN if AZ Alkmaar scores at least 1 goal - the final result does not matter. You LOSE only if AZ Alkmaar scores 0. Only place it if your bookmaker's odds for this choice are 1.19 or higher.
-3. 17:45 · **Union SG v H. Beer-Sheva** (UEFA Europa League) — ⭐⭐ Under 4.5 goals · 87% · bet at 1.19+  
-   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.19 or higher.
-4. 17:45 · **GNK Dinamo v N.E.C.** (UEFA Europa League) — ⭐⭐ GNK Dinamo to score · 85% · bet at 1.21+  
-   📝 Open the 'GNK Dinamo total goals' (team goals) market and choose 'Over 0.5' (some bookmakers call it 'GNK Dinamo to score: Yes'). You WIN if GNK Dinamo scores at least 1 goal - the final result does not matter. You LOSE only if GNK Dinamo scores 0. Only place it if your bookmaker's odds for this choice are 1.21 or higher.
-5. 17:45 · **Sturm Graz v Marseille** (UEFA Europa League) — ⭐ Under 4.5 goals · 85% · bet at 1.21+  
-   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.21 or higher.
-
-🎟️ All 5 on one ticket: all 5 win about **48%** of the time (lose about 52%). Take it only if the ticket's total odds are at least **2.44**. A 2-pick ticket (#1 + #2) wins about 76%. In testing on 472 past match days, the top-5 ticket won on 67% of days - it still lost about 1 day in 3.
+🎟️ All 3 on one ticket: all 3 win about **73%** of the time (lose about 27%). Take it only if the ticket's total odds are at least **1.50**. A 2-pick ticket (#1 + #2) wins about 82%. In testing on 472 past match days, the top-3 ticket won on 79% of days - it still lost about 1 day in 5.
 
 ## 📈 Live track record of best picks
 
@@ -145,7 +113,7 @@ Strong 1/1 (100%) · Good 0/2 (0%) · Fair 7/10 (70%)
 5. **Expect losses.** At odds of 1.20 you must win 5 bets out of 6 just to break even; one loss cancels about five wins. Judge the system on 50+ bets, not one day.
 6. **Check team news** before kick-off; skip a pick if a key player is missing.
 
-## ✅ This week's bets
+## 💰 Value bets (where the model beat the bookmaker in testing)
 
 No bets this week - the prices are fair. That is normal.
 
@@ -180,10 +148,6 @@ No bets this week - the prices are fair. That is normal.
   📝 Open the 'Corum total goals' (team goals) market and choose 'Over 0.5' (some bookmakers call it 'Corum to score: Yes'). You WIN if Corum scores at least 1 goal - the final result does not matter. You LOSE only if Corum scores 0. Only place it if your bookmaker's odds for this choice are 1.16 or higher.
 
 **Saturday 17 October**
-- 20:00 · **Valencia v Ath Bilbao** (Spain - La Liga) — 🔒 Under 4.5 goals · 92% · bet at 1.12+  
-  📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.12 or higher.
-- 17:30 · **Bayern Munich v RB Leipzig** (Germany - Bundesliga) — 🔒 Over 1.5 goals · 92% · bet at 1.12+  
-  📝 Open the 'Total goals' (Over/Under) market and choose 'Over 1.5'. You WIN if the match has 2 or more goals in total (both teams added together). You LOSE if it has 0 or 1 goal. Only place it if your bookmaker's odds for this choice are 1.12 or higher.
 - 15:00 · **Man City v Ipswich** (England - Premier League) — 🔒 Man City or draw · 92% · bet at 1.12+  
   📝 Open the 'Double chance' market and choose '1X' (Man City or draw). You WIN if Man City wins OR it is a draw. You LOSE only if Ipswich wins. Only place it if your bookmaker's odds for this choice are 1.12 or higher.
 - 15:00 · **Aberdeen v St Mirren** (Scotland - Premiership) — 🔒 Under 4.5 goals · 92% · bet at 1.13+  
@@ -196,10 +160,12 @@ No bets this week - the prices are fair. That is normal.
   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.13 or higher.
 - 15:30 · **Den Haag v PSV Eindhoven** (Netherlands - Eredivisie) — 🔒 Over 1.5 goals · 91% · bet at 1.13+  
   📝 Open the 'Total goals' (Over/Under) market and choose 'Over 1.5'. You WIN if the match has 2 or more goals in total (both teams added together). You LOSE if it has 0 or 1 goal. Only place it if your bookmaker's odds for this choice are 1.13 or higher.
+- 15:00 · **Brentford v Liverpool** (England - Premier League) — 🔒 Under 4.5 goals · 91% · bet at 1.13+  
+  📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.13 or higher.
+- 15:00 · **Accrington v Gillingham** (England - League Two) — 🔒 Under 4.5 goals · 91% · bet at 1.13+  
+  📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.13 or higher.
 
 **Sunday 18 October**
-- 11:30 · **Udinese v Lecce** (Italy - Serie A) — 🔒 Under 4.5 goals · 91% · bet at 1.13+  
-  📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.13 or higher.
 - 17:30 · **Malaga v Sociedad** (Spain - La Liga) — 🔒 Under 4.5 goals · 91% · bet at 1.13+  
   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.13 or higher.
 - 20:00 · **Real Madrid v Sevilla** (Spain - La Liga) — 🔒 Real Madrid to score · 91% · bet at 1.14+  
@@ -208,11 +174,13 @@ No bets this week - the prices are fair. That is normal.
   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.14 or higher.
 - 15:15 · **Celta v Alaves** (Spain - La Liga) — 🔒 Under 4.5 goals · 90% · bet at 1.14+  
   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.14 or higher.
-- 11:30 · **Kasimpasa v Samsunspor** (Turkey - Super Lig) — ⭐⭐⭐ Under 4.5 goals · 90% · bet at 1.15+  
-  📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.15 or higher.
+- 11:30 · **Kasimpasa v Samsunspor** (Turkey - Super Lig) — 🔒 Under 4.5 goals · 90% · bet at 1.14+  
+  📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.14 or higher.
 - 13:00 · **Osasuna v Santander** (Spain - La Liga) — ⭐⭐⭐ Osasuna to score · 90% · bet at 1.15+  
   📝 Open the 'Osasuna total goals' (team goals) market and choose 'Over 0.5' (some bookmakers call it 'Osasuna to score: Yes'). You WIN if Osasuna scores at least 1 goal - the final result does not matter. You LOSE only if Osasuna scores 0. Only place it if your bookmaker's odds for this choice are 1.15 or higher.
 - 16:15 · **Le Havre v Auxerre** (France - Ligue 1) — ⭐⭐⭐ Under 4.5 goals · 89% · bet at 1.15+  
+  📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.15 or higher.
+- 19:45 · **Juventus v Lazio** (Italy - Serie A) — ⭐⭐⭐ Under 4.5 goals · 89% · bet at 1.15+  
   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.15 or higher.
 
 **Monday 19 October**
@@ -355,25 +323,25 @@ No bets this week - the prices are fair. That is normal.
 | 16:15 | France - Ligue 1 | Strasbourg v Paris SG | NO BET (model not profitable in this league) | - | ⭐⭐⭐ Paris SG to score · 89% · bet at 1.16+ | 1-2 | 20 / 20 / 59 | 96 / 86 / 66 / 45 / 26 / 13 / 6 | 4 / 14 / 34 / 55 / 74 / 87 / 94 |
 | 17:00 | Italy - Serie A | Bologna v Inter | NO BET (model not profitable in this league) | - | ⭐ Inter to score · 84% · bet at 1.23+ | 1-2 | 24 / 23 / 53 | 95 / 80 / 57 / 35 / 18 / 8 / 3 | 5 / 20 / 43 / 65 / 82 / 92 / 97 |
 | 17:00 | Turkey - Super Lig | Fenerbahce v Alanyaspor | NO BET (model not profitable in this league) | - | ⭐⭐⭐ Fenerbahce to score · 89% · bet at 1.15+ | 2-0 | 66 / 21 / 14 | 95 / 83 / 61 / 39 / 21 / 10 / 4 | 5 / 17 / 39 / 61 / 79 / 90 / 96 |
-| 17:30 | England - Premier League | Newcastle v Aston Villa | Odds not out yet: back Aston Villa only at 2.75+ (re-check when odds appear) | - | ⭐⭐ Under 4.5 goals · 86% · bet at 1.20+ | 1-2 | 34 / 28 / 37 | 92 / 76 / 51 / 29 / 14 / 6 / 2 | 8 / 24 / 49 / 71 / 86 / 94 / 98 |
-| 17:30 | Germany - Bundesliga | Bayern Munich v RB Leipzig | NO BET (model not profitable in this league) | - | 🔒 Over 1.5 goals · 92% · bet at 1.12+ | 2-1 | 73 / 15 / 12 | 98 / 92 / 77 / 58 / 39 / 23 / 12 | 2 / 8 / 23 / 42 / 61 / 77 / 88 |
-| 17:30 | Spain - La Liga | Betis v Barcelona | NO BET (model not profitable in this league) | - | ⭐⭐⭐ Barcelona to score · 88% · bet at 1.16+ | 1-2 | 24 / 21 / 55 | 97 / 87 / 69 / 47 / 28 / 15 / 7 | 3 / 13 / 31 / 53 / 72 / 85 / 93 |
+| 17:30 | England - Premier League | Newcastle v Aston Villa | Odds not out yet: back Newcastle only at 2.42+ (re-check when odds appear) | - | ⭐⭐⭐ Under 4.5 goals · 88% · bet at 1.17+ | 1-0 | 43 / 29 / 29 | 91 / 74 / 47 / 26 / 12 / 5 / 2 | 9 / 26 / 53 / 74 / 88 / 95 / 98 |
+| 17:30 | Germany - Bundesliga | Bayern Munich v RB Leipzig | NO BET (model not profitable in this league) | - | ⭐⭐⭐ Over 1.5 goals · 90% · bet at 1.14+ | 2-1 | 68 / 17 / 14 | 97 / 90 / 74 / 53 / 34 / 19 / 9 | 3 / 10 / 26 / 47 / 66 / 81 / 91 |
+| 17:30 | Spain - La Liga | Betis v Barcelona | NO BET (model not profitable in this league) | - | ⭐ Under 4.5 goals · 82% · bet at 1.26+ | 1-2 | 33 / 25 / 42 | 95 / 80 / 57 / 35 / 18 / 8 / 3 | 5 / 20 / 43 / 65 / 82 / 92 / 97 |
 | 19:00 | France - Ligue 2 | Red Star v St Etienne | NO BET (model not profitable in this league) | - | ⭐⭐ Under 4.5 goals · 85% · bet at 1.21+ | 0-1 | 28 / 25 / 47 | 94 / 77 / 53 / 30 / 15 / 6 / 2 | 6 / 23 / 47 / 70 / 85 / 94 / 98 |
-| 19:00 | Netherlands - Eredivisie | Telstar v Feyenoord | NO BET (model not profitable in this league) | - | ⭐⭐⭐ Feyenoord to score · 89% · bet at 1.16+ | 1-2 | 18 / 21 / 60 | 96 / 86 / 66 / 44 / 25 / 13 / 6 | 4 / 14 / 34 / 56 / 75 / 87 / 94 |
-| 19:45 | France - Ligue 1 | Troyes v Lens | NO BET (model not profitable in this league) | - | ⭐⭐ Lens to score · 87% · bet at 1.19+ | 1-2 | 20 / 22 / 59 | 95 / 82 / 60 / 37 / 20 / 9 / 4 | 5 / 18 / 40 / 63 / 80 / 91 / 96 |
-| 19:45 | France - Ligue 1 | Lille v Brest | NO BET (model not profitable in this league) | - | ⭐⭐ Under 4.5 goals · 86% · bet at 1.19+ | 1-0 | 53 / 25 / 22 | 93 / 75 / 51 / 29 / 14 / 6 / 2 | 7 / 25 / 49 / 71 / 86 / 94 / 98 |
-| 19:45 | Italy - Serie A | Roma v Genoa | NO BET (model not profitable in this league) | - | ⭐⭐⭐ Under 4.5 goals · 88% · bet at 1.16+ | 1-0 | 60 / 23 / 16 | 92 / 72 / 47 / 25 / 12 / 5 / 2 | 8 / 28 / 53 / 75 / 88 / 95 / 98 |
-| 20:00 | Netherlands - Eredivisie | Sparta Rotterdam v Willem II | NO BET (model not profitable in this league) | - | ⭐ Sparta Rotterdam to score · 85% · bet at 1.22+ | 2-1 | 55 / 24 / 21 | 94 / 80 / 57 / 35 / 18 / 8 / 3 | 6 / 20 / 43 / 65 / 82 / 92 / 97 |
+| 19:00 | Netherlands - Eredivisie | Telstar v Feyenoord | NO BET (model not profitable in this league) | - | ⭐⭐ Feyenoord to score · 87% · bet at 1.19+ | 1-2 | 21 / 23 / 56 | 95 / 84 / 63 / 41 / 23 / 11 / 5 | 5 / 16 / 37 / 59 / 77 / 89 / 95 |
+| 19:45 | France - Ligue 1 | Troyes v Lens | NO BET (model not profitable in this league) | - | ⭐⭐ Under 4.5 goals · 86% · bet at 1.20+ | 0-1 | 24 / 25 / 51 | 93 / 76 / 52 / 30 / 14 / 6 / 2 | 7 / 24 / 48 / 70 / 86 / 94 / 98 |
+| 19:45 | France - Ligue 1 | Lille v Brest | NO BET (model not profitable in this league) | - | ⭐ Under 3.5 goals · 81% · bet at 1.27+ | 1-0 | 47 / 29 / 25 | 89 / 66 / 39 / 19 / 8 / 3 / 1 | 11 / 34 / 61 / 81 / 92 / 97 / 99 |
+| 19:45 | Italy - Serie A | Roma v Genoa | NO BET (model not profitable in this league) | - | ⭐⭐ Under 3.5 goals · 85% · bet at 1.21+ | 1-0 | 54 / 28 / 17 | 87 / 60 / 33 / 15 / 5 / 2 / 0 | 13 / 40 / 67 / 85 / 95 / 98 / 100 |
+| 20:00 | Netherlands - Eredivisie | Sparta Rotterdam v Willem II | NO BET (model not profitable in this league) | - | ⭐ Under 4.5 goals · 84% · bet at 1.22+ | 2-1 | 51 / 26 / 23 | 93 / 78 / 54 / 31 / 16 / 7 / 3 | 7 / 22 / 46 / 69 / 84 / 93 / 97 |
 | 20:00 | Scotland - Premiership | Dundee v Rangers | NO BET (model not profitable in this league) | - | ⭐⭐ Rangers to score · 87% · bet at 1.18+ | 1-2 | 20 / 21 / 59 | 96 / 83 / 62 / 40 / 22 / 11 / 4 | 4 / 17 / 38 / 60 / 78 / 89 / 96 |
-| 20:00 | Spain - La Liga | Valencia v Ath Bilbao | NO BET (model not profitable in this league) | - | 🔒 Under 4.5 goals · 92% · bet at 1.12+ | 0-1 | 34 / 29 / 37 | 90 / 67 / 40 / 20 / 8 / 3 / 1 | 10 / 33 / 60 / 80 / 92 / 97 / 99 |
+| 20:00 | Spain - La Liga | Valencia v Ath Bilbao | NO BET (model not profitable in this league) | - | ⭐ Under 3.5 goals · 84% · bet at 1.23+ | 1-0 | 39 / 30 / 31 | 88 / 62 / 35 / 16 / 6 / 2 / 1 | 12 / 38 / 65 / 84 / 94 / 98 / 99 |
 
 ### Sunday 18 October (28 matches)
 
 | Time | Competition | Match | Advice | Stake | 🎯 Best pick | Predicted | H / D / A % | Over 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 / 6.5 % | Under 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 / 6.5 % |
 |---|---|---|---|---|---|---|---|---|---|
-| 11:15 | Netherlands - Eredivisie | Zwolle v Go Ahead Eagles | NO BET (model not profitable in this league) | - | ⭐ Over 1.5 goals · 84% · bet at 1.23+ | 1-2 | 29 / 25 / 46 | 95 / 84 / 62 / 40 / 22 / 11 / 4 | 5 / 16 / 38 / 60 / 78 / 89 / 96 |
-| 11:30 | Italy - Serie A | Udinese v Lecce | NO BET (model not profitable in this league) | - | 🔒 Under 4.5 goals · 91% · bet at 1.13+ | 1-0 | 51 / 27 / 23 | 90 / 68 / 42 / 21 / 9 / 3 / 1 | 10 / 32 / 58 / 79 / 91 / 97 / 99 |
-| 11:30 | Turkey - Super Lig | Kasimpasa v Samsunspor | NO BET (model not profitable in this league) | - | ⭐⭐⭐ Under 4.5 goals · 90% · bet at 1.15+ | 1-0 | 39 / 30 / 31 | 90 / 71 / 44 / 23 / 10 / 4 / 1 | 10 / 29 / 56 / 77 / 90 / 96 / 99 |
+| 11:15 | Netherlands - Eredivisie | Zwolle v Go Ahead Eagles | NO BET (model not profitable in this league) | - | ⭐ Over 1.5 goals · 83% · bet at 1.24+ | 1-2 | 32 / 25 / 43 | 95 / 83 / 61 / 39 / 21 / 10 / 4 | 5 / 17 / 39 / 61 / 79 / 90 / 96 |
+| 11:30 | Italy - Serie A | Udinese v Lecce | NO BET (model not profitable in this league) | - | ⭐⭐ Under 3.5 goals · 88% · bet at 1.17+ | 1-0 | 39 / 32 / 29 | 85 / 56 / 29 / 12 / 4 / 1 / 0 | 15 / 44 / 71 / 88 / 96 / 99 / 100 |
+| 11:30 | Turkey - Super Lig | Kasimpasa v Samsunspor | NO BET (model not profitable in this league) | - | 🔒 Under 4.5 goals · 90% · bet at 1.14+ | 1-0 | 39 / 30 / 30 | 90 / 71 / 44 / 23 / 10 / 4 / 1 | 10 / 29 / 56 / 77 / 90 / 96 / 99 |
 | 13:00 | Spain - La Liga | Osasuna v Santander | NO BET (model not profitable in this league) | - | ⭐⭐⭐ Osasuna to score · 90% · bet at 1.15+ | 2-1 | 56 / 20 / 23 | 97 / 88 / 71 / 50 / 31 / 16 / 8 | 3 / 12 / 29 / 50 / 69 / 84 / 92 |
 | 13:30 | Netherlands - Eredivisie | Cambuur v AZ Alkmaar | NO BET (model not profitable in this league) | - | ⭐⭐⭐ AZ Alkmaar to score · 88% · bet at 1.16+ | 1-2 | 20 / 22 / 59 | 96 / 86 / 65 / 43 / 25 / 12 / 5 | 4 / 14 / 35 / 57 / 75 / 88 / 95 |
 | 14:00 | England - Premier League | Brighton v Crystal Palace | Odds not out yet: back Brighton only at 1.92+ (re-check when odds appear) | - | ⭐ Brighton to score · 84% · bet at 1.22+ | 2-1 | 54 / 25 / 22 | 94 / 80 / 57 / 34 / 18 / 8 / 3 | 6 / 20 / 43 / 66 / 82 / 92 / 97 |
@@ -391,7 +359,7 @@ No bets this week - the prices are fair. That is normal.
 | 16:15 | France - Ligue 1 | Le Havre v Auxerre | NO BET (model not profitable in this league) | - | ⭐⭐⭐ Under 4.5 goals · 89% · bet at 1.15+ | 1-0 | 40 / 28 / 32 | 91 / 71 / 45 / 24 / 11 / 4 / 1 | 9 / 29 / 55 / 76 / 89 / 96 / 99 |
 | 16:30 | England - Premier League | Nott'm Forest v Arsenal | Odds not out yet: back Arsenal only at 2.10+ (re-check when odds appear) | - | 🔒 Under 4.5 goals · 91% · bet at 1.14+ | 0-1 | 22 / 29 / 49 | 90 / 70 / 42 / 22 / 9 / 3 / 1 | 10 / 30 / 58 / 78 / 91 / 97 / 99 |
 | 16:30 | Germany - Bundesliga | M'gladbach v Hoffenheim | NO BET (model not profitable in this league) | - | ⭐⭐ Over 1.5 goals · 87% · bet at 1.19+ | 1-2 | 37 / 24 / 39 | 96 / 87 / 67 / 46 / 27 / 14 / 6 | 4 / 13 / 33 / 54 / 73 / 86 / 94 |
-| 17:00 | Italy - Serie A | Milan v Atalanta | NO BET (model not profitable in this league) | - | ⭐⭐ Under 4.5 goals · 88% · bet at 1.17+ | 1-0 | 42 / 27 / 31 | 92 / 73 / 48 / 26 / 12 / 5 / 2 | 8 / 27 / 52 / 74 / 88 / 95 / 98 |
+| 17:00 | Italy - Serie A | Milan v Atalanta | NO BET (model not profitable in this league) | - | ⭐⭐ Under 4.5 goals · 87% · bet at 1.18+ | 1-0 | 44 / 26 / 30 | 93 / 74 / 49 / 27 / 13 / 5 / 2 | 7 / 26 / 51 / 73 / 87 / 95 / 98 |
 | 17:00 | Turkey - Super Lig | Buyuksehyr v Gaziantep | NO BET (model not profitable in this league) | - | ⭐⭐ Buyuksehyr to score · 87% · bet at 1.19+ | 2-1 | 58 / 23 / 19 | 94 / 82 / 60 / 37 / 20 / 9 / 4 | 6 / 18 / 40 / 63 / 80 / 91 / 96 |
 | 17:30 | Spain - La Liga | Malaga v Sociedad | NO BET (model not profitable in this league) | - | 🔒 Under 4.5 goals · 91% · bet at 1.13+ | 0-1 | 31 / 28 / 41 | 91 / 69 / 42 / 22 / 9 / 3 / 1 | 9 / 31 / 58 / 78 / 91 / 97 / 99 |
 | 19:00 | Netherlands - Eredivisie | Nijmegen v For Sittard | NO BET (model not profitable in this league) | - | ⭐⭐⭐ Nijmegen to score · 89% · bet at 1.16+ | 2-1 | 58 / 22 / 20 | 96 / 86 / 66 / 44 / 26 / 13 / 6 | 4 / 14 / 34 / 56 / 74 / 87 / 94 |

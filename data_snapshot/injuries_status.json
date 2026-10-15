@@ -1,5 +1,5 @@
 {
- "time": "2026-10-15 18:08 UTC",
+ "time": "2026-10-15 18:17 UTC",
  "key_present": true,
  "leagues_found": {
   "E2": "League One (England)",
@@ -28,9 +28,8 @@
   "G1": "Super League 1 (Greece)"
  },
  "fixtures": 205,
- "players_skipped": true,
  "injured": 492,
- "players_fetched": 400,
- "requests_used": 408,
+ "players_fetched": 92,
+ "requests_used": 100,
  "result": "492 missing players across 205 fixtures"
 }
