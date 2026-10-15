@@ -1,5 +1,5 @@
 {
- "time": "2026-10-15 18:51 UTC",
+ "time": "2026-10-15 19:17 UTC",
  "key_present": true,
  "active": [
   "soccer_uefa_champs_league",
@@ -7,9 +7,6 @@
   "soccer_uefa_europa_league",
   "soccer_uefa_nations_league"
  ],
- "with_matches_soon": [
-  "soccer_uefa_europa_conference_league",
-  "soccer_uefa_europa_league"
- ],
- "result": "odds still fresh (1.2 h old) - no credits spent"
+ "with_matches_soon": [],
+ "result": "no cup / national-team matches in the next 3 days"
 }

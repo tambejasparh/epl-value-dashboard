@@ -1,10 +1,7 @@
 {
- "time": "2026-10-15 18:50 UTC",
+ "time": "2026-10-15 19:16 UTC",
  "key_present": true,
  "leagues_found": {
-  "E2": "League One (England)",
-  "UEL": "UEFA Europa League (World)",
-  "UECL": "UEFA Europa Conference League (World)",
   "CHN": "Super League (China)",
   "D2": "2. Bundesliga (Germany)",
   "T1": "S\u00fcper Lig (Turkey)",
@@ -22,20 +19,21 @@
   "RUS": "Premier League (Russia)",
   "E0": "Premier League (England)",
   "E3": "League Two (England)",
+  "E2": "League One (England)",
   "SC0": "Premiership (Scotland)",
   "SC2": "League One (Scotland)",
   "SC3": "League Two (Scotland)",
   "G1": "Super League 1 (Greece)"
  },
- "fixtures": 205,
- "injured": 592,
+ "fixtures": 186,
+ "injured": 480,
  "players_fetched": 0,
  "requests_used": 8,
- "result": "592 missing players across 205 fixtures",
- "odds_time": "2026-10-15 18:50 UTC",
- "odds_calls": 203,
- "odds_rows": 25289,
- "odds_fixtures": 202,
+ "result": "480 missing players across 186 fixtures",
+ "odds_time": "2026-10-15 19:16 UTC",
+ "odds_calls": 186,
+ "odds_rows": 23032,
+ "odds_fixtures": 185,
  "books_seen": [
   "1xBet",
   "Bet365",
@@ -110,6 +108,6 @@
   "Offsides Handicap",
   "Offsides Home Total"
  ],
- "my_book_fixtures": 202,
- "odds_result": "prices for 202 fixtures"
+ "my_book_fixtures": 185,
+ "odds_result": "prices for 185 fixtures"
 }
