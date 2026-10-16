@@ -551,9 +551,6 @@ FixtureId,TeamId,PlayerId,Player,Type,Reason
 1570418,548,349063,L. Beitia,Missing Fixture,Ankle Injury
 1570418,548,290106,P. Marin,Missing Fixture,Red Card
 1570418,548,737,A. Odriozola,Missing Fixture,Knee Injury
-1561411,2006,43581,A. Filin,Missing Fixture,Knee Injury
-1561411,2006,115619,A. Mendel,Missing Fixture,Yellow Cards
-1561411,779,464689,I. Zhbanov,Missing Fixture,Injury
 1552191,413,47446,E. Mor,Missing Fixture,Groin Injury
 1552191,413,30797,B. Nuytinck,Missing Fixture,Ankle Injury
 1552191,413,625,P. Sandler,Missing Fixture,Injury
@@ -572,6 +569,9 @@ FixtureId,TeamId,PlayerId,Player,Type,Reason
 1552196,207,280317,N. Ohio,Missing Fixture,Knee Injury
 1552196,207,444975,A. Stepanov,Missing Fixture,Ankle Injury
 1552196,207,149557,K. Paredes,Questionable,Knee Injury
+1561411,2006,43581,A. Filin,Missing Fixture,Knee Injury
+1561411,2006,115619,A. Mendel,Missing Fixture,Yellow Cards
+1561411,779,464689,I. Zhbanov,Missing Fixture,Injury
 1550152,496,30531,J. Boga,Missing Fixture,Muscle Injury
 1550152,496,451504,J. Ekhator,Missing Fixture,Muscle Injury
 1550152,496,15573,K. Grabara,Missing Fixture,Knee Injury
