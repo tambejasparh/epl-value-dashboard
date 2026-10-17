@@ -469,8 +469,8 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,Season,AvgCA,AvgCD,AvgCH,MaxCA,MaxCD,MaxCH,PSCA
 2024-10-05,Spartak Moscow,FK Rostov,3,0,2024/2025,4.23,3.75,1.82,4.43,3.93,1.86,4.35,3.84,1.83,RUS,False,
 2024-10-06,Krasnodar,Khimki,4,0,2024/2025,7.73,5.25,1.36,8.4,5.5,1.38,8.4,5.44,1.36,RUS,False,
 2024-10-06,Dynamo Moscow,CSKA Moscow,1,2,2024/2025,2.81,3.49,2.43,2.93,3.56,2.51,2.85,3.53,2.51,RUS,False,
-2024-10-06,Fakel Voronezh,Dynamo Makhachkala,1,1,2024/2025,2.95,2.71,2.89,3.02,2.76,3.02,3.01,2.76,2.95,RUS,False,
 2024-10-06,Lokomotiv Moscow,Krylya Sovetov,1,0,2024/2025,5.57,4.33,1.55,6.06,4.54,1.58,5.66,4.39,1.58,RUS,False,
+2024-10-06,Fakel Voronezh,Dynamo Makhachkala,1,1,2024/2025,2.95,2.71,2.89,3.02,2.76,3.02,3.01,2.76,2.95,RUS,False,
 2024-10-18,Akron Togliatti,Zenit,0,5,2024/2025,1.41,4.84,7.33,1.45,5.14,8.74,1.4,5.14,7.6,RUS,False,
 2024-10-18,Akhmat Grozny,Fakel Voronezh,2,3,2024/2025,5.17,3.31,1.8,5.97,3.51,1.86,5.97,3.44,1.73,RUS,False,
 2024-10-19,Spartak Moscow,Krasnodar,0,3,2024/2025,2.94,3.25,2.48,3.28,3.37,2.63,3.22,3.29,2.39,RUS,False,
@@ -556,8 +556,8 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,Season,AvgCA,AvgCD,AvgCH,MaxCA,MaxCD,MaxCH,PSCA
 2025-03-29,Khimki,Pari NN,2,0,2024/2025,2.71,3.25,2.66,2.85,3.32,2.79,2.72,3.26,2.79,RUS,False,
 2025-03-29,CSKA Moscow,Dynamo Makhachkala,2,0,2024/2025,5.93,3.57,1.67,6.41,3.65,1.7,6.15,3.61,1.68,RUS,False,
 2025-03-30,Zenit,Rubin Kazan,4,0,2024/2025,11.57,5.58,1.27,13.0,5.72,1.3,12.68,5.72,1.28,RUS,False,
-2025-03-30,Krasnodar,Fakel Voronezh,5,0,2024/2025,7.31,4.09,1.5,7.74,4.24,1.53,7.53,4.24,1.49,RUS,False,
 2025-03-30,Akhmat Grozny,Spartak Moscow,0,0,2024/2025,1.95,3.46,4.11,2.0,3.6,4.36,1.95,3.48,4.25,RUS,False,
+2025-03-30,Krasnodar,Fakel Voronezh,5,0,2024/2025,7.31,4.09,1.5,7.74,4.24,1.53,7.53,4.24,1.49,RUS,False,
 2025-03-31,Akron Togliatti,FK Rostov,2,3,2024/2025,2.12,3.56,3.41,2.19,3.65,3.54,2.1,3.63,3.54,RUS,False,
 2025-04-04,Pari NN,Orenburg,1,2,2024/2025,3.26,3.4,2.25,3.46,3.53,2.26,3.3,3.53,2.23,RUS,False,
 2025-04-05,Krylya Sovetov,Rubin Kazan,1,1,2024/2025,3.63,3.24,2.17,4.04,3.3,2.29,3.69,3.27,2.19,RUS,False,
@@ -568,68 +568,68 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,Season,AvgCA,AvgCD,AvgCH,MaxCA,MaxCD,MaxCH,PSCA
 2025-04-06,FK Rostov,Spartak Moscow,0,3,2024/2025,2.33,3.51,3.01,2.36,3.57,3.19,2.36,3.57,3.03,RUS,False,
 2025-04-06,CSKA Moscow,Dynamo Moscow,3,1,2024/2025,3.2,3.49,2.25,3.3,3.55,2.3,3.29,3.53,2.24,RUS,False,
 2025-04-11,Spartak Moscow,Dynamo Makhachkala,1,2,2024/2025,9.89,5.18,1.32,11.15,5.38,1.38,11.15,5.38,1.31,RUS,False,
-2025-04-12,Rubin Kazan,Lokomotiv Moscow,1,0,2024/2025,2.35,3.31,3.1,2.4,3.4,3.32,2.38,3.37,3.18,RUS,False,
 2025-04-12,Akhmat Grozny,FK Rostov,2,1,2024/2025,3.49,3.34,2.15,3.61,3.47,2.21,3.61,3.47,2.13,RUS,False,
+2025-04-12,Rubin Kazan,Lokomotiv Moscow,1,0,2024/2025,2.35,3.31,3.1,2.4,3.4,3.32,2.38,3.37,3.18,RUS,False,
 2025-04-12,Orenburg,CSKA Moscow,0,2,2024/2025,2.23,3.44,3.22,2.29,3.53,3.5,2.29,3.53,3.2,RUS,False,
 2025-04-12,Pari NN,Dynamo Moscow,1,1,2024/2025,1.85,3.84,4.02,1.91,3.97,4.22,1.84,3.92,4.22,RUS,False,
 2025-04-13,Khimki,Krylya Sovetov,1,3,2024/2025,2.41,3.12,3.19,2.47,3.22,3.4,2.39,3.11,3.4,RUS,False,
 2025-04-13,Zenit,Krasnodar,4,1,2024/2025,5.42,4.02,1.62,5.68,4.15,1.67,5.63,4.15,1.62,RUS,False,
 2025-04-13,Akron Togliatti,Fakel Voronezh,1,0,2024/2025,4.39,3.52,1.86,4.7,3.68,1.88,4.7,3.51,1.86,RUS,False,
-2025-04-19,Krasnodar,Akhmat Grozny,3,1,2024/2025,4.77,3.57,1.79,5.01,3.68,1.81,5.01,3.55,1.81,RUS,False,
 2025-04-19,Orenburg,Dynamo Makhachkala,2,1,2024/2025,3.28,3.56,2.16,3.56,3.67,2.26,3.56,3.51,2.14,RUS,False,
 2025-04-19,Akron Togliatti,Spartak Moscow,2,3,2024/2025,1.63,4.27,4.96,1.65,4.35,5.25,1.63,4.35,5.19,RUS,False,
 2025-04-19,Lokomotiv Moscow,Pari NN,3,0,2024/2025,4.67,3.79,1.75,5.18,3.99,1.77,4.61,3.99,1.76,RUS,False,
-2025-04-20,Zenit,Khimki,1,0,2024/2025,19.06,9.76,1.12,21.0,10.68,1.14,20.28,10.68,1.12,RUS,False,
-2025-04-20,CSKA Moscow,Krylya Sovetov,1,1,2024/2025,4.19,3.46,1.93,4.97,3.56,2.05,3.95,3.43,2.04,RUS,False,
+2025-04-19,Krasnodar,Akhmat Grozny,3,1,2024/2025,4.77,3.57,1.79,5.01,3.68,1.81,5.01,3.55,1.81,RUS,False,
 2025-04-20,Dynamo Moscow,Rubin Kazan,3,1,2024/2025,4.59,3.83,1.75,4.91,3.91,1.79,4.82,3.87,1.75,RUS,False,
 2025-04-20,Fakel Voronezh,FK Rostov,0,2,2024/2025,2.19,3.42,3.32,2.24,3.49,3.53,2.24,3.46,3.36,RUS,False,
+2025-04-20,Zenit,Khimki,1,0,2024/2025,19.06,9.76,1.12,21.0,10.68,1.14,20.28,10.68,1.12,RUS,False,
+2025-04-20,CSKA Moscow,Krylya Sovetov,1,1,2024/2025,4.19,3.46,1.93,4.97,3.56,2.05,3.95,3.43,2.04,RUS,False,
 2025-04-25,Dynamo Makhachkala,Krasnodar,2,3,2024/2025,1.7,3.64,5.35,1.75,3.76,5.63,1.68,3.76,5.63,RUS,False,
-2025-04-26,Pari NN,Akhmat Grozny,1,0,2024/2025,2.1,3.32,3.67,2.15,3.41,3.83,2.1,3.36,3.83,RUS,False,
 2025-04-26,Dynamo Moscow,Zenit,1,1,2024/2025,1.77,3.86,4.45,1.8,3.97,4.68,1.76,3.97,4.63,RUS,False,
-2025-04-26,FK Rostov,Lokomotiv Moscow,1,1,2024/2025,2.81,3.79,2.33,2.88,3.88,2.36,2.88,3.88,2.33,RUS,False,
+2025-04-26,Pari NN,Akhmat Grozny,1,0,2024/2025,2.1,3.32,3.67,2.15,3.41,3.83,2.1,3.36,3.83,RUS,False,
 2025-04-26,Spartak Moscow,CSKA Moscow,1,2,2024/2025,5.35,3.82,1.66,5.79,3.92,1.71,5.79,3.92,1.64,RUS,False,
+2025-04-26,FK Rostov,Lokomotiv Moscow,1,1,2024/2025,2.81,3.79,2.33,2.88,3.88,2.36,2.88,3.88,2.33,RUS,False,
 2025-04-27,Krylya Sovetov,Orenburg,2,0,2024/2025,4.21,3.92,1.79,4.49,4.01,1.85,4.49,4.01,1.78,RUS,False,
 2025-04-27,Khimki,Akron Togliatti,2,2,2024/2025,2.77,3.24,2.62,2.86,3.32,2.67,2.86,3.24,2.67,RUS,False,
 2025-04-27,Rubin Kazan,Fakel Voronezh,2,1,2024/2025,3.86,3.19,2.1,4.0,3.27,2.17,4.0,3.25,2.1,RUS,False,
 2025-05-02,Akron Togliatti,Dynamo Makhachkala,1,0,2024/2025,3.42,3.18,2.25,3.63,3.23,2.33,3.63,3.21,2.24,RUS,False,
 2025-05-03,Lokomotiv Moscow,Orenburg,1,1,2024/2025,4.35,4.33,1.7,4.61,4.49,1.75,4.35,4.47,1.71,RUS,False,
 2025-05-03,Krasnodar,Rubin Kazan,2,1,2024/2025,7.92,4.82,1.39,8.45,5.05,1.42,8.19,5.05,1.39,RUS,False,
-2025-05-04,Zenit,Pari NN,2,1,2024/2025,16.64,7.6,1.16,17.74,7.87,1.18,17.74,7.81,1.17,RUS,False,
-2025-05-04,Khimki,FK Rostov,1,1,2024/2025,2.68,3.67,2.47,2.76,3.77,2.52,2.76,3.67,2.51,RUS,False,
-2025-05-04,Akhmat Grozny,CSKA Moscow,1,1,2024/2025,3.02,3.3,2.41,3.16,3.36,2.48,3.04,3.32,2.48,RUS,False,
 2025-05-04,Fakel Voronezh,Spartak Moscow,0,0,2024/2025,1.58,3.93,6.13,1.63,3.99,6.74,1.63,3.99,5.86,RUS,False,
+2025-05-04,Akhmat Grozny,CSKA Moscow,1,1,2024/2025,3.02,3.3,2.41,3.16,3.36,2.48,3.04,3.32,2.48,RUS,False,
+2025-05-04,Khimki,FK Rostov,1,1,2024/2025,2.68,3.67,2.47,2.76,3.77,2.52,2.76,3.67,2.51,RUS,False,
+2025-05-04,Zenit,Pari NN,2,1,2024/2025,16.64,7.6,1.16,17.74,7.87,1.18,17.74,7.81,1.17,RUS,False,
 2025-05-05,Krylya Sovetov,Dynamo Moscow,1,3,2024/2025,2.64,3.65,2.51,2.71,3.72,2.58,2.71,3.72,2.53,RUS,False,
+2025-05-10,Orenburg,Khimki,1,1,2024/2025,3.34,3.94,2.03,3.78,4.08,2.14,3.15,4.08,2.12,RUS,False,
 2025-05-10,CSKA Moscow,Krasnodar,1,0,2024/2025,2.6,3.34,2.73,2.65,3.45,2.93,2.49,3.45,2.93,RUS,False,
 2025-05-10,Dynamo Makhachkala,Zenit,0,1,2024/2025,1.48,4.19,7.42,1.5,4.49,7.79,1.48,4.24,7.79,RUS,False,
-2025-05-10,Orenburg,Khimki,1,1,2024/2025,3.34,3.94,2.03,3.78,4.08,2.14,3.15,4.08,2.12,RUS,False,
-2025-05-11,Rubin Kazan,FK Rostov,1,0,2024/2025,3.09,3.27,2.37,3.23,3.33,2.4,3.18,3.3,2.4,RUS,False,
-2025-05-11,Dynamo Moscow,Spartak Moscow,2,0,2024/2025,2.44,3.61,2.72,2.52,3.69,2.89,2.52,3.69,2.74,RUS,False,
 2025-05-11,Akron Togliatti,Akhmat Grozny,3,2,2024/2025,2.24,3.36,3.27,2.28,3.42,3.43,2.23,3.4,3.43,RUS,False,
 2025-05-11,Fakel Voronezh,Lokomotiv Moscow,0,1,2024/2025,2.64,3.31,2.71,2.72,3.38,2.78,2.72,3.37,2.71,RUS,False,
+2025-05-11,Dynamo Moscow,Spartak Moscow,2,0,2024/2025,2.44,3.61,2.72,2.52,3.69,2.89,2.52,3.69,2.74,RUS,False,
+2025-05-11,Rubin Kazan,FK Rostov,1,0,2024/2025,3.09,3.27,2.37,3.23,3.33,2.4,3.18,3.3,2.4,RUS,False,
 2025-05-12,Pari NN,Krylya Sovetov,5,2,2024/2025,2.39,3.15,3.2,2.49,3.21,3.44,2.32,3.21,3.44,RUS,False,
 2025-05-17,Orenburg,Krasnodar,1,2,2024/2025,1.6,4.29,5.06,1.65,4.45,5.84,1.65,4.45,4.82,RUS,False,
 2025-05-17,Khimki,Rubin Kazan,3,2,2024/2025,3.15,3.44,2.24,3.35,3.55,2.31,3.35,3.55,2.2,RUS,False,
 2025-05-17,Pari NN,Fakel Voronezh,1,1,2024/2025,4.06,3.26,1.99,4.19,3.36,2.03,4.19,3.32,2.02,RUS,False,
+2025-05-18,Dynamo Moscow,Akron Togliatti,2,1,2024/2025,6.66,5.54,1.38,7.02,5.73,1.41,7.02,5.72,1.39,RUS,False,
 2025-05-18,Krylya Sovetov,Spartak Moscow,0,2,2024/2025,2.43,3.63,2.72,2.46,3.86,2.86,2.4,3.86,2.8,RUS,False,
 2025-05-18,Akhmat Grozny,Dynamo Makhachkala,1,1,2024/2025,3.42,3.45,2.12,3.66,3.58,2.22,3.66,3.58,2.07,RUS,False,
-2025-05-18,Dynamo Moscow,Akron Togliatti,2,1,2024/2025,6.66,5.54,1.38,7.02,5.73,1.41,7.02,5.72,1.39,RUS,False,
 2025-05-18,FK Rostov,Zenit,0,1,2024/2025,1.33,5.15,9.21,1.35,5.43,9.87,1.35,5.2,9.56,RUS,False,
 2025-05-19,Lokomotiv Moscow,CSKA Moscow,2,2,2024/2025,2.37,3.35,2.99,2.47,3.43,3.13,2.4,3.38,3.12,RUS,False,
-2025-05-24,Rubin Kazan,Orenburg,4,2,2024/2025,3.95,4.23,1.76,4.13,4.33,1.8,4.05,4.26,1.78,RUS,False,
-2025-05-24,Zenit,Akhmat Grozny,3,0,2024/2025,13.45,7.01,1.19,17.1,7.74,1.22,12.46,7.14,1.21,RUS,False,
-2025-05-24,Spartak Moscow,Khimki,5,0,2024/2025,6.46,5.11,1.41,6.86,5.44,1.45,6.14,5.25,1.45,RUS,False,
-2025-05-24,Krasnodar,Dynamo Moscow,3,0,2024/2025,4.52,4.6,1.62,4.68,4.88,1.65,4.51,4.88,1.62,RUS,False,
 2025-05-24,Akron Togliatti,Lokomotiv Moscow,1,4,2024/2025,2.48,3.91,2.51,2.6,4.04,2.61,2.6,4.04,2.45,RUS,False,
-2025-05-24,Dynamo Makhachkala,FK Rostov,1,1,2024/2025,3.04,3.37,2.32,3.12,3.48,2.39,3.1,3.37,2.39,RUS,False,
 2025-05-24,CSKA Moscow,Pari NN,2,0,2024/2025,7.61,4.72,1.4,8.03,4.97,1.43,8.03,4.97,1.39,RUS,False,
+2025-05-24,Dynamo Makhachkala,FK Rostov,1,1,2024/2025,3.04,3.37,2.32,3.12,3.48,2.39,3.1,3.37,2.39,RUS,False,
 2025-05-24,Fakel Voronezh,Krylya Sovetov,1,1,2024/2025,2.82,3.21,2.56,2.92,3.31,2.66,2.92,3.31,2.54,RUS,False,
+2025-05-24,Krasnodar,Dynamo Moscow,3,0,2024/2025,4.52,4.6,1.62,4.68,4.88,1.65,4.51,4.88,1.62,RUS,False,
+2025-05-24,Rubin Kazan,Orenburg,4,2,2024/2025,3.95,4.23,1.76,4.13,4.33,1.8,4.05,4.26,1.78,RUS,False,
+2025-05-24,Spartak Moscow,Khimki,5,0,2024/2025,6.46,5.11,1.41,6.86,5.44,1.45,6.14,5.25,1.45,RUS,False,
+2025-05-24,Zenit,Akhmat Grozny,3,0,2024/2025,13.45,7.01,1.19,17.1,7.74,1.22,12.46,7.14,1.21,RUS,False,
 2025-07-18,Dynamo Moscow,Baltika,1,1,2025/2026,5.96,4.25,1.56,5.96,4.25,1.56,5.96,4.25,1.56,RUS,False,
 2025-07-19,Akron Togliatti,Krylya Sovetov,1,1,2025/2026,2.82,3.47,2.53,2.82,3.47,2.53,2.82,3.47,2.53,RUS,False,
 2025-07-19,Lokomotiv Moscow,Sochi,3,0,2025/2026,4.55,3.86,1.78,4.55,3.86,1.78,4.55,3.86,1.78,RUS,False,
 2025-07-19,Spartak Moscow,Dynamo Makhachkala,1,0,2025/2026,9.5,5.16,1.34,9.5,5.16,1.34,9.5,5.16,1.34,RUS,False,
-2025-07-20,Akhmat Grozny,Rubin Kazan,0,2,2025/2026,3.39,3.36,2.24,3.39,3.36,2.24,3.39,3.36,2.24,RUS,False,
-2025-07-20,Zenit,FK Rostov,2,1,2025/2026,9.61,5.5,1.32,9.61,5.5,1.32,9.61,5.5,1.32,RUS,False,
 2025-07-20,Pari NN,Krasnodar,0,3,2025/2026,1.43,4.77,7.46,1.43,4.77,7.46,1.43,4.77,7.46,RUS,False,
+2025-07-20,Zenit,FK Rostov,2,1,2025/2026,9.61,5.5,1.32,9.61,5.5,1.32,9.61,5.5,1.32,RUS,False,
+2025-07-20,Akhmat Grozny,Rubin Kazan,0,2,2025/2026,3.39,3.36,2.24,3.39,3.36,2.24,3.39,3.36,2.24,RUS,False,
 2025-07-21,Orenburg,CSKA Moscow,0,0,2025/2026,1.52,4.44,6.13,1.52,4.44,6.13,1.52,4.44,6.13,RUS,False,
 2025-07-25,Krylya Sovetov,Pari NN,2,0,2025/2026,,,,,,,4.24,3.66,1.9,RUS,False,
 2025-07-26,Spartak Moscow,Baltika,0,3,2025/2026,,,,,,,8.31,4.63,1.42,RUS,False,
@@ -642,10 +642,10 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,Season,AvgCA,AvgCD,AvgCH,MaxCA,MaxCD,MaxCH,PSCA
 2025-08-02,Pari NN,Lokomotiv Moscow,2,3,2025/2026,,,,,,,1.62,4.32,5.3,RUS,False,
 2025-08-02,Krasnodar,Dynamo Moscow,1,0,2025/2026,,,,,,,3.98,3.67,1.96,RUS,False,
 2025-08-02,FK Rostov,Krylya Sovetov,1,4,2025/2026,,,,,,,3.87,3.51,2.04,RUS,False,
-2025-08-03,Dynamo Makhachkala,Akhmat Grozny,1,0,2025/2026,,,,,,,2.32,3.0,3.72,RUS,False,
 2025-08-03,Zenit,CSKA Moscow,1,1,2025/2026,,,,,,,5.77,3.56,1.72,RUS,False,
-2025-08-03,Baltika,Orenburg,3,2,2025/2026,,,,,,,6.91,4.51,1.49,RUS,False,
+2025-08-03,Dynamo Makhachkala,Akhmat Grozny,1,0,2025/2026,,,,,,,2.32,3.0,3.72,RUS,False,
 2025-08-03,Akron Togliatti,Spartak Moscow,1,1,2025/2026,,,,,,,1.65,4.32,5.05,RUS,False,
+2025-08-03,Baltika,Orenburg,3,2,2025/2026,,,,,,,6.91,4.51,1.49,RUS,False,
 2025-08-04,Rubin Kazan,Sochi,2,1,2025/2026,,,,,,,4.62,3.64,1.83,RUS,False,
 2025-08-08,Dynamo Makhachkala,Akron Togliatti,1,1,2025/2026,,,,,,,2.93,3.39,2.52,RUS,False,
 2025-08-09,Lokomotiv Moscow,Spartak Moscow,4,2,2025/2026,,,,,,,2.09,3.48,3.71,RUS,False,
@@ -655,26 +655,26 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,Season,AvgCA,AvgCD,AvgCH,MaxCA,MaxCD,MaxCH,PSCA
 2025-08-10,Sochi,Dynamo Moscow,1,1,2025/2026,,,,,,,1.74,4.1,4.62,RUS,False,
 2025-08-10,FK Rostov,Pari NN,1,0,2025/2026,,,,,,,4.69,3.98,1.75,RUS,False,
 2025-08-10,Orenburg,Krasnodar,0,1,2025/2026,,,,,,,1.41,5.0,7.85,RUS,False,
-2025-08-16,Spartak Moscow,Zenit,2,2,2025/2026,,,,,,,2.45,3.18,3.22,RUS,False,
 2025-08-16,Akhmat Grozny,Krylya Sovetov,3,1,2025/2026,,,,,,,4.32,3.68,1.88,RUS,False,
 2025-08-16,Baltika,Lokomotiv Moscow,1,1,2025/2026,,,,,,,3.18,3.27,2.42,RUS,False,
-2025-08-17,Krasnodar,Sochi,5,1,2025/2026,,,,,,,7.34,4.98,1.43,RUS,False,
-2025-08-17,Dynamo Moscow,CSKA Moscow,1,3,2025/2026,,,,,,,2.86,3.45,2.54,RUS,False,
+2025-08-16,Spartak Moscow,Zenit,2,2,2025/2026,,,,,,,2.45,3.18,3.22,RUS,False,
 2025-08-17,Akron Togliatti,Orenburg,1,2,2025/2026,,,,,,,4.08,4.04,1.84,RUS,False,
 2025-08-17,Rubin Kazan,FK Rostov,1,0,2025/2026,,,,,,,3.2,3.46,2.32,RUS,False,
+2025-08-17,Dynamo Moscow,CSKA Moscow,1,3,2025/2026,,,,,,,2.86,3.45,2.54,RUS,False,
+2025-08-17,Krasnodar,Sochi,5,1,2025/2026,,,,,,,7.34,4.98,1.43,RUS,False,
 2025-08-18,Pari NN,Dynamo Makhachkala,2,0,2025/2026,,,,,,,2.92,2.89,2.9,RUS,False,
 2025-08-22,Orenburg,Akhmat Grozny,2,2,2025/2026,,,,,,,2.25,3.59,3.22,RUS,False,
 2025-08-23,Rubin Kazan,Spartak Moscow,0,2,2025/2026,,,,,,,2.1,3.62,3.54,RUS,False,
 2025-08-23,Zenit,Dynamo Makhachkala,4,0,2025/2026,,,,,,,13.08,5.98,1.26,RUS,False,
 2025-08-23,Lokomotiv Moscow,FK Rostov,3,3,2025/2026,,,,,,,4.76,3.84,1.77,RUS,False,
 2025-08-23,Dynamo Moscow,Pari NN,3,0,2025/2026,,,,,,,7.71,5.06,1.41,RUS,False,
+2025-08-24,Krylya Sovetov,Krasnodar,0,6,2025/2026,,,,,,,1.78,3.73,4.87,RUS,False,
 2025-08-24,CSKA Moscow,Akron Togliatti,3,1,2025/2026,,,,,,,6.78,4.81,1.47,RUS,False,
 2025-08-24,Sochi,Baltika,0,2,2025/2026,,,,,,,2.04,3.37,4.05,RUS,False,
-2025-08-24,Krylya Sovetov,Krasnodar,0,6,2025/2026,,,,,,,1.78,3.73,4.87,RUS,False,
-2025-08-30,FK Rostov,Akhmat Grozny,1,1,2025/2026,,,,,,,3.58,3.28,2.22,RUS,False,
 2025-08-30,Spartak Moscow,Sochi,2,1,2025/2026,,,,,,,11.65,5.98,1.26,RUS,False,
-2025-08-30,Zenit,Pari NN,2,0,2025/2026,,,,,,,16.73,8.38,1.16,RUS,False,
+2025-08-30,FK Rostov,Akhmat Grozny,1,1,2025/2026,,,,,,,3.58,3.28,2.22,RUS,False,
 2025-08-30,Orenburg,Rubin Kazan,2,2,2025/2026,,,,,,,2.64,3.56,2.68,RUS,False,
+2025-08-30,Zenit,Pari NN,2,0,2025/2026,,,,,,,16.73,8.38,1.16,RUS,False,
 2025-08-31,Akron Togliatti,Baltika,0,2,2025/2026,,,,,,,2.13,3.49,3.61,RUS,False,
 2025-08-31,Lokomotiv Moscow,Krylya Sovetov,2,2,2025/2026,,,,,,,5.16,4.14,1.66,RUS,False,
 2025-08-31,CSKA Moscow,Krasnodar,1,1,2025/2026,,,,,,,2.72,3.27,2.78,RUS,False,
@@ -688,21 +688,21 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,Season,AvgCA,AvgCD,AvgCH,MaxCA,MaxCD,MaxCH,PSCA
 2025-09-14,Krylya Sovetov,Sochi,2,0,2025/2026,,,,,,,3.13,3.18,2.5,RUS,False,
 2025-09-14,Baltika,Zenit,0,0,2025/2026,,,,,,,1.85,3.4,4.95,RUS,False,
 2025-09-20,Dynamo Makhachkala,Lokomotiv Moscow,1,1,2025/2026,,,,,,,2.31,3.23,3.43,RUS,False,
-2025-09-20,Pari NN,Akhmat Grozny,1,2,2025/2026,,,,,,,2.06,3.45,3.85,RUS,False,
 2025-09-20,Akron Togliatti,Rubin Kazan,2,2,2025/2026,,,,,,,2.58,3.49,2.79,RUS,False,
+2025-09-20,Pari NN,Akhmat Grozny,1,2,2025/2026,,,,,,,2.06,3.45,3.85,RUS,False,
 2025-09-21,Orenburg,Dynamo Moscow,1,3,2025/2026,,,,,,,1.56,4.61,5.49,RUS,False,
 2025-09-21,Spartak Moscow,Krylya Sovetov,2,1,2025/2026,,,,,,,8.24,4.84,1.41,RUS,False,
 2025-09-21,Baltika,FK Rostov,0,0,2025/2026,,,,,,,4.24,3.41,1.98,RUS,False,
 2025-09-21,Krasnodar,Zenit,0,2,2025/2026,,,,,,,2.76,3.32,2.71,RUS,False,
 2025-09-22,Sochi,CSKA Moscow,1,3,2025/2026,,,,,,,1.65,3.95,5.57,RUS,False,
 2025-09-26,Krylya Sovetov,Dynamo Moscow,2,3,2025/2026,,,,,,,1.86,3.8,4.24,RUS,False,
-2025-09-27,Lokomotiv Moscow,Rubin Kazan,1,0,2025/2026,,,,,,,4.23,3.71,1.88,RUS,False,
 2025-09-27,Zenit,Orenburg,5,2,2025/2026,,,,,,,15.16,8.39,1.17,RUS,False,
 2025-09-27,FK Rostov,Krasnodar,0,0,2025/2026,,,,,,,1.99,3.88,3.64,RUS,False,
 2025-09-27,Akhmat Grozny,Akron Togliatti,3,0,2025/2026,,,,,,,4.98,3.98,1.71,RUS,False,
+2025-09-27,Lokomotiv Moscow,Rubin Kazan,1,0,2025/2026,,,,,,,4.23,3.71,1.88,RUS,False,
+2025-09-28,CSKA Moscow,Baltika,1,0,2025/2026,,,,,,,4.13,3.25,2.06,RUS,False,
 2025-09-28,Dynamo Makhachkala,Sochi,0,0,2025/2026,,,,,,,3.92,3.3,2.1,RUS,False,
 2025-09-28,Spartak Moscow,Pari NN,3,0,2025/2026,,,,,,,10.37,6.01,1.28,RUS,False,
-2025-09-28,CSKA Moscow,Baltika,1,0,2025/2026,,,,,,,4.13,3.25,2.06,RUS,False,
 2025-10-04,Dynamo Moscow,Lokomotiv Moscow,3,5,2025/2026,,,,,,,3.68,3.79,2.0,RUS,False,
 2025-10-04,Krasnodar,Akhmat Grozny,2,0,2025/2026,,,,,,,5.29,4.14,1.65,RUS,False,
 2025-10-04,Akron Togliatti,Zenit,1,1,2025/2026,,,,,,,1.35,5.46,8.67,RUS,False,
@@ -793,8 +793,8 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,Season,AvgCA,AvgCD,AvgCH,MaxCA,MaxCD,MaxCH,PSCA
 2026-03-15,Pari NN,Krylya Sovetov,3,0,2025/2026,3.33,2.85,2.12,3.33,2.85,2.12,,,,RUS,False,
 2026-03-21,CSKA Moscow,Dynamo Makhachkala,3,1,2025/2026,4.75,3.25,1.66,4.75,3.25,1.66,,,,RUS,False,
 2026-03-21,Akhmat Grozny,FK Rostov,1,0,2025/2026,3.25,3.0,2.08,3.25,3.0,2.08,,,,RUS,False,
-2026-03-21,Krasnodar,Pari NN,5,0,2025/2026,11.0,4.75,1.22,11.0,4.75,1.22,,,,RUS,False,
 2026-03-21,Baltika,Sochi,4,0,2025/2026,9.5,4.2,1.28,9.5,4.2,1.28,,,,RUS,False,
+2026-03-21,Krasnodar,Pari NN,5,0,2025/2026,11.0,4.75,1.22,11.0,4.75,1.22,,,,RUS,False,
 2026-03-22,Orenburg,Spartak Moscow,0,2,2025/2026,1.68,3.66,4.0,1.68,3.66,4.0,,,,RUS,False,
 2026-03-22,Dynamo Moscow,Zenit,1,3,2025/2026,1.87,3.33,3.5,1.87,3.33,3.5,,,,RUS,False,
 2026-03-22,Krylya Sovetov,Rubin Kazan,0,0,2025/2026,2.57,2.6,2.9,2.57,2.6,2.9,,,,RUS,False,
@@ -803,9 +803,9 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,Season,AvgCA,AvgCD,AvgCH,MaxCA,MaxCD,MaxCH,PSCA
 2026-04-04,Zenit,Krylya Sovetov,2,1,2025/2026,11.0,4.75,1.22,11.0,4.75,1.22,,,,RUS,False,
 2026-04-04,Dynamo Moscow,Orenburg,3,3,2025/2026,5.33,4.0,1.46,5.33,4.0,1.46,,,,RUS,False,
 2026-04-04,Akhmat Grozny,Krasnodar,0,1,2025/2026,1.87,3.33,3.5,1.87,3.33,3.5,,,,RUS,False,
-2026-04-05,Spartak Moscow,Lokomotiv Moscow,2,1,2025/2026,3.14,3.33,2.0,3.14,3.33,2.0,,,,RUS,False,
-2026-04-05,Dynamo Makhachkala,Baltika,2,2,2025/2026,2.33,2.71,3.1,2.33,2.71,3.1,,,,RUS,False,
 2026-04-05,Pari NN,FK Rostov,0,1,2025/2026,2.33,2.9,2.9,2.33,2.9,2.9,,,,RUS,False,
+2026-04-05,Dynamo Makhachkala,Baltika,2,2,2025/2026,2.33,2.71,3.1,2.33,2.71,3.1,,,,RUS,False,
+2026-04-05,Spartak Moscow,Lokomotiv Moscow,2,1,2025/2026,3.14,3.33,2.0,3.14,3.33,2.0,,,,RUS,False,
 2026-04-06,Sochi,Rubin Kazan,0,1,2025/2026,1.92,3.0,3.75,1.92,3.0,3.75,,,,RUS,False,
 2026-04-11,Krylya Sovetov,Akhmat Grozny,2,2,2025/2026,2.5,3.2,2.45,2.5,3.2,2.45,,,,RUS,False,
 2026-04-11,Rubin Kazan,Orenburg,0,0,2025/2026,3.2,2.9,2.16,3.2,2.9,2.16,,,,RUS,False,
@@ -816,13 +816,13 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,Season,AvgCA,AvgCD,AvgCH,MaxCA,MaxCD,MaxCH,PSCA
 2026-04-12,Zenit,Krasnodar,1,1,2025/2026,3.5,3.1,1.95,3.5,3.1,1.95,,,,RUS,False,
 2026-04-13,Akron Togliatti,Dynamo Moscow,2,3,2025/2026,1.8,3.6,3.5,1.8,3.6,3.5,,,,RUS,False,
 2026-04-17,FK Rostov,Sochi,0,1,2025/2026,6.0,3.8,1.44,6.0,3.8,1.44,,,,RUS,False,
-2026-04-18,Rubin Kazan,Akron Togliatti,1,1,2025/2026,3.0,3.1,2.14,3.0,3.1,2.14,,,,RUS,False,
-2026-04-18,Pari NN,Dynamo Moscow,1,1,2025/2026,1.6,3.66,4.5,1.6,3.66,4.5,,,,RUS,False,
 2026-04-18,Orenburg,Lokomotiv Moscow,0,1,2025/2026,2.05,3.6,2.83,2.05,3.6,2.83,,,,RUS,False,
 2026-04-18,Krylya Sovetov,CSKA Moscow,1,1,2025/2026,1.9,3.5,3.25,1.9,3.5,3.25,,,,RUS,False,
+2026-04-18,Rubin Kazan,Akron Togliatti,1,1,2025/2026,3.0,3.1,2.14,3.0,3.1,2.14,,,,RUS,False,
+2026-04-18,Pari NN,Dynamo Moscow,1,1,2025/2026,1.6,3.66,4.5,1.6,3.66,4.5,,,,RUS,False,
 2026-04-19,Dynamo Makhachkala,Zenit,0,1,2025/2026,1.52,3.33,6.0,1.52,3.33,6.0,,,,RUS,False,
-2026-04-19,Krasnodar,Baltika,2,2,2025/2026,5.5,4.0,1.45,5.5,4.0,1.45,,,,RUS,False,
 2026-04-19,Spartak Moscow,Akhmat Grozny,3,1,2025/2026,6.66,4.33,1.35,6.66,4.33,1.35,,,,RUS,False,
+2026-04-19,Krasnodar,Baltika,2,2,2025/2026,5.5,4.0,1.45,5.5,4.0,1.45,,,,RUS,False,
 2026-04-21,Sochi,Krylya Sovetov,2,1,2025/2026,2.37,3.14,2.62,2.37,3.14,2.62,,,,RUS,False,
 2026-04-21,CSKA Moscow,FK Rostov,1,1,2025/2026,3.4,3.25,1.93,3.4,3.25,1.93,,,,RUS,False,
 2026-04-22,Orenburg,Pari NN,2,1,2025/2026,3.8,3.5,1.75,3.8,3.5,1.75,,,,RUS,False,
@@ -836,17 +836,17 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,Season,AvgCA,AvgCD,AvgCH,MaxCA,MaxCD,MaxCH,PSCA
 2026-04-25,Rubin Kazan,CSKA Moscow,0,0,2025/2026,2.36,2.9,2.83,2.36,2.9,2.83,,,,RUS,False,
 2026-04-26,Pari NN,Spartak Moscow,1,2,2025/2026,1.45,4.0,5.5,1.45,4.0,5.5,,,,RUS,False,
 2026-04-26,Dynamo Moscow,Sochi,2,0,2025/2026,6.33,4.5,1.35,6.33,4.5,1.35,,,,RUS,False,
-2026-04-26,Zenit,Akhmat Grozny,2,0,2025/2026,8.0,4.5,1.3,8.0,4.5,1.3,,,,RUS,False,
 2026-04-26,Krasnodar,Dynamo Makhachkala,2,1,2025/2026,8.0,4.75,1.27,8.0,4.75,1.27,,,,RUS,False,
+2026-04-26,Zenit,Akhmat Grozny,2,0,2025/2026,8.0,4.5,1.3,8.0,4.5,1.3,,,,RUS,False,
 2026-04-27,Baltika,Akron Togliatti,0,1,2025/2026,4.75,3.6,1.58,4.75,3.6,1.58,,,,RUS,False,
 2026-05-01,Krylya Sovetov,Spartak Moscow,2,1,2025/2026,11.88,3.5,3.8,22.0,3.5,3.8,,,,RUS,False,
 2026-05-01,Lokomotiv Moscow,Dynamo Moscow,1,1,2025/2026,12.36,3.66,2.08,22.0,3.66,2.08,,,,RUS,False,
 2026-05-02,Dynamo Makhachkala,FK Rostov,1,2,2025/2026,12.2,2.6,3.14,22.0,2.6,3.14,,,,RUS,False,
 2026-05-02,Baltika,Rubin Kazan,0,1,2025/2026,12.75,2.9,2.05,22.0,2.9,2.05,,,,RUS,False,
 2026-05-02,CSKA Moscow,Zenit,1,3,2025/2026,11.82,3.6,4.25,22.0,3.6,4.25,,,,RUS,False,
-2026-05-03,Akhmat Grozny,Pari NN,2,0,2025/2026,12.9,3.25,1.81,22.0,3.25,1.81,,,,RUS,False,
 2026-05-03,Sochi,Orenburg,3,1,2025/2026,12.13,3.25,2.71,22.0,3.25,2.71,,,,RUS,False,
 2026-05-03,Akron Togliatti,Krasnodar,0,1,2025/2026,11.73,4.33,5.0,22.0,4.33,5.0,,,,RUS,False,
+2026-05-03,Akhmat Grozny,Pari NN,2,0,2025/2026,12.9,3.25,1.81,22.0,3.25,1.81,,,,RUS,False,
 2026-05-10,Orenburg,Krylya Sovetov,1,0,2025/2026,3.75,3.2,1.85,3.75,3.2,1.85,,,,RUS,False,
 2026-05-10,Zenit,Sochi,2,1,2025/2026,13.0,5.66,1.15,13.0,5.66,1.15,,,,RUS,False,
 2026-05-10,Lokomotiv Moscow,Baltika,1,0,2025/2026,3.75,3.25,1.83,3.75,3.25,1.83,,,,RUS,False,
@@ -876,8 +876,8 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,Season,AvgCA,AvgCD,AvgCH,MaxCA,MaxCD,MaxCH,PSCA
 2026-08-01,Baltika,Dynamo Moscow,2,1,2026/2027,2.37,3.1,2.66,2.37,3.1,2.66,,,,RUS,False,
 2026-08-01,Dynamo Makhachkala,Lokomotiv Moscow,2,1,2026/2027,2.0,3.14,3.33,2.0,3.14,3.33,,,,RUS,False,
 2026-08-01,Akron Togliatti,Rubin Kazan,1,2,2026/2027,2.2,3.1,2.9,2.2,3.1,2.9,,,,RUS,False,
-2026-08-02,Akhmat Grozny,Spartak Moscow,1,2,2026/2027,1.8,3.33,3.75,1.8,3.33,3.75,,,,RUS,False,
 2026-08-02,Orenburg,Zenit,0,3,2026/2027,1.27,4.75,8.0,1.27,4.75,8.0,,,,RUS,False,
+2026-08-02,Akhmat Grozny,Spartak Moscow,1,2,2026/2027,1.8,3.33,3.75,1.8,3.33,3.75,,,,RUS,False,
 2026-08-02,Krasnodar,Fakel Voronezh,3,2,2026/2027,7.5,4.5,1.3,7.5,4.5,1.3,,,,RUS,False,
 2026-08-08,Krylya Sovetov,Baltika,0,2,2026/2027,,,,,,,,,,RUS,True,API-Football
 2026-08-08,Lokomotiv Moscow,Akron Togliatti,0,0,2026/2027,,,,,,,,,,RUS,True,API-Football
@@ -891,8 +891,8 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,Season,AvgCA,AvgCD,AvgCH,MaxCA,MaxCD,MaxCH,PSCA
 2026-08-15,FK Rostov,Rubin Kazan,1,1,2026/2027,,,,,,,,,,RUS,True,API-Football
 2026-08-15,Krasnodar,Akhmat Grozny,1,0,2026/2027,,,,,,,,,,RUS,True,API-Football
 2026-08-16,Baltika,Spartak Moscow,1,2,2026/2027,,,,,,,,,,RUS,True,API-Football
-2026-08-16,Zenit,Dynamo Moscow,3,0,2026/2027,,,,,,,,,,RUS,True,API-Football
 2026-08-16,Krylya Sovetov,Dynamo Makhachkala,1,4,2026/2027,,,,,,,,,,RUS,True,API-Football
+2026-08-16,Zenit,Dynamo Moscow,3,0,2026/2027,,,,,,,,,,RUS,True,API-Football
 2026-08-22,Fakel Voronezh,Orenburg,0,0,2026/2027,,,,,,,,,,RUS,True,API-Football
 2026-08-22,Akhmat Grozny,FK Rostov,4,1,2026/2027,,,,,,,,,,RUS,True,API-Football
 2026-08-22,CSKA Moscow,Lokomotiv Moscow,3,2,2026/2027,,,,,,,,,,RUS,True,API-Football
@@ -901,12 +901,12 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,Season,AvgCA,AvgCD,AvgCH,MaxCA,MaxCD,MaxCH,PSCA
 2026-08-23,Spartak Moscow,Zenit,2,0,2026/2027,,,,,,,,,,RUS,True,API-Football
 2026-08-24,Baltika,Rubin Kazan,1,1,2026/2027,,,,,,,,,,RUS,True,API-Football
 2026-08-28,Akron Togliatti,CSKA Moscow,2,2,2026/2027,,,,,,,,,,RUS,True,API-Football
-2026-08-29,Akhmat Grozny,Krylya Sovetov,3,3,2026/2027,,,,,,,,,,RUS,True,API-Football
-2026-08-29,Lokomotiv Moscow,Dynamo Moscow,0,1,2026/2027,,,,,,,,,,RUS,True,API-Football
-2026-08-29,Krasnodar,FK Rostov,1,0,2026/2027,,,,,,,,,,RUS,True,API-Football
 2026-08-29,Fakel Voronezh,Zenit,0,1,2026/2027,,,,,,,,,,RUS,True,API-Football
-2026-08-30,Spartak Moscow,Orenburg,1,1,2026/2027,,,,,,,,,,RUS,True,API-Football
+2026-08-29,Krasnodar,FK Rostov,1,0,2026/2027,,,,,,,,,,RUS,True,API-Football
+2026-08-29,Lokomotiv Moscow,Dynamo Moscow,0,1,2026/2027,,,,,,,,,,RUS,True,API-Football
+2026-08-29,Akhmat Grozny,Krylya Sovetov,3,3,2026/2027,,,,,,,,,,RUS,True,API-Football
 2026-08-30,Rubin Kazan,Dynamo Makhachkala,3,1,2026/2027,,,,,,,,,,RUS,True,API-Football
+2026-08-30,Spartak Moscow,Orenburg,1,1,2026/2027,,,,,,,,,,RUS,True,API-Football
 2026-09-05,Krylya Sovetov,Krasnodar,2,2,2026/2027,,,,,,,,,,RUS,True,API-Football
 2026-09-05,Zenit,CSKA Moscow,1,2,2026/2027,,,,,,,,,,RUS,True,API-Football
 2026-09-05,FK Rostov,Fakel Voronezh,3,1,2026/2027,,,,,,,,,,RUS,True,API-Football
@@ -914,13 +914,13 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,Season,AvgCA,AvgCD,AvgCH,MaxCA,MaxCD,MaxCH,PSCA
 2026-09-06,Dynamo Moscow,Spartak Moscow,2,1,2026/2027,,,,,,,,,,RUS,True,API-Football
 2026-09-06,Baltika,Lokomotiv Moscow,0,1,2026/2027,,,,,,,,,,RUS,True,API-Football
 2026-09-07,Rubin Kazan,Akhmat Grozny,1,1,2026/2027,,,,,,,,,,RUS,True,API-Football
-2026-09-12,CSKA Moscow,Rubin Kazan,1,1,2026/2027,,,,,,,,,,RUS,True,API-Football
-2026-09-12,Dynamo Moscow,Orenburg,1,0,2026/2027,,,,,,,,,,RUS,True,API-Football
-2026-09-12,Zenit,Lokomotiv Moscow,2,1,2026/2027,,,,,,,,,,RUS,True,API-Football
 2026-09-12,Fakel Voronezh,Baltika,2,2,2026/2027,,,,,,,,,,RUS,True,API-Football
-2026-09-13,Akhmat Grozny,Dynamo Makhachkala,3,2,2026/2027,,,,,,,,,,RUS,True,API-Football
-2026-09-13,Spartak Moscow,FK Rostov,3,0,2026/2027,,,,,,,,,,RUS,True,API-Football
+2026-09-12,Zenit,Lokomotiv Moscow,2,1,2026/2027,,,,,,,,,,RUS,True,API-Football
+2026-09-12,Dynamo Moscow,Orenburg,1,0,2026/2027,,,,,,,,,,RUS,True,API-Football
+2026-09-12,CSKA Moscow,Rubin Kazan,1,1,2026/2027,,,,,,,,,,RUS,True,API-Football
 2026-09-13,Krasnodar,Akron Togliatti,1,1,2026/2027,,,,,,,,,,RUS,True,API-Football
+2026-09-13,Spartak Moscow,FK Rostov,3,0,2026/2027,,,,,,,,,,RUS,True,API-Football
+2026-09-13,Akhmat Grozny,Dynamo Makhachkala,3,2,2026/2027,,,,,,,,,,RUS,True,API-Football
 2026-09-16,Spartak Moscow,Fakel Voronezh,1,0,2026/2027,,,,,,,,,,RUS,True,API-Football
 2026-09-16,Lokomotiv Moscow,Krylya Sovetov,1,1,2026/2027,,,,,,,,,,RUS,True,API-Football
 2026-09-16,Baltika,Zenit,2,3,2026/2027,,,,,,,,,,RUS,True,API-Football
@@ -929,11 +929,12 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,Season,AvgCA,AvgCD,AvgCH,MaxCA,MaxCD,MaxCH,PSCA
 2026-09-17,Akron Togliatti,Akhmat Grozny,2,0,2026/2027,,,,,,,,,,RUS,True,API-Football
 2026-09-17,Dynamo Makhachkala,CSKA Moscow,1,3,2026/2027,,,,,,,,,,RUS,True,API-Football
 2026-10-09,FK Rostov,Akron Togliatti,1,0,2026/2027,,,,,,,,,,RUS,True,API-Football
+2026-10-10,Orenburg,Dynamo Makhachkala,4,0,2026/2027,,,,,,,,,,RUS,True,API-Football
 2026-10-10,Fakel Voronezh,Lokomotiv Moscow,0,5,2026/2027,,,,,,,,,,RUS,True,API-Football
 2026-10-10,Krylya Sovetov,Spartak Moscow,1,1,2026/2027,,,,,,,,,,RUS,True,API-Football
-2026-10-10,Orenburg,Dynamo Makhachkala,4,0,2026/2027,,,,,,,,,,RUS,True,API-Football
 2026-10-10,Krasnodar,Zenit,2,3,2026/2027,,,,,,,,,,RUS,True,API-Football
 2026-10-11,Akhmat Grozny,Baltika,0,0,2026/2027,,,,,,,,,,RUS,True,API-Football
 2026-10-11,Rubin Kazan,Dynamo Moscow,0,1,2026/2027,,,,,,,,,,RUS,True,API-Football
-2026-10-17,Krylya Sovetov,Fakel Voronezh,1,2,2026/2027,,,,,,,,,,RUS,True,API-Football
 2026-10-17,Dynamo Makhachkala,Akron Togliatti,1,1,2026/2027,,,,,,,,,,RUS,True,API-Football
+2026-10-17,Krylya Sovetov,Fakel Voronezh,1,2,2026/2027,,,,,,,,,,RUS,True,API-Football
+2026-10-17,Lokomotiv Moscow,Krasnodar,3,3,2026/2027,,,,,,,,,,RUS,True,API-Football
