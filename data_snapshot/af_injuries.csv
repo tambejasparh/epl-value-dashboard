@@ -1,35 +1,4 @@
 FixtureId,TeamId,PlayerId,Player,Type,Reason
-1552194,193,11245,F. Krastev,Missing Fixture,Achilles Tendon Injury
-1552194,193,36932,Y. Namli,Missing Fixture,Knee Injury
-1552194,410,162200,J. Dirksen,Missing Fixture,Inactive
-1552194,410,378962,P. Saathof,Missing Fixture,Knee Injury
-1550155,494,320335,J. Abankwah,Missing Fixture,Injury
-1550155,494,1134,V. Bayo,Missing Fixture,Thigh Injury
-1550155,494,434410,I. Gueye,Missing Fixture,Ankle Injury
-1550155,494,786,N. Zaniolo,Missing Fixture,Thigh Injury
-1550155,494,1939,J. Piotrowski,Questionable,Heart Problems
-1550155,494,162907,A. Zanoli,Questionable,Muscle Injury
-1550155,867,46170,I. Ilic,Missing Fixture,Thigh Injury
-1550155,867,335071,M. Berisha,Questionable,Lacking Match Fitness
-1550155,867,264122,N. Stulic,Questionable,Muscle Injury
-1584436,1004,49870,K. Corekci,Missing Fixture,Achilles Tendon Injury
-1584436,1004,380253,A. Karapo,Questionable,Injury
-1584436,1004,49469,M. Ouanes,Questionable,Muscle Injury
-1584436,3603,356998,J. Assoumou,Missing Fixture,Muscle Injury
-1584436,3603,453,C. Yuksel,Questionable,Injury
-1561418,596,1492,Wendel,Missing Fixture,Injury
-1561418,1085,278547,J. Romao,Questionable,Injury
-1570419,727,484459,A. Bonel,Missing Fixture,Inactive
-1570419,727,2214,R. Del Castillo,Missing Fixture,Muscle Injury
-1570419,727,182592,J. Herrando,Missing Fixture,Muscle Injury
-1570419,727,67939,A. Oroz,Missing Fixture,Injury
-1570419,4665,408875,S. Eriksson,Missing Fixture,Shoulder Injury
-1552195,420,383068,W. Asselman,Missing Fixture,Injury
-1552195,420,516834,D. Visser,Missing Fixture,Knee Injury
-1552195,420,277752,J. Amofa,Questionable,Injury
-1552195,201,36985,J. Hornkamp,Missing Fixture,Injury
-1552195,201,291505,S. Resink,Missing Fixture,Knee Injury
-1552195,201,388786,K. Smit,Missing Fixture,Injury
 1557427,35,51051,J. Araujo,Missing Fixture,Thigh Injury
 1557427,35,368030,E. J. Kroupi,Missing Fixture,Foot Injury
 1557427,35,304853,A. Scott,Missing Fixture,Thigh Injury
