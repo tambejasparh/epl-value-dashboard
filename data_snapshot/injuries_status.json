@@ -1,5 +1,5 @@
 {
- "time": "2026-10-18 19:22 UTC",
+ "time": "2026-10-19 10:40 UTC",
  "key_present": true,
  "leagues_found": {
   "I1": "Serie A (Italy)",
@@ -15,23 +15,29 @@
   "E1": "Championship (England)",
   "E3": "League Two (England)",
   "E2": "League One (England)",
-  "JPN": "J1 League (Japan)"
+  "JPN": "J1 League (Japan)",
+  "UECL": "UEFA Europa Conference League (World)",
+  "UEL": "UEFA Europa League (World)"
  },
- "fixtures": 64,
- "injured": 127,
- "players_fetched": 0,
- "requests_used": 8,
- "result": "127 missing players across 64 fixtures",
- "odds_time": "2026-10-18 19:22 UTC",
+ "fixtures": 100,
+ "injured": 231,
+ "players_fetched": 55,
+ "requests_used": 63,
+ "result": "231 missing players across 100 fixtures",
+ "odds_time": "2026-10-19 10:41 UTC",
  "odds_calls": 64,
- "odds_rows": 5080,
- "odds_fixtures": 60,
+ "odds_rows": 7218,
+ "odds_fixtures": 64,
  "books_seen": [
   "1xBet",
   "Bet365",
   "BetVictor",
+  "Betano",
+  "Betfair",
+  "Dafabet",
   "Marathonbet",
   "Pinnacle",
+  "SBO",
   "William Hill"
  ],
  "my_book_bets_seen": [
@@ -68,8 +74,11 @@
   "Exact Score",
   "First Half Winner",
   "Fouls. 1x2",
+  "Fouls. Away Total",
   "Fouls. Double Chance",
   "Fouls. Handicap",
+  "Fouls. Home Total",
+  "Fouls. Odd/Even",
   "Fouls. Total",
   "Goals Over/Under",
   "Goals Over/Under - Second Half",
@@ -91,11 +100,8 @@
   "Offsides Away Total",
   "Offsides Double Chance",
   "Offsides Handicap",
-  "Offsides Home Total",
-  "Offsides Total",
-  "Second Half Winner",
-  "ShotOnTarget 1x2"
+  "Offsides Home Total"
  ],
- "my_book_fixtures": 60,
- "odds_result": "prices for 60 fixtures"
+ "my_book_fixtures": 64,
+ "odds_result": "prices for 64 fixtures"
 }
