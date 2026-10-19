@@ -1,14 +1,7 @@
 {
- "time": "2026-10-19 16:03 UTC",
+ "time": "2026-10-19 19:04 UTC",
  "key_present": true,
  "leagues_found": {
-  "I1": "Serie A (Italy)",
-  "RUS": "Premier League (Russia)",
-  "T1": "S\u00fcper Lig (Turkey)",
-  "SP2": "Segunda Divisi\u00f3n (Spain)",
-  "F2": "Ligue 2 (France)",
-  "E0": "Premier League (England)",
-  "SP1": "La Liga (Spain)",
   "P1": "Primeira Liga (Portugal)",
   "UCL": "UEFA Champions League (World)",
   "SC1": "Championship (Scotland)",
@@ -16,18 +9,19 @@
   "E3": "League Two (England)",
   "E2": "League One (England)",
   "JPN": "J1 League (Japan)",
+  "SP1": "La Liga (Spain)",
   "UECL": "UEFA Europa Conference League (World)",
   "UEL": "UEFA Europa League (World)"
  },
- "fixtures": 100,
- "injured": 231,
+ "fixtures": 92,
+ "injured": 188,
  "players_fetched": 0,
  "requests_used": 8,
- "result": "231 missing players across 100 fixtures",
- "odds_time": "2026-10-19 16:03 UTC",
- "odds_calls": 65,
- "odds_rows": 8498,
- "odds_fixtures": 65,
+ "result": "188 missing players across 92 fixtures",
+ "odds_time": "2026-10-19 19:04 UTC",
+ "odds_calls": 92,
+ "odds_rows": 10607,
+ "odds_fixtures": 92,
  "books_seen": [
   "1xBet",
   "Bet365",
@@ -102,6 +96,6 @@
   "Offsides Handicap",
   "Offsides Home Total"
  ],
- "my_book_fixtures": 65,
- "odds_result": "prices for 65 fixtures"
+ "my_book_fixtures": 92,
+ "odds_result": "prices for 92 fixtures"
 }
