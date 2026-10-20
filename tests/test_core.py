@@ -812,3 +812,12 @@ def test_search_signature_accepts_week_list():
     import inspect
     sig = inspect.signature(app.render_match_search)
     assert "week_adv" in sig.parameters and "tz" in sig.parameters
+
+
+def test_passed_checks_survive_saving_and_reading():
+    log = pd.DataFrame({"Check": ["OK", np.nan, np.nan, "below 85%"],
+                        "xG": ["1.2 - 0.9", "1.1 - 1.0", np.nan, "1.0 - 1.0"]})
+    assert list(app.check_passed(log)) == [True, True, False, False]
+    p = TMP / "chk.csv"
+    log.to_csv(p, index=False)
+    assert list(app.check_passed(pd.read_csv(p))) == [True, True, False, False]

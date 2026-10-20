@@ -1544,6 +1544,17 @@ PICK_COLS = ["Kickoff (UTC)", "Match day", "League", "Competition", "HomeTeam", 
 PICK_KEY = ["League", "Match day", "HomeTeam", "AwayTeam"]
 
 
+def check_passed(log: pd.DataFrame) -> pd.Series:
+    """True where a logged pick passed every safety check. Passing picks are
+    saved as 'OK'; older rows saved a blank (read back as NaN) - those count as
+    passed when the row is from after checks were logged (it has an xG value)."""
+    if log is None or log.empty or "Check" not in log.columns:
+        return pd.Series(False, index=getattr(log, "index", None))
+    c = log["Check"]
+    has_xg = log["xG"].notna() if "xG" in log.columns else pd.Series(False, index=log.index)
+    return c.astype(str).isin(["OK", ""]) | (c.isna() & has_xg)
+
+
 def pick_won(k: str, h: int, a: int) -> bool:
     """Did best-pick market k win with final score h-a?"""
     t = h + a
@@ -1571,7 +1582,7 @@ def picks_from_overview(adv: pd.DataFrame) -> pd.DataFrame:
         "Prob %": (prob * 100).round(1),
         "Bet at": ((1 / prob) * (1 + DEFAULTS["min_edge"] / 100)).round(2),
         "Tier": [next(t for lim, _, t, _ in BEST_PICK_TIERS if q >= lim) for q in prob],
-        "Check": [ready_filter(r) for _, r in d.iterrows()],
+        "Check": [ready_filter(r) or "OK" for _, r in d.iterrows()],
         "xG": d["xG"] if "xG" in d.columns else "",
     })[PICK_COLS]
 
@@ -1678,8 +1689,7 @@ def pick_summary(settled: pd.DataFrame) -> dict:
     done["Won"] = done["Won"].astype(bool)
     tiers = {t: (int(g["Won"].sum()), int(len(g))) for t, g in done.groupby("Tier")}
     strong = done[done["Tier"].isin(["Banker", "Strong"])]
-    chk = done[done["Check"].fillna("~").astype(str) == ""] if "Check" in done.columns \
-        else done.iloc[0:0]
+    chk = done[check_passed(done)]
     return {"n": int(len(done)), "won": int(done["Won"].sum()),
             "pct": 100 * done["Won"].mean(), "tiers": tiers,
             "strong": (int(strong["Won"].sum()), int(len(strong))),
@@ -1871,8 +1881,9 @@ def past_matches_by_day(settled: pd.DataFrame, tz: str, days_back: int = 14,
     d["Match"] = d["HomeTeam"] + " v " + d["AwayTeam"]
     d["Bet"] = [short_bet(k, h, a) for k, h, a in zip(d["Pick key"], d["HomeTeam"], d["AwayTeam"])]
     d["Best pick %"] = pd.to_numeric(d["Prob %"], errors="coerce")
-    chk = d["Check"].astype(str) if "Check" in d.columns else pd.Series("nan", index=d.index)
-    d["Checked"] = np.where(chk == "", "✅", np.where(chk.isin(["nan", "None"]), "", "⚠️"))
+    known = d["Check"].notna() | (d["xG"].notna() if "xG" in d.columns else False) \
+        if "Check" in d.columns else pd.Series(False, index=d.index)
+    d["Checked"] = np.where(check_passed(d), "✅", np.where(known, "⚠️", ""))
     d["Result"] = [("✅ WON " if w is True else "❌ LOST " if w is False else "") + str(sc)
                    if sc != "pending" else "⏳ playing / waiting for result"
                    for w, sc in zip(d["Won"], d["Score"])]
