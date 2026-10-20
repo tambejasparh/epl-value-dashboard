@@ -5,6 +5,7 @@ FixtureId,TeamId,PlayerId,Player,Type,Reason
 1635661,611,1719,M. Muldur,Missing Fixture,Knee Injury
 1635661,611,272721,J. Oosterwolde,Missing Fixture,Achilles Tendon Injury
 1635661,611,50097,M. Yandas,Missing Fixture,Off the roster
+1635661,611,2290,N. Kante,Questionable,Knock
 1635661,560,337740,S. Chaloupek,Missing Fixture,Muscle Injury
 1635661,560,818,T. Chory,Missing Fixture,Coach's decision
 1635661,560,512717,H. Kante,Missing Fixture,Off the roster
@@ -18,16 +19,18 @@ FixtureId,TeamId,PlayerId,Player,Type,Reason
 1635719,165,404891,K. Karetsas,Missing Fixture,Ankle Injury
 1635719,165,162410,G. Konstantelias,Missing Fixture,Knee Injury
 1635719,165,465666,J. Lerma,Missing Fixture,Muscle Injury
-1563150,39,19484,A. Armstrong,Missing Fixture,Back Injury
 1563150,39,282770,R. Gomes,Missing Fixture,Foot Injury
 1563150,39,2887,R. Jimenez,Missing Fixture,Knee Injury
 1563150,39,671,B. Traore,Missing Fixture,Injury
 1563150,39,157912,B. Traore,Missing Fixture,Injury
+1563150,39,19484,A. Armstrong,Questionable,Back Injury
 1563150,1355,430827,B. Arthur,Missing Fixture,Back Injury
+1563150,1355,122094,C. Bishop,Missing Fixture,Inactive
 1563150,1355,462900,L. Brooke-Smith,Missing Fixture,Ankle Injury
 1563150,1355,237115,M. Kosznovszky,Missing Fixture,Knee Injury
 1563150,1355,19002,J. Murphy,Missing Fixture,Groin Injury
 1563150,1355,20138,C. Ogilvie,Missing Fixture,Knee Injury
+1563150,1355,19619,J. Swift,Missing Fixture,Inactive
 1563150,1355,340136,F. Umeh,Missing Fixture,Hamstring Injury
 1563150,1355,361472,T. Waddingham,Missing Fixture,Ankle Injury
 1563150,1355,17728,K. Anderson,Questionable,Overload
@@ -46,14 +49,15 @@ FixtureId,TeamId,PlayerId,Player,Type,Reason
 1635655,212,340572,D. Prpic,Missing Fixture,Off the roster
 1635655,212,325830,V. Sousa,Missing Fixture,Leg Injury
 1635655,212,449243,William Gomes,Missing Fixture,Ankle Injury
+1635655,197,36987,S. Lammers,Missing Fixture,Lacking Match Fitness
 1635655,197,307426,A. Nagalo,Missing Fixture,Injury
+1635655,197,378864,S. Ouaissa,Missing Fixture,Muscle Injury
+1635655,197,73868,R. Pepi,Missing Fixture,Injury
 1635655,197,25646,A. Plea,Missing Fixture,Surgery
 1635655,197,37890,J. Schouten,Missing Fixture,Knee Injury
 1635655,197,191233,K. Sildillia,Missing Fixture,Surgery
 1635655,197,327895,P. Wanner,Missing Fixture,Foot Injury
-1635655,197,36987,S. Lammers,Questionable,Lacking Match Fitness
-1635655,197,73868,R. Pepi,Questionable,Injury
-1635655,197,36905,G. Til,Questionable,Head Injury
+1635655,197,365018,R. van Bommel,Missing Fixture,Inactive
 1635688,40,180317,C. Bradley,Missing Fixture,Knee Injury
 1635688,40,30410,F. Chiesa,Missing Fixture,Off the roster
 1635688,40,174565,H. Ekitike,Missing Fixture,Achilles Tendon Injury
@@ -72,9 +76,8 @@ FixtureId,TeamId,PlayerId,Player,Type,Reason
 1635700,327,39360,A. Mikkelsen,Missing Fixture,Groin Injury
 1635700,327,266663,M. Riisnaes,Missing Fixture,Knee Injury
 1635700,327,407659,I. Sjong,Missing Fixture,Injury
+1635702,85,606062,A. Longoni,Missing Fixture,Injury
 1635702,85,263482,N. Mendes,Missing Fixture,Muscle Injury
-1635702,85,606062,A. Longoni,Questionable,Injury
-1635702,85,409216,S. Mayulu,Questionable,Muscle Injury
 1635702,529,338958,R. Bardghji,Missing Fixture,Knee Injury
 1635702,529,2282,A. Christensen,Missing Fixture,Muscle Injury
 1635702,529,619,E. Garcia,Missing Fixture,Muscle Injury
@@ -99,14 +102,15 @@ FixtureId,TeamId,PlayerId,Player,Type,Reason
 1635647,33,115589,B. Sesko,Missing Fixture,Leg Injury
 1635647,33,51494,M. Ugarte,Missing Fixture,Knee Injury
 1635647,33,342970,L. Yoro,Missing Fixture,Red Card
+1635647,33,402329,A. Heaven,Questionable,Illness
 1635647,33,284322,K. Mainoo,Questionable,Injury
 1635647,33,2467,L. Martinez,Questionable,Muscle Injury
 1635647,33,891,L. Shaw,Questionable,Injury
 1635684,79,306979,H. Igamane,Missing Fixture,Knee Injury
 1635684,79,386287,E. Mbappe,Missing Fixture,Red Card
+1635684,79,99576,O. Sahraoui,Missing Fixture,Inactive
 1635684,79,379329,T. Santos,Missing Fixture,Knee Injury
 1635684,79,72155,A. Ueda,Missing Fixture,Foot Injury
-1635684,79,1337,B. Ozer,Questionable,Injury
 1635684,645,550893,E. Aydin,Missing Fixture,Off the roster
 1635684,645,25448,K. Ayhan,Missing Fixture,Off the roster
 1635684,645,585709,A. Guner,Missing Fixture,Off the roster
@@ -115,23 +119,22 @@ FixtureId,TeamId,PlayerId,Player,Type,Reason
 1635684,645,568439,A. Yilmaz,Missing Fixture,Off the roster
 1635684,645,22236,R. Leao,Questionable,Injury
 1635684,645,30504,W. Singo,Questionable,Thigh Injury
-1635684,645,1462,L. Torreira,Questionable,Injury
-1570389,539,378284,K. Etta Eyong,Missing Fixture,Muscle Injury
 1570389,539,338295,A. Primo,Missing Fixture,Shoulder Injury
 1570389,539,313651,H. Sotelo,Missing Fixture,Knee Injury
-1570389,531,190489,A. Djalo,Missing Fixture,Illness
+1570389,539,378284,K. Etta Eyong,Questionable,Muscle Injury
 1570389,531,332305,U. Egiluz,Missing Fixture,Knee Injury
+1570389,531,47291,G. Guruzeta,Missing Fixture,Knee Injury
 1570389,531,128398,O. Sancet,Missing Fixture,Muscle Injury
 1570389,531,183799,N. Williams,Missing Fixture,Thigh Injury
-1570389,531,47291,G. Guruzeta,Questionable,Injury
+1570389,531,190489,A. Djalo,Questionable,Illness
 1635621,66,478441,M. Cisse,Missing Fixture,Off the roster
 1635621,66,144729,T. Harwood-Bellis,Missing Fixture,Off the roster
 1635621,66,514519,B. Madjo,Missing Fixture,Off the roster
 1635621,66,162714,A. Onana,Missing Fixture,Knee Injury
-1635621,66,162012,M. Ruggeri,Missing Fixture,Injury
+1635621,66,162012,M. Ruggeri,Missing Fixture,Muscle Injury
 1635621,66,364566,G. Hemmings,Questionable,Knee Injury
 1635621,66,138816,I. Maatsen,Questionable,Ankle Injury
-1635621,66,406244,J. Manzambi,Questionable,Injury
+1635621,66,406244,J. Manzambi,Questionable,Calf Injury
 1635621,66,18846,A. Wan-Bissaka,Questionable,Muscle Injury
 1635621,759,15712,A. Baertelsen,Missing Fixture,Foot Injury
 1635621,759,39220,V. Berisha,Missing Fixture,Thigh Injury
@@ -139,6 +142,7 @@ FixtureId,TeamId,PlayerId,Player,Type,Reason
 1635621,759,637833,K. Frimpong,Missing Fixture,Off the roster
 1635621,759,57436,M. Roseth,Missing Fixture,Knee Injury
 1635621,759,7023,N. D'Agostino,Questionable,Leg Injury
+1635621,759,180937,H. Falchener,Questionable,Knee Injury
 1635621,759,39040,K. Haugen,Questionable,Leg Injury
 1635630,157,330612,T. Buchmann,Missing Fixture,Knee Injury
 1635630,157,181812,J. Musiala,Missing Fixture,Muscle Injury
@@ -159,11 +163,11 @@ FixtureId,TeamId,PlayerId,Player,Type,Reason
 1635636,209,624605,S. van Persie,Questionable,Knock
 1635645,569,354027,J. Ordonez,Missing Fixture,Foot Injury
 1635645,116,671021,M. Diarra,Missing Fixture,Off the roster
+1635645,116,369500,I. Ganiou,Missing Fixture,Knee Injury
 1635645,116,497661,I. Jourdren,Missing Fixture,Off the roster
 1635645,116,178708,M. Nawrocki,Missing Fixture,Knee Injury
 1635645,116,277191,A. Sima,Missing Fixture,Muscle Injury
 1635645,116,21568,R. Aguilar,Questionable,Ankle Injury
-1635645,116,369500,I. Ganiou,Questionable,Knee Injury
 1635645,116,21635,J. Gradit,Questionable,Muscle Injury
 1635672,505,293,C. Jones,Missing Fixture,Thigh Injury
 1635672,505,217,L. Martinez,Missing Fixture,Thigh Injury
@@ -173,14 +177,15 @@ FixtureId,TeamId,PlayerId,Player,Type,Reason
 1635672,550,158447,K. Fesyun,Missing Fixture,Illness
 1635672,550,49439,A. Ghram,Missing Fixture,Injury
 1635672,550,125417,V. Korniyenko,Missing Fixture,Off the roster
+1635672,550,30529,Marlon,Missing Fixture,Muscle Injury
 1635672,550,428137,P. Obah,Missing Fixture,Off the roster
 1635672,550,323537,T. Puzankov,Missing Fixture,Off the roster
 1635672,550,63557,M. Shved,Missing Fixture,Off the roster
 1635672,550,336695,D. Tvardovskyi,Missing Fixture,Off the roster
 1635672,550,24597,I. Azarovi,Questionable,Knee Injury
 1635716,541,341640,R. Asencio,Missing Fixture,Broken Leg
-1635716,541,653,F. Mendy,Missing Fixture,Hip Injury
 1635716,541,10009,Rodrygo,Missing Fixture,Knee Injury
+1635716,541,653,F. Mendy,Questionable,Hip Injury
 1635716,173,392270,M. Guiu,Missing Fixture,Hamstring Injury
 1635716,173,380978,A. Ouedraogo,Missing Fixture,Shoulder Injury
 1635716,173,24814,L. Zingerle,Missing Fixture,Off the roster
@@ -192,7 +197,6 @@ FixtureId,TeamId,PlayerId,Player,Type,Reason
 1635737,1026,329612,R. Harakate,Missing Fixture,Knee Injury
 1635737,1026,348168,A. Smakaj,Missing Fixture,Off the roster
 1635737,1026,50873,G. Bello,Questionable,Muscle Injury
-1635737,1026,7738,S. Horvath,Questionable,Thigh Injury
 1635737,1026,367672,M. Usor,Questionable,Shoulder Injury
 1636215,3683,41530,P. Ayongo,Missing Fixture,Off the roster
 1636215,3683,96576,Z. Banjaqui,Questionable,Injury
@@ -220,8 +224,8 @@ FixtureId,TeamId,PlayerId,Player,Type,Reason
 1636262,651,369411,I. Pappoe,Missing Fixture,Knee Injury
 1636262,651,28209,G. Szecsi,Missing Fixture,Off the roster
 1636262,651,294,N. Keita,Questionable,Inactive
+1636276,496,161585,F. Conceicao,Missing Fixture,Shoulder Injury
 1636276,496,445447,A. Durmisi,Missing Fixture,Red Card
-1636276,496,451504,J. Ekhator,Missing Fixture,Muscle Injury
 1636276,496,15573,K. Grabara,Missing Fixture,Knee Injury
 1636276,496,30533,M. Locatelli,Missing Fixture,Knee Injury
 1636276,496,333,A. Milik,Missing Fixture,Inactive
@@ -229,6 +233,7 @@ FixtureId,TeamId,PlayerId,Player,Type,Reason
 1636276,496,116,K. Thuram,Missing Fixture,Knee Injury
 1636276,496,339883,K. Yildiz,Missing Fixture,Foot Injury
 1636276,496,48392,E. Zhegrova,Missing Fixture,Off the roster
+1636276,496,451504,J. Ekhator,Questionable,Muscle Injury
 1636280,347,105170,A. Douglas,Missing Fixture,Ankle Injury
 1636280,347,8564,A. Gholizadeh,Missing Fixture,Knee Injury
 1636280,347,50922,J. Moutinho,Missing Fixture,Inactive
@@ -236,14 +241,14 @@ FixtureId,TeamId,PlayerId,Player,Type,Reason
 1636280,347,3001,R. Gumny,Questionable,Inactive
 1636280,347,429408,W. Monka,Questionable,Injury
 1636280,746,646252,J. Angulo,Missing Fixture,Off the roster
-1636280,746,55904,D. Ballard,Missing Fixture,Muscle Injury
 1636280,746,19446,A. Browne,Missing Fixture,Off the roster
 1636280,746,278454,M. Ellborg,Missing Fixture,Off the roster
-1636280,746,264,T. Meunier,Missing Fixture,Muscle Injury
 1636280,746,284414,R. Mundle,Missing Fixture,Knee Injury
 1636280,746,492528,J. Ta Bi,Missing Fixture,Off the roster
 1636280,746,336659,C. Talbi,Missing Fixture,Off the roster
+1636280,746,55904,D. Ballard,Questionable,Muscle Injury
 1636280,746,84087,W. Isidor,Questionable,Injury
+1636280,746,264,T. Meunier,Questionable,Muscle Injury
 1636303,1124,22153,A. Leya Iseka,Missing Fixture,Inactive
 1636303,1124,26771,N. Marinakis,Missing Fixture,Groin Injury
 1636303,1124,20294,C. Sielis,Missing Fixture,Inactive
@@ -312,11 +317,11 @@ FixtureId,TeamId,PlayerId,Player,Type,Reason
 1636249,247,434623,J. van den Berg,Missing Fixture,Off the roster
 1636249,247,19314,C. Carter-Vickers,Questionable,Health problems
 1636249,247,304958,Yang Hyun-Jun,Questionable,Hamstring Injury
-1636249,538,320517,P. Duran,Missing Fixture,Calf Injury
 1636249,538,351913,J. El Abdellaoui,Missing Fixture,Knee Injury
 1636249,538,47348,B. Iglesias,Missing Fixture,Calf Injury
 1636249,538,333502,M. Roman,Missing Fixture,Knee Injury
 1636249,538,47988,C. Starfelt,Missing Fixture,Muscle Injury
+1636249,538,320517,P. Duran,Questionable,Calf Injury
 1636267,167,453903,N. De Cat,Missing Fixture,Knee Injury
 1636267,167,455332,L. Engelns,Missing Fixture,Off the roster
 1636267,167,278453,A. Hajdari,Missing Fixture,Foot Injury
@@ -338,9 +343,9 @@ FixtureId,TeamId,PlayerId,Player,Type,Reason
 1636288,321,57192,E. B. Garnas,Missing Fixture,Knee Injury
 1636288,321,331919,C. Jebara,Missing Fixture,Injury
 1636288,548,199044,J. Aramburu,Missing Fixture,Leg Injury
-1636288,548,349063,L. Beitia,Missing Fixture,Ankle Injury
-1636288,548,2449,Y. Herrera,Missing Fixture,Calf Injury
 1636288,548,737,A. Odriozola,Missing Fixture,Knee Injury
+1636288,548,349063,L. Beitia,Questionable,Ankle Injury
+1636288,548,2449,Y. Herrera,Questionable,Calf Injury
 1636308,553,983,L. Bailey,Missing Fixture,Inactive
 1636308,553,195580,Clayton,Missing Fixture,Off the roster
 1636308,553,2722,A. El Kaabi,Missing Fixture,Broken Leg

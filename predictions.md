@@ -1,5 +1,5 @@
 # Football predictions — day by day
-_Updated Tue 20 Oct 2026 14:59 (Africa/Douala time). Bankroll for stakes: 100.00_
+_Updated Tue 20 Oct 2026 17:31 (Africa/Douala time). Bankroll for stakes: 100.00_
 
 ## ✅ Your bets for each day (already checked - just place them)
 
@@ -97,14 +97,14 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 - ⚠️ 19:45 · **Rochdale v Grimsby** (England - League Two) — BET: Over/Under (total goals) → Under 4.5 · 86% · 1xBet 1.10
 - ⚠️ 19:45 · **Notts County v Sheffield Weds** (England - League One) — BET: Over/Under (total goals) → Under 4.5 · 86% · 1xBet 1.10
 - ⚠️ 19:45 · **Chesterfield v Colchester** (England - League Two) — BET: Over/Under (total goals) → Under 4.5 · 86% · 1xBet 1.16
-- ⚠️ 19:45 · **Doncaster v Stockport** (England - League One) — BET: Over/Under (total goals) → Under 4.5 · 85% · 1xBet 1.12
+- ⚠️ 19:45 · **Doncaster v Stockport** (England - League One) — BET: Over/Under (total goals) → Under 4.5 · 85% · 1xBet 1.17
 - ⚠️ 17:45 · **Fenerbahçe v Slavia Praha** (UEFA Champions League) — BET: Fenerbahçe total goals → Over 0.5 · 85% · 1xBet 1.08
 - ⚠️ 19:45 · **Cambridge v Wycombe** (England - League One) — BET: Over/Under (total goals) → Under 4.5 · 85% · 1xBet 1.11
 - ⚠️ 19:45 · **York v Accrington** (England - League Two) — BET: York total goals → Over 0.5 · 84% · 1xBet 1.09
 - ⚠️ 19:45 · **Bromley v Leicester** (England - League One) — BET: Leicester total goals → Over 0.5 · 83% · 1xBet 1.07
-- ⚠️ 19:45 · **Exeter v Crewe** (England - League Two) — BET: Over/Under (total goals) → Under 3.5 · 83% · 1xBet 1.18
+- ⚠️ 19:45 · **Exeter v Crewe** (England - League Two) — BET: Over/Under (total goals) → Under 3.5 · 83% · 1xBet 1.21
 - ⚠️ 20:00 · **Stuttgart v Atleti** (UEFA Champions League) — BET: Atleti total goals → Over 0.5 · 83% · 1xBet 1.08
-- ⚠️ 20:00 · **Porto v PSV** (UEFA Champions League) — BET: Porto total goals → Over 0.5 · 82% · 1xBet 1.09
+- ⚠️ 20:00 · **Porto v PSV** (UEFA Champions League) — BET: Porto total goals → Over 0.5 · 82% · 1xBet 1.08
 - ⚠️ 20:00 · **Napoli v Bodø/Glimt** (UEFA Champions League) — BET: Over/Under (total goals) → Under 4.5 · 82% · 1xBet 1.19
 - ⚠️ 19:45 · **Northampton v Tranmere** (England - League Two) — BET: Over/Under (total goals) → Under 3.5 · 81% · 1xBet 1.21
 - ⚠️ 19:45 · **Blackpool v Milton Keynes Dons** (England - League One) — BET: Over/Under (total goals) → Under 4.5 · 81% · 1xBet 1.16
@@ -112,15 +112,15 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 ### Wednesday 21 October (21 matches)
 
 - ⚠️ 20:00 · **Real Madrid v Leipzig** (UEFA Champions League) — BET: Real Madrid total goals → Over 0.5 · 92% · 1xBet 1.01
-- ⚠️ 20:00 · **Sporting CP v LASK** (UEFA Champions League) — BET: Double Chance → 1X (Sporting CP or draw) · 92% · 1xBet 1.05
+- ⚠️ 20:00 · **Sporting CP v LASK** (UEFA Champions League) — BET: Double Chance → 1X (Sporting CP or draw) · 92% · 1xBet 1.04
 - ⚠️ 11:00 · **Okayama v Mito** (Japan - J1 League) — BET: Over/Under (total goals) → Under 4.5 · 92% · 1xBet 1.04
 - ⚠️ 20:00 · **Aston Villa v Viking** (UEFA Champions League) — BET: Double Chance → 1X (Aston Villa or draw) · 90% · 1xBet 1.04
 - ⚠️ 20:00 · **Inter v Shakhtar** (UEFA Champions League) — BET: Inter total goals → Over 0.5 · 89% · 1xBet 1.01
 - ⚠️ 19:00 · **Levante v Ath Bilbao** (Spain - La Liga) — BET: Over/Under (total goals) → Under 4.5 · 88% · 1xBet 1.07
-- ⚠️ 20:00 · **Real Betis v Feyenoord** (UEFA Champions League) — BET: Real Betis total goals → Over 0.5 · 87% · 1xBet 1.05
+- ⚠️ 20:00 · **Real Betis v Feyenoord** (UEFA Champions League) — BET: Real Betis total goals → Over 0.5 · 87% · 1xBet 1.04
 - ⚠️ 11:00 · **Nagoya Grampus v Cerezo Osaka** (Japan - J1 League) — BET: Over/Under (total goals) → Under 4.5 · 87% · 1xBet 1.14
-- ⚠️ 11:30 · **Urawa Reds v Chiba** (Japan - J1 League) — BET: Urawa Reds total goals → Over 0.5 · 86% · 1xBet 1.09
 - ⚠️ 20:00 · **Club Brugge v Lens** (UEFA Champions League) — BET: Club Brugge total goals → Over 0.5 · 86% · 1xBet 1.10
+- ⚠️ 11:30 · **Urawa Reds v Chiba** (Japan - J1 League) — BET: Urawa Reds total goals → Over 0.5 · 86% · 1xBet 1.09
 - ⚠️ 11:00 · **V-Varen Nagasaki v Sanfrecce Hiroshima** (Japan - J1 League) — BET: Sanfrecce Hiroshima total goals → Over 0.5 · 86% · 1xBet 1.02
 - ⚠️ 11:00 · **FC Tokyo v Kashiwa Reysol** (Japan - J1 League) — BET: Over/Under (total goals) → Under 4.5 · 85% · 1xBet 1.10
 - ⚠️ 11:00 · **Kyoto v Kashima Antlers** (Japan - J1 League) — BET: Over/Under (total goals) → Under 4.5 · 85% · 1xBet 1.10
@@ -146,13 +146,13 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 - ⚠️ 17:45 · **Inter Escaldes v U. Craiova** (UEFA Conference League) — BET: Over/Under (total goals) → Under 4.5 · 87% · 1xBet 1.07
 - ⚠️ 17:45 · **Ararat-Armenia v AZ Alkmaar** (UEFA Europa League) — BET: AZ Alkmaar total goals → Over 0.5 · 87% · 1xBet 1.08
 - ⚠️ 17:45 · **Lech Poznan v Sunderland** (UEFA Europa League) — BET: Over/Under (total goals) → Under 4.5 · 87% · 1xBet 1.09
-- ⚠️ 20:00 · **Olympiacos v Sparta Praha** (UEFA Europa League) — BET: Over/Under (total goals) → Under 4.5 · 87% · 1xBet 1.10
+- ⚠️ 20:00 · **Olympiacos v Sparta Praha** (UEFA Europa League) — BET: Over/Under (total goals) → Under 4.5 · 87% · 1xBet 1.11
 - ⚠️ 20:00 · **Viktoria Plzen v Levski Sofia** (UEFA Europa League) — BET: Over/Under (total goals) → Under 4.5 · 86% · 1xBet 1.12
-- ⚠️ 20:00 · **Celtic v Celta** (UEFA Europa League) — BET: Over/Under (total goals) → Under 4.5 · 86% · 1xBet 1.08
 - ⚠️ 17:45 · **Pafos v Riga** (UEFA Conference League) — BET: Over/Under (total goals) → Under 4.5 · 86% · 1xBet 1.09
 - ⚠️ 17:45 · **Getafe v Lugano** (UEFA Conference League) — BET: Over/Under (total goals) → Under 4.5 · 86% · 1xBet 1.04
 - ⚠️ 17:45 · **Sturm Graz v Marseille** (UEFA Europa League) — BET: Over/Under (total goals) → Under 4.5 · 86% · 1xBet 1.11
 - ⚠️ 17:45 · **Kauno Žalgiris v Brann** (UEFA Conference League) — BET: Over/Under (total goals) → Under 4.5 · 86% · 1xBet 1.10
+- ⚠️ 20:00 · **Celtic v Celta** (UEFA Europa League) — BET: Over/Under (total goals) → Under 4.5 · 86% · 1xBet 1.08
 - ⚠️ 20:00 · **Aarhus v Egnatia** (UEFA Conference League) — BET: Over/Under (total goals) → Under 4.5 · 85% · 1xBet 1.10
 - ⚠️ 17:45 · **Ferencváros v Torreense** (UEFA Europa League) — BET: Ferencváros total goals → Over 0.5 · 85% · 1xBet 1.03
 - ⚠️ 20:00 · **Omonia v Benfica** (UEFA Europa League) — BET: Over/Under (total goals) → Under 4.5 · 84% · 1xBet 1.18
@@ -160,12 +160,12 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 - ⚠️ 20:00 · **Jagiellonia v Anderlecht** (UEFA Europa League) — BET: Over/Under (total goals) → Under 4.5 · 84% · 1xBet 1.10
 - ⚠️ 20:00 · **Midtjylland v Sint-Truidense** (UEFA Conference League) — BET: Midtjylland total goals → Over 0.5 · 84% · 1xBet 1.08
 - ⚠️ 17:45 · **Nordsjælland v CSKA Sofia** (UEFA Conference League) — BET: Nordsjælland total goals → Over 0.5 · 84% · 1xBet 1.07
-- ⚠️ 15:30 · **Kairat Almaty v Panathinaikos** (UEFA Conference League) — BET: Over/Under (total goals) → Under 4.5 · 83% · 1xBet 1.09
 - ⚠️ 17:45 · **Juventus v Rennes** (UEFA Europa League) — BET: Over/Under (total goals) → Under 4.5 · 83% · 1xBet 1.12
+- ⚠️ 15:30 · **Kairat Almaty v Panathinaikos** (UEFA Conference League) — BET: Over/Under (total goals) → Under 4.5 · 83% · 1xBet 1.09
 - ⚠️ 20:00 · **Thun v Hajduk Split** (UEFA Conference League) — BET: Over/Under (total goals) → Under 4.5 · 83% · 1xBet 1.15
 - ⚠️ 20:00 · **Bournemouth v Milan** (UEFA Europa League) — BET: Over/Under (total goals) → Under 4.5 · 82% · 1xBet 1.11
 - ⚠️ 20:00 · **Monaco v Freiburg** (UEFA Conference League) — BET: Over/Under (total goals) → Under 4.5 · 82% · 1xBet 1.13
-- ⚠️ 20:00 · **Lillestrøm v Real Sociedad** (UEFA Europa League) — BET: Real Sociedad total goals → Over 0.5 · 81% · 1xBet 1.08
+- ⚠️ 20:00 · **Lillestrøm v Real Sociedad** (UEFA Europa League) — BET: Real Sociedad total goals → Over 0.5 · 82% · 1xBet 1.08
 - ⚠️ 17:45 · **Crvena Zvezda v Copenhagen** (UEFA Conference League) — BET: Over/Under (total goals) → Under 4.5 · 80% · 1xBet 1.12
 - ⚠️ 20:00 · **Celje v Salzburg** (UEFA Europa League) — BET: Double Chance → 12 (no draw) · 79% · 1xBet 1.25
 - ⚠️ 20:00 · **Hoffenheim v Lyon** (UEFA Europa League) — BET: Over/Under (total goals) → Over 1.5 · 79% · 1xBet 1.10
@@ -327,10 +327,10 @@ Results: **8 of 8 bets won** (100%)
 
 ### Sunday 18 October
 
-Results: **42 of 49 bets won** (86%)
+Results: **42 of 49 bets won** (86%) · ✅ checked bets: **1 of 1 won**
 
 - ⚠️ 14:00 · **Juve Stabia v Sudtirol** — Over/Under (total goals) → Under 4.5 (91%) → ✅ WON 3-0
-- ⚠️ 15:30 · **Panathinaikos v Asteras Tripolis** — Double Chance → 1X (Panathinaikos or draw) (91%) → ✅ WON 5-1
+- ✅ 15:30 · **Panathinaikos v Asteras Tripolis** — Double Chance → 1X (Panathinaikos or draw) (91%) → ✅ WON 5-1
 - ⚠️ 20:00 · **Real Madrid v Sevilla** — Double Chance → 1X (Real Madrid or draw) (91%) → ✅ WON 4-1
 - ⚠️ 14:00 · **Kocaelispor v Goztep** — Over/Under (total goals) → Under 4.5 (91%) → ✅ WON 1-2
 - ⚠️ 19:45 · **Juventus v Lazio** — Over/Under (total goals) → Under 4.5 (90%) → ✅ WON 0-3
@@ -381,83 +381,23 @@ Results: **42 of 49 bets won** (86%)
 
 ### Saturday 17 October
 
-Results: **63 of 71 bets won** (89%)
+Results: **11 of 11 bets won** (100%)
 
 - ⚠️ 20:00 · **Valencia v Ath Bilbao** — Over/Under (total goals) → Under 4.5 (92%) → ✅ WON 0-0
-- ⚠️ 15:00 · **West Brom v Blackburn** — Over/Under (total goals) → Under 4.5 (91%) → ❌ LOST 3-2
-- ⚠️ 15:30 · **Den Haag v PSV Eindhoven** — Over/Under (total goals) → Over 1.5 (91%) → ✅ WON 2-1
-- ⚠️ 17:30 · **Betis v Barcelona** — Barcelona total goals → Over 0.5 (91%) → ✅ WON 2-5
-- ⚠️ 16:15 · **Strasbourg v Paris SG** — Paris SG total goals → Over 0.5 (91%) → ✅ WON 1-3
-- ⚠️ 15:00 · **Stockport v Bromley** — Double Chance → 1X (Stockport or draw) (91%) → ✅ WON 1-0
-- ⚠️ 15:00 · **Grimsby v Northampton** — Over/Under (total goals) → Under 4.5 (90%) → ✅ WON 0-2
-- ⚠️ 15:00 · **Southampton v Bolton** — Southampton total goals → Over 0.5 (90%) → ❌ LOST 0-0
-- ⚠️ 17:00 · **Fenerbahce v Alanyaspor** — Fenerbahce total goals → Over 0.5 (90%) → ✅ WON 3-0
 - ⚠️ 19:00 · **Telstar v Feyenoord** — Feyenoord total goals → Over 0.5 (90%) → ✅ WON 3-4
 - ⚠️ 19:45 · **Roma v Genoa** — Over/Under (total goals) → Under 4.5 (90%) → ✅ WON 2-0
-- ⚠️ 15:00 · **Accrington v Gillingham** — Over/Under (total goals) → Under 4.5 (89%) → ✅ WON 3-1
-- ⚠️ 15:00 · **Morton v Queens Park** — Over/Under (total goals) → Under 4.5 (89%) → ✅ WON 2-0
 - ⚠️ 18:30 · **Pisa v Cremonese** — Over/Under (total goals) → Under 4.5 (89%) → ✅ WON 3-1
-- ⚠️ 15:00 · **Dunfermline v Livingston** — Over/Under (total goals) → Under 4.5 (89%) → ✅ WON 0-0
-- ⚠️ 15:00 · **Derby v Stoke** — Over/Under (total goals) → Under 4.5 (89%) → ✅ WON 0-1
-- ⚠️ 15:00 · **Queen of Sth v Ross County** — Double Chance → X2 (Ross County or draw) (89%) → ✅ WON 1-7
-- ⚠️ 15:00 · **Crewe v Rochdale** — Over/Under (total goals) → Under 4.5 (89%) → ❌ LOST 3-2
 - ⚠️ 20:00 · **Dundee v Rangers** — Rangers total goals → Over 0.5 (89%) → ✅ WON 2-2
-- ⚠️ 15:00 · **Inverness C v Arbroath** — Over/Under (total goals) → Under 4.5 (88%) → ✅ WON 2-0
-- ⚠️ 15:00 · **East Fife v Alloa** — Over/Under (total goals) → Under 4.5 (88%) → ✅ WON 0-3
-- ⚠️ 15:00 · **Birmingham v QPR** — Over/Under (total goals) → Under 4.5 (88%) → ✅ WON 3-0
-- ⚠️ 15:00 · **Aberdeen v St Mirren** — Over/Under (total goals) → Under 4.5 (88%) → ✅ WON 3-1
-- ⚠️ 15:00 · **Port Vale v Chesterfield** — Over/Under (total goals) → Under 4.5 (88%) → ✅ WON 1-0
-- ⚠️ 15:15 · **Villarreal v Elche** — Villarreal total goals → Over 0.5 (88%) → ❌ LOST 0-0
-- ⚠️ 15:00 · **Man City v Ipswich** — Over/Under (total goals) → Over 1.5 (88%) → ✅ WON 3-2
-- ⚠️ 15:00 · **Fulham v Hull** — Over/Under (total goals) → Under 4.5 (88%) → ✅ WON 1-0
-- ⚠️ 15:00 · **East Kilbride v Montrose** — East Kilbride total goals → Over 0.5 (88%) → ✅ WON 1-1
-- ⚠️ 17:30 · **Bayern Munich v RB Leipzig** — Double Chance → 1X (Bayern Munich or draw) (88%) → ✅ WON 6-1
-- ⚠️ 17:30 · **Airdrie Utd v Hamilton** — Over/Under (total goals) → Under 4.5 (88%) → ✅ WON 1-2
-- ⚠️ 15:00 · **Levadeiakos v Volos NFC** — Over/Under (total goals) → Under 4.5 (87%) → ✅ WON 0-0
 - ⚠️ 19:45 · **Lille v Brest** — Over/Under (total goals) → Under 4.5 (87%) → ✅ WON 1-1
-- ⚠️ 15:00 · **Salford v Crawley Town** — Salford total goals → Over 0.5 (87%) → ✅ WON 2-1
-- ⚠️ 15:00 · **Wrexham v Preston** — Over/Under (total goals) → Under 4.5 (87%) → ❌ LOST 4-1
-- ⚠️ 15:00 · **Wycombe v Notts County** — Over/Under (total goals) → Under 4.5 (87%) → ✅ WON 2-0
-- ⚠️ 15:00 · **Bristol City v Sheffield United** — Over/Under (total goals) → Under 4.5 (86%) → ✅ WON 0-1
-- ⚠️ 15:00 · **St Johnstone v Dundee United** — Over/Under (total goals) → Under 4.5 (86%) → ✅ WON 1-1
-- ⚠️ 17:30 · **Sp Gijon v Albacete** — Over/Under (total goals) → Under 4.5 (86%) → ✅ WON 2-1
-- ⚠️ 15:00 · **Wigan v Reading** — Over/Under (total goals) → Under 4.5 (86%) → ✅ WON 1-0
 - ⚠️ 19:00 · **Red Star v St Etienne** — Over/Under (total goals) → Under 4.5 (86%) → ✅ WON 0-1
-- ⚠️ 15:00 · **Norwich v Portsmouth** — Over/Under (total goals) → Under 4.5 (86%) → ✅ WON 0-1
-- ⚠️ 15:00 · **Sheffield Weds v AFC Wimbledon** — Sheffield Weds total goals → Over 0.5 (86%) → ✅ WON 5-0
-- ⚠️ 15:00 · **Brentford v Liverpool** — Over/Under (total goals) → Under 4.5 (86%) → ✅ WON 1-2
-- ⚠️ 15:00 · **Peterhead v Cove Rangers** — Over/Under (total goals) → Under 4.5 (85%) → ✅ WON 2-0
-- ⚠️ 15:00 · **Kelty Hearts v Forfar** — Over/Under (total goals) → Under 4.5 (85%) → ✅ WON 2-1
-- ⚠️ 15:00 · **Hibernian v Falkirk** — Over/Under (total goals) → Under 4.5 (85%) → ✅ WON 1-2
 - ⚠️ 20:00 · **Sparta Rotterdam v Willem II** — Sparta Rotterdam total goals → Over 0.5 (85%) → ✅ WON 3-2
-- ⚠️ 17:00 · **Bologna v Inter** — Over/Under (total goals) → Under 4.5 (85%) → ✅ WON 1-3
-- ⚠️ 15:00 · **Swindon v Walsall** — Over/Under (total goals) → Under 4.5 (85%) → ✅ WON 1-1
 - ⚠️ 19:30 · **Hannover v St Pauli** — Over/Under (total goals) → Under 4.5 (85%) → ✅ WON 1-1
-- ⚠️ 15:00 · **Oldham v Cheltenham** — Over/Under (total goals) → Under 4.5 (85%) → ❌ LOST 4-1
-- ⚠️ 15:00 · **Clyde v Annan Athletic** — Clyde total goals → Over 0.5 (85%) → ✅ WON 4-1
 - ⚠️ 20:00 · **Las Palmas v Castellon** — Over/Under (total goals) → Under 4.5 (85%) → ✅ WON 0-3
-- ⚠️ 15:00 · **Swansea v West Ham** — West Ham total goals → Over 0.5 (84%) → ✅ WON 0-1
-- ⚠️ 15:00 · **Newport County v York** — York total goals → Over 0.5 (84%) → ✅ WON 1-1
-- ⚠️ 16:15 · **Mantova v Palermo** — Over/Under (total goals) → Under 4.5 (84%) → ✅ WON 0-2
-- ⚠️ 15:00 · **Leyton Orient v Blackpool** — Over/Under (total goals) → Under 4.5 (84%) → ✅ WON 2-0
-- ⚠️ 15:00 · **Elgin v Edinburgh City** — Elgin total goals → Over 0.5 (84%) → ❌ LOST 0-0
-- ⚠️ 15:00 · **Spartans v Stranraer** — Over/Under (total goals) → Under 4.5 (83%) → ✅ WON 0-2
-- ⚠️ 17:30 · **Newcastle v Aston Villa** — Over/Under (total goals) → Under 4.5 (83%) → ✅ WON 0-1
-- ⚠️ 15:15 · **Eibar v Mallorca** — Over/Under (total goals) → Under 3.5 (83%) → ✅ WON 1-1
-- ⚠️ 15:00 · **Bradford v Stevenage** — Over/Under (total goals) → Under 3.5 (83%) → ✅ WON 2-0
-- ⚠️ 15:00 · **Leicester v Doncaster** — Over/Under (total goals) → Under 4.5 (83%) → ✅ WON 2-1
 - ⚠️ 19:45 · **Troyes v Lens** — Lens total goals → Over 0.5 (83%) → ✅ WON 1-3
-- ⚠️ 15:00 · **Tranmere v Barnet** — Over/Under (total goals) → Under 4.5 (83%) → ✅ WON 1-2
-- ⚠️ 15:00 · **Kilmarnock v Motherwell** — Over/Under (total goals) → Under 4.5 (82%) → ❌ LOST 3-2
-- ⚠️ 15:00 · **Barnsley v Cambridge** — Over/Under (total goals) → Under 4.5 (82%) → ✅ WON 1-2
-- ⚠️ 15:00 · **Dumbarton v Stirling** — Over/Under (total goals) → Over 1.5 (82%) → ✅ WON 1-1
-- ⚠️ 15:00 · **Colchester v Exeter** — Over/Under (total goals) → Under 3.5 (82%) → ✅ WON 0-0
-- ⚠️ 15:00 · **Stenhousemuir v Raith Rvs** — Over/Under (total goals) → Under 3.5 (81%) → ✅ WON 1-1
-- ⚠️ 15:00 · **Plymouth v Huddersfield** — Over/Under (total goals) → Under 4.5 (81%) → ✅ WON 0-2
 
 ## 📈 Live track record of best picks
 
-**206 of 236 best picks won (87%)** · 🔒+⭐⭐⭐ picks: 68/77 (88%) · 217 waiting for results
+**206 of 236 best picks won (87%)** · ✅ 'Your bets' (passed all checks): 4/4 (100%) · 🔒+⭐⭐⭐ picks: 68/77 (88%) · 217 waiting for results
 Banker 24/26 (92%) · Strong 44/51 (86%) · Good 61/70 (87%) · Fair 77/89 (87%)
 
 **🛡️ Rules for low-odds betting (read every time)**
@@ -544,9 +484,9 @@ No bets this week - the prices are fair. That is normal.
 
 | Time | Competition | Match | Advice | Stake | 🎯 Best pick | Predicted | H / D / A % | Over 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 / 6.5 % | Under 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 / 6.5 % |
 |---|---|---|---|---|---|---|---|---|---|
-| 17:45 | UEFA Champions League | Fenerbahçe v Slavia Praha | Bookmakers: Fenerbahçe 1.54 · draw 4.62 · Slavia Praha 5.53. Model: back Fenerbahçe only at 1.47+ | - | ⭐⭐ Fenerbahçe to score · 85% · bet at 1.21+ | 1-0 | 70 / 18 / 11 | 93 / 72 / 48 / 26 / 12 / 5 / 2 | 7 / 28 / 52 / 74 / 88 / 95 / 98 |
+| 17:45 | UEFA Champions League | Fenerbahçe v Slavia Praha | Bookmakers: Fenerbahçe 1.54 · draw 4.62 · Slavia Praha 5.53. Model: back Fenerbahçe only at 1.47+ | - | ⭐⭐ Fenerbahçe to score · 85% · bet at 1.21+ | 1-0 | 70 / 18 / 12 | 93 / 72 / 48 / 26 / 12 / 5 / 2 | 7 / 28 / 52 / 74 / 88 / 95 / 98 |
 | 17:45 | UEFA Champions League | Sabah v B. Dortmund | Bookmakers: Sabah 9.50 · draw 6.07 · B. Dortmund 1.29. Model: back B. Dortmund only at 1.60+ | - | ⭐⭐⭐ B. Dortmund to score · 88% · bet at 1.17+ | 1-2 | 18 / 17 / 65 | 98 / 86 / 68 / 46 / 27 / 14 / 6 | 2 / 14 / 32 / 54 / 73 / 86 / 94 |
-| 19:45 | England - Championship | Wolves v Portsmouth | **WATCH Over 2.5 @ 1.80 (Bet365, edge +4.7%) - paper only** | - | ⭐⭐ Under 4.5 goals · 87% · bet at 1.18+ | 1-0 | 51 / 26 / 22 | 91 / 72 / 46 / 24 / 11 / 4 / 1 | 9 / 28 / 54 / 76 / 89 / 96 / 99 |
+| 19:45 | England - Championship | Wolves v Portsmouth | **WATCH Over 2.5 @ 1.80 (Bet365, edge +4.7%) - paper only** | - | ⭐⭐ Under 4.5 goals · 87% · bet at 1.18+ | 1-0 | 54 / 26 / 20 | 91 / 71 / 45 / 24 / 11 / 4 / 1 | 9 / 29 / 55 / 76 / 89 / 96 / 99 |
 | 19:45 | England - League One | AFC Wimbledon v Mansfield | NO BET (model not profitable in this league) | - | ⭐⭐ Under 4.5 goals · 88% · bet at 1.17+ | 0-1 | 31 / 27 / 42 | 91 / 70 / 44 / 23 / 10 / 4 / 1 | 9 / 30 / 56 / 77 / 90 / 96 / 99 |
 | 19:45 | England - League One | Blackpool v Milton Keynes Dons | NO BET (model not profitable in this league) | - | ⭐ Under 4.5 goals · 81% · bet at 1.27+ | 2-1 | 50 / 23 / 27 | 95 / 81 / 59 / 36 / 19 / 9 / 4 | 5 / 19 / 41 / 64 / 81 / 91 / 96 |
 | 19:45 | England - League One | Bromley v Leicester | NO BET (model not profitable in this league) | - | ⭐ Leicester to score · 83% · bet at 1.23+ | 0-1 | 28 / 24 / 48 | 94 / 78 / 54 / 32 / 16 / 7 / 3 | 6 / 22 / 46 / 68 / 84 / 93 / 97 |
@@ -573,7 +513,7 @@ No bets this week - the prices are fair. That is normal.
 | 20:00 | England - League Two | Gillingham v Port Vale | NO BET (model not profitable in this league) | - | 🔒 Under 4.5 goals · 92% · bet at 1.12+ | 0-1 | 33 / 29 / 38 | 89 / 64 / 37 / 18 / 7 / 2 / 1 | 11 / 36 / 63 / 82 / 93 / 98 / 99 |
 | 20:00 | UEFA Champions League | Stuttgart v Atleti | Bookmakers: Stuttgart 3.32 · draw 3.85 · Atleti 2.06. Model: back Atleti only at 2.04+ | - | ⭐ Atleti to score · 83% · bet at 1.24+ | 1-2 | 29 / 20 / 51 | 98 / 85 / 67 / 45 / 26 / 13 / 6 | 2 / 15 / 33 / 55 / 74 / 87 / 94 |
 | 20:00 | UEFA Champions League | Napoli v Bodø/Glimt | Bookmakers: Napoli 1.76 · draw 4.03 · Bodø/Glimt 4.37. Model: back Napoli only at 2.24+ | - | ⭐ Under 4.5 goals · 82% · bet at 1.26+ | 1-0 | 46 / 24 / 30 | 93 / 71 / 46 / 25 / 11 / 4 / 1 | 7 / 29 / 54 / 75 / 89 / 96 / 99 |
-| 20:00 | UEFA Champions League | Porto v PSV | Bookmakers: Porto 1.52 · draw 4.68 · PSV 5.75. Model: back Porto only at 2.18+ | - | ⭐ Porto to score · 82% · bet at 1.26+ | 1-0 | 47 / 23 / 30 | 95 / 76 / 54 / 31 / 16 / 7 / 3 | 5 / 24 / 46 / 69 / 84 / 93 / 97 |
+| 20:00 | UEFA Champions League | Porto v PSV | Bookmakers: Porto 1.52 · draw 4.68 · PSV 5.75. Model: back Porto only at 2.06+ | - | ⭐ Porto to score · 82% · bet at 1.26+ | 1-0 | 50 / 23 / 27 | 94 / 75 / 51 / 29 / 14 / 6 / 2 | 6 / 25 / 49 / 71 / 86 / 94 / 98 |
 | 20:00 | UEFA Champions League | Roma v S. Bratislava | Bookmakers: Roma 1.12 · draw 9.55 · S. Bratislava 21.46. Model: back Roma only at 1.19+ | - | ⭐⭐⭐ Roma or S. Bratislava (no draw) · 88% · bet at 1.17+ | 2-0 | 87 / 9 / 4 | 97 / 86 / 68 / 47 / 28 / 14 / 7 | 3 / 14 / 32 / 53 / 72 / 86 / 93 |
 | 20:00 | UEFA Champions League | Liverpool v Villarreal | Bookmakers: Liverpool 1.50 · draw 4.75 · Villarreal 6.05. Model: back Liverpool only at 1.25+ | - | ⭐⭐⭐ Liverpool to score · 88% · bet at 1.16+ | 2-0 | 83 / 12 / 6 | 96 / 82 / 61 / 38 / 21 / 10 / 4 | 4 / 18 / 39 / 62 / 79 / 90 / 96 |
 | 20:00 | UEFA Champions League | Paris v Barcelona | Bookmakers: Paris 2.52 · draw 4.43 · Barcelona 2.40. Model: back Paris only at 1.42+ | - | 🔒 Over 1.5 goals · 91% · bet at 1.14+ | 3-1 | 73 / 13 / 15 | 100 / 96 / 87 / 73 / 55 / 38 / 23 | 0 / 4 / 13 / 27 / 45 / 62 / 77 |
@@ -593,17 +533,17 @@ No bets this week - the prices are fair. That is normal.
 | 11:00 | Japan - J1 League | V-Varen Nagasaki v Sanfrecce Hiroshima | NO BET (model not profitable in this league) | - | ⭐⭐ Sanfrecce Hiroshima to score · 86% · bet at 1.20+ | 0-1 | 15 / 20 / 64 | 94 / 76 / 52 / 30 / 15 / 6 / 2 | 6 / 24 / 48 / 70 / 85 / 94 / 98 |
 | 11:00 | Japan - J1 League | Okayama v Mito | NO BET (model not profitable in this league) | - | 🔒 Under 4.5 goals · 92% · bet at 1.12+ | 1-0 | 37 / 28 / 36 | 90 / 66 / 40 / 20 / 8 / 3 / 1 | 10 / 34 / 60 / 80 / 92 / 97 / 99 |
 | 11:30 | Japan - J1 League | Urawa Reds v Chiba | NO BET (model not profitable in this league) | - | ⭐⭐ Urawa Reds to score · 86% · bet at 1.20+ | 1-0 | 63 / 21 / 16 | 94 / 77 / 54 / 31 / 16 / 7 / 3 | 6 / 23 / 46 / 69 / 84 / 93 / 97 |
-| 17:45 | UEFA Champions League | Lille v Galatasaray | Bookmakers: Lille 2.18 · draw 3.73 · Galatasaray 3.15. Model: back Lille only at 2.38+ | - | ⭐ Under 4.5 goals · 82% · bet at 1.25+ | 1-0 | 43 / 24 / 32 | 93 / 71 / 47 / 25 / 12 / 5 / 2 | 7 / 29 / 53 / 75 / 88 / 95 / 98 |
-| 17:45 | UEFA Champions League | Como v Man Utd | Bookmakers: Como 2.23 · draw 3.77 · Man Utd 3.02. Model: back Como only at 2.41+ | - | ⭐ Under 4.5 goals · 79% · bet at 1.31+ | 1-0 | 43 / 22 / 35 | 96 / 79 / 57 / 35 / 18 / 8 / 3 | 4 / 21 / 43 / 65 / 82 / 92 / 97 |
+| 17:45 | UEFA Champions League | Lille v Galatasaray | Bookmakers: Lille 2.18 · draw 3.73 · Galatasaray 3.15. Model: back Lille only at 2.41+ | - | ⭐ Under 4.5 goals · 82% · bet at 1.25+ | 1-0 | 43 / 24 / 33 | 93 / 71 / 47 / 25 / 12 / 5 / 2 | 7 / 29 / 53 / 75 / 88 / 95 / 98 |
+| 17:45 | UEFA Champions League | Como v Man Utd | Bookmakers: Como 2.23 · draw 3.77 · Man Utd 3.02. Model: back Como only at 2.38+ | - | ⭐ Under 4.5 goals · 79% · bet at 1.31+ | 1-0 | 43 / 22 / 35 | 96 / 79 / 58 / 35 / 18 / 8 / 3 | 4 / 21 / 42 / 65 / 82 / 92 / 97 |
 | 19:00 | Spain - La Liga | Levante v Ath Bilbao | NO BET (model not profitable in this league) | - | ⭐⭐⭐ Under 4.5 goals · 88% · bet at 1.17+ | 1-0 | 40 / 28 / 32 | 91 / 72 / 46 / 24 / 11 / 4 / 1 | 9 / 28 / 54 / 76 / 89 / 96 / 99 |
 | 20:00 | England - League One | Reading v Leyton Orient | NO BET (model not profitable in this league) | - | ⭐ Reading to score · 84% · bet at 1.22+ | 2-1 | 48 / 24 / 27 | 94 / 78 / 55 / 33 / 17 / 7 / 3 | 6 / 22 / 45 / 67 / 83 / 93 / 97 |
 | 20:00 | UEFA Champions League | Real Betis v Feyenoord | Bookmakers: Real Betis 1.57 · draw 4.72 · Feyenoord 5.08. Model: back Real Betis only at 1.70+ | - | ⭐⭐ Real Betis to score · 87% · bet at 1.19+ | 2-1 | 60 / 18 / 21 | 98 / 85 / 67 / 45 / 26 / 13 / 6 | 2 / 15 / 33 / 55 / 74 / 87 / 94 |
 | 20:00 | UEFA Champions League | Bayern München v Arsenal | Bookmakers: Bayern München 2.05 · draw 3.85 · Arsenal 3.35. Model: back Arsenal only at 2.20+ | - | ⭐ Under 4.5 goals · 85% · bet at 1.22+ | 0-1 | 27 / 26 / 47 | 89 / 62 / 36 / 17 / 7 / 2 / 1 | 11 / 38 / 64 / 83 / 93 / 98 / 99 |
 | 20:00 | UEFA Champions League | Real Madrid v Leipzig | Bookmakers: Real Madrid 1.25 · draw 7.20 · Leipzig 9.75. Model: back Real Madrid only at 1.33+ | - | 🔒 Real Madrid to score · 92% · bet at 1.12+ | 2-0 | 78 / 12 / 10 | 99 / 90 / 75 / 55 / 36 / 20 / 10 | 1 / 10 / 25 / 45 / 64 / 80 / 90 |
 | 20:00 | UEFA Champions League | Inter v Shakhtar | Bookmakers: Inter 1.20 · draw 7.58 · Shakhtar 12.73. Model: back Inter only at 1.55+ | - | ⭐⭐⭐ Inter to score · 89% · bet at 1.16+ | 1-0 | 66 / 18 / 16 | 96 / 80 / 59 / 37 / 20 / 9 / 4 | 4 / 20 / 41 / 63 / 80 / 91 / 96 |
-| 20:00 | UEFA Champions League | Sporting CP v LASK | Bookmakers: Sporting CP 1.20 · draw 7.60 · LASK 11.75. Model: back Sporting CP only at 1.08+ | - | 🔒 Sporting CP or draw · 92% · bet at 1.12+ | 3-0 | 95 / 4 / 1 | 99 / 93 / 80 / 62 / 43 / 26 / 14 | 1 / 7 / 20 / 38 / 57 / 74 / 86 |
-| 20:00 | UEFA Champions League | Aston Villa v Viking | Bookmakers: Aston Villa 1.23 · draw 6.62 · Viking 12.00. Model: back Aston Villa only at 1.20+ | - | ⭐⭐⭐ Aston Villa or draw · 90% · bet at 1.15+ | 3-0 | 86 / 9 / 5 | 98 / 89 / 74 / 54 / 34 / 19 / 10 | 2 / 11 / 26 / 46 / 66 / 81 / 90 |
-| 20:00 | UEFA Champions League | Club Brugge v Lens | Bookmakers: Club Brugge 2.03 · draw 4.00 · Lens 3.31. Model: back Club Brugge only at 1.51+ | - | ⭐⭐ Club Brugge to score · 86% · bet at 1.20+ | 2-1 | 68 / 16 / 16 | 98 / 87 / 71 / 50 / 31 / 17 / 8 | 2 / 13 / 29 / 50 / 69 / 83 / 92 |
+| 20:00 | UEFA Champions League | Sporting CP v LASK | Bookmakers: Sporting CP 1.20 · draw 7.60 · LASK 11.75. Model: back Sporting CP only at 1.09+ | - | 🔒 Sporting CP or draw · 92% · bet at 1.12+ | 3-0 | 95 / 4 / 1 | 99 / 92 / 80 / 62 / 42 / 26 / 14 | 1 / 8 / 20 / 38 / 58 / 74 / 86 |
+| 20:00 | UEFA Champions League | Aston Villa v Viking | Bookmakers: Aston Villa 1.23 · draw 6.62 · Viking 12.00. Model: back Aston Villa only at 1.18+ | - | 🔒 Aston Villa or draw · 90% · bet at 1.14+ | 3-0 | 87 / 8 / 4 | 98 / 89 / 74 / 54 / 34 / 19 / 10 | 2 / 11 / 26 / 46 / 66 / 81 / 90 |
+| 20:00 | UEFA Champions League | Club Brugge v Lens | Bookmakers: Club Brugge 2.03 · draw 4.00 · Lens 3.31. Model: back Club Brugge only at 1.48+ | - | ⭐⭐ Club Brugge to score · 86% · bet at 1.20+ | 2-1 | 69 / 16 / 15 | 98 / 87 / 71 / 50 / 31 / 17 / 8 | 2 / 13 / 29 / 50 / 69 / 83 / 92 |
 
 ### Thursday 22 October (36 matches)
 
@@ -620,13 +560,13 @@ No bets this week - the prices are fair. That is normal.
 | 17:45 | UEFA Conference League | Kauno Žalgiris v Brann | Bookmakers: Kauno Žalgiris 4.25 · draw 3.88 · Brann 1.75. Model: back Brann only at 2.34+ | - | ⭐⭐ Under 4.5 goals · 86% · bet at 1.20+ | 0-1 | 30 / 26 / 44 | 90 / 64 / 39 / 19 / 8 / 3 / 1 | 10 / 36 / 61 / 81 / 92 / 97 / 99 |
 | 17:45 | UEFA Conference League | Iberia Tbilisi v Mjällby | Bookmakers: Iberia Tbilisi 3.23 · draw 3.30 · Mjällby 2.20. Model: back Mjällby only at 2.38+ | - | ⭐⭐ Under 4.5 goals · 88% · bet at 1.17+ | 0-1 | 29 / 28 / 43 | 88 / 58 / 33 / 14 / 5 / 2 / 0 | 12 / 42 / 67 / 86 / 95 / 98 / 100 |
 | 17:45 | UEFA Europa League | Ararat-Armenia v AZ Alkmaar | Bookmakers: Ararat-Armenia 5.83 · draw 4.50 · AZ Alkmaar 1.51. Model: back AZ Alkmaar only at 1.42+ | - | ⭐⭐ AZ Alkmaar to score · 87% · bet at 1.18+ | 0-2 | 13 / 15 / 72 | 98 / 86 / 68 / 47 / 28 / 15 / 7 | 2 / 14 / 32 / 53 / 72 / 85 / 93 |
-| 17:45 | UEFA Europa League | Lech Poznan v Sunderland | Bookmakers: Lech Poznan 4.82 · draw 4.00 · Sunderland 1.67. Model: back Sunderland only at 1.96+ | - | ⭐⭐ Under 4.5 goals · 87% · bet at 1.18+ | 0-1 | 21 / 26 / 53 | 88 / 59 / 33 / 15 / 5 / 2 / 0 | 12 / 41 / 67 / 85 / 95 / 98 / 100 |
+| 17:45 | UEFA Europa League | Lech Poznan v Sunderland | Bookmakers: Lech Poznan 4.82 · draw 4.00 · Sunderland 1.67. Model: back Sunderland only at 1.90+ | - | ⭐⭐ Under 4.5 goals · 87% · bet at 1.18+ | 0-1 | 20 / 26 / 54 | 88 / 60 / 34 / 15 / 6 / 2 / 1 | 12 / 40 / 66 / 85 / 94 / 98 / 99 |
 | 17:45 | UEFA Europa League | Sturm Graz v Marseille | Bookmakers: Sturm Graz 3.48 · draw 3.65 · Marseille 2.02. Model: back Marseille only at 1.72+ | - | ⭐⭐ Under 4.5 goals · 86% · bet at 1.20+ | 0-1 | 16 / 24 / 60 | 88 / 60 / 34 / 15 / 6 / 2 / 1 | 12 / 40 / 66 / 85 / 94 / 98 / 99 |
 | 17:45 | UEFA Europa League | GNK Dinamo v N.E.C. | No odds feed: back GNK Dinamo only at 1.64+ | - | ⭐ GNK Dinamo to score · 84% · bet at 1.22+ | 2-1 | 63 / 18 / 19 | 98 / 86 / 68 / 46 / 27 / 14 / 7 | 2 / 14 / 32 / 54 / 73 / 86 / 93 |
 | 17:45 | UEFA Europa League | OFI Crete v Leverkusen | Bookmakers: OFI Crete 11.00 · draw 6.65 · Leverkusen 1.22. Model: back Leverkusen only at 1.54+ | - | ⭐⭐ Leverkusen to score · 88% · bet at 1.17+ | 0-1 | 15 / 18 / 67 | 96 / 79 / 57 / 35 / 18 / 8 / 3 | 4 / 21 / 43 / 65 / 82 / 92 / 97 |
 | 17:45 | UEFA Europa League | Union SG v H. Beer-Sheva | No odds feed: back Union SG only at 1.51+ | - | ⭐⭐ Under 4.5 goals · 88% · bet at 1.17+ | 1-0 | 68 / 22 / 10 | 88 / 61 / 34 / 16 / 6 / 2 / 1 | 12 / 39 / 66 / 84 / 94 / 98 / 99 |
 | 17:45 | UEFA Europa League | Ferencváros v Torreense | Bookmakers: Ferencváros 1.36 · draw 5.01 · Torreense 7.93. Model: back Ferencváros only at 2.06+ | - | ⭐ Ferencváros to score · 85% · bet at 1.21+ | 2-1 | 50 / 20 / 30 | 97 / 84 / 65 / 44 / 25 / 13 / 6 | 3 / 16 / 35 / 56 / 75 / 87 / 94 |
-| 17:45 | UEFA Europa League | Juventus v Rennes | Bookmakers: Juventus 1.58 · draw 4.28 · Rennes 5.40. Model: back Juventus only at 1.73+ | - | ⭐ Under 4.5 goals · 83% · bet at 1.24+ | 1-0 | 60 / 21 / 19 | 94 / 74 / 50 / 28 / 13 / 5 / 2 | 6 / 26 / 50 / 72 / 87 / 95 / 98 |
+| 17:45 | UEFA Europa League | Juventus v Rennes | Bookmakers: Juventus 1.58 · draw 4.28 · Rennes 5.40. Model: back Juventus only at 1.79+ | - | ⭐ Under 4.5 goals · 83% · bet at 1.23+ | 1-0 | 57 / 22 / 20 | 93 / 72 / 47 / 26 / 12 / 5 / 2 | 7 / 28 / 53 / 74 / 88 / 95 / 98 |
 | 20:00 | UEFA Conference League | Aarhus v Egnatia | Bookmakers: Aarhus 1.53 · draw 4.15 · Egnatia 5.90. Model: back Aarhus only at 1.98+ | - | ⭐⭐ Under 4.5 goals · 85% · bet at 1.21+ | 1-0 | 52 / 25 / 23 | 91 / 65 / 39 / 19 / 8 / 3 / 1 | 9 / 35 / 61 / 81 / 92 / 97 / 99 |
 | 20:00 | UEFA Conference League | Borac v KuPS Kuopio | Bookmakers: Borac 1.90 · draw 3.45 · KuPS Kuopio 3.95. Model: back Borac only at 2.39+ | - | ⭐⭐⭐ Under 4.5 goals · 89% · bet at 1.15+ | 1-0 | 43 / 32 / 25 | 82 / 48 / 23 / 9 / 3 / 1 / 0 | 18 / 52 / 77 / 91 / 97 / 99 / 100 |
 | 20:00 | UEFA Conference League | L. Red Imps v Twente | Bookmakers: L. Red Imps 12.00 · draw 6.20 · Twente 1.21. Model: back Twente only at 1.68+ | - | ⭐⭐ Twente to score · 88% · bet at 1.17+ | 1-2 | 20 / 19 / 61 | 97 / 84 / 64 / 42 / 24 / 12 / 5 | 3 / 16 / 36 / 58 / 76 / 88 / 95 |
@@ -636,7 +576,7 @@ No bets this week - the prices are fair. That is normal.
 | 20:00 | UEFA Conference League | Thun v Hajduk Split | Bookmakers: Thun 2.75 · draw 3.45 · Hajduk Split 2.40. Model: back Hajduk Split only at 2.59+ | - | ⭐ Under 4.5 goals · 83% · bet at 1.24+ | 0-1 | 35 / 25 / 40 | 92 / 69 / 44 / 23 / 10 / 4 / 1 | 8 / 31 / 56 / 77 / 90 / 96 / 99 |
 | 20:00 | UEFA Conference League | Midtjylland v Sint-Truidense | Bookmakers: Midtjylland 1.62 · draw 4.05 · Sint-Truidense 4.90. Model: back Midtjylland only at 1.77+ | - | ⭐ Midtjylland to score · 84% · bet at 1.23+ | 1-0 | 58 / 20 / 22 | 96 / 80 / 58 / 36 / 19 / 9 / 4 | 4 / 20 / 42 / 64 / 81 / 91 / 96 |
 | 20:00 | UEFA Europa League | Olympiacos v Sparta Praha | Bookmakers: Olympiacos 1.50 · draw 4.40 · Sparta Praha 6.15. Model: back Olympiacos only at 1.71+ | - | ⭐⭐ Under 4.5 goals · 87% · bet at 1.18+ | 1-0 | 60 / 26 / 14 | 86 / 55 / 29 / 12 / 4 / 1 / 0 | 14 / 45 / 71 / 88 / 96 / 99 / 100 |
-| 20:00 | UEFA Europa League | Celtic v Celta | Bookmakers: Celtic 2.67 · draw 3.45 · Celta 2.55. Model: back Celta only at 2.65+ | - | ⭐⭐ Under 4.5 goals · 86% · bet at 1.20+ | 0-1 | 35 / 26 / 39 | 91 / 65 / 39 / 19 / 8 / 3 / 1 | 9 / 35 / 61 / 81 / 92 / 97 / 99 |
+| 20:00 | UEFA Europa League | Celtic v Celta | Bookmakers: Celtic 2.67 · draw 3.45 · Celta 2.55. Model: back Celta only at 2.49+ | - | ⭐⭐ Under 4.5 goals · 86% · bet at 1.20+ | 0-1 | 33 / 26 / 41 | 92 / 67 / 42 / 21 / 9 / 3 / 1 | 8 / 33 / 58 / 79 / 91 / 97 / 99 |
 | 20:00 | UEFA Europa League | Viktoria Plzen v Levski Sofia | Bookmakers: Viktoria Plzen 1.76 · draw 3.84 · Levski Sofia 4.25. Model: back Viktoria Plzen only at 1.71+ | - | ⭐⭐ Under 4.5 goals · 86% · bet at 1.19+ | 1-0 | 60 / 25 / 15 | 88 / 60 / 33 / 15 / 6 / 2 / 1 | 12 / 40 / 67 / 85 / 94 / 98 / 99 |
 | 20:00 | UEFA Europa League | Bournemouth v Milan | Bookmakers: Bournemouth 2.15 · draw 3.62 · Milan 3.12. Model: back Bournemouth only at 1.53+ | - | ⭐ Under 4.5 goals · 82% · bet at 1.25+ | 1-0 | 67 / 19 / 14 | 94 / 75 / 51 / 29 / 14 / 6 / 2 | 6 / 25 / 49 / 71 / 86 / 94 / 98 |
 | 20:00 | UEFA Europa League | Celje v Salzburg | Bookmakers: Celje 4.83 · draw 4.12 · Salzburg 1.65. Model: back Celje only at 1.48+ | - | ⭐ Celje or Salzburg (no draw) · 79% · bet at 1.30+ | 2-0 | 70 / 16 / 14 | 97 / 83 / 63 / 41 / 23 / 11 / 5 | 3 / 17 / 37 / 59 / 77 / 89 / 95 |
@@ -644,7 +584,7 @@ No bets this week - the prices are fair. That is normal.
 | 20:00 | UEFA Europa League | Omonia v Benfica | Bookmakers: Omonia 7.65 · draw 5.20 · Benfica 1.36. Model: back Benfica only at 2.34+ | - | ⭐ Under 4.5 goals · 84% · bet at 1.22+ | 0-1 | 28 / 28 / 44 | 88 / 58 / 32 / 14 / 5 / 2 / 0 | 12 / 42 / 68 / 86 / 95 / 98 / 100 |
 | 20:00 | UEFA Europa League | Hoffenheim v Lyon | Bookmakers: Hoffenheim 2.00 · draw 3.90 · Lyon 3.30. Model: back Lyon only at 1.95+ | - | ⭐ Over 1.5 goals · 79% · bet at 1.30+ | 0-1 | 26 / 21 / 53 | 96 / 80 / 58 / 36 / 19 / 9 / 4 | 4 / 20 / 42 / 64 / 81 / 91 / 96 |
 | 20:00 | UEFA Europa League | Besiktas v Crystal Palace | Bookmakers: Besiktas 2.11 · draw 3.75 · Crystal Palace 3.17. Model: back Crystal Palace only at 2.25+ | - | ⭐ Under 4.5 goals · 79% · bet at 1.31+ | 0-1 | 32 / 22 / 46 | 96 / 78 / 57 / 34 / 18 / 8 / 3 | 4 / 22 / 43 / 66 / 82 / 92 / 97 |
-| 20:00 | UEFA Europa League | Lillestrøm v Real Sociedad | Bookmakers: Lillestrøm 5.75 · draw 4.55 · Real Sociedad 1.51. Model: back Real Sociedad only at 2.45+ | - | ⭐ Real Sociedad to score · 81% · bet at 1.27+ | 1-2 | 36 / 22 / 42 | 96 / 80 / 60 / 37 / 20 / 9 / 4 | 4 / 20 / 40 / 63 / 80 / 91 / 96 |
+| 20:00 | UEFA Europa League | Lillestrøm v Real Sociedad | Bookmakers: Lillestrøm 5.75 · draw 4.55 · Real Sociedad 1.51. Model: back Real Sociedad only at 2.36+ | - | ⭐ Real Sociedad to score · 82% · bet at 1.26+ | 1-2 | 34 / 22 / 44 | 96 / 81 / 60 / 37 / 20 / 9 / 4 | 4 / 19 / 40 / 63 / 80 / 91 / 96 |
 
 ### Friday 23 October (14 matches)
 
