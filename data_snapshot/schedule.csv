@@ -309,7 +309,6 @@ E0,Ipswich,Everton,2027-05-30 15:00:00+00:00
 E0,Liverpool,Bournemouth,2027-05-30 15:00:00+00:00
 E0,Man Utd,Fulham,2027-05-30 15:00:00+00:00
 E0,Sunderland,Man City,2027-05-30 15:00:00+00:00
-E1,Wolverhampton Wanderers,Portsmouth,2026-10-20 18:45:00+00:00
 E1,Bolton Wanderers,Middlesbrough,2026-10-23 19:00:00+00:00
 E1,Charlton Athletic,Norwich City,2026-10-24 11:30:00+00:00
 E1,Portsmouth,Millwall,2026-10-24 11:30:00+00:00
@@ -748,17 +747,6 @@ E2,Luton Town,Doncaster Rovers,2026-10-27 19:45:00+00:00
 E2,Oxford United,Stockport County,2026-10-27 19:45:00+00:00
 E2,Sheffield Wednesday,Cambridge United,2026-10-27 19:45:00+00:00
 E2,Blackpool,Leicester City,2026-11-24 19:45:00+00:00
-E2,AFC Wimbledon,Mansfield Town,2026-10-20 18:45:00+00:00
-E2,Blackpool,MK Dons,2026-10-20 18:45:00+00:00
-E2,Bromley,Leicester City,2026-10-20 18:45:00+00:00
-E2,Burton Albion,Bradford City,2026-10-20 18:45:00+00:00
-E2,Cambridge United,Wycombe Wanderers,2026-10-20 18:45:00+00:00
-E2,Doncaster Rovers,Stockport County,2026-10-20 18:45:00+00:00
-E2,Huddersfield Town,Peterborough United,2026-10-20 18:45:00+00:00
-E2,Luton Town,Barnsley,2026-10-20 18:45:00+00:00
-E2,Notts County,Sheffield Wednesday,2026-10-20 18:45:00+00:00
-E2,Oxford United,Wigan Athletic,2026-10-20 18:45:00+00:00
-E2,Stevenage,Plymouth Argyle,2026-10-20 18:45:00+00:00
 E2,Reading,Leyton Orient,2026-10-21 19:00:00+00:00
 E2,Huddersfield Town,Wigan Athletic,2026-10-24 11:30:00+00:00
 E2,Luton Town,Leicester City,2026-10-24 11:30:00+00:00
@@ -1174,18 +1162,6 @@ E3,Walsall,Crawley Town,2026-10-03 14:00:00+00:00
 E3,Barnet,York City,2026-10-27 19:45:00+00:00
 E3,Northampton Town,Oldham Athletic,2026-11-03 19:45:00+00:00
 E3,Colchester United,Port Vale,2026-12-15 19:45:00+00:00
-E3,Barnet,Swindon Town,2026-10-20 18:45:00+00:00
-E3,Bristol Rovers,Salford City,2026-10-20 18:45:00+00:00
-E3,Cheltenham Town,Fleetwood Town,2026-10-20 18:45:00+00:00
-E3,Chesterfield,Colchester United,2026-10-20 18:45:00+00:00
-E3,Crawley Town,Shrewsbury Town,2026-10-20 18:45:00+00:00
-E3,Exeter City,Crewe Alexandra,2026-10-20 18:45:00+00:00
-E3,Northampton Town,Tranmere Rovers,2026-10-20 18:45:00+00:00
-E3,Rochdale,Grimsby Town,2026-10-20 18:45:00+00:00
-E3,Rotherham United,Newport County,2026-10-20 18:45:00+00:00
-E3,Walsall,Oldham Athletic,2026-10-20 18:45:00+00:00
-E3,York City,Accrington Stanley,2026-10-20 18:45:00+00:00
-E3,Gillingham,Port Vale,2026-10-20 19:00:00+00:00
 E3,Bristol Rovers,Swindon Town,2026-10-24 11:30:00+00:00
 E3,Cheltenham Town,Newport County,2026-10-24 11:30:00+00:00
 E3,Northampton Town,Colchester United,2026-10-24 11:30:00+00:00
