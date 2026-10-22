@@ -1,5 +1,5 @@
 {
- "time": "2026-10-21 20:31 UTC",
+ "time": "2026-10-22 09:59 UTC",
  "key_present": true,
  "leagues_found": {
   "UECL": "UEFA Europa Conference League (World)",
@@ -29,15 +29,15 @@
   "SC2": "League One (Scotland)",
   "G1": "Super League 1 (Greece)"
  },
- "fixtures": 188,
- "injured": 321,
- "players_fetched": 175,
- "requests_used": 183,
- "result": "321 missing players across 188 fixtures",
- "odds_time": "2026-10-21 20:31 UTC",
- "odds_calls": 188,
- "odds_rows": 19342,
- "odds_fixtures": 175,
+ "fixtures": 248,
+ "injured": 578,
+ "players_fetched": 260,
+ "requests_used": 268,
+ "result": "578 missing players across 248 fixtures",
+ "odds_time": "2026-10-22 10:00 UTC",
+ "odds_calls": 192,
+ "odds_rows": 17662,
+ "odds_fixtures": 192,
  "books_seen": [
   "1xBet",
   "Bet365",
@@ -112,6 +112,6 @@
   "Offsides Handicap",
   "Offsides Home Total"
  ],
- "my_book_fixtures": 174,
- "odds_result": "prices for 175 fixtures"
+ "my_book_fixtures": 192,
+ "odds_result": "prices for 192 fixtures"
 }
