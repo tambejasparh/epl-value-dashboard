@@ -1,9 +1,9 @@
 {
- "time": "2026-10-22 14:14 UTC",
+ "time": "2026-10-22 17:52 UTC",
  "key_present": true,
  "leagues_found": {
-  "UECL": "UEFA Europa Conference League (World)",
   "UEL": "UEFA Europa League (World)",
+  "UECL": "UEFA Europa Conference League (World)",
   "RUS": "Premier League (Russia)",
   "D2": "2. Bundesliga (Germany)",
   "T1": "S\u00fcper Lig (Turkey)",
@@ -29,15 +29,15 @@
   "SC2": "League One (Scotland)",
   "G1": "Super League 1 (Greece)"
  },
- "fixtures": 248,
- "injured": 578,
- "players_fetched": 1,
- "requests_used": 9,
- "result": "578 missing players across 248 fixtures",
- "odds_time": "2026-10-22 14:14 UTC",
- "odds_calls": 216,
- "odds_rows": 23409,
- "odds_fixtures": 215,
+ "fixtures": 230,
+ "injured": 506,
+ "players_fetched": 31,
+ "requests_used": 39,
+ "result": "506 missing players across 230 fixtures",
+ "odds_time": "2026-10-22 17:52 UTC",
+ "odds_calls": 221,
+ "odds_rows": 25113,
+ "odds_fixtures": 221,
  "books_seen": [
   "1xBet",
   "Bet365",
@@ -112,6 +112,6 @@
   "Offsides Handicap",
   "Offsides Home Total"
  ],
- "my_book_fixtures": 215,
- "odds_result": "prices for 215 fixtures"
+ "my_book_fixtures": 221,
+ "odds_result": "prices for 221 fixtures"
 }
