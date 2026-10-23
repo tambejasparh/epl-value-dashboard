@@ -1,5 +1,4 @@
 Date,HomeTeam,AwayTeam,FTHG,FTAG,Tournament,Neutral
-2014-10-25,Zambia,Ivory Coast,1,1,Friendly,False
 2014-10-27,Bangladesh,Sri Lanka,1,0,Friendly,False
 2014-10-31,North Korea,Kuwait,0,1,Friendly,True
 2014-10-31,Philippines,Nepal,3,0,Friendly,True
@@ -349,20 +348,20 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,Tournament,Neutral
 2015-03-29,Portugal,Serbia,2,1,UEFA Euro qualification,False
 2015-03-29,Romania,Faroe Islands,1,0,UEFA Euro qualification,False
 2015-03-29,Zambia,Rwanda,2,0,Friendly,False
-2015-03-29,Tanzania,Malawi,1,1,Friendly,False
+2015-03-29,South Africa,Nigeria,1,1,Friendly,False
 2015-03-29,Cayman Islands,Belize,1,1,FIFA World Cup qualification,False
 2015-03-29,Republic of Ireland,Poland,1,1,UEFA Euro qualification,False
 2015-03-29,Scotland,Gibraltar,6,1,UEFA Euro qualification,False
 2015-03-29,Hungary,Greece,0,0,UEFA Euro qualification,False
-2015-03-29,South Africa,Nigeria,1,1,Friendly,False
+2015-03-29,Tanzania,Malawi,1,1,Friendly,False
 2015-03-29,Guyana,Grenada,2,0,Friendly,False
 2015-03-29,Georgia,Germany,0,2,UEFA Euro qualification,False
 2015-03-29,France,Denmark,2,0,Friendly,False
 2015-03-29,Dominica,British Virgin Islands,0,0,FIFA World Cup qualification,False
 2015-03-29,Brazil,Chile,1,0,Friendly,True
 2015-03-29,Botswana,Mozambique,1,2,Friendly,False
-2015-03-29,Honduras,French Guiana,3,0,Gold Cup qualification,False
 2015-03-29,Bermuda,Bahamas,3,0,FIFA World Cup qualification,False
+2015-03-29,Honduras,French Guiana,3,0,Gold Cup qualification,False
 2015-03-29,Anguilla,Nicaragua,0,3,FIFA World Cup qualification,False
 2015-03-29,Albania,Armenia,2,1,UEFA Euro qualification,False
 2015-03-30,Thailand,Cameroon,2,3,Friendly,False
@@ -1450,19 +1449,19 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,Tournament,Neutral
 2016-05-29,Romania,Ukraine,3,4,Friendly,True
 2016-05-29,Turkey,Montenegro,1,0,Friendly,False
 2016-05-29,Portugal,Norway,3,0,Friendly,False
-2016-05-29,Padania,Northern Cyprus,1,2,CONIFA World Football Cup,True
+2016-05-29,Iraqi Kurdistan,Székely Land,3,0,CONIFA World Football Cup,True
 2016-05-29,Sápmi,Somaliland,5,0,CONIFA World Football Cup,True
 2016-05-29,Abkhazia,Chagos Islands,9,0,CONIFA World Football Cup,False
 2016-05-29,Papua New Guinea,New Caledonia,1,1,Oceania Nations Cup,False
-2016-05-29,Iraqi Kurdistan,Székely Land,3,0,CONIFA World Football Cup,True
+2016-05-29,Padania,Northern Cyprus,1,2,CONIFA World Football Cup,True
 2016-05-29,Laos,Nepal,1,1,Friendly,False
 2016-05-29,Albania,Qatar,3,1,Friendly,True
 2016-05-29,Azerbaijan,North Macedonia,1,3,Friendly,True
 2016-05-29,Bosnia and Herzegovina,Spain,1,3,Friendly,True
 2016-05-29,Lithuania,Estonia,2,0,Baltic Cup,False
 2016-05-29,Germany,Slovakia,1,3,Friendly,False
-2016-05-29,Cambodia,Timor-Leste,2,0,Friendly,False
 2016-05-29,Italy,Scotland,1,0,Friendly,True
+2016-05-29,Cambodia,Timor-Leste,2,0,Friendly,False
 2016-05-29,Kenya,Tanzania,1,1,Friendly,False
 2016-05-30,Sápmi,Panjab,0,1,CONIFA World Football Cup,True
 2016-05-30,Raetia,Padania,0,6,CONIFA World Football Cup,True
