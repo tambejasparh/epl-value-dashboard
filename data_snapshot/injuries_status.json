@@ -1,11 +1,7 @@
 {
- "time": "2026-10-23 20:19 UTC",
+ "time": "2026-10-24 09:23 UTC",
  "key_present": true,
  "leagues_found": {
-  "B1": "Jupiler Pro League (Belgium)",
-  "EC": "National League (England)",
-  "JPN": "J1 League (Japan)",
-  "CHN": "Super League (China)",
   "RUS": "Premier League (Russia)",
   "T1": "S\u00fcper Lig (Turkey)",
   "D2": "2. Bundesliga (Germany)",
@@ -13,6 +9,7 @@
   "E1": "Championship (England)",
   "E3": "League Two (England)",
   "E2": "League One (England)",
+  "EC": "National League (England)",
   "F2": "Ligue 2 (France)",
   "SP2": "Segunda Divisi\u00f3n (Spain)",
   "SP1": "La Liga (Spain)",
@@ -22,20 +19,22 @@
   "SC0": "Premiership (Scotland)",
   "SC1": "Championship (Scotland)",
   "SC2": "League One (Scotland)",
+  "B1": "Jupiler Pro League (Belgium)",
   "N1": "Eredivisie (Netherlands)",
   "P1": "Primeira Liga (Portugal)",
   "G1": "Super League 1 (Greece)",
-  "F1": "Ligue 1 (France)"
+  "F1": "Ligue 1 (France)",
+  "JPN": "J1 League (Japan)"
  },
- "fixtures": 201,
- "injured": 609,
- "players_fetched": 23,
- "requests_used": 31,
- "result": "609 missing players across 201 fixtures",
- "odds_time": "2026-10-23 20:19 UTC",
- "odds_calls": 199,
- "odds_rows": 24071,
- "odds_fixtures": 198,
+ "fixtures": 210,
+ "injured": 638,
+ "players_fetched": 34,
+ "requests_used": 42,
+ "result": "638 missing players across 210 fixtures",
+ "odds_time": "2026-10-24 09:23 UTC",
+ "odds_calls": 186,
+ "odds_rows": 22784,
+ "odds_fixtures": 185,
  "books_seen": [
   "1xBet",
   "Bet365",
@@ -45,6 +44,7 @@
   "Dafabet",
   "Marathonbet",
   "Pinnacle",
+  "SBO",
   "William Hill"
  ],
  "my_book_bets_seen": [
@@ -109,6 +109,6 @@
   "Offsides Handicap",
   "Offsides Home Total"
  ],
- "my_book_fixtures": 198,
- "odds_result": "prices for 198 fixtures"
+ "my_book_fixtures": 185,
+ "odds_result": "prices for 185 fixtures"
 }
