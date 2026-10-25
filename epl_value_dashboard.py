@@ -2019,9 +2019,9 @@ def all_matches_cards_html(g: pd.DataFrame) -> str:
 
 
 # The Under rule, in order of preference (a lower line pays more):
-# Under 4.5 only when it has 95%+ chance; otherwise Under 5.5, then Under 6.5, at 85%+.
+# Under 4.5, otherwise Under 5.5, then Under 6.5 - each at 85%+ (the tested level).
 # Over 1.5 / Over 0.5 are extra options, only at 98%+.
-UNDER_RULE = [("U45", 95.0), ("U55", 85.0), ("U65", 85.0), ("O15", 98.0), ("O05", 98.0)]
+UNDER_RULE = [("U45", 85.0), ("U55", 85.0), ("U65", 85.0), ("O15", 98.0), ("O05", 98.0)]
 UNDER_MIN = dict(UNDER_RULE)
 UNDER_NAME = {"U45": "Under 4.5", "U55": "Under 5.5", "U65": "Under 6.5",
               "O15": "Over 1.5", "O05": "Over 0.5"}
@@ -2029,7 +2029,7 @@ UNDER_PRICE_COL = {"U45": "1xBet U4.5", "U55": "1xBet U5.5", "U65": "1xBet U6.5"
                    "O15": "1xBet O1.5", "O05": "1xBet O0.5"}
 UNDER_TOTAL = {"U45": "4 goals or fewer", "U55": "5 goals or fewer", "U65": "6 goals or fewer",
                "O15": "2 goals or more", "O05": "at least 1 goal"}
-UNDER_RULE_TEXT = ("Under 4.5 at 95%+, otherwise Under 5.5 or Under 6.5 at 85%+, "
+UNDER_RULE_TEXT = ("Under 4.5, otherwise Under 5.5 or Under 6.5, at 85%+, "
                    "or Over 1.5 / Over 0.5 at 98%+")
 
 
@@ -2389,9 +2389,9 @@ def render_under_calculator(directory: dict, all_models: dict, uefa_model, intl_
 
 
 def render_under_section(adv: pd.DataFrame, tz: str):
-    st.markdown("#### 🟢 Safe goals picks — Under 4.5 95%+, Under 5.5 / 6.5 85%+, Over 0.5 / 1.5 98%+")
+    st.markdown("#### 🟢 Safe goals picks — Under 4.5 / 5.5 / 6.5 at 85%+, Over 0.5 / 1.5 at 98%+")
     st.caption("Every match of the day that fits your Under rule, safest first: Under 4.5 "
-               "only when it has a 95%+ chance; otherwise Under 5.5, or else Under 6.5, with "
+               "if it has an 85%+ chance; otherwise Under 5.5, or else Under 6.5, with "
                "an 85%+ chance; or else Over 1.5 / Over 0.5 with a 98%+ chance. Under 4.5 = 4 "
                "goals or fewer in total; Under 5.5 = 5 or fewer; Under 6.5 = 6 or fewer; Over "
                "1.5 = 2 goals or more; Over 0.5 = at least 1 goal. "
@@ -2521,7 +2521,7 @@ def write_predictions_md(adv: pd.DataFrame, flags: pd.DataFrame, path: Path,
         lines += tickets_markdown(adv, tz)
         udays = under_picks_by_day(adv, tz)
         if udays:
-            lines += ["## 🟢 Safe goals picks — Under 4.5 95%+, Under 5.5 / 6.5 85%+, Over 0.5 / 1.5 98%+", "",
+            lines += ["## 🟢 Safe goals picks — Under 4.5 / 5.5 / 6.5 at 85%+, Over 0.5 / 1.5 at 98%+", "",
                       "_Safest first. 💚 = 1xBet pays at least the fair minimum._", ""]
             for day, g in udays:
                 lines += [f"### {pd.Timestamp(day):%A %d %B} ({len(g)} matches)", ""]
@@ -4583,8 +4583,8 @@ def main():
     # ---------------- Sidebar: global settings ----------------
     st.sidebar.toggle("🟢 Under mode (show only Under picks)", value=True,
                       key="under_mode",
-                      help="On: the app shows only the safe goals picks (Under 4.5 95%+, "
-                           "Under 5.5 / 6.5 85%+, Over 0.5 / 1.5 98%+). Off: the full app.")
+                      help="On: the app shows only the safe goals picks (Under 4.5 / 5.5 / "
+                           "6.5 at 85%+, Over 0.5 / 1.5 at 98%+). Off: the full app.")
     st.sidebar.toggle("📱 Phone layout (match cards)", key="phone_layout",
                       help="Shows each match as a card instead of a wide table. "
                            "Switched on automatically on phones.")

@@ -839,7 +839,7 @@ def test_passed_checks_survive_saving_and_reading():
     assert list(app.check_passed(pd.read_csv(p))) == [True, True, False, False]
 
 
-def test_under_mode_follows_95_85_rule():
+def test_under_mode_follows_85_rule():
     model = app._fit_model(LEAGUE_DATA["E0"], 400, 0.5)
     fx = make_fixtures()
     adv = app.match_advice(app.score_predictions(fx[fx["Div"] == "E0"], model),
@@ -850,8 +850,8 @@ def test_under_mode_follows_95_85_rule():
     adv["Match"] = [f"Team{i} v Other{i}" for i in range(5)]
     adv["Kickoff UTC"] = pd.Timestamp.now(tz="UTC") + pd.Timedelta(hours=5)
     n = len(adv)
-    #            U4.5 95%+ -> U45 | U5.5 85%+ -> U55 | U6.5 85%+ -> U65 | nothing
-    adv["U45 %"] = [96.0, 94.0, 70.0, 70.0] + [60.0] * (n - 4)
+    #            U4.5 85%+ -> U45 | U5.5 85%+ -> U55 | U6.5 85%+ -> U65 | nothing
+    adv["U45 %"] = [96.0, 84.0, 70.0, 70.0] + [60.0] * (n - 4)
     adv["U55 %"] = [99.0, 90.0, 84.0, 80.0] + [70.0] * (n - 4)
     adv["U65 %"] = [99.5, 97.0, 92.0, 84.9] + [80.0] * (n - 4)
     adv["O05 %"] = [90.0] * (n - 1) + [98.5]       # last match: only Over 0.5 fits
@@ -909,7 +909,7 @@ def _ticket_adv():
     import json as _j
     ko = pd.Timestamp.now(tz="UTC") + pd.Timedelta(hours=3)
     legs = [[["U45", 0.96, 1.15], ["U55", 0.98, 1.05], ["O25", 0.95, 1.5]],
-            [["U45", 0.94, 1.25], ["U55", 0.93, 1.08], ["U65", 0.97, 1.04]],
+            [["U45", 0.84, 1.25], ["U55", 0.93, 1.08], ["U65", 0.97, 1.04]],
             [["U45", 0.79, 1.40], ["U55", 0.88, 1.15], ["U65", 0.95, 1.06]],
             [["U45", 0.97, 1.30], ["1X", 0.99, 2.0]],
             [["U55", 0.84, 1.20], ["U65", 0.86, 1.12], ["O05", 0.985, 1.03], ["O15", 0.97, 1.15]]]
@@ -922,11 +922,11 @@ def test_ticket_candidates_follow_under_rule():
     days = app.ticket_candidates(_ticket_adv(), "UTC")
     c = pd.concat([g for _, g in days])
     assert set(c["Key"]) <= {"U45", "U55", "U65", "O15", "O05"}
-    need = c["Key"].map({"U45": 95, "U55": 85, "U65": 85, "O15": 98, "O05": 98})
+    need = c["Key"].map({"U45": 85, "U55": 85, "U65": 85, "O15": 98, "O05": 98})
     assert ((c["Key"] == "O05") & (c["Match"] == "H4 v A4")).any()       # 98.5% O0.5 in
     assert not (c["Key"] == "O15").any()                                 # 97% O1.5 out
     assert (c["Chance %"] >= need - 1e-6).all()
-    assert not ((c["Key"] == "U45") & (c["Match"] == "H1 v A1")).any()   # 94% U4.5 out
+    assert not ((c["Key"] == "U45") & (c["Match"] == "H1 v A1")).any()   # 84% U4.5 out
     assert not ((c["Key"] == "U55") & (c["Match"] == "H4 v A4")).any()   # 84% U5.5 out
     assert ((c["Key"] == "U65") & (c["Match"] == "H4 v A4")).any()       # 86% U6.5 in
 
@@ -960,14 +960,14 @@ def test_ticket_sizes_on_menu():
 def test_under_calculator_verdict():
     v = app.under_verdict({"U45": 96, "U55": 99, "U65": 99.5}, {"U45": 1.10})
     assert v["bet"] == "U45" and v["U45"]["good_price"] is True
-    v = app.under_verdict({"U45": 94.9, "U55": 90, "U65": 97}, {"U55": 1.02})
+    v = app.under_verdict({"U45": 84.9, "U55": 90, "U65": 97}, {"U55": 1.02})
     assert v["bet"] == "U55" and not v["U45"]["ok"] and v["U55"]["good_price"] is False
     assert v["U65"]["good_price"] is None                          # price unknown
     assert app.under_verdict({"U45": 80, "U55": 84.9, "U65": 85})["bet"] == "U65"
-    assert app.under_verdict({"U45": 90, "U55": 80, "U65": 84})["bet"] is None
-    assert app.under_verdict({"U45": 90, "U55": 80, "U65": 84, "O15": 98.2, "O05": 99.6})["bet"] == "O15"
-    assert app.under_verdict({"U45": 90, "U55": 80, "U65": 84, "O15": 97.9, "O05": 98})["bet"] == "O05"
-    assert app.under_verdict({"U45": 90, "U55": 80, "U65": 84, "O15": 90, "O05": 97.9})["bet"] is None
-    assert app.under_verdict({"U45": 95, "U55": 99, "U65": 99})["bet"] == "U45"  # 95% exactly
+    assert app.under_verdict({"U45": 80, "U55": 80, "U65": 84})["bet"] is None
+    assert app.under_verdict({"U45": 80, "U55": 80, "U65": 84, "O15": 98.2, "O05": 99.6})["bet"] == "O15"
+    assert app.under_verdict({"U45": 80, "U55": 80, "U65": 84, "O15": 97.9, "O05": 98})["bet"] == "O05"
+    assert app.under_verdict({"U45": 80, "U55": 80, "U65": 84, "O15": 90, "O05": 97.9})["bet"] is None
+    assert app.under_verdict({"U45": 85, "U55": 99, "U65": 99})["bet"] == "U45"  # 85% exactly
     assert abs(app.under_verdict({"U45": 90, "U55": 95, "U65": 97})["U55"]["fair"]
                - (100 / 95) * 1.03) < 0.02
