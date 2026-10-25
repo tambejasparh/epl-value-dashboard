@@ -2169,8 +2169,9 @@ def tickets_for_day(cands: pd.DataFrame) -> dict:
 
 
 @st.cache_data(ttl=1800, show_spinner="Building your tickets...")
-def _cached_tickets(cands: pd.DataFrame) -> dict:
-    return tickets_for_day(cands)
+def _cached_tickets(cands: pd.DataFrame, targets: tuple = TICKET_TARGETS) -> dict:
+    # `targets` is part of the cache key: changing the menu never reuses old tickets
+    return {t: build_ticket(cands, t) for t in targets}
 
 
 def ticket_totals(t: pd.DataFrame) -> tuple:
@@ -2207,8 +2208,8 @@ def render_tickets_section(adv: pd.DataFrame, tz: str):
                        format_func=lambda d_: f"{pd.Timestamp(d_):%A %d %B}", key="ticket_day")
     target = c2.selectbox("How many odds do you want?", TICKET_TARGETS, index=1,
                           format_func=lambda x: f"{x} odds", key="ticket_target")
-    tickets = _cached_tickets(dict(days)[day])
-    t = tickets[target]
+    tickets = _cached_tickets(dict(days)[day], TICKET_TARGETS)
+    t = tickets[target] if target in tickets else build_ticket(dict(days)[day], target)
     if t is None:
         st.warning(f"Not enough 80%+ Under bets with 1xBet prices on this day to reach "
                    f"{target} odds. Try a smaller ticket or another day.")
