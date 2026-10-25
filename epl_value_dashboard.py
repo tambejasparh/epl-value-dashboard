@@ -641,6 +641,23 @@ def _fd_feed(league: str):
     return pd.DataFrame(data) if data else None
 
 
+def _af_current_season(key: str, af_id: int, league: str) -> int:
+    """The season label API-Football itself uses for the league's current season
+    (e.g. Japan's J1 moved to an autumn-spring calendar and is now labelled 2027).
+    Falls back to a calendar guess if the lookup fails."""
+    today = dt.date.today()
+    guess = today.year if league in ("JPN", "CHN") else _season_start_year(today)
+    try:
+        js = _apifootball_get("/leagues", key, id=af_id, current="true") or {}
+        for item in js.get("response") or []:
+            for s in item.get("seasons") or []:
+                if s.get("current") and s.get("year"):
+                    return int(s["year"])
+    except Exception:
+        pass
+    return guess
+
+
 def _af_feed(league: str):
     """Played matches from API-Football (only when the APIFOOTBALL_KEY secret is
     set, i.e. in the scheduled GitHub run). Same columns as _fd_feed."""
@@ -648,8 +665,7 @@ def _af_feed(league: str):
     af_id = next((i for i, c in AF_LEAGUES.items() if c == league), None)
     if not key or af_id is None:
         return None
-    today = dt.date.today()
-    season = today.year if league in ("JPN", "CHN") else _season_start_year(today)
+    season = _af_current_season(key, af_id, league)
     js = _apifootball_get("/fixtures", key, league=af_id, season=season, status="FT-AET-PEN")
     rows = []
     for f in (js or {}).get("response") or []:

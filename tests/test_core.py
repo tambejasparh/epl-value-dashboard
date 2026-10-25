@@ -847,3 +847,17 @@ def test_under_mode_lists_only_80_percent_unders():
     assert abs(steps["Ticket wins %"].iloc[-1] - 92 * 85 / 100) < 1e-6
     assert abs(steps["Total odds (1xBet)"].iloc[-1] - 1.15 * 1.05) < 1e-9
     assert "✅ BET:" in app.under_cards_html(rows)
+
+
+def test_af_current_season_uses_api_label():
+    """J1 is labelled 2027 by API-Football; the results filler must follow the API."""
+    m = app
+    orig = m._apifootball_get
+    try:
+        m._apifootball_get = lambda path, key, **kw: {"response": [{"seasons": [
+            {"year": 2026, "current": False}, {"year": 2027, "current": True}]}]}
+        assert m._af_current_season("k", 98, "JPN") == 2027
+        m._apifootball_get = lambda path, key, **kw: None      # lookup fails -> guess
+        assert m._af_current_season("k", 39, "E0") == m._season_start_year(m.dt.date.today())
+    finally:
+        m._apifootball_get = orig
