@@ -845,7 +845,7 @@ def test_under_mode_follows_95_85_rule():
     adv = app.match_advice(app.score_predictions(fx[fx["Div"] == "E0"], model),
                            pd.DataFrame(), 100)
     adv.insert(0, "Competition", "England - Premier League")
-    assert {"U45 %", "U55 %", "U65 %", "1xBet U6.5"} <= set(adv.columns)
+    assert {"U45 %", "U55 %", "U65 %", "O05 %", "O15 %", "1xBet U6.5", "1xBet O1.5"} <= set(adv.columns)
     adv = pd.concat([adv.iloc[[0]]] * 5, ignore_index=True)
     adv["Match"] = [f"Team{i} v Other{i}" for i in range(5)]
     adv["Kickoff UTC"] = pd.Timestamp.now(tz="UTC") + pd.Timedelta(hours=5)
@@ -854,10 +854,14 @@ def test_under_mode_follows_95_85_rule():
     adv["U45 %"] = [96.0, 94.0, 70.0, 70.0] + [60.0] * (n - 4)
     adv["U55 %"] = [99.0, 90.0, 84.0, 80.0] + [70.0] * (n - 4)
     adv["U65 %"] = [99.5, 97.0, 92.0, 84.9] + [80.0] * (n - 4)
+    adv["O05 %"] = [90.0] * (n - 1) + [98.5]       # last match: only Over 0.5 fits
+    adv["O15 %"] = [70.0] * n
     adv["1xBet U4.5"], adv["1xBet U5.5"], adv["1xBet U6.5"] = 1.15, 1.05, 1.08
+    adv["1xBet O0.5"], adv["1xBet O1.5"] = 1.03, 1.10
     rows = pd.concat([g for _, g in app.under_picks_by_day(adv, "Africa/Douala")])
     assert sorted(rows["Bet"]) == sorted(["Over/Under → Under 4.5", "Over/Under → Under 5.5",
-                                          "Over/Under → Under 6.5"])
+                                          "Over/Under → Under 6.5", "Over/Under → Over 0.5"])
+    assert dict(zip(rows["Bet"], rows["1xBet odds"]))["Over/Under → Over 0.5"] == 1.03
     got = dict(zip(rows["Bet"], rows["Chance %"]))
     assert got["Over/Under → Under 4.5"] == 96 and got["Over/Under → Under 5.5"] == 90
     assert got["Over/Under → Under 6.5"] == 92
@@ -908,7 +912,7 @@ def _ticket_adv():
             [["U45", 0.94, 1.25], ["U55", 0.93, 1.08], ["U65", 0.97, 1.04]],
             [["U45", 0.79, 1.40], ["U55", 0.88, 1.15], ["U65", 0.95, 1.06]],
             [["U45", 0.97, 1.30], ["1X", 0.99, 2.0]],
-            [["U55", 0.84, 1.20], ["U65", 0.86, 1.12]]]
+            [["U55", 0.84, 1.20], ["U65", 0.86, 1.12], ["O05", 0.985, 1.03], ["O15", 0.97, 1.15]]]
     return pd.DataFrame({"Kickoff UTC": [ko + pd.Timedelta(minutes=i) for i in range(5)],
                          "Competition": "Test", "Match": [f"H{i} v A{i}" for i in range(5)],
                          "Ticket legs": [_j.dumps(x) for x in legs]})
@@ -917,8 +921,10 @@ def _ticket_adv():
 def test_ticket_candidates_follow_under_rule():
     days = app.ticket_candidates(_ticket_adv(), "UTC")
     c = pd.concat([g for _, g in days])
-    assert set(c["Key"]) <= {"U45", "U55", "U65"}
-    need = c["Key"].map({"U45": 95, "U55": 85, "U65": 85})
+    assert set(c["Key"]) <= {"U45", "U55", "U65", "O15", "O05"}
+    need = c["Key"].map({"U45": 95, "U55": 85, "U65": 85, "O15": 98, "O05": 98})
+    assert ((c["Key"] == "O05") & (c["Match"] == "H4 v A4")).any()       # 98.5% O0.5 in
+    assert not (c["Key"] == "O15").any()                                 # 97% O1.5 out
     assert (c["Chance %"] >= need - 1e-6).all()
     assert not ((c["Key"] == "U45") & (c["Match"] == "H1 v A1")).any()   # 94% U4.5 out
     assert not ((c["Key"] == "U55") & (c["Match"] == "H4 v A4")).any()   # 84% U5.5 out
@@ -959,6 +965,9 @@ def test_under_calculator_verdict():
     assert v["U65"]["good_price"] is None                          # price unknown
     assert app.under_verdict({"U45": 80, "U55": 84.9, "U65": 85})["bet"] == "U65"
     assert app.under_verdict({"U45": 90, "U55": 80, "U65": 84})["bet"] is None
+    assert app.under_verdict({"U45": 90, "U55": 80, "U65": 84, "O15": 98.2, "O05": 99.6})["bet"] == "O15"
+    assert app.under_verdict({"U45": 90, "U55": 80, "U65": 84, "O15": 97.9, "O05": 98})["bet"] == "O05"
+    assert app.under_verdict({"U45": 90, "U55": 80, "U65": 84, "O15": 90, "O05": 97.9})["bet"] is None
     assert app.under_verdict({"U45": 95, "U55": 99, "U65": 99})["bet"] == "U45"  # 95% exactly
     assert abs(app.under_verdict({"U45": 90, "U55": 95, "U65": 97})["U55"]["fair"]
                - (100 / 95) * 1.03) < 0.02
