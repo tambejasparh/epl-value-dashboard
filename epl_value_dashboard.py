@@ -2107,7 +2107,9 @@ def ticket_candidates(adv: pd.DataFrame, tz: str) -> list:
                 continue
             rows.append({"_m": i, "_day": r["_day"], "Kickoff UTC": r["Kickoff UTC"],
                          "Time": r["Time"], "Competition": r["Competition"],
-                         "Match": r["Match"], "Key": k, "Bet": short_bet(k, home, away),
+                         "Match": r["Match"], "Key": k,
+                         "Bet": {"U45": "Under 4.5 goals", "U55": "Under 5.5 goals"}.get(
+                             k, short_bet(k, home, away)),
                          "Chance %": 100 * p, "1xBet odds": price})
     if not rows:
         return []
