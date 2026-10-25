@@ -1,9 +1,7 @@
 {
- "time": "2026-10-25 18:16 UTC",
+ "time": "2026-10-25 19:30 UTC",
  "key_present": true,
  "leagues_found": {
-  "B1": "Jupiler Pro League (Belgium)",
-  "N1": "Eredivisie (Netherlands)",
   "I1": "Serie A (Italy)",
   "SP1": "La Liga (Spain)",
   "P1": "Primeira Liga (Portugal)",
@@ -19,15 +17,15 @@
   "EC": "National League (England)",
   "SC0": "Premiership (Scotland)"
  },
- "fixtures": 59,
- "injured": 92,
+ "fixtures": 57,
+ "injured": 84,
  "players_fetched": 0,
  "requests_used": 8,
- "result": "92 missing players across 59 fixtures",
- "odds_time": "2026-10-25 18:16 UTC",
- "odds_calls": 45,
- "odds_rows": 5626,
- "odds_fixtures": 44,
+ "result": "84 missing players across 57 fixtures",
+ "odds_time": "2026-10-25 19:30 UTC",
+ "odds_calls": 46,
+ "odds_rows": 5733,
+ "odds_fixtures": 45,
  "books_seen": [
   "1xBet",
   "Bet365",
@@ -82,6 +80,6 @@
   "Total - Home",
   "Total Corners (1st Half)"
  ],
- "my_book_fixtures": 44,
- "odds_result": "prices for 44 fixtures"
+ "my_book_fixtures": 45,
+ "odds_result": "prices for 45 fixtures"
 }
