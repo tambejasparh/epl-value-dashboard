@@ -861,3 +861,14 @@ def test_af_current_season_uses_api_label():
         assert m._af_current_season("k", 39, "E0") == m._season_start_year(m.dt.date.today())
     finally:
         m._apifootball_get = orig
+
+
+def test_feed_aliases_china_and_big_clubs():
+    fd = {"Shandong Taishan", "Shanghai Port", "Shenzhen Xinpengcheng", "Man City", "Man United",
+          "FC Tokyo", "Verdy"}
+    feed = {"Shandong Luneng", "SHANGHAI SIPG", "Sichuan Jiuniu", "Manchester City",
+            "Manchester United", "FC Tokyo", "Tokyo Verdy"}
+    m = app.match_club_names(feed, fd)
+    assert m["Shandong Luneng"] == "Shandong Taishan" and m["SHANGHAI SIPG"] == "Shanghai Port"
+    assert m["Manchester United"] == "Man United" and m["Tokyo Verdy"] == "Verdy"
+    assert len(set(m.values())) == len(m) == len(feed)
