@@ -1,21 +1,20 @@
 {
- "time": "2026-10-25 09:42 UTC",
+ "time": "2026-10-25 12:47 UTC",
  "key_present": true,
  "leagues_found": {
   "RUS": "Premier League (Russia)",
-  "N1": "Eredivisie (Netherlands)",
-  "I1": "Serie A (Italy)",
-  "SC0": "Premiership (Scotland)",
-  "B1": "Jupiler Pro League (Belgium)",
-  "D2": "2. Bundesliga (Germany)",
   "SP2": "Segunda Divisi\u00f3n (Spain)",
   "SP1": "La Liga (Spain)",
   "T1": "S\u00fcper Lig (Turkey)",
+  "N1": "Eredivisie (Netherlands)",
+  "I1": "Serie A (Italy)",
   "F1": "Ligue 1 (France)",
+  "SC0": "Premiership (Scotland)",
   "E0": "Premier League (England)",
   "G1": "Super League 1 (Greece)",
   "I2": "Serie B (Italy)",
   "D1": "Bundesliga (Germany)",
+  "B1": "Jupiler Pro League (Belgium)",
   "P1": "Primeira Liga (Portugal)",
   "F2": "Ligue 2 (France)",
   "E3": "League Two (England)",
@@ -24,15 +23,15 @@
   "E2": "League One (England)",
   "EC": "National League (England)"
  },
- "fixtures": 109,
- "injured": 339,
- "players_fetched": 13,
- "requests_used": 21,
- "result": "339 missing players across 109 fixtures",
- "odds_time": "2026-10-25 09:42 UTC",
- "odds_calls": 92,
- "odds_rows": 10325,
- "odds_fixtures": 83,
+ "fixtures": 101,
+ "injured": 316,
+ "players_fetched": 2,
+ "requests_used": 10,
+ "result": "316 missing players across 101 fixtures",
+ "odds_time": "2026-10-25 12:47 UTC",
+ "odds_calls": 84,
+ "odds_rows": 9231,
+ "odds_fixtures": 74,
  "books_seen": [
   "1xBet",
   "Bet365",
@@ -42,6 +41,7 @@
   "Dafabet",
   "Marathonbet",
   "Pinnacle",
+  "SBO",
   "William Hill"
  ],
  "my_book_bets_seen": [
@@ -86,6 +86,6 @@
   "Total - Home",
   "Total Corners (1st Half)"
  ],
- "my_book_fixtures": 83,
- "odds_result": "prices for 83 fixtures"
+ "my_book_fixtures": 74,
+ "odds_result": "prices for 74 fixtures"
 }
