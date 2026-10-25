@@ -1470,6 +1470,7 @@ def score_predictions(window: pd.DataFrame, model: dict,
             "U45 %": q_["U45"] * 100, "U55 %": q_["U55"] * 100,
             "1xBet U4.5": book_prices(fx, book_odds, "U45")[0],
             "1xBet U5.5": book_prices(fx, book_odds, "U55")[0],
+            "Ticket legs": ticket_legs_json(q_, book_prices_all(fx, book_odds)),
             "Predicted score": pred,
             "Top 5 scores": ", ".join(f"{sc} ({pr*100:.0f}%)" for sc, pr in top_scores(m)),
             "Home %": p["H"] * 100, "Draw %": p["D"] * 100, "Away %": p["A"] * 100,
@@ -1771,7 +1772,7 @@ def pick_record_lines(sm: dict) -> list:
 def short_bet(k: str, home: str, away: str) -> str:
     """What to select on the betting site, in its own words."""
     goals = {"O15": "Over 1.5", "U15": "Under 1.5", "O25": "Over 2.5", "U25": "Under 2.5",
-             "O35": "Over 3.5", "U35": "Under 3.5", "U45": "Under 4.5"}
+             "O35": "Over 3.5", "U35": "Under 3.5", "U45": "Under 4.5", "U55": "Under 5.5"}
     if k in goals:
         return f"Over/Under (total goals) → {goals[k]}"
     return {"H": f"1X2 → 1 ({home} wins)", "D": "1X2 → X (draw)",
@@ -1804,6 +1805,11 @@ def ready_filter(row) -> str:
     if pd.notna(mine) and float(mine) < floor - 1e-9:
         return f"1xBet pays only {float(mine):.2f} (needs {floor:.2f})"
     kh, ka = int(row.get("Key out H", 0) or 0), int(row.get("Key out A", 0) or 0)
+    return injury_block(k, kh, ka)
+
+
+def injury_block(k: str, kh: int, ka: int) -> str:
+    """'' if missing key players do not hurt bet k, else the reason."""
     backs_home = k in ("H", "1X", "HS")
     backs_away = k in ("A", "X2", "AS")
     if backs_home and kh > 0:
@@ -2073,6 +2079,184 @@ def under_cards_html(g: pd.DataFrame) -> str:
     return "".join(out)
 
 
+# ---------------------------------------------------------------- ready-made tickets
+TICKET_KEYS = ["U45", "U55"]      # the Under rule: only Under 4.5 / Under 5.5
+TICKET_TARGETS = (3, 5, 7, 10)
+TICKET_MIN_LEG_P = UNDER_MIN_P / 100   # the Under rule: every bet 80%+ chance
+TICKET_MIN_PRICE = 1.02        # prices below this add nothing
+TICKET_OVER = 1.35             # total odds may go up to target x 1.35
+TICKET_STEP = 0.001            # log-odds grid of the optimiser
+
+
+def ticket_candidates(adv: pd.DataFrame, tz: str) -> list:
+    """[(day, DataFrame of possible legs)] - every bet 1xBet prices on every
+    match that has not started, one row per (match, bet), injury-checked."""
+    if adv is None or adv.empty or "Ticket legs" not in adv.columns:
+        return []
+    d = add_local_time(adv, tz)
+    d = d[pd.to_datetime(d["Kickoff UTC"], utc=True) > pd.Timestamp.now(tz="UTC")]
+    rows = []
+    for i, r in d.iterrows():
+        try:
+            legs = json.loads(r["Ticket legs"]) if isinstance(r["Ticket legs"], str) else []
+        except ValueError:
+            legs = []
+        home, away = (str(r["Match"]).split(" v ", 1) + [""])[:2]
+        for k, p, price in legs:
+            if k not in TICKET_KEYS or p < TICKET_MIN_LEG_P - 1e-9 or price < TICKET_MIN_PRICE:
+                continue
+            rows.append({"_m": i, "_day": r["_day"], "Kickoff UTC": r["Kickoff UTC"],
+                         "Time": r["Time"], "Competition": r["Competition"],
+                         "Match": r["Match"], "Key": k, "Bet": short_bet(k, home, away),
+                         "Chance %": 100 * p, "1xBet odds": price})
+    if not rows:
+        return []
+    c = pd.DataFrame(rows)
+    return [(day, g) for day, g in c.groupby("_day", sort=True)]
+
+
+def _pareto(g: pd.DataFrame) -> pd.DataFrame:
+    """Keep only the bets of a match that are not worse on BOTH chance and odds."""
+    g = g.sort_values(["1xBet odds", "Chance %"], ascending=[False, False])
+    keep, best_p = [], -1.0
+    for idx, r in g.iterrows():
+        if r["Chance %"] > best_p + 1e-9:
+            keep.append(idx)
+            best_p = r["Chance %"]
+    return g.loc[keep]
+
+
+def build_ticket(cands: pd.DataFrame, target: float) -> pd.DataFrame | None:
+    """The ticket (at most one bet per match) whose total 1xBet odds are between
+    target and target x TICKET_OVER with the HIGHEST chance that every bet wins.
+    Exact search (dynamic programming over total odds)."""
+    if cands is None or cands.empty:
+        return None
+    slack = 25                                    # rounding room; exact check at the end
+    lo = int(round(np.log(target) / TICKET_STEP)) - slack
+    hi = int(round(np.log(target * TICKET_OVER) / TICKET_STEP)) + slack
+    states = {0: (0.0, ())}                       # odds bucket -> (log chance, legs)
+    for _, g in cands.groupby("_m", sort=False):
+        opts = [(int(round(np.log(r["1xBet odds"]) / TICKET_STEP)),
+                 float(np.log(r["Chance %"] / 100)), idx) for idx, r in _pareto(g).iterrows()]
+        new = dict(states)
+        for b, (lp, legs) in states.items():
+            for ob, olp, idx in opts:
+                nb = b + ob
+                if nb > hi:
+                    continue
+                v = lp + olp
+                if nb not in new or v > new[nb][0]:
+                    new[nb] = (v, legs + (idx,))
+        states = new
+    price = cands["1xBet odds"]
+    done = [(lp, legs) for b, (lp, legs) in states.items() if b >= lo and legs
+            and target - 1e-9 <= float(np.prod(price.loc[list(legs)]))
+            <= target * TICKET_OVER + 1e-9]
+    if not done:
+        return None
+    _, legs = max(done, key=lambda x: x[0])
+    t = cands.loc[list(legs)].sort_values("Kickoff UTC").copy()
+    t.insert(0, "#", range(1, len(t) + 1))
+    return t
+
+
+def tickets_for_day(cands: pd.DataFrame) -> dict:
+    """{target odds: ticket DataFrame or None} for 3, 5, 7 and 10 odds."""
+    return {t: build_ticket(cands, t) for t in TICKET_TARGETS}
+
+
+@st.cache_data(ttl=1800, show_spinner="Building your tickets...")
+def _cached_tickets(cands: pd.DataFrame) -> dict:
+    return tickets_for_day(cands)
+
+
+def ticket_totals(t: pd.DataFrame) -> tuple:
+    """(total odds, chance % that every bet wins)."""
+    return float(np.prod(t["1xBet odds"])), float(100 * np.prod(t["Chance %"] / 100))
+
+
+def ticket_cards_html(t: pd.DataFrame) -> str:
+    e = html.escape
+    return "".join(
+        "<div class='bfe-card bet'>"
+        f"<div class='bfe-top'><b class='bfe-rank'>#{int(r['#'])}</b> "
+        f"{e(str(r['Time']))} · {e(str(r['Competition']))}</div>"
+        f"<div class='bfe-match'>{e(str(r['Match']))}</div>"
+        f"<div class='bfe-adv'>✅ BET: {e(str(r['Bet']))}</div>"
+        f"<div class='bfe-row'>1xBet odds <b>{r['1xBet odds']:.2f}</b> · "
+        f"{r['Chance %']:.0f}% chance</div></div>"
+        for _, r in t.iterrows())
+
+
+def render_tickets_section(adv: pd.DataFrame, tz: str):
+    st.markdown("#### 🎟️ Ready-made tickets — choose your odds")
+    st.caption("Built only with the Under rule: every line is Under 4.5 or Under 5.5 goals "
+               "with an 80%+ chance, at 1xBet's real price, one bet per match, from matches "
+               "that have not started. For each odds size the system picks the combination "
+               "with the HIGHEST chance that every line wins.")
+    days = ticket_candidates(adv, tz)
+    if not days:
+        st.info("No Under 4.5 / 5.5 bets with 80%+ chance and a 1xBet price yet. Tickets "
+                "appear as soon as prices are collected (four times a day).")
+        return
+    c1, c2 = st.columns(2)
+    day = c1.selectbox("Day", [d_ for d_, _ in days],
+                       format_func=lambda d_: f"{pd.Timestamp(d_):%A %d %B}", key="ticket_day")
+    target = c2.selectbox("How many odds do you want?", TICKET_TARGETS, index=1,
+                          format_func=lambda x: f"{x} odds", key="ticket_target")
+    tickets = _cached_tickets(dict(days)[day])
+    t = tickets[target]
+    if t is None:
+        st.warning(f"Not enough 80%+ Under bets with 1xBet prices on this day to reach "
+                   f"{target} odds. Try a smaller ticket or another day.")
+    else:
+        odds, chance = ticket_totals(t)
+        st.success(f"**{target}-odds ticket: {len(t)} matches · total 1xBet odds "
+                   f"{odds:.2f} · chance that ALL win ≈ {chance:.0f}%**")
+        if phone_mode():
+            st.markdown(ticket_cards_html(t), unsafe_allow_html=True)
+        else:
+            show_df(t[["#", "Time", "Competition", "Match", "Bet", "1xBet odds", "Chance %"]]
+                    .style.format({"1xBet odds": "{:.2f}", "Chance %": "{:.0f}"}),
+                    hide_index=True, height=38 + 35 * len(t))
+        st.caption("Add every line to ONE 1xBet bet slip. If 1xBet's price for a line is now "
+                   "lower, the total odds will be a little lower - that is fine. A match that "
+                   "starts drops off the ticket automatically next time you open the page.")
+    summ = []
+    for tg, tk in tickets.items():
+        if tk is None:
+            summ.append({"Ticket": f"{tg} odds", "Matches": "—", "Total odds": "—",
+                         "Chance all win": "not possible"})
+        else:
+            o, ch = ticket_totals(tk)
+            summ.append({"Ticket": f"{tg} odds", "Matches": str(len(tk)), "Total odds": f"{o:.2f}",
+                         "Chance all win": f"{ch:.0f}%"})
+    st.markdown("**All four tickets for this day**")
+    show_df(pd.DataFrame(summ), hide_index=True)
+    st.caption("Bigger odds = more matches = lower chance. Bet small on the 7 and 10 odds tickets.")
+
+
+def tickets_markdown(adv: pd.DataFrame, tz: str) -> list:
+    """Lines for predictions.md: the first day's four ready-made tickets."""
+    days = ticket_candidates(adv, tz)
+    if not days:
+        return []
+    day, cands = days[0]
+    lines = [f"## 🎟️ Ready-made tickets — {pd.Timestamp(day):%A %d %B}", "",
+             "_Only Under 4.5 / Under 5.5 with 80%+ chance, one per match, 1xBet prices, highest ticket chance._", ""]
+    for tg, t in tickets_for_day(cands).items():
+        if t is None:
+            lines += [f"**{tg} odds:** not enough safe bets today", ""]
+            continue
+        o, ch = ticket_totals(t)
+        lines += [f"**{tg} odds — {len(t)} matches, total {o:.2f}, chance all win ≈ {ch:.0f}%**"]
+        lines += [f"{int(r['#'])}. {r['Time']} · {r['Match']} ({r['Competition']}) — "
+                  f"{r['Bet']} @ {r['1xBet odds']:.2f} · {r['Chance %']:.0f}%"
+                  for _, r in t.iterrows()] + [""]
+    return lines
+
+
 def render_under_section(adv: pd.DataFrame, tz: str):
     st.markdown("#### 🟢 Under 4.5 / Under 5.5 — matches with 80%+ chance")
     st.caption("Every match of the day where 'Under 4.5 goals' (or, if that is below 80%, "
@@ -2200,7 +2384,8 @@ def write_predictions_md(adv: pd.DataFrame, flags: pd.DataFrame, path: Path,
                   "are usually published mid-week.", ""]
     else:
         d = add_local_time(adv, tz)
-        # 0) safest picks + rules + live track record
+        # 0) ready-made tickets, Under picks, safest picks + rules + track record
+        lines += tickets_markdown(adv, tz)
         udays = under_picks_by_day(adv, tz)
         if udays:
             lines += ["## 🟢 Under 4.5 / Under 5.5 — matches with 80%+ chance", "",
@@ -2924,6 +3109,23 @@ def book_prices(fx, book_odds: pd.DataFrame, key: str) -> tuple:
     return (float(mine.max()) if not mine.empty else np.nan), float(t["Price"].max())
 
 
+def book_prices_all(fx, book_odds: pd.DataFrame) -> dict:
+    """{bet key: 1xBet price} for one fixture (empty if unknown)."""
+    if book_odds is None or book_odds.empty:
+        return {}
+    row = match_fixture_row(fx, book_odds.drop_duplicates("FixtureId"))
+    if row is None:
+        return {}
+    t = book_odds[(book_odds["FixtureId"] == row["FixtureId"]) & book_odds["Book"].isin(MY_BOOKS)]
+    return {k: float(v) for k, v in t.groupby("Key")["Price"].max().items()}
+
+
+def ticket_legs_json(q_: dict, prices: dict) -> str:
+    """Every bet of a match that 1xBet prices: [[key, chance, 1xBet odds], ...]."""
+    return json.dumps([[k, round(float(q_[k]), 4), round(prices[k], 3)]
+                       for k in TICKET_KEYS if k in q_ and prices.get(k, 0) > 1])
+
+
 def load_injury_table() -> pd.DataFrame:
     """One row per missing player of an upcoming fixture, with season stats and
     which side (H/A) he plays for. Empty when no data is available."""
@@ -3097,6 +3299,7 @@ def cup_predictions(fixtures: pd.DataFrame, model: dict, code_col: str = "Comp",
             "U45 %": q_["U45"] * 100, "U55 %": q_["U55"] * 100,
             "1xBet U4.5": book_prices(fx, book_odds, "U45")[0],
             "1xBet U5.5": book_prices(fx, book_odds, "U55")[0],
+            "Ticket legs": ticket_legs_json(q_, book_prices_all(fx, book_odds)),
             "Predicted score": pred,
             "Top 5 scores": ", ".join(f"{sc} ({pr*100:.0f}%)" for sc, pr in top_scores(m)),
             "Home %": p["H"] * 100, "Draw %": p["D"] * 100, "Away %": p["A"] * 100,
@@ -4412,6 +4615,9 @@ def main():
         st.sidebar.success("Data health: all sources OK")
     for lg, (_, why) in STATUS_OVERRIDES.items():
         st.warning(f"🛡️ {league_name(lg)}: {why}")
+
+    with safe_section("Ready-made tickets"):
+        render_tickets_section(week_adv, tz)
 
     if st.session_state.get("under_mode", True):
         with safe_section("Under picks"):

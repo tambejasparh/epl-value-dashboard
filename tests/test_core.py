@@ -883,3 +883,46 @@ def test_append_feed_never_swaps_similar_clubs():
     out = app._append_feed(df, feed, "JPN", "test")
     new = out[out["Date"] == pd.Timestamp("2026-10-24")]
     assert new.empty or new["HomeTeam"].iloc[0] != "FC Tokyo"
+
+
+def _ticket_adv():
+    import json as _j
+    ko = pd.Timestamp.now(tz="UTC") + pd.Timedelta(hours=3)
+    legs = [[["U45", 0.90, 1.15], ["U55", 0.96, 1.05], ["O25", 0.95, 1.5]],
+            [["U45", 0.85, 1.25], ["U55", 0.93, 1.08]],
+            [["U45", 0.79, 1.40], ["U55", 0.88, 1.15]],
+            [["U45", 0.82, 1.30], ["1X", 0.99, 2.0]],
+            [["U55", 0.97, 1.03]]]
+    return pd.DataFrame({"Kickoff UTC": [ko + pd.Timedelta(minutes=i) for i in range(5)],
+                         "Competition": "Test", "Match": [f"H{i} v A{i}" for i in range(5)],
+                         "Ticket legs": [_j.dumps(x) for x in legs]})
+
+
+def test_ticket_candidates_follow_under_rule():
+    days = app.ticket_candidates(_ticket_adv(), "UTC")
+    c = pd.concat([g for _, g in days])
+    assert set(c["Key"]) <= {"U45", "U55"}
+    assert c["Chance %"].min() >= 80 - 1e-6
+    assert not ((c["Key"] == "U45") & (c["Match"] == "H2 v A2")).any()   # 79% left out
+
+
+def test_build_ticket_is_best_combination():
+    import itertools
+    days = app.ticket_candidates(_ticket_adv(), "UTC")
+    c = pd.concat([g for _, g in days])
+    for target in (1.3, 1.5, 2.0):
+        t = app.build_ticket(c, target)
+        assert t is not None and t["_m"].is_unique
+        odds, chance = app.ticket_totals(t)
+        assert target - 1e-9 <= odds <= target * app.TICKET_OVER + 1e-9
+        best = 0.0                               # brute force over all tickets
+        groups = [list(g.index) + [None] for _, g in c.groupby("_m")]
+        for combo in itertools.product(*groups):
+            idx = [i for i in combo if i is not None]
+            if not idx:
+                continue
+            o = float(np.prod(c.loc[idx, "1xBet odds"]))
+            if target <= o <= target * app.TICKET_OVER:
+                best = max(best, float(100 * np.prod(c.loc[idx, "Chance %"] / 100)))
+        assert chance >= best - 0.6, (target, chance, best)
+    assert app.build_ticket(c, 1000) is None
