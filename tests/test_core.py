@@ -926,3 +926,7 @@ def test_build_ticket_is_best_combination():
                 best = max(best, float(100 * np.prod(c.loc[idx, "Chance %"] / 100)))
         assert chance >= best - 0.6, (target, chance, best)
     assert app.build_ticket(c, 1000) is None
+
+
+def test_ticket_sizes_on_menu():
+    assert app.TICKET_TARGETS == (3, 5, 7, 10, 12, 15, 20)

@@ -2081,7 +2081,7 @@ def under_cards_html(g: pd.DataFrame) -> str:
 
 # ---------------------------------------------------------------- ready-made tickets
 TICKET_KEYS = ["U45", "U55"]      # the Under rule: only Under 4.5 / Under 5.5
-TICKET_TARGETS = (3, 5, 7, 10)
+TICKET_TARGETS = (3, 5, 7, 10, 12, 15, 20)
 TICKET_MIN_LEG_P = UNDER_MIN_P / 100   # the Under rule: every bet 80%+ chance
 TICKET_MIN_PRICE = 1.02        # prices below this add nothing
 TICKET_OVER = 1.35             # total odds may go up to target x 1.35
@@ -2164,7 +2164,7 @@ def build_ticket(cands: pd.DataFrame, target: float) -> pd.DataFrame | None:
 
 
 def tickets_for_day(cands: pd.DataFrame) -> dict:
-    """{target odds: ticket DataFrame or None} for 3, 5, 7 and 10 odds."""
+    """{target odds: ticket DataFrame or None} for every size in TICKET_TARGETS."""
     return {t: build_ticket(cands, t) for t in TICKET_TARGETS}
 
 
@@ -2234,13 +2234,13 @@ def render_tickets_section(adv: pd.DataFrame, tz: str):
             o, ch = ticket_totals(tk)
             summ.append({"Ticket": f"{tg} odds", "Matches": str(len(tk)), "Total odds": f"{o:.2f}",
                          "Chance all win": f"{ch:.0f}%"})
-    st.markdown("**All four tickets for this day**")
+    st.markdown("**All tickets for this day**")
     show_df(pd.DataFrame(summ), hide_index=True)
-    st.caption("Bigger odds = more matches = lower chance. Bet small on the 7 and 10 odds tickets.")
+    st.caption("Bigger odds = more matches = lower chance. Bet small on the 10, 12, 15 and 20 odds tickets.")
 
 
 def tickets_markdown(adv: pd.DataFrame, tz: str) -> list:
-    """Lines for predictions.md: the first day's four ready-made tickets."""
+    """Lines for predictions.md: the first day's ready-made tickets."""
     days = ticket_candidates(adv, tz)
     if not days:
         return []
