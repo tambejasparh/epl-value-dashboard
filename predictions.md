@@ -1,5 +1,5 @@
 # Football predictions — day by day
-_Updated Sun 25 Oct 2026 01:59 (Africa/Douala time). Bankroll for stakes: 100.00_
+_Updated Sun 25 Oct 2026 02:10 (Africa/Douala time). Bankroll for stakes: 100.00_
 
 ## 🟢 Under 4.5 / Under 5.5 — matches with 80%+ chance
 
@@ -88,10 +88,10 @@ _Safest first. 💚 = 1xBet pays at least the fair minimum._
 2. 20:45 · **Torino v Como** (Italy - Serie A) — Over/Under → Under 4.5 · 90% · 1xBet 1.18 💚
 3. 18:30 · **Sassuolo v Lazio** (Italy - Serie A) — Over/Under → Under 4.5 · 90% · 1xBet 1.16 💚
 4. 20:45 · **Roma v Cagliari** (Italy - Serie A) — Over/Under → Under 4.5 · 90% · 1xBet 1.16 💚
-5. 20:45 · **Leicester v Wigan** (England - League One) — Over/Under → Under 4.5 · 89%
+5. 20:45 · **Leicester v Wigan** (England - League One) — Over/Under → Under 4.5 · 89% · 1xBet 1.20 💚
 6. 20:45 · **Luton v Doncaster** (England - League One) — Over/Under → Under 4.5 · 86%
 7. 20:45 · **Oxford v Stockport** (England - League One) — Over/Under → Under 4.5 · 85%
-8. 20:45 · **Milton Keynes Dons v Bromley** (England - League One) — Over/Under → Under 4.5 · 85% · 1xBet 1.12 
+8. 20:45 · **Milton Keynes Dons v Bromley** (England - League One) — Over/Under → Under 4.5 · 85% · 1xBet 1.14 
 9. 20:45 · **Barnet v York** (England - League Two) — Over/Under → Under 4.5 · 80% · 1xBet 1.20 
 
 🎟️ One ticket with the top matches — top 2: 81% · top 3: 72% · top 5: 57% · top 8: 36%
@@ -230,7 +230,7 @@ _Only 85%+ picks, backed by bookmaker odds (or 88%+ without), with no key player
 1. 20:45 · **Roma v Cagliari** (Italy - Serie A)  
    ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.15+** (90% chance) · 💚 1xBet pays 1.16
 2. 20:45 · **Leicester v Wigan** (England - League One)  
-   ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.16+** (89% chance)
+   ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.16+** (89% chance) · 💚 1xBet pays 1.20
 
 🎟️ All 2 on one ticket: all 2 win about **79%** of the time (lose about 21%). Take it only if the ticket's total odds are at least **1.34**. In testing on 472 past match days, the top-2 ticket won on 83% of days - it still lost about 1 day in 6.
 
@@ -357,11 +357,11 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 - ⚠️ 20:45 · **Torino v Como** (Italy - Serie A) — BET: Over/Under (total goals) → Under 4.5 · 90% · 1xBet 1.18
 - ⚠️ 18:30 · **Sassuolo v Lazio** (Italy - Serie A) — BET: Over/Under (total goals) → Under 4.5 · 90% · 1xBet 1.16
 - ✅ 20:45 · **Roma v Cagliari** (Italy - Serie A) — BET: Over/Under (total goals) → Under 4.5 · 90% · 1xBet 1.16
-- ✅ 20:45 · **Leicester v Wigan** (England - League One) — BET: Over/Under (total goals) → Under 4.5 · 89%
+- ✅ 20:45 · **Leicester v Wigan** (England - League One) — BET: Over/Under (total goals) → Under 4.5 · 89% · 1xBet 1.20
 - ⚠️ 20:45 · **Sheffield Weds v Cambridge** (England - League One) — BET: Sheffield Weds total goals → Over 0.5 · 87%
 - ⚠️ 20:45 · **Luton v Doncaster** (England - League One) — BET: Over/Under (total goals) → Under 4.5 · 86%
 - ⚠️ 20:45 · **Oxford v Stockport** (England - League One) — BET: Over/Under (total goals) → Under 4.5 · 85%
-- ⚠️ 20:45 · **Milton Keynes Dons v Bromley** (England - League One) — BET: Milton Keynes Dons total goals → Over 0.5 · 85% · 1xBet 1.09
+- ⚠️ 20:45 · **Milton Keynes Dons v Bromley** (England - League One) — BET: Milton Keynes Dons total goals → Over 0.5 · 85% · 1xBet 1.07
 - ⚠️ 20:45 · **Barnet v York** (England - League Two) — BET: Over/Under (total goals) → Over 1.5 · 81% · 1xBet 1.09
 
 ### Wednesday 28 October (11 matches)
