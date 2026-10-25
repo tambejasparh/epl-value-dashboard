@@ -297,6 +297,17 @@ def test_full_app_runs_without_errors():
     assert not at.exception, [str(e) for e in at.exception]
     errors = [e.value for e in at.error if "Something went wrong" in str(e.value)]
     assert not errors, errors
+    # the Under calculator: two teams + Calculate -> a verdict, no error
+    at.text_input(key="uc_home").set_value("Arsenal")
+    at.text_input(key="uc_away").set_value("Chelsea")
+    at.number_input(key="uc_o45").set_value(1.25)
+    next(b for b in at.button if "Calculate" in str(b.label)).click()
+    at.run()
+    assert not at.exception, [str(e) for e in at.exception]
+    errors = [e.value for e in at.error if "Something went wrong" in str(e.value)]
+    assert not errors, errors
+    shown = " ".join(str(x.value) for x in list(at.success) + list(at.warning) + list(at.error))
+    assert "Verdict" in shown and "Under 4.5" in shown, shown[:500]
     # and the full app with every section (Under mode switched off)
     at.toggle(key="under_mode").set_value(False).run()
     assert not at.exception, [str(e) for e in at.exception]
@@ -930,3 +941,14 @@ def test_build_ticket_is_best_combination():
 
 def test_ticket_sizes_on_menu():
     assert app.TICKET_TARGETS == (3, 5, 7, 10, 12, 15, 20)
+
+
+def test_under_calculator_verdict():
+    v = app.under_verdict(86, 95, 1.20, 1.05)
+    assert v["bet"] == "U45" and v["U45"]["ok"] and v["U45"]["good_price"] is True
+    v = app.under_verdict(75, 90, np.nan, 1.02)
+    assert v["bet"] == "U55" and not v["U45"]["ok"] and v["U55"]["good_price"] is False
+    assert v["U45"]["good_price"] is None                      # price unknown
+    assert app.under_verdict(70, 79.9)["bet"] is None             # neither reaches 80%
+    assert app.under_verdict(80, 90)["bet"] == "U45"              # 80% exactly passes
+    assert abs(app.under_verdict(90, 95)["U45"]["fair"] - (100 / 90) * 1.03) < 0.02

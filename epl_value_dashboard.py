@@ -2260,6 +2260,104 @@ def tickets_markdown(adv: pd.DataFrame, tz: str) -> list:
     return lines
 
 
+def under_verdict(p45: float, p55: float, price45=np.nan, price55=np.nan,
+                  min_p: float = UNDER_MIN_P) -> dict:
+    """The Under rule for one match. p45/p55 in %. Under 4.5 is preferred (it pays
+    more); Under 5.5 only when Under 4.5 is below min_p."""
+    def one(p, price):
+        fair = (100 / p) * (1 + DEFAULTS["min_edge"] / 100) if p > 0 else np.inf
+        ok = p >= min_p - 1e-9
+        known = price is not None and pd.notna(price) and float(price) > 1
+        return {"p": p, "ok": ok, "fair": fair, "price": float(price) if known else np.nan,
+                "good_price": (float(price) >= fair - 1e-9) if known else None}
+    u45, u55 = one(p45, price45), one(p55, price55)
+    bet = "U45" if u45["ok"] else ("U55" if u55["ok"] else None)
+    return {"U45": u45, "U55": u55, "bet": bet}
+
+
+def render_under_calculator(directory: dict, all_models: dict, uefa_model, intl_model,
+                            fixtures, book, min_edge, max_edge, bankroll, allow_all,
+                            week_adv: pd.DataFrame | None = None, tz: str = DEFAULTS["timezone"]):
+    st.markdown("#### 🧮 Under 4.5 / 5.5 calculator")
+    with st.form("under_calc_form", border=False):
+        c1, c2 = st.columns(2)
+        home_q = c1.text_input("Home team", key="uc_home", placeholder="e.g. Lecce")
+        away_q = c2.text_input("Away team", key="uc_away", placeholder="e.g. Juventus")
+        c3, c4, c5 = st.columns([2, 2, 1])
+        my45 = c3.number_input("1xBet odds for Under 4.5 (optional)", min_value=0.0,
+                               max_value=20.0, value=0.0, step=0.01, key="uc_o45")
+        my55 = c4.number_input("1xBet odds for Under 5.5 (optional)", min_value=0.0,
+                               max_value=20.0, value=0.0, step=0.01, key="uc_o55")
+        neutral = c5.toggle("Neutral venue", key="uc_neutral")
+        st.form_submit_button("🧮 Calculate", type="primary")
+    if not (home_q and away_q):
+        st.caption("Type any two teams (25 leagues, UEFA cups or national teams) and press "
+                   "Calculate. Adding 1xBet's odds is optional - it tells you if the price is good.")
+        return
+    names = list(directory)
+    picks = []
+    for label, q, k in (("Home team", home_q, "uc_home_pick"), ("Away team", away_q, "uc_away_pick")):
+        best, sugg, exact = resolve_team(q, names)
+        if best is None:
+            st.warning(f"No team found for '{q}'. Check the spelling or try the short name.")
+            return
+        if not exact:
+            best = st.selectbox(f"{label}: no exact match for '{q}' - did you mean...", sugg, key=k)
+        picks.append(best)
+    home, away = picks
+    if home == away:
+        st.warning("Pick two different teams.")
+        return
+    res = match_query(home, away, directory, all_models, uefa_model, intl_model, fixtures,
+                      book, min_edge, max_edge, bankroll, allow_all, neutral)
+    if "error" in res:
+        st.warning(res["error"])
+        return
+    model = res["model"]
+    lh_, la_, m, p = predict(model, res["mh"], res["ma"], neutral=neutral)
+    pp_, used_odds = pick_probs(m, model["rho"], res.get("odds") or {})
+    q_ = shrink_probs(pp_, model.get("pick_shrink", 1.0))
+    p45, p55 = q_["U45"] * 100, q_["U55"] * 100
+    price45, price55 = (my45 if my45 > 1 else np.nan), (my55 if my55 > 1 else np.nan)
+    source = "model" + (" + bookmaker odds" if used_odds else "")
+    # In this week's list? Use the system's numbers (missing players + 1xBet prices).
+    if week_adv is not None and not week_adv.empty and "U45 %" in week_adv.columns:
+        hit = week_adv[week_adv["Match"].isin({f"{res['mh']} v {res['ma']}", f"{home} v {away}"})]
+        if not hit.empty:
+            r = add_local_time(hit, tz).iloc[0]
+            p45, p55 = float(r["U45 %"]), float(r["U55 %"])
+            if pd.isna(price45):
+                price45 = r.get("1xBet U4.5", np.nan)
+            if pd.isna(price55):
+                price55 = r.get("1xBet U5.5", np.nan)
+            source = "model + bookmaker odds + missing players"
+            st.caption(f"📅 {home} v {away} is on {r['Day']} at {r['Time']} ({r['Competition']}).")
+    v = under_verdict(p45, p55, price45, price55)
+    st.markdown(f"**{home} v {away}** — expected goals {lh_ + la_:.1f} "
+                f"({lh_:.1f} - {la_:.1f}) · {source}")
+    for k, label, total in (("U45", "Under 4.5", "4 goals or fewer"),
+                            ("U55", "Under 5.5", "5 goals or fewer")):
+        x = v[k]
+        price_txt = ""
+        if pd.notna(x["price"]):
+            price_txt = (f" · 1xBet {x['price']:.2f} 💚 good price" if x["good_price"] else
+                         f" · 1xBet {x['price']:.2f} ⚠️ below the fair minimum")
+        line = (f"**{label}** ({total}): **{x['p']:.0f}% chance** · fair minimum odds "
+                f"{x['fair']:.2f}{price_txt}")
+        (st.success if x["ok"] else st.error)(
+            ("✅ " if x["ok"] else "❌ ") + line
+            + ("" if x["ok"] else f" — below your {UNDER_MIN_P:.0f}% rule"))
+    if v["bet"] == "U45":
+        st.success("🎯 **Verdict: BET Under 4.5** - it passes the 80% rule and pays more than Under 5.5.")
+    elif v["bet"] == "U55":
+        st.warning("🎯 **Verdict: BET Under 5.5 only** - Under 4.5 is below 80%, Under 5.5 passes.")
+    else:
+        st.error("🎯 **Verdict: SKIP this match** - neither Under 4.5 nor Under 5.5 reaches 80%.")
+    if v["bet"] and v[v["bet"]]["good_price"] is False:
+        st.caption("The chance is fine, but 1xBet pays less than the fair minimum - it still "
+                   "fits your rule, it just pays a little less than it should.")
+
+
 def render_under_section(adv: pd.DataFrame, tz: str):
     st.markdown("#### 🟢 Under 4.5 / Under 5.5 — matches with 80%+ chance")
     st.caption("Every match of the day where 'Under 4.5 goals' (or, if that is below 80%, "
@@ -4621,6 +4719,11 @@ def main():
 
     with safe_section("Ready-made tickets"):
         render_tickets_section(week_adv, tz)
+
+    with safe_section("Under calculator"):
+        render_under_calculator(team_directory(all_models, uefa_model, intl_model),
+                                all_models, uefa_model, intl_model, fixtures, book, min_edge,
+                                max_edge, bankroll, allow_all, week_adv, tz)
 
     if st.session_state.get("under_mode", True):
         with safe_section("Under picks"):
