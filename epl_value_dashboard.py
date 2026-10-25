@@ -641,6 +641,9 @@ def _fd_feed(league: str):
     return pd.DataFrame(data) if data else None
 
 
+AF_FILL_STATUS: dict = {}     # league -> what API-Football returned (daily-run diagnostics)
+
+
 def _af_current_season(key: str, af_id: int, league: str) -> int:
     """The season label API-Football itself uses for the league's current season
     (e.g. Japan's J1 moved to an autumn-spring calendar and is now labelled 2027).
@@ -667,6 +670,11 @@ def _af_feed(league: str):
         return None
     season = _af_current_season(key, af_id, league)
     js = _apifootball_get("/fixtures", key, league=af_id, season=season, status="FT-AET-PEN")
+    resp = (js or {}).get("response") or []
+    AF_FILL_STATUS[league] = {"season": season, "finished": len(resp),
+                              "latest": max(((f.get("fixture") or {}).get("date") or "")[:10]
+                                            for f in resp) if resp else None,
+                              "errors": (js or {}).get("errors") or None}
     rows = []
     for f in (js or {}).get("response") or []:
         g = f.get("goals") or {}
@@ -5137,6 +5145,13 @@ def run_headless_log(argv=None) -> int:
         if not adv.empty else 0
     print(f"[{stamp}] leagues: {len(models)} | fixtures: {len(window)} | cup/intl: {n_cup} | "
           f"BET advice: {n_bet} | new flags logged: {added}")
+    if AF_FILL_STATUS and not args.no_backup:
+        try:
+            (SNAPSHOT_DIR / "results_fill_status.json").write_text(json.dumps(
+                {"time": pd.Timestamp.now(tz="UTC").strftime("%Y-%m-%d %H:%M UTC"),
+                 "leagues": AF_FILL_STATUS}, indent=1, default=str))
+        except Exception:
+            pass
     print(f"  backup refreshed: {len(saved)} sources"
           + ("" if len(saved) >= len(LEAGUES) else
              " (some sources unavailable - the app falls back to the previous copy)"))
