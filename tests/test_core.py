@@ -845,7 +845,9 @@ def test_under_mode_follows_85_rule():
     adv = app.match_advice(app.score_predictions(fx[fx["Div"] == "E0"], model),
                            pd.DataFrame(), 100)
     adv.insert(0, "Competition", "England - Premier League")
-    assert {"U45 %", "U55 %", "U65 %", "O05 %", "O15 %", "1xBet U6.5", "1xBet O1.5"} <= set(adv.columns)
+    assert {"U45 %", "U55 %", "U65 %", "O05 %", "O15 %", "BTTS_Y %", "1xBet U6.5", "1xBet O1.5",
+            "1xBet BTTS Yes"} <= set(adv.columns)
+    adv["BTTS_Y %"] = 50.0
     adv = pd.concat([adv.iloc[[0]]] * 5, ignore_index=True)
     adv["Match"] = [f"Team{i} v Other{i}" for i in range(5)]
     adv["Kickoff UTC"] = pd.Timestamp.now(tz="UTC") + pd.Timedelta(hours=5)
@@ -968,6 +970,11 @@ def test_under_calculator_verdict():
     assert app.under_verdict({"U45": 80, "U55": 80, "U65": 84, "O15": 98.2, "O05": 99.6})["bet"] == "O15"
     assert app.under_verdict({"U45": 80, "U55": 80, "U65": 84, "O15": 97.9, "O05": 98})["bet"] == "O05"
     assert app.under_verdict({"U45": 80, "U55": 80, "U65": 84, "O15": 90, "O05": 97.9})["bet"] is None
+    assert app.under_verdict({"U45": 80, "U55": 80, "U65": 84, "O15": 90, "O05": 97,
+                              "BTTS_Y": 96.5})["bet"] == "BTTS_Y"
+    assert app.under_verdict({"U45": 80, "U55": 80, "U65": 84, "O15": 90, "O05": 97,
+                              "BTTS_Y": 95.9})["bet"] is None
+    assert app.UNDER_BET["BTTS_Y"].startswith("Both teams to score")
     assert app.under_verdict({"U45": 85, "U55": 99, "U65": 99})["bet"] == "U45"  # 85% exactly
     assert abs(app.under_verdict({"U45": 90, "U55": 95, "U65": 97})["U55"]["fair"]
                - (100 / 95) * 1.03) < 0.02
