@@ -1,5 +1,5 @@
 {
- "time": "2026-10-25 00:42 UTC",
+ "time": "2026-10-25 00:56 UTC",
  "key_present": true,
  "leagues_found": {
   "JPN": "J1 League (Japan)",
@@ -27,12 +27,12 @@
  },
  "fixtures": 114,
  "injured": 337,
- "players_fetched": 13,
- "requests_used": 21,
+ "players_fetched": 0,
+ "requests_used": 8,
  "result": "337 missing players across 114 fixtures",
- "odds_time": "2026-10-25 00:42 UTC",
+ "odds_time": "2026-10-25 00:56 UTC",
  "odds_calls": 97,
- "odds_rows": 10467,
+ "odds_rows": 10472,
  "odds_fixtures": 88,
  "books_seen": [
   "1xBet",
