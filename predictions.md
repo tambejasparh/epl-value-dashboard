@@ -1,9 +1,26 @@
 # Football predictions — day by day
-_Updated Sun 25 Oct 2026 21:46 (Africa/Douala time). Bankroll for stakes: 100.00_
+_Updated Sun 25 Oct 2026 21:52 (Africa/Douala time). Bankroll for stakes: 100.00_
 
 ## 🎟️ Ready-made tickets — Monday 26 October
 
 _Only Under 4.5, otherwise Under 5.5 or Under 6.5, at 85%+, or Over 1.5 / Over 0.5 at 98%+; one per match, 1xBet prices, highest ticket chance._
+
+**1.5 odds — 5 matches, total 1.50, chance all win ≈ 65%**
+1. 17:00 · Besiktas v Buyuksehyr (Turkey - Super Lig) — Under 5.5 goals @ 1.11 · 89%
+2. 17:00 · Rizespor v Trabzonspor (Turkey - Super Lig) — Under 6.5 goals @ 1.02 · 97%
+3. 19:45 · Santa Clara v Benfica (Portugal - Primeira Liga) — Under 4.5 goals @ 1.11 · 88%
+4. 20:30 · Paris SG v Lyon (France - Ligue 1) — Under 5.5 goals @ 1.14 · 90%
+5. 21:00 · Walsall v Salford (England - League Two) — Under 5.5 goals @ 1.05 · 95%
+
+**2 odds — 8 matches, total 2.02, chance all win ≈ 40%**
+1. 17:00 · Besiktas v Buyuksehyr (Turkey - Super Lig) — Under 5.5 goals @ 1.11 · 89%
+2. 17:00 · Rizespor v Trabzonspor (Turkey - Super Lig) — Under 5.5 goals @ 1.06 · 93%
+3. 19:30 · Galatasaray v Fenerbahce (Turkey - Super Lig) — Under 5.5 goals @ 1.08 · 88%
+4. 19:45 · Santa Clara v Benfica (Portugal - Primeira Liga) — Under 4.5 goals @ 1.11 · 88%
+5. 20:30 · Paris SG v Lyon (France - Ligue 1) — Under 5.5 goals @ 1.14 · 90%
+6. 20:45 · Montpellier v Red Star (France - Ligue 2) — Under 4.5 goals @ 1.08 · 89%
+7. 21:00 · Walsall v Salford (England - League Two) — Under 4.5 goals @ 1.10 · 87%
+8. 21:00 · Sevilla v Osasuna (Spain - La Liga) — Under 4.5 goals @ 1.06 · 89%
 
 **3 odds:** not enough safe bets today
 
