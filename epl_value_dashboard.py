@@ -674,7 +674,9 @@ def _af_feed(league: str):
     AF_FILL_STATUS[league] = {"season": season, "finished": len(resp),
                               "latest": max(((f.get("fixture") or {}).get("date") or "")[:10]
                                             for f in resp) if resp else None,
-                              "errors": (js or {}).get("errors") or None}
+                              "errors": (js or {}).get("errors") or None,
+                              "teams": sorted({t for f in resp for t in
+                                               (f["teams"]["home"]["name"], f["teams"]["away"]["name"])})}
     rows = []
     for f in (js or {}).get("response") or []:
         g = f.get("goals") or {}
