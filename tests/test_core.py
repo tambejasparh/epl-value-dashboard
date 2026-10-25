@@ -954,7 +954,7 @@ def test_build_ticket_is_best_combination():
 
 
 def test_ticket_sizes_on_menu():
-    assert app.TICKET_TARGETS == (3, 5, 7, 10, 12, 15, 20)
+    assert app.TICKET_TARGETS == (1.5, 2, 3, 5, 7, 10, 12, 15, 20)
 
 
 def test_under_calculator_verdict():

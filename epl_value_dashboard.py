@@ -2107,7 +2107,7 @@ def under_cards_html(g: pd.DataFrame) -> str:
 
 # ---------------------------------------------------------------- ready-made tickets
 TICKET_KEYS = [k for k, _ in UNDER_RULE]   # only bets in the rule
-TICKET_TARGETS = (3, 5, 7, 10, 12, 15, 20)
+TICKET_TARGETS = (1.5, 2, 3, 5, 7, 10, 12, 15, 20)
 TICKET_MIN_PRICE = 1.02        # prices below this add nothing
 TICKET_OVER = 1.35             # total odds may go up to target x 1.35
 TICKET_STEP = 0.001            # log-odds grid of the optimiser
@@ -2230,7 +2230,7 @@ def render_tickets_section(adv: pd.DataFrame, tz: str):
     c1, c2 = st.columns(2)
     day = c1.selectbox("Day", [d_ for d_, _ in days],
                        format_func=lambda d_: f"{pd.Timestamp(d_):%A %d %B}", key="ticket_day")
-    target = c2.selectbox("How many odds do you want?", TICKET_TARGETS, index=1,
+    target = c2.selectbox("How many odds do you want?", TICKET_TARGETS, index=1,   # 2 odds
                           format_func=lambda x: f"{x} odds", key="ticket_target")
     tickets = _cached_tickets(dict(days)[day], TICKET_TARGETS)
     t = tickets[target] if target in tickets else build_ticket(dict(days)[day], target)
