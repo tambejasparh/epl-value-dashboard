@@ -872,3 +872,14 @@ def test_feed_aliases_china_and_big_clubs():
     assert m["Shandong Luneng"] == "Shandong Taishan" and m["SHANGHAI SIPG"] == "Shanghai Port"
     assert m["Manchester United"] == "Man United" and m["Tokyo Verdy"] == "Verdy"
     assert len(set(m.values())) == len(m) == len(feed)
+
+
+def test_append_feed_never_swaps_similar_clubs():
+    df = pd.DataFrame({"Date": pd.to_datetime(["2026-10-18"] * 2), "HomeTeam": ["FC Tokyo", "Kyoto"],
+                       "AwayTeam": ["Verdy", "Mito"], "FTHG": [1, 0], "FTAG": [0, 0], "Season": "2026"})
+    feed = pd.DataFrame({"DateUtc": ["2026-10-10T06:00:00+00:00", "2026-10-24T06:00:00+00:00"],
+                         "HomeTeam": ["FC Tokyo X", "Tokyo Verdy X"], "AwayTeam": ["Kyoto", "Mito"],
+                         "HomeTeamScore": [1, 3], "AwayTeamScore": [0, 1]})
+    out = app._append_feed(df, feed, "JPN", "test")
+    new = out[out["Date"] == pd.Timestamp("2026-10-24")]
+    assert new.empty or new["HomeTeam"].iloc[0] != "FC Tokyo"

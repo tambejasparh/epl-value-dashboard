@@ -725,7 +725,9 @@ def _append_feed(df: pd.DataFrame, feed, league: str, source: str) -> pd.DataFra
     cur_teams = df.loc[df["Season"].astype(str) == current, ["HomeTeam", "AwayTeam"]]
     fd_names = set(cur_teams["HomeTeam"]) | set(cur_teams["AwayTeam"]) or \
         set(df["HomeTeam"]) | set(df["AwayTeam"])
-    names = match_club_names(set(newer["HomeTeam"]) | set(newer["AwayTeam"]), fd_names)
+    # match against the feed's FULL team list, so a similar name (FC Tokyo / Tokyo Verdy)
+    # can never be paired with the wrong club just because the other one is absent
+    names = match_club_names(set(feed["HomeTeam"]) | set(feed["AwayTeam"]), fd_names)
     newer = newer[newer["HomeTeam"].isin(names) & newer["AwayTeam"].isin(names)]
     if newer.empty:
         return df
