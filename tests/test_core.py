@@ -297,6 +297,11 @@ def test_full_app_runs_without_errors():
     assert not at.exception, [str(e) for e in at.exception]
     errors = [e.value for e in at.error if "Something went wrong" in str(e.value)]
     assert not errors, errors
+    # and the full app with every section (Under mode switched off)
+    at.toggle(key="under_mode").set_value(False).run()
+    assert not at.exception, [str(e) for e in at.exception]
+    errors = [e.value for e in at.error if "Something went wrong" in str(e.value)]
+    assert not errors, errors
 
 
 def test_extra_league_format_and_fixtures():
@@ -821,3 +826,24 @@ def test_passed_checks_survive_saving_and_reading():
     p = TMP / "chk.csv"
     log.to_csv(p, index=False)
     assert list(app.check_passed(pd.read_csv(p))) == [True, True, False, False]
+
+
+def test_under_mode_lists_only_80_percent_unders():
+    model = app._fit_model(LEAGUE_DATA["E0"], 400, 0.5)
+    fx = make_fixtures()
+    adv = app.match_advice(app.score_predictions(fx[fx["Div"] == "E0"], model),
+                           pd.DataFrame(), 100)
+    adv.insert(0, "Competition", "England - Premier League")
+    assert {"U45 %", "U55 %"} <= set(adv.columns)
+    adv["U45 %"] = [92.0, 70.0, 60.0][:len(adv)] + [60.0] * max(0, len(adv) - 3)
+    adv["U55 %"] = [97.0, 85.0, 75.0][:len(adv)] + [75.0] * max(0, len(adv) - 3)
+    adv["1xBet U4.5"], adv["1xBet U5.5"] = 1.15, 1.05
+    rows = pd.concat([g for _, g in app.under_picks_by_day(adv, "Africa/Douala")])
+    assert len(rows) == 2
+    assert set(rows["Bet"]) == {"Over/Under → Under 4.5", "Over/Under → Under 5.5"}
+    assert (rows["Chance %"] >= 80).all()
+    steps = app.under_ticket_steps(rows.sort_values("Chance %", ascending=False)
+                                   .assign(Rank=[1, 2]))
+    assert abs(steps["Ticket wins %"].iloc[-1] - 92 * 85 / 100) < 1e-6
+    assert abs(steps["Total odds (1xBet)"].iloc[-1] - 1.15 * 1.05) < 1e-9
+    assert "✅ BET:" in app.under_cards_html(rows)
