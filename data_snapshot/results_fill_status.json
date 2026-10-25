@@ -1,0 +1,155 @@
+{
+ "time": "2026-10-25 00:59 UTC",
+ "leagues": {
+  "SC2": {
+   "season": 2026,
+   "finished": 58,
+   "latest": "2026-10-24",
+   "errors": null
+  },
+  "SC1": {
+   "season": 2026,
+   "finished": 58,
+   "latest": "2026-10-24",
+   "errors": null
+  },
+  "SC0": {
+   "season": 2026,
+   "finished": 58,
+   "latest": "2026-10-24",
+   "errors": null
+  },
+  "EC": {
+   "season": 2026,
+   "finished": 165,
+   "latest": "2026-10-24",
+   "errors": null
+  },
+  "E0": {
+   "season": 2026,
+   "finished": 75,
+   "latest": "2026-10-24",
+   "errors": null
+  },
+  "E1": {
+   "season": 2026,
+   "finished": 144,
+   "latest": "2026-10-24",
+   "errors": null
+  },
+  "E3": {
+   "season": 2026,
+   "finished": 149,
+   "latest": "2026-10-24",
+   "errors": null
+  },
+  "E2": {
+   "season": 2026,
+   "finished": 138,
+   "latest": "2026-10-24",
+   "errors": null
+  },
+  "SC3": {
+   "season": 2026,
+   "finished": 55,
+   "latest": "2026-10-17",
+   "errors": null
+  },
+  "D2": {
+   "season": 2026,
+   "finished": 78,
+   "latest": "2026-10-24",
+   "errors": null
+  },
+  "D1": {
+   "season": 2026,
+   "finished": 61,
+   "latest": "2026-10-24",
+   "errors": null
+  },
+  "I2": {
+   "season": 2026,
+   "finished": 78,
+   "latest": "2026-10-24",
+   "errors": null
+  },
+  "I1": {
+   "season": 2026,
+   "finished": 75,
+   "latest": "2026-10-24",
+   "errors": null
+  },
+  "SP2": {
+   "season": 2026,
+   "finished": 116,
+   "latest": "2026-10-24",
+   "errors": null
+  },
+  "SP1": {
+   "season": 2026,
+   "finished": 94,
+   "latest": "2026-10-24",
+   "errors": null
+  },
+  "F1": {
+   "season": 2026,
+   "finished": 65,
+   "latest": "2026-10-24",
+   "errors": null
+  },
+  "RUS": {
+   "season": 2026,
+   "finished": 93,
+   "latest": "2026-10-24",
+   "errors": null
+  },
+  "JPN": {
+   "season": 2027,
+   "finished": 115,
+   "latest": "2026-10-24",
+   "errors": null
+  },
+  "CHN": {
+   "season": 2026,
+   "finished": 232,
+   "latest": "2026-10-24",
+   "errors": null
+  },
+  "F2": {
+   "season": 2026,
+   "finished": 88,
+   "latest": "2026-10-24",
+   "errors": null
+  },
+  "N1": {
+   "season": 2026,
+   "finished": 85,
+   "latest": "2026-10-24",
+   "errors": null
+  },
+  "B1": {
+   "season": 2026,
+   "finished": 76,
+   "latest": "2026-10-24",
+   "errors": null
+  },
+  "G1": {
+   "season": 2026,
+   "finished": 51,
+   "latest": "2026-10-24",
+   "errors": null
+  },
+  "P1": {
+   "season": 2026,
+   "finished": 76,
+   "latest": "2026-10-24",
+   "errors": null
+  },
+  "T1": {
+   "season": 2026,
+   "finished": 76,
+   "latest": "2026-10-24",
+   "errors": null
+  }
+ }
+}
