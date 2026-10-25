@@ -1,8 +1,7 @@
 {
- "time": "2026-10-25 01:14 UTC",
+ "time": "2026-10-25 09:42 UTC",
  "key_present": true,
  "leagues_found": {
-  "JPN": "J1 League (Japan)",
   "RUS": "Premier League (Russia)",
   "N1": "Eredivisie (Netherlands)",
   "I1": "Serie A (Italy)",
@@ -25,15 +24,15 @@
   "E2": "League One (England)",
   "EC": "National League (England)"
  },
- "fixtures": 114,
- "injured": 337,
- "players_fetched": 0,
- "requests_used": 8,
- "result": "337 missing players across 114 fixtures",
- "odds_time": "2026-10-25 01:14 UTC",
- "odds_calls": 97,
- "odds_rows": 10712,
- "odds_fixtures": 88,
+ "fixtures": 109,
+ "injured": 339,
+ "players_fetched": 13,
+ "requests_used": 21,
+ "result": "339 missing players across 109 fixtures",
+ "odds_time": "2026-10-25 09:42 UTC",
+ "odds_calls": 92,
+ "odds_rows": 10325,
+ "odds_fixtures": 83,
  "books_seen": [
   "1xBet",
   "Bet365",
@@ -87,6 +86,6 @@
   "Total - Home",
   "Total Corners (1st Half)"
  ],
- "my_book_fixtures": 88,
- "odds_result": "prices for 88 fixtures"
+ "my_book_fixtures": 83,
+ "odds_result": "prices for 83 fixtures"
 }

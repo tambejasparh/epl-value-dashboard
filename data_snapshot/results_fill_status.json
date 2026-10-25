@@ -1,5 +1,5 @@
 {
- "time": "2026-10-25 01:15 UTC",
+ "time": "2026-10-25 09:42 UTC",
  "leagues": {
   "SC2": {
    "season": 2026,
@@ -85,70 +85,6 @@
     "Tottenham"
    ]
   },
-  "EC": {
-   "season": 2026,
-   "finished": 165,
-   "latest": "2026-10-24",
-   "errors": null,
-   "teams": [
-    "AFC Fylde",
-    "AFC Hornchurch",
-    "Aldershot Town",
-    "Altrincham",
-    "Barrow",
-    "Boreham Wood",
-    "Boston United",
-    "Carlisle",
-    "Eastleigh",
-    "FC Halifax Town",
-    "Forest Green",
-    "Gateshead",
-    "Harrogate Town",
-    "Hartlepool",
-    "Kidderminster Harriers",
-    "Scunthorpe",
-    "Solihull Moors",
-    "Southend",
-    "Sutton Utd",
-    "Tamworth",
-    "Wealdstone",
-    "Woking",
-    "Worthing",
-    "Yeovil Town"
-   ]
-  },
-  "E3": {
-   "season": 2026,
-   "finished": 149,
-   "latest": "2026-10-24",
-   "errors": null,
-   "teams": [
-    "Accrington ST",
-    "Barnet",
-    "Bristol Rovers",
-    "Cheltenham",
-    "Chesterfield",
-    "Colchester",
-    "Crawley Town",
-    "Crewe",
-    "Exeter City",
-    "Fleetwood Town",
-    "Gillingham",
-    "Grimsby",
-    "Newport County",
-    "Northampton",
-    "Oldham",
-    "Port Vale",
-    "Rochdale",
-    "Rotherham",
-    "Salford City",
-    "Shrewsbury",
-    "Swindon Town",
-    "Tranmere",
-    "Walsall",
-    "York"
-   ]
-  },
   "E2": {
    "season": 2026,
    "finished": 138,
@@ -179,6 +115,38 @@
     "Stockport County",
     "Wigan",
     "Wycombe"
+   ]
+  },
+  "EC": {
+   "season": 2026,
+   "finished": 165,
+   "latest": "2026-10-24",
+   "errors": null,
+   "teams": [
+    "AFC Fylde",
+    "AFC Hornchurch",
+    "Aldershot Town",
+    "Altrincham",
+    "Barrow",
+    "Boreham Wood",
+    "Boston United",
+    "Carlisle",
+    "Eastleigh",
+    "FC Halifax Town",
+    "Forest Green",
+    "Gateshead",
+    "Harrogate Town",
+    "Hartlepool",
+    "Kidderminster Harriers",
+    "Scunthorpe",
+    "Solihull Moors",
+    "Southend",
+    "Sutton Utd",
+    "Tamworth",
+    "Wealdstone",
+    "Woking",
+    "Worthing",
+    "Yeovil Town"
    ]
   },
   "E1": {
@@ -213,6 +181,38 @@
     "Wrexham"
    ]
   },
+  "E3": {
+   "season": 2026,
+   "finished": 149,
+   "latest": "2026-10-24",
+   "errors": null,
+   "teams": [
+    "Accrington ST",
+    "Barnet",
+    "Bristol Rovers",
+    "Cheltenham",
+    "Chesterfield",
+    "Colchester",
+    "Crawley Town",
+    "Crewe",
+    "Exeter City",
+    "Fleetwood Town",
+    "Gillingham",
+    "Grimsby",
+    "Newport County",
+    "Northampton",
+    "Oldham",
+    "Port Vale",
+    "Rochdale",
+    "Rotherham",
+    "Salford City",
+    "Shrewsbury",
+    "Swindon Town",
+    "Tranmere",
+    "Walsall",
+    "York"
+   ]
+  },
   "SC3": {
    "season": 2026,
    "finished": 55,
@@ -229,6 +229,32 @@
     "Spartans",
     "Stirling Albion",
     "Stranraer"
+   ]
+  },
+  "D1": {
+   "season": 2026,
+   "finished": 61,
+   "latest": "2026-10-24",
+   "errors": null,
+   "teams": [
+    "1. FC K\u00f6ln",
+    "1899 Hoffenheim",
+    "Bayer Leverkusen",
+    "Bayern M\u00fcnchen",
+    "Borussia Dortmund",
+    "Borussia M\u00f6nchengladbach",
+    "Eintracht Frankfurt",
+    "FC Augsburg",
+    "FC Schalke 04",
+    "FSV Mainz 05",
+    "Hamburger SV",
+    "RB Leipzig",
+    "SC Freiburg",
+    "SC Paderborn 07",
+    "SV Elversberg",
+    "Union Berlin",
+    "VfB Stuttgart",
+    "Werder Bremen"
    ]
   },
   "D2": {
@@ -283,32 +309,6 @@
     "Sudtirol",
     "Vicenza Virtus",
     "Virtus Entella"
-   ]
-  },
-  "D1": {
-   "season": 2026,
-   "finished": 61,
-   "latest": "2026-10-24",
-   "errors": null,
-   "teams": [
-    "1. FC K\u00f6ln",
-    "1899 Hoffenheim",
-    "Bayer Leverkusen",
-    "Bayern M\u00fcnchen",
-    "Borussia Dortmund",
-    "Borussia M\u00f6nchengladbach",
-    "Eintracht Frankfurt",
-    "FC Augsburg",
-    "FC Schalke 04",
-    "FSV Mainz 05",
-    "Hamburger SV",
-    "RB Leipzig",
-    "SC Freiburg",
-    "SC Paderborn 07",
-    "SV Elversberg",
-    "Union Berlin",
-    "VfB Stuttgart",
-    "Werder Bremen"
    ]
   },
   "I1": {
@@ -369,6 +369,32 @@
     "Valladolid"
    ]
   },
+  "F1": {
+   "season": 2026,
+   "finished": 65,
+   "latest": "2026-10-24",
+   "errors": null,
+   "teams": [
+    "Angers",
+    "Auxerre",
+    "Estac Troyes",
+    "Le Havre",
+    "Le Mans",
+    "Lens",
+    "Lille",
+    "Lorient",
+    "Lyon",
+    "Marseille",
+    "Monaco",
+    "Nice",
+    "Paris FC",
+    "Paris Saint Germain",
+    "Rennes",
+    "Stade Brestois 29",
+    "Strasbourg",
+    "Toulouse"
+   ]
+  },
   "SP1": {
    "season": 2026,
    "finished": 94,
@@ -397,30 +423,32 @@
     "Villarreal"
    ]
   },
-  "F1": {
-   "season": 2026,
-   "finished": 65,
-   "latest": "2026-10-24",
+  "JPN": {
+   "season": 2027,
+   "finished": 120,
+   "latest": "2026-10-25",
    "errors": null,
    "teams": [
-    "Angers",
-    "Auxerre",
-    "Estac Troyes",
-    "Le Havre",
-    "Le Mans",
-    "Lens",
-    "Lille",
-    "Lorient",
-    "Lyon",
-    "Marseille",
-    "Monaco",
-    "Nice",
-    "Paris FC",
-    "Paris Saint Germain",
-    "Rennes",
-    "Stade Brestois 29",
-    "Strasbourg",
-    "Toulouse"
+    "Avispa Fukuoka",
+    "Cerezo Osaka",
+    "FC Tokyo",
+    "Fagiano Okayama",
+    "Gamba Osaka",
+    "JEF United Chiba",
+    "Kashima",
+    "Kashiwa Reysol",
+    "Kawasaki Frontale",
+    "Kyoto Sanga",
+    "Machida Zelvia",
+    "Mito Hollyhock",
+    "Nagoya Grampus",
+    "Sanfrecce Hiroshima",
+    "Shimizu S-pulse",
+    "Tokyo Verdy",
+    "Urawa",
+    "V-varen Nagasaki",
+    "Vissel Kobe",
+    "Yokohama F. Marinos"
    ]
   },
   "RUS": {
@@ -445,34 +473,6 @@
     "Rubin",
     "Spartak Moscow",
     "Zenit"
-   ]
-  },
-  "JPN": {
-   "season": 2027,
-   "finished": 115,
-   "latest": "2026-10-24",
-   "errors": null,
-   "teams": [
-    "Avispa Fukuoka",
-    "Cerezo Osaka",
-    "FC Tokyo",
-    "Fagiano Okayama",
-    "Gamba Osaka",
-    "JEF United Chiba",
-    "Kashima",
-    "Kashiwa Reysol",
-    "Kawasaki Frontale",
-    "Kyoto Sanga",
-    "Machida Zelvia",
-    "Mito Hollyhock",
-    "Nagoya Grampus",
-    "Sanfrecce Hiroshima",
-    "Shimizu S-pulse",
-    "Tokyo Verdy",
-    "Urawa",
-    "V-varen Nagasaki",
-    "Vissel Kobe",
-    "Yokohama F. Marinos"
    ]
   },
   "F2": {
@@ -577,6 +577,32 @@
     "Willem II"
    ]
   },
+  "T1": {
+   "season": 2026,
+   "finished": 76,
+   "latest": "2026-10-24",
+   "errors": null,
+   "teams": [
+    "Alanyaspor",
+    "Amed",
+    "Ba\u015fak\u015fehir",
+    "Be\u015fikta\u015f",
+    "Erzurumspor FK",
+    "Ey\u00fcpspor",
+    "Fenerbah\u00e7e",
+    "Galatasaray",
+    "Gaziantep FK",
+    "Gen\u00e7lerbirli\u011fi S.K.",
+    "G\u00f6ztepe",
+    "Kas\u0131mpa\u015fa",
+    "Kocaelispor",
+    "Konyaspor",
+    "Rizespor",
+    "Samsunspor",
+    "Trabzonspor",
+    "\u00c7orum FK"
+   ]
+  },
   "G1": {
    "season": 2026,
    "finished": 51,
@@ -623,32 +649,6 @@
     "Santa Clara",
     "Sporting CP",
     "Vit\u00f3ria SC"
-   ]
-  },
-  "T1": {
-   "season": 2026,
-   "finished": 76,
-   "latest": "2026-10-24",
-   "errors": null,
-   "teams": [
-    "Alanyaspor",
-    "Amed",
-    "Ba\u015fak\u015fehir",
-    "Be\u015fikta\u015f",
-    "Erzurumspor FK",
-    "Ey\u00fcpspor",
-    "Fenerbah\u00e7e",
-    "Galatasaray",
-    "Gaziantep FK",
-    "Gen\u00e7lerbirli\u011fi S.K.",
-    "G\u00f6ztepe",
-    "Kas\u0131mpa\u015fa",
-    "Kocaelispor",
-    "Konyaspor",
-    "Rizespor",
-    "Samsunspor",
-    "Trabzonspor",
-    "\u00c7orum FK"
    ]
   }
  }
