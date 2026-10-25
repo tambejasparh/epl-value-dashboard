@@ -1467,9 +1467,10 @@ def score_predictions(window: pd.DataFrame, model: dict,
             "Pick key": bp["key"], "Missing players": missing,
             "Key out H": key_h, "Key out A": key_a, "Odds used": has_odds,
             **dict(zip(("1xBet odds", "Best odds"), book_prices(fx, book_odds, bp["key"]))),
-            "U45 %": q_["U45"] * 100, "U55 %": q_["U55"] * 100,
+            "U45 %": q_["U45"] * 100, "U55 %": q_["U55"] * 100, "U65 %": q_["U65"] * 100,
             "1xBet U4.5": book_prices(fx, book_odds, "U45")[0],
             "1xBet U5.5": book_prices(fx, book_odds, "U55")[0],
+            "1xBet U6.5": book_prices(fx, book_odds, "U65")[0],
             "Ticket legs": ticket_legs_json(q_, book_prices_all(fx, book_odds)),
             "Predicted score": pred,
             "Top 5 scores": ", ".join(f"{sc} ({pr*100:.0f}%)" for sc, pr in top_scores(m)),
@@ -1772,7 +1773,8 @@ def pick_record_lines(sm: dict) -> list:
 def short_bet(k: str, home: str, away: str) -> str:
     """What to select on the betting site, in its own words."""
     goals = {"O15": "Over 1.5", "U15": "Under 1.5", "O25": "Over 2.5", "U25": "Under 2.5",
-             "O35": "Over 3.5", "U35": "Under 3.5", "U45": "Under 4.5", "U55": "Under 5.5"}
+             "O35": "Over 3.5", "U35": "Under 3.5", "U45": "Under 4.5", "U55": "Under 5.5",
+             "U65": "Under 6.5"}
     if k in goals:
         return f"Over/Under (total goals) → {goals[k]}"
     return {"H": f"1X2 → 1 ({home} wins)", "D": "1X2 → X (draw)",
@@ -2013,27 +2015,42 @@ def all_matches_cards_html(g: pd.DataFrame) -> str:
     return "".join(cards)
 
 
-UNDER_MIN_P = 80.0
+# The Under rule, in order of preference (a lower line pays more):
+# Under 4.5 only when it has 95%+ chance; otherwise Under 5.5, then Under 6.5, at 85%+.
+UNDER_RULE = [("U45", 95.0), ("U55", 85.0), ("U65", 85.0)]
+UNDER_MIN = dict(UNDER_RULE)
+UNDER_NAME = {"U45": "Under 4.5", "U55": "Under 5.5", "U65": "Under 6.5"}
+UNDER_PRICE_COL = {"U45": "1xBet U4.5", "U55": "1xBet U5.5", "U65": "1xBet U6.5"}
+UNDER_RULE_TEXT = "Under 4.5 at 95%+, otherwise Under 5.5 or Under 6.5 at 85%+"
 
 
-def under_picks_by_day(adv: pd.DataFrame, tz: str, min_p: float = UNDER_MIN_P) -> list:
-    """[(day, DataFrame)] - every upcoming match where Under 4.5 (preferred: it
-    pays more) or else Under 5.5 has at least min_p % chance, safest first."""
+def under_choice(probs: dict) -> str | None:
+    """The bet the Under rule picks for one match ({key: chance %}), or None."""
+    for k, mn in UNDER_RULE:
+        p = probs.get(k, np.nan)
+        if p is not None and pd.notna(p) and float(p) >= mn - 1e-9:
+            return k
+    return None
+
+
+def under_picks_by_day(adv: pd.DataFrame, tz: str) -> list:
+    """[(day, DataFrame)] - every upcoming match where the Under rule finds a bet,
+    safest first."""
     if adv is None or adv.empty or "U45 %" not in adv.columns:
         return []
     d = add_local_time(adv, tz)
     d = d[pd.to_datetime(d["Kickoff UTC"], utc=True) > pd.Timestamp.now(tz="UTC")].copy()
     if d.empty:
         return []
-    use45 = d["U45 %"] >= min_p
-    use55 = ~use45 & (d["U55 %"] >= min_p)
-    d = d[use45 | use55].copy()
+    d["_k"] = [under_choice({k: r.get(f"{k} %", np.nan) for k in UNDER_MIN})
+               for _, r in d.iterrows()]
+    d = d[d["_k"].notna()].copy()
     if d.empty:
         return []
-    is45 = d["U45 %"] >= min_p
-    d["Bet"] = np.where(is45, "Over/Under → Under 4.5", "Over/Under → Under 5.5")
-    d["Chance %"] = np.where(is45, d["U45 %"], d["U55 %"])
-    d["1xBet odds"] = np.where(is45, d.get("1xBet U4.5", np.nan), d.get("1xBet U5.5", np.nan))
+    d["Bet"] = d["_k"].map(lambda k: f"Over/Under → {UNDER_NAME[k]}")
+    d["Chance %"] = [float(r[f"{r['_k']} %"]) for _, r in d.iterrows()]
+    d["1xBet odds"] = [r.get(UNDER_PRICE_COL[r["_k"]], np.nan) for _, r in d.iterrows()]
+    d["1xBet odds"] = pd.to_numeric(d["1xBet odds"], errors="coerce")
     d["Fair min odds"] = (100 / d["Chance %"]) * (1 + DEFAULTS["min_edge"] / 100)
     d["Value"] = np.where(pd.isna(d["1xBet odds"]), "",
                           np.where(d["1xBet odds"] >= d["Fair min odds"] - 1e-9, "💚", ""))
@@ -2080,9 +2097,8 @@ def under_cards_html(g: pd.DataFrame) -> str:
 
 
 # ---------------------------------------------------------------- ready-made tickets
-TICKET_KEYS = ["U45", "U55"]      # the Under rule: only Under 4.5 / Under 5.5
+TICKET_KEYS = [k for k, _ in UNDER_RULE]   # the Under rule only
 TICKET_TARGETS = (3, 5, 7, 10, 12, 15, 20)
-TICKET_MIN_LEG_P = UNDER_MIN_P / 100   # the Under rule: every bet 80%+ chance
 TICKET_MIN_PRICE = 1.02        # prices below this add nothing
 TICKET_OVER = 1.35             # total odds may go up to target x 1.35
 TICKET_STEP = 0.001            # log-odds grid of the optimiser
@@ -2103,13 +2119,12 @@ def ticket_candidates(adv: pd.DataFrame, tz: str) -> list:
             legs = []
         home, away = (str(r["Match"]).split(" v ", 1) + [""])[:2]
         for k, p, price in legs:
-            if k not in TICKET_KEYS or p < TICKET_MIN_LEG_P - 1e-9 or price < TICKET_MIN_PRICE:
+            if k not in UNDER_MIN or 100 * p < UNDER_MIN[k] - 1e-9 or price < TICKET_MIN_PRICE:
                 continue
             rows.append({"_m": i, "_day": r["_day"], "Kickoff UTC": r["Kickoff UTC"],
                          "Time": r["Time"], "Competition": r["Competition"],
                          "Match": r["Match"], "Key": k,
-                         "Bet": {"U45": "Under 4.5 goals", "U55": "Under 5.5 goals"}.get(
-                             k, short_bet(k, home, away)),
+                         "Bet": f"{UNDER_NAME[k]} goals",
                          "Chance %": 100 * p, "1xBet odds": price})
     if not rows:
         return []
@@ -2194,13 +2209,13 @@ def ticket_cards_html(t: pd.DataFrame) -> str:
 
 def render_tickets_section(adv: pd.DataFrame, tz: str):
     st.markdown("#### 🎟️ Ready-made tickets — choose your odds")
-    st.caption("Built only with the Under rule: every line is Under 4.5 or Under 5.5 goals "
-               "with an 80%+ chance, at 1xBet's real price, one bet per match, from matches "
+    st.caption("Built only with your Under rule: Under 4.5 at 95%+ chance, otherwise "
+               "Under 5.5 or Under 6.5 at 85%+, at 1xBet's real price, one bet per match, from matches "
                "that have not started. For each odds size the system picks the combination "
                "with the HIGHEST chance that every line wins.")
     days = ticket_candidates(adv, tz)
     if not days:
-        st.info("No Under 4.5 / 5.5 bets with 80%+ chance and a 1xBet price yet. Tickets "
+        st.info(f"No bets that fit the Under rule ({UNDER_RULE_TEXT}) with a 1xBet price yet. Tickets "
                 "appear as soon as prices are collected (four times a day).")
         return
     c1, c2 = st.columns(2)
@@ -2211,7 +2226,7 @@ def render_tickets_section(adv: pd.DataFrame, tz: str):
     tickets = _cached_tickets(dict(days)[day], TICKET_TARGETS)
     t = tickets[target] if target in tickets else build_ticket(dict(days)[day], target)
     if t is None:
-        st.warning(f"Not enough 80%+ Under bets with 1xBet prices on this day to reach "
+        st.warning(f"Not enough Under-rule bets with 1xBet prices on this day to reach "
                    f"{target} odds. Try a smaller ticket or another day.")
     else:
         odds, chance = ticket_totals(t)
@@ -2247,7 +2262,7 @@ def tickets_markdown(adv: pd.DataFrame, tz: str) -> list:
         return []
     day, cands = days[0]
     lines = [f"## 🎟️ Ready-made tickets — {pd.Timestamp(day):%A %d %B}", "",
-             "_Only Under 4.5 / Under 5.5 with 80%+ chance, one per match, 1xBet prices, highest ticket chance._", ""]
+             f"_Only {UNDER_RULE_TEXT}; one per match, 1xBet prices, highest ticket chance._", ""]
     for tg, t in tickets_for_day(cands).items():
         if t is None:
             lines += [f"**{tg} odds:** not enough safe bets today", ""]
@@ -2260,35 +2275,37 @@ def tickets_markdown(adv: pd.DataFrame, tz: str) -> list:
     return lines
 
 
-def under_verdict(p45: float, p55: float, price45=np.nan, price55=np.nan,
-                  min_p: float = UNDER_MIN_P) -> dict:
-    """The Under rule for one match. p45/p55 in %. Under 4.5 is preferred (it pays
-    more); Under 5.5 only when Under 4.5 is below min_p."""
-    def one(p, price):
+def under_verdict(probs: dict, prices: dict | None = None) -> dict:
+    """The Under rule for one match. probs/prices: {"U45": %, "U55": %, "U65": %}.
+    Returns each line's chance, rule threshold, pass/fail, fair minimum odds,
+    price check, and the bet the rule picks ("bet": key or None)."""
+    prices = prices or {}
+    out = {}
+    for k, mn in UNDER_RULE:
+        p = float(probs.get(k, np.nan))
+        price = prices.get(k, np.nan)
         fair = (100 / p) * (1 + DEFAULTS["min_edge"] / 100) if p > 0 else np.inf
-        ok = p >= min_p - 1e-9
         known = price is not None and pd.notna(price) and float(price) > 1
-        return {"p": p, "ok": ok, "fair": fair, "price": float(price) if known else np.nan,
-                "good_price": (float(price) >= fair - 1e-9) if known else None}
-    u45, u55 = one(p45, price45), one(p55, price55)
-    bet = "U45" if u45["ok"] else ("U55" if u55["ok"] else None)
-    return {"U45": u45, "U55": u55, "bet": bet}
+        out[k] = {"p": p, "min": mn, "ok": p >= mn - 1e-9, "fair": fair,
+                  "price": float(price) if known else np.nan,
+                  "good_price": (float(price) >= fair - 1e-9) if known else None}
+    out["bet"] = under_choice(probs)
+    return out
 
 
 def render_under_calculator(directory: dict, all_models: dict, uefa_model, intl_model,
                             fixtures, book, min_edge, max_edge, bankroll, allow_all,
                             week_adv: pd.DataFrame | None = None, tz: str = DEFAULTS["timezone"]):
-    st.markdown("#### 🧮 Under 4.5 / 5.5 calculator")
+    st.markdown("#### 🧮 Under 4.5 / 5.5 / 6.5 calculator")
     with st.form("under_calc_form", border=False):
         c1, c2 = st.columns(2)
         home_q = c1.text_input("Home team", key="uc_home", placeholder="e.g. Lecce")
         away_q = c2.text_input("Away team", key="uc_away", placeholder="e.g. Juventus")
-        c3, c4, c5 = st.columns([2, 2, 1])
-        my45 = c3.number_input("1xBet odds for Under 4.5 (optional)", min_value=0.0,
-                               max_value=20.0, value=0.0, step=0.01, key="uc_o45")
-        my55 = c4.number_input("1xBet odds for Under 5.5 (optional)", min_value=0.0,
-                               max_value=20.0, value=0.0, step=0.01, key="uc_o55")
-        neutral = c5.toggle("Neutral venue", key="uc_neutral")
+        c3, c4, c5 = st.columns(3)
+        my = {k: col.number_input(f"1xBet odds {UNDER_NAME[k]} (optional)", min_value=0.0,
+                                  max_value=20.0, value=0.0, step=0.01, key=f"uc_o{k[1:]}")
+              for k, col in zip(("U45", "U55", "U65"), (c3, c4, c5))}
+        neutral = st.toggle("Neutral venue", key="uc_neutral")
         st.form_submit_button("🧮 Calculate", type="primary")
     if not (home_q and away_q):
         st.caption("Type any two teams (25 leagues, UEFA cups or national teams) and press "
@@ -2317,26 +2334,27 @@ def render_under_calculator(directory: dict, all_models: dict, uefa_model, intl_
     lh_, la_, m, p = predict(model, res["mh"], res["ma"], neutral=neutral)
     pp_, used_odds = pick_probs(m, model["rho"], res.get("odds") or {})
     q_ = shrink_probs(pp_, model.get("pick_shrink", 1.0))
-    p45, p55 = q_["U45"] * 100, q_["U55"] * 100
-    price45, price55 = (my45 if my45 > 1 else np.nan), (my55 if my55 > 1 else np.nan)
+    probs = {k: q_[k] * 100 for k in UNDER_MIN}
+    prices = {k: (v_ if v_ > 1 else np.nan) for k, v_ in my.items()}
     source = "model" + (" + bookmaker odds" if used_odds else "")
     # In this week's list? Use the system's numbers (missing players + 1xBet prices).
     if week_adv is not None and not week_adv.empty and "U45 %" in week_adv.columns:
         hit = week_adv[week_adv["Match"].isin({f"{res['mh']} v {res['ma']}", f"{home} v {away}"})]
         if not hit.empty:
             r = add_local_time(hit, tz).iloc[0]
-            p45, p55 = float(r["U45 %"]), float(r["U55 %"])
-            if pd.isna(price45):
-                price45 = r.get("1xBet U4.5", np.nan)
-            if pd.isna(price55):
-                price55 = r.get("1xBet U5.5", np.nan)
+            for k in UNDER_MIN:
+                if pd.notna(r.get(f"{k} %", np.nan)):
+                    probs[k] = float(r[f"{k} %"])
+                if pd.isna(prices[k]):
+                    prices[k] = r.get(UNDER_PRICE_COL[k], np.nan)
             source = "model + bookmaker odds + missing players"
             st.caption(f"📅 {home} v {away} is on {r['Day']} at {r['Time']} ({r['Competition']}).")
-    v = under_verdict(p45, p55, price45, price55)
+    v = under_verdict(probs, prices)
     st.markdown(f"**{home} v {away}** — expected goals {lh_ + la_:.1f} "
                 f"({lh_:.1f} - {la_:.1f}) · {source}")
     for k, label, total in (("U45", "Under 4.5", "4 goals or fewer"),
-                            ("U55", "Under 5.5", "5 goals or fewer")):
+                            ("U55", "Under 5.5", "5 goals or fewer"),
+                            ("U65", "Under 6.5", "6 goals or fewer")):
         x = v[k]
         price_txt = ""
         if pd.notna(x["price"]):
@@ -2346,28 +2364,33 @@ def render_under_calculator(directory: dict, all_models: dict, uefa_model, intl_
                 f"{x['fair']:.2f}{price_txt}")
         (st.success if x["ok"] else st.error)(
             ("✅ " if x["ok"] else "❌ ") + line
-            + ("" if x["ok"] else f" — below your {UNDER_MIN_P:.0f}% rule"))
+            + ("" if x["ok"] else f" — below the {x['min']:.0f}% needed"))
     if v["bet"] == "U45":
-        st.success("🎯 **Verdict: BET Under 4.5** - it passes the 80% rule and pays more than Under 5.5.")
+        st.success("🎯 **Verdict: BET Under 4.5** - it reaches 95%+ and pays the most.")
     elif v["bet"] == "U55":
-        st.warning("🎯 **Verdict: BET Under 5.5 only** - Under 4.5 is below 80%, Under 5.5 passes.")
+        st.warning("🎯 **Verdict: BET Under 5.5** - Under 4.5 is below 95%, Under 5.5 reaches 85%+.")
+    elif v["bet"] == "U65":
+        st.warning("🎯 **Verdict: BET Under 6.5** - Under 4.5 is below 95% and Under 5.5 below "
+                   "85%, Under 6.5 reaches 85%+.")
     else:
-        st.error("🎯 **Verdict: SKIP this match** - neither Under 4.5 nor Under 5.5 reaches 80%.")
+        st.error("🎯 **Verdict: SKIP this match** - Under 4.5 is below 95% and Under 5.5 / "
+                 "Under 6.5 are below 85%.")
     if v["bet"] and v[v["bet"]]["good_price"] is False:
         st.caption("The chance is fine, but 1xBet pays less than the fair minimum - it still "
                    "fits your rule, it just pays a little less than it should.")
 
 
 def render_under_section(adv: pd.DataFrame, tz: str):
-    st.markdown("#### 🟢 Under 4.5 / Under 5.5 — matches with 80%+ chance")
-    st.caption("Every match of the day where 'Under 4.5 goals' (or, if that is below 80%, "
-               "'Under 5.5 goals') has at least an 80% chance, safest first. Under 4.5 = the "
-               "match ends with 4 goals or fewer in total; Under 5.5 = 5 goals or fewer. "
+    st.markdown("#### 🟢 Under picks — Under 4.5 at 95%+, Under 5.5 / 6.5 at 85%+")
+    st.caption("Every match of the day that fits your Under rule, safest first: Under 4.5 "
+               "only when it has a 95%+ chance; otherwise Under 5.5, or else Under 6.5, with "
+               "an 85%+ chance. Under 4.5 = 4 goals or fewer in total; Under 5.5 = 5 or "
+               "fewer; Under 6.5 = 6 or fewer. "
                "💚 = 1xBet pays at least the fair minimum. The more matches on one ticket, "
                "the lower the chance that ALL win - see the ticket table.")
     days = under_picks_by_day(adv, tz)
     if not days:
-        st.info("No matches with an 80%+ Under bet yet. The list updates four times a day.")
+        st.info("No matches fit the Under rule yet. The list updates four times a day.")
         return
     labels = {day: f"{pd.Timestamp(day):%A %d %B} — {len(g)} matches" for day, g in days}
     day = st.selectbox("Day", [d_ for d_, _ in days], format_func=labels.get, key="under_day")
@@ -2489,7 +2512,7 @@ def write_predictions_md(adv: pd.DataFrame, flags: pd.DataFrame, path: Path,
         lines += tickets_markdown(adv, tz)
         udays = under_picks_by_day(adv, tz)
         if udays:
-            lines += ["## 🟢 Under 4.5 / Under 5.5 — matches with 80%+ chance", "",
+            lines += ["## 🟢 Under picks — Under 4.5 at 95%+, Under 5.5 / 6.5 at 85%+", "",
                       "_Safest first. 💚 = 1xBet pays at least the fair minimum._", ""]
             for day, g in udays:
                 lines += [f"### {pd.Timestamp(day):%A %d %B} ({len(g)} matches)", ""]
@@ -3121,7 +3144,8 @@ AF_BET_MAP = {
     "Double Chance": {"Home/Draw": "1X", "Draw/Away": "X2", "Home/Away": "12"},
     "Goals Over/Under": {"Over 1.5": "O15", "Under 1.5": "U15", "Over 2.5": "O25",
                          "Under 2.5": "U25", "Over 3.5": "O35", "Under 3.5": "U35",
-                         "Under 4.5": "U45", "Under 5.5": "U55", "Over 0.5": "O05"},
+                         "Under 4.5": "U45", "Under 5.5": "U55", "Under 6.5": "U65",
+                         "Over 0.5": "O05"},
     "Total - Home": {"Over 0.5": "HS"},
     "Total - Away": {"Over 0.5": "AS"},
     "Both Teams Score": {"Yes": "BTTS_Y", "No": "BTTS_N"},
@@ -3397,9 +3421,10 @@ def cup_predictions(fixtures: pd.DataFrame, model: dict, code_col: str = "Comp",
             "Pick key": bp["key"], "Missing players": missing,
             "Key out H": key_h, "Key out A": key_a, "Odds used": has_odds,
             **dict(zip(("1xBet odds", "Best odds"), book_prices(fx, book_odds, bp["key"]))),
-            "U45 %": q_["U45"] * 100, "U55 %": q_["U55"] * 100,
+            "U45 %": q_["U45"] * 100, "U55 %": q_["U55"] * 100, "U65 %": q_["U65"] * 100,
             "1xBet U4.5": book_prices(fx, book_odds, "U45")[0],
             "1xBet U5.5": book_prices(fx, book_odds, "U55")[0],
+            "1xBet U6.5": book_prices(fx, book_odds, "U65")[0],
             "Ticket legs": ticket_legs_json(q_, book_prices_all(fx, book_odds)),
             "Predicted score": pred,
             "Top 5 scores": ", ".join(f"{sc} ({pr*100:.0f}%)" for sc, pr in top_scores(m)),
@@ -4544,10 +4569,10 @@ def main():
         st.session_state["phone_layout"] = is_phone_browser()
 
     # ---------------- Sidebar: global settings ----------------
-    st.sidebar.toggle("🟢 Under 4.5 / 5.5 mode (show only these picks)", value=True,
+    st.sidebar.toggle("🟢 Under mode (show only Under picks)", value=True,
                       key="under_mode",
-                      help="On: the app shows only matches where Under 4.5 / Under 5.5 has "
-                           "an 80%+ chance. Off: the full app with every section.")
+                      help="On: the app shows only the Under picks (Under 4.5 at 95%+, "
+                           "Under 5.5 / 6.5 at 85%+). Off: the full app with every section.")
     st.sidebar.toggle("📱 Phone layout (match cards)", key="phone_layout",
                       help="Shows each match as a card instead of a wide table. "
                            "Switched on automatically on phones.")
@@ -4728,7 +4753,7 @@ def main():
     if st.session_state.get("under_mode", True):
         with safe_section("Under picks"):
             render_under_section(week_adv, tz)
-        st.caption("Switch off '🟢 Under 4.5 / 5.5 mode' in the side menu (☰ / ›) to see "
+        st.caption("Switch off '🟢 Under mode' in the side menu (☰ / ›) to see "
                    "all other sections.")
         with st.expander("🛡️ Rules for low-odds betting", expanded=False):
             st.markdown(SAFE_RULES)
