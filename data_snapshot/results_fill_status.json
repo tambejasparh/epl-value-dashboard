@@ -1,5 +1,5 @@
 {
- "time": "2026-10-26 15:39 UTC",
+ "time": "2026-10-26 19:03 UTC",
  "leagues": {
   "SC2": {
    "season": 2026,
@@ -37,26 +37,6 @@
     "Stenhousemuir"
    ]
   },
-  "SC0": {
-   "season": 2026,
-   "finished": 60,
-   "latest": "2026-10-25",
-   "errors": null,
-   "teams": [
-    "Aberdeen",
-    "Celtic",
-    "Dundee",
-    "Dundee Utd",
-    "Falkirk",
-    "Heart Of Midlothian",
-    "Hibernian",
-    "Kilmarnock",
-    "Motherwell",
-    "Rangers",
-    "ST Johnstone",
-    "ST Mirren"
-   ]
-  },
   "EC": {
    "season": 2026,
    "finished": 165,
@@ -89,32 +69,24 @@
     "Yeovil Town"
    ]
   },
-  "E0": {
+  "SC0": {
    "season": 2026,
-   "finished": 80,
+   "finished": 60,
    "latest": "2026-10-25",
    "errors": null,
    "teams": [
-    "Arsenal",
-    "Aston Villa",
-    "Bournemouth",
-    "Brentford",
-    "Brighton",
-    "Chelsea",
-    "Coventry",
-    "Crystal Palace",
-    "Everton",
-    "Fulham",
-    "Hull City",
-    "Ipswich",
-    "Leeds",
-    "Liverpool",
-    "Manchester City",
-    "Manchester United",
-    "Newcastle",
-    "Nottingham Forest",
-    "Sunderland",
-    "Tottenham"
+    "Aberdeen",
+    "Celtic",
+    "Dundee",
+    "Dundee Utd",
+    "Falkirk",
+    "Heart Of Midlothian",
+    "Hibernian",
+    "Kilmarnock",
+    "Motherwell",
+    "Rangers",
+    "ST Johnstone",
+    "ST Mirren"
    ]
   },
   "E3": {
@@ -179,6 +151,34 @@
     "Stockport County",
     "Wigan",
     "Wycombe"
+   ]
+  },
+  "E0": {
+   "season": 2026,
+   "finished": 80,
+   "latest": "2026-10-25",
+   "errors": null,
+   "teams": [
+    "Arsenal",
+    "Aston Villa",
+    "Bournemouth",
+    "Brentford",
+    "Brighton",
+    "Chelsea",
+    "Coventry",
+    "Crystal Palace",
+    "Everton",
+    "Fulham",
+    "Hull City",
+    "Ipswich",
+    "Leeds",
+    "Liverpool",
+    "Manchester City",
+    "Manchester United",
+    "Newcastle",
+    "Nottingham Forest",
+    "Sunderland",
+    "Tottenham"
    ]
   },
   "E1": {
@@ -255,6 +255,34 @@
     "VfL Bochum",
     "VfL Osnabr\u00fcck",
     "VfL Wolfsburg"
+   ]
+  },
+  "I1": {
+   "season": 2026,
+   "finished": 80,
+   "latest": "2026-10-25",
+   "errors": null,
+   "teams": [
+    "AC Milan",
+    "AS Roma",
+    "Atalanta",
+    "Bologna",
+    "Cagliari",
+    "Como",
+    "Fiorentina",
+    "Frosinone",
+    "Genoa",
+    "Inter",
+    "Juventus",
+    "Lazio",
+    "Lecce",
+    "Monza",
+    "Napoli",
+    "Parma",
+    "Sassuolo",
+    "Torino",
+    "Udinese",
+    "Venezia"
    ]
   },
   "D1": {
@@ -339,34 +367,6 @@
     "Sporting Gijon",
     "Tenerife",
     "Valladolid"
-   ]
-  },
-  "I1": {
-   "season": 2026,
-   "finished": 80,
-   "latest": "2026-10-25",
-   "errors": null,
-   "teams": [
-    "AC Milan",
-    "AS Roma",
-    "Atalanta",
-    "Bologna",
-    "Cagliari",
-    "Como",
-    "Fiorentina",
-    "Frosinone",
-    "Genoa",
-    "Inter",
-    "Juventus",
-    "Lazio",
-    "Lecce",
-    "Monza",
-    "Napoli",
-    "Parma",
-    "Sassuolo",
-    "Torino",
-    "Udinese",
-    "Venezia"
    ]
   },
   "F1": {
@@ -525,32 +525,6 @@
     "Yunnan Yukun"
    ]
   },
-  "B1": {
-   "season": 2026,
-   "finished": 80,
-   "latest": "2026-10-25",
-   "errors": null,
-   "teams": [
-    "Anderlecht",
-    "Antwerp",
-    "Cercle Brugge",
-    "Charleroi",
-    "Club Brugge KV",
-    "Genk",
-    "Gent",
-    "KV Mechelen",
-    "KVC Westerlo",
-    "Kortrijk",
-    "Lommel United",
-    "OH Leuven",
-    "RAAL La Louvi\u00e8re",
-    "SK Beveren",
-    "St. Truiden",
-    "Standard Liege",
-    "Union St. Gilloise",
-    "Zulte Waregem"
-   ]
-  },
   "N1": {
    "season": 2026,
    "finished": 90,
@@ -575,6 +549,32 @@
     "Twente",
     "Utrecht",
     "Willem II"
+   ]
+  },
+  "B1": {
+   "season": 2026,
+   "finished": 80,
+   "latest": "2026-10-25",
+   "errors": null,
+   "teams": [
+    "Anderlecht",
+    "Antwerp",
+    "Cercle Brugge",
+    "Charleroi",
+    "Club Brugge KV",
+    "Genk",
+    "Gent",
+    "KV Mechelen",
+    "KVC Westerlo",
+    "Kortrijk",
+    "Lommel United",
+    "OH Leuven",
+    "RAAL La Louvi\u00e8re",
+    "SK Beveren",
+    "St. Truiden",
+    "Standard Liege",
+    "Union St. Gilloise",
+    "Zulte Waregem"
    ]
   },
   "G1": {
@@ -627,8 +627,8 @@
   },
   "T1": {
    "season": 2026,
-   "finished": 78,
-   "latest": "2026-10-25",
+   "finished": 80,
+   "latest": "2026-10-26",
    "errors": null,
    "teams": [
     "Alanyaspor",
