@@ -1,9 +1,4 @@
 Div,HomeTeam,AwayTeam,Kickoff
-E0,Crystal Palace,Newcastle,2026-10-25 14:00:00+00:00
-E0,Hull,Brentford,2026-10-25 14:00:00+00:00
-E0,Liverpool,Brighton,2026-10-25 14:00:00+00:00
-E0,Man Utd,Bournemouth,2026-10-25 14:00:00+00:00
-E0,Sunderland,Leeds,2026-10-25 16:30:00+00:00
 E0,Chelsea,Man Utd,2026-10-31 12:30:00+00:00
 E0,Bournemouth,Leeds,2026-10-31 15:00:00+00:00
 E0,Brentford,Nott'm Forest,2026-10-31 15:00:00+00:00
@@ -1530,10 +1525,6 @@ E3,Shrewsbury Town,York City,2027-05-08 14:00:00+00:00
 E3,Swindon Town,Gillingham,2027-05-08 14:00:00+00:00
 E3,Walsall,Newport County,2027-05-08 14:00:00+00:00
 SP1,Rayo Vallecano,Athletic Club,2026-10-10 12:00:00+00:00
-SP1,Athletic Club,Getafe CF,2026-10-25 13:00:00+00:00
-SP1,Celta,Real Betis,2026-10-25 15:15:00+00:00
-SP1,Real Sociedad,Levante UD,2026-10-25 17:30:00+00:00
-SP1,FC Barcelona,Real Madrid,2026-10-25 20:00:00+00:00
 SP1,Sevilla FC,CA Osasuna,2026-10-26 20:00:00+00:00
 SP1,Villarreal CF,RCD Espanyol de Barcelona,2026-10-30 20:00:00+00:00
 SP1,Levante UD,Atlético de Madrid,2026-10-31 13:00:00+00:00
@@ -1815,11 +1806,6 @@ SP1,Málaga CF,Sevilla FC,2027-05-30 00:00:00+00:00
 SP1,CA Osasuna,Valencia CF,2027-05-30 00:00:00+00:00
 SP1,Real Madrid,RC Deportivo,2027-05-30 00:00:00+00:00
 SP1,Real Sociedad,Villarreal CF,2027-05-30 00:00:00+00:00
-I1,Internazionale,Fiorentina,2026-10-25 11:30:00+00:00
-I1,Atalanta,Frosinone,2026-10-25 14:00:00+00:00
-I1,Genoa,Venezia,2026-10-25 14:00:00+00:00
-I1,Lecce,Juventus,2026-10-25 17:00:00+00:00
-I1,Udinese,Milan,2026-10-25 19:45:00+00:00
 I1,Sassuolo,Lazio,2026-10-27 17:30:00+00:00
 I1,Roma,Cagliari,2026-10-27 19:45:00+00:00
 I1,Torino,Como,2026-10-27 19:45:00+00:00
@@ -2120,8 +2106,6 @@ I1,Milan,Udinese,2027-05-29 00:00:00+00:00
 I1,Monza,Torino,2027-05-29 00:00:00+00:00
 I1,Napoli,Atalanta,2027-05-29 00:00:00+00:00
 I1,Sassuolo,Internazionale,2027-05-29 00:00:00+00:00
-D1,TSG Hoffenheim,Bayer 04 Leverkusen,2026-10-25 14:30:00+00:00
-D1,Sport-Club Freiburg,FC Bayern München,2026-10-25 16:30:00+00:00
 D1,SV Elversberg,1. FSV Mainz 05,2026-10-30 19:30:00+00:00
 D1,FC Schalke 04,RB Leipzig,2026-10-31 14:30:00+00:00
 D1,SV Werder Bremen,TSG Hoffenheim,2026-10-31 14:30:00+00:00
@@ -2365,12 +2349,6 @@ D1,FC Augsburg,Hamburger SV,2027-05-22 13:30:00+00:00
 D1,Sport-Club Freiburg,Borussia Dortmund,2027-05-22 13:30:00+00:00
 D1,RB Leipzig,TSG Hoffenheim,2027-05-22 13:30:00+00:00
 D1,FC Bayern München,Eintracht Frankfurt,2027-05-22 13:30:00+00:00
-F1,AS Monaco,LOSC Lille,2026-10-25 14:00:00+00:00
-F1,Angers SCO,FC Lorient,2026-10-25 16:15:00+00:00
-F1,AJ Auxerre,Le Mans FC,2026-10-25 16:15:00+00:00
-F1,Olympique de Marseille,Havre Athletic Club,2026-10-25 16:15:00+00:00
-F1,Stade Rennais FC,RC Strasbourg Alsace,2026-10-25 16:15:00+00:00
-F1,Toulouse FC,Estac Troyes,2026-10-25 16:15:00+00:00
 F1,Paris Saint-Germain,Olympique Lyonnais,2026-10-26 19:30:00+00:00
 F1,Havre Athletic Club,Paris Saint-Germain,2026-10-30 18:00:00+00:00
 F1,LOSC Lille,RC Lens,2026-10-30 20:05:00+00:00
@@ -2825,11 +2803,6 @@ F2,Red Star FC,Clermont Foot 63,2027-05-21 22:00:00+00:00
 F2,Stade DE Reims,US Boulogne CO,2027-05-21 22:00:00+00:00
 F2,AS Saint-Étienne,Pau FC,2027-05-21 22:00:00+00:00
 N1,FC Utrecht,Go Ahead Eagles,2026-09-08 12:00:00+00:00
-N1,Fortuna Sittard,Excelsior Rotterdam,2026-10-25 11:15:00+00:00
-N1,N.E.C. Nijmegen,FC Groningen,2026-10-25 13:30:00+00:00
-N1,PSV,Feyenoord,2026-10-25 13:30:00+00:00
-N1,Sparta Rotterdam,Ajax,2026-10-25 15:45:00+00:00
-N1,AZ,FC Twente,2026-10-25 19:00:00+00:00
 N1,Feyenoord,Fortuna Sittard,2026-10-31 15:30:00+00:00
 N1,sc Heerenveen,N.E.C. Nijmegen,2026-10-31 17:45:00+00:00
 N1,PSV,Willem II,2026-10-31 17:45:00+00:00
@@ -3046,10 +3019,6 @@ N1,Sparta Rotterdam,Fortuna Sittard,2027-05-23 12:30:00+00:00
 N1,PEC Zwolle,FC Twente,2027-05-23 12:30:00+00:00
 N1,Feyenoord,FC Groningen,2027-05-23 12:30:00+00:00
 N1,ADO Den Haag,AZ,2027-05-23 12:30:00+00:00
-P1,Estoril Praia,Moreirense FC,2026-10-25 15:30:00+00:00
-P1,CD Nacional,SC Braga,2026-10-25 18:00:00+00:00
-P1,Rio Ave FC,FC Famalicão,2026-10-25 18:00:00+00:00
-P1,Sporting CP,Académico,2026-10-25 20:30:00+00:00
 P1,Santa Clara,SL Benfica,2026-10-26 18:45:00+00:00
 P1,Casa Pia AC,Sporting CP,2026-10-30 20:15:00+00:00
 P1,Moreirense FC,Estrela Amadora,2026-10-31 15:30:00+00:00
@@ -3276,8 +3245,6 @@ P1,Vitória SC,FC Famalicão,2027-05-15 23:00:00+00:00
 P1,Gil Vicente FC,CD Nacional,2027-05-15 23:00:00+00:00
 P1,Moreirense FC,Rio Ave FC,2027-05-15 23:00:00+00:00
 P1,Santa Clara,Sporting CP,2027-05-15 23:00:00+00:00
-T1,Konyaspor,Gençlerbirligi,2026-10-25 13:00:00+00:00
-T1,Göztepe,Çorum,2026-10-25 16:00:00+00:00
 T1,Çaykur Rizespor,Trabzonspor,2026-10-26 16:00:00+00:00
 T1,Besiktas,Istanbul Basaksehir,2026-10-26 16:00:00+00:00
 T1,Galatasaray,Fenerbahçe,2026-10-26 18:30:00+00:00
@@ -3506,8 +3473,6 @@ T1,Konyaspor,Çorum,2027-05-22 21:00:00+00:00
 T1,Amedspor,Fenerbahçe,2027-05-22 21:00:00+00:00
 T1,Kasimpasa,Kocaelispor,2027-05-22 21:00:00+00:00
 T1,Trabzonspor,Erzurumspor,2027-05-22 21:00:00+00:00
-SC0,Hibernian,Celtic,2026-10-25 12:00:00+00:00
-SC0,Motherwell,Heart of Midlothian,2026-10-25 14:00:00+00:00
 SC0,Aberdeen,Falkirk,2026-10-28 19:45:00+00:00
 SC0,Celtic,Dundee United,2026-10-28 19:45:00+00:00
 SC0,Dundee,Kilmarnock,2026-10-28 19:45:00+00:00

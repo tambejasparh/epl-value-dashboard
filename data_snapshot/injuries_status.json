@@ -1,5 +1,5 @@
 {
- "time": "2026-10-26 10:56 UTC",
+ "time": "2026-10-26 15:39 UTC",
  "key_present": true,
  "leagues_found": {
   "T1": "S\u00fcper Lig (Turkey)",
@@ -19,12 +19,12 @@
  },
  "fixtures": 56,
  "injured": 113,
- "players_fetched": 8,
- "requests_used": 16,
+ "players_fetched": 0,
+ "requests_used": 8,
  "result": "113 missing players across 56 fixtures",
- "odds_time": "2026-10-26 10:56 UTC",
+ "odds_time": "2026-10-26 15:39 UTC",
  "odds_calls": 54,
- "odds_rows": 7233,
+ "odds_rows": 7305,
  "odds_fixtures": 54,
  "books_seen": [
   "1xBet",

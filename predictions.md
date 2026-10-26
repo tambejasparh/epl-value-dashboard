@@ -1,26 +1,25 @@
 # Football predictions — day by day
-_Updated Mon 26 Oct 2026 11:56 (Africa/Douala time). Bankroll for stakes: 100.00_
+_Updated Mon 26 Oct 2026 16:39 (Africa/Douala time). Bankroll for stakes: 100.00_
 
 ## 🎟️ Ready-made tickets — Monday 26 October
 
 _Only Under 4.5, otherwise Under 5.5 or Under 6.5, at 85%+, or Over 1.5 / Over 0.5 at 98%+, or Both teams to score at 96%+; one per match, 1xBet prices, highest ticket chance._
 
-**1.5 odds — 4 matches, total 1.51, chance all win ≈ 67%**
+**1.5 odds — 4 matches, total 1.52, chance all win ≈ 69%**
 1. 17:00 · Besiktas v Buyuksehyr (Turkey - Super Lig) — Under 5.5 goals @ 1.11 · 89%
-2. 19:30 · Galatasaray v Fenerbahce (Turkey - Super Lig) — Under 6.5 goals @ 1.04 · 95%
-3. 19:45 · Santa Clara v Benfica (Portugal - Primeira Liga) — Under 4.5 goals @ 1.14 · 88%
+2. 17:00 · Rizespor v Trabzonspor (Turkey - Super Lig) — Under 6.5 goals @ 1.02 · 97%
+3. 19:45 · Santa Clara v Benfica (Portugal - Primeira Liga) — Under 4.5 goals @ 1.17 · 88%
 4. 20:30 · Paris SG v Lyon (France - Ligue 1) — Under 5.5 goals @ 1.15 · 91%
 
-**2 odds — 9 matches, total 2.02, chance all win ≈ 46%**
+**2 odds — 8 matches, total 2.04, chance all win ≈ 47%**
 1. 17:00 · Besiktas v Buyuksehyr (Turkey - Super Lig) — Under 5.5 goals @ 1.11 · 89%
 2. 17:00 · Rizespor v Trabzonspor (Turkey - Super Lig) — Under 5.5 goals @ 1.06 · 93%
 3. 19:30 · Galatasaray v Fenerbahce (Turkey - Super Lig) — Under 6.5 goals @ 1.04 · 95%
-4. 19:45 · Santa Clara v Benfica (Portugal - Primeira Liga) — Under 4.5 goals @ 1.14 · 88%
+4. 19:45 · Santa Clara v Benfica (Portugal - Primeira Liga) — Under 4.5 goals @ 1.17 · 88%
 5. 20:30 · Paris SG v Lyon (France - Ligue 1) — Under 5.5 goals @ 1.15 · 91%
 6. 20:30 · Andorra v Burgos (Spain - Segunda Division) — Under 4.5 goals @ 1.08 · 90%
 7. 20:45 · Montpellier v Red Star (France - Ligue 2) — Under 4.5 goals @ 1.09 · 89%
-8. 20:45 · Boulogne v Reims (France - Ligue 2) — Under 5.5 goals @ 1.02 · 97%
-9. 21:00 · Walsall v Salford (England - League Two) — Under 5.5 goals @ 1.05 · 95%
+8. 21:00 · Walsall v Salford (England - League Two) — Under 5.5 goals @ 1.05 · 95%
 
 **3 odds:** not enough safe bets today
 
@@ -43,17 +42,17 @@ _Safest first. 💚 = 1xBet pays at least the fair minimum._
 ### Monday 26 October (10 matches)
 
 1. 17:00 · **Rizespor v Trabzonspor** (Turkey - Super Lig) — Over/Under → Under 5.5 · 93% · 1xBet 1.06 
-2. 20:45 · **Boulogne v Reims** (France - Ligue 2) — Over/Under → Under 4.5 · 91% · 1xBet 1.04 
+2. 20:45 · **Boulogne v Reims** (France - Ligue 2) — Over/Under → Under 4.5 · 91% · 1xBet 1.05 
 3. 20:30 · **Paris SG v Lyon** (France - Ligue 1) — Over/Under → Under 5.5 · 91% · 1xBet 1.15 💚
 4. 20:30 · **Andorra v Burgos** (Spain - Segunda Division) — Over/Under → Under 4.5 · 90% · 1xBet 1.08 
 5. 21:00 · **Sevilla v Osasuna** (Spain - La Liga) — Over/Under → Under 4.5 · 89% · 1xBet 1.05 
 6. 17:00 · **Besiktas v Buyuksehyr** (Turkey - Super Lig) — Over/Under → Under 5.5 · 89% · 1xBet 1.11 
 7. 20:45 · **Montpellier v Red Star** (France - Ligue 2) — Over/Under → Under 4.5 · 89% · 1xBet 1.09 
 8. 19:30 · **Galatasaray v Fenerbahce** (Turkey - Super Lig) — Over/Under → Under 5.5 · 88% · 1xBet 1.08 
-9. 19:45 · **Santa Clara v Benfica** (Portugal - Primeira Liga) — Over/Under → Under 4.5 · 88% · 1xBet 1.14 
+9. 19:45 · **Santa Clara v Benfica** (Portugal - Primeira Liga) — Over/Under → Under 4.5 · 88% · 1xBet 1.17 
 10. 21:00 · **Walsall v Salford** (England - League Two) — Over/Under → Under 4.5 · 87% · 1xBet 1.10 
 
-🎟️ One ticket with the top matches — top 2: 84% @ 1.10 · top 3: 76% @ 1.27 · top 5: 61% @ 1.44 · top 8: 43% @ 1.88 · top 10: 33% @ 2.36
+🎟️ One ticket with the top matches — top 2: 84% @ 1.11 · top 3: 76% @ 1.28 · top 5: 61% @ 1.45 · top 8: 43% @ 1.90 · top 10: 33% @ 2.44
 
 ### Tuesday 27 October (9 matches)
 
@@ -290,14 +289,14 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 
 ### Monday 26 October (10 matches)
 
-- ⚠️ 20:45 · **Boulogne v Reims** (France - Ligue 2) — BET: Over/Under (total goals) → Under 4.5 · 91% · 1xBet 1.04
+- ⚠️ 20:45 · **Boulogne v Reims** (France - Ligue 2) — BET: Over/Under (total goals) → Under 4.5 · 91% · 1xBet 1.05
 - ⚠️ 20:30 · **Andorra v Burgos** (Spain - Segunda Division) — BET: Over/Under (total goals) → Under 4.5 · 90% · 1xBet 1.08
 - ⚠️ 21:00 · **Sevilla v Osasuna** (Spain - La Liga) — BET: Over/Under (total goals) → Under 4.5 · 89% · 1xBet 1.05
 - ⚠️ 20:45 · **Montpellier v Red Star** (France - Ligue 2) — BET: Over/Under (total goals) → Under 4.5 · 89% · 1xBet 1.09
-- ⚠️ 19:45 · **Santa Clara v Benfica** (Portugal - Primeira Liga) — BET: Over/Under (total goals) → Under 4.5 · 88% · 1xBet 1.14
+- ⚠️ 19:45 · **Santa Clara v Benfica** (Portugal - Primeira Liga) — BET: Over/Under (total goals) → Under 4.5 · 88% · 1xBet 1.17
 - ⚠️ 17:00 · **Besiktas v Buyuksehyr** (Turkey - Super Lig) — BET: Besiktas total goals → Over 0.5 · 88% · 1xBet 1.03
 - ⚠️ 21:00 · **Walsall v Salford** (England - League Two) — BET: Over/Under (total goals) → Under 4.5 · 87% · 1xBet 1.10
-- ⚠️ 20:30 · **Paris SG v Lyon** (France - Ligue 1) — BET: Paris SG total goals → Over 0.5 · 87%
+- ⚠️ 20:30 · **Paris SG v Lyon** (France - Ligue 1) — BET: Paris SG total goals → Over 0.5 · 87% · 1xBet 1.03
 - ⚠️ 19:30 · **Galatasaray v Fenerbahce** (Turkey - Super Lig) — BET: Over/Under (total goals) → Over 1.5 · 85% · 1xBet 1.12
 - ⚠️ 17:00 · **Rizespor v Trabzonspor** (Turkey - Super Lig) — BET: Over/Under (total goals) → Under 4.5 · 84% · 1xBet 1.21
 
