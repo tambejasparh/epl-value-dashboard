@@ -22,11 +22,12 @@ FixtureId,TeamId,PlayerId,Player,Type,Reason
 1552800,85,257,Marquinhos,Missing Fixture,Thigh Injury
 1552800,85,263482,N. Mendes,Missing Fixture,Muscle Injury
 1552800,85,606062,A. Longoni,Questionable,Injury
+1552800,80,645969,S. Kango,Missing Fixture,Concussion
+1552800,80,33321,K. Nakamura,Missing Fixture,Red Card
 1552800,80,86,L. Openda,Missing Fixture,Leg Injury
 1552800,80,412049,M. Ouedraogo,Missing Fixture,Knee Injury
+1552800,80,66387,P. Sulc,Missing Fixture,Knee Injury
 1552800,80,529,N. Tagliafico,Missing Fixture,Muscle Injury
-1552800,80,623922,A. Hamdani,Questionable,Inactive
-1552800,80,66387,P. Sulc,Questionable,Knee Injury
 1570431,536,433,Marcao,Missing Fixture,Muscle Injury
 1570431,536,438263,M. Sierra,Missing Fixture,Shoulder Injury
 1570431,727,484459,A. Bonel,Missing Fixture,Groin Injury
@@ -60,6 +61,54 @@ FixtureId,TeamId,PlayerId,Player,Type,Reason
 1550175,895,877,M. Kean,Missing Fixture,Leg Injury
 1550175,895,410396,M. Liberali,Missing Fixture,Leg Injury
 1550175,895,443162,J. Rodriguez,Missing Fixture,Injury
-1550176,517,26095,M. Šverko,Missing Fixture,Hip Injury
-1550172,492,31226,A. Buongiorno,Missing Fixture,Jumpers Knee
-1550171,495,452033,L. Venturino,Missing Fixture,Jumpers Knee
+1550167,489,1696,S. Chukwueze,Missing Fixture,Hip Injury
+1550167,489,56473,M. Gabbia,Missing Fixture,Thigh Injury
+1550167,489,162952,M. Gila,Missing Fixture,Ankle Injury
+1550167,489,335056,D. Moreira,Missing Fixture,Thigh Injury
+1550167,489,272,A. Rabiot,Missing Fixture,Calf Injury
+1550167,489,1417,A. Saelemaekers,Missing Fixture,Ankle Injury
+1550167,489,2292,R. Loftus-Cheek,Questionable,Injury
+1550167,500,47985,E. Holm,Missing Fixture,Thigh Injury
+1550167,500,30488,R. Orsolini,Missing Fixture,Thigh Injury
+1550167,500,30440,R. Piccoli,Missing Fixture,Hamstring Injury
+1550173,523,48193,P. Almqvist,Missing Fixture,Calf Injury
+1550173,523,301924,N. Elphege,Missing Fixture,Illness
+1550173,523,881,H. Nicolussi Caviglia,Missing Fixture,Thigh Injury
+1550173,523,6221,L. Valenti,Missing Fixture,Coach's decision
+1550173,494,505,D. Alaba,Missing Fixture,Calf Injury
+1550173,494,1134,V. Bayo,Missing Fixture,Thigh Injury
+1550173,494,434410,I. Gueye,Missing Fixture,Ankle Injury
+1550173,494,162907,A. Zanoli,Missing Fixture,Muscle Injury
+1550173,494,656,O. Solet,Questionable,Muscle Injury
+1550176,517,212,A. Adorante,Missing Fixture,Hernia
+1550176,517,1482,T. Correia,Missing Fixture,Thigh Injury
+1550176,517,14704,B. Franjic,Missing Fixture,Shoulder Injury
+1550176,517,26095,M. Sverko,Missing Fixture,Hip Injury
+1550176,505,293,C. Jones,Missing Fixture,Thigh Injury
+1550176,505,10077,Luis Henrique,Missing Fixture,Thigh Injury
+1550176,505,217,L. Martinez,Missing Fixture,Thigh Injury
+1550176,505,2725,B. Pavard,Missing Fixture,Thigh Injury
+1550176,505,626,J. Stones,Missing Fixture,Injury
+1550171,495,162561,E. Havel,Missing Fixture,Ankle Injury
+1550171,495,957,D. Sow,Missing Fixture,Thigh Injury
+1550171,495,452033,L. Venturino,Missing Fixture,Knee Injury
+1550171,496,22222,Z. Celik,Missing Fixture,Muscle Injury
+1550171,496,161585,F. Conceicao,Missing Fixture,Shoulder Injury
+1550171,496,451504,J. Ekhator,Missing Fixture,Muscle Injury
+1550171,496,26315,N. Gonzalez,Missing Fixture,Calf Injury
+1550171,496,15573,K. Grabara,Missing Fixture,Knee Injury
+1550171,496,30533,M. Locatelli,Missing Fixture,Knee Injury
+1550171,496,333,A. Milik,Missing Fixture,Inactive
+1550171,496,116,K. Thuram,Missing Fixture,Knee Injury
+1550171,496,339883,K. Yildiz,Missing Fixture,Foot Injury
+1550172,1579,436239,Y. Maye,Missing Fixture,Muscle Injury
+1550172,1579,30436,M. Pessina,Missing Fixture,Knee Injury
+1550172,1579,384543,J. Ziolkowski,Missing Fixture,Foot Injury
+1550172,492,310943,Alisson Santos,Missing Fixture,Muscle Injury
+1550172,492,31226,A. Buongiorno,Missing Fixture,Knee Injury
+1550172,492,552,David Neres,Missing Fixture,Thigh Injury
+1550172,492,348532,C. Favasuli,Missing Fixture,Thigh Injury
+1550172,492,95,B. Badiashile,Questionable,Injury
+1550172,492,219,M. Politano,Questionable,Injury
+1550169,499,137976,I. Hien,Missing Fixture,Muscle Bruise
+1550169,502,31507,R. Sottil,Missing Fixture,Back Injury
