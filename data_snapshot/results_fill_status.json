@@ -1,24 +1,6 @@
 {
- "time": "2026-10-27 18:35 UTC",
+ "time": "2026-10-27 21:13 UTC",
  "leagues": {
-  "SC2": {
-   "season": 2026,
-   "finished": 58,
-   "latest": "2026-10-24",
-   "errors": null,
-   "teams": [
-    "Airdrie United",
-    "Alloa Athletic",
-    "Cove Rangers",
-    "East Fife",
-    "East Kilbride",
-    "Hamilton Academical",
-    "Montrose",
-    "Peterhead",
-    "Queen of the South",
-    "Ross County"
-   ]
-  },
   "SC1": {
    "season": 2026,
    "finished": 58,
@@ -35,6 +17,24 @@
     "Queen's Park",
     "Raith Rovers",
     "Stenhousemuir"
+   ]
+  },
+  "SC2": {
+   "season": 2026,
+   "finished": 58,
+   "latest": "2026-10-24",
+   "errors": null,
+   "teams": [
+    "Airdrie United",
+    "Alloa Athletic",
+    "Cove Rangers",
+    "East Fife",
+    "East Kilbride",
+    "Hamilton Academical",
+    "Montrose",
+    "Peterhead",
+    "Queen of the South",
+    "Ross County"
    ]
   },
   "SC0": {
@@ -117,36 +117,36 @@
     "Tottenham"
    ]
   },
-  "E3": {
+  "E2": {
    "season": 2026,
-   "finished": 150,
-   "latest": "2026-10-26",
+   "finished": 138,
+   "latest": "2026-10-24",
    "errors": null,
    "teams": [
-    "Accrington ST",
-    "Barnet",
-    "Bristol Rovers",
-    "Cheltenham",
-    "Chesterfield",
-    "Colchester",
-    "Crawley Town",
-    "Crewe",
-    "Exeter City",
-    "Fleetwood Town",
-    "Gillingham",
-    "Grimsby",
-    "Newport County",
-    "Northampton",
-    "Oldham",
-    "Port Vale",
-    "Rochdale",
-    "Rotherham",
-    "Salford City",
-    "Shrewsbury",
-    "Swindon Town",
-    "Tranmere",
-    "Walsall",
-    "York"
+    "AFC Wimbledon",
+    "Barnsley",
+    "Blackpool",
+    "Bradford",
+    "Bromley",
+    "Burton Albion",
+    "Cambridge United",
+    "Doncaster",
+    "Huddersfield",
+    "Leicester",
+    "Leyton Orient",
+    "Luton",
+    "Mansfield Town",
+    "Milton Keynes Dons",
+    "Notts County",
+    "Oxford United",
+    "Peterborough",
+    "Plymouth",
+    "Reading",
+    "Sheffield Wednesday",
+    "Stevenage",
+    "Stockport County",
+    "Wigan",
+    "Wycombe"
    ]
   },
   "E1": {
@@ -181,36 +181,36 @@
     "Wrexham"
    ]
   },
-  "E2": {
+  "E3": {
    "season": 2026,
-   "finished": 138,
-   "latest": "2026-10-24",
+   "finished": 150,
+   "latest": "2026-10-26",
    "errors": null,
    "teams": [
-    "AFC Wimbledon",
-    "Barnsley",
-    "Blackpool",
-    "Bradford",
-    "Bromley",
-    "Burton Albion",
-    "Cambridge United",
-    "Doncaster",
-    "Huddersfield",
-    "Leicester",
-    "Leyton Orient",
-    "Luton",
-    "Mansfield Town",
-    "Milton Keynes Dons",
-    "Notts County",
-    "Oxford United",
-    "Peterborough",
-    "Plymouth",
-    "Reading",
-    "Sheffield Wednesday",
-    "Stevenage",
-    "Stockport County",
-    "Wigan",
-    "Wycombe"
+    "Accrington ST",
+    "Barnet",
+    "Bristol Rovers",
+    "Cheltenham",
+    "Chesterfield",
+    "Colchester",
+    "Crawley Town",
+    "Crewe",
+    "Exeter City",
+    "Fleetwood Town",
+    "Gillingham",
+    "Grimsby",
+    "Newport County",
+    "Northampton",
+    "Oldham",
+    "Port Vale",
+    "Rochdale",
+    "Rotherham",
+    "Salford City",
+    "Shrewsbury",
+    "Swindon Town",
+    "Tranmere",
+    "Walsall",
+    "York"
    ]
   },
   "SC3": {
@@ -229,32 +229,6 @@
     "Spartans",
     "Stirling Albion",
     "Stranraer"
-   ]
-  },
-  "D2": {
-   "season": 2026,
-   "finished": 81,
-   "latest": "2026-10-25",
-   "errors": null,
-   "teams": [
-    "1. FC Heidenheim",
-    "1. FC Kaiserslautern",
-    "1. FC Magdeburg",
-    "1. FC N\u00fcrnberg",
-    "Arminia Bielefeld",
-    "Dynamo Dresden",
-    "Eintracht Braunschweig",
-    "Energie Cottbus",
-    "FC St. Pauli",
-    "Hannover 96",
-    "Hertha BSC",
-    "Holstein Kiel",
-    "Karlsruher SC",
-    "SV Darmstadt 98",
-    "SpVgg Greuther F\u00fcrth",
-    "VfL Bochum",
-    "VfL Osnabr\u00fcck",
-    "VfL Wolfsburg"
    ]
   },
   "D1": {
@@ -283,10 +257,36 @@
     "Werder Bremen"
    ]
   },
+  "D2": {
+   "season": 2026,
+   "finished": 81,
+   "latest": "2026-10-25",
+   "errors": null,
+   "teams": [
+    "1. FC Heidenheim",
+    "1. FC Kaiserslautern",
+    "1. FC Magdeburg",
+    "1. FC N\u00fcrnberg",
+    "Arminia Bielefeld",
+    "Dynamo Dresden",
+    "Eintracht Braunschweig",
+    "Energie Cottbus",
+    "FC St. Pauli",
+    "Hannover 96",
+    "Hertha BSC",
+    "Holstein Kiel",
+    "Karlsruher SC",
+    "SV Darmstadt 98",
+    "SpVgg Greuther F\u00fcrth",
+    "VfL Bochum",
+    "VfL Osnabr\u00fcck",
+    "VfL Wolfsburg"
+   ]
+  },
   "I2": {
    "season": 2026,
-   "finished": 80,
-   "latest": "2026-10-25",
+   "finished": 87,
+   "latest": "2026-10-27",
    "errors": null,
    "teams": [
     "Arezzo",
@@ -313,8 +313,8 @@
   },
   "I1": {
    "season": 2026,
-   "finished": 80,
-   "latest": "2026-10-25",
+   "finished": 81,
+   "latest": "2026-10-27",
    "errors": null,
    "teams": [
     "AC Milan",
@@ -337,6 +337,34 @@
     "Torino",
     "Udinese",
     "Venezia"
+   ]
+  },
+  "SP1": {
+   "season": 2026,
+   "finished": 99,
+   "latest": "2026-10-26",
+   "errors": null,
+   "teams": [
+    "Alaves",
+    "Athletic Club",
+    "Atletico Madrid",
+    "Barcelona",
+    "Celta Vigo",
+    "Deportivo La Coruna",
+    "Elche",
+    "Espanyol",
+    "Getafe",
+    "Levante",
+    "Malaga",
+    "Osasuna",
+    "Racing Santander",
+    "Rayo Vallecano",
+    "Real Betis",
+    "Real Madrid",
+    "Real Sociedad",
+    "Sevilla",
+    "Valencia",
+    "Villarreal"
    ]
   },
   "SP2": {
@@ -367,34 +395,6 @@
     "Sporting Gijon",
     "Tenerife",
     "Valladolid"
-   ]
-  },
-  "SP1": {
-   "season": 2026,
-   "finished": 99,
-   "latest": "2026-10-26",
-   "errors": null,
-   "teams": [
-    "Alaves",
-    "Athletic Club",
-    "Atletico Madrid",
-    "Barcelona",
-    "Celta Vigo",
-    "Deportivo La Coruna",
-    "Elche",
-    "Espanyol",
-    "Getafe",
-    "Levante",
-    "Malaga",
-    "Osasuna",
-    "Racing Santander",
-    "Rayo Vallecano",
-    "Real Betis",
-    "Real Madrid",
-    "Real Sociedad",
-    "Sevilla",
-    "Valencia",
-    "Villarreal"
    ]
   },
   "F1": {
