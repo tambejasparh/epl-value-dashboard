@@ -565,10 +565,10 @@ Kickoff (UTC),Match day,League,Competition,HomeTeam,AwayTeam,Pick key,Best pick,
 2026-10-27 19:45,2026-10-27,EC,England - National League,Woking,Boreham Wood,AS,⭐ Boreham Wood to score · 84% · bet at 1.23+,83.6,1.23,Fair,below 85%,1.32 - 1.69
 2026-10-27 19:45,2026-10-27,EC,England - National League,Tamworth,Scunthorpe,O15,⭐ Over 1.5 goals · 84% · bet at 1.22+,84.2,1.22,Fair,below 85%,1.65 - 1.61
 2026-10-27 19:45,2026-10-27,I1,Italy - Serie A,Torino,Como,U45,⭐⭐ Under 4.5 goals · 88% · bet at 1.17+,87.7,1.17,Good,OK,0.89 - 1.41
-2026-10-27 19:45,2026-10-27,I1,Italy - Serie A,Roma,Cagliari,HS,⭐⭐ Roma to score · 86% · bet at 1.20+,86.0,1.2,Good,1xBet pays only 1.06 (needs 1.20),1.70 - 0.84
+2026-10-27 19:45,2026-10-27,I1,Italy - Serie A,Roma,Cagliari,HS,⭐⭐ Roma to score · 86% · bet at 1.20+,86.0,1.2,Good,1xBet pays only 1.07 (needs 1.20),1.70 - 0.84
 2026-10-27 19:45,2026-10-27,SC1,Scotland - Championship,Stenhousemuir,Dunfermline,U45,🔒 Under 4.5 goals · 92% · bet at 1.12+,91.9,1.12,Banker,1xBet pays only 1.03 (needs 1.12),1.09 - 0.87
 2026-10-27 19:45,2026-10-27,SC2,Scotland - League One,Ross County,Hamilton,HS,⭐⭐⭐ Ross County to score · 90% · bet at 1.15+,89.6,1.15,Strong,OK,2.56 - 0.89
-2026-10-28 17:30,2026-10-28,I1,Italy - Serie A,Milan,Bologna,U45,⭐⭐⭐ Under 4.5 goals · 90% · bet at 1.15+,89.9,1.15,Strong,1xBet pays only 1.11 (needs 1.15),1.08 - 0.99
+2026-10-28 17:30,2026-10-28,I1,Italy - Serie A,Milan,Bologna,U45,⭐⭐⭐ Under 4.5 goals · 90% · bet at 1.15+,89.9,1.15,Strong,1xBet pays only 1.13 (needs 1.15),1.08 - 0.99
 2026-10-28 17:30,2026-10-28,I1,Italy - Serie A,Parma,Udinese,U35,⭐ Under 3.5 goals · 83% · bet at 1.25+,82.6,1.25,Fair,below 85%,1.10 - 0.81
 2026-10-28 17:30,2026-10-28,I1,Italy - Serie A,Venezia,Inter,AS,🔒 Inter to score · 90% · bet at 1.14+,90.5,1.14,Banker,1xBet pays only 1.03 (needs 1.14),0.99 - 2.16
 2026-10-28 18:00,2026-10-28,I2,Italy - Serie B,Pisa,Palermo,U45,⭐ Under 4.5 goals · 85% · bet at 1.22+,84.6,1.22,Fair,below 85%,1.55 - 1.17
@@ -588,7 +588,7 @@ Kickoff (UTC),Match day,League,Competition,HomeTeam,AwayTeam,Pick key,Best pick,
 2026-10-29 17:30,2026-10-29,I1,Italy - Serie A,Frosinone,Lecce,HS,⭐⭐⭐ Frosinone to score · 89% · bet at 1.16+,88.8,1.16,Strong,1xBet pays only 1.08 (needs 1.16),2.22 - 0.86
 2026-10-29 19:45,2026-10-29,I1,Italy - Serie A,Fiorentina,Atalanta,U45,⭐ Under 4.5 goals · 84% · bet at 1.22+,84.3,1.22,Fair,below 85%,1.35 - 1.26
 2026-10-30 17:00,2026-10-30,T1,Turkey - Super Lig,Konyaspor,Galatasaray,U45,⭐ Under 4.5 goals · 85% · bet at 1.22+,84.7,1.22,Fair,below 85%,1.05 - 1.75
-2026-10-30 18:00,2026-10-30,F1,France - Ligue 1,Le Havre,Paris SG,AS,⭐⭐⭐ Paris SG to score · 89% · bet at 1.16+,88.6,1.16,Strong,OK,0.92 - 2.17
+2026-10-30 18:00,2026-10-30,F1,France - Ligue 1,Le Havre,Paris SG,AS,⭐⭐⭐ Paris SG to score · 89% · bet at 1.16+,88.6,1.16,Strong,1xBet pays only 1.01 (needs 1.16),0.92 - 2.17
 2026-10-30 19:00,2026-10-30,F2,France - Ligue 2,Grenoble,Dijon,U45,⭐ Under 4.5 goals · 82% · bet at 1.26+,81.9,1.26,Fair,below 85%,1.44 - 1.54
 2026-10-30 19:00,2026-10-30,F2,France - Ligue 2,Metz,Pau FC,HS,⭐ Metz to score · 85% · bet at 1.22+,84.6,1.22,Fair,below 85%,1.87 - 1.24
 2026-10-30 19:00,2026-10-30,F2,France - Ligue 2,Laval,Boulogne,U35,⭐ Under 3.5 goals · 82% · bet at 1.26+,82.0,1.26,Fair,below 85%,1.15 - 1.05
@@ -711,3 +711,5 @@ Kickoff (UTC),Match day,League,Competition,HomeTeam,AwayTeam,Pick key,Best pick,
 2026-11-02 20:00,2026-11-02,SP1,Spain - La Liga,La Coruna,Osasuna,U45,⭐⭐⭐ Under 4.5 goals · 89% · bet at 1.16+,89.0,1.16,Strong,OK,1.48 - 1.03
 2026-11-02 20:15,2026-11-02,P1,Portugal - Primeira Liga,Benfica,Alverca,1X,⭐⭐⭐ Benfica or draw · 90% · bet at 1.15+,89.6,1.15,Strong,OK,2.54 - 0.83
 2026-11-02 20:15,2026-11-02,P1,Portugal - Primeira Liga,Gil Vicente,Guimaraes,U45,🔒 Under 4.5 goals · 92% · bet at 1.12+,91.6,1.12,Banker,OK,1.25 - 1.06
+2026-11-03 17:45,2026-11-03,UCL,UEFA Champions League,Shakhtar,Sporting CP,U45,⭐ Under 4.5 goals · 81% · bet at 1.27+,80.9,1.27,Fair,below 85%,1.13 - 1.59
+2026-11-03 17:45,2026-11-03,UCL,UEFA Champions League,Galatasaray,Stuttgart,HS,⭐ Galatasaray to score · 83% · bet at 1.24+,82.9,1.24,Fair,below 85%,2.14 - 1.56
