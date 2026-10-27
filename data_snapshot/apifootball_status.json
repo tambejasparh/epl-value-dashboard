@@ -1,5 +1,5 @@
 {
- "time": "2026-10-26 10:56 UTC",
+ "time": "2026-10-27 10:20 UTC",
  "key_present": true,
  "plan": "Pro",
  "requests_today": {
@@ -10,7 +10,7 @@
  "fixtures_errors": null,
  "fixtures_found": 3,
  "injuries_errors": null,
- "injuries_found": 908,
+ "injuries_found": 922,
  "season": 2026,
  "result": "current season available"
 }
