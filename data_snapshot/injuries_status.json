@@ -1,5 +1,5 @@
 {
- "time": "2026-10-27 10:20 UTC",
+ "time": "2026-10-27 15:02 UTC",
  "key_present": true,
  "leagues_found": {
   "I1": "Serie A (Italy)",
@@ -22,12 +22,12 @@
  },
  "fixtures": 64,
  "injured": 99,
- "players_fetched": 9,
- "requests_used": 17,
+ "players_fetched": 0,
+ "requests_used": 8,
  "result": "99 missing players across 64 fixtures",
- "odds_time": "2026-10-27 10:20 UTC",
+ "odds_time": "2026-10-27 15:02 UTC",
  "odds_calls": 46,
- "odds_rows": 6445,
+ "odds_rows": 6487,
  "odds_fixtures": 46,
  "books_seen": [
   "1xBet",
