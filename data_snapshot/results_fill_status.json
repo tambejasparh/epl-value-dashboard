@@ -1,5 +1,5 @@
 {
- "time": "2026-10-28 15:39 UTC",
+ "time": "2026-10-28 18:42 UTC",
  "leagues": {
   "SC2": {
    "season": 2026,
@@ -17,6 +17,38 @@
     "Peterhead",
     "Queen of the South",
     "Ross County"
+   ]
+  },
+  "EC": {
+   "season": 2026,
+   "finished": 174,
+   "latest": "2026-10-27",
+   "errors": null,
+   "teams": [
+    "AFC Fylde",
+    "AFC Hornchurch",
+    "Aldershot Town",
+    "Altrincham",
+    "Barrow",
+    "Boreham Wood",
+    "Boston United",
+    "Carlisle",
+    "Eastleigh",
+    "FC Halifax Town",
+    "Forest Green",
+    "Gateshead",
+    "Harrogate Town",
+    "Hartlepool",
+    "Kidderminster Harriers",
+    "Scunthorpe",
+    "Solihull Moors",
+    "Southend",
+    "Sutton Utd",
+    "Tamworth",
+    "Wealdstone",
+    "Woking",
+    "Worthing",
+    "Yeovil Town"
    ]
   },
   "SC1": {
@@ -55,38 +87,6 @@
     "Rangers",
     "ST Johnstone",
     "ST Mirren"
-   ]
-  },
-  "EC": {
-   "season": 2026,
-   "finished": 174,
-   "latest": "2026-10-27",
-   "errors": null,
-   "teams": [
-    "AFC Fylde",
-    "AFC Hornchurch",
-    "Aldershot Town",
-    "Altrincham",
-    "Barrow",
-    "Boreham Wood",
-    "Boston United",
-    "Carlisle",
-    "Eastleigh",
-    "FC Halifax Town",
-    "Forest Green",
-    "Gateshead",
-    "Harrogate Town",
-    "Hartlepool",
-    "Kidderminster Harriers",
-    "Scunthorpe",
-    "Solihull Moors",
-    "Southend",
-    "Sutton Utd",
-    "Tamworth",
-    "Wealdstone",
-    "Woking",
-    "Worthing",
-    "Yeovil Town"
    ]
   },
   "E3": {
@@ -231,60 +231,6 @@
     "Stranraer"
    ]
   },
-  "D1": {
-   "season": 2026,
-   "finished": 63,
-   "latest": "2026-10-25",
-   "errors": null,
-   "teams": [
-    "1. FC K\u00f6ln",
-    "1899 Hoffenheim",
-    "Bayer Leverkusen",
-    "Bayern M\u00fcnchen",
-    "Borussia Dortmund",
-    "Borussia M\u00f6nchengladbach",
-    "Eintracht Frankfurt",
-    "FC Augsburg",
-    "FC Schalke 04",
-    "FSV Mainz 05",
-    "Hamburger SV",
-    "RB Leipzig",
-    "SC Freiburg",
-    "SC Paderborn 07",
-    "SV Elversberg",
-    "Union Berlin",
-    "VfB Stuttgart",
-    "Werder Bremen"
-   ]
-  },
-  "I2": {
-   "season": 2026,
-   "finished": 87,
-   "latest": "2026-10-27",
-   "errors": null,
-   "teams": [
-    "Arezzo",
-    "Ascoli",
-    "Avellino",
-    "Benevento",
-    "Carrarese",
-    "Catanzaro",
-    "Cesena",
-    "Cremonese",
-    "Empoli",
-    "Hellas Verona",
-    "Juve Stabia",
-    "Mantova",
-    "Modena",
-    "Padova",
-    "Palermo",
-    "Pisa",
-    "Sampdoria",
-    "Sudtirol",
-    "Vicenza Virtus",
-    "Virtus Entella"
-   ]
-  },
   "D2": {
    "season": 2026,
    "finished": 81,
@@ -309,6 +255,32 @@
     "VfL Bochum",
     "VfL Osnabr\u00fcck",
     "VfL Wolfsburg"
+   ]
+  },
+  "D1": {
+   "season": 2026,
+   "finished": 63,
+   "latest": "2026-10-25",
+   "errors": null,
+   "teams": [
+    "1. FC K\u00f6ln",
+    "1899 Hoffenheim",
+    "Bayer Leverkusen",
+    "Bayern M\u00fcnchen",
+    "Borussia Dortmund",
+    "Borussia M\u00f6nchengladbach",
+    "Eintracht Frankfurt",
+    "FC Augsburg",
+    "FC Schalke 04",
+    "FSV Mainz 05",
+    "Hamburger SV",
+    "RB Leipzig",
+    "SC Freiburg",
+    "SC Paderborn 07",
+    "SV Elversberg",
+    "Union Berlin",
+    "VfB Stuttgart",
+    "Werder Bremen"
    ]
   },
   "I1": {
@@ -339,58 +311,32 @@
     "Venezia"
    ]
   },
-  "SP1": {
+  "I2": {
    "season": 2026,
-   "finished": 99,
-   "latest": "2026-10-26",
+   "finished": 87,
+   "latest": "2026-10-27",
    "errors": null,
    "teams": [
-    "Alaves",
-    "Athletic Club",
-    "Atletico Madrid",
-    "Barcelona",
-    "Celta Vigo",
-    "Deportivo La Coruna",
-    "Elche",
-    "Espanyol",
-    "Getafe",
-    "Levante",
-    "Malaga",
-    "Osasuna",
-    "Racing Santander",
-    "Rayo Vallecano",
-    "Real Betis",
-    "Real Madrid",
-    "Real Sociedad",
-    "Sevilla",
-    "Valencia",
-    "Villarreal"
-   ]
-  },
-  "F1": {
-   "season": 2026,
-   "finished": 72,
-   "latest": "2026-10-26",
-   "errors": null,
-   "teams": [
-    "Angers",
-    "Auxerre",
-    "Estac Troyes",
-    "Le Havre",
-    "Le Mans",
-    "Lens",
-    "Lille",
-    "Lorient",
-    "Lyon",
-    "Marseille",
-    "Monaco",
-    "Nice",
-    "Paris FC",
-    "Paris Saint Germain",
-    "Rennes",
-    "Stade Brestois 29",
-    "Strasbourg",
-    "Toulouse"
+    "Arezzo",
+    "Ascoli",
+    "Avellino",
+    "Benevento",
+    "Carrarese",
+    "Catanzaro",
+    "Cesena",
+    "Cremonese",
+    "Empoli",
+    "Hellas Verona",
+    "Juve Stabia",
+    "Mantova",
+    "Modena",
+    "Padova",
+    "Palermo",
+    "Pisa",
+    "Sampdoria",
+    "Sudtirol",
+    "Vicenza Virtus",
+    "Virtus Entella"
    ]
   },
   "SP2": {
@@ -421,6 +367,60 @@
     "Sporting Gijon",
     "Tenerife",
     "Valladolid"
+   ]
+  },
+  "F1": {
+   "season": 2026,
+   "finished": 72,
+   "latest": "2026-10-26",
+   "errors": null,
+   "teams": [
+    "Angers",
+    "Auxerre",
+    "Estac Troyes",
+    "Le Havre",
+    "Le Mans",
+    "Lens",
+    "Lille",
+    "Lorient",
+    "Lyon",
+    "Marseille",
+    "Monaco",
+    "Nice",
+    "Paris FC",
+    "Paris Saint Germain",
+    "Rennes",
+    "Stade Brestois 29",
+    "Strasbourg",
+    "Toulouse"
+   ]
+  },
+  "SP1": {
+   "season": 2026,
+   "finished": 99,
+   "latest": "2026-10-26",
+   "errors": null,
+   "teams": [
+    "Alaves",
+    "Athletic Club",
+    "Atletico Madrid",
+    "Barcelona",
+    "Celta Vigo",
+    "Deportivo La Coruna",
+    "Elche",
+    "Espanyol",
+    "Getafe",
+    "Levante",
+    "Malaga",
+    "Osasuna",
+    "Racing Santander",
+    "Rayo Vallecano",
+    "Real Betis",
+    "Real Madrid",
+    "Real Sociedad",
+    "Sevilla",
+    "Valencia",
+    "Villarreal"
    ]
   },
   "RUS": {
@@ -475,32 +475,6 @@
     "Yokohama F. Marinos"
    ]
   },
-  "F2": {
-   "season": 2026,
-   "finished": 90,
-   "latest": "2026-10-26",
-   "errors": null,
-   "teams": [
-    "Annecy",
-    "Boulogne",
-    "Clermont Foot",
-    "Dijon",
-    "Dunkerque",
-    "Grenoble",
-    "Guingamp",
-    "Laval",
-    "Metz",
-    "Montpellier",
-    "Nancy",
-    "Nantes",
-    "PAU",
-    "RED Star FC 93",
-    "Reims",
-    "Rodez",
-    "Saint Etienne",
-    "Sochaux"
-   ]
-  },
   "N1": {
    "season": 2026,
    "finished": 90,
@@ -551,6 +525,32 @@
     "Yunnan Yukun"
    ]
   },
+  "F2": {
+   "season": 2026,
+   "finished": 90,
+   "latest": "2026-10-26",
+   "errors": null,
+   "teams": [
+    "Annecy",
+    "Boulogne",
+    "Clermont Foot",
+    "Dijon",
+    "Dunkerque",
+    "Grenoble",
+    "Guingamp",
+    "Laval",
+    "Metz",
+    "Montpellier",
+    "Nancy",
+    "Nantes",
+    "PAU",
+    "RED Star FC 93",
+    "Reims",
+    "Rodez",
+    "Saint Etienne",
+    "Sochaux"
+   ]
+  },
   "B1": {
    "season": 2026,
    "finished": 80,
@@ -575,32 +575,6 @@
     "Standard Liege",
     "Union St. Gilloise",
     "Zulte Waregem"
-   ]
-  },
-  "T1": {
-   "season": 2026,
-   "finished": 81,
-   "latest": "2026-10-26",
-   "errors": null,
-   "teams": [
-    "Alanyaspor",
-    "Amed",
-    "Ba\u015fak\u015fehir",
-    "Be\u015fikta\u015f",
-    "Erzurumspor FK",
-    "Ey\u00fcpspor",
-    "Fenerbah\u00e7e",
-    "Galatasaray",
-    "Gaziantep FK",
-    "Gen\u00e7lerbirli\u011fi S.K.",
-    "G\u00f6ztepe",
-    "Kas\u0131mpa\u015fa",
-    "Kocaelispor",
-    "Konyaspor",
-    "Rizespor",
-    "Samsunspor",
-    "Trabzonspor",
-    "\u00c7orum FK"
    ]
   },
   "G1": {
@@ -649,6 +623,32 @@
     "Santa Clara",
     "Sporting CP",
     "Vit\u00f3ria SC"
+   ]
+  },
+  "T1": {
+   "season": 2026,
+   "finished": 81,
+   "latest": "2026-10-26",
+   "errors": null,
+   "teams": [
+    "Alanyaspor",
+    "Amed",
+    "Ba\u015fak\u015fehir",
+    "Be\u015fikta\u015f",
+    "Erzurumspor FK",
+    "Ey\u00fcpspor",
+    "Fenerbah\u00e7e",
+    "Galatasaray",
+    "Gaziantep FK",
+    "Gen\u00e7lerbirli\u011fi S.K.",
+    "G\u00f6ztepe",
+    "Kas\u0131mpa\u015fa",
+    "Kocaelispor",
+    "Konyaspor",
+    "Rizespor",
+    "Samsunspor",
+    "Trabzonspor",
+    "\u00c7orum FK"
    ]
   }
  }
