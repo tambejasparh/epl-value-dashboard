@@ -17,7 +17,6 @@ FixtureId,TeamId,PlayerId,Player,Type,Reason
 1550169,499,48119,O. Kossounou,Missing Fixture,Thigh Injury
 1550169,499,30543,G. Raspadori,Missing Fixture,Thigh Injury
 1550169,499,30544,G. Scamacca,Missing Fixture,Thigh Injury
-1550169,499,199837,K. Sulemana,Missing Fixture,Knee Injury
 1584455,607,61986,A. Demirbag,Missing Fixture,Injury
 1584455,645,61837,A. Bardakci,Missing Fixture,Red Card
 1552801,111,961,F. Mambimbi,Missing Fixture,Achilles Tendon Injury
@@ -39,7 +38,9 @@ FixtureId,TeamId,PlayerId,Player,Type,Reason
 1552806,94,163004,E. Lepaul,Missing Fixture,Ankle Injury
 1575211,1660,177362,T. Zimmerschied,Missing Fixture,Ankle Injury
 1575211,1660,412704,N. Darvich,Questionable,Hamstring Injury
+1575211,1660,162079,L. Gunther,Questionable,Knock
 1575211,1660,25063,J. Gyamerah,Questionable,Thigh Injury
+1575211,1660,177731,L. Pinckert,Questionable,Muscle Injury
 1575211,1660,583807,L. Seifert,Questionable,Ankle Injury
 1575211,164,979,D. Kohr,Missing Fixture,Foot Injury
 1575211,164,20617,Silas,Missing Fixture,Broken shinbone
@@ -447,7 +448,39 @@ FixtureId,TeamId,PlayerId,Player,Type,Reason
 1552211,420,383068,W. Asselman,Missing Fixture,Injury
 1552211,420,516834,D. Visser,Missing Fixture,Knee Injury
 1552211,410,378962,P. Saathof,Missing Fixture,Knee Injury
-1550180,517,26095,M. Šverko,Missing Fixture,Hip Injury
+1561432,1080,195093,Alexandre Jesus,Missing Fixture,Inactive
+1561432,1080,59860,R. Mejia,Missing Fixture,Inactive
+1561432,1080,55390,M. Rudakov,Missing Fixture,Arm Injury
+1561432,1080,267982,M. Savelyev,Missing Fixture,Inactive
+1561432,1080,341071,D. Vasiljev,Missing Fixture,Inactive
+1561432,555,821,I. Akinfeev,Missing Fixture,Muscle Injury
+1561432,555,476,D. Barinov,Missing Fixture,Knee Injury
+1561432,555,341,M. Gajic,Missing Fixture,Knee Injury
+1561432,555,10225,Joao Victor,Missing Fixture,Yellow Cards
+1561432,555,10013,Moises,Missing Fixture,Knee Injury
+1584448,3579,14590,L. Dellova,Missing Fixture,Yellow Cards
+1584448,3579,427020,D. Demir,Missing Fixture,Knee Injury
+1584448,3579,458,M. Diagne,Missing Fixture,Red Card
+1584448,3579,203458,Y. Sor,Missing Fixture,Muscle Injury
+1584448,3579,458773,M. Yildirim,Missing Fixture,Muscle Injury
+1552212,193,36970,S. Floranus,Missing Fixture,Injury
+1552212,193,11245,F. Krastev,Missing Fixture,Achilles Tendon Injury
+1552212,198,28378,D. Barany,Missing Fixture,Thigh Injury
+1552212,198,271562,L. Reischl,Missing Fixture,Groin Injury
+1550180,895,19720,T. Chalobah,Missing Fixture,Injury
+1550180,895,400948,A. Diao,Missing Fixture,Thigh Injury
+1550180,895,877,M. Kean,Missing Fixture,Leg Injury
+1550180,895,410396,M. Liberali,Missing Fixture,Leg Injury
+1550180,895,443162,J. Rodriguez,Missing Fixture,Injury
+1550180,517,212,A. Adorante,Missing Fixture,Hernia
+1550180,517,1482,T. Correia,Missing Fixture,Thigh Injury
+1550180,517,14704,B. Franjic,Missing Fixture,Shoulder Injury
+1550180,517,26095,M. Sverko,Missing Fixture,Hip Injury
+1550180,517,31390,P. Mazzocchi,Questionable,Injury
+1561428,6813,43756,M. Alibekov,Missing Fixture,Yellow Cards
+1561428,6813,158461,I. Shumakhov,Missing Fixture,Knee Injury
+1561428,779,427534,G. Ignatov,Missing Fixture,Inactive
+1561428,779,464689,I. Zhbanov,Missing Fixture,Injury
 1550183,487,1841,Patric,Missing Fixture,Sprained Ankle
 1550183,487,63934,A. Furlanetto,Missing Fixture,Jumpers Knee
 1550183,490,383026,Riyad Idrissi,Missing Fixture,Jumpers Knee

@@ -1,5 +1,5 @@
 {
- "time": "2026-10-29 11:25 UTC",
+ "time": "2026-10-29 15:44 UTC",
  "key_present": true,
  "leagues_found": {
   "I1": "Serie A (Italy)",
@@ -28,14 +28,14 @@
   "G1": "Super League 1 (Greece)"
  },
  "fixtures": 203,
- "injured": 456,
- "players_fetched": 355,
- "requests_used": 363,
- "result": "456 missing players across 203 fixtures",
- "odds_time": "2026-10-29 11:26 UTC",
- "odds_calls": 152,
- "odds_rows": 19078,
- "odds_fixtures": 152,
+ "injured": 489,
+ "players_fetched": 34,
+ "requests_used": 42,
+ "result": "489 missing players across 203 fixtures",
+ "odds_time": "2026-10-29 15:44 UTC",
+ "odds_calls": 179,
+ "odds_rows": 22238,
+ "odds_fixtures": 179,
  "books_seen": [
   "1xBet",
   "Bet365",
@@ -90,6 +90,6 @@
   "Total - Home",
   "Total Corners (1st Half)"
  ],
- "my_book_fixtures": 151,
- "odds_result": "prices for 152 fixtures"
+ "my_book_fixtures": 178,
+ "odds_result": "prices for 179 fixtures"
 }
