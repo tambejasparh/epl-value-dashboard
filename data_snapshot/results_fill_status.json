@@ -1,5 +1,5 @@
 {
- "time": "2026-10-29 18:50 UTC",
+ "time": "2026-10-29 21:44 UTC",
  "leagues": {
   "SC2": {
    "season": 2026,
@@ -117,38 +117,6 @@
     "Tottenham"
    ]
   },
-  "E1": {
-   "season": 2026,
-   "finished": 144,
-   "latest": "2026-10-24",
-   "errors": null,
-   "teams": [
-    "Birmingham",
-    "Blackburn",
-    "Bolton",
-    "Bristol City",
-    "Burnley",
-    "Cardiff",
-    "Charlton",
-    "Derby",
-    "Lincoln",
-    "Middlesbrough",
-    "Millwall",
-    "Norwich",
-    "Portsmouth",
-    "Preston",
-    "QPR",
-    "Sheffield Utd",
-    "Southampton",
-    "Stoke City",
-    "Swansea",
-    "Watford",
-    "West Brom",
-    "West Ham",
-    "Wolves",
-    "Wrexham"
-   ]
-  },
   "E2": {
    "season": 2026,
    "finished": 143,
@@ -179,6 +147,38 @@
     "Stockport County",
     "Wigan",
     "Wycombe"
+   ]
+  },
+  "E1": {
+   "season": 2026,
+   "finished": 144,
+   "latest": "2026-10-24",
+   "errors": null,
+   "teams": [
+    "Birmingham",
+    "Blackburn",
+    "Bolton",
+    "Bristol City",
+    "Burnley",
+    "Cardiff",
+    "Charlton",
+    "Derby",
+    "Lincoln",
+    "Middlesbrough",
+    "Millwall",
+    "Norwich",
+    "Portsmouth",
+    "Preston",
+    "QPR",
+    "Sheffield Utd",
+    "Southampton",
+    "Stoke City",
+    "Swansea",
+    "Watford",
+    "West Brom",
+    "West Ham",
+    "Wolves",
+    "Wrexham"
    ]
   },
   "E3": {
@@ -313,8 +313,8 @@
   },
   "I1": {
    "season": 2026,
-   "finished": 88,
-   "latest": "2026-10-28",
+   "finished": 89,
+   "latest": "2026-10-29",
    "errors": null,
    "teams": [
     "AC Milan",
@@ -525,6 +525,32 @@
     "Yunnan Yukun"
    ]
   },
+  "N1": {
+   "season": 2026,
+   "finished": 90,
+   "latest": "2026-10-25",
+   "errors": null,
+   "teams": [
+    "ADO Den Haag",
+    "AZ Alkmaar",
+    "Ajax",
+    "Cambuur",
+    "Excelsior",
+    "Feyenoord",
+    "Fortuna Sittard",
+    "GO Ahead Eagles",
+    "Groningen",
+    "Heerenveen",
+    "NEC Nijmegen",
+    "PEC Zwolle",
+    "PSV Eindhoven",
+    "Sparta Rotterdam",
+    "Telstar",
+    "Twente",
+    "Utrecht",
+    "Willem II"
+   ]
+  },
   "B1": {
    "season": 2026,
    "finished": 80,
@@ -549,6 +575,28 @@
     "Standard Liege",
     "Union St. Gilloise",
     "Zulte Waregem"
+   ]
+  },
+  "G1": {
+   "season": 2026,
+   "finished": 55,
+   "latest": "2026-10-25",
+   "errors": null,
+   "teams": [
+    "AEK Athens FC",
+    "Aris Thessalonikis",
+    "Asteras Tripolis",
+    "Atromitos",
+    "Iraklis 1908",
+    "Kalamata",
+    "Kifisia",
+    "Levadiakos",
+    "OFI",
+    "Olympiakos Piraeus",
+    "PAOK",
+    "Panathinaikos",
+    "Panetolikos",
+    "Volos NFC"
    ]
   },
   "P1": {
@@ -601,54 +649,6 @@
     "Samsunspor",
     "Trabzonspor",
     "\u00c7orum FK"
-   ]
-  },
-  "G1": {
-   "season": 2026,
-   "finished": 55,
-   "latest": "2026-10-25",
-   "errors": null,
-   "teams": [
-    "AEK Athens FC",
-    "Aris Thessalonikis",
-    "Asteras Tripolis",
-    "Atromitos",
-    "Iraklis 1908",
-    "Kalamata",
-    "Kifisia",
-    "Levadiakos",
-    "OFI",
-    "Olympiakos Piraeus",
-    "PAOK",
-    "Panathinaikos",
-    "Panetolikos",
-    "Volos NFC"
-   ]
-  },
-  "N1": {
-   "season": 2026,
-   "finished": 90,
-   "latest": "2026-10-25",
-   "errors": null,
-   "teams": [
-    "ADO Den Haag",
-    "AZ Alkmaar",
-    "Ajax",
-    "Cambuur",
-    "Excelsior",
-    "Feyenoord",
-    "Fortuna Sittard",
-    "GO Ahead Eagles",
-    "Groningen",
-    "Heerenveen",
-    "NEC Nijmegen",
-    "PEC Zwolle",
-    "PSV Eindhoven",
-    "Sparta Rotterdam",
-    "Telstar",
-    "Twente",
-    "Utrecht",
-    "Willem II"
    ]
   }
  }
