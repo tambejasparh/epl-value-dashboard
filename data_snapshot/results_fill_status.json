@@ -1,24 +1,6 @@
 {
- "time": "2026-10-28 21:37 UTC",
+ "time": "2026-10-29 11:27 UTC",
  "leagues": {
-  "SC2": {
-   "season": 2026,
-   "finished": 59,
-   "latest": "2026-10-27",
-   "errors": null,
-   "teams": [
-    "Airdrie United",
-    "Alloa Athletic",
-    "Cove Rangers",
-    "East Fife",
-    "East Kilbride",
-    "Hamilton Academical",
-    "Montrose",
-    "Peterhead",
-    "Queen of the South",
-    "Ross County"
-   ]
-  },
   "SC1": {
    "season": 2026,
    "finished": 59,
@@ -37,10 +19,28 @@
     "Stenhousemuir"
    ]
   },
+  "SC2": {
+   "season": 2026,
+   "finished": 59,
+   "latest": "2026-10-27",
+   "errors": null,
+   "teams": [
+    "Airdrie United",
+    "Alloa Athletic",
+    "Cove Rangers",
+    "East Fife",
+    "East Kilbride",
+    "Hamilton Academical",
+    "Montrose",
+    "Peterhead",
+    "Queen of the South",
+    "Ross County"
+   ]
+  },
   "EC": {
    "season": 2026,
-   "finished": 174,
-   "latest": "2026-10-27",
+   "finished": 177,
+   "latest": "2026-10-28",
    "errors": null,
    "teams": [
     "AFC Fylde",
@@ -71,7 +71,7 @@
   },
   "SC0": {
    "season": 2026,
-   "finished": 62,
+   "finished": 66,
    "latest": "2026-10-28",
    "errors": null,
    "teams": [
@@ -231,32 +231,6 @@
     "Stranraer"
    ]
   },
-  "D1": {
-   "season": 2026,
-   "finished": 63,
-   "latest": "2026-10-25",
-   "errors": null,
-   "teams": [
-    "1. FC K\u00f6ln",
-    "1899 Hoffenheim",
-    "Bayer Leverkusen",
-    "Bayern M\u00fcnchen",
-    "Borussia Dortmund",
-    "Borussia M\u00f6nchengladbach",
-    "Eintracht Frankfurt",
-    "FC Augsburg",
-    "FC Schalke 04",
-    "FSV Mainz 05",
-    "Hamburger SV",
-    "RB Leipzig",
-    "SC Freiburg",
-    "SC Paderborn 07",
-    "SV Elversberg",
-    "Union Berlin",
-    "VfB Stuttgart",
-    "Werder Bremen"
-   ]
-  },
   "D2": {
    "season": 2026,
    "finished": 81,
@@ -311,32 +285,30 @@
     "Virtus Entella"
    ]
   },
-  "I1": {
+  "D1": {
    "season": 2026,
-   "finished": 86,
-   "latest": "2026-10-28",
+   "finished": 63,
+   "latest": "2026-10-25",
    "errors": null,
    "teams": [
-    "AC Milan",
-    "AS Roma",
-    "Atalanta",
-    "Bologna",
-    "Cagliari",
-    "Como",
-    "Fiorentina",
-    "Frosinone",
-    "Genoa",
-    "Inter",
-    "Juventus",
-    "Lazio",
-    "Lecce",
-    "Monza",
-    "Napoli",
-    "Parma",
-    "Sassuolo",
-    "Torino",
-    "Udinese",
-    "Venezia"
+    "1. FC K\u00f6ln",
+    "1899 Hoffenheim",
+    "Bayer Leverkusen",
+    "Bayern M\u00fcnchen",
+    "Borussia Dortmund",
+    "Borussia M\u00f6nchengladbach",
+    "Eintracht Frankfurt",
+    "FC Augsburg",
+    "FC Schalke 04",
+    "FSV Mainz 05",
+    "Hamburger SV",
+    "RB Leipzig",
+    "SC Freiburg",
+    "SC Paderborn 07",
+    "SV Elversberg",
+    "Union Berlin",
+    "VfB Stuttgart",
+    "Werder Bremen"
    ]
   },
   "SP2": {
@@ -423,6 +395,34 @@
     "Toulouse"
    ]
   },
+  "I1": {
+   "season": 2026,
+   "finished": 88,
+   "latest": "2026-10-28",
+   "errors": null,
+   "teams": [
+    "AC Milan",
+    "AS Roma",
+    "Atalanta",
+    "Bologna",
+    "Cagliari",
+    "Como",
+    "Fiorentina",
+    "Frosinone",
+    "Genoa",
+    "Inter",
+    "Juventus",
+    "Lazio",
+    "Lecce",
+    "Monza",
+    "Napoli",
+    "Parma",
+    "Sassuolo",
+    "Torino",
+    "Udinese",
+    "Venezia"
+   ]
+  },
   "RUS": {
    "season": 2026,
    "finished": 96,
@@ -501,32 +501,6 @@
     "Sochaux"
    ]
   },
-  "B1": {
-   "season": 2026,
-   "finished": 80,
-   "latest": "2026-10-25",
-   "errors": null,
-   "teams": [
-    "Anderlecht",
-    "Antwerp",
-    "Cercle Brugge",
-    "Charleroi",
-    "Club Brugge KV",
-    "Genk",
-    "Gent",
-    "KV Mechelen",
-    "KVC Westerlo",
-    "Kortrijk",
-    "Lommel United",
-    "OH Leuven",
-    "RAAL La Louvi\u00e8re",
-    "SK Beveren",
-    "St. Truiden",
-    "Standard Liege",
-    "Union St. Gilloise",
-    "Zulte Waregem"
-   ]
-  },
   "N1": {
    "season": 2026,
    "finished": 90,
@@ -575,6 +549,32 @@
     "Tianjin Teda",
     "Wuhan Three Towns",
     "Yunnan Yukun"
+   ]
+  },
+  "B1": {
+   "season": 2026,
+   "finished": 80,
+   "latest": "2026-10-25",
+   "errors": null,
+   "teams": [
+    "Anderlecht",
+    "Antwerp",
+    "Cercle Brugge",
+    "Charleroi",
+    "Club Brugge KV",
+    "Genk",
+    "Gent",
+    "KV Mechelen",
+    "KVC Westerlo",
+    "Kortrijk",
+    "Lommel United",
+    "OH Leuven",
+    "RAAL La Louvi\u00e8re",
+    "SK Beveren",
+    "St. Truiden",
+    "Standard Liege",
+    "Union St. Gilloise",
+    "Zulte Waregem"
    ]
   },
   "G1": {
