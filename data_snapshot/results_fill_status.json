@@ -1,24 +1,6 @@
 {
- "time": "2026-10-29 21:44 UTC",
+ "time": "2026-10-30 11:18 UTC",
  "leagues": {
-  "SC2": {
-   "season": 2026,
-   "finished": 59,
-   "latest": "2026-10-27",
-   "errors": null,
-   "teams": [
-    "Airdrie United",
-    "Alloa Athletic",
-    "Cove Rangers",
-    "East Fife",
-    "East Kilbride",
-    "Hamilton Academical",
-    "Montrose",
-    "Peterhead",
-    "Queen of the South",
-    "Ross County"
-   ]
-  },
   "SC1": {
    "season": 2026,
    "finished": 59,
@@ -37,84 +19,22 @@
     "Stenhousemuir"
    ]
   },
-  "EC": {
+  "SC2": {
    "season": 2026,
-   "finished": 177,
-   "latest": "2026-10-28",
+   "finished": 59,
+   "latest": "2026-10-27",
    "errors": null,
    "teams": [
-    "AFC Fylde",
-    "AFC Hornchurch",
-    "Aldershot Town",
-    "Altrincham",
-    "Barrow",
-    "Boreham Wood",
-    "Boston United",
-    "Carlisle",
-    "Eastleigh",
-    "FC Halifax Town",
-    "Forest Green",
-    "Gateshead",
-    "Harrogate Town",
-    "Hartlepool",
-    "Kidderminster Harriers",
-    "Scunthorpe",
-    "Solihull Moors",
-    "Southend",
-    "Sutton Utd",
-    "Tamworth",
-    "Wealdstone",
-    "Woking",
-    "Worthing",
-    "Yeovil Town"
-   ]
-  },
-  "SC0": {
-   "season": 2026,
-   "finished": 66,
-   "latest": "2026-10-28",
-   "errors": null,
-   "teams": [
-    "Aberdeen",
-    "Celtic",
-    "Dundee",
-    "Dundee Utd",
-    "Falkirk",
-    "Heart Of Midlothian",
-    "Hibernian",
-    "Kilmarnock",
-    "Motherwell",
-    "Rangers",
-    "ST Johnstone",
-    "ST Mirren"
-   ]
-  },
-  "E0": {
-   "season": 2026,
-   "finished": 80,
-   "latest": "2026-10-25",
-   "errors": null,
-   "teams": [
-    "Arsenal",
-    "Aston Villa",
-    "Bournemouth",
-    "Brentford",
-    "Brighton",
-    "Chelsea",
-    "Coventry",
-    "Crystal Palace",
-    "Everton",
-    "Fulham",
-    "Hull City",
-    "Ipswich",
-    "Leeds",
-    "Liverpool",
-    "Manchester City",
-    "Manchester United",
-    "Newcastle",
-    "Nottingham Forest",
-    "Sunderland",
-    "Tottenham"
+    "Airdrie United",
+    "Alloa Athletic",
+    "Cove Rangers",
+    "East Fife",
+    "East Kilbride",
+    "Hamilton Academical",
+    "Montrose",
+    "Peterhead",
+    "Queen of the South",
+    "Ross County"
    ]
   },
   "E2": {
@@ -149,36 +69,84 @@
     "Wycombe"
    ]
   },
-  "E1": {
+  "EC": {
    "season": 2026,
-   "finished": 144,
-   "latest": "2026-10-24",
+   "finished": 177,
+   "latest": "2026-10-28",
    "errors": null,
    "teams": [
-    "Birmingham",
-    "Blackburn",
-    "Bolton",
-    "Bristol City",
-    "Burnley",
-    "Cardiff",
-    "Charlton",
-    "Derby",
-    "Lincoln",
-    "Middlesbrough",
-    "Millwall",
-    "Norwich",
-    "Portsmouth",
-    "Preston",
-    "QPR",
-    "Sheffield Utd",
-    "Southampton",
-    "Stoke City",
-    "Swansea",
-    "Watford",
-    "West Brom",
-    "West Ham",
-    "Wolves",
-    "Wrexham"
+    "AFC Fylde",
+    "AFC Hornchurch",
+    "Aldershot Town",
+    "Altrincham",
+    "Barrow",
+    "Boreham Wood",
+    "Boston United",
+    "Carlisle",
+    "Eastleigh",
+    "FC Halifax Town",
+    "Forest Green",
+    "Gateshead",
+    "Harrogate Town",
+    "Hartlepool",
+    "Kidderminster Harriers",
+    "Scunthorpe",
+    "Solihull Moors",
+    "Southend",
+    "Sutton Utd",
+    "Tamworth",
+    "Wealdstone",
+    "Woking",
+    "Worthing",
+    "Yeovil Town"
+   ]
+  },
+  "E0": {
+   "season": 2026,
+   "finished": 80,
+   "latest": "2026-10-25",
+   "errors": null,
+   "teams": [
+    "Arsenal",
+    "Aston Villa",
+    "Bournemouth",
+    "Brentford",
+    "Brighton",
+    "Chelsea",
+    "Coventry",
+    "Crystal Palace",
+    "Everton",
+    "Fulham",
+    "Hull City",
+    "Ipswich",
+    "Leeds",
+    "Liverpool",
+    "Manchester City",
+    "Manchester United",
+    "Newcastle",
+    "Nottingham Forest",
+    "Sunderland",
+    "Tottenham"
+   ]
+  },
+  "SC0": {
+   "season": 2026,
+   "finished": 66,
+   "latest": "2026-10-28",
+   "errors": null,
+   "teams": [
+    "Aberdeen",
+    "Celtic",
+    "Dundee",
+    "Dundee Utd",
+    "Falkirk",
+    "Heart Of Midlothian",
+    "Hibernian",
+    "Kilmarnock",
+    "Motherwell",
+    "Rangers",
+    "ST Johnstone",
+    "ST Mirren"
    ]
   },
   "E3": {
@@ -213,6 +181,38 @@
     "York"
    ]
   },
+  "E1": {
+   "season": 2026,
+   "finished": 144,
+   "latest": "2026-10-24",
+   "errors": null,
+   "teams": [
+    "Birmingham",
+    "Blackburn",
+    "Bolton",
+    "Bristol City",
+    "Burnley",
+    "Cardiff",
+    "Charlton",
+    "Derby",
+    "Lincoln",
+    "Middlesbrough",
+    "Millwall",
+    "Norwich",
+    "Portsmouth",
+    "Preston",
+    "QPR",
+    "Sheffield Utd",
+    "Southampton",
+    "Stoke City",
+    "Swansea",
+    "Watford",
+    "West Brom",
+    "West Ham",
+    "Wolves",
+    "Wrexham"
+   ]
+  },
   "SC3": {
    "season": 2026,
    "finished": 55,
@@ -229,32 +229,6 @@
     "Spartans",
     "Stirling Albion",
     "Stranraer"
-   ]
-  },
-  "D2": {
-   "season": 2026,
-   "finished": 81,
-   "latest": "2026-10-25",
-   "errors": null,
-   "teams": [
-    "1. FC Heidenheim",
-    "1. FC Kaiserslautern",
-    "1. FC Magdeburg",
-    "1. FC N\u00fcrnberg",
-    "Arminia Bielefeld",
-    "Dynamo Dresden",
-    "Eintracht Braunschweig",
-    "Energie Cottbus",
-    "FC St. Pauli",
-    "Hannover 96",
-    "Hertha BSC",
-    "Holstein Kiel",
-    "Karlsruher SC",
-    "SV Darmstadt 98",
-    "SpVgg Greuther F\u00fcrth",
-    "VfL Bochum",
-    "VfL Osnabr\u00fcck",
-    "VfL Wolfsburg"
    ]
   },
   "D1": {
@@ -281,6 +255,32 @@
     "Union Berlin",
     "VfB Stuttgart",
     "Werder Bremen"
+   ]
+  },
+  "D2": {
+   "season": 2026,
+   "finished": 81,
+   "latest": "2026-10-25",
+   "errors": null,
+   "teams": [
+    "1. FC Heidenheim",
+    "1. FC Kaiserslautern",
+    "1. FC Magdeburg",
+    "1. FC N\u00fcrnberg",
+    "Arminia Bielefeld",
+    "Dynamo Dresden",
+    "Eintracht Braunschweig",
+    "Energie Cottbus",
+    "FC St. Pauli",
+    "Hannover 96",
+    "Hertha BSC",
+    "Holstein Kiel",
+    "Karlsruher SC",
+    "SV Darmstadt 98",
+    "SpVgg Greuther F\u00fcrth",
+    "VfL Bochum",
+    "VfL Osnabr\u00fcck",
+    "VfL Wolfsburg"
    ]
   },
   "I2": {
@@ -313,7 +313,7 @@
   },
   "I1": {
    "season": 2026,
-   "finished": 89,
+   "finished": 90,
    "latest": "2026-10-29",
    "errors": null,
    "teams": [
@@ -525,32 +525,6 @@
     "Yunnan Yukun"
    ]
   },
-  "N1": {
-   "season": 2026,
-   "finished": 90,
-   "latest": "2026-10-25",
-   "errors": null,
-   "teams": [
-    "ADO Den Haag",
-    "AZ Alkmaar",
-    "Ajax",
-    "Cambuur",
-    "Excelsior",
-    "Feyenoord",
-    "Fortuna Sittard",
-    "GO Ahead Eagles",
-    "Groningen",
-    "Heerenveen",
-    "NEC Nijmegen",
-    "PEC Zwolle",
-    "PSV Eindhoven",
-    "Sparta Rotterdam",
-    "Telstar",
-    "Twente",
-    "Utrecht",
-    "Willem II"
-   ]
-  },
   "B1": {
    "season": 2026,
    "finished": 80,
@@ -575,6 +549,32 @@
     "Standard Liege",
     "Union St. Gilloise",
     "Zulte Waregem"
+   ]
+  },
+  "N1": {
+   "season": 2026,
+   "finished": 90,
+   "latest": "2026-10-25",
+   "errors": null,
+   "teams": [
+    "ADO Den Haag",
+    "AZ Alkmaar",
+    "Ajax",
+    "Cambuur",
+    "Excelsior",
+    "Feyenoord",
+    "Fortuna Sittard",
+    "GO Ahead Eagles",
+    "Groningen",
+    "Heerenveen",
+    "NEC Nijmegen",
+    "PEC Zwolle",
+    "PSV Eindhoven",
+    "Sparta Rotterdam",
+    "Telstar",
+    "Twente",
+    "Utrecht",
+    "Willem II"
    ]
   },
   "G1": {

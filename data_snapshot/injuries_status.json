@@ -1,5 +1,5 @@
 {
- "time": "2026-10-29 21:43 UTC",
+ "time": "2026-10-30 11:16 UTC",
  "key_present": true,
  "leagues_found": {
   "T1": "S\u00fcper Lig (Turkey)",
@@ -27,15 +27,15 @@
   "N1": "Eredivisie (Netherlands)",
   "G1": "Super League 1 (Greece)"
  },
- "fixtures": 201,
- "injured": 550,
- "players_fetched": 73,
- "requests_used": 81,
- "result": "550 missing players across 201 fixtures",
- "odds_time": "2026-10-29 21:43 UTC",
- "odds_calls": 201,
- "odds_rows": 25034,
- "odds_fixtures": 200,
+ "fixtures": 215,
+ "injured": 653,
+ "players_fetched": 111,
+ "requests_used": 119,
+ "result": "653 missing players across 215 fixtures",
+ "odds_time": "2026-10-30 11:17 UTC",
+ "odds_calls": 199,
+ "odds_rows": 26240,
+ "odds_fixtures": 198,
  "books_seen": [
   "1xBet",
   "Bet365",
@@ -90,6 +90,6 @@
   "Total - Home",
   "Total Corners (1st Half)"
  ],
- "my_book_fixtures": 199,
- "odds_result": "prices for 200 fixtures"
+ "my_book_fixtures": 197,
+ "odds_result": "prices for 198 fixtures"
 }
