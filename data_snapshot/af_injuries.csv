@@ -33,14 +33,19 @@ FixtureId,TeamId,PlayerId,Player,Type,Reason
 1570442,533,20696,P. Gueye,Missing Fixture,Red Card
 1570442,533,294824,N. Saliba,Missing Fixture,Injury
 1570442,540,47396,K. Garcia,Missing Fixture,Hamstring Injury
+1570442,540,183699,U. Gonzalez,Missing Fixture,Coach's decision
+1570442,540,47299,A. Gorosabel,Missing Fixture,Coach's decision
 1570442,540,182674,Jofre,Missing Fixture,Groin Injury
+1570442,540,282054,C. Riedel,Missing Fixture,Coach's decision
 1563233,62,18742,M. Doherty,Missing Fixture,Injury
+1563233,62,373615,R. One,Missing Fixture,Inactive
 1563233,62,19131,J. Shackleton,Missing Fixture,Health problems
+1563233,62,19134,P. Bamford,Questionable,Inactive
 1563233,1837,126791,N. Broadhead,Missing Fixture,Thigh Injury
 1563233,1837,6931,L. Cacace,Missing Fixture,Calf Injury
 1563233,1837,146316,M. Cleworth,Missing Fixture,Muscle Injury
-1563233,1837,278123,S. Revan,Missing Fixture,Hamstring Injury
 1563233,1837,19566,J. Windass,Missing Fixture,Ankle Injury
+1563233,1837,278123,S. Revan,Questionable,Hamstring Injury
 1563233,1837,194461,G. Thomason,Questionable,Thigh Injury
 1552802,79,306979,H. Igamane,Missing Fixture,Knee Injury
 1552802,79,133110,T. Nianzou,Missing Fixture,Red Card
@@ -518,8 +523,6 @@ FixtureId,TeamId,PlayerId,Player,Type,Reason
 1552808,95,390742,J. Panichelli,Missing Fixture,Knee Injury
 1552808,95,334035,S. Amo-Ameyaw,Questionable,Inactive
 1552808,95,380939,F. Balde,Questionable,Leg Injury
-1552808,95,271542,I. Doukoure,Questionable,Injury
-1552808,95,226803,S. Nanasi,Questionable,Injury
 1552808,108,30748,A. Diousse,Missing Fixture,Knee Injury
 1552808,108,193505,S. Fofana,Missing Fixture,Groin Injury
 1552808,108,326073,R. Labeau Lascary,Missing Fixture,Injury

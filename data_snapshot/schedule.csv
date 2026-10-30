@@ -1798,13 +1798,6 @@ SP1,Málaga CF,Sevilla FC,2027-05-30 00:00:00+00:00
 SP1,CA Osasuna,Valencia CF,2027-05-30 00:00:00+00:00
 SP1,Real Madrid,RC Deportivo,2027-05-30 00:00:00+00:00
 SP1,Real Sociedad,Villarreal CF,2027-05-30 00:00:00+00:00
-I1,Milan,Bologna,2026-10-28 17:30:00+00:00
-I1,Parma,Udinese,2026-10-28 17:30:00+00:00
-I1,Venezia,Internazionale,2026-10-28 17:30:00+00:00
-I1,Genoa,Juventus,2026-10-28 19:45:00+00:00
-I1,Monza,Napoli,2026-10-28 19:45:00+00:00
-I1,Frosinone,Lecce,2026-10-29 17:30:00+00:00
-I1,Fiorentina,Atalanta,2026-10-29 19:45:00+00:00
 I1,Bologna,Monza,2026-10-31 14:00:00+00:00
 I1,Udinese,Roma,2026-10-31 17:00:00+00:00
 I1,Milan,Internazionale,2026-10-31 19:45:00+00:00
@@ -3455,12 +3448,6 @@ T1,Konyaspor,Çorum,2027-05-22 21:00:00+00:00
 T1,Amedspor,Fenerbahçe,2027-05-22 21:00:00+00:00
 T1,Kasimpasa,Kocaelispor,2027-05-22 21:00:00+00:00
 T1,Trabzonspor,Erzurumspor,2027-05-22 21:00:00+00:00
-SC0,Aberdeen,Falkirk,2026-10-28 19:45:00+00:00
-SC0,Celtic,Dundee United,2026-10-28 19:45:00+00:00
-SC0,Dundee,Kilmarnock,2026-10-28 19:45:00+00:00
-SC0,St. Johnstone,Motherwell,2026-10-28 19:45:00+00:00
-SC0,St. Mirren,Hibernian,2026-10-28 19:45:00+00:00
-SC0,Heart of Midlothian,Rangers,2026-10-28 20:00:00+00:00
 SC0,Dundee United,Heart of Midlothian,2026-10-31 15:00:00+00:00
 SC0,Kilmarnock,St. Johnstone,2026-10-31 15:00:00+00:00
 SC0,Motherwell,St. Mirren,2026-10-31 15:00:00+00:00
