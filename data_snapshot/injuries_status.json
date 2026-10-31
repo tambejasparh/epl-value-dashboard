@@ -1,9 +1,7 @@
 {
- "time": "2026-10-30 21:26 UTC",
+ "time": "2026-10-31 10:49 UTC",
  "key_present": true,
  "leagues_found": {
-  "JPN": "J1 League (Japan)",
-  "T1": "S\u00fcper Lig (Turkey)",
   "D2": "2. Bundesliga (Germany)",
   "RUS": "Premier League (Russia)",
   "E0": "Premier League (England)",
@@ -14,6 +12,7 @@
   "F2": "Ligue 2 (France)",
   "SP2": "Segunda Divisi\u00f3n (Spain)",
   "SP1": "La Liga (Spain)",
+  "T1": "S\u00fcper Lig (Turkey)",
   "I1": "Serie A (Italy)",
   "I2": "Serie B (Italy)",
   "D1": "Bundesliga (Germany)",
@@ -25,17 +24,19 @@
   "N1": "Eredivisie (Netherlands)",
   "P1": "Primeira Liga (Portugal)",
   "G1": "Super League 1 (Greece)",
-  "F1": "Ligue 1 (France)"
+  "F1": "Ligue 1 (France)",
+  "JPN": "J1 League (Japan)",
+  "UCL": "UEFA Champions League (World)"
  },
- "fixtures": 196,
- "injured": 598,
- "players_fetched": 0,
- "requests_used": 8,
- "result": "598 missing players across 196 fixtures",
- "odds_time": "2026-10-30 21:26 UTC",
- "odds_calls": 196,
- "odds_rows": 26127,
- "odds_fixtures": 195,
+ "fixtures": 209,
+ "injured": 643,
+ "players_fetched": 90,
+ "requests_used": 98,
+ "result": "643 missing players across 209 fixtures",
+ "odds_time": "2026-10-31 10:49 UTC",
+ "odds_calls": 189,
+ "odds_rows": 25493,
+ "odds_fixtures": 188,
  "books_seen": [
   "1xBet",
   "Bet365",
@@ -90,6 +91,6 @@
   "Total - Home",
   "Total Corners (1st Half)"
  ],
- "my_book_fixtures": 194,
- "odds_result": "prices for 195 fixtures"
+ "my_book_fixtures": 187,
+ "odds_result": "prices for 188 fixtures"
 }

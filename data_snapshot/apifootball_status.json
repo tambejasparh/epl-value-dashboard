@@ -1,16 +1,16 @@
 {
- "time": "2026-10-30 11:18 UTC",
+ "time": "2026-10-31 10:50 UTC",
  "key_present": true,
  "plan": "Pro",
  "requests_today": {
-  "current": 71,
+  "current": 239,
   "limit_day": 7500
  },
  "status_errors": null,
  "fixtures_errors": null,
  "fixtures_found": 3,
  "injuries_errors": null,
- "injuries_found": 1102,
+ "injuries_found": 1106,
  "season": 2026,
  "result": "current season available"
 }
