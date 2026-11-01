@@ -1,5 +1,5 @@
 {
- "time": "2026-10-31 20:27 UTC",
+ "time": "2026-11-01 11:47 UTC",
  "leagues": {
   "SC1": {
    "season": 2026,
@@ -153,34 +153,6 @@
     "Wycombe"
    ]
   },
-  "E0": {
-   "season": 2026,
-   "finished": 87,
-   "latest": "2026-10-31",
-   "errors": null,
-   "teams": [
-    "Arsenal",
-    "Aston Villa",
-    "Bournemouth",
-    "Brentford",
-    "Brighton",
-    "Chelsea",
-    "Coventry",
-    "Crystal Palace",
-    "Everton",
-    "Fulham",
-    "Hull City",
-    "Ipswich",
-    "Leeds",
-    "Liverpool",
-    "Manchester City",
-    "Manchester United",
-    "Newcastle",
-    "Nottingham Forest",
-    "Sunderland",
-    "Tottenham"
-   ]
-  },
   "E3": {
    "season": 2026,
    "finished": 163,
@@ -211,6 +183,34 @@
     "Tranmere",
     "Walsall",
     "York"
+   ]
+  },
+  "E0": {
+   "season": 2026,
+   "finished": 88,
+   "latest": "2026-10-31",
+   "errors": null,
+   "teams": [
+    "Arsenal",
+    "Aston Villa",
+    "Bournemouth",
+    "Brentford",
+    "Brighton",
+    "Chelsea",
+    "Coventry",
+    "Crystal Palace",
+    "Everton",
+    "Fulham",
+    "Hull City",
+    "Ipswich",
+    "Leeds",
+    "Liverpool",
+    "Manchester City",
+    "Manchester United",
+    "Newcastle",
+    "Nottingham Forest",
+    "Sunderland",
+    "Tottenham"
    ]
   },
   "SC3": {
@@ -259,7 +259,7 @@
   },
   "D2": {
    "season": 2026,
-   "finished": 86,
+   "finished": 87,
    "latest": "2026-10-31",
    "errors": null,
    "teams": [
@@ -285,7 +285,7 @@
   },
   "I2": {
    "season": 2026,
-   "finished": 94,
+   "finished": 95,
    "latest": "2026-10-31",
    "errors": null,
    "teams": [
@@ -313,7 +313,7 @@
   },
   "I1": {
    "season": 2026,
-   "finished": 92,
+   "finished": 93,
    "latest": "2026-10-31",
    "errors": null,
    "teams": [
@@ -341,7 +341,7 @@
   },
   "SP2": {
    "season": 2026,
-   "finished": 124,
+   "finished": 125,
    "latest": "2026-10-31",
    "errors": null,
    "teams": [
@@ -371,7 +371,7 @@
   },
   "SP1": {
    "season": 2026,
-   "finished": 103,
+   "finished": 104,
    "latest": "2026-10-31",
    "errors": null,
    "teams": [
@@ -399,8 +399,8 @@
   },
   "F1": {
    "season": 2026,
-   "finished": 75,
-   "latest": "2026-10-30",
+   "finished": 76,
+   "latest": "2026-10-31",
    "errors": null,
    "teams": [
     "Angers",
@@ -449,8 +449,8 @@
   },
   "JPN": {
    "season": 2027,
-   "finished": 126,
-   "latest": "2026-10-31",
+   "finished": 130,
+   "latest": "2026-11-01",
    "errors": null,
    "teams": [
     "Avispa Fukuoka",
@@ -499,35 +499,9 @@
     "Yunnan Yukun"
    ]
   },
-  "B1": {
-   "season": 2026,
-   "finished": 83,
-   "latest": "2026-10-31",
-   "errors": null,
-   "teams": [
-    "Anderlecht",
-    "Antwerp",
-    "Cercle Brugge",
-    "Charleroi",
-    "Club Brugge KV",
-    "Genk",
-    "Gent",
-    "KV Mechelen",
-    "KVC Westerlo",
-    "Kortrijk",
-    "Lommel United",
-    "OH Leuven",
-    "RAAL La Louvi\u00e8re",
-    "SK Beveren",
-    "St. Truiden",
-    "Standard Liege",
-    "Union St. Gilloise",
-    "Zulte Waregem"
-   ]
-  },
   "F2": {
    "season": 2026,
-   "finished": 96,
+   "finished": 97,
    "latest": "2026-10-31",
    "errors": null,
    "teams": [
@@ -551,9 +525,35 @@
     "Sochaux"
    ]
   },
+  "B1": {
+   "season": 2026,
+   "finished": 85,
+   "latest": "2026-10-31",
+   "errors": null,
+   "teams": [
+    "Anderlecht",
+    "Antwerp",
+    "Cercle Brugge",
+    "Charleroi",
+    "Club Brugge KV",
+    "Genk",
+    "Gent",
+    "KV Mechelen",
+    "KVC Westerlo",
+    "Kortrijk",
+    "Lommel United",
+    "OH Leuven",
+    "RAAL La Louvi\u00e8re",
+    "SK Beveren",
+    "St. Truiden",
+    "Standard Liege",
+    "Union St. Gilloise",
+    "Zulte Waregem"
+   ]
+  },
   "N1": {
    "season": 2026,
-   "finished": 93,
+   "finished": 95,
    "latest": "2026-10-31",
    "errors": null,
    "teams": [
@@ -601,7 +601,7 @@
   },
   "P1": {
    "season": 2026,
-   "finished": 83,
+   "finished": 84,
    "latest": "2026-10-31",
    "errors": null,
    "teams": [
