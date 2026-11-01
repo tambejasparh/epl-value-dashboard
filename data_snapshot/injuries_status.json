@@ -1,18 +1,17 @@
 {
- "time": "2026-11-01 18:17 UTC",
+ "time": "2026-11-01 21:04 UTC",
  "key_present": true,
  "leagues_found": {
-  "I2": "Serie B (Italy)",
-  "I1": "Serie A (Italy)",
-  "F1": "Ligue 1 (France)",
   "SP2": "Segunda Divisi\u00f3n (Spain)",
-  "SP1": "La Liga (Spain)",
-  "P1": "Primeira Liga (Portugal)",
   "RUS": "Premier League (Russia)",
   "G1": "Super League 1 (Greece)",
   "T1": "S\u00fcper Lig (Turkey)",
+  "I1": "Serie A (Italy)",
   "F2": "Ligue 2 (France)",
+  "F1": "Ligue 1 (France)",
   "E0": "Premier League (England)",
+  "SP1": "La Liga (Spain)",
+  "P1": "Primeira Liga (Portugal)",
   "UCL": "UEFA Champions League (World)",
   "E1": "Championship (England)",
   "E3": "League Two (England)",
@@ -20,15 +19,15 @@
   "UEL": "UEFA Europa League (World)",
   "B1": "Jupiler Pro League (Belgium)"
  },
- "fixtures": 57,
- "injured": 247,
+ "fixtures": 52,
+ "injured": 222,
  "players_fetched": 0,
  "requests_used": 8,
- "result": "247 missing players across 57 fixtures",
- "odds_time": "2026-11-01 18:17 UTC",
- "odds_calls": 45,
- "odds_rows": 6092,
- "odds_fixtures": 45,
+ "result": "222 missing players across 52 fixtures",
+ "odds_time": "2026-11-01 21:04 UTC",
+ "odds_calls": 51,
+ "odds_rows": 6637,
+ "odds_fixtures": 50,
  "books_seen": [
   "1xBet",
   "Bet365",
@@ -83,6 +82,6 @@
   "Total - Home",
   "Total Corners (1st Half)"
  ],
- "my_book_fixtures": 45,
- "odds_result": "prices for 45 fixtures"
+ "my_book_fixtures": 50,
+ "odds_result": "prices for 50 fixtures"
 }
