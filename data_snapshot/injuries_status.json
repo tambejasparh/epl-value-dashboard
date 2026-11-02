@@ -1,9 +1,9 @@
 {
- "time": "2026-11-01 21:04 UTC",
+ "time": "2026-11-02 13:20 UTC",
  "key_present": true,
  "leagues_found": {
-  "SP2": "Segunda Divisi\u00f3n (Spain)",
   "RUS": "Premier League (Russia)",
+  "SP2": "Segunda Divisi\u00f3n (Spain)",
   "G1": "Super League 1 (Greece)",
   "T1": "S\u00fcper Lig (Turkey)",
   "I1": "Serie A (Italy)",
@@ -17,16 +17,17 @@
   "E3": "League Two (England)",
   "E2": "League One (England)",
   "UEL": "UEFA Europa League (World)",
-  "B1": "Jupiler Pro League (Belgium)"
+  "B1": "Jupiler Pro League (Belgium)",
+  "UECL": "UEFA Europa Conference League (World)"
  },
- "fixtures": 52,
- "injured": 222,
- "players_fetched": 0,
- "requests_used": 8,
- "result": "222 missing players across 52 fixtures",
- "odds_time": "2026-11-01 21:04 UTC",
- "odds_calls": 51,
- "odds_rows": 6637,
+ "fixtures": 87,
+ "injured": 335,
+ "players_fetched": 55,
+ "requests_used": 63,
+ "result": "335 missing players across 87 fixtures",
+ "odds_time": "2026-11-02 13:20 UTC",
+ "odds_calls": 52,
+ "odds_rows": 6618,
  "odds_fixtures": 50,
  "books_seen": [
   "1xBet",
