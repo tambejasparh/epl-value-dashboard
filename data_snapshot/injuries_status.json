@@ -1,14 +1,7 @@
 {
- "time": "2026-11-02 18:59 UTC",
+ "time": "2026-11-02 22:10 UTC",
  "key_present": true,
  "leagues_found": {
-  "I1": "Serie A (Italy)",
-  "F2": "Ligue 2 (France)",
-  "F1": "Ligue 1 (France)",
-  "E0": "Premier League (England)",
-  "SP2": "Segunda Divisi\u00f3n (Spain)",
-  "SP1": "La Liga (Spain)",
-  "P1": "Primeira Liga (Portugal)",
   "UCL": "UEFA Champions League (World)",
   "E1": "Championship (England)",
   "E3": "League Two (England)",
@@ -17,15 +10,15 @@
   "B1": "Jupiler Pro League (Belgium)",
   "UECL": "UEFA Europa Conference League (World)"
  },
- "fixtures": 80,
- "injured": 313,
- "players_fetched": 3,
- "requests_used": 11,
- "result": "313 missing players across 80 fixtures",
- "odds_time": "2026-11-02 18:59 UTC",
- "odds_calls": 62,
- "odds_rows": 8113,
- "odds_fixtures": 61,
+ "fixtures": 71,
+ "injured": 284,
+ "players_fetched": 1,
+ "requests_used": 9,
+ "result": "284 missing players across 71 fixtures",
+ "odds_time": "2026-11-02 22:10 UTC",
+ "odds_calls": 71,
+ "odds_rows": 9441,
+ "odds_fixtures": 70,
  "books_seen": [
   "1xBet",
   "Bet365",
@@ -80,6 +73,6 @@
   "Total - Home",
   "Total Corners (1st Half)"
  ],
- "my_book_fixtures": 61,
- "odds_result": "prices for 61 fixtures"
+ "my_book_fixtures": 70,
+ "odds_result": "prices for 70 fixtures"
 }
