@@ -1,5 +1,5 @@
 {
- "time": "2026-11-02 22:10 UTC",
+ "time": "2026-11-02 23:50 UTC",
  "key_present": true,
  "leagues_found": {
   "UCL": "UEFA Champions League (World)",
@@ -12,12 +12,12 @@
  },
  "fixtures": 71,
  "injured": 284,
- "players_fetched": 1,
- "requests_used": 9,
+ "players_fetched": 0,
+ "requests_used": 8,
  "result": "284 missing players across 71 fixtures",
- "odds_time": "2026-11-02 22:10 UTC",
+ "odds_time": "2026-11-02 23:50 UTC",
  "odds_calls": 71,
- "odds_rows": 9441,
+ "odds_rows": 9590,
  "odds_fixtures": 70,
  "books_seen": [
   "1xBet",
