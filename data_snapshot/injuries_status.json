@@ -1,5 +1,5 @@
 {
- "time": "2026-11-03 12:43 UTC",
+ "time": "2026-11-03 16:44 UTC",
  "key_present": true,
  "leagues_found": {
   "UCL": "UEFA Champions League (World)",
@@ -25,14 +25,14 @@
   "P1": "Primeira Liga (Portugal)"
  },
  "fixtures": 96,
- "injured": 477,
- "players_fetched": 160,
- "requests_used": 168,
- "result": "477 missing players across 96 fixtures",
- "odds_time": "2026-11-03 12:44 UTC",
- "odds_calls": 71,
- "odds_rows": 9640,
- "odds_fixtures": 70,
+ "injured": 493,
+ "players_fetched": 17,
+ "requests_used": 25,
+ "result": "493 missing players across 96 fixtures",
+ "odds_time": "2026-11-03 16:44 UTC",
+ "odds_calls": 72,
+ "odds_rows": 9694,
+ "odds_fixtures": 71,
  "books_seen": [
   "1xBet",
   "Bet365",
@@ -87,6 +87,6 @@
   "Total - Home",
   "Total Corners (1st Half)"
  ],
- "my_book_fixtures": 70,
- "odds_result": "prices for 70 fixtures"
+ "my_book_fixtures": 71,
+ "odds_result": "prices for 71 fixtures"
 }
