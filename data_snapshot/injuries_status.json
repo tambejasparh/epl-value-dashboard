@@ -1,11 +1,11 @@
 {
- "time": "2026-11-03 19:58 UTC",
+ "time": "2026-11-03 22:16 UTC",
  "key_present": true,
  "leagues_found": {
-  "E1": "Championship (England)",
-  "UCL": "UEFA Champions League (World)",
   "UEL": "UEFA Europa League (World)",
+  "UCL": "UEFA Champions League (World)",
   "B1": "Jupiler Pro League (Belgium)",
+  "E1": "Championship (England)",
   "E2": "League One (England)",
   "UECL": "UEFA Europa Conference League (World)",
   "RUS": "Premier League (Russia)",
@@ -23,15 +23,15 @@
   "SP1": "La Liga (Spain)",
   "P1": "Primeira Liga (Portugal)"
  },
- "fixtures": 84,
- "injured": 395,
- "players_fetched": 10,
- "requests_used": 18,
- "result": "395 missing players across 84 fixtures",
- "odds_time": "2026-11-03 19:58 UTC",
- "odds_calls": 80,
- "odds_rows": 10505,
- "odds_fixtures": 79,
+ "fixtures": 75,
+ "injured": 316,
+ "players_fetched": 0,
+ "requests_used": 8,
+ "result": "316 missing players across 75 fixtures",
+ "odds_time": "2026-11-03 22:16 UTC",
+ "odds_calls": 75,
+ "odds_rows": 9945,
+ "odds_fixtures": 75,
  "books_seen": [
   "1xBet",
   "Bet365",
@@ -86,6 +86,6 @@
   "Total - Home",
   "Total Corners (1st Half)"
  ],
- "my_book_fixtures": 79,
- "odds_result": "prices for 79 fixtures"
+ "my_book_fixtures": 75,
+ "odds_result": "prices for 75 fixtures"
 }
