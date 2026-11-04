@@ -289,15 +289,6 @@ E0,Ipswich,Everton,2027-05-30 15:00:00+00:00
 E0,Liverpool,Bournemouth,2027-05-30 15:00:00+00:00
 E0,Man Utd,Fulham,2027-05-30 15:00:00+00:00
 E0,Sunderland,Man City,2027-05-30 15:00:00+00:00
-E1,Blackburn Rovers,Stoke City,2026-11-03 19:45:00+00:00
-E1,Derby County,Norwich City,2026-11-03 19:45:00+00:00
-E1,Portsmouth,Swansea City,2026-11-03 19:45:00+00:00
-E1,Preston North End,Sheffield United,2026-11-03 19:45:00+00:00
-E1,Queens Park Rangers,Burnley,2026-11-03 19:45:00+00:00
-E1,Watford,Lincoln City,2026-11-03 19:45:00+00:00
-E1,Charlton Athletic,Bolton Wanderers,2026-11-03 19:45:00+00:00
-E1,Birmingham City,Millwall,2026-11-03 20:00:00+00:00
-E1,West Bromwich Albion,Southampton,2026-11-03 20:00:00+00:00
 E1,Cardiff City,West Ham United,2026-11-04 19:45:00+00:00
 E1,Wrexham,Middlesbrough,2026-11-04 19:45:00+00:00
 E1,Bristol City,Wolverhampton Wanderers,2026-11-04 20:00:00+00:00
@@ -687,14 +678,12 @@ E1,West Ham United,Portsmouth,2027-05-01 11:30:00+00:00
 E1,Wrexham,Bristol City,2027-05-01 11:30:00+00:00
 E2,Oxford United,Reading,2026-11-04 19:45:00+00:00
 E2,Mansfield Town,Leyton Orient,2026-09-26 14:00:00+00:00
-E2,Huddersfield Town,Luton Town,2026-11-03 19:45:00+00:00
 E2,Bradford City,Barnsley,2026-11-24 19:45:00+00:00
 E2,Stevenage,Sheffield Wednesday,2026-11-24 19:45:00+00:00
 E2,Doncaster Rovers,Oxford United,2026-12-15 19:45:00+00:00
 E2,Notts County,Blackpool,2027-01-12 19:45:00+00:00
-E2,Bromley,Wycombe Wanderers,2026-10-03 14:00:00+00:00
-E2,Wigan Athletic,Mansfield Town,2026-11-03 19:45:00+00:00
 E2,Blackpool,Leicester City,2026-11-24 19:45:00+00:00
+E2,Bromley,Wycombe Wanderers,2026-11-24 19:45:00+00:00
 E2,Barnsley,MK Dons,2026-12-15 19:45:00+00:00
 E2,Peterborough United,Notts County,2026-12-15 19:45:00+00:00
 E2,AFC Wimbledon,Stevenage,2027-01-26 19:45:00+00:00
@@ -1084,7 +1073,6 @@ E2,Wigan Athletic,Burton Albion,2027-05-08 11:30:00+00:00
 E2,Wycombe Wanderers,Barnsley,2027-05-08 11:30:00+00:00
 E3,Crawley Town,Barnet,2026-11-24 19:45:00+00:00
 E3,Port Vale,Northampton Town,2026-11-24 19:45:00+00:00
-E3,Northampton Town,Oldham Athletic,2026-11-03 19:45:00+00:00
 E3,Colchester United,Port Vale,2026-12-15 19:45:00+00:00
 E3,Walsall,Crawley Town,2026-12-15 19:45:00+00:00
 E3,Exeter City,Cheltenham Town,2026-11-14 12:30:00+00:00
@@ -2914,24 +2902,24 @@ P1,Gil Vicente FC,Estoril Praia,2026-11-29 18:00:00+00:00
 P1,FC Porto,Sporting CP,2026-11-29 20:30:00+00:00
 P1,Casa Pia AC,SC Braga,2026-11-30 20:15:00+00:00
 P1,SL Benfica,FC Famalicão,2026-11-30 20:15:00+00:00
-P1,FC Alverca,Moreirense FC,2026-12-06 00:00:00+00:00
-P1,Estrela Amadora,Gil Vicente FC,2026-12-06 00:00:00+00:00
-P1,SC Braga,FC Arouca,2026-12-06 00:00:00+00:00
-P1,Estoril Praia,Vitória SC,2026-12-06 00:00:00+00:00
-P1,FC Famalicão,Académico,2026-12-06 00:00:00+00:00
-P1,CD Nacional,SL Benfica,2026-12-06 00:00:00+00:00
-P1,Rio Ave FC,Casa Pia AC,2026-12-06 00:00:00+00:00
-P1,Santa Clara,FC Porto,2026-12-06 00:00:00+00:00
-P1,Sporting CP,Marítimo M.,2026-12-06 00:00:00+00:00
-P1,Académico,FC Arouca,2026-12-13 00:00:00+00:00
-P1,Casa Pia AC,CD Nacional,2026-12-13 00:00:00+00:00
-P1,Estoril Praia,Santa Clara,2026-12-13 00:00:00+00:00
-P1,Gil Vicente FC,Sporting CP,2026-12-13 00:00:00+00:00
-P1,Marítimo M.,Rio Ave FC,2026-12-13 00:00:00+00:00
-P1,Moreirense FC,FC Famalicão,2026-12-13 00:00:00+00:00
-P1,FC Porto,Estrela Amadora,2026-12-13 00:00:00+00:00
-P1,SL Benfica,SC Braga,2026-12-13 00:00:00+00:00
-P1,Vitória SC,FC Alverca,2026-12-13 00:00:00+00:00
+P1,Sporting CP,Marítimo M.,2026-12-04 20:15:00+00:00
+P1,CD Nacional,SL Benfica,2026-12-05 15:30:00+00:00
+P1,Santa Clara,FC Porto,2026-12-05 18:00:00+00:00
+P1,SC Braga,FC Arouca,2026-12-05 20:30:00+00:00
+P1,Estrela Amadora,Gil Vicente FC,2026-12-06 15:30:00+00:00
+P1,Rio Ave FC,Casa Pia AC,2026-12-06 15:30:00+00:00
+P1,Estoril Praia,Vitória SC,2026-12-06 18:00:00+00:00
+P1,FC Famalicão,Académico,2026-12-06 20:30:00+00:00
+P1,FC Alverca,Moreirense FC,2026-12-07 20:15:00+00:00
+P1,Académico,FC Arouca,2026-12-11 20:15:00+00:00
+P1,Estoril Praia,Santa Clara,2026-12-12 15:30:00+00:00
+P1,Marítimo M.,Rio Ave FC,2026-12-12 18:00:00+00:00
+P1,Gil Vicente FC,Sporting CP,2026-12-12 20:30:00+00:00
+P1,Casa Pia AC,CD Nacional,2026-12-13 15:30:00+00:00
+P1,Moreirense FC,FC Famalicão,2026-12-13 15:30:00+00:00
+P1,Vitória SC,FC Alverca,2026-12-13 18:00:00+00:00
+P1,FC Porto,Estrela Amadora,2026-12-13 20:30:00+00:00
+P1,SL Benfica,SC Braga,2026-12-14 20:15:00+00:00
 P1,FC Alverca,Gil Vicente FC,2026-12-20 00:00:00+00:00
 P1,Estrela Amadora,Marítimo M.,2026-12-20 00:00:00+00:00
 P1,FC Arouca,Casa Pia AC,2026-12-20 00:00:00+00:00
@@ -3364,9 +3352,9 @@ SC0,Hibernian,Rangers,2026-12-07 20:00:00+00:00
 SC0,Dundee United,St. Mirren,2026-12-12 15:00:00+00:00
 SC0,Falkirk,Aberdeen,2026-12-12 15:00:00+00:00
 SC0,Kilmarnock,Dundee,2026-12-12 15:00:00+00:00
-SC0,St. Johnstone,Rangers,2026-12-13 12:00:00+00:00
-SC0,Celtic,Hibernian,2026-12-13 15:00:00+00:00
 SC0,Heart of Midlothian,Motherwell,2026-12-13 15:00:00+00:00
+SC0,Celtic,Hibernian,2027-01-13 19:45:00+00:00
+SC0,St. Johnstone,Rangers,2027-01-13 20:00:00+00:00
 SC0,Dundee United,Kilmarnock,2026-12-19 15:00:00+00:00
 SC0,Hibernian,St. Johnstone,2026-12-19 15:00:00+00:00
 SC0,Motherwell,Dundee,2026-12-19 15:00:00+00:00
