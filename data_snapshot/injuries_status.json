@@ -1,5 +1,5 @@
 {
- "time": "2026-11-04 20:18 UTC",
+ "time": "2026-11-04 22:31 UTC",
  "key_present": true,
  "leagues_found": {
   "UEL": "UEFA Europa League (World)",
@@ -29,13 +29,13 @@
  },
  "fixtures": 149,
  "injured": 285,
- "players_fetched": 3,
- "requests_used": 11,
+ "players_fetched": 6,
+ "requests_used": 14,
  "result": "285 missing players across 149 fixtures",
- "odds_time": "2026-11-04 20:18 UTC",
- "odds_calls": 148,
- "odds_rows": 18110,
- "odds_fixtures": 142,
+ "odds_time": "2026-11-04 22:31 UTC",
+ "odds_calls": 149,
+ "odds_rows": 18235,
+ "odds_fixtures": 143,
  "books_seen": [
   "1xBet",
   "Bet365",
@@ -90,6 +90,6 @@
   "Total - Home",
   "Total Corners (1st Half)"
  ],
- "my_book_fixtures": 140,
- "odds_result": "prices for 142 fixtures"
+ "my_book_fixtures": 141,
+ "odds_result": "prices for 143 fixtures"
 }
