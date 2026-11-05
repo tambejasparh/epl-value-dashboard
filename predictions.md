@@ -1,5 +1,5 @@
 # Football predictions — day by day
-_Updated Thu 05 Nov 2026 21:30 (Africa/Douala time). Bankroll for stakes: 100.00_
+_Updated Thu 05 Nov 2026 23:39 (Africa/Douala time). Bankroll for stakes: 100.00_
 
 ## 🎟️ Ready-made tickets — Friday 06 November
 
@@ -124,7 +124,7 @@ _Safest first. 💚 = 1xBet pays at least the fair minimum._
 ### Sunday 08 November (40 matches)
 
 1. 16:30 · **Santa Clara v Gil Vicente** (Portugal - Primeira Liga) — Over/Under → Under 4.5 · 95% · 1xBet 1.04 
-2. 21:30 · **Rio Ave v Sp Braga** (Portugal - Primeira Liga) — Over/Under → Under 5.5 · 94%
+2. 21:30 · **Rio Ave v Sp Braga** (Portugal - Primeira Liga) — Over/Under → Under 5.5 · 94% · 1xBet 1.03 
 3. 18:30 · **Celta v Levante** (Spain - La Liga) — Over/Under → Under 5.5 · 93% · 1xBet 1.04 
 4. 16:15 · **Sociedad v Vallecano** (Spain - La Liga) — Over/Under → Under 5.5 · 93% · 1xBet 1.04 
 5. 16:30 · **Estoril v Maritimo** (Portugal - Primeira Liga) — Over/Under → Under 5.5 · 93% · 1xBet 1.04 
@@ -145,7 +145,7 @@ _Safest first. 💚 = 1xBet pays at least the fair minimum._
 20. 19:00 · **Guimaraes v Porto** (Portugal - Primeira Liga) — Over/Under → Under 4.5 · 90% · 1xBet 1.14 
 21. 15:00 · **Genoa v Milan** (Italy - Serie A) — Over/Under → Under 4.5 · 90% · 1xBet 1.07 
 22. 12:30 · **Napoli v Lazio** (Italy - Serie A) — Over/Under → Under 4.5 · 90% · 1xBet 1.16 💚
-23. 21:30 · **Estrela v Benfica** (Portugal - Primeira Liga) — Over/Under → Under 5.5 · 90%
+23. 21:30 · **Estrela v Benfica** (Portugal - Primeira Liga) — Over/Under → Under 5.5 · 90% · 1xBet 1.09 
 24. 15:00 · **Monza v Atalanta** (Italy - Serie A) — Over/Under → Under 5.5 · 89% · 1xBet 1.05 
 25. 12:15 · **Heerenveen v Feyenoord** (Netherlands - Eredivisie) — Over/Under → Under 5.5 · 89% · 1xBet 1.14 
 26. 17:15 · **Le Mans v Monaco** (France - Ligue 1) — Over/Under → Under 5.5 · 89% · 1xBet 1.06 
@@ -164,7 +164,7 @@ _Safest first. 💚 = 1xBet pays at least the fair minimum._
 39. 17:30 · **Freiburg v Union Berlin** (Germany - Bundesliga) — Over/Under → Under 4.5 · 86% · 1xBet 1.20 
 40. 16:00 · **Hearts v Falkirk** (Scotland - Premiership) — Over/Under → Under 4.5 · 85% · 1xBet 1.18 
 
-🎟️ One ticket with the top matches — top 2: 89% · top 3: 83% · top 5: 72% · top 8: 57% · top 10: 49%
+🎟️ One ticket with the top matches — top 2: 89% @ 1.07 · top 3: 83% @ 1.11 · top 5: 72% @ 1.20 · top 8: 57% @ 1.41 · top 10: 49% @ 1.72
 
 ### Thursday 12 November (8 matches)
 
@@ -203,12 +203,10 @@ _Only 85%+ picks, backed by bookmaker odds (or 88%+ without), with no key player
 
 1. 18:30 · **Villarreal v Getafe** (Spain - La Liga)  
    ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.12+** (92% chance) · 💚 1xBet pays 1.14
-2. 21:30 · **Estrela v Benfica** (Portugal - Primeira Liga)  
-   ✅ **BET: Benfica total goals → Over 0.5** — only if odds are **1.14+** (90% chance)
-3. 12:30 · **Napoli v Lazio** (Italy - Serie A)  
+2. 12:30 · **Napoli v Lazio** (Italy - Serie A)  
    ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.15+** (90% chance) · 💚 1xBet pays 1.16
 
-🎟️ All 3 on one ticket: all 3 win about **74%** of the time (lose about 26%). Take it only if the ticket's total odds are at least **1.47**. A 2-pick ticket (#1 + #2) wins about 83%. In testing on 472 past match days, the top-3 ticket won on 79% of days - it still lost about 1 day in 5.
+🎟️ All 2 on one ticket: all 2 win about **82%** of the time (lose about 18%). Take it only if the ticket's total odds are at least **1.29**. In testing on 472 past match days, the top-2 ticket won on 83% of days - it still lost about 1 day in 6.
 
 ### Thursday 12 November
 
@@ -238,7 +236,7 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 - ⚠️ 20:00 · **Dunkerque v Guingamp** (France - Ligue 2) — BET: Over/Under (total goals) → Under 4.5 · 84% · 1xBet 1.14
 - ⚠️ 20:00 · **Dijon v Red Star** (France - Ligue 2) — BET: Over/Under (total goals) → Over 1.5 · 84% · 1xBet 1.14
 - ⚠️ 21:00 · **Sevilla v Alaves** (Spain - La Liga) — BET: Over/Under (total goals) → Under 3.5 · 83% · 1xBet 1.23
-- ⚠️ 21:00 · **Derby v Bolton** (England - Championship) — BET: Derby total goals → Over 0.5 · 83% · 1xBet 1.15
+- ⚠️ 21:00 · **Derby v Bolton** (England - Championship) — BET: Derby total goals → Over 0.5 · 83% · 1xBet 1.17
 - ⚠️ 20:00 · **Willem II v Zwolle** (Netherlands - Eredivisie) — BET: Over/Under (total goals) → Under 4.5 · 82% · 1xBet 1.26
 
 ### Saturday 07 November (47 matches)
@@ -282,7 +280,7 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 - ⚠️ 16:00 · **QPR v Lincoln** (England - Championship) — BET: Over/Under (total goals) → Under 4.5 · 85% · 1xBet 1.09
 - ⚠️ 16:00 · **Blackburn v West Ham** (England - Championship) — BET: West Ham total goals → Over 0.5 · 85% · 1xBet 1.05
 - ⚠️ 16:00 · **St Johnstone v Dundee** (Scotland - Premiership) — BET: Over/Under (total goals) → Under 4.5 · 85% · 1xBet 1.12
-- ⚠️ 13:30 · **Bristol City v Norwich** (England - Championship) — BET: Over/Under (total goals) → Under 4.5 · 84% · 1xBet 1.10
+- ⚠️ 13:30 · **Bristol City v Norwich** (England - Championship) — BET: Over/Under (total goals) → Under 4.5 · 84% · 1xBet 1.09
 - ⚠️ 21:00 · **St Mirren v Rangers** (Scotland - Premiership) — BET: Rangers total goals → Over 0.5 · 84% · 1xBet 1.03
 - ⚠️ 16:00 · **Preston v Southampton** (England - Championship) — BET: Over/Under (total goals) → Under 4.5 · 83% · 1xBet 1.18
 - ⚠️ 14:00 · **Malaga v Santander** (Spain - La Liga) — BET: Over/Under (total goals) → Over 1.5 · 83% · 1xBet 1.20
@@ -295,7 +293,7 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 
 - ✅ 18:30 · **Villarreal v Getafe** (Spain - La Liga) — BET: Over/Under (total goals) → Under 4.5 · 92% · 1xBet 1.14
 - ⚠️ 17:15 · **Le Havre v Lorient** (France - Ligue 1) — BET: Over/Under (total goals) → Under 4.5 · 91% · 1xBet 1.09
-- ✅ 21:30 · **Estrela v Benfica** (Portugal - Primeira Liga) — BET: Benfica total goals → Over 0.5 · 90%
+- ⚠️ 21:30 · **Estrela v Benfica** (Portugal - Primeira Liga) — BET: Benfica total goals → Over 0.5 · 90% · 1xBet 1.01
 - ⚠️ 11:30 · **Rizespor v Erzurumspor** (Turkey - Super Lig) — BET: Over/Under (total goals) → Under 4.5 · 90% · 1xBet 1.13
 - ⚠️ 19:00 · **Guimaraes v Porto** (Portugal - Primeira Liga) — BET: Over/Under (total goals) → Under 4.5 · 90% · 1xBet 1.14
 - ⚠️ 15:00 · **Genoa v Milan** (Italy - Serie A) — BET: Over/Under (total goals) → Under 4.5 · 90% · 1xBet 1.07
@@ -315,7 +313,7 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 - ⚠️ 16:00 · **Hearts v Falkirk** (Scotland - Premiership) — BET: Over/Under (total goals) → Under 4.5 · 85% · 1xBet 1.18
 - ⚠️ 15:00 · **Monza v Atalanta** (Italy - Serie A) — BET: Atalanta total goals → Over 0.5 · 85% · 1xBet 1.14
 - ⚠️ 12:15 · **Heerenveen v Feyenoord** (Netherlands - Eredivisie) — BET: Feyenoord total goals → Over 0.5 · 85% · 1xBet 1.05
-- ⚠️ 21:30 · **Rio Ave v Sp Braga** (Portugal - Primeira Liga) — BET: Over/Under (total goals) → Under 4.5 · 85%
+- ⚠️ 21:30 · **Rio Ave v Sp Braga** (Portugal - Primeira Liga) — BET: Over/Under (total goals) → Under 4.5 · 85% · 1xBet 1.13
 - ⚠️ 15:30 · **FC Koln v Leverkusen** (Germany - Bundesliga) — BET: Over/Under (total goals) → Over 1.5 · 85% · 1xBet 1.11
 - ⚠️ 20:45 · **Lens v Marseille** (France - Ligue 1) — BET: Over/Under (total goals) → Over 1.5 · 85% · 1xBet 1.12
 - ⚠️ 16:45 · **AZ Alkmaar v Groningen** (Netherlands - Eredivisie) — BET: AZ Alkmaar total goals → Over 0.5 · 85% · 1xBet 1.03
@@ -468,8 +466,6 @@ No bets this week - the prices are fair. That is normal.
 **Sunday 08 November**
 - 18:30 · **Villarreal v Getafe** (Spain - La Liga) — 🔒 Under 4.5 goals · 92% · bet at 1.12+  
   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.12 or higher.
-- 21:30 · **Estrela v Benfica** (Portugal - Primeira Liga) — 🔒 Benfica to score · 90% · bet at 1.14+  
-  📝 Open the 'Benfica total goals' (team goals) market and choose 'Over 0.5' (some bookmakers call it 'Benfica to score: Yes'). You WIN if Benfica scores at least 1 goal - the final result does not matter. You LOSE only if Benfica scores 0. Only place it if your bookmaker's odds for this choice are 1.14 or higher.
 - 12:30 · **Napoli v Lazio** (Italy - Serie A) — ⭐⭐⭐ Under 4.5 goals · 90% · bet at 1.15+  
   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.15 or higher.
 
