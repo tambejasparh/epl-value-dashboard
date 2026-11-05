@@ -1,5 +1,5 @@
 {
- "time": "2026-11-04 22:31 UTC",
+ "time": "2026-11-05 13:01 UTC",
  "key_present": true,
  "leagues_found": {
   "UEL": "UEFA Europa League (World)",
@@ -25,17 +25,18 @@
   "SC2": "League One (Scotland)",
   "SC3": "League Two (Scotland)",
   "EC": "National League (England)",
-  "G1": "Super League 1 (Greece)"
+  "G1": "Super League 1 (Greece)",
+  "CHN": "Super League (China)"
  },
- "fixtures": 149,
- "injured": 285,
- "players_fetched": 6,
- "requests_used": 14,
- "result": "285 missing players across 149 fixtures",
- "odds_time": "2026-11-04 22:31 UTC",
- "odds_calls": 149,
- "odds_rows": 18235,
- "odds_fixtures": 143,
+ "fixtures": 224,
+ "injured": 290,
+ "players_fetched": 33,
+ "requests_used": 41,
+ "result": "290 missing players across 224 fixtures",
+ "odds_time": "2026-11-05 13:01 UTC",
+ "odds_calls": 172,
+ "odds_rows": 21804,
+ "odds_fixtures": 168,
  "books_seen": [
   "1xBet",
   "Bet365",
@@ -90,6 +91,6 @@
   "Total - Home",
   "Total Corners (1st Half)"
  ],
- "my_book_fixtures": 141,
- "odds_result": "prices for 143 fixtures"
+ "my_book_fixtures": 167,
+ "odds_result": "prices for 168 fixtures"
 }

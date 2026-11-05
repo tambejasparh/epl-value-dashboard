@@ -1,7 +1,8 @@
 {
- "time": "2026-11-04 22:31 UTC",
+ "time": "2026-11-05 13:01 UTC",
  "key_present": true,
  "active": [
+  "soccer_uefa_champs_league",
   "soccer_uefa_europa_conference_league",
   "soccer_uefa_europa_league",
   "soccer_uefa_nations_league"
@@ -10,5 +11,7 @@
   "soccer_uefa_europa_conference_league",
   "soccer_uefa_europa_league"
  ],
- "result": "odds still fresh (9.6 h old) - no credits spent"
+ "credits_remaining": "468",
+ "matches_with_odds": 35,
+ "result": "saved odds for 35 matches"
 }
