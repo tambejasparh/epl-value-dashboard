@@ -1,24 +1,6 @@
 {
- "time": "2026-11-05 13:02 UTC",
+ "time": "2026-11-05 16:58 UTC",
  "leagues": {
-  "SC2": {
-   "season": 2026,
-   "finished": 64,
-   "latest": "2026-10-31",
-   "errors": null,
-   "teams": [
-    "Airdrie United",
-    "Alloa Athletic",
-    "Cove Rangers",
-    "East Fife",
-    "East Kilbride",
-    "Hamilton Academical",
-    "Montrose",
-    "Peterhead",
-    "Queen of the South",
-    "Ross County"
-   ]
-  },
   "SC1": {
    "season": 2026,
    "finished": 64,
@@ -37,24 +19,22 @@
     "Stenhousemuir"
    ]
   },
-  "SC0": {
+  "SC2": {
    "season": 2026,
-   "finished": 69,
-   "latest": "2026-11-01",
+   "finished": 64,
+   "latest": "2026-10-31",
    "errors": null,
    "teams": [
-    "Aberdeen",
-    "Celtic",
-    "Dundee",
-    "Dundee Utd",
-    "Falkirk",
-    "Heart Of Midlothian",
-    "Hibernian",
-    "Kilmarnock",
-    "Motherwell",
-    "Rangers",
-    "ST Johnstone",
-    "ST Mirren"
+    "Airdrie United",
+    "Alloa Athletic",
+    "Cove Rangers",
+    "East Fife",
+    "East Kilbride",
+    "Hamilton Academical",
+    "Montrose",
+    "Peterhead",
+    "Queen of the South",
+    "Ross County"
    ]
   },
   "E0": {
@@ -83,6 +63,26 @@
     "Nottingham Forest",
     "Sunderland",
     "Tottenham"
+   ]
+  },
+  "SC0": {
+   "season": 2026,
+   "finished": 69,
+   "latest": "2026-11-01",
+   "errors": null,
+   "teams": [
+    "Aberdeen",
+    "Celtic",
+    "Dundee",
+    "Dundee Utd",
+    "Falkirk",
+    "Heart Of Midlothian",
+    "Hibernian",
+    "Kilmarnock",
+    "Motherwell",
+    "Rangers",
+    "ST Johnstone",
+    "ST Mirren"
    ]
   },
   "EC": {
@@ -115,6 +115,38 @@
     "Woking",
     "Worthing",
     "Yeovil Town"
+   ]
+  },
+  "E1": {
+   "season": 2026,
+   "finished": 168,
+   "latest": "2026-11-04",
+   "errors": null,
+   "teams": [
+    "Birmingham",
+    "Blackburn",
+    "Bolton",
+    "Bristol City",
+    "Burnley",
+    "Cardiff",
+    "Charlton",
+    "Derby",
+    "Lincoln",
+    "Middlesbrough",
+    "Millwall",
+    "Norwich",
+    "Portsmouth",
+    "Preston",
+    "QPR",
+    "Sheffield Utd",
+    "Southampton",
+    "Stoke City",
+    "Swansea",
+    "Watford",
+    "West Brom",
+    "West Ham",
+    "Wolves",
+    "Wrexham"
    ]
   },
   "E2": {
@@ -181,38 +213,6 @@
     "York"
    ]
   },
-  "E1": {
-   "season": 2026,
-   "finished": 168,
-   "latest": "2026-11-04",
-   "errors": null,
-   "teams": [
-    "Birmingham",
-    "Blackburn",
-    "Bolton",
-    "Bristol City",
-    "Burnley",
-    "Cardiff",
-    "Charlton",
-    "Derby",
-    "Lincoln",
-    "Middlesbrough",
-    "Millwall",
-    "Norwich",
-    "Portsmouth",
-    "Preston",
-    "QPR",
-    "Sheffield Utd",
-    "Southampton",
-    "Stoke City",
-    "Swansea",
-    "Watford",
-    "West Brom",
-    "West Ham",
-    "Wolves",
-    "Wrexham"
-   ]
-  },
   "SC3": {
    "season": 2026,
    "finished": 60,
@@ -229,32 +229,6 @@
     "Spartans",
     "Stirling Albion",
     "Stranraer"
-   ]
-  },
-  "D2": {
-   "season": 2026,
-   "finished": 90,
-   "latest": "2026-11-01",
-   "errors": null,
-   "teams": [
-    "1. FC Heidenheim",
-    "1. FC Kaiserslautern",
-    "1. FC Magdeburg",
-    "1. FC N\u00fcrnberg",
-    "Arminia Bielefeld",
-    "Dynamo Dresden",
-    "Eintracht Braunschweig",
-    "Energie Cottbus",
-    "FC St. Pauli",
-    "Hannover 96",
-    "Hertha BSC",
-    "Holstein Kiel",
-    "Karlsruher SC",
-    "SV Darmstadt 98",
-    "SpVgg Greuther F\u00fcrth",
-    "VfL Bochum",
-    "VfL Osnabr\u00fcck",
-    "VfL Wolfsburg"
    ]
   },
   "D1": {
@@ -281,6 +255,32 @@
     "Union Berlin",
     "VfB Stuttgart",
     "Werder Bremen"
+   ]
+  },
+  "D2": {
+   "season": 2026,
+   "finished": 90,
+   "latest": "2026-11-01",
+   "errors": null,
+   "teams": [
+    "1. FC Heidenheim",
+    "1. FC Kaiserslautern",
+    "1. FC Magdeburg",
+    "1. FC N\u00fcrnberg",
+    "Arminia Bielefeld",
+    "Dynamo Dresden",
+    "Eintracht Braunschweig",
+    "Energie Cottbus",
+    "FC St. Pauli",
+    "Hannover 96",
+    "Hertha BSC",
+    "Holstein Kiel",
+    "Karlsruher SC",
+    "SV Darmstadt 98",
+    "SpVgg Greuther F\u00fcrth",
+    "VfL Bochum",
+    "VfL Osnabr\u00fcck",
+    "VfL Wolfsburg"
    ]
   },
   "I2": {
@@ -447,32 +447,6 @@
     "Zenit"
    ]
   },
-  "F2": {
-   "season": 2026,
-   "finished": 99,
-   "latest": "2026-11-02",
-   "errors": null,
-   "teams": [
-    "Annecy",
-    "Boulogne",
-    "Clermont Foot",
-    "Dijon",
-    "Dunkerque",
-    "Grenoble",
-    "Guingamp",
-    "Laval",
-    "Metz",
-    "Montpellier",
-    "Nancy",
-    "Nantes",
-    "PAU",
-    "RED Star FC 93",
-    "Reims",
-    "Rodez",
-    "Saint Etienne",
-    "Sochaux"
-   ]
-  },
   "JPN": {
    "season": 2027,
    "finished": 130,
@@ -501,6 +475,32 @@
     "Yokohama F. Marinos"
    ]
   },
+  "F2": {
+   "season": 2026,
+   "finished": 99,
+   "latest": "2026-11-02",
+   "errors": null,
+   "teams": [
+    "Annecy",
+    "Boulogne",
+    "Clermont Foot",
+    "Dijon",
+    "Dunkerque",
+    "Grenoble",
+    "Guingamp",
+    "Laval",
+    "Metz",
+    "Montpellier",
+    "Nancy",
+    "Nantes",
+    "PAU",
+    "RED Star FC 93",
+    "Reims",
+    "Rodez",
+    "Saint Etienne",
+    "Sochaux"
+   ]
+  },
   "B1": {
    "season": 2026,
    "finished": 90,
@@ -527,30 +527,6 @@
     "Zulte Waregem"
    ]
   },
-  "CHN": {
-   "season": 2026,
-   "finished": 232,
-   "latest": "2026-10-24",
-   "errors": null,
-   "teams": [
-    "Beijing Guoan",
-    "Chengdu Better City",
-    "Chongqing Tongliang Long",
-    "Dalian Zhixing",
-    "Hangzhou Greentown",
-    "Henan Jianye",
-    "Qingdao Jonoon",
-    "Qingdao Youth Island",
-    "SHANGHAI SIPG",
-    "Shandong Luneng",
-    "Shanghai Shenhua",
-    "Shenyang Urban",
-    "Sichuan Jiuniu",
-    "Tianjin Teda",
-    "Wuhan Three Towns",
-    "Yunnan Yukun"
-   ]
-  },
   "N1": {
    "season": 2026,
    "finished": 99,
@@ -575,6 +551,30 @@
     "Twente",
     "Utrecht",
     "Willem II"
+   ]
+  },
+  "CHN": {
+   "season": 2026,
+   "finished": 232,
+   "latest": "2026-10-24",
+   "errors": null,
+   "teams": [
+    "Beijing Guoan",
+    "Chengdu Better City",
+    "Chongqing Tongliang Long",
+    "Dalian Zhixing",
+    "Hangzhou Greentown",
+    "Henan Jianye",
+    "Qingdao Jonoon",
+    "Qingdao Youth Island",
+    "SHANGHAI SIPG",
+    "Shandong Luneng",
+    "Shanghai Shenhua",
+    "Shenyang Urban",
+    "Sichuan Jiuniu",
+    "Tianjin Teda",
+    "Wuhan Three Towns",
+    "Yunnan Yukun"
    ]
   },
   "P1": {
