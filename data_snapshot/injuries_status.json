@@ -1,16 +1,15 @@
 {
- "time": "2026-11-06 22:00 UTC",
+ "time": "2026-11-07 11:37 UTC",
  "key_present": true,
  "leagues_found": {
-  "SP2": "Segunda Divisi\u00f3n (Spain)",
-  "JPN": "J1 League (Japan)",
-  "T1": "S\u00fcper Lig (Turkey)",
-  "RUS": "Premier League (Russia)",
   "D2": "2. Bundesliga (Germany)",
   "E0": "Premier League (England)",
   "E1": "Championship (England)",
   "F2": "Ligue 2 (France)",
+  "SP2": "Segunda Divisi\u00f3n (Spain)",
   "SP1": "La Liga (Spain)",
+  "T1": "S\u00fcper Lig (Turkey)",
+  "RUS": "Premier League (Russia)",
   "I1": "Serie A (Italy)",
   "I2": "Serie B (Italy)",
   "D1": "Bundesliga (Germany)",
@@ -24,17 +23,18 @@
   "N1": "Eredivisie (Netherlands)",
   "P1": "Primeira Liga (Portugal)",
   "F1": "Ligue 1 (France)",
+  "JPN": "J1 League (Japan)",
   "CHN": "Super League (China)"
  },
- "fixtures": 169,
+ "fixtures": 160,
  "injured": 12,
  "players_fetched": 0,
  "requests_used": 8,
- "result": "12 missing players across 169 fixtures",
- "odds_time": "2026-11-06 22:00 UTC",
- "odds_calls": 168,
- "odds_rows": 22438,
- "odds_fixtures": 167,
+ "result": "12 missing players across 160 fixtures",
+ "odds_time": "2026-11-07 11:37 UTC",
+ "odds_calls": 160,
+ "odds_rows": 21602,
+ "odds_fixtures": 159,
  "books_seen": [
   "1xBet",
   "Bet365",
@@ -89,6 +89,6 @@
   "Total - Home",
   "Total Corners (1st Half)"
  ],
- "my_book_fixtures": 165,
- "odds_result": "prices for 167 fixtures"
+ "my_book_fixtures": 157,
+ "odds_result": "prices for 159 fixtures"
 }
