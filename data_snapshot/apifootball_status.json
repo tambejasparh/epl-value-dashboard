@@ -1,9 +1,9 @@
 {
- "time": "2026-11-07 11:38 UTC",
+ "time": "2026-11-08 11:50 UTC",
  "key_present": true,
  "plan": "Pro",
  "requests_today": {
-  "current": 99,
+  "current": 0,
   "limit_day": 7500
  },
  "status_errors": null,
