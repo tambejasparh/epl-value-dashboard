@@ -1,8 +1,4 @@
 Div,HomeTeam,AwayTeam,Kickoff
-E0,Leeds,Spurs,2026-11-07 12:30:00+00:00
-E0,Arsenal,Hull,2026-11-07 15:00:00+00:00
-E0,Fulham,Newcastle,2026-11-07 15:00:00+00:00
-E0,Nott'm Forest,Man City,2026-11-07 17:30:00+00:00
 E0,Brighton,Brentford,2026-11-08 14:00:00+00:00
 E0,Crystal Palace,Liverpool,2026-11-08 14:00:00+00:00
 E0,Ipswich,Bournemouth,2026-11-08 14:00:00+00:00
@@ -62,9 +58,9 @@ E0,Brentford,Newcastle,2026-12-19 12:30:00+00:00
 E0,Bournemouth,Coventry,2026-12-19 15:00:00+00:00
 E0,Leeds,Fulham,2026-12-19 15:00:00+00:00
 E0,Man City,Hull,2026-12-19 15:00:00+00:00
-E0,Nott'm Forest,Everton,2026-12-19 15:00:00+00:00
 E0,Liverpool,Spurs,2026-12-19 17:30:00+00:00
 E0,Brighton,Ipswich,2026-12-20 14:00:00+00:00
+E0,Nott'm Forest,Everton,2026-12-20 14:00:00+00:00
 E0,Sunderland,Crystal Palace,2026-12-20 14:00:00+00:00
 E0,Arsenal,Man Utd,2026-12-20 16:30:00+00:00
 E0,Chelsea,Aston Villa,2026-12-21 20:00:00+00:00
@@ -288,17 +284,6 @@ E0,Ipswich,Everton,2027-05-30 15:00:00+00:00
 E0,Liverpool,Bournemouth,2027-05-30 15:00:00+00:00
 E0,Man Utd,Fulham,2027-05-30 15:00:00+00:00
 E0,Sunderland,Man City,2027-05-30 15:00:00+00:00
-E1,Bristol City,Norwich City,2026-11-07 12:30:00+00:00
-E1,Portsmouth,Stoke City,2026-11-07 12:30:00+00:00
-E1,Wrexham,Wolverhampton Wanderers,2026-11-07 12:30:00+00:00
-E1,Birmingham City,Swansea City,2026-11-07 15:00:00+00:00
-E1,Blackburn Rovers,West Ham United,2026-11-07 15:00:00+00:00
-E1,Cardiff City,Burnley,2026-11-07 15:00:00+00:00
-E1,Charlton Athletic,Sheffield United,2026-11-07 15:00:00+00:00
-E1,Preston North End,Southampton,2026-11-07 15:00:00+00:00
-E1,Queens Park Rangers,Lincoln City,2026-11-07 15:00:00+00:00
-E1,Watford,Middlesbrough,2026-11-07 15:00:00+00:00
-E1,West Bromwich Albion,Millwall,2026-11-07 15:00:00+00:00
 E1,Millwall,Queens Park Rangers,2026-11-21 12:30:00+00:00
 E1,Norwich City,Cardiff City,2026-11-21 12:30:00+00:00
 E1,Southampton,Derby County,2026-11-21 12:30:00+00:00
@@ -419,126 +404,126 @@ E1,Watford,Queens Park Rangers,2027-01-01 15:00:00+00:00
 E1,West Bromwich Albion,Stoke City,2027-01-01 15:00:00+00:00
 E1,Wrexham,Bolton Wanderers,2027-01-01 15:00:00+00:00
 E1,Burnley,Sheffield United,2027-01-01 17:30:00+00:00
+E1,West Ham United,Swansea City,2027-01-15 20:00:00+00:00
+E1,Queens Park Rangers,Birmingham City,2027-01-16 12:30:00+00:00
+E1,Stoke City,Derby County,2027-01-16 12:30:00+00:00
+E1,Wolverhampton Wanderers,Burnley,2027-01-16 12:30:00+00:00
 E1,Blackburn Rovers,West Bromwich Albion,2027-01-16 15:00:00+00:00
 E1,Bolton Wanderers,Southampton,2027-01-16 15:00:00+00:00
 E1,Cardiff City,Middlesbrough,2027-01-16 15:00:00+00:00
-E1,Charlton Athletic,Watford,2027-01-16 15:00:00+00:00
 E1,Lincoln City,Millwall,2027-01-16 15:00:00+00:00
 E1,Portsmouth,Norwich City,2027-01-16 15:00:00+00:00
 E1,Preston North End,Wrexham,2027-01-16 15:00:00+00:00
-E1,Queens Park Rangers,Birmingham City,2027-01-16 15:00:00+00:00
 E1,Sheffield United,Bristol City,2027-01-16 15:00:00+00:00
-E1,Stoke City,Derby County,2027-01-16 15:00:00+00:00
-E1,West Ham United,Swansea City,2027-01-16 15:00:00+00:00
-E1,Wolverhampton Wanderers,Burnley,2027-01-16 15:00:00+00:00
-E1,Birmingham City,Lincoln City,2027-01-23 15:00:00+00:00
+E1,Charlton Athletic,Watford,2027-01-17 12:00:00+00:00
+E1,Preston North End,Stoke City,2027-01-22 20:00:00+00:00
+E1,Birmingham City,Lincoln City,2027-01-23 12:30:00+00:00
+E1,Queens Park Rangers,Southampton,2027-01-23 12:30:00+00:00
+E1,West Bromwich Albion,West Ham United,2027-01-23 12:30:00+00:00
 E1,Blackburn Rovers,Swansea City,2027-01-23 15:00:00+00:00
 E1,Bristol City,Bolton Wanderers,2027-01-23 15:00:00+00:00
-E1,Cardiff City,Wolverhampton Wanderers,2027-01-23 15:00:00+00:00
 E1,Charlton Athletic,Middlesbrough,2027-01-23 15:00:00+00:00
 E1,Derby County,Millwall,2027-01-23 15:00:00+00:00
 E1,Portsmouth,Burnley,2027-01-23 15:00:00+00:00
-E1,Preston North End,Stoke City,2027-01-23 15:00:00+00:00
-E1,Queens Park Rangers,Southampton,2027-01-23 15:00:00+00:00
 E1,Watford,Norwich City,2027-01-23 15:00:00+00:00
-E1,West Bromwich Albion,West Ham United,2027-01-23 15:00:00+00:00
 E1,Wrexham,Sheffield United,2027-01-23 15:00:00+00:00
+E1,Cardiff City,Wolverhampton Wanderers,2027-01-24 12:00:00+00:00
 E1,Bolton Wanderers,Charlton Athletic,2027-01-26 19:45:00+00:00
 E1,Burnley,Queens Park Rangers,2027-01-26 19:45:00+00:00
 E1,Lincoln City,Watford,2027-01-26 19:45:00+00:00
 E1,Millwall,Birmingham City,2027-01-26 19:45:00+00:00
-E1,Norwich City,Derby County,2027-01-26 19:45:00+00:00
 E1,Sheffield United,Preston North End,2027-01-26 19:45:00+00:00
 E1,Southampton,West Bromwich Albion,2027-01-26 19:45:00+00:00
 E1,Stoke City,Blackburn Rovers,2027-01-26 19:45:00+00:00
+E1,Norwich City,Derby County,2027-01-26 20:00:00+00:00
 E1,Middlesbrough,Wrexham,2027-01-27 19:45:00+00:00
-E1,Swansea City,Portsmouth,2027-01-27 19:45:00+00:00
 E1,West Ham United,Cardiff City,2027-01-27 19:45:00+00:00
 E1,Wolverhampton Wanderers,Bristol City,2027-01-27 19:45:00+00:00
-E1,Bolton Wanderers,Derby County,2027-01-30 15:00:00+00:00
+E1,Swansea City,Portsmouth,2027-01-27 20:00:00+00:00
+E1,Lincoln City,Queens Park Rangers,2027-01-29 20:00:00+00:00
+E1,Bolton Wanderers,Derby County,2027-01-30 12:30:00+00:00
+E1,Swansea City,Birmingham City,2027-01-30 12:30:00+00:00
+E1,Wolverhampton Wanderers,Wrexham,2027-01-30 12:30:00+00:00
 E1,Burnley,Cardiff City,2027-01-30 15:00:00+00:00
-E1,Lincoln City,Queens Park Rangers,2027-01-30 15:00:00+00:00
 E1,Middlesbrough,Watford,2027-01-30 15:00:00+00:00
 E1,Millwall,West Bromwich Albion,2027-01-30 15:00:00+00:00
-E1,Norwich City,Bristol City,2027-01-30 15:00:00+00:00
 E1,Sheffield United,Charlton Athletic,2027-01-30 15:00:00+00:00
 E1,Southampton,Preston North End,2027-01-30 15:00:00+00:00
 E1,Stoke City,Portsmouth,2027-01-30 15:00:00+00:00
-E1,Swansea City,Birmingham City,2027-01-30 15:00:00+00:00
 E1,West Ham United,Blackburn Rovers,2027-01-30 15:00:00+00:00
-E1,Wolverhampton Wanderers,Wrexham,2027-01-30 15:00:00+00:00
+E1,Norwich City,Bristol City,2027-01-31 12:00:00+00:00
+E1,Bristol City,Middlesbrough,2027-02-05 20:00:00+00:00
+E1,Charlton Athletic,Wolverhampton Wanderers,2027-02-06 12:30:00+00:00
+E1,Watford,Sheffield United,2027-02-06 12:30:00+00:00
+E1,Wrexham,Lincoln City,2027-02-06 12:30:00+00:00
 E1,Birmingham City,Stoke City,2027-02-06 15:00:00+00:00
-E1,Blackburn Rovers,Burnley,2027-02-06 15:00:00+00:00
-E1,Bristol City,Middlesbrough,2027-02-06 15:00:00+00:00
 E1,Cardiff City,Norwich City,2027-02-06 15:00:00+00:00
-E1,Charlton Athletic,Wolverhampton Wanderers,2027-02-06 15:00:00+00:00
 E1,Derby County,Southampton,2027-02-06 15:00:00+00:00
 E1,Portsmouth,Bolton Wanderers,2027-02-06 15:00:00+00:00
 E1,Preston North End,West Ham United,2027-02-06 15:00:00+00:00
 E1,Queens Park Rangers,Millwall,2027-02-06 15:00:00+00:00
-E1,Watford,Sheffield United,2027-02-06 15:00:00+00:00
 E1,West Bromwich Albion,Swansea City,2027-02-06 15:00:00+00:00
-E1,Wrexham,Lincoln City,2027-02-06 15:00:00+00:00
-E1,Birmingham City,Derby County,2027-02-13 15:00:00+00:00
-E1,Bristol City,Southampton,2027-02-13 15:00:00+00:00
+E1,Blackburn Rovers,Burnley,2027-02-07 12:00:00+00:00
+E1,Birmingham City,Derby County,2027-02-12 20:00:00+00:00
+E1,Bristol City,Southampton,2027-02-13 12:30:00+00:00
+E1,Millwall,Blackburn Rovers,2027-02-13 12:30:00+00:00
+E1,Portsmouth,Charlton Athletic,2027-02-13 12:30:00+00:00
 E1,Burnley,Swansea City,2027-02-13 15:00:00+00:00
-E1,Cardiff City,Bolton Wanderers,2027-02-13 15:00:00+00:00
-E1,Lincoln City,Preston North End,2027-02-13 15:00:00+00:00
-E1,Millwall,Blackburn Rovers,2027-02-13 15:00:00+00:00
 E1,Norwich City,Middlesbrough,2027-02-13 15:00:00+00:00
-E1,Portsmouth,Charlton Athletic,2027-02-13 15:00:00+00:00
 E1,Queens Park Rangers,West Bromwich Albion,2027-02-13 15:00:00+00:00
 E1,Stoke City,Watford,2027-02-13 15:00:00+00:00
 E1,Wolverhampton Wanderers,Sheffield United,2027-02-13 15:00:00+00:00
 E1,Wrexham,West Ham United,2027-02-13 15:00:00+00:00
-E1,Blackburn Rovers,Bristol City,2027-02-16 19:45:00+00:00
+E1,Lincoln City,Preston North End,2027-02-13 17:30:00+00:00
+E1,Cardiff City,Bolton Wanderers,2027-02-14 12:00:00+00:00
 E1,Charlton Athletic,Burnley,2027-02-16 19:45:00+00:00
 E1,Derby County,Queens Park Rangers,2027-02-16 19:45:00+00:00
 E1,Preston North End,Birmingham City,2027-02-16 19:45:00+00:00
 E1,Sheffield United,Portsmouth,2027-02-16 19:45:00+00:00
-E1,Watford,Cardiff City,2027-02-16 19:45:00+00:00
 E1,West Bromwich Albion,Wrexham,2027-02-16 19:45:00+00:00
 E1,West Ham United,Lincoln City,2027-02-16 19:45:00+00:00
+E1,Middlesbrough,Stoke City,2027-02-16 19:45:00+00:00
+E1,Blackburn Rovers,Bristol City,2027-02-16 20:00:00+00:00
 E1,Bolton Wanderers,Wolverhampton Wanderers,2027-02-17 19:45:00+00:00
-E1,Middlesbrough,Stoke City,2027-02-17 19:45:00+00:00
 E1,Southampton,Norwich City,2027-02-17 19:45:00+00:00
 E1,Swansea City,Millwall,2027-02-17 19:45:00+00:00
+E1,Watford,Cardiff City,2027-02-17 20:00:00+00:00
+E1,Middlesbrough,Birmingham City,2027-02-19 20:00:00+00:00
+E1,Sheffield United,Stoke City,2027-02-20 12:30:00+00:00
+E1,Watford,Bristol City,2027-02-20 12:30:00+00:00
+E1,West Bromwich Albion,Wolverhampton Wanderers,2027-02-20 12:30:00+00:00
 E1,Blackburn Rovers,Portsmouth,2027-02-20 15:00:00+00:00
 E1,Bolton Wanderers,Norwich City,2027-02-20 15:00:00+00:00
 E1,Charlton Athletic,Cardiff City,2027-02-20 15:00:00+00:00
 E1,Derby County,Burnley,2027-02-20 15:00:00+00:00
-E1,Middlesbrough,Birmingham City,2027-02-20 15:00:00+00:00
 E1,Preston North End,Queens Park Rangers,2027-02-20 15:00:00+00:00
-E1,Sheffield United,Stoke City,2027-02-20 15:00:00+00:00
 E1,Southampton,Wrexham,2027-02-20 15:00:00+00:00
 E1,Swansea City,Lincoln City,2027-02-20 15:00:00+00:00
-E1,Watford,Bristol City,2027-02-20 15:00:00+00:00
-E1,West Bromwich Albion,Wolverhampton Wanderers,2027-02-20 15:00:00+00:00
 E1,West Ham United,Millwall,2027-02-21 12:00:00+00:00
-E1,Birmingham City,West Bromwich Albion,2027-02-27 15:00:00+00:00
-E1,Bristol City,Charlton Athletic,2027-02-27 15:00:00+00:00
+E1,Birmingham City,West Bromwich Albion,2027-02-26 20:00:00+00:00
+E1,Bristol City,Charlton Athletic,2027-02-27 12:30:00+00:00
+E1,Norwich City,Swansea City,2027-02-27 12:30:00+00:00
+E1,Queens Park Rangers,West Ham United,2027-02-27 12:30:00+00:00
 E1,Burnley,Watford,2027-02-27 15:00:00+00:00
 E1,Cardiff City,Blackburn Rovers,2027-02-27 15:00:00+00:00
 E1,Lincoln City,Sheffield United,2027-02-27 15:00:00+00:00
 E1,Millwall,Preston North End,2027-02-27 15:00:00+00:00
-E1,Norwich City,Swansea City,2027-02-27 15:00:00+00:00
-E1,Queens Park Rangers,West Ham United,2027-02-27 15:00:00+00:00
 E1,Stoke City,Bolton Wanderers,2027-02-27 15:00:00+00:00
 E1,Wolverhampton Wanderers,Middlesbrough,2027-02-27 15:00:00+00:00
 E1,Wrexham,Derby County,2027-02-27 15:00:00+00:00
 E1,Portsmouth,Southampton,2027-02-28 12:00:00+00:00
 E1,Bolton Wanderers,Queens Park Rangers,2027-03-02 19:45:00+00:00
-E1,Bristol City,Birmingham City,2027-03-02 19:45:00+00:00
 E1,Burnley,West Bromwich Albion,2027-03-02 19:45:00+00:00
 E1,Cardiff City,Derby County,2027-03-02 19:45:00+00:00
 E1,Charlton Athletic,West Ham United,2027-03-02 19:45:00+00:00
 E1,Middlesbrough,Blackburn Rovers,2027-03-02 19:45:00+00:00
 E1,Norwich City,Millwall,2027-03-02 19:45:00+00:00
 E1,Watford,Wrexham,2027-03-02 19:45:00+00:00
-E1,Portsmouth,Lincoln City,2027-03-03 19:45:00+00:00
+E1,Bristol City,Birmingham City,2027-03-02 20:00:00+00:00
 E1,Sheffield United,Swansea City,2027-03-03 19:45:00+00:00
 E1,Stoke City,Southampton,2027-03-03 19:45:00+00:00
 E1,Wolverhampton Wanderers,Preston North End,2027-03-03 19:45:00+00:00
+E1,Portsmouth,Lincoln City,2027-03-03 20:00:00+00:00
 E1,Birmingham City,Sheffield United,2027-03-06 15:00:00+00:00
 E1,Blackburn Rovers,Wolverhampton Wanderers,2027-03-06 15:00:00+00:00
 E1,Derby County,Charlton Athletic,2027-03-06 15:00:00+00:00
@@ -801,14 +786,14 @@ E2,Mansfield Town,Plymouth Argyle,2027-01-09 15:00:00+00:00
 E2,MK Dons,Stockport County,2027-01-09 15:00:00+00:00
 E2,Notts County,Leyton Orient,2027-01-09 15:00:00+00:00
 E2,Peterborough United,Wigan Athletic,2027-01-09 15:00:00+00:00
+E2,Bromley,Stockport County,2027-01-16 12:30:00+00:00
+E2,Luton Town,MK Dons,2027-01-16 12:30:00+00:00
 E2,AFC Wimbledon,Sheffield Wednesday,2027-01-16 15:00:00+00:00
 E2,Blackpool,Leyton Orient,2027-01-16 15:00:00+00:00
-E2,Bromley,Stockport County,2027-01-16 15:00:00+00:00
 E2,Burton Albion,Peterborough United,2027-01-16 15:00:00+00:00
 E2,Cambridge United,Barnsley,2027-01-16 15:00:00+00:00
 E2,Doncaster Rovers,Leicester City,2027-01-16 15:00:00+00:00
 E2,Huddersfield Town,Plymouth Argyle,2027-01-16 15:00:00+00:00
-E2,Luton Town,MK Dons,2027-01-16 15:00:00+00:00
 E2,Notts County,Wycombe Wanderers,2027-01-16 15:00:00+00:00
 E2,Oxford United,Mansfield Town,2027-01-16 15:00:00+00:00
 E2,Reading,Wigan Athletic,2027-01-16 15:00:00+00:00
@@ -823,8 +808,10 @@ E2,Peterborough United,Huddersfield Town,2027-01-19 19:45:00+00:00
 E2,Plymouth Argyle,Stevenage,2027-01-19 19:45:00+00:00
 E2,Sheffield Wednesday,Notts County,2027-01-19 19:45:00+00:00
 E2,Stockport County,Doncaster Rovers,2027-01-19 19:45:00+00:00
-E2,Wigan Athletic,Oxford United,2027-01-19 19:45:00+00:00
 E2,Wycombe Wanderers,Cambridge United,2027-01-19 19:45:00+00:00
+E2,Wigan Athletic,Oxford United,2027-01-20 20:00:00+00:00
+E2,Sheffield Wednesday,Doncaster Rovers,2027-01-23 12:30:00+00:00
+E2,Wigan Athletic,Huddersfield Town,2027-01-23 12:30:00+00:00
 E2,Barnsley,Reading,2027-01-23 15:00:00+00:00
 E2,Bradford City,Oxford United,2027-01-23 15:00:00+00:00
 E2,Leicester City,Luton Town,2027-01-23 15:00:00+00:00
@@ -832,33 +819,31 @@ E2,Leyton Orient,Burton Albion,2027-01-23 15:00:00+00:00
 E2,Mansfield Town,Blackpool,2027-01-23 15:00:00+00:00
 E2,MK Dons,Stevenage,2027-01-23 15:00:00+00:00
 E2,Peterborough United,Bromley,2027-01-23 15:00:00+00:00
-E2,Plymouth Argyle,Cambridge United,2027-01-23 15:00:00+00:00
-E2,Sheffield Wednesday,Doncaster Rovers,2027-01-23 15:00:00+00:00
 E2,Stockport County,Notts County,2027-01-23 15:00:00+00:00
-E2,Wigan Athletic,Huddersfield Town,2027-01-23 15:00:00+00:00
 E2,Wycombe Wanderers,AFC Wimbledon,2027-01-23 15:00:00+00:00
+E2,Plymouth Argyle,Cambridge United,2027-01-25 20:00:00+00:00
 E2,Huddersfield Town,Bradford City,2027-01-30 12:30:00+00:00
+E2,Luton Town,Peterborough United,2027-01-30 12:30:00+00:00
 E2,AFC Wimbledon,Stockport County,2027-01-30 15:00:00+00:00
 E2,Blackpool,Sheffield Wednesday,2027-01-30 15:00:00+00:00
 E2,Bromley,Wigan Athletic,2027-01-30 15:00:00+00:00
 E2,Burton Albion,Wycombe Wanderers,2027-01-30 15:00:00+00:00
 E2,Cambridge United,Leyton Orient,2027-01-30 15:00:00+00:00
 E2,Doncaster Rovers,MK Dons,2027-01-30 15:00:00+00:00
-E2,Luton Town,Peterborough United,2027-01-30 15:00:00+00:00
 E2,Notts County,Mansfield Town,2027-01-30 15:00:00+00:00
 E2,Oxford United,Barnsley,2027-01-30 15:00:00+00:00
 E2,Reading,Plymouth Argyle,2027-01-30 15:00:00+00:00
 E2,Stevenage,Leicester City,2027-01-30 15:00:00+00:00
+E2,Leicester City,MK Dons,2027-02-06 12:30:00+00:00
+E2,Reading,Oxford United,2027-02-06 12:30:00+00:00
 E2,Barnsley,Leyton Orient,2027-02-06 15:00:00+00:00
 E2,Bradford City,Plymouth Argyle,2027-02-06 15:00:00+00:00
 E2,Bromley,Sheffield Wednesday,2027-02-06 15:00:00+00:00
 E2,Burton Albion,Notts County,2027-02-06 15:00:00+00:00
 E2,Doncaster Rovers,Stevenage,2027-02-06 15:00:00+00:00
 E2,Huddersfield Town,Cambridge United,2027-02-06 15:00:00+00:00
-E2,Leicester City,MK Dons,2027-02-06 15:00:00+00:00
 E2,Luton Town,Mansfield Town,2027-02-06 15:00:00+00:00
 E2,Peterborough United,Blackpool,2027-02-06 15:00:00+00:00
-E2,Reading,Oxford United,2027-02-06 15:00:00+00:00
 E2,Wigan Athletic,AFC Wimbledon,2027-02-06 15:00:00+00:00
 E2,Wycombe Wanderers,Stockport County,2027-02-06 15:00:00+00:00
 E2,AFC Wimbledon,Burton Albion,2027-02-09 19:45:00+00:00
@@ -869,35 +854,36 @@ E2,Mansfield Town,Reading,2027-02-09 19:45:00+00:00
 E2,MK Dons,Wigan Athletic,2027-02-09 19:45:00+00:00
 E2,Notts County,Doncaster Rovers,2027-02-09 19:45:00+00:00
 E2,Oxford United,Huddersfield Town,2027-02-09 19:45:00+00:00
-E2,Plymouth Argyle,Leicester City,2027-02-09 19:45:00+00:00
 E2,Sheffield Wednesday,Wycombe Wanderers,2027-02-09 19:45:00+00:00
 E2,Stevenage,Peterborough United,2027-02-09 19:45:00+00:00
 E2,Stockport County,Luton Town,2027-02-09 19:45:00+00:00
+E2,Plymouth Argyle,Leicester City,2027-02-10 20:00:00+00:00
+E2,Mansfield Town,Bradford City,2027-02-13 12:30:00+00:00
+E2,MK Dons,Wycombe Wanderers,2027-02-13 12:30:00+00:00
 E2,AFC Wimbledon,Bromley,2027-02-13 15:00:00+00:00
 E2,Blackpool,Reading,2027-02-13 15:00:00+00:00
 E2,Cambridge United,Burton Albion,2027-02-13 15:00:00+00:00
 E2,Leyton Orient,Luton Town,2027-02-13 15:00:00+00:00
-E2,Mansfield Town,Bradford City,2027-02-13 15:00:00+00:00
-E2,MK Dons,Wycombe Wanderers,2027-02-13 15:00:00+00:00
 E2,Notts County,Huddersfield Town,2027-02-13 15:00:00+00:00
 E2,Oxford United,Leicester City,2027-02-13 15:00:00+00:00
 E2,Plymouth Argyle,Doncaster Rovers,2027-02-13 15:00:00+00:00
 E2,Sheffield Wednesday,Peterborough United,2027-02-13 15:00:00+00:00
 E2,Stevenage,Barnsley,2027-02-13 15:00:00+00:00
 E2,Stockport County,Wigan Athletic,2027-02-13 15:00:00+00:00
+E2,Leicester City,Stockport County,2027-02-20 12:30:00+00:00
+E2,Wigan Athletic,Sheffield Wednesday,2027-02-20 12:30:00+00:00
 E2,Barnsley,Plymouth Argyle,2027-02-20 15:00:00+00:00
 E2,Bradford City,Notts County,2027-02-20 15:00:00+00:00
 E2,Bromley,Blackpool,2027-02-20 15:00:00+00:00
 E2,Burton Albion,Oxford United,2027-02-20 15:00:00+00:00
 E2,Doncaster Rovers,AFC Wimbledon,2027-02-20 15:00:00+00:00
 E2,Huddersfield Town,Mansfield Town,2027-02-20 15:00:00+00:00
-E2,Leicester City,Stockport County,2027-02-20 15:00:00+00:00
 E2,Luton Town,Stevenage,2027-02-20 15:00:00+00:00
 E2,Peterborough United,MK Dons,2027-02-20 15:00:00+00:00
 E2,Reading,Cambridge United,2027-02-20 15:00:00+00:00
-E2,Wigan Athletic,Sheffield Wednesday,2027-02-20 15:00:00+00:00
 E2,Wycombe Wanderers,Leyton Orient,2027-02-20 15:00:00+00:00
 E2,Cambridge United,Peterborough United,2027-02-27 12:30:00+00:00
+E2,Oxford United,Luton Town,2027-02-27 12:30:00+00:00
 E2,Barnsley,Wigan Athletic,2027-02-27 15:00:00+00:00
 E2,Blackpool,AFC Wimbledon,2027-02-27 15:00:00+00:00
 E2,Bradford City,Leicester City,2027-02-27 15:00:00+00:00
@@ -906,7 +892,6 @@ E2,Huddersfield Town,Wycombe Wanderers,2027-02-27 15:00:00+00:00
 E2,Leyton Orient,Doncaster Rovers,2027-02-27 15:00:00+00:00
 E2,Mansfield Town,Stevenage,2027-02-27 15:00:00+00:00
 E2,Notts County,Bromley,2027-02-27 15:00:00+00:00
-E2,Oxford United,Luton Town,2027-02-27 15:00:00+00:00
 E2,Plymouth Argyle,Sheffield Wednesday,2027-02-27 15:00:00+00:00
 E2,Reading,Stockport County,2027-02-27 15:00:00+00:00
 E2,AFC Wimbledon,Huddersfield Town,2027-03-06 15:00:00+00:00
@@ -1189,10 +1174,10 @@ E3,Oldham Athletic,Newport County,2027-01-09 15:00:00+00:00
 E3,Rotherham United,Port Vale,2027-01-09 15:00:00+00:00
 E3,Salford City,Crewe Alexandra,2027-01-09 15:00:00+00:00
 E3,Tranmere Rovers,Swindon Town,2027-01-09 15:00:00+00:00
+E3,Bristol Rovers,Shrewsbury Town,2027-01-16 12:30:00+00:00
+E3,Chesterfield,Port Vale,2027-01-16 12:30:00+00:00
 E3,Barnet,Tranmere Rovers,2027-01-16 15:00:00+00:00
-E3,Bristol Rovers,Shrewsbury Town,2027-01-16 15:00:00+00:00
 E3,Cheltenham Town,Oldham Athletic,2027-01-16 15:00:00+00:00
-E3,Chesterfield,Port Vale,2027-01-16 15:00:00+00:00
 E3,Crawley Town,Salford City,2027-01-16 15:00:00+00:00
 E3,Exeter City,Colchester United,2027-01-16 15:00:00+00:00
 E3,Gillingham,Accrington Stanley,2027-01-16 15:00:00+00:00
@@ -1206,25 +1191,27 @@ E3,Colchester United,Chesterfield,2027-01-19 19:45:00+00:00
 E3,Crewe Alexandra,Exeter City,2027-01-19 19:45:00+00:00
 E3,Fleetwood Town,Cheltenham Town,2027-01-19 19:45:00+00:00
 E3,Grimsby Town,Rochdale,2027-01-19 19:45:00+00:00
-E3,Newport County,Rotherham United,2027-01-19 19:45:00+00:00
 E3,Oldham Athletic,Walsall,2027-01-19 19:45:00+00:00
 E3,Port Vale,Gillingham,2027-01-19 19:45:00+00:00
 E3,Salford City,Bristol Rovers,2027-01-19 19:45:00+00:00
 E3,Shrewsbury Town,Crawley Town,2027-01-19 19:45:00+00:00
 E3,Swindon Town,Barnet,2027-01-19 19:45:00+00:00
 E3,Tranmere Rovers,Northampton Town,2027-01-19 19:45:00+00:00
+E3,Newport County,Rotherham United,2027-01-19 20:00:00+00:00
+E3,Colchester United,Northampton Town,2027-01-23 12:30:00+00:00
+E3,Salford City,Walsall,2027-01-23 12:30:00+00:00
 E3,Accrington Stanley,Rochdale,2027-01-23 15:00:00+00:00
-E3,Colchester United,Northampton Town,2027-01-23 15:00:00+00:00
 E3,Crewe Alexandra,Chesterfield,2027-01-23 15:00:00+00:00
 E3,Fleetwood Town,Exeter City,2027-01-23 15:00:00+00:00
 E3,Grimsby Town,Gillingham,2027-01-23 15:00:00+00:00
 E3,Newport County,Cheltenham Town,2027-01-23 15:00:00+00:00
 E3,Oldham Athletic,Barnet,2027-01-23 15:00:00+00:00
 E3,Port Vale,York City,2027-01-23 15:00:00+00:00
-E3,Salford City,Walsall,2027-01-23 15:00:00+00:00
 E3,Shrewsbury Town,Rotherham United,2027-01-23 15:00:00+00:00
 E3,Swindon Town,Bristol Rovers,2027-01-23 15:00:00+00:00
 E3,Tranmere Rovers,Crawley Town,2027-01-23 15:00:00+00:00
+E3,Rotherham United,Swindon Town,2027-01-30 12:30:00+00:00
+E3,York City,Grimsby Town,2027-01-30 12:30:00+00:00
 E3,Barnet,Crewe Alexandra,2027-01-30 15:00:00+00:00
 E3,Bristol Rovers,Fleetwood Town,2027-01-30 15:00:00+00:00
 E3,Cheltenham Town,Tranmere Rovers,2027-01-30 15:00:00+00:00
@@ -1234,21 +1221,19 @@ E3,Exeter City,Salford City,2027-01-30 15:00:00+00:00
 E3,Gillingham,Shrewsbury Town,2027-01-30 15:00:00+00:00
 E3,Northampton Town,Accrington Stanley,2027-01-30 15:00:00+00:00
 E3,Rochdale,Port Vale,2027-01-30 15:00:00+00:00
-E3,Rotherham United,Swindon Town,2027-01-30 15:00:00+00:00
 E3,Walsall,Colchester United,2027-01-30 15:00:00+00:00
-E3,York City,Grimsby Town,2027-01-30 15:00:00+00:00
+E3,Crewe Alexandra,Port Vale,2027-02-06 12:30:00+00:00
+E3,Tranmere Rovers,Newport County,2027-02-06 12:30:00+00:00
 E3,Accrington Stanley,Walsall,2027-02-06 15:00:00+00:00
 E3,Bristol Rovers,Crawley Town,2027-02-06 15:00:00+00:00
 E3,Cheltenham Town,Barnet,2027-02-06 15:00:00+00:00
 E3,Chesterfield,Rotherham United,2027-02-06 15:00:00+00:00
-E3,Crewe Alexandra,Port Vale,2027-02-06 15:00:00+00:00
 E3,Exeter City,York City,2027-02-06 15:00:00+00:00
 E3,Fleetwood Town,Grimsby Town,2027-02-06 15:00:00+00:00
 E3,Northampton Town,Gillingham,2027-02-06 15:00:00+00:00
 E3,Rochdale,Colchester United,2027-02-06 15:00:00+00:00
 E3,Salford City,Shrewsbury Town,2027-02-06 15:00:00+00:00
 E3,Swindon Town,Oldham Athletic,2027-02-06 15:00:00+00:00
-E3,Tranmere Rovers,Newport County,2027-02-06 15:00:00+00:00
 E3,Barnet,Exeter City,2027-02-09 19:45:00+00:00
 E3,Colchester United,Bristol Rovers,2027-02-09 19:45:00+00:00
 E3,Crawley Town,Northampton Town,2027-02-09 19:45:00+00:00
@@ -1259,38 +1244,38 @@ E3,Oldham Athletic,Fleetwood Town,2027-02-09 19:45:00+00:00
 E3,Port Vale,Swindon Town,2027-02-09 19:45:00+00:00
 E3,Rotherham United,Tranmere Rovers,2027-02-09 19:45:00+00:00
 E3,Shrewsbury Town,Rochdale,2027-02-09 19:45:00+00:00
-E3,Walsall,Crewe Alexandra,2027-02-09 19:45:00+00:00
 E3,York City,Cheltenham Town,2027-02-09 19:45:00+00:00
+E3,Walsall,Crewe Alexandra,2027-02-09 20:00:00+00:00
+E3,Oldham Athletic,Tranmere Rovers,2027-02-13 12:30:00+00:00
+E3,Port Vale,Salford City,2027-02-13 12:30:00+00:00
 E3,Barnet,Chesterfield,2027-02-13 15:00:00+00:00
 E3,Colchester United,Swindon Town,2027-02-13 15:00:00+00:00
 E3,Crawley Town,Accrington Stanley,2027-02-13 15:00:00+00:00
 E3,Gillingham,Rochdale,2027-02-13 15:00:00+00:00
 E3,Grimsby Town,Cheltenham Town,2027-02-13 15:00:00+00:00
 E3,Newport County,Northampton Town,2027-02-13 15:00:00+00:00
-E3,Oldham Athletic,Tranmere Rovers,2027-02-13 15:00:00+00:00
-E3,Port Vale,Salford City,2027-02-13 15:00:00+00:00
 E3,Rotherham United,Bristol Rovers,2027-02-13 15:00:00+00:00
 E3,Shrewsbury Town,Fleetwood Town,2027-02-13 15:00:00+00:00
 E3,Walsall,Exeter City,2027-02-13 15:00:00+00:00
 E3,York City,Crewe Alexandra,2027-02-13 15:00:00+00:00
+E3,Rochdale,Walsall,2027-02-18 20:00:00+00:00
+E3,Cheltenham Town,Crawley Town,2027-02-20 12:30:00+00:00
+E3,Exeter City,Port Vale,2027-02-20 12:30:00+00:00
 E3,Accrington Stanley,Barnet,2027-02-20 15:00:00+00:00
 E3,Bristol Rovers,Grimsby Town,2027-02-20 15:00:00+00:00
-E3,Cheltenham Town,Crawley Town,2027-02-20 15:00:00+00:00
 E3,Chesterfield,Oldham Athletic,2027-02-20 15:00:00+00:00
 E3,Crewe Alexandra,Colchester United,2027-02-20 15:00:00+00:00
-E3,Exeter City,Port Vale,2027-02-20 15:00:00+00:00
 E3,Fleetwood Town,Newport County,2027-02-20 15:00:00+00:00
 E3,Northampton Town,Shrewsbury Town,2027-02-20 15:00:00+00:00
-E3,Rochdale,Walsall,2027-02-20 15:00:00+00:00
 E3,Salford City,Rotherham United,2027-02-20 15:00:00+00:00
 E3,Swindon Town,York City,2027-02-20 15:00:00+00:00
 E3,Tranmere Rovers,Gillingham,2027-02-20 15:00:00+00:00
+E3,Barnet,Walsall,2027-02-27 12:30:00+00:00
+E3,Gillingham,Colchester United,2027-02-27 12:30:00+00:00
 E3,Accrington Stanley,Port Vale,2027-02-27 15:00:00+00:00
-E3,Barnet,Walsall,2027-02-27 15:00:00+00:00
 E3,Cheltenham Town,Exeter City,2027-02-27 15:00:00+00:00
 E3,Chesterfield,Bristol Rovers,2027-02-27 15:00:00+00:00
 E3,Crawley Town,Rotherham United,2027-02-27 15:00:00+00:00
-E3,Gillingham,Colchester United,2027-02-27 15:00:00+00:00
 E3,Grimsby Town,Swindon Town,2027-02-27 15:00:00+00:00
 E3,Newport County,Crewe Alexandra,2027-02-27 15:00:00+00:00
 E3,Northampton Town,Salford City,2027-02-27 15:00:00+00:00
@@ -1454,10 +1439,6 @@ E3,Shrewsbury Town,York City,2027-05-08 14:00:00+00:00
 E3,Swindon Town,Gillingham,2027-05-08 14:00:00+00:00
 E3,Walsall,Newport County,2027-05-08 14:00:00+00:00
 SP1,Rayo Vallecano,Athletic Club,2026-12-09 19:00:00+00:00
-SP1,Málaga CF,R. Racing Club,2026-11-07 13:00:00+00:00
-SP1,RCD Espanyol de Barcelona,RC Deportivo,2026-11-07 15:15:00+00:00
-SP1,CA Osasuna,Athletic Club,2026-11-07 17:30:00+00:00
-SP1,Valencia CF,Real Madrid,2026-11-07 20:00:00+00:00
 SP1,Elche CF,Real Betis,2026-11-08 13:00:00+00:00
 SP1,Real Sociedad,Rayo Vallecano,2026-11-08 15:15:00+00:00
 SP1,Celta,Levante UD,2026-11-08 17:30:00+00:00
@@ -1473,16 +1454,16 @@ SP1,R. Racing Club,Real Sociedad,2026-11-22 15:15:00+00:00
 SP1,CA Osasuna,Málaga CF,2026-11-22 17:30:00+00:00
 SP1,Getafe CF,Atlético de Madrid,2026-11-22 20:00:00+00:00
 SP1,Levante UD,Elche CF,2026-11-23 20:00:00+00:00
-SP1,Real Betis,Rayo Vallecano,2026-11-29 00:00:00+00:00
-SP1,Celta,Villarreal CF,2026-11-29 00:00:00+00:00
-SP1,RC Deportivo,FC Barcelona,2026-11-29 00:00:00+00:00
-SP1,Elche CF,Atlético de Madrid,2026-11-29 00:00:00+00:00
-SP1,RCD Espanyol de Barcelona,Getafe CF,2026-11-29 00:00:00+00:00
-SP1,Levante UD,R. Racing Club,2026-11-29 00:00:00+00:00
-SP1,Málaga CF,Athletic Club,2026-11-29 00:00:00+00:00
-SP1,Real Madrid,Deportivo Alavés,2026-11-29 00:00:00+00:00
-SP1,Real Sociedad,Sevilla FC,2026-11-29 00:00:00+00:00
-SP1,Valencia CF,CA Osasuna,2026-11-29 00:00:00+00:00
+SP1,Levante UD,R. Racing Club,2026-11-27 20:00:00+00:00
+SP1,Real Betis,Rayo Vallecano,2026-11-28 13:00:00+00:00
+SP1,Málaga CF,Athletic Club,2026-11-28 15:15:00+00:00
+SP1,Elche CF,Atlético de Madrid,2026-11-28 17:30:00+00:00
+SP1,Real Madrid,Deportivo Alavés,2026-11-28 20:00:00+00:00
+SP1,Valencia CF,CA Osasuna,2026-11-29 13:00:00+00:00
+SP1,RC Deportivo,FC Barcelona,2026-11-29 15:15:00+00:00
+SP1,Celta,Villarreal CF,2026-11-29 17:30:00+00:00
+SP1,Real Sociedad,Sevilla FC,2026-11-29 20:00:00+00:00
+SP1,RCD Espanyol de Barcelona,Getafe CF,2026-11-30 20:00:00+00:00
 SP1,Deportivo Alavés,RCD Espanyol de Barcelona,2026-12-06 00:00:00+00:00
 SP1,Athletic Club,Real Madrid,2026-12-06 00:00:00+00:00
 SP1,Atlético de Madrid,Real Betis,2026-12-06 00:00:00+00:00
@@ -1563,15 +1544,15 @@ SP1,CA Osasuna,RC Deportivo,2027-01-31 00:00:00+00:00
 SP1,Rayo Vallecano,Real Madrid,2027-01-31 00:00:00+00:00
 SP1,Sevilla FC,Athletic Club,2027-01-31 00:00:00+00:00
 SP1,Villarreal CF,R. Racing Club,2027-01-31 00:00:00+00:00
+SP1,Real Sociedad,Real Madrid,2026-12-02 18:00:00+00:00
+SP1,FC Barcelona,Atlético de Madrid,2026-12-02 20:30:00+00:00
 SP1,Deportivo Alavés,Celta,2027-02-07 00:00:00+00:00
 SP1,Athletic Club,CA Osasuna,2027-02-07 00:00:00+00:00
 SP1,Real Betis,Sevilla FC,2027-02-07 00:00:00+00:00
 SP1,RC Deportivo,Málaga CF,2027-02-07 00:00:00+00:00
 SP1,Elche CF,Levante UD,2027-02-07 00:00:00+00:00
 SP1,RCD Espanyol de Barcelona,Rayo Vallecano,2027-02-07 00:00:00+00:00
-SP1,FC Barcelona,Atlético de Madrid,2027-02-07 00:00:00+00:00
 SP1,Getafe CF,Villarreal CF,2027-02-07 00:00:00+00:00
-SP1,Real Sociedad,Real Madrid,2027-02-07 00:00:00+00:00
 SP1,Valencia CF,R. Racing Club,2027-02-07 00:00:00+00:00
 SP1,Celta,Rayo Vallecano,2027-02-14 00:00:00+00:00
 SP1,Elche CF,RC Deportivo,2027-02-14 00:00:00+00:00
@@ -1723,10 +1704,6 @@ SP1,Málaga CF,Sevilla FC,2027-05-30 00:00:00+00:00
 SP1,CA Osasuna,Valencia CF,2027-05-30 00:00:00+00:00
 SP1,Real Madrid,RC Deportivo,2027-05-30 00:00:00+00:00
 SP1,Real Sociedad,Villarreal CF,2027-05-30 00:00:00+00:00
-I1,Cagliari,Frosinone,2026-11-07 14:00:00+00:00
-I1,Torino,Lecce,2026-11-07 14:00:00+00:00
-I1,Parma,Bologna,2026-11-07 17:00:00+00:00
-I1,Roma,Sassuolo,2026-11-07 19:45:00+00:00
 I1,Napoli,Lazio,2026-11-08 11:30:00+00:00
 I1,Genoa,Milan,2026-11-08 14:00:00+00:00
 I1,Monza,Atalanta,2026-11-08 14:00:00+00:00
@@ -1812,201 +1789,196 @@ I1,Torino,Atalanta,2027-01-10 17:00:00+00:00
 I1,Internazionale,Juventus,2027-01-10 19:45:00+00:00
 I1,Cagliari,Sassuolo,2027-01-11 17:30:00+00:00
 I1,Udinese,Napoli,2027-01-11 19:45:00+00:00
-I1,Atalanta,Roma,2027-01-16 00:00:00+00:00
-I1,Cagliari,Como,2027-01-16 00:00:00+00:00
-I1,Juventus,Genoa,2027-01-16 00:00:00+00:00
-I1,Lazio,Bologna,2027-01-16 00:00:00+00:00
-I1,Lecce,Udinese,2027-01-16 00:00:00+00:00
-I1,Milan,Torino,2027-01-16 00:00:00+00:00
-I1,Napoli,Fiorentina,2027-01-16 00:00:00+00:00
-I1,Parma,Internazionale,2027-01-16 00:00:00+00:00
-I1,Sassuolo,Monza,2027-01-16 00:00:00+00:00
-I1,Venezia,Frosinone,2027-01-16 00:00:00+00:00
-I1,Bologna,Atalanta,2027-01-23 00:00:00+00:00
-I1,Como,Napoli,2027-01-23 00:00:00+00:00
-I1,Fiorentina,Sassuolo,2027-01-23 00:00:00+00:00
-I1,Frosinone,Milan,2027-01-23 00:00:00+00:00
-I1,Genoa,Parma,2027-01-23 00:00:00+00:00
-I1,Internazionale,Venezia,2027-01-23 00:00:00+00:00
-I1,Juventus,Cagliari,2027-01-23 00:00:00+00:00
-I1,Lecce,Torino,2027-01-23 00:00:00+00:00
-I1,Monza,Lazio,2027-01-23 00:00:00+00:00
-I1,Roma,Udinese,2027-01-23 00:00:00+00:00
-I1,Atalanta,Fiorentina,2027-01-30 00:00:00+00:00
-I1,Cagliari,Parma,2027-01-30 00:00:00+00:00
-I1,Genoa,Lecce,2027-01-30 00:00:00+00:00
-I1,Lazio,Venezia,2027-01-30 00:00:00+00:00
-I1,Milan,Juventus,2027-01-30 00:00:00+00:00
-I1,Monza,Roma,2027-01-30 00:00:00+00:00
-I1,Napoli,Internazionale,2027-01-30 00:00:00+00:00
-I1,Sassuolo,Como,2027-01-30 00:00:00+00:00
-I1,Torino,Frosinone,2027-01-30 00:00:00+00:00
-I1,Udinese,Bologna,2027-01-30 00:00:00+00:00
-I1,Atalanta,Lazio,2027-02-06 00:00:00+00:00
-I1,Bologna,Milan,2027-02-06 00:00:00+00:00
-I1,Como,Monza,2027-02-06 00:00:00+00:00
-I1,Fiorentina,Udinese,2027-02-06 00:00:00+00:00
-I1,Internazionale,Cagliari,2027-02-06 00:00:00+00:00
-I1,Juventus,Sassuolo,2027-02-06 00:00:00+00:00
-I1,Lecce,Napoli,2027-02-06 00:00:00+00:00
-I1,Parma,Frosinone,2027-02-06 00:00:00+00:00
-I1,Roma,Torino,2027-02-06 00:00:00+00:00
-I1,Venezia,Genoa,2027-02-06 00:00:00+00:00
-I1,Bologna,Como,2027-02-13 00:00:00+00:00
-I1,Cagliari,Lazio,2027-02-13 00:00:00+00:00
-I1,Frosinone,Fiorentina,2027-02-13 00:00:00+00:00
-I1,Genoa,Atalanta,2027-02-13 00:00:00+00:00
-I1,Internazionale,Milan,2027-02-13 00:00:00+00:00
-I1,Monza,Lecce,2027-02-13 00:00:00+00:00
-I1,Napoli,Juventus,2027-02-13 00:00:00+00:00
-I1,Roma,Parma,2027-02-13 00:00:00+00:00
-I1,Torino,Sassuolo,2027-02-13 00:00:00+00:00
-I1,Udinese,Venezia,2027-02-13 00:00:00+00:00
-I1,Atalanta,Monza,2027-02-20 00:00:00+00:00
-I1,Como,Torino,2027-02-20 00:00:00+00:00
-I1,Fiorentina,Internazionale,2027-02-20 00:00:00+00:00
-I1,Juventus,Bologna,2027-02-20 00:00:00+00:00
-I1,Lazio,Napoli,2027-02-20 00:00:00+00:00
-I1,Lecce,Frosinone,2027-02-20 00:00:00+00:00
-I1,Milan,Genoa,2027-02-20 00:00:00+00:00
-I1,Sassuolo,Roma,2027-02-20 00:00:00+00:00
-I1,Udinese,Parma,2027-02-20 00:00:00+00:00
-I1,Venezia,Cagliari,2027-02-20 00:00:00+00:00
-I1,Bologna,Lecce,2027-02-27 00:00:00+00:00
-I1,Cagliari,Udinese,2027-02-27 00:00:00+00:00
-I1,Como,Milan,2027-02-27 00:00:00+00:00
-I1,Frosinone,Napoli,2027-02-27 00:00:00+00:00
-I1,Genoa,Lazio,2027-02-27 00:00:00+00:00
-I1,Internazionale,Atalanta,2027-02-27 00:00:00+00:00
-I1,Monza,Juventus,2027-02-27 00:00:00+00:00
-I1,Parma,Sassuolo,2027-02-27 00:00:00+00:00
-I1,Roma,Venezia,2027-02-27 00:00:00+00:00
-I1,Torino,Fiorentina,2027-02-27 00:00:00+00:00
-I1,Atalanta,Torino,2027-03-06 00:00:00+00:00
-I1,Fiorentina,Venezia,2027-03-06 00:00:00+00:00
-I1,Juventus,Roma,2027-03-06 00:00:00+00:00
-I1,Lazio,Frosinone,2027-03-06 00:00:00+00:00
-I1,Lecce,Como,2027-03-06 00:00:00+00:00
-I1,Milan,Cagliari,2027-03-06 00:00:00+00:00
-I1,Monza,Genoa,2027-03-06 00:00:00+00:00
-I1,Napoli,Parma,2027-03-06 00:00:00+00:00
-I1,Sassuolo,Bologna,2027-03-06 00:00:00+00:00
-I1,Udinese,Internazionale,2027-03-06 00:00:00+00:00
-I1,Bologna,Napoli,2027-03-13 00:00:00+00:00
-I1,Cagliari,Fiorentina,2027-03-13 00:00:00+00:00
-I1,Como,Udinese,2027-03-13 00:00:00+00:00
-I1,Frosinone,Monza,2027-03-13 00:00:00+00:00
-I1,Genoa,Roma,2027-03-13 00:00:00+00:00
-I1,Lazio,Juventus,2027-03-13 00:00:00+00:00
-I1,Milan,Sassuolo,2027-03-13 00:00:00+00:00
-I1,Parma,Lecce,2027-03-13 00:00:00+00:00
-I1,Torino,Internazionale,2027-03-13 00:00:00+00:00
-I1,Venezia,Atalanta,2027-03-13 00:00:00+00:00
-I1,Atalanta,Milan,2027-03-20 00:00:00+00:00
-I1,Fiorentina,Genoa,2027-03-20 00:00:00+00:00
-I1,Internazionale,Frosinone,2027-03-20 00:00:00+00:00
-I1,Juventus,Como,2027-03-20 00:00:00+00:00
-I1,Monza,Bologna,2027-03-20 00:00:00+00:00
-I1,Napoli,Venezia,2027-03-20 00:00:00+00:00
-I1,Parma,Lazio,2027-03-20 00:00:00+00:00
-I1,Roma,Lecce,2027-03-20 00:00:00+00:00
-I1,Sassuolo,Cagliari,2027-03-20 00:00:00+00:00
-I1,Udinese,Torino,2027-03-20 00:00:00+00:00
-I1,Cagliari,Napoli,2027-04-03 00:00:00+00:00
-I1,Como,Fiorentina,2027-04-03 00:00:00+00:00
-I1,Frosinone,Udinese,2027-04-03 00:00:00+00:00
-I1,Genoa,Internazionale,2027-04-03 00:00:00+00:00
-I1,Lecce,Lazio,2027-04-03 00:00:00+00:00
-I1,Milan,Monza,2027-04-03 00:00:00+00:00
-I1,Roma,Bologna,2027-04-03 00:00:00+00:00
-I1,Sassuolo,Atalanta,2027-04-03 00:00:00+00:00
-I1,Torino,Juventus,2027-04-03 00:00:00+00:00
-I1,Venezia,Parma,2027-04-03 00:00:00+00:00
-I1,Bologna,Venezia,2027-04-10 00:00:00+00:00
-I1,Cagliari,Atalanta,2027-04-10 00:00:00+00:00
-I1,Fiorentina,Milan,2027-04-10 00:00:00+00:00
-I1,Frosinone,Genoa,2027-04-10 00:00:00+00:00
-I1,Internazionale,Roma,2027-04-10 00:00:00+00:00
-I1,Juventus,Lecce,2027-04-10 00:00:00+00:00
-I1,Lazio,Torino,2027-04-10 00:00:00+00:00
-I1,Napoli,Sassuolo,2027-04-10 00:00:00+00:00
-I1,Parma,Como,2027-04-10 00:00:00+00:00
-I1,Udinese,Monza,2027-04-10 00:00:00+00:00
-I1,Atalanta,Udinese,2027-04-17 00:00:00+00:00
-I1,Bologna,Cagliari,2027-04-17 00:00:00+00:00
-I1,Como,Frosinone,2027-04-17 00:00:00+00:00
-I1,Fiorentina,Parma,2027-04-17 00:00:00+00:00
-I1,Milan,Napoli,2027-04-17 00:00:00+00:00
-I1,Monza,Internazionale,2027-04-17 00:00:00+00:00
-I1,Roma,Lazio,2027-04-17 00:00:00+00:00
-I1,Sassuolo,Lecce,2027-04-17 00:00:00+00:00
-I1,Torino,Genoa,2027-04-17 00:00:00+00:00
-I1,Venezia,Juventus,2027-04-17 00:00:00+00:00
-I1,Cagliari,Monza,2027-04-24 00:00:00+00:00
-I1,Frosinone,Roma,2027-04-24 00:00:00+00:00
-I1,Genoa,Sassuolo,2027-04-24 00:00:00+00:00
-I1,Internazionale,Bologna,2027-04-24 00:00:00+00:00
-I1,Juventus,Fiorentina,2027-04-24 00:00:00+00:00
-I1,Lazio,Como,2027-04-24 00:00:00+00:00
-I1,Lecce,Milan,2027-04-24 00:00:00+00:00
-I1,Napoli,Udinese,2027-04-24 00:00:00+00:00
-I1,Parma,Atalanta,2027-04-24 00:00:00+00:00
-I1,Venezia,Torino,2027-04-24 00:00:00+00:00
-I1,Atalanta,Juventus,2027-05-01 00:00:00+00:00
-I1,Bologna,Fiorentina,2027-05-01 00:00:00+00:00
-I1,Como,Internazionale,2027-05-01 00:00:00+00:00
-I1,Lecce,Cagliari,2027-05-01 00:00:00+00:00
-I1,Milan,Lazio,2027-05-01 00:00:00+00:00
-I1,Monza,Venezia,2027-05-01 00:00:00+00:00
-I1,Roma,Napoli,2027-05-01 00:00:00+00:00
-I1,Sassuolo,Frosinone,2027-05-01 00:00:00+00:00
-I1,Torino,Parma,2027-05-01 00:00:00+00:00
-I1,Udinese,Genoa,2027-05-01 00:00:00+00:00
-I1,Fiorentina,Roma,2027-05-08 00:00:00+00:00
-I1,Frosinone,Atalanta,2027-05-08 00:00:00+00:00
-I1,Genoa,Cagliari,2027-05-08 00:00:00+00:00
-I1,Internazionale,Lecce,2027-05-08 00:00:00+00:00
-I1,Lazio,Sassuolo,2027-05-08 00:00:00+00:00
-I1,Napoli,Monza,2027-05-08 00:00:00+00:00
-I1,Parma,Milan,2027-05-08 00:00:00+00:00
-I1,Torino,Bologna,2027-05-08 00:00:00+00:00
-I1,Udinese,Juventus,2027-05-08 00:00:00+00:00
-I1,Venezia,Como,2027-05-08 00:00:00+00:00
-I1,Bologna,Frosinone,2027-05-15 00:00:00+00:00
-I1,Cagliari,Torino,2027-05-15 00:00:00+00:00
-I1,Como,Atalanta,2027-05-15 00:00:00+00:00
-I1,Juventus,Internazionale,2027-05-15 00:00:00+00:00
-I1,Lazio,Udinese,2027-05-15 00:00:00+00:00
-I1,Lecce,Fiorentina,2027-05-15 00:00:00+00:00
-I1,Milan,Roma,2027-05-15 00:00:00+00:00
-I1,Monza,Parma,2027-05-15 00:00:00+00:00
-I1,Napoli,Genoa,2027-05-15 00:00:00+00:00
-I1,Sassuolo,Venezia,2027-05-15 00:00:00+00:00
-I1,Atalanta,Lecce,2027-05-22 00:00:00+00:00
-I1,Fiorentina,Monza,2027-05-22 00:00:00+00:00
-I1,Frosinone,Cagliari,2027-05-22 00:00:00+00:00
-I1,Genoa,Bologna,2027-05-22 00:00:00+00:00
-I1,Internazionale,Lazio,2027-05-22 00:00:00+00:00
-I1,Parma,Juventus,2027-05-22 00:00:00+00:00
-I1,Roma,Como,2027-05-22 00:00:00+00:00
-I1,Torino,Napoli,2027-05-22 00:00:00+00:00
-I1,Udinese,Sassuolo,2027-05-22 00:00:00+00:00
-I1,Venezia,Milan,2027-05-22 00:00:00+00:00
-I1,Bologna,Parma,2027-05-29 00:00:00+00:00
-I1,Cagliari,Roma,2027-05-29 00:00:00+00:00
-I1,Como,Genoa,2027-05-29 00:00:00+00:00
-I1,Juventus,Frosinone,2027-05-29 00:00:00+00:00
-I1,Lazio,Fiorentina,2027-05-29 00:00:00+00:00
-I1,Lecce,Venezia,2027-05-29 00:00:00+00:00
-I1,Milan,Udinese,2027-05-29 00:00:00+00:00
-I1,Monza,Torino,2027-05-29 00:00:00+00:00
-I1,Napoli,Atalanta,2027-05-29 00:00:00+00:00
-I1,Sassuolo,Internazionale,2027-05-29 00:00:00+00:00
-D1,SC Paderborn 07,Eintracht Frankfurt,2026-11-07 14:30:00+00:00
-D1,1. FSV Mainz 05,FC Bayern München,2026-11-07 14:30:00+00:00
-D1,RB Leipzig,FC Augsburg,2026-11-07 14:30:00+00:00
-D1,Borussia Dortmund,SV Elversberg,2026-11-07 14:30:00+00:00
-D1,VfB Stuttgart,SV Werder Bremen,2026-11-07 17:30:00+00:00
+I1,Atalanta,Roma,2027-01-17 00:00:00+00:00
+I1,Cagliari,Como,2027-01-17 00:00:00+00:00
+I1,Juventus,Genoa,2027-01-17 00:00:00+00:00
+I1,Lazio,Bologna,2027-01-17 00:00:00+00:00
+I1,Lecce,Udinese,2027-01-17 00:00:00+00:00
+I1,Milan,Torino,2027-01-17 00:00:00+00:00
+I1,Napoli,Fiorentina,2027-01-17 00:00:00+00:00
+I1,Parma,Internazionale,2027-01-17 00:00:00+00:00
+I1,Sassuolo,Monza,2027-01-17 00:00:00+00:00
+I1,Venezia,Frosinone,2027-01-17 00:00:00+00:00
+I1,Bologna,Atalanta,2027-01-24 00:00:00+00:00
+I1,Como,Napoli,2027-01-24 00:00:00+00:00
+I1,Fiorentina,Sassuolo,2027-01-24 00:00:00+00:00
+I1,Frosinone,Milan,2027-01-24 00:00:00+00:00
+I1,Genoa,Parma,2027-01-24 00:00:00+00:00
+I1,Internazionale,Venezia,2027-01-24 00:00:00+00:00
+I1,Juventus,Cagliari,2027-01-24 00:00:00+00:00
+I1,Lecce,Torino,2027-01-24 00:00:00+00:00
+I1,Monza,Lazio,2027-01-24 00:00:00+00:00
+I1,Roma,Udinese,2027-01-24 00:00:00+00:00
+I1,Atalanta,Fiorentina,2027-01-31 00:00:00+00:00
+I1,Cagliari,Parma,2027-01-31 00:00:00+00:00
+I1,Genoa,Lecce,2027-01-31 00:00:00+00:00
+I1,Lazio,Venezia,2027-01-31 00:00:00+00:00
+I1,Milan,Juventus,2027-01-31 00:00:00+00:00
+I1,Monza,Roma,2027-01-31 00:00:00+00:00
+I1,Napoli,Internazionale,2027-01-31 00:00:00+00:00
+I1,Sassuolo,Como,2027-01-31 00:00:00+00:00
+I1,Torino,Frosinone,2027-01-31 00:00:00+00:00
+I1,Udinese,Bologna,2027-01-31 00:00:00+00:00
+I1,Atalanta,Lazio,2027-02-07 00:00:00+00:00
+I1,Bologna,Milan,2027-02-07 00:00:00+00:00
+I1,Como,Monza,2027-02-07 00:00:00+00:00
+I1,Fiorentina,Udinese,2027-02-07 00:00:00+00:00
+I1,Internazionale,Cagliari,2027-02-07 00:00:00+00:00
+I1,Juventus,Sassuolo,2027-02-07 00:00:00+00:00
+I1,Lecce,Napoli,2027-02-07 00:00:00+00:00
+I1,Parma,Frosinone,2027-02-07 00:00:00+00:00
+I1,Roma,Torino,2027-02-07 00:00:00+00:00
+I1,Venezia,Genoa,2027-02-07 00:00:00+00:00
+I1,Bologna,Como,2027-02-14 00:00:00+00:00
+I1,Cagliari,Lazio,2027-02-14 00:00:00+00:00
+I1,Frosinone,Fiorentina,2027-02-14 00:00:00+00:00
+I1,Genoa,Atalanta,2027-02-14 00:00:00+00:00
+I1,Internazionale,Milan,2027-02-14 00:00:00+00:00
+I1,Monza,Lecce,2027-02-14 00:00:00+00:00
+I1,Napoli,Juventus,2027-02-14 00:00:00+00:00
+I1,Roma,Parma,2027-02-14 00:00:00+00:00
+I1,Torino,Sassuolo,2027-02-14 00:00:00+00:00
+I1,Udinese,Venezia,2027-02-14 00:00:00+00:00
+I1,Atalanta,Monza,2027-02-21 00:00:00+00:00
+I1,Como,Torino,2027-02-21 00:00:00+00:00
+I1,Fiorentina,Internazionale,2027-02-21 00:00:00+00:00
+I1,Juventus,Bologna,2027-02-21 00:00:00+00:00
+I1,Lazio,Napoli,2027-02-21 00:00:00+00:00
+I1,Lecce,Frosinone,2027-02-21 00:00:00+00:00
+I1,Milan,Genoa,2027-02-21 00:00:00+00:00
+I1,Sassuolo,Roma,2027-02-21 00:00:00+00:00
+I1,Udinese,Parma,2027-02-21 00:00:00+00:00
+I1,Venezia,Cagliari,2027-02-21 00:00:00+00:00
+I1,Bologna,Lecce,2027-02-28 00:00:00+00:00
+I1,Cagliari,Udinese,2027-02-28 00:00:00+00:00
+I1,Como,Milan,2027-02-28 00:00:00+00:00
+I1,Frosinone,Napoli,2027-02-28 00:00:00+00:00
+I1,Genoa,Lazio,2027-02-28 00:00:00+00:00
+I1,Internazionale,Atalanta,2027-02-28 00:00:00+00:00
+I1,Monza,Juventus,2027-02-28 00:00:00+00:00
+I1,Parma,Sassuolo,2027-02-28 00:00:00+00:00
+I1,Roma,Venezia,2027-02-28 00:00:00+00:00
+I1,Torino,Fiorentina,2027-02-28 00:00:00+00:00
+I1,Atalanta,Torino,2027-03-07 00:00:00+00:00
+I1,Fiorentina,Venezia,2027-03-07 00:00:00+00:00
+I1,Juventus,Roma,2027-03-07 00:00:00+00:00
+I1,Lazio,Frosinone,2027-03-07 00:00:00+00:00
+I1,Lecce,Como,2027-03-07 00:00:00+00:00
+I1,Milan,Cagliari,2027-03-07 00:00:00+00:00
+I1,Monza,Genoa,2027-03-07 00:00:00+00:00
+I1,Napoli,Parma,2027-03-07 00:00:00+00:00
+I1,Sassuolo,Bologna,2027-03-07 00:00:00+00:00
+I1,Udinese,Internazionale,2027-03-07 00:00:00+00:00
+I1,Bologna,Napoli,2027-03-14 00:00:00+00:00
+I1,Cagliari,Fiorentina,2027-03-14 00:00:00+00:00
+I1,Como,Udinese,2027-03-14 00:00:00+00:00
+I1,Frosinone,Monza,2027-03-14 00:00:00+00:00
+I1,Genoa,Roma,2027-03-14 00:00:00+00:00
+I1,Lazio,Juventus,2027-03-14 00:00:00+00:00
+I1,Milan,Sassuolo,2027-03-14 00:00:00+00:00
+I1,Parma,Lecce,2027-03-14 00:00:00+00:00
+I1,Torino,Internazionale,2027-03-14 00:00:00+00:00
+I1,Venezia,Atalanta,2027-03-14 00:00:00+00:00
+I1,Atalanta,Milan,2027-03-21 00:00:00+00:00
+I1,Fiorentina,Genoa,2027-03-21 00:00:00+00:00
+I1,Internazionale,Frosinone,2027-03-21 00:00:00+00:00
+I1,Juventus,Como,2027-03-21 00:00:00+00:00
+I1,Monza,Bologna,2027-03-21 00:00:00+00:00
+I1,Napoli,Venezia,2027-03-21 00:00:00+00:00
+I1,Parma,Lazio,2027-03-21 00:00:00+00:00
+I1,Roma,Lecce,2027-03-21 00:00:00+00:00
+I1,Sassuolo,Cagliari,2027-03-21 00:00:00+00:00
+I1,Udinese,Torino,2027-03-21 00:00:00+00:00
+I1,Cagliari,Napoli,2027-04-04 00:00:00+00:00
+I1,Como,Fiorentina,2027-04-04 00:00:00+00:00
+I1,Frosinone,Udinese,2027-04-04 00:00:00+00:00
+I1,Genoa,Internazionale,2027-04-04 00:00:00+00:00
+I1,Lecce,Lazio,2027-04-04 00:00:00+00:00
+I1,Milan,Monza,2027-04-04 00:00:00+00:00
+I1,Roma,Bologna,2027-04-04 00:00:00+00:00
+I1,Sassuolo,Atalanta,2027-04-04 00:00:00+00:00
+I1,Torino,Juventus,2027-04-04 00:00:00+00:00
+I1,Venezia,Parma,2027-04-04 00:00:00+00:00
+I1,Bologna,Venezia,2027-04-11 00:00:00+00:00
+I1,Cagliari,Atalanta,2027-04-11 00:00:00+00:00
+I1,Fiorentina,Milan,2027-04-11 00:00:00+00:00
+I1,Frosinone,Genoa,2027-04-11 00:00:00+00:00
+I1,Internazionale,Roma,2027-04-11 00:00:00+00:00
+I1,Juventus,Lecce,2027-04-11 00:00:00+00:00
+I1,Lazio,Torino,2027-04-11 00:00:00+00:00
+I1,Napoli,Sassuolo,2027-04-11 00:00:00+00:00
+I1,Parma,Como,2027-04-11 00:00:00+00:00
+I1,Udinese,Monza,2027-04-11 00:00:00+00:00
+I1,Atalanta,Udinese,2027-04-18 00:00:00+00:00
+I1,Bologna,Cagliari,2027-04-18 00:00:00+00:00
+I1,Como,Frosinone,2027-04-18 00:00:00+00:00
+I1,Fiorentina,Parma,2027-04-18 00:00:00+00:00
+I1,Milan,Napoli,2027-04-18 00:00:00+00:00
+I1,Monza,Internazionale,2027-04-18 00:00:00+00:00
+I1,Roma,Lazio,2027-04-18 00:00:00+00:00
+I1,Sassuolo,Lecce,2027-04-18 00:00:00+00:00
+I1,Torino,Genoa,2027-04-18 00:00:00+00:00
+I1,Venezia,Juventus,2027-04-18 00:00:00+00:00
+I1,Cagliari,Monza,2027-04-25 00:00:00+00:00
+I1,Frosinone,Roma,2027-04-25 00:00:00+00:00
+I1,Genoa,Sassuolo,2027-04-25 00:00:00+00:00
+I1,Internazionale,Bologna,2027-04-25 00:00:00+00:00
+I1,Juventus,Fiorentina,2027-04-25 00:00:00+00:00
+I1,Lazio,Como,2027-04-25 00:00:00+00:00
+I1,Lecce,Milan,2027-04-25 00:00:00+00:00
+I1,Napoli,Udinese,2027-04-25 00:00:00+00:00
+I1,Parma,Atalanta,2027-04-25 00:00:00+00:00
+I1,Venezia,Torino,2027-04-25 00:00:00+00:00
+I1,Atalanta,Juventus,2027-05-02 00:00:00+00:00
+I1,Bologna,Fiorentina,2027-05-02 00:00:00+00:00
+I1,Como,Internazionale,2027-05-02 00:00:00+00:00
+I1,Lecce,Cagliari,2027-05-02 00:00:00+00:00
+I1,Milan,Lazio,2027-05-02 00:00:00+00:00
+I1,Monza,Venezia,2027-05-02 00:00:00+00:00
+I1,Roma,Napoli,2027-05-02 00:00:00+00:00
+I1,Sassuolo,Frosinone,2027-05-02 00:00:00+00:00
+I1,Torino,Parma,2027-05-02 00:00:00+00:00
+I1,Udinese,Genoa,2027-05-02 00:00:00+00:00
+I1,Fiorentina,Roma,2027-05-09 00:00:00+00:00
+I1,Frosinone,Atalanta,2027-05-09 00:00:00+00:00
+I1,Genoa,Cagliari,2027-05-09 00:00:00+00:00
+I1,Internazionale,Lecce,2027-05-09 00:00:00+00:00
+I1,Lazio,Sassuolo,2027-05-09 00:00:00+00:00
+I1,Napoli,Monza,2027-05-09 00:00:00+00:00
+I1,Parma,Milan,2027-05-09 00:00:00+00:00
+I1,Torino,Bologna,2027-05-09 00:00:00+00:00
+I1,Udinese,Juventus,2027-05-09 00:00:00+00:00
+I1,Venezia,Como,2027-05-09 00:00:00+00:00
+I1,Bologna,Frosinone,2027-05-16 00:00:00+00:00
+I1,Cagliari,Torino,2027-05-16 00:00:00+00:00
+I1,Como,Atalanta,2027-05-16 00:00:00+00:00
+I1,Juventus,Internazionale,2027-05-16 00:00:00+00:00
+I1,Lazio,Udinese,2027-05-16 00:00:00+00:00
+I1,Lecce,Fiorentina,2027-05-16 00:00:00+00:00
+I1,Milan,Roma,2027-05-16 00:00:00+00:00
+I1,Monza,Parma,2027-05-16 00:00:00+00:00
+I1,Napoli,Genoa,2027-05-16 00:00:00+00:00
+I1,Sassuolo,Venezia,2027-05-16 00:00:00+00:00
+I1,Atalanta,Lecce,2027-05-23 00:00:00+00:00
+I1,Fiorentina,Monza,2027-05-23 00:00:00+00:00
+I1,Frosinone,Cagliari,2027-05-23 00:00:00+00:00
+I1,Genoa,Bologna,2027-05-23 00:00:00+00:00
+I1,Internazionale,Lazio,2027-05-23 00:00:00+00:00
+I1,Parma,Juventus,2027-05-23 00:00:00+00:00
+I1,Roma,Como,2027-05-23 00:00:00+00:00
+I1,Torino,Napoli,2027-05-23 00:00:00+00:00
+I1,Udinese,Sassuolo,2027-05-23 00:00:00+00:00
+I1,Venezia,Milan,2027-05-23 00:00:00+00:00
+I1,Bologna,Parma,2027-05-30 00:00:00+00:00
+I1,Cagliari,Roma,2027-05-30 00:00:00+00:00
+I1,Como,Genoa,2027-05-30 00:00:00+00:00
+I1,Juventus,Frosinone,2027-05-30 00:00:00+00:00
+I1,Lazio,Fiorentina,2027-05-30 00:00:00+00:00
+I1,Lecce,Venezia,2027-05-30 00:00:00+00:00
+I1,Milan,Udinese,2027-05-30 00:00:00+00:00
+I1,Monza,Torino,2027-05-30 00:00:00+00:00
+I1,Napoli,Atalanta,2027-05-30 00:00:00+00:00
+I1,Sassuolo,Internazionale,2027-05-30 00:00:00+00:00
 D1,1. FC Köln,Bayer 04 Leverkusen,2026-11-08 14:30:00+00:00
 D1,Sport-Club Freiburg,1. FC Union Berlin,2026-11-08 16:30:00+00:00
 D1,TSG Hoffenheim,FC Schalke 04,2026-11-08 18:30:00+00:00
@@ -2235,8 +2207,6 @@ D1,FC Augsburg,Hamburger SV,2027-05-22 13:30:00+00:00
 D1,Sport-Club Freiburg,Borussia Dortmund,2027-05-22 13:30:00+00:00
 D1,RB Leipzig,TSG Hoffenheim,2027-05-22 13:30:00+00:00
 D1,FC Bayern München,Eintracht Frankfurt,2027-05-22 13:30:00+00:00
-F1,AJ Auxerre,Paris FC,2026-11-07 16:15:00+00:00
-F1,Paris Saint-Germain,Estac Troyes,2026-11-07 19:45:00+00:00
 F1,Stade Rennais FC,LOSC Lille,2026-11-08 14:00:00+00:00
 F1,Angers SCO,OGC Nice,2026-11-08 16:15:00+00:00
 F1,Stade Brestois 29,Olympique Lyonnais,2026-11-08 16:15:00+00:00
@@ -2459,9 +2429,6 @@ F1,AS Monaco,Estac Troyes,2027-05-28 22:00:00+00:00
 F1,Paris Saint-Germain,Toulouse FC,2027-05-28 22:00:00+00:00
 F1,Stade Rennais FC,Angers SCO,2027-05-28 22:00:00+00:00
 F1,RC Strasbourg Alsace,OGC Nice,2027-05-28 22:00:00+00:00
-F2,Clermont Foot 63,Rodez Aveyron Football,2026-11-07 13:00:00+00:00
-F2,Pau FC,FC Nantes,2026-11-07 19:00:00+00:00
-F2,AS Saint-Étienne,Stade Lavallois MFC,2026-11-07 19:00:00+00:00
 F2,FC Annecy,Clermont Foot 63,2026-11-20 19:00:00+00:00
 F2,EN Avant Guingamp,Rodez Aveyron Football,2026-11-20 19:00:00+00:00
 F2,FC Metz,US Boulogne CO,2026-11-20 19:00:00+00:00
@@ -2489,15 +2456,15 @@ F2,Pau FC,AS Saint-Étienne,2026-12-12 13:00:00+00:00
 F2,Red Star FC,Grenoble Foot 38,2026-12-12 13:00:00+00:00
 F2,FC Metz,Stade DE Reims,2026-12-12 19:00:00+00:00
 F2,FC Sochaux-Montbéliard,Montpellier Hérault SC,2026-12-14 19:45:00+00:00
-F2,FC Annecy,AS Saint-Étienne,2027-01-01 23:00:00+00:00
-F2,Clermont Foot 63,Pau FC,2027-01-01 23:00:00+00:00
-F2,Dijon FCO,FC Nantes,2027-01-01 23:00:00+00:00
-F2,USL Dunkerque,US Boulogne CO,2027-01-01 23:00:00+00:00
-F2,Grenoble Foot 38,FC Sochaux-Montbéliard,2027-01-01 23:00:00+00:00
-F2,FC Metz,AS Nancy Lorraine,2027-01-01 23:00:00+00:00
-F2,Montpellier Hérault SC,EN Avant Guingamp,2027-01-01 23:00:00+00:00
-F2,Stade DE Reims,Stade Lavallois MFC,2027-01-01 23:00:00+00:00
-F2,Rodez Aveyron Football,Red Star FC,2027-01-01 23:00:00+00:00
+F2,FC Metz,AS Nancy Lorraine,2027-01-02 13:00:00+00:00
+F2,Clermont Foot 63,Pau FC,2027-01-02 18:00:00+00:00
+F2,Dijon FCO,FC Nantes,2027-01-02 18:00:00+00:00
+F2,USL Dunkerque,US Boulogne CO,2027-01-02 18:00:00+00:00
+F2,Grenoble Foot 38,FC Sochaux-Montbéliard,2027-01-02 18:00:00+00:00
+F2,Montpellier Hérault SC,EN Avant Guingamp,2027-01-02 18:00:00+00:00
+F2,Stade DE Reims,Stade Lavallois MFC,2027-01-02 18:00:00+00:00
+F2,Rodez Aveyron Football,Red Star FC,2027-01-02 18:00:00+00:00
+F2,FC Annecy,AS Saint-Étienne,2027-01-04 19:45:00+00:00
 F2,Dijon FCO,USL Dunkerque,2027-01-14 23:00:00+00:00
 F2,Stade Lavallois MFC,EN Avant Guingamp,2027-01-14 23:00:00+00:00
 F2,Montpellier Hérault SC,Clermont Foot 63,2027-01-14 23:00:00+00:00
@@ -2661,9 +2628,6 @@ F2,Red Star FC,Clermont Foot 63,2027-05-21 22:00:00+00:00
 F2,Stade DE Reims,US Boulogne CO,2027-05-21 22:00:00+00:00
 F2,AS Saint-Étienne,Pau FC,2027-05-21 22:00:00+00:00
 N1,FC Utrecht,Go Ahead Eagles,2026-09-08 12:00:00+00:00
-N1,Fortuna Sittard,Telstar,2026-11-07 15:30:00+00:00
-N1,ADO Den Haag,Sparta Rotterdam,2026-11-07 17:45:00+00:00
-N1,Excelsior Rotterdam,Go Ahead Eagles,2026-11-07 20:00:00+00:00
 N1,sc Heerenveen,Feyenoord,2026-11-08 11:15:00+00:00
 N1,FC Twente,Ajax,2026-11-08 13:30:00+00:00
 N1,SC Cambuur,PSV,2026-11-08 15:45:00+00:00
@@ -3082,10 +3046,6 @@ P1,Vitória SC,FC Famalicão,2027-05-15 23:00:00+00:00
 P1,Gil Vicente FC,CD Nacional,2027-05-15 23:00:00+00:00
 P1,Moreirense FC,Rio Ave FC,2027-05-15 23:00:00+00:00
 P1,Santa Clara,Sporting CP,2027-05-15 23:00:00+00:00
-T1,Eyüpspor,Kocaelispor,2026-11-07 10:30:00+00:00
-T1,Samsunspor,Konyaspor,2026-11-07 13:00:00+00:00
-T1,Göztepe,Istanbul Basaksehir,2026-11-07 16:00:00+00:00
-T1,Galatasaray,Amedspor,2026-11-07 16:00:00+00:00
 T1,Çaykur Rizespor,Erzurumspor,2026-11-08 10:30:00+00:00
 T1,Çorum,Fenerbahçe,2026-11-08 13:00:00+00:00
 T1,Alanyaspor,Trabzonspor,2026-11-08 15:30:00+00:00
@@ -3300,10 +3260,6 @@ T1,Trabzonspor,Erzurumspor,2027-05-22 21:00:00+00:00
 SC0,Dundee United,Heart of Midlothian,2026-10-31 15:00:00+00:00
 SC0,Hibernian,Dundee,2026-11-24 19:45:00+00:00
 SC0,Rangers,Aberdeen,2026-11-24 20:00:00+00:00
-SC0,Dundee United,Motherwell,2026-11-07 15:00:00+00:00
-SC0,St. Johnstone,Dundee,2026-11-07 15:00:00+00:00
-SC0,Aberdeen,Hibernian,2026-11-07 17:45:00+00:00
-SC0,St. Mirren,Rangers,2026-11-07 20:00:00+00:00
 SC0,Heart of Midlothian,Falkirk,2026-11-08 15:00:00+00:00
 SC0,Celtic,Kilmarnock,2026-11-08 16:00:00+00:00
 SC0,Celtic,St. Mirren,2026-11-21 15:00:00+00:00
