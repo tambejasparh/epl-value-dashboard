@@ -1,19 +1,19 @@
 {
- "time": "2026-11-08 21:03 UTC",
+ "time": "2026-11-09 13:45 UTC",
  "key_present": true,
  "leagues_found": {
   "SP2": "Segunda Divisi\u00f3n (Spain)",
-  "P1": "Primeira Liga (Portugal)"
+  "UNL": "UEFA Nations League (World)"
  },
- "fixtures": 4,
+ "fixtures": 10,
  "injured": 0,
  "players_fetched": 0,
  "requests_used": 8,
- "result": "0 missing players across 4 fixtures",
- "odds_time": "2026-11-08 21:03 UTC",
- "odds_calls": 1,
- "odds_rows": 139,
- "odds_fixtures": 1,
+ "result": "0 missing players across 10 fixtures",
+ "odds_time": "2026-11-09 13:45 UTC",
+ "odds_calls": 2,
+ "odds_rows": 284,
+ "odds_fixtures": 2,
  "books_seen": [
   "1xBet",
   "Bet365",
@@ -68,6 +68,6 @@
   "Total - Home",
   "Total Corners (1st Half)"
  ],
- "my_book_fixtures": 1,
- "odds_result": "prices for 1 fixtures"
+ "my_book_fixtures": 2,
+ "odds_result": "prices for 2 fixtures"
 }

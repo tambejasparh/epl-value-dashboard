@@ -1,5 +1,5 @@
 # Football predictions — day by day
-_Updated Sun 08 Nov 2026 22:03 (Africa/Douala time). Bankroll for stakes: 100.00_
+_Updated Mon 09 Nov 2026 14:45 (Africa/Douala time). Bankroll for stakes: 100.00_
 
 ## 🎟️ Ready-made tickets — Monday 09 November
 
@@ -244,14 +244,14 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 
 ### Sunday 08 November
 
-Results: **59 of 63 bets won** (94%) · ✅ checked bets: **2 of 2 won** · 7 still waiting
+Results: **64 of 68 bets won** (94%) · ✅ checked bets: **2 of 2 won** · 2 still waiting
 
 - ⚠️ 08:30 · **Yunnan Yukun v Wuhan Three Towns** — Yunnan Yukun total goals → Over 0.5 (92%) → ✅ WON 2-1
 - ⚠️ 16:00 · **AEK v Levadeiakos** — Double Chance → 1X (AEK or draw) (92%) → ✅ WON 2-1
 - ⚠️ 15:00 · **Virtus Entella v Modena** — Over/Under (total goals) → Under 4.5 (92%) → ✅ WON 0-2
 - ✅ 06:00 · **Machida v Sanfrecce Hiroshima** — Over/Under (total goals) → Under 4.5 (91%) → ✅ WON 0-0
 - ⚠️ 16:45 · **Cambuur v PSV Eindhoven** — Over/Under (total goals) → Over 1.5 (91%) → ✅ WON 2-5
-- ⚠️ 21:30 · **Estrela v Benfica** — Benfica total goals → Over 0.5 (91%) → ⏳ playing / waiting for result
+- ⚠️ 21:30 · **Estrela v Benfica** — Benfica total goals → Over 0.5 (91%) → ✅ WON 2-3
 - ✅ 08:30 · **Dalian Yingbo v Tianjin Jinmen Tiger** — Over/Under (total goals) → Under 4.5 (91%) → ✅ WON 3-1
 - ⚠️ 19:00 · **Besiktas v Genclerbirligi** — Besiktas total goals → Over 0.5 (91%) → ✅ WON 3-0
 - ⚠️ 17:15 · **Carrarese v Sampdoria** — Over/Under (total goals) → Under 4.5 (90%) → ✅ WON 0-1
@@ -271,12 +271,12 @@ Results: **59 of 63 bets won** (94%) · ✅ checked bets: **2 of 2 won** · 7 st
 - ⚠️ 16:45 · **AZ Alkmaar v Groningen** — AZ Alkmaar total goals → Over 0.5 (87%) → ✅ WON 4-3
 - ⚠️ 18:30 · **Las Palmas v Eldense** — Over/Under (total goals) → Under 4.5 (87%) → ⏳ playing / waiting for result
 - ⚠️ 17:30 · **OFI Crete v Atromitos** — Over/Under (total goals) → Under 4.5 (87%) → ✅ WON 0-0
-- ⚠️ 20:45 · **Fiorentina v Juventus** — Over/Under (total goals) → Under 4.5 (87%) → ⏳ playing / waiting for result
+- ⚠️ 20:45 · **Fiorentina v Juventus** — Over/Under (total goals) → Under 4.5 (87%) → ✅ WON 2-2
 - ⚠️ 12:15 · **Heerenveen v Feyenoord** — Feyenoord total goals → Over 0.5 (87%) → ✅ WON 5-3
 - ⚠️ 12:30 · **Napoli v Lazio** — Over/Under (total goals) → Under 4.5 (87%) → ✅ WON 1-1
 - ⚠️ 16:30 · **Iraklis v Panathinaikos** — Over/Under (total goals) → Under 4.5 (86%) → ✅ WON 1-2
 - ⚠️ 19:30 · **Vicenza v Cremonese** — Over/Under (total goals) → Under 4.5 (86%) → ❌ LOST 1-4
-- ⚠️ 21:00 · **Ath Madrid v Barcelona** — Over/Under (total goals) → Over 1.5 (86%) → ⏳ playing / waiting for result
+- ⚠️ 21:00 · **Ath Madrid v Barcelona** — Over/Under (total goals) → Over 1.5 (86%) → ✅ WON 1-2
 - ⚠️ 08:30 · **Zhejiang Professional v Henan Songshan Longmen** — Over/Under (total goals) → Over 1.5 (86%) → ✅ WON 4-0
 - ⚠️ 16:00 · **Hearts v Falkirk** — Hearts total goals → Over 0.5 (86%) → ✅ WON 2-5
 - ⚠️ 15:30 · **FC Koln v Leverkusen** — Over/Under (total goals) → Over 1.5 (86%) → ✅ WON 1-2
@@ -289,14 +289,14 @@ Results: **59 of 63 bets won** (94%) · ✅ checked bets: **2 of 2 won** · 7 st
 - ⚠️ 17:15 · **Angers v Nice** — Over/Under (total goals) → Under 4.5 (85%) → ✅ WON 0-2
 - ⚠️ 16:00 · **Asteras Tripolis v Kalamata** — Over/Under (total goals) → Under 4.5 (85%) → ✅ WON 1-1
 - ⚠️ 16:30 · **Alanyaspor v Trabzonspor** — Over/Under (total goals) → Under 4.5 (85%) → ✅ WON 0-2
-- ⚠️ 21:30 · **Rio Ave v Sp Braga** — Over/Under (total goals) → Under 4.5 (85%) → ⏳ playing / waiting for result
+- ⚠️ 21:30 · **Rio Ave v Sp Braga** — Over/Under (total goals) → Under 4.5 (85%) → ✅ WON 0-1
 - ⚠️ 08:30 · **Qingdao Hainiu v Shenzhen Xinpengcheng** — Over/Under (total goals) → Under 4.5 (85%) → ✅ WON 2-2
 - ⚠️ 14:00 · **Corum v Fenerbahce** — Fenerbahce total goals → Over 0.5 (85%) → ✅ WON 0-5
 - ⚠️ 17:30 · **Freiburg v Union Berlin** — Freiburg total goals → Over 0.5 (85%) → ✅ WON 2-0
 - ⚠️ 20:00 · **Utrecht v Nijmegen** — Over/Under (total goals) → Over 1.5 (85%) → ✅ WON 2-3
 - ⚠️ 17:15 · **Le Mans v Monaco** — Monaco total goals → Over 0.5 (85%) → ✅ WON 1-1
 - ⚠️ 16:30 · **Santa Clara v Gil Vicente** — Over/Under (total goals) → Under 3.5 (85%) → ✅ WON 1-2
-- ⚠️ 20:45 · **Lens v Marseille** — Over/Under (total goals) → Over 1.5 (85%) → ⏳ playing / waiting for result
+- ⚠️ 20:45 · **Lens v Marseille** — Over/Under (total goals) → Over 1.5 (85%) → ✅ WON 1-2
 - ⚠️ 18:30 · **St. Gilloise v Genk** — Over/Under (total goals) → Under 4.5 (84%) → ✅ WON 1-0
 - ⚠️ 15:00 · **Crystal Palace v Liverpool** — Liverpool total goals → Over 0.5 (84%) → ✅ WON 1-3
 - ⚠️ 15:00 · **Ipswich v Bournemouth** — Bournemouth total goals → Over 0.5 (84%) → ✅ WON 1-2
@@ -436,8 +436,8 @@ Results: **16 of 20 bets won** (80%)
 
 ## 📈 Live track record of best picks
 
-**888 of 1033 best picks won (86%)** · ✅ 'Your bets' (passed all checks): 25/27 (93%) · 🔒+⭐⭐⭐ picks: 287/324 (89%) · 76 waiting for results
-Banker 117/132 (89%) · Strong 170/192 (89%) · Good 289/332 (87%) · Fair 312/377 (83%)
+**894 of 1039 best picks won (86%)** · ✅ 'Your bets' (passed all checks): 25/27 (93%) · 🔒+⭐⭐⭐ picks: 289/326 (89%) · 70 waiting for results
+Banker 119/134 (89%) · Strong 170/192 (89%) · Good 291/334 (87%) · Fair 314/379 (83%)
 
 **🛡️ Rules for low-odds betting (read every time)**
 1. **Bet singles** (one match per bet). If you combine, use at most 2-3 picks: 4 picks at 85% all win only ~52% of the time.
@@ -501,7 +501,7 @@ No bets this week - the prices are fair. That is normal.
 
 | Time | Competition | Match | Advice | Stake | 🎯 Best pick | Predicted | H / D / A % | Over 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 / 6.5 % | Under 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 / 6.5 % |
 |---|---|---|---|---|---|---|---|---|---|
-| 20:30 | Spain - Segunda Division | Sabadell v Sociedad B | NO BET (model not profitable in this league) | - | ⭐⭐⭐ Under 4.5 goals · 90% · bet at 1.15+ | 1-0 | 54 / 25 / 20 | 91 / 69 / 42 / 22 / 9 / 3 / 1 | 9 / 31 / 58 / 78 / 91 / 97 / 99 |
+| 20:30 | Spain - Segunda Division | Sabadell v Sociedad B | NO BET (model not profitable in this league) | - | ⭐⭐⭐ Under 4.5 goals · 90% · bet at 1.15+ | 1-0 | 54 / 26 / 20 | 91 / 68 / 42 / 21 / 9 / 3 / 1 | 9 / 32 / 58 / 79 / 91 / 97 / 99 |
 
 ### Thursday 12 November (8 matches)
 
