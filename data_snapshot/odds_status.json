@@ -1,11 +1,15 @@
 {
- "time": "2026-11-09 13:45 UTC",
+ "time": "2026-11-09 19:21 UTC",
  "key_present": true,
  "active": [
   "soccer_uefa_champs_league",
   "soccer_uefa_europa_league",
   "soccer_uefa_nations_league"
  ],
- "with_matches_soon": [],
- "result": "no cup / national-team matches in the next 3 days"
+ "with_matches_soon": [
+  "soccer_uefa_nations_league"
+ ],
+ "credits_remaining": "466",
+ "matches_with_odds": 28,
+ "result": "saved odds for 28 matches"
 }
