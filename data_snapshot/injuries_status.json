@@ -1,19 +1,18 @@
 {
- "time": "2026-11-09 19:21 UTC",
+ "time": "2026-11-09 22:53 UTC",
  "key_present": true,
  "leagues_found": {
-  "SP2": "Segunda Divisi\u00f3n (Spain)",
   "UNL": "UEFA Nations League (World)"
  },
- "fixtures": 10,
+ "fixtures": 8,
  "injured": 0,
  "players_fetched": 0,
  "requests_used": 8,
- "result": "0 missing players across 10 fixtures",
- "odds_time": "2026-11-09 19:21 UTC",
- "odds_calls": 4,
- "odds_rows": 539,
- "odds_fixtures": 4,
+ "result": "0 missing players across 8 fixtures",
+ "odds_time": "2026-11-09 22:53 UTC",
+ "odds_calls": 8,
+ "odds_rows": 1032,
+ "odds_fixtures": 8,
  "books_seen": [
   "1xBet",
   "Bet365",
@@ -37,7 +36,6 @@
   "Both Teams Score",
   "Both Teams Score - First Half",
   "Both Teams To Score - Second Half",
-  "Cards Over/Under",
   "Corners 1x2",
   "Corners Asian Handicap",
   "Corners Over Under",
@@ -68,6 +66,6 @@
   "Total - Home",
   "Total Corners (1st Half)"
  ],
- "my_book_fixtures": 4,
- "odds_result": "prices for 4 fixtures"
+ "my_book_fixtures": 8,
+ "odds_result": "prices for 8 fixtures"
 }
