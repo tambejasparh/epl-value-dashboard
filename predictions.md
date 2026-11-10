@@ -1,17 +1,17 @@
 # Football predictions — day by day
-_Updated Tue 10 Nov 2026 01:39 (Africa/Douala time). Bankroll for stakes: 100.00_
+_Updated Tue 10 Nov 2026 14:24 (Africa/Douala time). Bankroll for stakes: 100.00_
 
 ## 🎟️ Ready-made tickets — Thursday 12 November
 
 _Only Under 4.5, otherwise Under 5.5 or Under 6.5, at 85%+, or Over 1.5 / Over 0.5 at 98%+, or Both teams to score at 96%+; one per match, 1xBet prices, highest ticket chance._
 
-**1.5 odds — 6 matches, total 1.51, chance all win ≈ 49%**
-1. 18:00 · Turkey v Belgium (UEFA Nations League) — Under 5.5 goals @ 1.09 · 86%
-2. 20:45 · Albania v Finland (UEFA Nations League) — Under 4.5 goals @ 1.04 · 92%
-3. 20:45 · Montenegro v Latvia (UEFA Nations League) — Under 4.5 goals @ 1.12 · 86%
-4. 20:45 · San Marino v Belarus (UEFA Nations League) — Under 5.5 goals @ 1.05 · 89%
+**1.5 odds — 6 matches, total 1.51, chance all win ≈ 53%**
+1. 18:00 · Turkey v Belgium (UEFA Nations League) — Under 6.5 goals @ 1.04 · 93%
+2. 20:45 · Czech Republic v Spain (UEFA Nations League) — Under 5.5 goals @ 1.10 · 86%
+3. 20:45 · Albania v Finland (UEFA Nations League) — Under 5.5 goals @ 1.02 · 96%
+4. 20:45 · Montenegro v Latvia (UEFA Nations League) — Under 4.5 goals @ 1.13 · 86%
 5. 20:45 · Italy v France (UEFA Nations League) — Under 5.5 goals @ 1.06 · 91%
-6. 20:45 · England v Croatia (UEFA Nations League) — Under 5.5 goals @ 1.07 · 88%
+6. 20:45 · England v Croatia (UEFA Nations League) — Under 5.5 goals @ 1.08 · 88%
 
 **2 odds:** not enough safe bets today
 
@@ -38,13 +38,13 @@ _Safest first. 💚 = 1xBet pays at least the fair minimum._
 1. 18:00 · **Armenia v Cyprus** (UEFA Nations League) — Over/Under → Under 5.5 · 92% · 1xBet 1.02 
 2. 20:45 · **Albania v Finland** (UEFA Nations League) — Over/Under → Under 4.5 · 92% · 1xBet 1.04 
 3. 20:45 · **Italy v France** (UEFA Nations League) — Over/Under → Under 5.5 · 91% · 1xBet 1.06 
-4. 20:45 · **San Marino v Belarus** (UEFA Nations League) — Over/Under → Under 5.5 · 89% · 1xBet 1.05 
-5. 20:45 · **England v Croatia** (UEFA Nations League) — Over/Under → Under 5.5 · 88% · 1xBet 1.07 
+4. 20:45 · **San Marino v Belarus** (UEFA Nations League) — Over/Under → Under 5.5 · 89% · 1xBet 1.04 
+5. 20:45 · **England v Croatia** (UEFA Nations League) — Over/Under → Under 5.5 · 88% · 1xBet 1.08 
 6. 18:00 · **Turkey v Belgium** (UEFA Nations League) — Over/Under → Under 5.5 · 86% · 1xBet 1.09 
-7. 20:45 · **Montenegro v Latvia** (UEFA Nations League) — Over/Under → Under 4.5 · 86% · 1xBet 1.12 
-8. 20:45 · **Czech Republic v Spain** (UEFA Nations League) — Over/Under → Under 5.5 · 86% · 1xBet 1.05 
+7. 20:45 · **Montenegro v Latvia** (UEFA Nations League) — Over/Under → Under 4.5 · 86% · 1xBet 1.13 
+8. 20:45 · **Czech Republic v Spain** (UEFA Nations League) — Over/Under → Under 5.5 · 86% · 1xBet 1.10 
 
-🎟️ One ticket with the top matches — top 2: 84% @ 1.06 · top 3: 77% @ 1.12 · top 5: 60% @ 1.26 · top 8: 39% @ 1.62
+🎟️ One ticket with the top matches — top 2: 84% @ 1.06 · top 3: 77% @ 1.12 · top 5: 60% @ 1.26 · top 8: 39% @ 1.71
 
 ### Friday 13 November (10 matches)
 
@@ -129,13 +129,6 @@ _Safest first. 💚 = 1xBet pays at least the fair minimum._
 
 _Only 85%+ picks, backed by bookmaker odds (or 88%+ without), with no key player missing for the team you back. Skip a bet if your odds are lower than the number shown._
 
-### Thursday 12 November
-
-1. 20:45 · **Czech Republic v Spain** (UEFA Nations League)  
-   ✅ **BET: Spain total goals → Over 0.5** — only if odds are **1.14+** (91% chance)
-
-🎟️ All 1 on one ticket: all 1 win about **91%** of the time (lose about 9%). Take it only if the ticket's total odds are at least **1.14**. In testing on 472 past match days, the top-1 ticket won on 89% of days - it still lost about 1 day in 9.
-
 ### Friday 13 November
 
 1. 20:45 · **Liechtenstein v Azerbaijan** (UEFA Nations League)  
@@ -200,9 +193,9 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 
 - ⚠️ 20:45 · **Albania v Finland** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 92% · 1xBet 1.04
 - ⚠️ 20:45 · **San Marino v Belarus** (UEFA Nations League) — BET: Belarus total goals → Over 0.5 · 91% · 1xBet 1.01
-- ✅ 20:45 · **Czech Republic v Spain** (UEFA Nations League) — BET: Spain total goals → Over 0.5 · 91%
+- ⚠️ 20:45 · **Czech Republic v Spain** (UEFA Nations League) — BET: Spain total goals → Over 0.5 · 91% · 1xBet 1.01
 - ⚠️ 20:45 · **England v Croatia** (UEFA Nations League) — BET: England total goals → Over 0.5 · 89% · 1xBet 1.01
-- ⚠️ 20:45 · **Montenegro v Latvia** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 86% · 1xBet 1.12
+- ⚠️ 20:45 · **Montenegro v Latvia** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 86% · 1xBet 1.13
 - ⚠️ 18:00 · **Turkey v Belgium** (UEFA Nations League) — BET: Belgium total goals → Over 0.5 · 85% · 1xBet 1.10
 - ⚠️ 18:00 · **Armenia v Cyprus** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 84% · 1xBet 1.07
 - ⚠️ 20:45 · **Italy v France** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 82% · 1xBet 1.21
@@ -364,10 +357,9 @@ Results: **65 of 69 bets won** (94%) · ✅ checked bets: **2 of 2 won** · 1 st
 
 ### Saturday 07 November
 
-Results: **76 of 87 bets won** (87%)
+Results: **59 of 69 bets won** (86%)
 
 - ⚠️ 15:30 · **Dortmund v Elversberg** — Dortmund total goals → Over 0.5 (92%) → ✅ WON 2-1
-- ⚠️ 07:00 · **Avispa Fukuoka v V-Varen Nagasaki** — Over/Under (total goals) → Under 4.5 (92%) → ✅ WON 1-1
 - ⚠️ 15:30 · **RB Leipzig v Augsburg** — RB Leipzig total goals → Over 0.5 (92%) → ✅ WON 5-2
 - ⚠️ 15:30 · **Mainz v Bayern Munich** — Over/Under (total goals) → Over 1.5 (91%) → ✅ WON 1-2
 - ⚠️ 16:00 · **Arsenal v Hull** — Double Chance → 1X (Arsenal or draw) (91%) → ✅ WON 1-0
@@ -375,13 +367,10 @@ Results: **76 of 87 bets won** (87%)
 - ⚠️ 16:00 · **Arbroath v Ayr** — Over/Under (total goals) → Under 4.5 (91%) → ❌ LOST 4-1
 - ⚠️ 18:00 · **Parma v Bologna** — Over/Under (total goals) → Under 4.5 (91%) → ✅ WON 1-2
 - ⚠️ 16:00 · **Morton v Stenhousemuir** — Over/Under (total goals) → Under 4.5 (90%) → ❌ LOST 4-3
-- ⚠️ 13:30 · **Portsmouth v Stoke** — Over/Under (total goals) → Under 4.5 (90%) → ✅ WON 1-2
 - ⚠️ 16:15 · **Cadiz v Oviedo** — Over/Under (total goals) → Under 4.5 (90%) → ✅ WON 1-2
 - ⚠️ 18:30 · **Stuttgart v Werder Bremen** — Stuttgart total goals → Over 0.5 (90%) → ✅ WON 1-0
 - ⚠️ 16:15 · **Espanol v La Coruna** — Over/Under (total goals) → Under 4.5 (90%) → ✅ WON 0-0
-- ⚠️ 06:00 · **Yokohama F. Marinos v Okayama** — Over/Under (total goals) → Under 4.5 (89%) → ✅ WON 1-1
 - ⚠️ 18:30 · **Osasuna v Ath Bilbao** — Over/Under (total goals) → Under 4.5 (89%) → ✅ WON 1-1
-- ⚠️ 08:00 · **Kashiwa Reysol v Kawasaki Frontale** — Kashiwa Reysol total goals → Over 0.5 (89%) → ✅ WON 2-1
 - ⚠️ 18:30 · **Cordoba v Ceuta** — Cordoba total goals → Over 0.5 (89%) → ✅ WON 3-0
 - ⚠️ 15:00 · **Padova v Empoli** — Over/Under (total goals) → Under 4.5 (89%) → ✅ WON 2-2
 - ⚠️ 16:00 · **Charlton v Sheffield United** — Over/Under (total goals) → Under 4.5 (89%) → ✅ WON 2-1
@@ -395,40 +384,29 @@ Results: **76 of 87 bets won** (87%)
 - ⚠️ 21:05 · **Paris SG v Troyes** — Over/Under (total goals) → Over 1.5 (88%) → ❌ LOST 1-0
 - ⚠️ 15:00 · **Juve Stabia v Arezzo** — Over/Under (total goals) → Under 4.5 (88%) → ✅ WON 1-0
 - ⚠️ 18:30 · **Leganes v Albacete** — Over/Under (total goals) → Under 4.5 (88%) → ✅ WON 1-3
-- ⚠️ 14:00 · **Samsunspor v Konyaspor** — Over/Under (total goals) → Under 4.5 (88%) → ✅ WON 1-0
 - ⚠️ 16:00 · **West Brom v Millwall** — Over/Under (total goals) → Under 4.5 (88%) → ✅ WON 3-0
 - ⚠️ 16:30 · **Nacional v Academico Viseu** — Over/Under (total goals) → Under 4.5 (88%) → ✅ WON 1-0
-- ⚠️ 13:30 · **Leeds v Tottenham** — Over/Under (total goals) → Under 4.5 (88%) → ✅ WON 1-0
 - ⚠️ 16:00 · **Volos NFC v Kifisia** — Over/Under (total goals) → Under 4.5 (88%) → ✅ WON 1-3
 - ⚠️ 21:00 · **Valencia v Real Madrid** — Real Madrid total goals → Over 0.5 (88%) → ✅ WON 0-3
 - ⚠️ 20:00 · **Pau FC v Nantes** — Over/Under (total goals) → Under 4.5 (88%) → ✅ WON 0-2
 - ⚠️ 18:45 · **Aberdeen v Hibernian** — Over/Under (total goals) → Under 4.5 (88%) → ✅ WON 0-4
-- ⚠️ 14:00 · **Burgos v Celta B** — Over/Under (total goals) → Under 4.5 (87%) → ✅ WON 2-1
 - ⚠️ 20:00 · **St Etienne v Laval** — St Etienne total goals → Over 0.5 (87%) → ✅ WON 2-0
 - ⚠️ 21:30 · **Sp Lisbon v Moreirense** — Double Chance → 12 (no draw) (87%) → ✅ WON 1-0
-- ⚠️ 14:00 · **Clermont v Rodez** — Over/Under (total goals) → Under 4.5 (87%) → ✅ WON 1-0
-- ⚠️ 13:30 · **Wrexham v Wolves** — Over/Under (total goals) → Under 4.5 (87%) → ✅ WON 1-1
 - ⚠️ 16:00 · **Birmingham v Swansea** — Over/Under (total goals) → Under 4.5 (87%) → ✅ WON 2-1
 - ⚠️ 18:30 · **Aris v Panetolikos** — Double Chance → 1X (Aris or draw) (87%) → ✅ WON 3-0
 - ⚠️ 20:30 · **Hertha v Wolfsburg** — Over/Under (total goals) → Over 1.5 (87%) → ✅ WON 2-1
-- ⚠️ 06:00 · **Nagoya Grampus v Kyoto** — Over/Under (total goals) → Under 4.5 (87%) → ✅ WON 0-2
 - ⚠️ 16:00 · **Montrose v East Fife** — Over/Under (total goals) → Under 4.5 (87%) → ✅ WON 1-2
-- ⚠️ 13:00 · **Holstein Kiel v Bielefeld** — Over/Under (total goals) → Under 4.5 (86%) → ✅ WON 1-2
 - ⚠️ 15:00 · **Pisa v Sudtirol** — Over/Under (total goals) → Under 4.5 (86%) → ✅ WON 2-2
 - ⚠️ 18:15 · **Oud-Heverlee Leuven v Mechelen** — Over/Under (total goals) → Under 4.5 (86%) → ✅ WON 2-0
 - ⚠️ 21:00 · **St Mirren v Rangers** — Rangers total goals → Over 0.5 (86%) → ✅ WON 0-2
 - ⚠️ 16:00 · **Queens Park v Partick** — Over/Under (total goals) → Under 4.5 (86%) → ✅ WON 0-1
-- ⚠️ 05:00 · **Shimizu S-Pulse v Verdy** — Over/Under (total goals) → Under 3.5 (86%) → ✅ WON 0-1
-- ⚠️ 13:00 · **Nurnberg v Darmstadt** — Nurnberg total goals → Over 0.5 (86%) → ✅ WON 2-0
 - ⚠️ 16:00 · **Blackburn v West Ham** — West Ham total goals → Over 0.5 (86%) → ✅ WON 2-1
 - ⚠️ 16:00 · **Stranraer v Stirling** — Stranraer total goals → Over 0.5 (86%) → ✅ WON 3-0
 - ⚠️ 16:00 · **Cove Rangers v Hamilton** — Over/Under (total goals) → Under 4.5 (85%) → ✅ WON 4-0
-- ⚠️ 07:00 · **FC Tokyo v Kashima Antlers** — Over/Under (total goals) → Under 4.5 (85%) → ✅ WON 2-0
 - ⚠️ 15:00 · **Cesena v Catanzaro** — Over/Under (total goals) → Under 4.5 (85%) → ✅ WON 1-0
 - ⚠️ 16:00 · **QPR v Lincoln** — Over/Under (total goals) → Under 4.5 (85%) → ✅ WON 2-1
 - ⚠️ 19:00 · **Auxerre v Paris FC** — Over/Under (total goals) → Under 4.5 (85%) → ✅ WON 0-1
 - ⚠️ 16:00 · **Elgin v Dumbarton** — Elgin total goals → Over 0.5 (85%) → ❌ LOST 0-2
-- ⚠️ 13:30 · **Bristol City v Norwich** — Over/Under (total goals) → Under 4.5 (85%) → ❌ LOST 0-5
 - ⚠️ 16:00 · **Preston v Southampton** — Southampton total goals → Over 0.5 (85%) → ❌ LOST 1-0
 - ⚠️ 21:00 · **Excelsior v Go Ahead Eagles** — Over/Under (total goals) → Over 1.5 (85%) → ❌ LOST 0-1
 - ⚠️ 16:00 · **Watford v Middlesbrough** — Middlesbrough total goals → Over 0.5 (84%) → ❌ LOST 0-0
@@ -442,8 +420,6 @@ Results: **76 of 87 bets won** (87%)
 - ⚠️ 18:30 · **Nott'm Forest v Man City** — Over/Under (total goals) → Under 4.5 (83%) → ✅ WON 3-1
 - ⚠️ 17:15 · **Mantova v Verona** — Over/Under (total goals) → Under 4.5 (83%) → ✅ WON 0-0
 - ⚠️ 16:00 · **Dundee United v Motherwell** — Over/Under (total goals) → Under 4.5 (83%) → ✅ WON 1-1
-- ⚠️ 13:00 · **Osnabruck v Kaiserslautern** — Over/Under (total goals) → Under 4.5 (82%) → ✅ WON 0-1
-- ⚠️ 11:30 · **Eyupspor v Kocaelispor** — Over/Under (total goals) → Under 3.5 (82%) → ✅ WON 0-2
 - ⚠️ 16:00 · **Annan Athletic v Kelty Hearts** — Over/Under (total goals) → Under 4.5 (82%) → ✅ WON 1-2
 - ⚠️ 17:00 · **Goztep v Buyuksehyr** — Goztep total goals → Over 0.5 (82%) → ✅ WON 1-2
 - ⚠️ 16:30 · **For Sittard v Telstar** — Over/Under (total goals) → Over 1.5 (82%) → ✅ WON 2-2
@@ -452,7 +428,6 @@ Results: **76 of 87 bets won** (87%)
 - ⚠️ 18:45 · **Den Haag v Sparta Rotterdam** — Over/Under (total goals) → Over 1.5 (82%) → ✅ WON 3-1
 - ⚠️ 15:30 · **Paderborn v Ein Frankfurt** — Over/Under (total goals) → Under 4.5 (82%) → ✅ WON 2-2
 - ⚠️ 16:00 · **Westerlo v Charleroi** — Over/Under (total goals) → Over 1.5 (82%) → ✅ WON 1-5
-- ⚠️ 14:00 · **Malaga v Santander** — Over/Under (total goals) → Over 1.5 (81%) → ✅ WON 1-2
 
 ## 📈 Live track record of best picks
 
@@ -472,10 +447,6 @@ Banker 119/134 (89%) · Strong 171/193 (89%) · Good 292/335 (87%) · Fair 314/3
 No bets this week - the prices are fair. That is normal.
 
 ## 🎯 Strongest best picks (🔒 Banker + ⭐⭐⭐ Strong, same safety checks as 'Your bets'; won ~91% in testing)
-
-**Thursday 12 November**
-- 20:45 · **Czech Republic v Spain** (UEFA Nations League) — 🔒 Spain to score · 91% · bet at 1.14+  
-  📝 Open the 'Spain total goals' (team goals) market and choose 'Over 0.5' (some bookmakers call it 'Spain to score: Yes'). You WIN if Spain scores at least 1 goal - the final result does not matter. You LOSE only if Spain scores 0. Only place it if your bookmaker's odds for this choice are 1.14 or higher.
 
 **Friday 13 November**
 - 20:45 · **Liechtenstein v Azerbaijan** (UEFA Nations League) — 🔒 Azerbaijan or draw · 90% · bet at 1.14+  
