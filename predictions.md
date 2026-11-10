@@ -1,5 +1,5 @@
 # Football predictions — day by day
-_Updated Tue 10 Nov 2026 17:41 (Africa/Douala time). Bankroll for stakes: 100.00_
+_Updated Tue 10 Nov 2026 21:15 (Africa/Douala time). Bankroll for stakes: 100.00_
 
 ## 🎟️ Ready-made tickets — Thursday 12 November
 
@@ -48,18 +48,18 @@ _Safest first. 💚 = 1xBet pays at least the fair minimum._
 
 ### Friday 13 November (10 matches)
 
-1. 20:45 · **Andorra v Gibraltar** (UEFA Nations League) — Over/Under → Under 4.5 · 95%
-2. 20:45 · **Slovakia v Faroe Islands** (UEFA Nations League) — Over/Under → Under 5.5 · 93%
-3. 20:45 · **Scotland v North Macedonia** (UEFA Nations League) — Over/Under → Under 5.5 · 92%
-4. 20:45 · **Luxembourg v Estonia** (UEFA Nations League) — Over/Under → Under 4.5 · 92%
-5. 20:45 · **Netherlands v Greece** (UEFA Nations League) — Over/Under → Under 5.5 · 91%
-6. 20:45 · **Liechtenstein v Azerbaijan** (UEFA Nations League) — Over/Under → Under 4.5 · 90%
-7. 18:00 · **Moldova v Kazakhstan** (UEFA Nations League) — Over/Under → Under 4.5 · 89%
-8. 20:45 · **Slovenia v Switzerland** (UEFA Nations League) — Over/Under → Under 4.5 · 89%
-9. 20:45 · **Bulgaria v Iceland** (UEFA Nations League) — Over/Under → Under 4.5 · 87%
-10. 20:45 · **Serbia v Germany** (UEFA Nations League) — Over/Under → Under 5.5 · 87%
+1. 20:45 · **Andorra v Gibraltar** (UEFA Nations League) — Over/Under → Under 4.5 · 95% · 1xBet 1.02 
+2. 20:45 · **Slovakia v Faroe Islands** (UEFA Nations League) — Over/Under → Under 5.5 · 93% · 1xBet 1.04 
+3. 20:45 · **Scotland v North Macedonia** (UEFA Nations League) — Over/Under → Under 5.5 · 92% · 1xBet 1.04 
+4. 20:45 · **Luxembourg v Estonia** (UEFA Nations League) — Over/Under → Under 4.5 · 92% · 1xBet 1.03 
+5. 20:45 · **Netherlands v Greece** (UEFA Nations League) — Over/Under → Under 5.5 · 91% · 1xBet 1.06 
+6. 20:45 · **Liechtenstein v Azerbaijan** (UEFA Nations League) — Over/Under → Under 4.5 · 90% · 1xBet 1.07 
+7. 18:00 · **Moldova v Kazakhstan** (UEFA Nations League) — Over/Under → Under 4.5 · 89% · 1xBet 1.04 
+8. 20:45 · **Slovenia v Switzerland** (UEFA Nations League) — Over/Under → Under 4.5 · 89% · 1xBet 1.08 
+9. 20:45 · **Bulgaria v Iceland** (UEFA Nations League) — Over/Under → Under 4.5 · 87% · 1xBet 1.08 
+10. 20:45 · **Serbia v Germany** (UEFA Nations League) — Over/Under → Under 5.5 · 87% · 1xBet 1.12 
 
-🎟️ One ticket with the top matches — top 2: 88% · top 3: 81% · top 5: 68% · top 8: 49% · top 10: 36%
+🎟️ One ticket with the top matches — top 2: 88% @ 1.06 · top 3: 81% @ 1.10 · top 5: 68% @ 1.20 · top 8: 49% @ 1.45 · top 10: 36% @ 1.75
 
 ### Saturday 14 November (32 matches)
 
@@ -125,24 +125,22 @@ _Safest first. 💚 = 1xBet pays at least the fair minimum._
 
 🎟️ One ticket with the top matches — top 2: 83% · top 3: 74% · top 5: 59% · top 8: 42% · top 10: 30%
 
+### Tuesday 17 November (8 matches)
+
+1. 20:45 · **Hungary v Northern Ireland** (UEFA Nations League) — Over/Under → Under 4.5 · 91%
+2. 20:45 · **Ukraine v Georgia** (UEFA Nations League) — Over/Under → Under 5.5 · 91%
+3. 20:45 · **Republic of Ireland v Kosovo** (UEFA Nations League) — Over/Under → Under 4.5 · 90%
+4. 20:45 · **Denmark v Norway** (UEFA Nations League) — Over/Under → Under 5.5 · 89%
+5. 20:45 · **Poland v Sweden** (UEFA Nations League) — Over/Under → Under 5.5 · 88%
+6. 20:45 · **Bosnia and Herzegovina v Romania** (UEFA Nations League) — Over/Under → Under 4.5 · 88%
+7. 20:45 · **Wales v Portugal** (UEFA Nations League) — Over/Under → Under 4.5 · 86%
+8. 20:45 · **Israel v Austria** (UEFA Nations League) — Over/Under → Under 5.5 · 85%
+
+🎟️ One ticket with the top matches — top 2: 83% · top 3: 75% · top 5: 58% · top 8: 37%
+
 ## ✅ Your bets for each day (already checked - just place them)
 
 _Only 85%+ picks, backed by bookmaker odds (or 88%+ without), with no key player missing for the team you back. Skip a bet if your odds are lower than the number shown._
-
-### Friday 13 November
-
-1. 20:45 · **Liechtenstein v Azerbaijan** (UEFA Nations League)  
-   ✅ **BET: Double Chance → X2 (Azerbaijan or draw)** — only if odds are **1.14+** (90% chance)
-2. 18:00 · **Moldova v Kazakhstan** (UEFA Nations League)  
-   ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.15+** (89% chance)
-3. 20:45 · **Slovenia v Switzerland** (UEFA Nations League)  
-   ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.15+** (89% chance)
-4. 20:45 · **Andorra v Gibraltar** (UEFA Nations League)  
-   ✅ **BET: Over/Under (total goals) → Under 3.5** — only if odds are **1.16+** (89% chance)
-5. 20:45 · **Slovakia v Faroe Islands** (UEFA Nations League)  
-   ✅ **BET: Double Chance → 1X (Slovakia or draw)** — only if odds are **1.16+** (89% chance)
-
-🎟️ All 5 on one ticket: all 5 win about **57%** of the time (lose about 43%). Take it only if the ticket's total odds are at least **2.04**. A 2-pick ticket (#1 + #2) wins about 81%. In testing on 472 past match days, the top-5 ticket won on 67% of days - it still lost about 1 day in 3.
 
 ### Saturday 14 November
 
@@ -187,6 +185,15 @@ _Only 85%+ picks, backed by bookmaker odds (or 88%+ without), with no key player
 
 🎟️ All 5 on one ticket: all 5 win about **59%** of the time (lose about 41%). Take it only if the ticket's total odds are at least **1.98**. A 2-pick ticket (#1 + #2) wins about 82%. In testing on 472 past match days, the top-5 ticket won on 67% of days - it still lost about 1 day in 3.
 
+### Tuesday 17 November
+
+1. 20:45 · **Hungary v Northern Ireland** (UEFA Nations League)  
+   ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.13+** (91% chance)
+2. 20:45 · **Republic of Ireland v Kosovo** (UEFA Nations League)  
+   ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.14+** (90% chance)
+
+🎟️ All 2 on one ticket: all 2 win about **82%** of the time (lose about 18%). Take it only if the ticket's total odds are at least **1.29**. In testing on 472 past match days, the top-2 ticket won on 83% of days - it still lost about 1 day in 6.
+
 ## 📋 Every match: what to bet (whatever the odds)
 
 _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
@@ -204,16 +211,16 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 
 ### Friday 13 November (10 matches)
 
-- ✅ 20:45 · **Liechtenstein v Azerbaijan** (UEFA Nations League) — BET: Double Chance → X2 (Azerbaijan or draw) · 90%
-- ✅ 18:00 · **Moldova v Kazakhstan** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 89%
-- ✅ 20:45 · **Slovenia v Switzerland** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 89%
-- ✅ 20:45 · **Andorra v Gibraltar** (UEFA Nations League) — BET: Over/Under (total goals) → Under 3.5 · 89%
-- ✅ 20:45 · **Slovakia v Faroe Islands** (UEFA Nations League) — BET: Double Chance → 1X (Slovakia or draw) · 89%
-- ✅ 20:45 · **Scotland v North Macedonia** (UEFA Nations League) — BET: Double Chance → 1X (Scotland or draw) · 87%
-- ✅ 20:45 · **Serbia v Germany** (UEFA Nations League) — BET: Germany total goals → Over 0.5 · 87%
-- ✅ 20:45 · **Bulgaria v Iceland** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 87%
-- ✅ 20:45 · **Netherlands v Greece** (UEFA Nations League) — BET: Netherlands total goals → Over 0.5 · 85%
-- ⚠️ 20:45 · **Luxembourg v Estonia** (UEFA Nations League) — BET: Over/Under (total goals) → Under 3.5 · 83%
+- ⚠️ 20:45 · **Liechtenstein v Azerbaijan** (UEFA Nations League) — BET: Double Chance → X2 (Azerbaijan or draw) · 90% · 1xBet 1.03
+- ⚠️ 18:00 · **Moldova v Kazakhstan** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 89% · 1xBet 1.04
+- ⚠️ 20:45 · **Slovenia v Switzerland** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 89% · 1xBet 1.08
+- ⚠️ 20:45 · **Andorra v Gibraltar** (UEFA Nations League) — BET: Over/Under (total goals) → Under 3.5 · 89% · 1xBet 1.10
+- ⚠️ 20:45 · **Slovakia v Faroe Islands** (UEFA Nations League) — BET: Double Chance → 1X (Slovakia or draw) · 89% · 1xBet 1.07
+- ⚠️ 20:45 · **Scotland v North Macedonia** (UEFA Nations League) — BET: Double Chance → 1X (Scotland or draw) · 87% · 1xBet 1.01
+- ⚠️ 20:45 · **Serbia v Germany** (UEFA Nations League) — BET: Germany total goals → Over 0.5 · 87% · 1xBet 1.01
+- ⚠️ 20:45 · **Bulgaria v Iceland** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 87% · 1xBet 1.08
+- ⚠️ 20:45 · **Netherlands v Greece** (UEFA Nations League) — BET: Netherlands total goals → Over 0.5 · 85% · 1xBet 1.08
+- ⚠️ 20:45 · **Luxembourg v Estonia** (UEFA Nations League) — BET: Over/Under (total goals) → Under 3.5 · 83% · 1xBet 1.18
 
 ### Saturday 14 November (32 matches)
 
@@ -273,6 +280,17 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 - ⚠️ 18:00 · **Iceland v Luxembourg** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 85%
 - ⚠️ 20:45 · **Switzerland v Scotland** (UEFA Nations League) — BET: Switzerland total goals → Over 0.5 · 85%
 - ⚠️ 20:45 · **Germany v Netherlands** (UEFA Nations League) — BET: Over/Under (total goals) → Over 1.5 · 83%
+
+### Tuesday 17 November (8 matches)
+
+- ✅ 20:45 · **Hungary v Northern Ireland** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 91%
+- ✅ 20:45 · **Republic of Ireland v Kosovo** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 90%
+- ⚠️ 20:45 · **Bosnia and Herzegovina v Romania** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 88%
+- ⚠️ 20:45 · **Wales v Portugal** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 86%
+- ⚠️ 20:45 · **Ukraine v Georgia** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 84%
+- ⚠️ 20:45 · **Israel v Austria** (UEFA Nations League) — BET: Austria total goals → Over 0.5 · 84%
+- ⚠️ 20:45 · **Denmark v Norway** (UEFA Nations League) — BET: Denmark total goals → Over 0.5 · 80%
+- ⚠️ 20:45 · **Poland v Sweden** (UEFA Nations League) — BET: Over/Under (total goals) → Over 1.5 · 79%
 
 ## 🧾 Results of the last days (bets given before kick-off)
 
@@ -359,36 +377,13 @@ Results: **65 of 69 bets won** (94%) · ✅ checked bets: **2 of 2 won** · 1 st
 
 ### Saturday 07 November
 
-Results: **22 of 24 bets won** (92%)
+Results: **1 of 1 bets won** (100%)
 
-- ⚠️ 20:45 · **Roma v Sassuolo** — Roma total goals → Over 0.5 (91%) → ✅ WON 3-0
-- ⚠️ 18:00 · **Parma v Bologna** — Over/Under (total goals) → Under 4.5 (91%) → ✅ WON 1-2
-- ⚠️ 18:30 · **Stuttgart v Werder Bremen** — Stuttgart total goals → Over 0.5 (90%) → ✅ WON 1-0
-- ⚠️ 18:30 · **Osasuna v Ath Bilbao** — Over/Under (total goals) → Under 4.5 (89%) → ✅ WON 1-1
-- ⚠️ 18:30 · **Cordoba v Ceuta** — Cordoba total goals → Over 0.5 (89%) → ✅ WON 3-0
-- ⚠️ 19:00 · **Alverca v Casa Pia** — Over/Under (total goals) → Under 4.5 (89%) → ✅ WON 1-1
-- ⚠️ 19:30 · **Benevento v Avellino** — Over/Under (total goals) → Under 4.5 (88%) → ✅ WON 1-1
-- ⚠️ 21:05 · **Paris SG v Troyes** — Over/Under (total goals) → Over 1.5 (88%) → ❌ LOST 1-0
-- ⚠️ 18:30 · **Leganes v Albacete** — Over/Under (total goals) → Under 4.5 (88%) → ✅ WON 1-3
-- ⚠️ 21:00 · **Valencia v Real Madrid** — Real Madrid total goals → Over 0.5 (88%) → ✅ WON 0-3
-- ⚠️ 20:00 · **Pau FC v Nantes** — Over/Under (total goals) → Under 4.5 (88%) → ✅ WON 0-2
-- ⚠️ 18:45 · **Aberdeen v Hibernian** — Over/Under (total goals) → Under 4.5 (88%) → ✅ WON 0-4
-- ⚠️ 20:00 · **St Etienne v Laval** — St Etienne total goals → Over 0.5 (87%) → ✅ WON 2-0
 - ⚠️ 21:30 · **Sp Lisbon v Moreirense** — Double Chance → 12 (no draw) (87%) → ✅ WON 1-0
-- ⚠️ 18:30 · **Aris v Panetolikos** — Double Chance → 1X (Aris or draw) (87%) → ✅ WON 3-0
-- ⚠️ 20:30 · **Hertha v Wolfsburg** — Over/Under (total goals) → Over 1.5 (87%) → ✅ WON 2-1
-- ⚠️ 18:15 · **Oud-Heverlee Leuven v Mechelen** — Over/Under (total goals) → Under 4.5 (86%) → ✅ WON 2-0
-- ⚠️ 21:00 · **St Mirren v Rangers** — Rangers total goals → Over 0.5 (86%) → ✅ WON 0-2
-- ⚠️ 19:00 · **Auxerre v Paris FC** — Over/Under (total goals) → Under 4.5 (85%) → ✅ WON 0-1
-- ⚠️ 21:00 · **Excelsior v Go Ahead Eagles** — Over/Under (total goals) → Over 1.5 (85%) → ❌ LOST 0-1
-- ⚠️ 20:45 · **RAAL La Louviere v Cercle Brugge** — Over/Under (total goals) → Under 4.5 (84%) → ✅ WON 0-1
-- ⚠️ 20:45 · **Antwerp v Lommel SK** — Over/Under (total goals) → Under 4.5 (84%) → ✅ WON 2-2
-- ⚠️ 18:30 · **Nott'm Forest v Man City** — Over/Under (total goals) → Under 4.5 (83%) → ✅ WON 3-1
-- ⚠️ 18:45 · **Den Haag v Sparta Rotterdam** — Over/Under (total goals) → Over 1.5 (82%) → ✅ WON 3-1
 
 ## 📈 Live track record of best picks
 
-**896 of 1041 best picks won (86%)** · ✅ 'Your bets' (passed all checks): 25/27 (93%) · 🔒+⭐⭐⭐ picks: 290/327 (89%) · 78 waiting for results
+**896 of 1041 best picks won (86%)** · ✅ 'Your bets' (passed all checks): 25/27 (93%) · 🔒+⭐⭐⭐ picks: 290/327 (89%) · 86 waiting for results
 Banker 119/134 (89%) · Strong 171/193 (89%) · Good 292/335 (87%) · Fair 314/379 (83%)
 
 **🛡️ Rules for low-odds betting (read every time)**
@@ -404,18 +399,6 @@ Banker 119/134 (89%) · Strong 171/193 (89%) · Good 292/335 (87%) · Fair 314/3
 No bets this week - the prices are fair. That is normal.
 
 ## 🎯 Strongest best picks (🔒 Banker + ⭐⭐⭐ Strong, same safety checks as 'Your bets'; won ~91% in testing)
-
-**Friday 13 November**
-- 20:45 · **Liechtenstein v Azerbaijan** (UEFA Nations League) — 🔒 Azerbaijan or draw · 90% · bet at 1.14+  
-  📝 Open the 'Double chance' market and choose 'X2' (Azerbaijan or draw). You WIN if Azerbaijan wins OR it is a draw. You LOSE only if Liechtenstein wins. Only place it if your bookmaker's odds for this choice are 1.14 or higher.
-- 18:00 · **Moldova v Kazakhstan** (UEFA Nations League) — ⭐⭐⭐ Under 4.5 goals · 89% · bet at 1.15+  
-  📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.15 or higher.
-- 20:45 · **Slovenia v Switzerland** (UEFA Nations League) — ⭐⭐⭐ Under 4.5 goals · 89% · bet at 1.15+  
-  📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.15 or higher.
-- 20:45 · **Andorra v Gibraltar** (UEFA Nations League) — ⭐⭐⭐ Under 3.5 goals · 89% · bet at 1.16+  
-  📝 Open the 'Total goals' (Over/Under) market and choose 'Under 3.5'. You WIN if the match has 0, 1, 2 or 3 goals in total (both teams added together). You LOSE if it has 4 or more goals. Only place it if your bookmaker's odds for this choice are 1.16 or higher.
-- 20:45 · **Slovakia v Faroe Islands** (UEFA Nations League) — ⭐⭐⭐ Slovakia or draw · 89% · bet at 1.16+  
-  📝 Open the 'Double chance' market and choose '1X' (Slovakia or draw). You WIN if Slovakia wins OR it is a draw. You LOSE only if Faroe Islands wins. Only place it if your bookmaker's odds for this choice are 1.16 or higher.
 
 **Saturday 14 November**
 - 20:45 · **Northern Ireland v Ukraine** (UEFA Nations League) — 🔒 Under 4.5 goals · 91% · bet at 1.13+  
@@ -456,6 +439,12 @@ No bets this week - the prices are fair. That is normal.
   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.15 or higher.
 - 20:45 · **Greece v Serbia** (UEFA Nations League) — ⭐⭐⭐ Under 4.5 goals · 89% · bet at 1.16+  
   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.16 or higher.
+
+**Tuesday 17 November**
+- 20:45 · **Hungary v Northern Ireland** (UEFA Nations League) — 🔒 Under 4.5 goals · 91% · bet at 1.13+  
+  📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.13 or higher.
+- 20:45 · **Republic of Ireland v Kosovo** (UEFA Nations League) — 🔒 Under 4.5 goals · 90% · bet at 1.14+  
+  📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.14 or higher.
 
 ## 📅 Every match, day by day
 
@@ -551,6 +540,19 @@ No bets this week - the prices are fair. That is normal.
 | 20:45 | UEFA Nations League | Greece v Serbia | No odds feed: back Greece only at 2.34+ | - | ⭐⭐⭐ Under 4.5 goals · 89% · bet at 1.16+ | 1-0 | 44 / 29 / 27 | 89 / 66 / 39 / 19 / 8 / 3 / 1 | 11 / 34 / 61 / 81 / 92 / 97 / 99 |
 | 20:45 | UEFA Nations League | Switzerland v Scotland | No odds feed: back Switzerland only at 1.56+ | - | ⭐ Switzerland to score · 85% · bet at 1.22+ | 2-0 | 66 / 21 / 14 | 94 / 80 / 56 / 34 / 17 / 8 / 3 | 6 / 20 / 44 / 66 / 83 / 92 / 97 |
 | 20:45 | UEFA Nations League | North Macedonia v Slovenia | No odds feed: back Slovenia only at 2.52+ | - | 🔒 Under 4.5 goals · 91% · bet at 1.13+ | 0-1 | 27 / 32 / 41 | 85 / 59 / 31 / 14 / 5 / 2 / 0 | 15 / 41 / 69 / 86 / 95 / 98 / 100 |
+
+### Tuesday 17 November (8 matches)
+
+| Time | Competition | Match | Advice | Stake | 🎯 Best pick | Predicted | H / D / A % | Over 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 / 6.5 % | Under 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 / 6.5 % |
+|---|---|---|---|---|---|---|---|---|---|
+| 20:45 | UEFA Nations League | Wales v Portugal | No odds feed: back Portugal only at 1.69+ | - | ⭐⭐ Under 4.5 goals · 86% · bet at 1.20+ | 0-1 | 15 / 24 / 61 | 91 / 72 / 46 / 25 / 11 / 4 / 1 | 9 / 28 / 54 / 75 / 89 / 96 / 99 |
+| 20:45 | UEFA Nations League | Hungary v Northern Ireland | No odds feed: back Hungary only at 2.25+ | - | 🔒 Under 4.5 goals · 91% · bet at 1.13+ | 1-0 | 46 / 31 / 23 | 86 / 60 / 33 / 15 / 5 / 2 / 0 | 14 / 40 / 67 / 85 / 95 / 98 / 100 |
+| 20:45 | UEFA Nations League | Denmark v Norway | No odds feed: back Denmark only at 2.03+ | - | ⭐ Denmark to score · 80% · bet at 1.28+ | 2-1 | 51 / 24 / 25 | 94 / 80 / 57 / 34 / 18 / 8 / 3 | 6 / 20 / 43 / 66 / 82 / 92 / 97 |
+| 20:45 | UEFA Nations League | Poland v Sweden | No odds feed: back Poland only at 2.49+ | - | ⭐ Over 1.5 goals · 79% · bet at 1.30+ | 2-1 | 41 / 25 / 34 | 95 / 82 / 59 / 37 / 20 / 9 / 4 | 5 / 18 / 41 / 63 / 80 / 91 / 96 |
+| 20:45 | UEFA Nations League | Bosnia and Herzegovina v Romania | No odds feed: back Bosnia and Herzegovina only at 2.63+ | - | ⭐⭐ Under 4.5 goals · 88% · bet at 1.18+ | 1-0 | 39 / 29 / 32 | 90 / 69 / 42 / 21 / 9 / 3 / 1 | 10 / 31 / 58 / 79 / 91 / 97 / 99 |
+| 20:45 | UEFA Nations League | Israel v Austria | No odds feed: back Austria only at 1.94+ | - | ⭐ Austria to score · 84% · bet at 1.23+ | 1-2 | 24 / 22 / 53 | 96 / 85 / 64 / 42 / 24 / 12 / 5 | 4 / 15 / 36 / 58 / 76 / 88 / 95 |
+| 20:45 | UEFA Nations League | Ukraine v Georgia | No odds feed: back Ukraine only at 1.93+ | - | ⭐ Under 4.5 goals · 84% · bet at 1.23+ | 1-0 | 53 / 25 / 21 | 93 / 75 / 50 / 28 / 13 / 5 / 2 | 7 / 25 / 50 / 72 / 87 / 95 / 98 |
+| 20:45 | UEFA Nations League | Republic of Ireland v Kosovo | No odds feed: back Republic of Ireland only at 2.32+ | - | 🔒 Under 4.5 goals · 90% · bet at 1.14+ | 1-0 | 44 / 30 / 25 | 87 / 63 / 35 / 16 / 6 / 2 / 1 | 13 / 37 / 65 / 84 / 94 / 98 / 99 |
 
 ## ☑️ Before you place any bet
 1. Your bookmaker's odds must be **at least** the price shown (for 🏆 games: at least the 'back only at' price). Lower odds = skip the bet.
