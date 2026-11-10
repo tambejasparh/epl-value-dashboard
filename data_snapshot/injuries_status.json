@@ -1,15 +1,16 @@
 {
- "time": "2026-11-09 22:53 UTC",
+ "time": "2026-11-10 00:39 UTC",
  "key_present": true,
  "leagues_found": {
-  "UNL": "UEFA Nations League (World)"
+  "UNL": "UEFA Nations League (World)",
+  "SP2": "Segunda Divisi\u00f3n (Spain)"
  },
- "fixtures": 8,
+ "fixtures": 19,
  "injured": 0,
  "players_fetched": 0,
  "requests_used": 8,
- "result": "0 missing players across 8 fixtures",
- "odds_time": "2026-11-09 22:53 UTC",
+ "result": "0 missing players across 19 fixtures",
+ "odds_time": "2026-11-10 00:39 UTC",
  "odds_calls": 8,
  "odds_rows": 1032,
  "odds_fixtures": 8,
