@@ -1,5 +1,5 @@
 # Football predictions — day by day
-_Updated Tue 10 Nov 2026 21:15 (Africa/Douala time). Bankroll for stakes: 100.00_
+_Updated Tue 10 Nov 2026 23:16 (Africa/Douala time). Bankroll for stakes: 100.00_
 
 ## 🎟️ Ready-made tickets — Thursday 12 November
 
@@ -374,12 +374,6 @@ Results: **65 of 69 bets won** (94%) · ✅ checked bets: **2 of 2 won** · 1 st
 - ⚠️ 16:15 · **Girona v Almeria** — Over/Under (total goals) → Under 4.5 (82%) → ✅ WON 0-1
 - ⚠️ 17:30 · **Man United v Aston Villa** — Man United total goals → Over 0.5 (82%) → ✅ WON 4-4
 - ⚠️ 14:00 · **Elche v Betis** — Over/Under (total goals) → Under 4.5 (82%) → ✅ WON 0-2
-
-### Saturday 07 November
-
-Results: **1 of 1 bets won** (100%)
-
-- ⚠️ 21:30 · **Sp Lisbon v Moreirense** — Double Chance → 12 (no draw) (87%) → ✅ WON 1-0
 
 ## 📈 Live track record of best picks
 

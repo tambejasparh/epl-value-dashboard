@@ -1,24 +1,6 @@
 {
- "time": "2026-11-10 20:15 UTC",
+ "time": "2026-11-10 22:16 UTC",
  "leagues": {
-  "SC2": {
-   "season": 2026,
-   "finished": 69,
-   "latest": "2026-11-07",
-   "errors": null,
-   "teams": [
-    "Airdrie United",
-    "Alloa Athletic",
-    "Cove Rangers",
-    "East Fife",
-    "East Kilbride",
-    "Hamilton Academical",
-    "Montrose",
-    "Peterhead",
-    "Queen of the South",
-    "Ross County"
-   ]
-  },
   "SC1": {
    "season": 2026,
    "finished": 69,
@@ -35,6 +17,24 @@
     "Queen's Park",
     "Raith Rovers",
     "Stenhousemuir"
+   ]
+  },
+  "SC2": {
+   "season": 2026,
+   "finished": 69,
+   "latest": "2026-11-07",
+   "errors": null,
+   "teams": [
+    "Airdrie United",
+    "Alloa Athletic",
+    "Cove Rangers",
+    "East Fife",
+    "East Kilbride",
+    "Hamilton Academical",
+    "Montrose",
+    "Peterhead",
+    "Queen of the South",
+    "Ross County"
    ]
   },
   "SC0": {
@@ -117,38 +117,6 @@
     "Tottenham"
    ]
   },
-  "E1": {
-   "season": 2026,
-   "finished": 180,
-   "latest": "2026-11-07",
-   "errors": null,
-   "teams": [
-    "Birmingham",
-    "Blackburn",
-    "Bolton",
-    "Bristol City",
-    "Burnley",
-    "Cardiff",
-    "Charlton",
-    "Derby",
-    "Lincoln",
-    "Middlesbrough",
-    "Millwall",
-    "Norwich",
-    "Portsmouth",
-    "Preston",
-    "QPR",
-    "Sheffield Utd",
-    "Southampton",
-    "Stoke City",
-    "Swansea",
-    "Watford",
-    "West Brom",
-    "West Ham",
-    "Wolves",
-    "Wrexham"
-   ]
-  },
   "E2": {
    "season": 2026,
    "finished": 158,
@@ -213,6 +181,38 @@
     "York"
    ]
   },
+  "E1": {
+   "season": 2026,
+   "finished": 180,
+   "latest": "2026-11-07",
+   "errors": null,
+   "teams": [
+    "Birmingham",
+    "Blackburn",
+    "Bolton",
+    "Bristol City",
+    "Burnley",
+    "Cardiff",
+    "Charlton",
+    "Derby",
+    "Lincoln",
+    "Middlesbrough",
+    "Millwall",
+    "Norwich",
+    "Portsmouth",
+    "Preston",
+    "QPR",
+    "Sheffield Utd",
+    "Southampton",
+    "Stoke City",
+    "Swansea",
+    "Watford",
+    "West Brom",
+    "West Ham",
+    "Wolves",
+    "Wrexham"
+   ]
+  },
   "SC3": {
    "season": 2026,
    "finished": 65,
@@ -257,6 +257,32 @@
     "VfL Wolfsburg"
    ]
   },
+  "D1": {
+   "season": 2026,
+   "finished": 81,
+   "latest": "2026-11-08",
+   "errors": null,
+   "teams": [
+    "1. FC K\u00f6ln",
+    "1899 Hoffenheim",
+    "Bayer Leverkusen",
+    "Bayern M\u00fcnchen",
+    "Borussia Dortmund",
+    "Borussia M\u00f6nchengladbach",
+    "Eintracht Frankfurt",
+    "FC Augsburg",
+    "FC Schalke 04",
+    "FSV Mainz 05",
+    "Hamburger SV",
+    "RB Leipzig",
+    "SC Freiburg",
+    "SC Paderborn 07",
+    "SV Elversberg",
+    "Union Berlin",
+    "VfB Stuttgart",
+    "Werder Bremen"
+   ]
+  },
   "I2": {
    "season": 2026,
    "finished": 110,
@@ -285,32 +311,6 @@
     "Virtus Entella"
    ]
   },
-  "D1": {
-   "season": 2026,
-   "finished": 81,
-   "latest": "2026-11-08",
-   "errors": null,
-   "teams": [
-    "1. FC K\u00f6ln",
-    "1899 Hoffenheim",
-    "Bayer Leverkusen",
-    "Bayern M\u00fcnchen",
-    "Borussia Dortmund",
-    "Borussia M\u00f6nchengladbach",
-    "Eintracht Frankfurt",
-    "FC Augsburg",
-    "FC Schalke 04",
-    "FSV Mainz 05",
-    "Hamburger SV",
-    "RB Leipzig",
-    "SC Freiburg",
-    "SC Paderborn 07",
-    "SV Elversberg",
-    "Union Berlin",
-    "VfB Stuttgart",
-    "Werder Bremen"
-   ]
-  },
   "I1": {
    "season": 2026,
    "finished": 110,
@@ -337,6 +337,34 @@
     "Torino",
     "Udinese",
     "Venezia"
+   ]
+  },
+  "SP1": {
+   "season": 2026,
+   "finished": 119,
+   "latest": "2026-11-08",
+   "errors": null,
+   "teams": [
+    "Alaves",
+    "Athletic Club",
+    "Atletico Madrid",
+    "Barcelona",
+    "Celta Vigo",
+    "Deportivo La Coruna",
+    "Elche",
+    "Espanyol",
+    "Getafe",
+    "Levante",
+    "Malaga",
+    "Osasuna",
+    "Racing Santander",
+    "Rayo Vallecano",
+    "Real Betis",
+    "Real Madrid",
+    "Real Sociedad",
+    "Sevilla",
+    "Valencia",
+    "Villarreal"
    ]
   },
   "SP2": {
@@ -393,34 +421,6 @@
     "Stade Brestois 29",
     "Strasbourg",
     "Toulouse"
-   ]
-  },
-  "SP1": {
-   "season": 2026,
-   "finished": 119,
-   "latest": "2026-11-08",
-   "errors": null,
-   "teams": [
-    "Alaves",
-    "Athletic Club",
-    "Atletico Madrid",
-    "Barcelona",
-    "Celta Vigo",
-    "Deportivo La Coruna",
-    "Elche",
-    "Espanyol",
-    "Getafe",
-    "Levante",
-    "Malaga",
-    "Osasuna",
-    "Racing Santander",
-    "Rayo Vallecano",
-    "Real Betis",
-    "Real Madrid",
-    "Real Sociedad",
-    "Sevilla",
-    "Valencia",
-    "Villarreal"
    ]
   },
   "RUS": {
@@ -501,6 +501,30 @@
     "Sochaux"
    ]
   },
+  "CHN": {
+   "season": 2026,
+   "finished": 240,
+   "latest": "2026-11-08",
+   "errors": null,
+   "teams": [
+    "Beijing Guoan",
+    "Chengdu Better City",
+    "Chongqing Tongliang Long",
+    "Dalian Zhixing",
+    "Hangzhou Greentown",
+    "Henan Jianye",
+    "Qingdao Jonoon",
+    "Qingdao Youth Island",
+    "SHANGHAI SIPG",
+    "Shandong Luneng",
+    "Shanghai Shenhua",
+    "Shenyang Urban",
+    "Sichuan Jiuniu",
+    "Tianjin Teda",
+    "Wuhan Three Towns",
+    "Yunnan Yukun"
+   ]
+  },
   "B1": {
    "season": 2026,
    "finished": 99,
@@ -551,30 +575,6 @@
     "Twente",
     "Utrecht",
     "Willem II"
-   ]
-  },
-  "CHN": {
-   "season": 2026,
-   "finished": 240,
-   "latest": "2026-11-08",
-   "errors": null,
-   "teams": [
-    "Beijing Guoan",
-    "Chengdu Better City",
-    "Chongqing Tongliang Long",
-    "Dalian Zhixing",
-    "Hangzhou Greentown",
-    "Henan Jianye",
-    "Qingdao Jonoon",
-    "Qingdao Youth Island",
-    "SHANGHAI SIPG",
-    "Shandong Luneng",
-    "Shanghai Shenhua",
-    "Shenyang Urban",
-    "Sichuan Jiuniu",
-    "Tianjin Teda",
-    "Wuhan Three Towns",
-    "Yunnan Yukun"
    ]
   },
   "P1": {
