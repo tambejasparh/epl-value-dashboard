@@ -1,5 +1,5 @@
 {
- "time": "2026-11-11 12:34 UTC",
+ "time": "2026-11-11 16:47 UTC",
  "key_present": true,
  "leagues_found": {
   "UNL": "UEFA Nations League (World)",
@@ -16,10 +16,10 @@
  "players_fetched": 0,
  "requests_used": 8,
  "result": "0 missing players across 82 fixtures",
- "odds_time": "2026-11-11 12:34 UTC",
- "odds_calls": 20,
- "odds_rows": 2713,
- "odds_fixtures": 20,
+ "odds_time": "2026-11-11 16:47 UTC",
+ "odds_calls": 70,
+ "odds_rows": 8407,
+ "odds_fixtures": 70,
  "books_seen": [
   "1xBet",
   "Bet365",
@@ -74,6 +74,6 @@
   "Total - Home",
   "Total Corners (1st Half)"
  ],
- "my_book_fixtures": 20,
- "odds_result": "prices for 20 fixtures"
+ "my_book_fixtures": 64,
+ "odds_result": "prices for 70 fixtures"
 }
