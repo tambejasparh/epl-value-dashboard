@@ -1,5 +1,5 @@
 # Football predictions — day by day
-_Updated Wed 11 Nov 2026 21:01 (Africa/Douala time). Bankroll for stakes: 100.00_
+_Updated Thu 12 Nov 2026 00:25 (Africa/Douala time). Bankroll for stakes: 100.00_
 
 ## 🎟️ Ready-made tickets — Thursday 12 November
 
@@ -87,7 +87,7 @@ _Safest first. 💚 = 1xBet pays at least the fair minimum._
 22. 20:45 · **Sweden v Bosnia and Herzegovina** (UEFA Nations League) — Over/Under → Under 5.5 · 90% · 1xBet 1.06 
 23. 16:00 · **Crewe v Newport County** (England - League Two) — Over/Under → Under 4.5 · 89% · 1xBet 1.06 
 24. 16:00 · **AFC Wimbledon v Blackpool** (England - League One) — Over/Under → Under 4.5 · 89% · 1xBet 1.10 
-25. 18:00 · **Norway v Wales** (UEFA Nations League) — Over/Under → Under 5.5 · 89% · 1xBet 1.09 
+25. 18:00 · **Norway v Wales** (UEFA Nations League) — Over/Under → Under 5.5 · 89% · 1xBet 1.10 
 26. 16:00 · **Rochdale v York** (England - League Two) — Over/Under → Under 5.5 · 89% · 1xBet 1.02 
 27. 16:00 · **Bromley v Notts County** (England - League One) — Over/Under → Under 4.5 · 88%
 28. 16:00 · **Wigan v Barnsley** (England - League One) — Over/Under → Under 4.5 · 88% · 1xBet 1.17 
@@ -297,13 +297,6 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 Results: **1 of 1 bets won** (100%)
 
 - ⚠️ 20:30 · **Sabadell v Sociedad B** — Over/Under (total goals) → Under 4.5 (90%) → ✅ WON 0-0
-
-### Sunday 08 November
-
-Results: **2 of 2 bets won** (100%)
-
-- ⚠️ 21:30 · **Estrela v Benfica** — Benfica total goals → Over 0.5 (91%) → ✅ WON 2-3
-- ⚠️ 21:30 · **Rio Ave v Sp Braga** — Over/Under (total goals) → Under 4.5 (85%) → ✅ WON 0-1
 
 ## 📈 Live track record of best picks
 
