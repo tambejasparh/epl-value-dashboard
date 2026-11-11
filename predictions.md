@@ -1,16 +1,17 @@
 # Football predictions — day by day
-_Updated Wed 11 Nov 2026 17:47 (Africa/Douala time). Bankroll for stakes: 100.00_
+_Updated Wed 11 Nov 2026 21:01 (Africa/Douala time). Bankroll for stakes: 100.00_
 
 ## 🎟️ Ready-made tickets — Thursday 12 November
 
 _Only Under 4.5, otherwise Under 5.5 or Under 6.5, at 85%+, or Over 1.5 / Over 0.5 at 98%+, or Both teams to score at 96%+; one per match, 1xBet prices, highest ticket chance._
 
-**1.5 odds — 5 matches, total 1.51, chance all win ≈ 55%**
+**1.5 odds — 6 matches, total 1.51, chance all win ≈ 53%**
 1. 18:00 · Turkey v Belgium (UEFA Nations League) — Under 5.5 goals @ 1.09 · 86%
-2. 20:45 · Czech Republic v Spain (UEFA Nations League) — Under 5.5 goals @ 1.10 · 86%
-3. 20:45 · Montenegro v Latvia (UEFA Nations League) — Under 4.5 goals @ 1.14 · 86%
-4. 20:45 · Italy v France (UEFA Nations League) — Under 5.5 goals @ 1.06 · 91%
-5. 20:45 · England v Croatia (UEFA Nations League) — Under 6.5 goals @ 1.04 · 94%
+2. 20:45 · Czech Republic v Spain (UEFA Nations League) — Under 5.5 goals @ 1.09 · 86%
+3. 20:45 · Albania v Finland (UEFA Nations League) — Under 5.5 goals @ 1.02 · 96%
+4. 20:45 · Montenegro v Latvia (UEFA Nations League) — Under 4.5 goals @ 1.14 · 86%
+5. 20:45 · Italy v France (UEFA Nations League) — Under 5.5 goals @ 1.05 · 91%
+6. 20:45 · England v Croatia (UEFA Nations League) — Under 6.5 goals @ 1.04 · 94%
 
 **2 odds:** not enough safe bets today
 
@@ -36,14 +37,14 @@ _Safest first. 💚 = 1xBet pays at least the fair minimum._
 
 1. 18:00 · **Armenia v Cyprus** (UEFA Nations League) — Over/Under → Under 5.5 · 92% · 1xBet 1.02 
 2. 20:45 · **Albania v Finland** (UEFA Nations League) — Over/Under → Under 4.5 · 92% · 1xBet 1.04 
-3. 20:45 · **Italy v France** (UEFA Nations League) — Over/Under → Under 5.5 · 91% · 1xBet 1.06 
+3. 20:45 · **Italy v France** (UEFA Nations League) — Over/Under → Under 5.5 · 91% · 1xBet 1.05 
 4. 20:45 · **San Marino v Belarus** (UEFA Nations League) — Over/Under → Under 5.5 · 89% · 1xBet 1.04 
 5. 20:45 · **England v Croatia** (UEFA Nations League) — Over/Under → Under 5.5 · 88% · 1xBet 1.08 
 6. 18:00 · **Turkey v Belgium** (UEFA Nations League) — Over/Under → Under 5.5 · 86% · 1xBet 1.09 
 7. 20:45 · **Montenegro v Latvia** (UEFA Nations League) — Over/Under → Under 4.5 · 86% · 1xBet 1.14 
-8. 20:45 · **Czech Republic v Spain** (UEFA Nations League) — Over/Under → Under 5.5 · 86% · 1xBet 1.10 
+8. 20:45 · **Czech Republic v Spain** (UEFA Nations League) — Over/Under → Under 5.5 · 86% · 1xBet 1.09 
 
-🎟️ One ticket with the top matches — top 2: 84% @ 1.06 · top 3: 77% @ 1.12 · top 5: 60% @ 1.26 · top 8: 39% @ 1.73
+🎟️ One ticket with the top matches — top 2: 84% @ 1.06 · top 3: 77% @ 1.11 · top 5: 60% @ 1.25 · top 8: 39% @ 1.69
 
 ### Friday 13 November (10 matches)
 
@@ -73,26 +74,26 @@ _Safest first. 💚 = 1xBet pays at least the fair minimum._
 9. 16:00 · **Luton v Cambridge** (England - League One) — Over/Under → Under 5.5 · 92%
 10. 16:00 · **Port Vale v Accrington** (England - League Two) — Over/Under → Under 4.5 · 92% · 1xBet 1.06 
 11. 16:00 · **Rotherham v Crawley Town** (England - League Two) — Over/Under → Under 5.5 · 92%
-12. 20:45 · **Romania v Poland** (UEFA Nations League) — Over/Under → Under 5.5 · 92%
+12. 20:45 · **Romania v Poland** (UEFA Nations League) — Over/Under → Under 5.5 · 92% · 1xBet 1.04 
 13. 16:00 · **Peterboro v Oxford** (England - League One) — Over/Under → Under 5.5 · 91%
-14. 20:45 · **Northern Ireland v Ukraine** (UEFA Nations League) — Over/Under → Under 4.5 · 91%
+14. 20:45 · **Northern Ireland v Ukraine** (UEFA Nations League) — Over/Under → Under 4.5 · 91% · 1xBet 1.04 
 15. 15:00 · **Kosovo v Israel** (UEFA Nations League) — Over/Under → Under 5.5 · 91% · 1xBet 1.03 
 16. 16:00 · **Sheffield Weds v Plymouth** (England - League One) — Over/Under → Under 5.5 · 90% · 1xBet 1.04 
-17. 20:45 · **Portugal v Denmark** (UEFA Nations League) — Over/Under → Under 5.5 · 90%
+17. 20:45 · **Portugal v Denmark** (UEFA Nations League) — Over/Under → Under 5.5 · 90% · 1xBet 1.06 
 18. 16:00 · **Colchester v Gillingham** (England - League Two) — Over/Under → Under 4.5 · 90% · 1xBet 1.06 
-19. 18:00 · **Georgia v Hungary** (UEFA Nations League) — Over/Under → Under 4.5 · 90%
+19. 18:00 · **Georgia v Hungary** (UEFA Nations League) — Over/Under → Under 4.5 · 90% · 1xBet 1.04 
 20. 16:00 · **Leicester v Bradford** (England - League One) — Over/Under → Under 4.5 · 90%
 21. 16:00 · **Shrewsbury v Oldham** (England - League Two) — Over/Under → Under 4.5 · 90% · 1xBet 1.07 
-22. 20:45 · **Sweden v Bosnia and Herzegovina** (UEFA Nations League) — Over/Under → Under 5.5 · 90%
+22. 20:45 · **Sweden v Bosnia and Herzegovina** (UEFA Nations League) — Over/Under → Under 5.5 · 90% · 1xBet 1.06 
 23. 16:00 · **Crewe v Newport County** (England - League Two) — Over/Under → Under 4.5 · 89% · 1xBet 1.06 
 24. 16:00 · **AFC Wimbledon v Blackpool** (England - League One) — Over/Under → Under 4.5 · 89% · 1xBet 1.10 
-25. 18:00 · **Norway v Wales** (UEFA Nations League) — Over/Under → Under 5.5 · 89%
+25. 18:00 · **Norway v Wales** (UEFA Nations League) — Over/Under → Under 5.5 · 89% · 1xBet 1.09 
 26. 16:00 · **Rochdale v York** (England - League Two) — Over/Under → Under 5.5 · 89% · 1xBet 1.02 
 27. 16:00 · **Bromley v Notts County** (England - League One) — Over/Under → Under 4.5 · 88%
 28. 16:00 · **Wigan v Barnsley** (England - League One) — Over/Under → Under 4.5 · 88% · 1xBet 1.17 
-29. 18:30 · **Fleetwood Town v Tranmere** (England - League Two) — Over/Under → Under 4.5 · 87%
+29. 18:30 · **Fleetwood Town v Tranmere** (England - League Two) — Over/Under → Under 4.5 · 87% · 1xBet 1.08 
 30. 16:00 · **Doncaster v Leyton Orient** (England - League One) — Over/Under → Under 4.5 · 87% · 1xBet 1.12 
-31. 20:45 · **Austria v Republic of Ireland** (UEFA Nations League) — Over/Under → Under 4.5 · 87%
+31. 20:45 · **Austria v Republic of Ireland** (UEFA Nations League) — Over/Under → Under 4.5 · 87% · 1xBet 1.13 
 32. 16:00 · **Bristol Rvs v Chesterfield** (England - League Two) — Over/Under → Under 4.5 · 87% · 1xBet 1.12 
 
 🎟️ One ticket with the top matches — top 2: 89% @ 1.14 · top 3: 83% · top 5: 72% · top 8: 57% · top 10: 49%
@@ -143,18 +144,12 @@ _Only 85%+ picks, backed by bookmaker odds (or 88%+ without), with no key player
 
 ### Saturday 14 November
 
-1. 20:45 · **Northern Ireland v Ukraine** (UEFA Nations League)  
-   ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.13+** (91% chance)
-2. 18:00 · **Georgia v Hungary** (UEFA Nations League)  
-   ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.14+** (90% chance)
-3. 16:00 · **Leicester v Bradford** (England - League One)  
+1. 16:00 · **Leicester v Bradford** (England - League One)  
    ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.15+** (90% chance)
-4. 16:00 · **Bromley v Notts County** (England - League One)  
+2. 16:00 · **Bromley v Notts County** (England - League One)  
    ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.17+** (88% chance)
-5. 18:00 · **Norway v Wales** (UEFA Nations League)  
-   ✅ **BET: Norway total goals → Over 0.5** — only if odds are **1.18+** (87% chance)
 
-🎟️ All 5 on one ticket: all 5 win about **57%** of the time (lose about 43%). Take it only if the ticket's total odds are at least **2.04**. A 2-pick ticket (#1 + #2) wins about 82%. In testing on 472 past match days, the top-5 ticket won on 67% of days - it still lost about 1 day in 3.
+🎟️ All 2 on one ticket: all 2 win about **79%** of the time (lose about 21%). Take it only if the ticket's total odds are at least **1.34**. In testing on 472 past match days, the top-2 ticket won on 83% of days - it still lost about 1 day in 6.
 
 ### Sunday 15 November
 
@@ -210,7 +205,7 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 - ⚠️ 20:45 · **Montenegro v Latvia** (UEFA Nations League) — BET: Double Chance → 1X (Montenegro or draw) · 86% · 1xBet 1.05
 - ⚠️ 18:00 · **Turkey v Belgium** (UEFA Nations League) — BET: Belgium total goals → Over 0.5 · 86% · 1xBet 1.09
 - ⚠️ 18:00 · **Armenia v Cyprus** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 84% · 1xBet 1.07
-- ⚠️ 20:45 · **Italy v France** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 83% · 1xBet 1.21
+- ⚠️ 20:45 · **Italy v France** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 83% · 1xBet 1.18
 
 ### Friday 13 November (10 matches)
 
@@ -227,28 +222,28 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 
 ### Saturday 14 November (32 matches)
 
-- ✅ 20:45 · **Northern Ireland v Ukraine** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 91%
+- ⚠️ 20:45 · **Northern Ireland v Ukraine** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 91% · 1xBet 1.04
 - ⚠️ 16:00 · **Colchester v Gillingham** (England - League Two) — BET: Over/Under (total goals) → Under 4.5 · 90% · 1xBet 1.06
-- ✅ 18:00 · **Georgia v Hungary** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 90%
+- ⚠️ 18:00 · **Georgia v Hungary** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 90% · 1xBet 1.04
 - ✅ 16:00 · **Leicester v Bradford** (England - League One) — BET: Over/Under (total goals) → Under 4.5 · 90%
 - ⚠️ 16:00 · **Shrewsbury v Oldham** (England - League Two) — BET: Over/Under (total goals) → Under 4.5 · 90% · 1xBet 1.07
 - ⚠️ 16:00 · **Crewe v Newport County** (England - League Two) — BET: Over/Under (total goals) → Under 4.5 · 89% · 1xBet 1.06
 - ⚠️ 16:00 · **AFC Wimbledon v Blackpool** (England - League One) — BET: Over/Under (total goals) → Under 4.5 · 89% · 1xBet 1.10
 - ✅ 16:00 · **Bromley v Notts County** (England - League One) — BET: Over/Under (total goals) → Under 4.5 · 88%
 - ⚠️ 16:00 · **Wigan v Barnsley** (England - League One) — BET: Over/Under (total goals) → Under 4.5 · 88% · 1xBet 1.17
-- ⚠️ 18:30 · **Fleetwood Town v Tranmere** (England - League Two) — BET: Over/Under (total goals) → Under 4.5 · 87%
-- ✅ 18:00 · **Norway v Wales** (UEFA Nations League) — BET: Norway total goals → Over 0.5 · 87%
+- ⚠️ 18:30 · **Fleetwood Town v Tranmere** (England - League Two) — BET: Over/Under (total goals) → Under 4.5 · 87% · 1xBet 1.08
+- ⚠️ 18:00 · **Norway v Wales** (UEFA Nations League) — BET: Norway total goals → Over 0.5 · 87% · 1xBet 1.01
 - ⚠️ 16:00 · **Doncaster v Leyton Orient** (England - League One) — BET: Over/Under (total goals) → Under 4.5 · 87% · 1xBet 1.12
 - ⚠️ 16:00 · **Rochdale v York** (England - League Two) — BET: York total goals → Over 0.5 · 87% · 1xBet 1.09
-- ✅ 20:45 · **Austria v Republic of Ireland** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 87%
+- ⚠️ 20:45 · **Austria v Republic of Ireland** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 87% · 1xBet 1.13
 - ⚠️ 16:00 · **Salford v Northampton** (England - League Two) — BET: Over/Under (total goals) → Under 3.5 · 87% · 1xBet 1.28
 - ⚠️ 16:00 · **Bristol Rvs v Chesterfield** (England - League Two) — BET: Over/Under (total goals) → Under 4.5 · 87% · 1xBet 1.12
-- ✅ 20:45 · **Sweden v Bosnia and Herzegovina** (UEFA Nations League) — BET: Sweden total goals → Over 0.5 · 86%
+- ⚠️ 20:45 · **Sweden v Bosnia and Herzegovina** (UEFA Nations League) — BET: Sweden total goals → Over 0.5 · 86% · 1xBet 1.08
 - ⚠️ 16:00 · **Luton v Cambridge** (England - League One) — BET: Luton total goals → Over 0.5 · 85%
-- ⚠️ 20:45 · **Portugal v Denmark** (UEFA Nations League) — BET: Portugal total goals → Over 0.5 · 85%
+- ⚠️ 20:45 · **Portugal v Denmark** (UEFA Nations League) — BET: Portugal total goals → Over 0.5 · 85% · 1xBet 1.08
 - ⚠️ 16:00 · **Wycombe v Huddersfield** (England - League One) — BET: Over/Under (total goals) → Under 4.5 · 84% · 1xBet 1.12
 - ⚠️ 16:00 · **Walsall v Barnet** (England - League Two) — BET: Over/Under (total goals) → Under 4.5 · 84% · 1xBet 1.14
-- ⚠️ 20:45 · **Romania v Poland** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 84%
+- ⚠️ 20:45 · **Romania v Poland** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 84% · 1xBet 1.14
 - ⚠️ 16:00 · **Swindon v Grimsby** (England - League Two) — BET: Over/Under (total goals) → Under 4.5 · 84% · 1xBet 1.14
 - ⚠️ 16:00 · **Stockport v Reading** (England - League One) — BET: Over/Under (total goals) → Under 4.5 · 84% · 1xBet 1.14
 - ⚠️ 16:00 · **Milton Keynes Dons v Burton** (England - League One) — BET: Over/Under (total goals) → Under 4.5 · 83% · 1xBet 1.13
@@ -305,26 +300,10 @@ Results: **1 of 1 bets won** (100%)
 
 ### Sunday 08 November
 
-Results: **17 of 18 bets won** (94%)
+Results: **2 of 2 bets won** (100%)
 
 - ⚠️ 21:30 · **Estrela v Benfica** — Benfica total goals → Over 0.5 (91%) → ✅ WON 2-3
-- ⚠️ 19:00 · **Besiktas v Genclerbirligi** — Besiktas total goals → Over 0.5 (91%) → ✅ WON 3-0
-- ⚠️ 18:30 · **Sp Gijon v Valladolid** — Over/Under (total goals) → Under 4.5 (89%) → ✅ WON 1-2
-- ⚠️ 18:30 · **Villarreal v Getafe** — Over/Under (total goals) → Under 4.5 (88%) → ✅ WON 2-0
-- ⚠️ 19:00 · **Guimaraes v Porto** — Over/Under (total goals) → Under 4.5 (88%) → ✅ WON 1-2
-- ⚠️ 20:00 · **Olympiakos v PAOK** — Over/Under (total goals) → Under 4.5 (88%) → ✅ WON 1-1
-- ⚠️ 18:30 · **Las Palmas v Eldense** — Over/Under (total goals) → Under 4.5 (87%) → ✅ WON 2-0
-- ⚠️ 20:45 · **Fiorentina v Juventus** — Over/Under (total goals) → Under 4.5 (87%) → ✅ WON 2-2
-- ⚠️ 19:30 · **Vicenza v Cremonese** — Over/Under (total goals) → Under 4.5 (86%) → ❌ LOST 1-4
-- ⚠️ 21:00 · **Ath Madrid v Barcelona** — Over/Under (total goals) → Over 1.5 (86%) → ✅ WON 1-2
-- ⚠️ 19:30 · **Hoffenheim v Schalke 04** — Hoffenheim total goals → Over 0.5 (86%) → ✅ WON 2-1
-- ⚠️ 18:30 · **Celta v Levante** — Over/Under (total goals) → Under 4.5 (86%) → ✅ WON 0-0
 - ⚠️ 21:30 · **Rio Ave v Sp Braga** — Over/Under (total goals) → Under 4.5 (85%) → ✅ WON 0-1
-- ⚠️ 20:00 · **Utrecht v Nijmegen** — Over/Under (total goals) → Over 1.5 (85%) → ✅ WON 2-3
-- ⚠️ 20:45 · **Lens v Marseille** — Over/Under (total goals) → Over 1.5 (85%) → ✅ WON 1-2
-- ⚠️ 18:30 · **St. Gilloise v Genk** — Over/Under (total goals) → Under 4.5 (84%) → ✅ WON 1-0
-- ⚠️ 18:00 · **Inter v Como** — Inter total goals → Over 0.5 (84%) → ✅ WON 2-0
-- ⚠️ 19:15 · **St Truiden v Waregem** — St Truiden total goals → Over 0.5 (84%) → ✅ WON 4-1
 
 ## 📈 Live track record of best picks
 
@@ -346,10 +325,6 @@ No bets this week - the prices are fair. That is normal.
 ## 🎯 Strongest best picks (🔒 Banker + ⭐⭐⭐ Strong, same safety checks as 'Your bets'; won ~91% in testing)
 
 **Saturday 14 November**
-- 20:45 · **Northern Ireland v Ukraine** (UEFA Nations League) — 🔒 Under 4.5 goals · 91% · bet at 1.13+  
-  📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.13 or higher.
-- 18:00 · **Georgia v Hungary** (UEFA Nations League) — 🔒 Under 4.5 goals · 90% · bet at 1.14+  
-  📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.14 or higher.
 - 16:00 · **Leicester v Bradford** (England - League One) — ⭐⭐⭐ Under 4.5 goals · 90% · bet at 1.15+  
   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.15 or higher.
 - 16:00 · **Bromley v Notts County** (England - League One) — ⭐⭐⭐ Under 4.5 goals · 88% · bet at 1.17+  
