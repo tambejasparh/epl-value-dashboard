@@ -1,5 +1,5 @@
 # Football predictions — day by day
-_Updated Thu 12 Nov 2026 21:40 (Africa/Douala time). Bankroll for stakes: 100.00_
+_Updated Thu 12 Nov 2026 23:40 (Africa/Douala time). Bankroll for stakes: 100.00_
 
 ## 🎟️ Ready-made tickets — Friday 13 November
 
@@ -36,7 +36,7 @@ _Safest first. 💚 = 1xBet pays at least the fair minimum._
 
 1. 20:45 · **Andorra v Gibraltar** (UEFA Nations League) — Over/Under → Under 4.5 · 95% · 1xBet 1.02 
 2. 20:45 · **Scotland v North Macedonia** (UEFA Nations League) — Over/Under → Under 5.5 · 92% · 1xBet 1.04 
-3. 20:45 · **Luxembourg v Estonia** (UEFA Nations League) — Over/Under → Under 4.5 · 92% · 1xBet 1.03 
+3. 20:45 · **Luxembourg v Estonia** (UEFA Nations League) — Over/Under → Under 4.5 · 92% · 1xBet 1.04 
 4. 20:45 · **Netherlands v Greece** (UEFA Nations League) — Over/Under → Under 5.5 · 91% · 1xBet 1.05 
 5. 20:45 · **Liechtenstein v Azerbaijan** (UEFA Nations League) — Over/Under → Under 4.5 · 90% · 1xBet 1.07 
 6. 20:45 · **Slovenia v Switzerland** (UEFA Nations League) — Over/Under → Under 4.5 · 90% · 1xBet 1.06 
@@ -45,7 +45,7 @@ _Safest first. 💚 = 1xBet pays at least the fair minimum._
 9. 20:45 · **Bulgaria v Iceland** (UEFA Nations League) — Over/Under → Under 4.5 · 86% · 1xBet 1.08 
 10. 20:45 · **Slovakia v Faroe Islands** (UEFA Nations League) — Over/Under → Under 4.5 · 85% · 1xBet 1.14 
 
-🎟️ One ticket with the top matches — top 2: 88% @ 1.06 · top 3: 81% @ 1.09 · top 5: 66% @ 1.23 · top 8: 46% @ 1.52 · top 10: 34% @ 1.87
+🎟️ One ticket with the top matches — top 2: 88% @ 1.06 · top 3: 81% @ 1.10 · top 5: 66% @ 1.24 · top 8: 46% @ 1.53 · top 10: 34% @ 1.88
 
 ### Saturday 14 November (32 matches)
 
