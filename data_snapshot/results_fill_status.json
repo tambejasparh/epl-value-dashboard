@@ -1,24 +1,6 @@
 {
- "time": "2026-11-11 23:25 UTC",
+ "time": "2026-11-12 13:39 UTC",
  "leagues": {
-  "SC1": {
-   "season": 2026,
-   "finished": 69,
-   "latest": "2026-11-07",
-   "errors": null,
-   "teams": [
-    "Arbroath",
-    "Ayr Utd",
-    "Dunfermline",
-    "Inverness CT",
-    "Livingston",
-    "Morton",
-    "Partick",
-    "Queen's Park",
-    "Raith Rovers",
-    "Stenhousemuir"
-   ]
-  },
   "SC2": {
    "season": 2026,
    "finished": 69,
@@ -37,24 +19,50 @@
     "Ross County"
    ]
   },
-  "SC0": {
+  "SC1": {
    "season": 2026,
-   "finished": 75,
+   "finished": 69,
+   "latest": "2026-11-07",
+   "errors": null,
+   "teams": [
+    "Arbroath",
+    "Ayr Utd",
+    "Dunfermline",
+    "Inverness CT",
+    "Livingston",
+    "Morton",
+    "Partick",
+    "Queen's Park",
+    "Raith Rovers",
+    "Stenhousemuir"
+   ]
+  },
+  "E0": {
+   "season": 2026,
+   "finished": 100,
    "latest": "2026-11-08",
    "errors": null,
    "teams": [
-    "Aberdeen",
-    "Celtic",
-    "Dundee",
-    "Dundee Utd",
-    "Falkirk",
-    "Heart Of Midlothian",
-    "Hibernian",
-    "Kilmarnock",
-    "Motherwell",
-    "Rangers",
-    "ST Johnstone",
-    "ST Mirren"
+    "Arsenal",
+    "Aston Villa",
+    "Bournemouth",
+    "Brentford",
+    "Brighton",
+    "Chelsea",
+    "Coventry",
+    "Crystal Palace",
+    "Everton",
+    "Fulham",
+    "Hull City",
+    "Ipswich",
+    "Leeds",
+    "Liverpool",
+    "Manchester City",
+    "Manchester United",
+    "Newcastle",
+    "Nottingham Forest",
+    "Sunderland",
+    "Tottenham"
    ]
   },
   "EC": {
@@ -89,6 +97,26 @@
     "Yeovil Town"
    ]
   },
+  "SC0": {
+   "season": 2026,
+   "finished": 75,
+   "latest": "2026-11-08",
+   "errors": null,
+   "teams": [
+    "Aberdeen",
+    "Celtic",
+    "Dundee",
+    "Dundee Utd",
+    "Falkirk",
+    "Heart Of Midlothian",
+    "Hibernian",
+    "Kilmarnock",
+    "Motherwell",
+    "Rangers",
+    "ST Johnstone",
+    "ST Mirren"
+   ]
+  },
   "E2": {
    "season": 2026,
    "finished": 158,
@@ -119,34 +147,6 @@
     "Stockport County",
     "Wigan",
     "Wycombe"
-   ]
-  },
-  "E0": {
-   "season": 2026,
-   "finished": 100,
-   "latest": "2026-11-08",
-   "errors": null,
-   "teams": [
-    "Arsenal",
-    "Aston Villa",
-    "Bournemouth",
-    "Brentford",
-    "Brighton",
-    "Chelsea",
-    "Coventry",
-    "Crystal Palace",
-    "Everton",
-    "Fulham",
-    "Hull City",
-    "Ipswich",
-    "Leeds",
-    "Liverpool",
-    "Manchester City",
-    "Manchester United",
-    "Newcastle",
-    "Nottingham Forest",
-    "Sunderland",
-    "Tottenham"
    ]
   },
   "E1": {
@@ -257,6 +257,34 @@
     "VfL Wolfsburg"
    ]
   },
+  "I2": {
+   "season": 2026,
+   "finished": 110,
+   "latest": "2026-11-08",
+   "errors": null,
+   "teams": [
+    "Arezzo",
+    "Ascoli",
+    "Avellino",
+    "Benevento",
+    "Carrarese",
+    "Catanzaro",
+    "Cesena",
+    "Cremonese",
+    "Empoli",
+    "Hellas Verona",
+    "Juve Stabia",
+    "Mantova",
+    "Modena",
+    "Padova",
+    "Palermo",
+    "Pisa",
+    "Sampdoria",
+    "Sudtirol",
+    "Vicenza Virtus",
+    "Virtus Entella"
+   ]
+  },
   "D1": {
    "season": 2026,
    "finished": 81,
@@ -309,34 +337,6 @@
     "Torino",
     "Udinese",
     "Venezia"
-   ]
-  },
-  "I2": {
-   "season": 2026,
-   "finished": 110,
-   "latest": "2026-11-08",
-   "errors": null,
-   "teams": [
-    "Arezzo",
-    "Ascoli",
-    "Avellino",
-    "Benevento",
-    "Carrarese",
-    "Catanzaro",
-    "Cesena",
-    "Cremonese",
-    "Empoli",
-    "Hellas Verona",
-    "Juve Stabia",
-    "Mantova",
-    "Modena",
-    "Padova",
-    "Palermo",
-    "Pisa",
-    "Sampdoria",
-    "Sudtirol",
-    "Vicenza Virtus",
-    "Virtus Entella"
    ]
   },
   "SP2": {
@@ -475,6 +475,30 @@
     "Yokohama F. Marinos"
    ]
   },
+  "CHN": {
+   "season": 2026,
+   "finished": 240,
+   "latest": "2026-11-08",
+   "errors": null,
+   "teams": [
+    "Beijing Guoan",
+    "Chengdu Better City",
+    "Chongqing Tongliang Long",
+    "Dalian Zhixing",
+    "Hangzhou Greentown",
+    "Henan Jianye",
+    "Qingdao Jonoon",
+    "Qingdao Youth Island",
+    "SHANGHAI SIPG",
+    "Shandong Luneng",
+    "Shanghai Shenhua",
+    "Shenyang Urban",
+    "Sichuan Jiuniu",
+    "Tianjin Teda",
+    "Wuhan Three Towns",
+    "Yunnan Yukun"
+   ]
+  },
   "F2": {
    "season": 2026,
    "finished": 108,
@@ -527,30 +551,6 @@
     "Zulte Waregem"
    ]
   },
-  "CHN": {
-   "season": 2026,
-   "finished": 240,
-   "latest": "2026-11-08",
-   "errors": null,
-   "teams": [
-    "Beijing Guoan",
-    "Chengdu Better City",
-    "Chongqing Tongliang Long",
-    "Dalian Zhixing",
-    "Hangzhou Greentown",
-    "Henan Jianye",
-    "Qingdao Jonoon",
-    "Qingdao Youth Island",
-    "SHANGHAI SIPG",
-    "Shandong Luneng",
-    "Shanghai Shenhua",
-    "Shenyang Urban",
-    "Sichuan Jiuniu",
-    "Tianjin Teda",
-    "Wuhan Three Towns",
-    "Yunnan Yukun"
-   ]
-  },
   "N1": {
    "season": 2026,
    "finished": 108,
@@ -575,6 +575,28 @@
     "Twente",
     "Utrecht",
     "Willem II"
+   ]
+  },
+  "G1": {
+   "season": 2026,
+   "finished": 69,
+   "latest": "2026-11-08",
+   "errors": null,
+   "teams": [
+    "AEK Athens FC",
+    "Aris Thessalonikis",
+    "Asteras Tripolis",
+    "Atromitos",
+    "Iraklis 1908",
+    "Kalamata",
+    "Kifisia",
+    "Levadiakos",
+    "OFI",
+    "Olympiakos Piraeus",
+    "PAOK",
+    "Panathinaikos",
+    "Panetolikos",
+    "Volos NFC"
    ]
   },
   "P1": {
@@ -627,28 +649,6 @@
     "Samsunspor",
     "Trabzonspor",
     "\u00c7orum FK"
-   ]
-  },
-  "G1": {
-   "season": 2026,
-   "finished": 69,
-   "latest": "2026-11-08",
-   "errors": null,
-   "teams": [
-    "AEK Athens FC",
-    "Aris Thessalonikis",
-    "Asteras Tripolis",
-    "Atromitos",
-    "Iraklis 1908",
-    "Kalamata",
-    "Kifisia",
-    "Levadiakos",
-    "OFI",
-    "Olympiakos Piraeus",
-    "PAOK",
-    "Panathinaikos",
-    "Panetolikos",
-    "Volos NFC"
    ]
   }
  }
