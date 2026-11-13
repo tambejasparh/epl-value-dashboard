@@ -1,30 +1,271 @@
 # Football predictions — day by day
-_Updated Fri 13 Nov 2026 17:52 (Africa/Douala time). Bankroll for stakes: 100.00_
+_Updated Fri 13 Nov 2026 21:22 (Africa/Douala time). Bankroll for stakes: 100.00_
 
-## 🎟️ Ready-made tickets — Friday 13 November
+## 🎟️ Ready-made tickets — Saturday 14 November
 
 _Only Under 4.5, otherwise Under 5.5 or Under 6.5, at 85%+, or Over 1.5 / Over 0.5 at 98%+, or Both teams to score at 96%+; one per match, 1xBet prices, highest ticket chance._
 
-**1.5 odds — 5 matches, total 1.51, chance all win ≈ 53%**
-1. 20:45 · Serbia v Germany (UEFA Nations League) — Under 5.5 goals @ 1.10 · 87%
-2. 20:45 · Scotland v North Macedonia (UEFA Nations League) — Under 5.5 goals @ 1.06 · 91%
-3. 20:45 · Netherlands v Greece (UEFA Nations League) — Under 5.5 goals @ 1.06 · 91%
-4. 20:45 · Slovakia v Faroe Islands (UEFA Nations League) — Under 4.5 goals @ 1.12 · 86%
-5. 20:45 · Bulgaria v Iceland (UEFA Nations League) — Under 4.5 goals @ 1.09 · 86%
+**1.5 odds — 8 matches, total 1.50, chance all win ≈ 63%**
+1. 16:00 · Stevenage v Mansfield (England - League One) — Under 5.5 goals @ 1.02 · 98%
+2. 16:00 · Salford v Northampton (England - League Two) — Under 4.5 goals @ 1.08 · 91%
+3. 16:00 · Eastleigh v Fylde (England - National League) — Under 6.5 goals @ 1.04 · 96%
+4. 16:00 · Carlisle v Boston Utd (England - National League) — Under 6.5 goals @ 1.05 · 94%
+5. 16:00 · Kidderminster v Halifax (England - National League) — Under 4.5 goals @ 1.10 · 90%
+6. 16:00 · Livingston v Morton (Scotland - Championship) — Under 6.5 goals @ 1.03 · 97%
+7. 16:00 · East Kilbride v Alloa (Scotland - League One) — Under 6.5 goals @ 1.03 · 97%
+8. 18:30 · Mallorca v Cordoba (Spain - Segunda Division) — Under 5.5 goals @ 1.07 · 93%
 
-**2 odds:** not enough safe bets today
+**2 odds — 12 matches, total 2.00, chance all win ≈ 44%**
+1. 16:00 · Doncaster v Leyton Orient (England - League One) — Under 4.5 goals @ 1.12 · 87%
+2. 16:00 · Stevenage v Mansfield (England - League One) — Under 4.5 goals @ 1.06 · 93%
+3. 16:00 · Salford v Northampton (England - League Two) — Under 5.5 goals @ 1.03 · 97%
+4. 16:00 · Eastleigh v Fylde (England - National League) — Under 6.5 goals @ 1.04 · 96%
+5. 16:00 · Carlisle v Boston Utd (England - National League) — Under 6.5 goals @ 1.05 · 94%
+6. 16:00 · Kidderminster v Halifax (England - National League) — Under 4.5 goals @ 1.10 · 90%
+7. 16:00 · Livingston v Morton (Scotland - Championship) — Under 6.5 goals @ 1.03 · 97%
+8. 16:00 · East Kilbride v Alloa (Scotland - League One) — Under 6.5 goals @ 1.03 · 97%
+9. 16:00 · Dumbarton v Annan Athletic (Scotland - League Two) — Under 6.5 goals @ 1.02 · 98%
+10. 16:00 · Forfar v Spartans (Scotland - League Two) — Under 5.5 goals @ 1.05 · 94%
+11. 18:30 · Mallorca v Cordoba (Spain - Segunda Division) — Under 5.5 goals @ 1.07 · 93%
+12. 20:45 · Austria v Republic of Ireland (UEFA Nations League) — Under 4.5 goals @ 1.12 · 87%
 
-**3 odds:** not enough safe bets today
+**3 odds — 21 matches, total 3.01, chance all win ≈ 26%**
+1. 13:30 · Exeter v Cheltenham (England - League Two) — Under 5.5 goals @ 1.03 · 96%
+2. 14:00 · Valladolid v Castellon (Spain - Segunda Division) — Under 6.5 goals @ 1.02 · 97%
+3. 16:00 · Forfar v Spartans (Scotland - League Two) — Under 5.5 goals @ 1.05 · 94%
+4. 16:00 · Dumbarton v Annan Athletic (Scotland - League Two) — Under 6.5 goals @ 1.02 · 98%
+5. 16:00 · East Kilbride v Alloa (Scotland - League One) — Under 6.5 goals @ 1.03 · 97%
+6. 16:00 · East Fife v Peterhead (Scotland - League One) — Under 5.5 goals @ 1.04 · 95%
+7. 16:00 · Partick v Inverness C (Scotland - Championship) — Under 5.5 goals @ 1.04 · 95%
+8. 16:00 · Livingston v Morton (Scotland - Championship) — Under 6.5 goals @ 1.03 · 97%
+9. 16:00 · Kidderminster v Halifax (England - National League) — Under 4.5 goals @ 1.10 · 90%
+10. 16:00 · Southend v Aldershot (England - National League) — Under 6.5 goals @ 1.05 · 94%
+11. 16:00 · Eastleigh v Fylde (England - National League) — Under 6.5 goals @ 1.04 · 96%
+12. 16:00 · Walsall v Barnet (England - League Two) — Under 6.5 goals @ 1.02 · 97%
+13. 16:00 · Bristol Rvs v Chesterfield (England - League Two) — Under 5.5 goals @ 1.05 · 94%
+14. 16:00 · Salford v Northampton (England - League Two) — Under 4.5 goals @ 1.08 · 91%
+15. 16:00 · Wigan v Barnsley (England - League One) — Under 6.5 goals @ 1.02 · 97%
+16. 16:00 · Stevenage v Mansfield (England - League One) — Under 4.5 goals @ 1.06 · 93%
+17. 16:00 · Doncaster v Leyton Orient (England - League One) — Under 4.5 goals @ 1.12 · 87%
+18. 16:00 · Carlisle v Boston Utd (England - National League) — Under 6.5 goals @ 1.05 · 94%
+19. 18:00 · Norway v Wales (UEFA Nations League) — Under 5.5 goals @ 1.10 · 88%
+20. 18:30 · Mallorca v Cordoba (Spain - Segunda Division) — Under 5.5 goals @ 1.07 · 93%
+21. 20:45 · Austria v Republic of Ireland (UEFA Nations League) — Under 4.5 goals @ 1.12 · 87%
 
-**5 odds:** not enough safe bets today
+**5 odds — 31 matches, total 5.01, chance all win ≈ 12%**
+1. 13:30 · Exeter v Cheltenham (England - League Two) — Under 5.5 goals @ 1.03 · 96%
+2. 14:00 · Valladolid v Castellon (Spain - Segunda Division) — Under 6.5 goals @ 1.02 · 97%
+3. 16:00 · Forfar v Spartans (Scotland - League Two) — Under 5.5 goals @ 1.05 · 94%
+4. 16:00 · Dumbarton v Annan Athletic (Scotland - League Two) — Under 6.5 goals @ 1.02 · 98%
+5. 16:00 · East Kilbride v Alloa (Scotland - League One) — Under 6.5 goals @ 1.03 · 97%
+6. 16:00 · East Fife v Peterhead (Scotland - League One) — Under 5.5 goals @ 1.04 · 95%
+7. 16:00 · Airdrie Utd v Queen of Sth (Scotland - League One) — Under 6.5 goals @ 1.02 · 97%
+8. 16:00 · Partick v Inverness C (Scotland - Championship) — Under 5.5 goals @ 1.04 · 95%
+9. 16:00 · Livingston v Morton (Scotland - Championship) — Under 6.5 goals @ 1.03 · 97%
+10. 16:00 · Hartlepool v Wealdstone (England - National League) — Under 6.5 goals @ 1.02 · 97%
+11. 16:00 · Kidderminster v Halifax (England - National League) — Under 4.5 goals @ 1.10 · 90%
+12. 16:00 · Southend v Aldershot (England - National League) — Under 6.5 goals @ 1.05 · 94%
+13. 16:00 · Yeovil v Boreham Wood (England - National League) — Under 6.5 goals @ 1.03 · 96%
+14. 16:00 · Eastleigh v Fylde (England - National League) — Under 5.5 goals @ 1.08 · 90%
+15. 16:00 · Doncaster v Leyton Orient (England - League One) — Under 4.5 goals @ 1.12 · 87%
+16. 16:00 · Stevenage v Mansfield (England - League One) — Under 4.5 goals @ 1.06 · 93%
+17. 16:00 · Carlisle v Boston Utd (England - National League) — Under 6.5 goals @ 1.05 · 94%
+18. 16:00 · Milton Keynes Dons v Burton (England - League One) — Under 6.5 goals @ 1.02 · 97%
+19. 16:00 · Wigan v Barnsley (England - League One) — Under 6.5 goals @ 1.02 · 97%
+20. 16:00 · AFC Wimbledon v Blackpool (England - League One) — Under 4.5 goals @ 1.10 · 87%
+21. 16:00 · Salford v Northampton (England - League Two) — Under 4.5 goals @ 1.08 · 91%
+22. 16:00 · Bristol Rvs v Chesterfield (England - League Two) — Under 5.5 goals @ 1.05 · 94%
+23. 16:00 · Walsall v Barnet (England - League Two) — Under 6.5 goals @ 1.02 · 97%
+24. 16:00 · Colchester v Gillingham (England - League Two) — Under 5.5 goals @ 1.03 · 96%
+25. 16:15 · Sociedad B v Sp Gijon (Spain - Segunda Division) — Under 4.5 goals @ 1.10 · 88%
+26. 18:00 · Norway v Wales (UEFA Nations League) — Under 5.5 goals @ 1.10 · 88%
+27. 18:30 · Fleetwood Town v Tranmere (England - League Two) — Under 5.5 goals @ 1.04 · 94%
+28. 18:30 · Mallorca v Cordoba (Spain - Segunda Division) — Under 5.5 goals @ 1.07 · 93%
+29. 20:45 · Portugal v Denmark (UEFA Nations League) — Under 6.5 goals @ 1.04 · 95%
+30. 20:45 · Austria v Republic of Ireland (UEFA Nations League) — Under 4.5 goals @ 1.12 · 87%
+31. 21:00 · Oviedo v Girona (Spain - Segunda Division) — Under 4.5 goals @ 1.09 · 89%
 
-**7 odds:** not enough safe bets today
+**7 odds — 36 matches, total 7.01, chance all win ≈ 7%**
+1. 13:30 · Exeter v Cheltenham (England - League Two) — Under 4.5 goals @ 1.07 · 91%
+2. 14:00 · Valladolid v Castellon (Spain - Segunda Division) — Under 6.5 goals @ 1.02 · 97%
+3. 16:00 · Kelty Hearts v Stranraer (Scotland - League Two) — Under 6.5 goals @ 1.02 · 97%
+4. 16:00 · Forfar v Spartans (Scotland - League Two) — Under 5.5 goals @ 1.05 · 94%
+5. 16:00 · Edinburgh City v Clyde (Scotland - League Two) — Under 5.5 goals @ 1.06 · 91%
+6. 16:00 · Dumbarton v Annan Athletic (Scotland - League Two) — Under 6.5 goals @ 1.02 · 98%
+7. 16:00 · East Kilbride v Alloa (Scotland - League One) — Under 6.5 goals @ 1.03 · 97%
+8. 16:00 · East Fife v Peterhead (Scotland - League One) — Under 5.5 goals @ 1.04 · 95%
+9. 16:00 · Airdrie Utd v Queen of Sth (Scotland - League One) — Under 6.5 goals @ 1.02 · 97%
+10. 16:00 · Partick v Inverness C (Scotland - Championship) — Under 4.5 goals @ 1.09 · 88%
+11. 16:00 · Livingston v Morton (Scotland - Championship) — Under 6.5 goals @ 1.03 · 97%
+12. 16:00 · Hartlepool v Wealdstone (England - National League) — Under 6.5 goals @ 1.02 · 97%
+13. 16:00 · Yeovil v Boreham Wood (England - National League) — Under 6.5 goals @ 1.03 · 96%
+14. 16:00 · Southend v Aldershot (England - National League) — Under 6.5 goals @ 1.05 · 94%
+15. 16:00 · Carlisle v Boston Utd (England - National League) — Under 5.5 goals @ 1.10 · 87%
+16. 16:00 · Kidderminster v Halifax (England - National League) — Under 4.5 goals @ 1.10 · 90%
+17. 16:00 · Walsall v Barnet (England - League Two) — Under 6.5 goals @ 1.02 · 97%
+18. 16:00 · Doncaster v Leyton Orient (England - League One) — Under 4.5 goals @ 1.12 · 87%
+19. 16:00 · Stevenage v Mansfield (England - League One) — Under 4.5 goals @ 1.06 · 93%
+20. 16:00 · AFC Wimbledon v Blackpool (England - League One) — Under 4.5 goals @ 1.10 · 87%
+21. 16:00 · Eastleigh v Fylde (England - National League) — Under 5.5 goals @ 1.08 · 90%
+22. 16:00 · Stockport v Reading (England - League One) — Under 6.5 goals @ 1.02 · 97%
+23. 16:00 · Wigan v Barnsley (England - League One) — Under 6.5 goals @ 1.02 · 97%
+24. 16:00 · Milton Keynes Dons v Burton (England - League One) — Under 6.5 goals @ 1.02 · 97%
+25. 16:00 · Shrewsbury v Oldham (England - League Two) — Under 5.5 goals @ 1.03 · 96%
+26. 16:00 · Salford v Northampton (England - League Two) — Under 4.5 goals @ 1.08 · 91%
+27. 16:00 · Swindon v Grimsby (England - League Two) — Under 6.5 goals @ 1.02 · 97%
+28. 16:00 · Bristol Rvs v Chesterfield (England - League Two) — Under 4.5 goals @ 1.11 · 85%
+29. 16:00 · Colchester v Gillingham (England - League Two) — Under 5.5 goals @ 1.03 · 96%
+30. 16:15 · Sociedad B v Sp Gijon (Spain - Segunda Division) — Under 4.5 goals @ 1.10 · 88%
+31. 18:00 · Norway v Wales (UEFA Nations League) — Under 5.5 goals @ 1.10 · 88%
+32. 18:30 · Fleetwood Town v Tranmere (England - League Two) — Under 5.5 goals @ 1.04 · 94%
+33. 18:30 · Mallorca v Cordoba (Spain - Segunda Division) — Under 5.5 goals @ 1.07 · 93%
+34. 20:45 · Portugal v Denmark (UEFA Nations League) — Under 6.5 goals @ 1.04 · 95%
+35. 20:45 · Austria v Republic of Ireland (UEFA Nations League) — Under 4.5 goals @ 1.12 · 87%
+36. 21:00 · Oviedo v Girona (Spain - Segunda Division) — Under 4.5 goals @ 1.09 · 89%
 
-**10 odds:** not enough safe bets today
+**10 odds — 43 matches, total 10.03, chance all win ≈ 4%**
+1. 13:30 · Exeter v Cheltenham (England - League Two) — Under 4.5 goals @ 1.07 · 91%
+2. 14:00 · Valladolid v Castellon (Spain - Segunda Division) — Under 6.5 goals @ 1.02 · 97%
+3. 16:00 · Scunthorpe v Worthing (England - National League) — Under 6.5 goals @ 1.04 · 93%
+4. 16:00 · Yeovil v Boreham Wood (England - National League) — Under 6.5 goals @ 1.03 · 96%
+5. 16:00 · Hartlepool v Wealdstone (England - National League) — Under 6.5 goals @ 1.02 · 97%
+6. 16:00 · Livingston v Morton (Scotland - Championship) — Under 6.5 goals @ 1.03 · 97%
+7. 16:00 · Partick v Inverness C (Scotland - Championship) — Under 4.5 goals @ 1.09 · 88%
+8. 16:00 · Airdrie Utd v Queen of Sth (Scotland - League One) — Under 6.5 goals @ 1.02 · 97%
+9. 16:00 · East Fife v Peterhead (Scotland - League One) — Under 4.5 goals @ 1.08 · 88%
+10. 16:00 · East Kilbride v Alloa (Scotland - League One) — Under 6.5 goals @ 1.03 · 97%
+11. 16:00 · Cove Rangers v Montrose (Scotland - League One) — Under 5.5 goals @ 1.04 · 93%
+12. 16:00 · Dumbarton v Annan Athletic (Scotland - League Two) — Under 6.5 goals @ 1.02 · 98%
+13. 16:00 · Edinburgh City v Clyde (Scotland - League Two) — Under 5.5 goals @ 1.06 · 91%
+14. 16:00 · Forfar v Spartans (Scotland - League Two) — Under 5.5 goals @ 1.05 · 94%
+15. 16:00 · Kelty Hearts v Stranraer (Scotland - League Two) — Under 6.5 goals @ 1.02 · 97%
+16. 16:00 · Southend v Aldershot (England - National League) — Under 5.5 goals @ 1.09 · 87%
+17. 16:00 · Carlisle v Boston Utd (England - National League) — Under 5.5 goals @ 1.10 · 87%
+18. 16:00 · Kidderminster v Halifax (England - National League) — Under 4.5 goals @ 1.10 · 90%
+19. 16:00 · Walsall v Barnet (England - League Two) — Under 6.5 goals @ 1.02 · 97%
+20. 16:00 · Doncaster v Leyton Orient (England - League One) — Under 4.5 goals @ 1.12 · 87%
+21. 16:00 · Stevenage v Mansfield (England - League One) — Under 4.5 goals @ 1.06 · 93%
+22. 16:00 · AFC Wimbledon v Blackpool (England - League One) — Under 4.5 goals @ 1.10 · 87%
+23. 16:00 · Eastleigh v Fylde (England - National League) — Under 5.5 goals @ 1.08 · 90%
+24. 16:00 · Sheffield Weds v Plymouth (England - League One) — Under 6.5 goals @ 1.02 · 96%
+25. 16:00 · Stockport v Reading (England - League One) — Under 6.5 goals @ 1.02 · 97%
+26. 16:00 · Wigan v Barnsley (England - League One) — Under 6.5 goals @ 1.02 · 97%
+27. 16:00 · Milton Keynes Dons v Burton (England - League One) — Under 6.5 goals @ 1.02 · 97%
+28. 16:00 · Shrewsbury v Oldham (England - League Two) — Under 4.5 goals @ 1.07 · 89%
+29. 16:00 · Salford v Northampton (England - League Two) — Under 4.5 goals @ 1.08 · 91%
+30. 16:00 · Swindon v Grimsby (England - League Two) — Under 6.5 goals @ 1.02 · 97%
+31. 16:00 · Port Vale v Accrington (England - League Two) — Under 5.5 goals @ 1.02 · 97%
+32. 16:00 · Crewe v Newport County (England - League Two) — Under 5.5 goals @ 1.03 · 95%
+33. 16:00 · Bristol Rvs v Chesterfield (England - League Two) — Under 4.5 goals @ 1.11 · 85%
+34. 16:00 · Colchester v Gillingham (England - League Two) — Under 5.5 goals @ 1.03 · 96%
+35. 16:15 · Sociedad B v Sp Gijon (Spain - Segunda Division) — Under 4.5 goals @ 1.10 · 88%
+36. 18:00 · Norway v Wales (UEFA Nations League) — Under 5.5 goals @ 1.10 · 88%
+37. 18:30 · Fleetwood Town v Tranmere (England - League Two) — Under 5.5 goals @ 1.04 · 94%
+38. 18:30 · Mallorca v Cordoba (Spain - Segunda Division) — Under 5.5 goals @ 1.07 · 93%
+39. 20:45 · Romania v Poland (UEFA Nations League) — Under 5.5 goals @ 1.04 · 92%
+40. 20:45 · Austria v Republic of Ireland (UEFA Nations League) — Under 4.5 goals @ 1.12 · 87%
+41. 20:45 · Portugal v Denmark (UEFA Nations League) — Under 6.5 goals @ 1.04 · 95%
+42. 20:45 · Sweden v Bosnia and Herzegovina (UEFA Nations League) — Under 5.5 goals @ 1.06 · 90%
+43. 21:00 · Oviedo v Girona (Spain - Segunda Division) — Under 4.5 goals @ 1.09 · 89%
 
-**12 odds:** not enough safe bets today
+**12 odds — 46 matches, total 12.04, chance all win ≈ 2%**
+1. 13:30 · Exeter v Cheltenham (England - League Two) — Under 4.5 goals @ 1.07 · 91%
+2. 14:00 · Valladolid v Castellon (Spain - Segunda Division) — Under 5.5 goals @ 1.04 · 93%
+3. 16:00 · Southend v Aldershot (England - National League) — Under 5.5 goals @ 1.09 · 87%
+4. 16:00 · Kidderminster v Halifax (England - National League) — Under 4.5 goals @ 1.10 · 90%
+5. 16:00 · Yeovil v Boreham Wood (England - National League) — Under 6.5 goals @ 1.03 · 96%
+6. 16:00 · Hartlepool v Wealdstone (England - National League) — Under 6.5 goals @ 1.02 · 97%
+7. 16:00 · Livingston v Morton (Scotland - Championship) — Under 6.5 goals @ 1.03 · 97%
+8. 16:00 · Partick v Inverness C (Scotland - Championship) — Under 4.5 goals @ 1.09 · 88%
+9. 16:00 · Stenhousemuir v Queens Park (Scotland - Championship) — Under 5.5 goals @ 1.02 · 96%
+10. 16:00 · Airdrie Utd v Queen of Sth (Scotland - League One) — Under 6.5 goals @ 1.02 · 97%
+11. 16:00 · East Fife v Peterhead (Scotland - League One) — Under 4.5 goals @ 1.08 · 88%
+12. 16:00 · East Kilbride v Alloa (Scotland - League One) — Under 6.5 goals @ 1.03 · 97%
+13. 16:00 · Cove Rangers v Montrose (Scotland - League One) — Under 5.5 goals @ 1.04 · 93%
+14. 16:00 · Dumbarton v Annan Athletic (Scotland - League Two) — Under 6.5 goals @ 1.02 · 98%
+15. 16:00 · Edinburgh City v Clyde (Scotland - League Two) — Under 5.5 goals @ 1.06 · 91%
+16. 16:00 · Forfar v Spartans (Scotland - League Two) — Under 4.5 goals @ 1.09 · 86%
+17. 16:00 · Kelty Hearts v Stranraer (Scotland - League Two) — Under 6.5 goals @ 1.02 · 97%
+18. 16:00 · Carlisle v Boston Utd (England - National League) — Under 5.5 goals @ 1.10 · 87%
+19. 16:00 · Harrogate v Altrincham (England - National League) — Under 6.5 goals @ 1.02 · 96%
+20. 16:00 · Scunthorpe v Worthing (England - National League) — Under 6.5 goals @ 1.04 · 93%
+21. 16:00 · Walsall v Barnet (England - League Two) — Under 6.5 goals @ 1.02 · 97%
+22. 16:00 · Doncaster v Leyton Orient (England - League One) — Under 4.5 goals @ 1.12 · 87%
+23. 16:00 · Stevenage v Mansfield (England - League One) — Under 4.5 goals @ 1.06 · 93%
+24. 16:00 · AFC Wimbledon v Blackpool (England - League One) — Under 4.5 goals @ 1.10 · 87%
+25. 16:00 · Milton Keynes Dons v Burton (England - League One) — Under 6.5 goals @ 1.02 · 97%
+26. 16:00 · Eastleigh v Fylde (England - National League) — Under 5.5 goals @ 1.08 · 90%
+27. 16:00 · Stockport v Reading (England - League One) — Under 6.5 goals @ 1.02 · 97%
+28. 16:00 · Wigan v Barnsley (England - League One) — Under 6.5 goals @ 1.02 · 97%
+29. 16:00 · Rochdale v York (England - League Two) — Under 6.5 goals @ 1.02 · 96%
+30. 16:00 · Sheffield Weds v Plymouth (England - League One) — Under 6.5 goals @ 1.02 · 96%
+31. 16:00 · Shrewsbury v Oldham (England - League Two) — Under 4.5 goals @ 1.07 · 89%
+32. 16:00 · Salford v Northampton (England - League Two) — Under 4.5 goals @ 1.08 · 91%
+33. 16:00 · Swindon v Grimsby (England - League Two) — Under 6.5 goals @ 1.02 · 97%
+34. 16:00 · Port Vale v Accrington (England - League Two) — Under 4.5 goals @ 1.05 · 91%
+35. 16:00 · Crewe v Newport County (England - League Two) — Under 5.5 goals @ 1.03 · 95%
+36. 16:00 · Bristol Rvs v Chesterfield (England - League Two) — Under 4.5 goals @ 1.11 · 85%
+37. 16:00 · Colchester v Gillingham (England - League Two) — Under 5.5 goals @ 1.03 · 96%
+38. 16:15 · Sociedad B v Sp Gijon (Spain - Segunda Division) — Under 4.5 goals @ 1.10 · 88%
+39. 18:00 · Norway v Wales (UEFA Nations League) — Under 5.5 goals @ 1.10 · 88%
+40. 18:30 · Fleetwood Town v Tranmere (England - League Two) — Under 4.5 goals @ 1.08 · 86%
+41. 18:30 · Mallorca v Cordoba (Spain - Segunda Division) — Under 5.5 goals @ 1.07 · 93%
+42. 20:45 · Romania v Poland (UEFA Nations League) — Under 5.5 goals @ 1.04 · 92%
+43. 20:45 · Austria v Republic of Ireland (UEFA Nations League) — Under 4.5 goals @ 1.12 · 87%
+44. 20:45 · Portugal v Denmark (UEFA Nations League) — Under 6.5 goals @ 1.04 · 95%
+45. 20:45 · Sweden v Bosnia and Herzegovina (UEFA Nations League) — Under 5.5 goals @ 1.06 · 90%
+46. 21:00 · Oviedo v Girona (Spain - Segunda Division) — Under 4.5 goals @ 1.09 · 89%
 
-**15 odds:** not enough safe bets today
+**15 odds — 49 matches, total 15.05, chance all win ≈ 1%**
+1. 13:30 · Exeter v Cheltenham (England - League Two) — Under 4.5 goals @ 1.07 · 91%
+2. 14:00 · Valladolid v Castellon (Spain - Segunda Division) — Under 5.5 goals @ 1.04 · 93%
+3. 15:00 · Kosovo v Israel (UEFA Nations League) — Under 5.5 goals @ 1.04 · 91%
+4. 16:00 · Scunthorpe v Worthing (England - National League) — Under 6.5 goals @ 1.04 · 93%
+5. 16:00 · Yeovil v Boreham Wood (England - National League) — Under 6.5 goals @ 1.03 · 96%
+6. 16:00 · Hartlepool v Wealdstone (England - National League) — Under 6.5 goals @ 1.02 · 97%
+7. 16:00 · Livingston v Morton (Scotland - Championship) — Under 5.5 goals @ 1.04 · 93%
+8. 16:00 · Partick v Inverness C (Scotland - Championship) — Under 4.5 goals @ 1.09 · 88%
+9. 16:00 · Stenhousemuir v Queens Park (Scotland - Championship) — Under 5.5 goals @ 1.02 · 96%
+10. 16:00 · Airdrie Utd v Queen of Sth (Scotland - League One) — Under 6.5 goals @ 1.02 · 97%
+11. 16:00 · East Kilbride v Alloa (Scotland - League One) — Under 5.5 goals @ 1.05 · 92%
+12. 16:00 · Southend v Aldershot (England - National League) — Under 5.5 goals @ 1.09 · 87%
+13. 16:00 · Cove Rangers v Montrose (Scotland - League One) — Under 5.5 goals @ 1.04 · 93%
+14. 16:00 · Dumbarton v Annan Athletic (Scotland - League Two) — Under 6.5 goals @ 1.02 · 98%
+15. 16:00 · Edinburgh City v Clyde (Scotland - League Two) — Under 5.5 goals @ 1.06 · 91%
+16. 16:00 · Forfar v Spartans (Scotland - League Two) — Under 4.5 goals @ 1.09 · 86%
+17. 16:00 · Kelty Hearts v Stranraer (Scotland - League Two) — Under 6.5 goals @ 1.02 · 97%
+18. 16:00 · Stirling v Elgin (Scotland - League Two) — Under 6.5 goals @ 1.02 · 95%
+19. 16:00 · East Fife v Peterhead (Scotland - League One) — Under 4.5 goals @ 1.08 · 88%
+20. 16:00 · Carlisle v Boston Utd (England - National League) — Under 5.5 goals @ 1.10 · 87%
+21. 16:00 · Kidderminster v Halifax (England - National League) — Under 4.5 goals @ 1.10 · 90%
+22. 16:00 · Eastleigh v Fylde (England - National League) — Under 5.5 goals @ 1.08 · 90%
+23. 16:00 · Doncaster v Leyton Orient (England - League One) — Under 4.5 goals @ 1.12 · 87%
+24. 16:00 · Stevenage v Mansfield (England - League One) — Under 4.5 goals @ 1.06 · 93%
+25. 16:00 · AFC Wimbledon v Blackpool (England - League One) — Under 4.5 goals @ 1.10 · 87%
+26. 16:00 · Milton Keynes Dons v Burton (England - League One) — Under 6.5 goals @ 1.02 · 97%
+27. 16:00 · Harrogate v Altrincham (England - National League) — Under 6.5 goals @ 1.02 · 96%
+28. 16:00 · Stockport v Reading (England - League One) — Under 6.5 goals @ 1.02 · 97%
+29. 16:00 · Wigan v Barnsley (England - League One) — Under 6.5 goals @ 1.02 · 97%
+30. 16:00 · Rochdale v York (England - League Two) — Under 6.5 goals @ 1.02 · 96%
+31. 16:00 · Sheffield Weds v Plymouth (England - League One) — Under 5.5 goals @ 1.04 · 91%
+32. 16:00 · Shrewsbury v Oldham (England - League Two) — Under 4.5 goals @ 1.07 · 89%
+33. 16:00 · Salford v Northampton (England - League Two) — Under 4.5 goals @ 1.08 · 91%
+34. 16:00 · Swindon v Grimsby (England - League Two) — Under 6.5 goals @ 1.02 · 97%
+35. 16:00 · Port Vale v Accrington (England - League Two) — Under 4.5 goals @ 1.05 · 91%
+36. 16:00 · Crewe v Newport County (England - League Two) — Under 4.5 goals @ 1.06 · 88%
+37. 16:00 · Colchester v Gillingham (England - League Two) — Under 4.5 goals @ 1.06 · 89%
+38. 16:00 · Bristol Rvs v Chesterfield (England - League Two) — Under 4.5 goals @ 1.11 · 85%
+39. 16:00 · Walsall v Barnet (England - League Two) — Under 6.5 goals @ 1.02 · 97%
+40. 16:15 · Sociedad B v Sp Gijon (Spain - Segunda Division) — Under 4.5 goals @ 1.10 · 88%
+41. 18:00 · Norway v Wales (UEFA Nations League) — Under 5.5 goals @ 1.10 · 88%
+42. 18:00 · Georgia v Hungary (UEFA Nations League) — Under 4.5 goals @ 1.04 · 90%
+43. 18:30 · Fleetwood Town v Tranmere (England - League Two) — Under 4.5 goals @ 1.08 · 86%
+44. 18:30 · Mallorca v Cordoba (Spain - Segunda Division) — Under 5.5 goals @ 1.07 · 93%
+45. 20:45 · Austria v Republic of Ireland (UEFA Nations League) — Under 4.5 goals @ 1.12 · 87%
+46. 20:45 · Portugal v Denmark (UEFA Nations League) — Under 5.5 goals @ 1.06 · 90%
+47. 20:45 · Sweden v Bosnia and Herzegovina (UEFA Nations League) — Under 5.5 goals @ 1.06 · 90%
+48. 20:45 · Romania v Poland (UEFA Nations League) — Under 5.5 goals @ 1.04 · 92%
+49. 21:00 · Oviedo v Girona (Spain - Segunda Division) — Under 4.5 goals @ 1.09 · 89%
 
 **20 odds:** not enough safe bets today
 
@@ -32,29 +273,13 @@ _Only Under 4.5, otherwise Under 5.5 or Under 6.5, at 85%+, or Over 1.5 / Over 0
 
 _Safest first. 💚 = 1xBet pays at least the fair minimum._
 
-### Friday 13 November (11 matches)
-
-1. 20:45 · **Andorra v Gibraltar** (UEFA Nations League) — Over/Under → Under 4.5 · 95% · 1xBet 1.02 
-2. 20:30 · **Leganes v Burgos** (Spain - Segunda Division) — Over/Under → Under 4.5 · 93% · 1xBet 1.05 
-3. 20:45 · **Luxembourg v Estonia** (UEFA Nations League) — Over/Under → Under 4.5 · 92% · 1xBet 1.03 
-4. 20:45 · **Scotland v North Macedonia** (UEFA Nations League) — Over/Under → Under 5.5 · 91% · 1xBet 1.06 
-5. 20:45 · **Slovenia v Switzerland** (UEFA Nations League) — Over/Under → Under 4.5 · 91% · 1xBet 1.04 
-6. 20:45 · **Netherlands v Greece** (UEFA Nations League) — Over/Under → Under 5.5 · 91% · 1xBet 1.06 
-7. 20:45 · **Liechtenstein v Azerbaijan** (UEFA Nations League) — Over/Under → Under 4.5 · 90% · 1xBet 1.05 
-8. 18:00 · **Moldova v Kazakhstan** (UEFA Nations League) — Over/Under → Under 4.5 · 89% · 1xBet 1.04 
-9. 20:45 · **Serbia v Germany** (UEFA Nations League) — Over/Under → Under 5.5 · 87% · 1xBet 1.10 
-10. 20:45 · **Bulgaria v Iceland** (UEFA Nations League) — Over/Under → Under 4.5 · 86% · 1xBet 1.09 
-11. 20:45 · **Slovakia v Faroe Islands** (UEFA Nations League) — Over/Under → Under 4.5 · 86% · 1xBet 1.12 
-
-🎟️ One ticket with the top matches — top 2: 88% @ 1.07 · top 3: 81% @ 1.10 · top 5: 68% @ 1.22 · top 8: 49% @ 1.41 · top 10: 37% @ 1.69
-
 ### Saturday 14 November (62 matches)
 
 1. 16:00 · **Dumbarton v Annan Athletic** (Scotland - League Two) — Over/Under → Under 5.5 · 93%
 2. 14:00 · **Valladolid v Castellon** (Spain - Segunda Division) — Over/Under → Under 5.5 · 93% · 1xBet 1.04 
 3. 16:00 · **Cove Rangers v Montrose** (Scotland - League One) — Over/Under → Under 5.5 · 93% · 1xBet 1.04 
 4. 16:00 · **Wycombe v Huddersfield** (England - League One) — Over/Under → Under 5.5 · 93%
-5. 16:00 · **Wigan v Barnsley** (England - League One) — Over/Under → Under 5.5 · 93% · 1xBet 1.03 
+5. 16:00 · **Wigan v Barnsley** (England - League One) — Over/Under → Under 5.5 · 93% · 1xBet 1.02 
 6. 16:00 · **Stevenage v Mansfield** (England - League One) — Over/Under → Under 4.5 · 93% · 1xBet 1.06 
 7. 16:00 · **Walsall v Barnet** (England - League Two) — Over/Under → Under 5.5 · 93% · 1xBet 1.02 
 8. 16:00 · **Hartlepool v Wealdstone** (England - National League) — Over/Under → Under 5.5 · 93%
@@ -77,7 +302,7 @@ _Safest first. 💚 = 1xBet pays at least the fair minimum._
 25. 20:45 · **Northern Ireland v Ukraine** (UEFA Nations League) — Over/Under → Under 4.5 · 91% · 1xBet 1.02 
 26. 16:00 · **Peterboro v Oxford** (England - League One) — Over/Under → Under 5.5 · 91%
 27. 16:00 · **Port Vale v Accrington** (England - League Two) — Over/Under → Under 4.5 · 91% · 1xBet 1.05 
-28. 15:00 · **Kosovo v Israel** (UEFA Nations League) — Over/Under → Under 5.5 · 91% · 1xBet 1.03 
+28. 15:00 · **Kosovo v Israel** (UEFA Nations League) — Over/Under → Under 5.5 · 91% · 1xBet 1.04 
 29. 16:00 · **Ayr v Raith Rvs** (Scotland - Championship) — Over/Under → Under 4.5 · 91% · 1xBet 1.02 
 30. 16:00 · **Edinburgh City v Clyde** (Scotland - League Two) — Over/Under → Under 5.5 · 91% · 1xBet 1.06 
 31. 13:30 · **Exeter v Cheltenham** (England - League Two) — Over/Under → Under 4.5 · 91% · 1xBet 1.07 
@@ -91,7 +316,7 @@ _Safest first. 💚 = 1xBet pays at least the fair minimum._
 39. 16:00 · **Harrogate v Altrincham** (England - National League) — Over/Under → Under 5.5 · 90% · 1xBet 1.04 
 40. 16:00 · **Kidderminster v Halifax** (England - National League) — Over/Under → Under 4.5 · 90% · 1xBet 1.10 
 41. 20:45 · **Sweden v Bosnia and Herzegovina** (UEFA Nations League) — Over/Under → Under 5.5 · 90% · 1xBet 1.06 
-42. 16:00 · **Stenhousemuir v Queens Park** (Scotland - Championship) — Over/Under → Under 4.5 · 89% · 1xBet 1.03 
+42. 16:00 · **Stenhousemuir v Queens Park** (Scotland - Championship) — Over/Under → Under 4.5 · 89% · 1xBet 1.04 
 43. 16:00 · **Stirling v Elgin** (Scotland - League Two) — Over/Under → Under 5.5 · 89% · 1xBet 1.01 
 44. 16:00 · **Colchester v Gillingham** (England - League Two) — Over/Under → Under 4.5 · 89% · 1xBet 1.06 
 45. 18:30 · **Almeria v Andorra** (Spain - Segunda Division) — Over/Under → Under 5.5 · 89%
@@ -126,26 +351,26 @@ _Safest first. 💚 = 1xBet pays at least the fair minimum._
 7. 14:00 · **Tenerife v Ceuta** (Spain - Segunda Division) — Over/Under → Under 4.5 · 90% · 1xBet 1.08 
 8. 18:30 · **Eibar v Cadiz** (Spain - Segunda Division) — Over/Under → Under 4.5 · 88% · 1xBet 1.15 
 9. 16:15 · **Granada v Las Palmas** (Spain - Segunda Division) — Over/Under → Under 4.5 · 88% · 1xBet 1.13 
-10. 15:00 · **Cyprus v Montenegro** (UEFA Nations League) — Over/Under → Under 4.5 · 86%
-11. 15:00 · **Latvia v Armenia** (UEFA Nations League) — Over/Under → Under 4.5 · 85%
+10. 15:00 · **Cyprus v Montenegro** (UEFA Nations League) — Over/Under → Under 4.5 · 86% · 1xBet 1.08 
+11. 15:00 · **Latvia v Armenia** (UEFA Nations League) — Over/Under → Under 4.5 · 85% · 1xBet 1.02 
 
-🎟️ One ticket with the top matches — top 2: 85% @ 1.07 · top 3: 77% @ 1.14 · top 5: 63% @ 1.22 · top 8: 45% @ 1.56 · top 10: 34%
+🎟️ One ticket with the top matches — top 2: 85% @ 1.07 · top 3: 77% @ 1.14 · top 5: 63% @ 1.22 · top 8: 45% @ 1.56 · top 10: 34% @ 1.90
 
 ### Monday 16 November (11 matches)
 
-1. 20:45 · **North Macedonia v Slovenia** (UEFA Nations League) — Over/Under → Under 4.5 · 91%
-2. 20:30 · **Albacete v Celta B** (Spain - Segunda Division) — Over/Under → Under 5.5 · 91%
+1. 20:45 · **North Macedonia v Slovenia** (UEFA Nations League) — Over/Under → Under 4.5 · 91% · 1xBet 1.03 
+2. 20:30 · **Albacete v Celta B** (Spain - Segunda Division) — Over/Under → Under 5.5 · 91% · 1xBet 1.08 
 3. 18:00 · **Lithuania v Liechtenstein** (UEFA Nations League) — Over/Under → Under 4.5 · 90%
 4. 20:45 · **Gibraltar v Malta** (UEFA Nations League) — Over/Under → Under 4.5 · 89%
 5. 18:00 · **Estonia v Bulgaria** (UEFA Nations League) — Over/Under → Under 4.5 · 89%
 6. 16:00 · **Faroe Islands v Moldova** (UEFA Nations League) — Over/Under → Under 4.5 · 89%
 7. 20:45 · **Switzerland v Scotland** (UEFA Nations League) — Over/Under → Under 5.5 · 89%
-8. 20:45 · **Germany v Netherlands** (UEFA Nations League) — Over/Under → Under 5.5 · 87%
-9. 20:45 · **Greece v Serbia** (UEFA Nations League) — Over/Under → Under 4.5 · 86%
+8. 20:45 · **Germany v Netherlands** (UEFA Nations League) — Over/Under → Under 5.5 · 87% · 1xBet 1.07 
+9. 20:45 · **Greece v Serbia** (UEFA Nations League) — Over/Under → Under 4.5 · 86% · 1xBet 1.18 
 10. 16:00 · **Kazakhstan v Slovakia** (UEFA Nations League) — Over/Under → Under 4.5 · 85%
 11. 18:00 · **Iceland v Luxembourg** (UEFA Nations League) — Over/Under → Under 4.5 · 85%
 
-🎟️ One ticket with the top matches — top 2: 83% · top 3: 75% · top 5: 59% · top 8: 41% · top 10: 30%
+🎟️ One ticket with the top matches — top 2: 83% @ 1.11 · top 3: 75% · top 5: 59% · top 8: 41% · top 10: 30%
 
 ### Tuesday 17 November (8 matches)
 
@@ -160,18 +385,23 @@ _Safest first. 💚 = 1xBet pays at least the fair minimum._
 
 🎟️ One ticket with the top matches — top 2: 83% · top 3: 75% · top 5: 61% · top 8: 40%
 
+### Friday 20 November (9 matches)
+
+1. 20:30 · **Bayern Munich v FC Koln** (Germany - Bundesliga) — Over/Under → Over 0.5 · 98%
+2. 20:00 · **Nancy v Dijon** (France - Ligue 2) — Over/Under → Under 5.5 · 92%
+3. 20:00 · **Annecy v Clermont** (France - Ligue 2) — Over/Under → Under 4.5 · 92%
+4. 20:00 · **Guingamp v Rodez** (France - Ligue 2) — Over/Under → Under 5.5 · 91%
+5. 21:00 · **Barnsley v Sheffield Weds** (England - League One) — Over/Under → Under 5.5 · 90%
+6. 20:45 · **Troyes v Le Havre** (France - Ligue 1) — Over/Under → Under 4.5 · 90%
+7. 21:00 · **Ath Bilbao v Espanol** (Spain - La Liga) — Over/Under → Under 4.5 · 90%
+8. 20:00 · **Metz v Boulogne** (France - Ligue 2) — Over/Under → Under 4.5 · 89%
+9. 20:00 · **Red Star v Pau FC** (France - Ligue 2) — Over/Under → Under 4.5 · 86%
+
+🎟️ One ticket with the top matches — top 2: 91% · top 3: 83% · top 5: 69% · top 8: 49%
+
 ## ✅ Your bets for each day (already checked - just place them)
 
 _Only 85%+ picks, backed by bookmaker odds (or 88%+ without), with no key player missing for the team you back. Skip a bet if your odds are lower than the number shown._
-
-### Friday 13 November
-
-1. 20:45 · **Liechtenstein v Azerbaijan** (UEFA Nations League)  
-   ✅ **BET: Double Chance → X2 (Azerbaijan or draw)** — only if odds are **1.13+** (91% chance)
-2. 20:45 · **Scotland v North Macedonia** (UEFA Nations League)  
-   ✅ **BET: Double Chance → 1X (Scotland or draw)** — only if odds are **1.18+** (88% chance)
-
-🎟️ All 2 on one ticket: all 2 win about **80%** of the time (lose about 20%). Take it only if the ticket's total odds are at least **1.32**. In testing on 472 past match days, the top-2 ticket won on 83% of days - it still lost about 1 day in 6.
 
 ### Saturday 14 November
 
@@ -193,18 +423,16 @@ _Only 85%+ picks, backed by bookmaker odds (or 88%+ without), with no key player
 
 ### Monday 16 November
 
-1. 20:45 · **North Macedonia v Slovenia** (UEFA Nations League)  
-   ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.13+** (91% chance)
-2. 18:00 · **Lithuania v Liechtenstein** (UEFA Nations League)  
+1. 18:00 · **Lithuania v Liechtenstein** (UEFA Nations League)  
    ✅ **BET: Double Chance → 1X (Lithuania or draw)** — only if odds are **1.14+** (90% chance)
-3. 20:45 · **Gibraltar v Malta** (UEFA Nations League)  
+2. 20:45 · **Gibraltar v Malta** (UEFA Nations League)  
    ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.15+** (89% chance)
-4. 18:00 · **Estonia v Bulgaria** (UEFA Nations League)  
+3. 18:00 · **Estonia v Bulgaria** (UEFA Nations League)  
    ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.15+** (89% chance)
-5. 16:00 · **Faroe Islands v Moldova** (UEFA Nations League)  
+4. 16:00 · **Faroe Islands v Moldova** (UEFA Nations League)  
    ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.15+** (89% chance)
 
-🎟️ All 5 on one ticket: all 5 win about **59%** of the time (lose about 41%). Take it only if the ticket's total odds are at least **1.98**. A 2-pick ticket (#1 + #2) wins about 82%. In testing on 472 past match days, the top-5 ticket won on 67% of days - it still lost about 1 day in 3.
+🎟️ All 4 on one ticket: all 4 win about **64%** of the time (lose about 36%). Take it only if the ticket's total odds are at least **1.75**. A 2-pick ticket (#1 + #2) wins about 80%. In testing on 472 past match days, the top-4 ticket won on 72% of days - it still lost about 1 day in 4.
 
 ### Tuesday 17 November
 
@@ -217,23 +445,24 @@ _Only 85%+ picks, backed by bookmaker odds (or 88%+ without), with no key player
 
 🎟️ All 3 on one ticket: all 3 win about **70%** of the time (lose about 30%). Take it only if the ticket's total odds are at least **1.56**. A 2-pick ticket (#1 + #2) wins about 82%. In testing on 472 past match days, the top-3 ticket won on 79% of days - it still lost about 1 day in 5.
 
+### Friday 20 November
+
+1. 20:00 · **Annecy v Clermont** (France - Ligue 2)  
+   ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.12+** (92% chance)
+2. 20:30 · **Bayern Munich v FC Koln** (Germany - Bundesliga)  
+   ✅ **BET: Double Chance → 12 (no draw)** — only if odds are **1.14+** (90% chance)
+3. 20:45 · **Troyes v Le Havre** (France - Ligue 1)  
+   ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.14+** (90% chance)
+4. 21:00 · **Ath Bilbao v Espanol** (Spain - La Liga)  
+   ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.15+** (90% chance)
+5. 20:00 · **Metz v Boulogne** (France - Ligue 2)  
+   ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.16+** (89% chance)
+
+🎟️ All 5 on one ticket: all 5 win about **59%** of the time (lose about 41%). Take it only if the ticket's total odds are at least **1.95**. A 2-pick ticket (#1 + #2) wins about 83%. In testing on 472 past match days, the top-5 ticket won on 67% of days - it still lost about 1 day in 3.
+
 ## 📋 Every match: what to bet (whatever the odds)
 
 _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
-
-### Friday 13 November (11 matches)
-
-- ✅ 20:45 · **Liechtenstein v Azerbaijan** (UEFA Nations League) — BET: Double Chance → X2 (Azerbaijan or draw) · 91%
-- ⚠️ 20:45 · **Slovenia v Switzerland** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 91% · 1xBet 1.04
-- ⚠️ 18:00 · **Moldova v Kazakhstan** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 89% · 1xBet 1.04
-- ⚠️ 20:45 · **Slovakia v Faroe Islands** (UEFA Nations League) — BET: Double Chance → 1X (Slovakia or draw) · 89% · 1xBet 1.08
-- ⚠️ 20:45 · **Andorra v Gibraltar** (UEFA Nations League) — BET: Over/Under (total goals) → Under 3.5 · 88% · 1xBet 1.09
-- ✅ 20:45 · **Scotland v North Macedonia** (UEFA Nations League) — BET: Double Chance → 1X (Scotland or draw) · 88%
-- ⚠️ 20:45 · **Serbia v Germany** (UEFA Nations League) — BET: Germany total goals → Over 0.5 · 87% · 1xBet 1.01
-- ⚠️ 20:45 · **Bulgaria v Iceland** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 86% · 1xBet 1.09
-- ⚠️ 20:45 · **Netherlands v Greece** (UEFA Nations League) — BET: Netherlands total goals → Over 0.5 · 85% · 1xBet 1.10
-- ⚠️ 20:45 · **Luxembourg v Estonia** (UEFA Nations League) — BET: Over/Under (total goals) → Under 3.5 · 83% · 1xBet 1.15
-- ⚠️ 20:30 · **Leganes v Burgos** (Spain - Segunda Division) — BET: Over/Under (total goals) → Under 3.5 · 82% · 1xBet 1.24
 
 ### Saturday 14 November (62 matches)
 
@@ -247,7 +476,7 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 - ✅ 16:00 · **Leicester v Bradford** (England - League One) — BET: Over/Under (total goals) → Under 4.5 · 90%
 - ⚠️ 16:00 · **Carlisle v Boston Utd** (England - National League) — BET: Carlisle total goals → Over 0.5 · 90% · 1xBet 1.04
 - ⚠️ 16:00 · **Kidderminster v Halifax** (England - National League) — BET: Over/Under (total goals) → Under 4.5 · 90% · 1xBet 1.10
-- ⚠️ 16:00 · **Stenhousemuir v Queens Park** (Scotland - Championship) — BET: Over/Under (total goals) → Under 4.5 · 89% · 1xBet 1.03
+- ⚠️ 16:00 · **Stenhousemuir v Queens Park** (Scotland - Championship) — BET: Over/Under (total goals) → Under 4.5 · 89% · 1xBet 1.04
 - ⚠️ 16:00 · **Colchester v Gillingham** (England - League Two) — BET: Over/Under (total goals) → Under 4.5 · 89% · 1xBet 1.06
 - ⚠️ 21:00 · **Oviedo v Girona** (Spain - Segunda Division) — BET: Over/Under (total goals) → Under 4.5 · 89% · 1xBet 1.09
 - ⚠️ 16:00 · **Shrewsbury v Oldham** (England - League Two) — BET: Over/Under (total goals) → Under 4.5 · 89% · 1xBet 1.07
@@ -265,7 +494,7 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 - ⚠️ 16:00 · **Harrogate v Altrincham** (England - National League) — BET: Harrogate total goals → Over 0.5 · 87% · 1xBet 1.09
 - ⚠️ 18:30 · **Fleetwood Town v Tranmere** (England - League Two) — BET: Over/Under (total goals) → Under 4.5 · 86% · 1xBet 1.08
 - ⚠️ 16:00 · **Scunthorpe v Worthing** (England - National League) — BET: Over/Under (total goals) → Over 1.5 · 86% · 1xBet 1.08
-- ⚠️ 20:45 · **Sweden v Bosnia and Herzegovina** (UEFA Nations League) — BET: Sweden total goals → Over 0.5 · 86% · 1xBet 1.08
+- ⚠️ 20:45 · **Sweden v Bosnia and Herzegovina** (UEFA Nations League) — BET: Sweden total goals → Over 0.5 · 86% · 1xBet 1.05
 - ⚠️ 16:00 · **Forfar v Spartans** (Scotland - League Two) — BET: Over/Under (total goals) → Under 4.5 · 86% · 1xBet 1.09
 - ⚠️ 16:00 · **Rochdale v York** (England - League Two) — BET: York total goals → Over 0.5 · 86% · 1xBet 1.10
 - ⚠️ 16:00 · **Yeovil v Boreham Wood** (England - National League) — BET: Boreham Wood total goals → Over 0.5 · 86% · 1xBet 1.07
@@ -273,15 +502,15 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 - ⚠️ 16:00 · **Bristol Rvs v Chesterfield** (England - League Two) — BET: Over/Under (total goals) → Under 4.5 · 85% · 1xBet 1.11
 - ⚠️ 16:00 · **Gateshead v Barrow** (England - National League) — BET: Barrow total goals → Over 0.5 · 85% · 1xBet 1.04
 - ⚠️ 16:00 · **Luton v Cambridge** (England - League One) — BET: Luton total goals → Over 0.5 · 85%
-- ⚠️ 20:45 · **Portugal v Denmark** (UEFA Nations League) — BET: Portugal total goals → Over 0.5 · 85% · 1xBet 1.07
+- ⚠️ 20:45 · **Portugal v Denmark** (UEFA Nations League) — BET: Portugal total goals → Over 0.5 · 85% · 1xBet 1.03
 - ⚠️ 16:00 · **Dumbarton v Annan Athletic** (Scotland - League Two) — BET: Over/Under (total goals) → Under 4.5 · 85% · 1xBet 1.13
 - ⚠️ 14:00 · **Valladolid v Castellon** (Spain - Segunda Division) — BET: Over/Under (total goals) → Under 4.5 · 84% · 1xBet 1.17
 - ⚠️ 16:00 · **Cove Rangers v Montrose** (Scotland - League One) — BET: Over/Under (total goals) → Under 4.5 · 84% · 1xBet 1.08
 - ⚠️ 16:00 · **Wycombe v Huddersfield** (England - League One) — BET: Over/Under (total goals) → Under 4.5 · 84% · 1xBet 1.12
-- ⚠️ 16:00 · **Wigan v Barnsley** (England - League One) — BET: Over/Under (total goals) → Under 4.5 · 84% · 1xBet 1.17
+- ⚠️ 16:00 · **Wigan v Barnsley** (England - League One) — BET: Over/Under (total goals) → Under 4.5 · 84% · 1xBet 1.16
 - ⚠️ 16:00 · **Milton Keynes Dons v Burton** (England - League One) — BET: Milton Keynes Dons total goals → Over 0.5 · 84% · 1xBet 1.07
 - ⚠️ 16:00 · **Walsall v Barnet** (England - League Two) — BET: Over/Under (total goals) → Under 4.5 · 84% · 1xBet 1.14
-- ⚠️ 20:45 · **Romania v Poland** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 84% · 1xBet 1.14
+- ⚠️ 20:45 · **Romania v Poland** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 84% · 1xBet 1.13
 - ⚠️ 16:00 · **Stirling v Elgin** (Scotland - League Two) — BET: Over/Under (total goals) → Over 1.5 · 84% · 1xBet 1.13
 - ⚠️ 16:00 · **East Kilbride v Alloa** (Scotland - League One) — BET: East Kilbride total goals → Over 0.5 · 84% · 1xBet 1.07
 - ⚠️ 16:00 · **Hartlepool v Wealdstone** (England - National League) — BET: Over/Under (total goals) → Under 4.5 · 83% · 1xBet 1.12
@@ -308,26 +537,26 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 - ✅ 18:00 · **Finland v San Marino** (UEFA Nations League) — BET: Over/Under (total goals) → Over 1.5 · 89%
 - ⚠️ 18:30 · **Eibar v Cadiz** (Spain - Segunda Division) — BET: Over/Under (total goals) → Under 4.5 · 88% · 1xBet 1.15
 - ⚠️ 16:15 · **Granada v Las Palmas** (Spain - Segunda Division) — BET: Over/Under (total goals) → Under 4.5 · 88% · 1xBet 1.13
-- ⚠️ 15:00 · **Cyprus v Montenegro** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 86%
-- ⚠️ 15:00 · **Latvia v Armenia** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 85%
+- ⚠️ 15:00 · **Cyprus v Montenegro** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 86% · 1xBet 1.08
+- ⚠️ 15:00 · **Latvia v Armenia** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 85% · 1xBet 1.02
 - ⚠️ 20:45 · **Croatia v Czech Republic** (UEFA Nations League) — BET: Croatia total goals → Over 0.5 · 85% · 1xBet 1.06
 - ⚠️ 18:30 · **Eldense v Sabadell** (Spain - Segunda Division) — BET: Over/Under (total goals) → Under 3.5 · 83% · 1xBet 1.19
 - ⚠️ 20:45 · **Spain v England** (UEFA Nations League) — BET: Spain total goals → Over 0.5 · 82% · 1xBet 1.08
-- ⚠️ 20:45 · **Belgium v Italy** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 82% · 1xBet 1.15
+- ⚠️ 20:45 · **Belgium v Italy** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 82% · 1xBet 1.16
 
 ### Monday 16 November (11 matches)
 
-- ✅ 20:45 · **North Macedonia v Slovenia** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 91%
+- ⚠️ 20:45 · **North Macedonia v Slovenia** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 91% · 1xBet 1.03
 - ✅ 18:00 · **Lithuania v Liechtenstein** (UEFA Nations League) — BET: Double Chance → 1X (Lithuania or draw) · 90%
 - ✅ 20:45 · **Gibraltar v Malta** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 89%
 - ✅ 18:00 · **Estonia v Bulgaria** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 89%
 - ✅ 16:00 · **Faroe Islands v Moldova** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 89%
-- ✅ 20:45 · **Greece v Serbia** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 86%
-- ✅ 20:30 · **Albacete v Celta B** (Spain - Segunda Division) — BET: Albacete total goals → Over 0.5 · 85%
+- ⚠️ 20:45 · **Greece v Serbia** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 86% · 1xBet 1.18
+- ⚠️ 20:30 · **Albacete v Celta B** (Spain - Segunda Division) — BET: Albacete total goals → Over 0.5 · 85% · 1xBet 1.05
 - ⚠️ 16:00 · **Kazakhstan v Slovakia** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 85%
 - ⚠️ 18:00 · **Iceland v Luxembourg** (UEFA Nations League) — BET: Over/Under (total goals) → Under 4.5 · 85%
-- ⚠️ 20:45 · **Switzerland v Scotland** (UEFA Nations League) — BET: Switzerland total goals → Over 0.5 · 85%
-- ⚠️ 20:45 · **Germany v Netherlands** (UEFA Nations League) — BET: Germany total goals → Over 0.5 · 84%
+- ⚠️ 20:45 · **Switzerland v Scotland** (UEFA Nations League) — BET: Switzerland total goals → Over 0.5 · 85% · 1xBet 1.07
+- ⚠️ 20:45 · **Germany v Netherlands** (UEFA Nations League) — BET: Germany total goals → Over 0.5 · 84% · 1xBet 1.08
 
 ### Tuesday 17 November (8 matches)
 
@@ -340,7 +569,35 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 - ⚠️ 20:45 · **Denmark v Norway** (UEFA Nations League) — BET: Over/Under (total goals) → Over 1.5 · 80%
 - ⚠️ 20:45 · **Poland v Sweden** (UEFA Nations League) — BET: Over/Under (total goals) → Over 1.5 · 79%
 
+### Friday 20 November (9 matches)
+
+- ✅ 20:00 · **Annecy v Clermont** (France - Ligue 2) — BET: Over/Under (total goals) → Under 4.5 · 92%
+- ✅ 20:30 · **Bayern Munich v FC Koln** (Germany - Bundesliga) — BET: Double Chance → 12 (no draw) · 90%
+- ✅ 20:45 · **Troyes v Le Havre** (France - Ligue 1) — BET: Over/Under (total goals) → Under 4.5 · 90%
+- ✅ 21:00 · **Ath Bilbao v Espanol** (Spain - La Liga) — BET: Over/Under (total goals) → Under 4.5 · 90%
+- ✅ 20:00 · **Metz v Boulogne** (France - Ligue 2) — BET: Over/Under (total goals) → Under 4.5 · 89%
+- ⚠️ 20:00 · **Red Star v Pau FC** (France - Ligue 2) — BET: Over/Under (total goals) → Under 4.5 · 86%
+- ⚠️ 20:00 · **Nancy v Dijon** (France - Ligue 2) — BET: Over/Under (total goals) → Under 4.5 · 82%
+- ⚠️ 21:00 · **Barnsley v Sheffield Weds** (England - League One) — BET: Over/Under (total goals) → Over 1.5 · 82%
+- ⚠️ 20:00 · **Guingamp v Rodez** (France - Ligue 2) — BET: Guingamp total goals → Over 0.5 · 81%
+
 ## 🧾 Results of the last days (bets given before kick-off)
+
+### Friday 13 November
+
+⏳ No finished results for this day yet.
+
+- ✅ 20:45 · **Liechtenstein v Azerbaijan** — Double Chance → X2 (Azerbaijan or draw) (91%) → ⏳ playing / waiting for result
+- ⚠️ 20:45 · **Slovenia v Switzerland** — Over/Under (total goals) → Under 4.5 (91%) → ⏳ playing / waiting for result
+- ⚠️ 18:00 · **Moldova v Kazakhstan** — Over/Under (total goals) → Under 4.5 (90%) → ⏳ playing / waiting for result
+- ⚠️ 20:45 · **Slovakia v Faroe Islands** — Double Chance → 1X (Slovakia or draw) (89%) → ⏳ playing / waiting for result
+- ⚠️ 20:45 · **Andorra v Gibraltar** — Over/Under (total goals) → Under 3.5 (88%) → ⏳ playing / waiting for result
+- ✅ 20:45 · **Scotland v North Macedonia** — Double Chance → 1X (Scotland or draw) (88%) → ⏳ playing / waiting for result
+- ⚠️ 20:45 · **Serbia v Germany** — Germany total goals → Over 0.5 (87%) → ⏳ playing / waiting for result
+- ⚠️ 20:45 · **Bulgaria v Iceland** — Over/Under (total goals) → Under 4.5 (86%) → ⏳ playing / waiting for result
+- ⚠️ 20:45 · **Netherlands v Greece** — Netherlands total goals → Over 0.5 (85%) → ⏳ playing / waiting for result
+- ⚠️ 20:45 · **Luxembourg v Estonia** — Over/Under (total goals) → Under 3.5 (83%) → ⏳ playing / waiting for result
+- ⚠️ 20:30 · **Leganes v Burgos** — Over/Under (total goals) → Under 3.5 (82%) → ⏳ playing / waiting for result
 
 ### Thursday 12 November
 
@@ -357,7 +614,7 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 
 ## 📈 Live track record of best picks
 
-**896 of 1041 best picks won (86%)** · ✅ 'Your bets' (passed all checks): 25/27 (93%) · 🔒+⭐⭐⭐ picks: 290/327 (89%) · 122 waiting for results
+**896 of 1041 best picks won (86%)** · ✅ 'Your bets' (passed all checks): 25/27 (93%) · 🔒+⭐⭐⭐ picks: 290/327 (89%) · 131 waiting for results
 Banker 119/134 (89%) · Strong 171/193 (89%) · Good 292/335 (87%) · Fair 314/379 (83%)
 
 **🛡️ Rules for low-odds betting (read every time)**
@@ -374,10 +631,6 @@ No bets this week - the prices are fair. That is normal.
 
 ## 🎯 Strongest best picks (🔒 Banker + ⭐⭐⭐ Strong, same safety checks as 'Your bets'; won ~91% in testing)
 
-**Friday 13 November**
-- 20:45 · **Liechtenstein v Azerbaijan** (UEFA Nations League) — 🔒 Azerbaijan or draw · 91% · bet at 1.13+  
-  📝 Open the 'Double chance' market and choose 'X2' (Azerbaijan or draw). You WIN if Azerbaijan wins OR it is a draw. You LOSE only if Liechtenstein wins. Only place it if your bookmaker's odds for this choice are 1.13 or higher.
-
 **Saturday 14 November**
 - 16:00 · **Leicester v Bradford** (England - League One) — ⭐⭐⭐ Under 4.5 goals · 90% · bet at 1.15+  
   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.15 or higher.
@@ -389,8 +642,6 @@ No bets this week - the prices are fair. That is normal.
   📝 Open the 'Total goals' (Over/Under) market and choose 'Over 1.5'. You WIN if the match has 2 or more goals in total (both teams added together). You LOSE if it has 0 or 1 goal. Only place it if your bookmaker's odds for this choice are 1.15 or higher.
 
 **Monday 16 November**
-- 20:45 · **North Macedonia v Slovenia** (UEFA Nations League) — 🔒 Under 4.5 goals · 91% · bet at 1.13+  
-  📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.13 or higher.
 - 18:00 · **Lithuania v Liechtenstein** (UEFA Nations League) — 🔒 Lithuania or draw · 90% · bet at 1.14+  
   📝 Open the 'Double chance' market and choose '1X' (Lithuania or draw). You WIN if Lithuania wins OR it is a draw. You LOSE only if Liechtenstein wins. Only place it if your bookmaker's odds for this choice are 1.14 or higher.
 - 20:45 · **Gibraltar v Malta** (UEFA Nations League) — ⭐⭐⭐ Under 4.5 goals · 89% · bet at 1.15+  
@@ -406,23 +657,19 @@ No bets this week - the prices are fair. That is normal.
 - 20:45 · **Republic of Ireland v Kosovo** (UEFA Nations League) — 🔒 Under 4.5 goals · 90% · bet at 1.14+  
   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.14 or higher.
 
+**Friday 20 November**
+- 20:00 · **Annecy v Clermont** (France - Ligue 2) — 🔒 Under 4.5 goals · 92% · bet at 1.12+  
+  📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.12 or higher.
+- 20:30 · **Bayern Munich v FC Koln** (Germany - Bundesliga) — 🔒 Bayern Munich or FC Koln (no draw) · 90% · bet at 1.14+  
+  📝 Open the 'Double chance' market and choose '12' (either team wins). You WIN if Bayern Munich wins OR FC Koln wins - it does not matter which. You LOSE only if the match is a draw. Only place it if your bookmaker's odds for this choice are 1.14 or higher.
+- 20:45 · **Troyes v Le Havre** (France - Ligue 1) — 🔒 Under 4.5 goals · 90% · bet at 1.14+  
+  📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.14 or higher.
+- 21:00 · **Ath Bilbao v Espanol** (Spain - La Liga) — ⭐⭐⭐ Under 4.5 goals · 90% · bet at 1.15+  
+  📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.15 or higher.
+- 20:00 · **Metz v Boulogne** (France - Ligue 2) — ⭐⭐⭐ Under 4.5 goals · 89% · bet at 1.16+  
+  📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.16 or higher.
+
 ## 📅 Every match, day by day
-
-### Friday 13 November (11 matches)
-
-| Time | Competition | Match | Advice | Stake | 🎯 Best pick | Predicted | H / D / A % | Over 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 / 6.5 % | Under 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 / 6.5 % |
-|---|---|---|---|---|---|---|---|---|---|
-| 18:00 | UEFA Nations League | Moldova v Kazakhstan | Bookmakers: Moldova 2.52 · draw 2.92 · Kazakhstan 2.95. Model: back Kazakhstan only at 2.44+ | - | ⭐⭐⭐ Under 4.5 goals · 89% · bet at 1.15+ | 0-1 | 30 / 28 / 42 | 91 / 71 / 44 / 23 / 10 / 4 / 1 | 9 / 29 / 56 / 77 / 90 / 96 / 99 |
-| 20:30 | Spain - Segunda Division | Leganes v Burgos | NO BET (model not profitable in this league) | - | ⭐ Under 3.5 goals · 82% · bet at 1.26+ | 0-1 | 34 / 30 / 36 | 87 / 60 / 33 / 15 / 6 / 2 / 1 | 13 / 40 / 67 / 85 / 94 / 98 / 99 |
-| 20:45 | UEFA Nations League | Serbia v Germany | Bookmakers: Serbia 10.23 · draw 6.38 · Germany 1.25. Model: back Germany only at 2.01+ | - | ⭐⭐ Germany to score · 87% · bet at 1.18+ | 1-2 | 25 / 24 / 51 | 95 / 82 / 60 / 38 / 20 / 10 / 4 | 5 / 18 / 40 / 62 / 80 / 90 / 96 |
-| 20:45 | UEFA Nations League | Andorra v Gibraltar | Bookmakers: Andorra 1.65 · draw 3.20 · Gibraltar 6.05. Model: back Andorra only at 2.44+ | - | ⭐⭐⭐ Under 3.5 goals · 88% · bet at 1.16+ | 1-0 | 42 / 37 / 21 | 78 / 46 / 20 / 7 / 2 / 0 / 0 | 22 / 54 / 80 / 93 / 98 / 100 / 100 |
-| 20:45 | UEFA Nations League | Slovenia v Switzerland | Bookmakers: Slovenia 5.75 · draw 3.40 · Switzerland 1.68. Model: back Switzerland only at 2.16+ | - | 🔒 Under 4.5 goals · 91% · bet at 1.13+ | 0-1 | 24 / 29 / 48 | 89 / 66 / 39 / 19 / 8 / 3 / 1 | 11 / 34 / 61 / 81 / 92 / 97 / 99 |
-| 20:45 | UEFA Nations League | Scotland v North Macedonia | Bookmakers: Scotland 1.17 · draw 7.10 · North Macedonia 15.50. Model: back Scotland only at 1.72+ | - | ⭐⭐ Scotland or draw · 88% · bet at 1.18+ | 1-0 | 60 / 24 / 16 | 92 / 73 / 47 / 25 / 12 / 5 / 2 | 8 / 27 / 53 / 75 / 88 / 95 / 98 |
-| 20:45 | UEFA Nations League | Netherlands v Greece | Bookmakers: Netherlands 1.56 · draw 4.40 · Greece 5.30. Model: back Netherlands only at 1.64+ | - | ⭐ Netherlands to score · 85% · bet at 1.21+ | 1-0 | 63 / 22 / 15 | 93 / 76 / 51 / 29 / 14 / 6 / 2 | 7 / 24 / 49 / 71 / 86 / 94 / 98 |
-| 20:45 | UEFA Nations League | Slovakia v Faroe Islands | Bookmakers: Slovakia 1.34 · draw 4.72 · Faroe Islands 8.80. Model: back Slovakia only at 1.44+ | - | ⭐⭐⭐ Slovakia or draw · 89% · bet at 1.16+ | 2-0 | 72 / 20 / 9 | 92 / 73 / 47 / 26 / 12 / 5 / 2 | 8 / 27 / 53 / 74 / 88 / 95 / 98 |
-| 20:45 | UEFA Nations League | Bulgaria v Iceland | Bookmakers: Bulgaria 4.70 · draw 3.56 · Iceland 1.71. Model: back Iceland only at 2.38+ | - | ⭐⭐ Under 4.5 goals · 86% · bet at 1.19+ | 0-1 | 30 / 27 / 43 | 92 / 75 / 50 / 28 / 13 / 5 / 2 | 8 / 25 / 50 / 72 / 87 / 95 / 98 |
-| 20:45 | UEFA Nations League | Luxembourg v Estonia | Bookmakers: Luxembourg 2.50 · draw 2.98 · Estonia 2.91. Model: back Luxembourg only at 2.56+ | - | ⭐ Under 3.5 goals · 83% · bet at 1.24+ | 1-0 | 40 / 32 / 27 | 85 / 58 / 30 / 13 / 5 / 1 / 0 | 15 / 42 / 70 / 87 / 95 / 99 / 100 |
-| 20:45 | UEFA Nations League | Liechtenstein v Azerbaijan | Bookmakers: Liechtenstein 17.70 · draw 5.70 · Azerbaijan 1.19. Model: back Azerbaijan only at 1.53+ | - | 🔒 Azerbaijan or draw · 91% · bet at 1.13+ | 0-1 | 9 / 24 / 68 | 88 / 63 / 36 / 17 / 6 / 2 / 1 | 12 / 37 / 64 / 83 / 94 / 98 / 99 |
 
 ### Saturday 14 November (62 matches)
 
@@ -536,6 +783,20 @@ No bets this week - the prices are fair. That is normal.
 | 20:45 | UEFA Nations League | Israel v Austria | No odds feed: back Austria only at 1.94+ | - | ⭐ Austria to score · 84% · bet at 1.23+ | 1-2 | 24 / 22 / 53 | 96 / 85 / 64 / 42 / 24 / 12 / 5 | 4 / 15 / 36 / 58 / 76 / 88 / 95 |
 | 20:45 | UEFA Nations League | Ukraine v Georgia | No odds feed: back Ukraine only at 1.93+ | - | ⭐ Under 4.5 goals · 84% · bet at 1.23+ | 1-0 | 53 / 25 / 21 | 93 / 75 / 50 / 28 / 13 / 5 / 2 | 7 / 25 / 50 / 72 / 87 / 95 / 98 |
 | 20:45 | UEFA Nations League | Republic of Ireland v Kosovo | No odds feed: back Republic of Ireland only at 2.32+ | - | 🔒 Under 4.5 goals · 90% · bet at 1.14+ | 1-0 | 44 / 30 / 25 | 87 / 63 / 35 / 16 / 6 / 2 / 1 | 13 / 37 / 65 / 84 / 94 / 98 / 99 |
+
+### Friday 20 November (9 matches)
+
+| Time | Competition | Match | Advice | Stake | 🎯 Best pick | Predicted | H / D / A % | Over 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 / 6.5 % | Under 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 / 6.5 % |
+|---|---|---|---|---|---|---|---|---|---|
+| 20:00 | France - Ligue 2 | Metz v Boulogne | NO BET (model not profitable in this league) | - | ⭐⭐⭐ Under 4.5 goals · 89% · bet at 1.16+ | 1-0 | 48 / 26 / 26 | 92 / 72 / 47 / 25 / 11 / 4 / 2 | 8 / 28 / 53 / 75 / 89 / 96 / 98 |
+| 20:00 | France - Ligue 2 | Guingamp v Rodez | NO BET (model not profitable in this league) | - | ⭐ Guingamp to score · 81% · bet at 1.27+ | 2-1 | 46 / 24 / 31 | 95 / 80 / 58 / 36 / 19 / 9 / 3 | 5 / 20 / 42 / 64 / 81 / 91 / 97 |
+| 20:00 | France - Ligue 2 | Annecy v Clermont | NO BET (model not profitable in this league) | - | 🔒 Under 4.5 goals · 92% · bet at 1.12+ | 1-0 | 49 / 27 / 24 | 90 / 66 / 40 / 20 / 8 / 3 / 1 | 10 / 34 / 60 / 80 / 92 / 97 / 99 |
+| 20:00 | France - Ligue 2 | Nancy v Dijon | NO BET (model not profitable in this league) | - | ⭐ Under 4.5 goals · 82% · bet at 1.25+ | 2-1 | 40 / 24 / 35 | 95 / 79 / 57 / 34 / 18 / 8 / 3 | 5 / 21 / 43 / 66 / 82 / 92 / 97 |
+| 20:00 | France - Ligue 2 | Red Star v Pau FC | NO BET (model not profitable in this league) | - | ⭐⭐ Under 4.5 goals · 86% · bet at 1.20+ | 1-0 | 45 / 25 / 30 | 94 / 76 / 52 / 30 / 14 / 6 / 2 | 6 / 24 / 48 / 70 / 86 / 94 / 98 |
+| 20:30 | Germany - Bundesliga | Bayern Munich v FC Koln | NO BET (model not profitable in this league) | - | 🔒 Bayern Munich or FC Koln (no draw) · 90% · bet at 1.14+ | 3-0 | 85 / 10 / 5 | 98 / 93 / 81 / 63 / 44 / 27 / 15 | 2 / 7 / 19 / 37 / 56 / 73 / 85 |
+| 20:45 | France - Ligue 1 | Troyes v Le Havre | NO BET (model not profitable in this league) | - | 🔒 Under 4.5 goals · 90% · bet at 1.14+ | 1-0 | 42 / 28 / 30 | 91 / 70 / 43 / 22 / 10 / 4 / 1 | 9 / 30 / 57 / 78 / 90 / 96 / 99 |
+| 21:00 | England - League One | Barnsley v Sheffield Weds | NO BET (model not profitable in this league) | - | ⭐ Over 1.5 goals · 82% · bet at 1.26+ | 1-2 | 35 / 24 / 41 | 95 / 82 / 60 / 38 / 21 / 10 / 4 | 5 / 18 / 40 / 62 / 79 / 90 / 96 |
+| 21:00 | Spain - La Liga | Ath Bilbao v Espanol | NO BET (model not profitable in this league) | - | ⭐⭐⭐ Under 4.5 goals · 90% · bet at 1.15+ | 1-0 | 54 / 26 / 20 | 91 / 71 / 44 / 23 / 10 / 4 / 1 | 9 / 29 / 56 / 77 / 90 / 96 / 99 |
 
 ## ☑️ Before you place any bet
 1. Your bookmaker's odds must be **at least** the price shown (for 🏆 games: at least the 'back only at' price). Lower odds = skip the bet.
