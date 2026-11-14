@@ -1,23 +1,22 @@
 {
- "time": "2026-11-14 15:25 UTC",
+ "time": "2026-11-14 18:40 UTC",
  "key_present": true,
  "leagues_found": {
   "E3": "League Two (England)",
   "E2": "League One (England)",
   "EC": "National League (England)",
   "UNL": "UEFA Nations League (World)",
-  "SC2": "League One (Scotland)",
   "SP2": "Segunda Divisi\u00f3n (Spain)"
  },
- "fixtures": 53,
+ "fixtures": 47,
  "injured": 0,
  "players_fetched": 0,
  "requests_used": 8,
- "result": "0 missing players across 53 fixtures",
- "odds_time": "2026-11-14 15:25 UTC",
- "odds_calls": 35,
- "odds_rows": 4589,
- "odds_fixtures": 35,
+ "result": "0 missing players across 47 fixtures",
+ "odds_time": "2026-11-14 18:40 UTC",
+ "odds_calls": 29,
+ "odds_rows": 3885,
+ "odds_fixtures": 29,
  "books_seen": [
   "1xBet",
   "Bet365",
@@ -72,6 +71,6 @@
   "Total - Home",
   "Total Corners (1st Half)"
  ],
- "my_book_fixtures": 35,
- "odds_result": "prices for 35 fixtures"
+ "my_book_fixtures": 29,
+ "odds_result": "prices for 29 fixtures"
 }
