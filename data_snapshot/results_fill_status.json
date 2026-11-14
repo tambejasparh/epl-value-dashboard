@@ -1,5 +1,5 @@
 {
- "time": "2026-11-13 22:28 UTC",
+ "time": "2026-11-14 12:01 UTC",
  "leagues": {
   "SC1": {
    "season": 2026,
@@ -57,6 +57,34 @@
     "ST Mirren"
    ]
   },
+  "E0": {
+   "season": 2026,
+   "finished": 100,
+   "latest": "2026-11-08",
+   "errors": null,
+   "teams": [
+    "Arsenal",
+    "Aston Villa",
+    "Bournemouth",
+    "Brentford",
+    "Brighton",
+    "Chelsea",
+    "Coventry",
+    "Crystal Palace",
+    "Everton",
+    "Fulham",
+    "Hull City",
+    "Ipswich",
+    "Leeds",
+    "Liverpool",
+    "Manchester City",
+    "Manchester United",
+    "Newcastle",
+    "Nottingham Forest",
+    "Sunderland",
+    "Tottenham"
+   ]
+  },
   "EC": {
    "season": 2026,
    "finished": 189,
@@ -87,98 +115,6 @@
     "Woking",
     "Worthing",
     "Yeovil Town"
-   ]
-  },
-  "E2": {
-   "season": 2026,
-   "finished": 158,
-   "latest": "2026-11-04",
-   "errors": null,
-   "teams": [
-    "AFC Wimbledon",
-    "Barnsley",
-    "Blackpool",
-    "Bradford",
-    "Bromley",
-    "Burton Albion",
-    "Cambridge United",
-    "Doncaster",
-    "Huddersfield",
-    "Leicester",
-    "Leyton Orient",
-    "Luton",
-    "Mansfield Town",
-    "Milton Keynes Dons",
-    "Notts County",
-    "Oxford United",
-    "Peterborough",
-    "Plymouth",
-    "Reading",
-    "Sheffield Wednesday",
-    "Stevenage",
-    "Stockport County",
-    "Wigan",
-    "Wycombe"
-   ]
-  },
-  "E3": {
-   "season": 2026,
-   "finished": 164,
-   "latest": "2026-11-03",
-   "errors": null,
-   "teams": [
-    "Accrington ST",
-    "Barnet",
-    "Bristol Rovers",
-    "Cheltenham",
-    "Chesterfield",
-    "Colchester",
-    "Crawley Town",
-    "Crewe",
-    "Exeter City",
-    "Fleetwood Town",
-    "Gillingham",
-    "Grimsby",
-    "Newport County",
-    "Northampton",
-    "Oldham",
-    "Port Vale",
-    "Rochdale",
-    "Rotherham",
-    "Salford City",
-    "Shrewsbury",
-    "Swindon Town",
-    "Tranmere",
-    "Walsall",
-    "York"
-   ]
-  },
-  "E0": {
-   "season": 2026,
-   "finished": 100,
-   "latest": "2026-11-08",
-   "errors": null,
-   "teams": [
-    "Arsenal",
-    "Aston Villa",
-    "Bournemouth",
-    "Brentford",
-    "Brighton",
-    "Chelsea",
-    "Coventry",
-    "Crystal Palace",
-    "Everton",
-    "Fulham",
-    "Hull City",
-    "Ipswich",
-    "Leeds",
-    "Liverpool",
-    "Manchester City",
-    "Manchester United",
-    "Newcastle",
-    "Nottingham Forest",
-    "Sunderland",
-    "Tottenham"
    ]
   },
   "E1": {
@@ -213,6 +149,70 @@
     "Wrexham"
    ]
   },
+  "E3": {
+   "season": 2026,
+   "finished": 164,
+   "latest": "2026-11-03",
+   "errors": null,
+   "teams": [
+    "Accrington ST",
+    "Barnet",
+    "Bristol Rovers",
+    "Cheltenham",
+    "Chesterfield",
+    "Colchester",
+    "Crawley Town",
+    "Crewe",
+    "Exeter City",
+    "Fleetwood Town",
+    "Gillingham",
+    "Grimsby",
+    "Newport County",
+    "Northampton",
+    "Oldham",
+    "Port Vale",
+    "Rochdale",
+    "Rotherham",
+    "Salford City",
+    "Shrewsbury",
+    "Swindon Town",
+    "Tranmere",
+    "Walsall",
+    "York"
+   ]
+  },
+  "E2": {
+   "season": 2026,
+   "finished": 158,
+   "latest": "2026-11-04",
+   "errors": null,
+   "teams": [
+    "AFC Wimbledon",
+    "Barnsley",
+    "Blackpool",
+    "Bradford",
+    "Bromley",
+    "Burton Albion",
+    "Cambridge United",
+    "Doncaster",
+    "Huddersfield",
+    "Leicester",
+    "Leyton Orient",
+    "Luton",
+    "Mansfield Town",
+    "Milton Keynes Dons",
+    "Notts County",
+    "Oxford United",
+    "Peterborough",
+    "Plymouth",
+    "Reading",
+    "Sheffield Wednesday",
+    "Stevenage",
+    "Stockport County",
+    "Wigan",
+    "Wycombe"
+   ]
+  },
   "SC3": {
    "season": 2026,
    "finished": 65,
@@ -229,32 +229,6 @@
     "Spartans",
     "Stirling Albion",
     "Stranraer"
-   ]
-  },
-  "D2": {
-   "season": 2026,
-   "finished": 99,
-   "latest": "2026-11-08",
-   "errors": null,
-   "teams": [
-    "1. FC Heidenheim",
-    "1. FC Kaiserslautern",
-    "1. FC Magdeburg",
-    "1. FC N\u00fcrnberg",
-    "Arminia Bielefeld",
-    "Dynamo Dresden",
-    "Eintracht Braunschweig",
-    "Energie Cottbus",
-    "FC St. Pauli",
-    "Hannover 96",
-    "Hertha BSC",
-    "Holstein Kiel",
-    "Karlsruher SC",
-    "SV Darmstadt 98",
-    "SpVgg Greuther F\u00fcrth",
-    "VfL Bochum",
-    "VfL Osnabr\u00fcck",
-    "VfL Wolfsburg"
    ]
   },
   "D1": {
@@ -281,6 +255,32 @@
     "Union Berlin",
     "VfB Stuttgart",
     "Werder Bremen"
+   ]
+  },
+  "D2": {
+   "season": 2026,
+   "finished": 99,
+   "latest": "2026-11-08",
+   "errors": null,
+   "teams": [
+    "1. FC Heidenheim",
+    "1. FC Kaiserslautern",
+    "1. FC Magdeburg",
+    "1. FC N\u00fcrnberg",
+    "Arminia Bielefeld",
+    "Dynamo Dresden",
+    "Eintracht Braunschweig",
+    "Energie Cottbus",
+    "FC St. Pauli",
+    "Hannover 96",
+    "Hertha BSC",
+    "Holstein Kiel",
+    "Karlsruher SC",
+    "SV Darmstadt 98",
+    "SpVgg Greuther F\u00fcrth",
+    "VfL Bochum",
+    "VfL Osnabr\u00fcck",
+    "VfL Wolfsburg"
    ]
   },
   "I1": {
@@ -447,34 +447,6 @@
     "Zenit"
    ]
   },
-  "JPN": {
-   "season": 2027,
-   "finished": 140,
-   "latest": "2026-11-08",
-   "errors": null,
-   "teams": [
-    "Avispa Fukuoka",
-    "Cerezo Osaka",
-    "FC Tokyo",
-    "Fagiano Okayama",
-    "Gamba Osaka",
-    "JEF United Chiba",
-    "Kashima",
-    "Kashiwa Reysol",
-    "Kawasaki Frontale",
-    "Kyoto Sanga",
-    "Machida Zelvia",
-    "Mito Hollyhock",
-    "Nagoya Grampus",
-    "Sanfrecce Hiroshima",
-    "Shimizu S-pulse",
-    "Tokyo Verdy",
-    "Urawa",
-    "V-varen Nagasaki",
-    "Vissel Kobe",
-    "Yokohama F. Marinos"
-   ]
-  },
   "F2": {
    "season": 2026,
    "finished": 108,
@@ -501,28 +473,32 @@
     "Sochaux"
    ]
   },
-  "CHN": {
-   "season": 2026,
-   "finished": 240,
+  "JPN": {
+   "season": 2027,
+   "finished": 140,
    "latest": "2026-11-08",
    "errors": null,
    "teams": [
-    "Beijing Guoan",
-    "Chengdu Better City",
-    "Chongqing Tongliang Long",
-    "Dalian Zhixing",
-    "Hangzhou Greentown",
-    "Henan Jianye",
-    "Qingdao Jonoon",
-    "Qingdao Youth Island",
-    "SHANGHAI SIPG",
-    "Shandong Luneng",
-    "Shanghai Shenhua",
-    "Shenyang Urban",
-    "Sichuan Jiuniu",
-    "Tianjin Teda",
-    "Wuhan Three Towns",
-    "Yunnan Yukun"
+    "Avispa Fukuoka",
+    "Cerezo Osaka",
+    "FC Tokyo",
+    "Fagiano Okayama",
+    "Gamba Osaka",
+    "JEF United Chiba",
+    "Kashima",
+    "Kashiwa Reysol",
+    "Kawasaki Frontale",
+    "Kyoto Sanga",
+    "Machida Zelvia",
+    "Mito Hollyhock",
+    "Nagoya Grampus",
+    "Sanfrecce Hiroshima",
+    "Shimizu S-pulse",
+    "Tokyo Verdy",
+    "Urawa",
+    "V-varen Nagasaki",
+    "Vissel Kobe",
+    "Yokohama F. Marinos"
    ]
   },
   "N1": {
@@ -603,26 +579,28 @@
     "Vit\u00f3ria SC"
    ]
   },
-  "G1": {
+  "CHN": {
    "season": 2026,
-   "finished": 69,
+   "finished": 240,
    "latest": "2026-11-08",
    "errors": null,
    "teams": [
-    "AEK Athens FC",
-    "Aris Thessalonikis",
-    "Asteras Tripolis",
-    "Atromitos",
-    "Iraklis 1908",
-    "Kalamata",
-    "Kifisia",
-    "Levadiakos",
-    "OFI",
-    "Olympiakos Piraeus",
-    "PAOK",
-    "Panathinaikos",
-    "Panetolikos",
-    "Volos NFC"
+    "Beijing Guoan",
+    "Chengdu Better City",
+    "Chongqing Tongliang Long",
+    "Dalian Zhixing",
+    "Hangzhou Greentown",
+    "Henan Jianye",
+    "Qingdao Jonoon",
+    "Qingdao Youth Island",
+    "SHANGHAI SIPG",
+    "Shandong Luneng",
+    "Shanghai Shenhua",
+    "Shenyang Urban",
+    "Sichuan Jiuniu",
+    "Tianjin Teda",
+    "Wuhan Three Towns",
+    "Yunnan Yukun"
    ]
   },
   "T1": {
@@ -649,6 +627,28 @@
     "Samsunspor",
     "Trabzonspor",
     "\u00c7orum FK"
+   ]
+  },
+  "G1": {
+   "season": 2026,
+   "finished": 69,
+   "latest": "2026-11-08",
+   "errors": null,
+   "teams": [
+    "AEK Athens FC",
+    "Aris Thessalonikis",
+    "Asteras Tripolis",
+    "Atromitos",
+    "Iraklis 1908",
+    "Kalamata",
+    "Kifisia",
+    "Levadiakos",
+    "OFI",
+    "Olympiakos Piraeus",
+    "PAOK",
+    "Panathinaikos",
+    "Panetolikos",
+    "Volos NFC"
    ]
   }
  }
