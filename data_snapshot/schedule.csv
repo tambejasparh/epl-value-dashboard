@@ -661,18 +661,13 @@ E2,Bromley,Wycombe Wanderers,2026-11-24 19:45:00+00:00
 E2,Barnsley,MK Dons,2026-12-15 19:45:00+00:00
 E2,Peterborough United,Notts County,2026-12-15 19:45:00+00:00
 E2,AFC Wimbledon,Stevenage,2027-01-26 19:45:00+00:00
-E2,AFC Wimbledon,Blackpool,2026-11-14 15:00:00+00:00
 E2,Bromley,Notts County,2026-11-14 15:00:00+00:00
 E2,Doncaster Rovers,Leyton Orient,2026-11-14 15:00:00+00:00
 E2,Leicester City,Bradford City,2026-11-14 15:00:00+00:00
-E2,Luton Town,Cambridge United,2026-11-14 15:00:00+00:00
-E2,MK Dons,Burton Albion,2026-11-14 15:00:00+00:00
-E2,Peterborough United,Oxford United,2026-11-14 15:00:00+00:00
-E2,Sheffield Wednesday,Plymouth Argyle,2026-11-14 15:00:00+00:00
 E2,Stevenage,Mansfield Town,2026-11-14 15:00:00+00:00
-E2,Stockport County,Reading,2026-11-14 15:00:00+00:00
-E2,Wigan Athletic,Barnsley,2026-11-14 15:00:00+00:00
 E2,Wycombe Wanderers,Huddersfield Town,2026-11-14 15:00:00+00:00
+E2,Peterborough United,Oxford United,2026-12-05 19:45:00+00:00
+E2,Luton Town,Cambridge United,2027-02-02 19:45:00+00:00
 E2,Barnsley,Sheffield Wednesday,2026-11-20 20:00:00+00:00
 E2,Blackpool,Wigan Athletic,2026-11-21 12:30:00+00:00
 E2,Reading,Bromley,2026-11-21 12:30:00+00:00
@@ -1047,20 +1042,10 @@ E2,Wigan Athletic,Burton Albion,2027-05-08 11:30:00+00:00
 E2,Wycombe Wanderers,Barnsley,2027-05-08 11:30:00+00:00
 E3,Crawley Town,Barnet,2026-11-24 19:45:00+00:00
 E3,Port Vale,Northampton Town,2026-11-24 19:45:00+00:00
+E3,Walsall,Crawley Town,2026-12-05 15:00:00+00:00
 E3,Colchester United,Port Vale,2026-12-15 19:45:00+00:00
-E3,Walsall,Crawley Town,2026-12-15 19:45:00+00:00
-E3,Exeter City,Cheltenham Town,2026-11-14 12:30:00+00:00
-E3,Bristol Rovers,Chesterfield,2026-11-14 15:00:00+00:00
-E3,Colchester United,Gillingham,2026-11-14 15:00:00+00:00
-E3,Crewe Alexandra,Newport County,2026-11-14 15:00:00+00:00
-E3,Port Vale,Accrington Stanley,2026-11-14 15:00:00+00:00
-E3,Rochdale,York City,2026-11-14 15:00:00+00:00
 E3,Rotherham United,Crawley Town,2026-11-14 15:00:00+00:00
-E3,Salford City,Northampton Town,2026-11-14 15:00:00+00:00
-E3,Shrewsbury Town,Oldham Athletic,2026-11-14 15:00:00+00:00
-E3,Swindon Town,Grimsby Town,2026-11-14 15:00:00+00:00
 E3,Walsall,Barnet,2026-11-14 15:00:00+00:00
-E3,Fleetwood Town,Tranmere Rovers,2026-11-14 17:30:00+00:00
 E3,Gillingham,Crewe Alexandra,2026-11-21 12:30:00+00:00
 E3,Newport County,Swindon Town,2026-11-21 12:30:00+00:00
 E3,Accrington Stanley,Salford City,2026-11-21 15:00:00+00:00
@@ -1095,8 +1080,8 @@ E3,Grimsby Town,Colchester United,2026-12-01 19:45:00+00:00
 E3,Newport County,Walsall,2026-12-01 19:45:00+00:00
 E3,Northampton Town,Fleetwood Town,2026-12-01 19:45:00+00:00
 E3,Oldham Athletic,Bristol Rovers,2026-12-01 19:45:00+00:00
-E3,Tranmere Rovers,Salford City,2026-12-01 19:45:00+00:00
 E3,York City,Shrewsbury Town,2026-12-01 19:45:00+00:00
+E3,Tranmere Rovers,Salford City,2026-12-05 15:00:00+00:00
 E3,Chesterfield,Grimsby Town,2026-12-12 12:30:00+00:00
 E3,Tranmere Rovers,York City,2026-12-12 12:30:00+00:00
 E3,Barnet,Northampton Town,2026-12-12 15:00:00+00:00
@@ -1110,7 +1095,6 @@ E3,Rotherham United,Walsall,2026-12-12 15:00:00+00:00
 E3,Salford City,Colchester United,2026-12-12 15:00:00+00:00
 E3,Shrewsbury Town,Port Vale,2026-12-12 15:00:00+00:00
 E3,Crewe Alexandra,Salford City,2026-12-17 20:00:00+00:00
-E3,Colchester United,Fleetwood Town,2026-12-19 12:30:00+00:00
 E3,Northampton Town,Exeter City,2026-12-19 12:30:00+00:00
 E3,Accrington Stanley,Chesterfield,2026-12-19 15:00:00+00:00
 E3,Gillingham,Cheltenham Town,2026-12-19 15:00:00+00:00
@@ -1121,6 +1105,7 @@ E3,Rochdale,Bristol Rovers,2026-12-19 15:00:00+00:00
 E3,Swindon Town,Tranmere Rovers,2026-12-19 15:00:00+00:00
 E3,Walsall,Shrewsbury Town,2026-12-19 15:00:00+00:00
 E3,York City,Crawley Town,2026-12-19 15:00:00+00:00
+E3,Colchester United,Fleetwood Town,2026-12-20 13:00:00+00:00
 E3,Barnet,Colchester United,2026-12-26 15:00:00+00:00
 E3,Bristol Rovers,Walsall,2026-12-26 15:00:00+00:00
 E3,Cheltenham Town,Port Vale,2026-12-26 15:00:00+00:00
@@ -2802,7 +2787,7 @@ N1,Sparta Rotterdam,Fortuna Sittard,2027-05-23 12:30:00+00:00
 N1,PEC Zwolle,FC Twente,2027-05-23 12:30:00+00:00
 N1,Feyenoord,FC Groningen,2027-05-23 12:30:00+00:00
 N1,ADO Den Haag,AZ,2027-05-23 12:30:00+00:00
-P1,Estoril Praia,Marítimo M.,2026-11-08 15:30:00+00:00
+P1,Estoril Praia,Marítimo M.,2027-01-04 20:15:00+00:00
 P1,Marítimo M.,CD Nacional,2026-11-27 20:15:00+00:00
 P1,FC Arouca,Rio Ave FC,2026-11-28 15:30:00+00:00
 P1,Moreirense FC,Santa Clara,2026-11-28 15:30:00+00:00
@@ -3217,9 +3202,9 @@ T1,Konyaspor,Çorum,2027-05-22 21:00:00+00:00
 T1,Amedspor,Fenerbahçe,2027-05-22 21:00:00+00:00
 T1,Kasimpasa,Kocaelispor,2027-05-22 21:00:00+00:00
 T1,Trabzonspor,Erzurumspor,2027-05-22 21:00:00+00:00
-SC0,Dundee United,Heart of Midlothian,2026-10-31 15:00:00+00:00
 SC0,Hibernian,Dundee,2026-11-24 19:45:00+00:00
 SC0,Rangers,Aberdeen,2026-11-24 20:00:00+00:00
+SC0,Dundee United,Heart of Midlothian,2027-01-12 19:45:00+00:00
 SC0,Celtic,St. Mirren,2026-11-21 15:00:00+00:00
 SC0,Falkirk,St. Johnstone,2026-11-21 15:00:00+00:00
 SC0,Hibernian,Dundee United,2026-11-21 15:00:00+00:00
@@ -3276,10 +3261,10 @@ SC0,Rangers,Celtic,2027-01-03 12:00:00+00:00
 SC0,St. Mirren,Aberdeen,2027-01-03 14:30:00+00:00
 SC0,Aberdeen,Heart of Midlothian,2027-01-09 15:00:00+00:00
 SC0,Celtic,Dundee,2027-01-09 15:00:00+00:00
-SC0,Dundee United,Rangers,2027-01-09 15:00:00+00:00
 SC0,Hibernian,Motherwell,2027-01-09 15:00:00+00:00
 SC0,Kilmarnock,St. Mirren,2027-01-09 15:00:00+00:00
 SC0,St. Johnstone,Falkirk,2027-01-09 15:00:00+00:00
+SC0,Dundee United,Rangers,2027-01-09 17:30:00+00:00
 SC0,Dundee,Aberdeen,2027-01-23 15:00:00+00:00
 SC0,Falkirk,Heart of Midlothian,2027-01-23 15:00:00+00:00
 SC0,Hibernian,Kilmarnock,2027-01-23 15:00:00+00:00

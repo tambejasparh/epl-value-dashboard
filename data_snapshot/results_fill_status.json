@@ -1,5 +1,5 @@
 {
- "time": "2026-11-14 21:17 UTC",
+ "time": "2026-11-15 12:38 UTC",
  "leagues": {
   "SC1": {
    "season": 2026,
@@ -37,26 +37,6 @@
     "Ross County"
    ]
   },
-  "SC0": {
-   "season": 2026,
-   "finished": 75,
-   "latest": "2026-11-08",
-   "errors": null,
-   "teams": [
-    "Aberdeen",
-    "Celtic",
-    "Dundee",
-    "Dundee Utd",
-    "Falkirk",
-    "Heart Of Midlothian",
-    "Hibernian",
-    "Kilmarnock",
-    "Motherwell",
-    "Rangers",
-    "ST Johnstone",
-    "ST Mirren"
-   ]
-  },
   "EC": {
    "season": 2026,
    "finished": 200,
@@ -89,36 +69,52 @@
     "Yeovil Town"
    ]
   },
-  "E3": {
+  "SC0": {
    "season": 2026,
-   "finished": 174,
-   "latest": "2026-11-14",
+   "finished": 75,
+   "latest": "2026-11-08",
    "errors": null,
    "teams": [
-    "Accrington ST",
-    "Barnet",
-    "Bristol Rovers",
-    "Cheltenham",
-    "Chesterfield",
-    "Colchester",
-    "Crawley Town",
-    "Crewe",
-    "Exeter City",
-    "Fleetwood Town",
-    "Gillingham",
-    "Grimsby",
-    "Newport County",
-    "Northampton",
-    "Oldham",
-    "Port Vale",
-    "Rochdale",
-    "Rotherham",
-    "Salford City",
-    "Shrewsbury",
-    "Swindon Town",
-    "Tranmere",
-    "Walsall",
-    "York"
+    "Aberdeen",
+    "Celtic",
+    "Dundee",
+    "Dundee Utd",
+    "Falkirk",
+    "Heart Of Midlothian",
+    "Hibernian",
+    "Kilmarnock",
+    "Motherwell",
+    "Rangers",
+    "ST Johnstone",
+    "ST Mirren"
+   ]
+  },
+  "E0": {
+   "season": 2026,
+   "finished": 100,
+   "latest": "2026-11-08",
+   "errors": null,
+   "teams": [
+    "Arsenal",
+    "Aston Villa",
+    "Bournemouth",
+    "Brentford",
+    "Brighton",
+    "Chelsea",
+    "Coventry",
+    "Crystal Palace",
+    "Everton",
+    "Fulham",
+    "Hull City",
+    "Ipswich",
+    "Leeds",
+    "Liverpool",
+    "Manchester City",
+    "Manchester United",
+    "Newcastle",
+    "Nottingham Forest",
+    "Sunderland",
+    "Tottenham"
    ]
   },
   "E2": {
@@ -153,34 +149,6 @@
     "Wycombe"
    ]
   },
-  "E0": {
-   "season": 2026,
-   "finished": 100,
-   "latest": "2026-11-08",
-   "errors": null,
-   "teams": [
-    "Arsenal",
-    "Aston Villa",
-    "Bournemouth",
-    "Brentford",
-    "Brighton",
-    "Chelsea",
-    "Coventry",
-    "Crystal Palace",
-    "Everton",
-    "Fulham",
-    "Hull City",
-    "Ipswich",
-    "Leeds",
-    "Liverpool",
-    "Manchester City",
-    "Manchester United",
-    "Newcastle",
-    "Nottingham Forest",
-    "Sunderland",
-    "Tottenham"
-   ]
-  },
   "E1": {
    "season": 2026,
    "finished": 180,
@@ -213,6 +181,38 @@
     "Wrexham"
    ]
   },
+  "E3": {
+   "season": 2026,
+   "finished": 174,
+   "latest": "2026-11-14",
+   "errors": null,
+   "teams": [
+    "Accrington ST",
+    "Barnet",
+    "Bristol Rovers",
+    "Cheltenham",
+    "Chesterfield",
+    "Colchester",
+    "Crawley Town",
+    "Crewe",
+    "Exeter City",
+    "Fleetwood Town",
+    "Gillingham",
+    "Grimsby",
+    "Newport County",
+    "Northampton",
+    "Oldham",
+    "Port Vale",
+    "Rochdale",
+    "Rotherham",
+    "Salford City",
+    "Shrewsbury",
+    "Swindon Town",
+    "Tranmere",
+    "Walsall",
+    "York"
+   ]
+  },
   "SC3": {
    "season": 2026,
    "finished": 70,
@@ -229,6 +229,32 @@
     "Spartans",
     "Stirling Albion",
     "Stranraer"
+   ]
+  },
+  "D2": {
+   "season": 2026,
+   "finished": 99,
+   "latest": "2026-11-08",
+   "errors": null,
+   "teams": [
+    "1. FC Heidenheim",
+    "1. FC Kaiserslautern",
+    "1. FC Magdeburg",
+    "1. FC N\u00fcrnberg",
+    "Arminia Bielefeld",
+    "Dynamo Dresden",
+    "Eintracht Braunschweig",
+    "Energie Cottbus",
+    "FC St. Pauli",
+    "Hannover 96",
+    "Hertha BSC",
+    "Holstein Kiel",
+    "Karlsruher SC",
+    "SV Darmstadt 98",
+    "SpVgg Greuther F\u00fcrth",
+    "VfL Bochum",
+    "VfL Osnabr\u00fcck",
+    "VfL Wolfsburg"
    ]
   },
   "D1": {
@@ -257,30 +283,32 @@
     "Werder Bremen"
    ]
   },
-  "D2": {
+  "I1": {
    "season": 2026,
-   "finished": 99,
+   "finished": 110,
    "latest": "2026-11-08",
    "errors": null,
    "teams": [
-    "1. FC Heidenheim",
-    "1. FC Kaiserslautern",
-    "1. FC Magdeburg",
-    "1. FC N\u00fcrnberg",
-    "Arminia Bielefeld",
-    "Dynamo Dresden",
-    "Eintracht Braunschweig",
-    "Energie Cottbus",
-    "FC St. Pauli",
-    "Hannover 96",
-    "Hertha BSC",
-    "Holstein Kiel",
-    "Karlsruher SC",
-    "SV Darmstadt 98",
-    "SpVgg Greuther F\u00fcrth",
-    "VfL Bochum",
-    "VfL Osnabr\u00fcck",
-    "VfL Wolfsburg"
+    "AC Milan",
+    "AS Roma",
+    "Atalanta",
+    "Bologna",
+    "Cagliari",
+    "Como",
+    "Fiorentina",
+    "Frosinone",
+    "Genoa",
+    "Inter",
+    "Juventus",
+    "Lazio",
+    "Lecce",
+    "Monza",
+    "Napoli",
+    "Parma",
+    "Sassuolo",
+    "Torino",
+    "Udinese",
+    "Venezia"
    ]
   },
   "I2": {
@@ -311,6 +339,36 @@
     "Virtus Entella"
    ]
   },
+  "SP2": {
+   "season": 2026,
+   "finished": 146,
+   "latest": "2026-11-14",
+   "errors": null,
+   "teams": [
+    "AD Ceuta FC",
+    "Albacete",
+    "Almeria",
+    "Burgos",
+    "Cadiz",
+    "Castell\u00f3n",
+    "Celta de Vigo II",
+    "Cordoba",
+    "Eibar",
+    "Eldense",
+    "FC Andorra",
+    "Girona",
+    "Granada CF",
+    "Las Palmas",
+    "Leganes",
+    "Mallorca",
+    "Oviedo",
+    "Real Sociedad II",
+    "Sabadell",
+    "Sporting Gijon",
+    "Tenerife",
+    "Valladolid"
+   ]
+  },
   "SP1": {
    "season": 2026,
    "finished": 119,
@@ -339,36 +397,6 @@
     "Villarreal"
    ]
   },
-  "SP2": {
-   "season": 2026,
-   "finished": 145,
-   "latest": "2026-11-14",
-   "errors": null,
-   "teams": [
-    "AD Ceuta FC",
-    "Albacete",
-    "Almeria",
-    "Burgos",
-    "Cadiz",
-    "Castell\u00f3n",
-    "Celta de Vigo II",
-    "Cordoba",
-    "Eibar",
-    "Eldense",
-    "FC Andorra",
-    "Girona",
-    "Granada CF",
-    "Las Palmas",
-    "Leganes",
-    "Mallorca",
-    "Oviedo",
-    "Real Sociedad II",
-    "Sabadell",
-    "Sporting Gijon",
-    "Tenerife",
-    "Valladolid"
-   ]
-  },
   "F1": {
    "season": 2026,
    "finished": 90,
@@ -393,34 +421,6 @@
     "Stade Brestois 29",
     "Strasbourg",
     "Toulouse"
-   ]
-  },
-  "I1": {
-   "season": 2026,
-   "finished": 110,
-   "latest": "2026-11-08",
-   "errors": null,
-   "teams": [
-    "AC Milan",
-    "AS Roma",
-    "Atalanta",
-    "Bologna",
-    "Cagliari",
-    "Como",
-    "Fiorentina",
-    "Frosinone",
-    "Genoa",
-    "Inter",
-    "Juventus",
-    "Lazio",
-    "Lecce",
-    "Monza",
-    "Napoli",
-    "Parma",
-    "Sassuolo",
-    "Torino",
-    "Udinese",
-    "Venezia"
    ]
   },
   "RUS": {
@@ -551,32 +551,6 @@
     "Zulte Waregem"
    ]
   },
-  "N1": {
-   "season": 2026,
-   "finished": 108,
-   "latest": "2026-11-08",
-   "errors": null,
-   "teams": [
-    "ADO Den Haag",
-    "AZ Alkmaar",
-    "Ajax",
-    "Cambuur",
-    "Excelsior",
-    "Feyenoord",
-    "Fortuna Sittard",
-    "GO Ahead Eagles",
-    "Groningen",
-    "Heerenveen",
-    "NEC Nijmegen",
-    "PEC Zwolle",
-    "PSV Eindhoven",
-    "Sparta Rotterdam",
-    "Telstar",
-    "Twente",
-    "Utrecht",
-    "Willem II"
-   ]
-  },
   "P1": {
    "season": 2026,
    "finished": 98,
@@ -603,26 +577,30 @@
     "Vit\u00f3ria SC"
    ]
   },
-  "G1": {
+  "N1": {
    "season": 2026,
-   "finished": 69,
+   "finished": 108,
    "latest": "2026-11-08",
    "errors": null,
    "teams": [
-    "AEK Athens FC",
-    "Aris Thessalonikis",
-    "Asteras Tripolis",
-    "Atromitos",
-    "Iraklis 1908",
-    "Kalamata",
-    "Kifisia",
-    "Levadiakos",
-    "OFI",
-    "Olympiakos Piraeus",
-    "PAOK",
-    "Panathinaikos",
-    "Panetolikos",
-    "Volos NFC"
+    "ADO Den Haag",
+    "AZ Alkmaar",
+    "Ajax",
+    "Cambuur",
+    "Excelsior",
+    "Feyenoord",
+    "Fortuna Sittard",
+    "GO Ahead Eagles",
+    "Groningen",
+    "Heerenveen",
+    "NEC Nijmegen",
+    "PEC Zwolle",
+    "PSV Eindhoven",
+    "Sparta Rotterdam",
+    "Telstar",
+    "Twente",
+    "Utrecht",
+    "Willem II"
    ]
   },
   "T1": {
@@ -649,6 +627,28 @@
     "Samsunspor",
     "Trabzonspor",
     "\u00c7orum FK"
+   ]
+  },
+  "G1": {
+   "season": 2026,
+   "finished": 69,
+   "latest": "2026-11-08",
+   "errors": null,
+   "teams": [
+    "AEK Athens FC",
+    "Aris Thessalonikis",
+    "Asteras Tripolis",
+    "Atromitos",
+    "Iraklis 1908",
+    "Kalamata",
+    "Kifisia",
+    "Levadiakos",
+    "OFI",
+    "Olympiakos Piraeus",
+    "PAOK",
+    "Panathinaikos",
+    "Panetolikos",
+    "Volos NFC"
    ]
   }
  }
