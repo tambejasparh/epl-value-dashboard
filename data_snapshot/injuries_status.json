@@ -1,17 +1,17 @@
 {
- "time": "2026-11-15 21:38 UTC",
+ "time": "2026-11-16 13:29 UTC",
  "key_present": true,
  "errors": [
-  "fixtures 2026-11-15: {'requests': 'You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan.'}",
-  "fixtures 2026-11-16: {'requests': 'You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan.'}",
-  "fixtures 2026-11-17: {'plan': 'Free plans do not have access to this date, try from 2026-11-14 to 2026-11-16.'}",
-  "fixtures 2026-11-18: {'plan': 'Free plans do not have access to this date, try from 2026-11-14 to 2026-11-16.'}"
+  "fixtures 2026-11-16: {'http': 429}",
+  "fixtures 2026-11-17: {'http': 429}",
+  "fixtures 2026-11-18: {'http': 429}",
+  "fixtures 2026-11-19: {'http': 429}"
  ],
  "leagues_found": {},
  "fixtures": 0,
  "result": "no upcoming fixtures found",
  "requests_used": 4,
- "odds_time": "2026-11-15 21:38 UTC",
+ "odds_time": "2026-11-16 13:29 UTC",
  "odds_calls": 19,
  "odds_rows": 0,
  "odds_fixtures": 0,

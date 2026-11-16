@@ -1,16 +1,19 @@
 {
- "time": "2026-11-15 12:38 UTC",
+ "time": "2026-11-16 13:29 UTC",
  "key_present": true,
- "plan": "Pro",
- "requests_today": {
-  "current": 0,
-  "limit_day": 7500
+ "plan": null,
+ "requests_today": {},
+ "status_errors": {
+  "http": 429
  },
- "status_errors": null,
- "fixtures_errors": null,
- "fixtures_found": 3,
- "injuries_errors": null,
- "injuries_found": 1320,
+ "fixtures_errors": {
+  "http": 429
+ },
+ "fixtures_found": 0,
+ "injuries_errors": {
+  "http": 429
+ },
+ "injuries_found": 0,
  "season": 2026,
- "result": "current season available"
+ "result": "current season NOT available on this plan"
 }
