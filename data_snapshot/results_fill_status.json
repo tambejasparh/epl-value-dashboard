@@ -1,7 +1,16 @@
 {
- "time": "2026-11-17 18:01 UTC",
+ "time": "2026-11-17 21:31 UTC",
  "leagues": {
-  "E3": {
+  "SC2": {
+   "season": 2026,
+   "finished": 0,
+   "latest": null,
+   "errors": {
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
+   },
+   "teams": []
+  },
+  "SC1": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -28,7 +37,7 @@
    },
    "teams": []
   },
-  "SC2": {
+  "E0": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -46,6 +55,24 @@
    },
    "teams": []
   },
+  "E2": {
+   "season": 2026,
+   "finished": 0,
+   "latest": null,
+   "errors": {
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
+   },
+   "teams": []
+  },
+  "E3": {
+   "season": 2026,
+   "finished": 0,
+   "latest": null,
+   "errors": {
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
+   },
+   "teams": []
+  },
   "SC3": {
    "season": 2026,
    "finished": 0,
@@ -55,34 +82,16 @@
    },
    "teams": []
   },
+  "D2": {
+   "season": 2026,
+   "finished": 0,
+   "latest": null,
+   "errors": {
+    "http": 429
+   },
+   "teams": []
+  },
   "D1": {
-   "season": 2026,
-   "finished": 0,
-   "latest": null,
-   "errors": {
-    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
-   },
-   "teams": []
-  },
-  "SC1": {
-   "season": 2026,
-   "finished": 0,
-   "latest": null,
-   "errors": {
-    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
-   },
-   "teams": []
-  },
-  "I1": {
-   "season": 2026,
-   "finished": 0,
-   "latest": null,
-   "errors": {
-    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
-   },
-   "teams": []
-  },
-  "E2": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -100,7 +109,7 @@
    },
    "teams": []
   },
-  "D2": {
+  "I1": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -127,7 +136,43 @@
    },
    "teams": []
   },
-  "E0": {
+  "F1": {
+   "season": 2026,
+   "finished": 0,
+   "latest": null,
+   "errors": {
+    "http": 429
+   },
+   "teams": []
+  },
+  "RUS": {
+   "season": 2026,
+   "finished": 0,
+   "latest": null,
+   "errors": {
+    "http": 429
+   },
+   "teams": []
+  },
+  "JPN": {
+   "season": 2026,
+   "finished": 0,
+   "latest": null,
+   "errors": {
+    "http": 429
+   },
+   "teams": []
+  },
+  "CHN": {
+   "season": 2026,
+   "finished": 0,
+   "latest": null,
+   "errors": {
+    "http": 429
+   },
+   "teams": []
+  },
+  "F2": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -154,48 +199,12 @@
    },
    "teams": []
   },
-  "RUS": {
-   "season": 2026,
-   "finished": 0,
-   "latest": null,
-   "errors": {
-    "http": 429
-   },
-   "teams": []
-  },
-  "F2": {
-   "season": 2026,
-   "finished": 0,
-   "latest": null,
-   "errors": {
-    "http": 429
-   },
-   "teams": []
-  },
-  "JPN": {
-   "season": 2026,
-   "finished": 0,
-   "latest": null,
-   "errors": {
-    "http": 429
-   },
-   "teams": []
-  },
   "G1": {
    "season": 2026,
    "finished": 0,
    "latest": null,
    "errors": {
-    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
-   },
-   "teams": []
-  },
-  "CHN": {
-   "season": 2026,
-   "finished": 0,
-   "latest": null,
-   "errors": {
-    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
+    "http": 429
    },
    "teams": []
   },
@@ -204,16 +213,7 @@
    "finished": 0,
    "latest": null,
    "errors": {
-    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
-   },
-   "teams": []
-  },
-  "F1": {
-   "season": 2026,
-   "finished": 0,
-   "latest": null,
-   "errors": {
-    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
+    "http": 429
    },
    "teams": []
   },
@@ -222,7 +222,7 @@
    "finished": 0,
    "latest": null,
    "errors": {
-    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
+    "http": 429
    },
    "teams": []
   }
