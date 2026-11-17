@@ -1,16 +1,7 @@
 {
- "time": "2026-11-17 14:15 UTC",
+ "time": "2026-11-17 18:01 UTC",
  "leagues": {
-  "SC1": {
-   "season": 2026,
-   "finished": 0,
-   "latest": null,
-   "errors": {
-    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
-   },
-   "teams": []
-  },
-  "SC2": {
+  "E3": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -28,15 +19,6 @@
    },
    "teams": []
   },
-  "E0": {
-   "season": 2026,
-   "finished": 0,
-   "latest": null,
-   "errors": {
-    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
-   },
-   "teams": []
-  },
   "SC0": {
    "season": 2026,
    "finished": 0,
@@ -46,16 +28,7 @@
    },
    "teams": []
   },
-  "E2": {
-   "season": 2026,
-   "finished": 0,
-   "latest": null,
-   "errors": {
-    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
-   },
-   "teams": []
-  },
-  "E3": {
+  "SC2": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -87,20 +60,29 @@
    "finished": 0,
    "latest": null,
    "errors": {
-    "http": 429
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
    },
    "teams": []
   },
-  "D2": {
+  "SC1": {
    "season": 2026,
    "finished": 0,
    "latest": null,
    "errors": {
-    "http": 429
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
    },
    "teams": []
   },
   "I1": {
+   "season": 2026,
+   "finished": 0,
+   "latest": null,
+   "errors": {
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
+   },
+   "teams": []
+  },
+  "E2": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -118,7 +100,7 @@
    },
    "teams": []
   },
-  "SP2": {
+  "D2": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -136,7 +118,7 @@
    },
    "teams": []
   },
-  "F1": {
+  "SP2": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -145,25 +127,7 @@
    },
    "teams": []
   },
-  "RUS": {
-   "season": 2026,
-   "finished": 0,
-   "latest": null,
-   "errors": {
-    "http": 429
-   },
-   "teams": []
-  },
-  "JPN": {
-   "season": 2026,
-   "finished": 0,
-   "latest": null,
-   "errors": {
-    "http": 429
-   },
-   "teams": []
-  },
-  "F2": {
+  "E0": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -190,7 +154,7 @@
    },
    "teams": []
   },
-  "CHN": {
+  "RUS": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -199,12 +163,39 @@
    },
    "teams": []
   },
-  "P1": {
+  "F2": {
    "season": 2026,
    "finished": 0,
    "latest": null,
    "errors": {
     "http": 429
+   },
+   "teams": []
+  },
+  "JPN": {
+   "season": 2026,
+   "finished": 0,
+   "latest": null,
+   "errors": {
+    "http": 429
+   },
+   "teams": []
+  },
+  "G1": {
+   "season": 2026,
+   "finished": 0,
+   "latest": null,
+   "errors": {
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
+   },
+   "teams": []
+  },
+  "CHN": {
+   "season": 2026,
+   "finished": 0,
+   "latest": null,
+   "errors": {
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
    },
    "teams": []
   },
@@ -217,7 +208,16 @@
    },
    "teams": []
   },
-  "G1": {
+  "F1": {
+   "season": 2026,
+   "finished": 0,
+   "latest": null,
+   "errors": {
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
+   },
+   "teams": []
+  },
+  "P1": {
    "season": 2026,
    "finished": 0,
    "latest": null,

@@ -1,10 +1,10 @@
 {
- "time": "2026-11-17 14:15 UTC",
+ "time": "2026-11-17 18:01 UTC",
  "key_present": true,
  "errors": [
   "fixtures 2026-11-19: {'plan': 'Free plans do not have access to this date, try from 2026-11-16 to 2026-11-18.'}",
   "fixtures 2026-11-20: {'plan': 'Free plans do not have access to this date, try from 2026-11-16 to 2026-11-18.'}",
-  "injuries 2026-11-19: {'http': 429}",
+  "injuries 2026-11-19: {'plan': 'Free plans do not have access to this date, try from 2026-11-16 to 2026-11-18.'}",
   "injuries 2026-11-20: {'plan': 'Free plans do not have access to this date, try from 2026-11-16 to 2026-11-18.'}"
  ],
  "leagues_found": {
@@ -15,9 +15,9 @@
  "players_fetched": 0,
  "requests_used": 8,
  "result": "0 missing players across 8 fixtures",
- "odds_time": "2026-11-17 14:15 UTC",
+ "odds_time": "2026-11-17 18:01 UTC",
  "odds_calls": 8,
- "odds_rows": 713,
+ "odds_rows": 710,
  "odds_fixtures": 5,
  "books_seen": [
   "1xBet",

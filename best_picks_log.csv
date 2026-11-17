@@ -1154,14 +1154,14 @@ Kickoff (UTC),Match day,League,Competition,HomeTeam,AwayTeam,Pick key,Best pick,
 2026-11-16 19:45,2026-11-16,UNL,UEFA Nations League,Greece,Serbia,U45,⭐⭐ Under 4.5 goals · 86% · bet at 1.19+,86.3,1.19,Good,1xBet pays only 1.16 (needs 1.19),1.30 - 0.94
 2026-11-16 19:45,2026-11-16,UNL,UEFA Nations League,Switzerland,Scotland,HS,⭐ Switzerland to score · 83% · bet at 1.25+,82.7,1.25,Fair,below 85%,2.10 - 0.84
 2026-11-16 19:45,2026-11-16,UNL,UEFA Nations League,North Macedonia,Slovenia,U45,🔒 Under 4.5 goals · 91% · bet at 1.13+,91.1,1.13,Banker,1xBet pays only 1.05 (needs 1.13),0.85 - 1.11
-2026-11-17 19:45,2026-11-17,UNL,UEFA Nations League,Wales,Portugal,AS,⭐⭐ Portugal to score · 85% · bet at 1.21+,85.2,1.21,Good,OK,0.75 - 1.76
+2026-11-17 19:45,2026-11-17,UNL,UEFA Nations League,Wales,Portugal,AS,⭐⭐ Portugal to score · 85% · bet at 1.21+,85.2,1.21,Good,1xBet pays only 1.07 (needs 1.21),0.75 - 1.76
 2026-11-17 19:45,2026-11-17,UNL,UEFA Nations League,Hungary,Northern Ireland,U45,🔒 Under 4.5 goals · 91% · bet at 1.13+,91.3,1.13,Banker,1xBet pays only 1.04 (needs 1.13),1.23 - 0.79
 2026-11-17 19:45,2026-11-17,UNL,UEFA Nations League,Denmark,Norway,O15,⭐ Over 1.5 goals · 81% · bet at 1.26+,81.4,1.26,Fair,below 85%,1.78 - 1.18
 2026-11-17 19:45,2026-11-17,UNL,UEFA Nations League,Poland,Sweden,O15,⭐ Over 1.5 goals · 81% · bet at 1.27+,81.3,1.27,Fair,below 85%,1.62 - 1.44
-2026-11-17 19:45,2026-11-17,UNL,UEFA Nations League,Bosnia and Herzegovina,Romania,U45,⭐⭐ Under 4.5 goals · 86% · bet at 1.20+,85.9,1.2,Good,1xBet pays only 1.14 (needs 1.20),1.26 - 1.10
+2026-11-17 19:45,2026-11-17,UNL,UEFA Nations League,Bosnia and Herzegovina,Romania,U45,⭐⭐ Under 4.5 goals · 86% · bet at 1.20+,85.9,1.2,Good,OK,1.26 - 1.10
 2026-11-17 19:45,2026-11-17,UNL,UEFA Nations League,Israel,Austria,AS,⭐ Austria to score · 84% · bet at 1.22+,84.2,1.22,Fair,below 85%,1.31 - 2.01
 2026-11-17 19:45,2026-11-17,UNL,UEFA Nations League,Ukraine,Georgia,U45,⭐⭐ Under 4.5 goals · 87% · bet at 1.18+,87.4,1.18,Good,1xBet pays only 1.06 (needs 1.18),1.69 - 0.98
-2026-11-17 19:45,2026-11-17,UNL,UEFA Nations League,Republic of Ireland,Kosovo,U45,🔒 Under 4.5 goals · 91% · bet at 1.13+,91.2,1.13,Banker,1xBet pays only 1.04 (needs 1.13),1.24 - 0.86
+2026-11-17 19:45,2026-11-17,UNL,UEFA Nations League,Republic of Ireland,Kosovo,U45,🔒 Under 4.5 goals · 91% · bet at 1.13+,91.2,1.13,Banker,OK,1.24 - 0.86
 2026-11-20 19:00,2026-11-20,F2,France - Ligue 2,Red Star,Pau FC,U45,⭐⭐ Under 4.5 goals · 86% · bet at 1.20+,85.6,1.2,Good,no bookmaker odds and below 88%,1.54 - 1.21
 2026-11-20 19:00,2026-11-20,F2,France - Ligue 2,Nancy,Dijon,U45,⭐ Under 4.5 goals · 82% · bet at 1.25+,82.1,1.25,Fair,below 85%,1.54 - 1.42
 2026-11-20 19:00,2026-11-20,F2,France - Ligue 2,Metz,Boulogne,U45,⭐⭐⭐ Under 4.5 goals · 89% · bet at 1.16+,88.6,1.16,Strong,OK,1.50 - 1.04
@@ -1279,3 +1279,5 @@ Kickoff (UTC),Match day,League,Competition,HomeTeam,AwayTeam,Pick key,Best pick,
 2026-11-23 19:45,2026-11-23,I1,Italy - Serie A,Monza,Fiorentina,U45,⭐ Under 4.5 goals · 82% · bet at 1.25+,82.4,1.25,Fair,below 85%,1.31 - 1.63
 2026-11-23 20:00,2026-11-23,E0,England - Premier League,Brentford,Everton,U45,⭐⭐ Under 4.5 goals · 87% · bet at 1.18+,87.2,1.18,Good,no bookmaker odds and below 88%,1.49 - 1.15
 2026-11-23 20:00,2026-11-23,SP1,Spain - La Liga,Levante,Elche,U45,⭐ Under 4.5 goals · 82% · bet at 1.25+,82.5,1.25,Fair,below 85%,1.65 - 1.30
+2026-11-24 17:45,2026-11-24,UCL,UEFA Champions League,Bodø/Glimt,LASK,HS,⭐⭐⭐ Bodø/Glimt to score · 89% · bet at 1.16+,89.1,1.16,Strong,OK,3.10 - 1.12
+2026-11-24 17:45,2026-11-24,UCL,UEFA Champions League,Galatasaray,Aston Villa,AS,⭐ Aston Villa to score · 82% · bet at 1.26+,82.1,1.26,Fair,below 85%,1.24 - 2.06
