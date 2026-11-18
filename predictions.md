@@ -1,5 +1,5 @@
 # Football predictions — day by day
-_Updated Wed 18 Nov 2026 18:42 (Africa/Douala time). Bankroll for stakes: 100.00_
+_Updated Wed 18 Nov 2026 22:07 (Africa/Douala time). Bankroll for stakes: 100.00_
 
 ## 🟢 Safe goals picks — Under 4.5 / 5.5 / 6.5 85%+, Over 0.5 / 1.5 98%+, BTTS 96%+
 
@@ -169,6 +169,21 @@ _Safest first. 💚 = 1xBet pays at least the fair minimum._
 
 🎟️ One ticket with the top matches — top 2: 90% · top 3: 84% · top 5: 72% · top 8: 56% · top 10: 47%
 
+### Wednesday 25 November (10 matches)
+
+1. 20:45 · **Bolton v West Brom** (England - Championship) — Over/Under → Under 5.5 · 94%
+2. 20:45 · **Watford v Blackburn** (England - Championship) — Over/Under → Under 4.5 · 91%
+3. 21:00 · **Stoke v Millwall** (England - Championship) — Over/Under → Under 4.5 · 90%
+4. 21:00 · **Lille v Bayern München** (UEFA Champions League) — Over/Under → Under 6.5 · 89%
+5. 20:45 · **Burnley v Birmingham** (England - Championship) — Over/Under → Under 4.5 · 88%
+6. 21:00 · **Club Brugge v Liverpool** (UEFA Champions League) — Over/Under → Under 6.5 · 88%
+7. 21:00 · **Shakhtar v Fenerbahçe** (UEFA Champions League) — Over/Under → Under 5.5 · 87%
+8. 18:45 · **Slavia Praha v Villarreal** (UEFA Champions League) — Over/Under → Under 5.5 · 85%
+9. 21:00 · **Inter v Stuttgart** (UEFA Champions League) — Over/Under → Under 5.5 · 85%
+10. 21:00 · **Sporting CP v Man Utd** (UEFA Champions League) — Over/Under → Under 5.5 · 85%
+
+🎟️ One ticket with the top matches — top 2: 86% · top 3: 77% · top 5: 60% · top 8: 39% · top 10: 28%
+
 ## ✅ Your bets for each day (already checked - just place them)
 
 _Only 85%+ picks, backed by bookmaker odds (or 88%+ without), with no key player missing for the team you back. Skip a bet if your odds are lower than the number shown._
@@ -239,6 +254,21 @@ _Only 85%+ picks, backed by bookmaker odds (or 88%+ without), with no key player
    ✅ **BET: Real Madrid total goals → Over 0.5** — only if odds are **1.15+** (90% chance)
 
 🎟️ All 5 on one ticket: all 5 win about **62%** of the time (lose about 38%). Take it only if the ticket's total odds are at least **1.88**. A 2-pick ticket (#1 + #2) wins about 83%. In testing on 472 past match days, the top-5 ticket won on 67% of days - it still lost about 1 day in 3.
+
+### Wednesday 25 November
+
+1. 18:45 · **Sabah v Barcelona** (UEFA Champions League)  
+   ✅ **BET: Barcelona total goals → Over 0.5** — only if odds are **1.12+** (92% chance)
+2. 20:45 · **Watford v Blackburn** (England - Championship)  
+   ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.13+** (91% chance)
+3. 21:00 · **Paris v Roma** (UEFA Champions League)  
+   ✅ **BET: Paris total goals → Over 0.5** — only if odds are **1.14+** (90% chance)
+4. 21:00 · **Atleti v Viking** (UEFA Champions League)  
+   ✅ **BET: Atleti total goals → Over 0.5** — only if odds are **1.14+** (90% chance)
+5. 21:00 · **Stoke v Millwall** (England - Championship)  
+   ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.15+** (90% chance)
+
+🎟️ All 5 on one ticket: all 5 win about **61%** of the time (lose about 39%). Take it only if the ticket's total odds are at least **1.89**. A 2-pick ticket (#1 + #2) wins about 84%. In testing on 472 past match days, the top-5 ticket won on 67% of days - it still lost about 1 day in 3.
 
 ## 📋 Every match: what to bet (whatever the odds)
 
@@ -401,6 +431,22 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 - ⚠️ 18:45 · **Galatasaray v Aston Villa** (UEFA Champions League) — BET: Aston Villa total goals → Over 0.5 · 82%
 - ⚠️ 21:00 · **Feyenoord v Porto** (UEFA Champions League) — BET: Over/Under (total goals) → Under 4.5 · 78%
 
+### Wednesday 25 November (13 matches)
+
+- ✅ 18:45 · **Sabah v Barcelona** (UEFA Champions League) — BET: Barcelona total goals → Over 0.5 · 92%
+- ✅ 20:45 · **Watford v Blackburn** (England - Championship) — BET: Over/Under (total goals) → Under 4.5 · 91%
+- ✅ 21:00 · **Paris v Roma** (UEFA Champions League) — BET: Paris total goals → Over 0.5 · 90%
+- ✅ 21:00 · **Atleti v Viking** (UEFA Champions League) — BET: Atleti total goals → Over 0.5 · 90%
+- ✅ 21:00 · **Stoke v Millwall** (England - Championship) — BET: Over/Under (total goals) → Under 4.5 · 90%
+- ⚠️ 20:45 · **Burnley v Birmingham** (England - Championship) — BET: Over/Under (total goals) → Under 4.5 · 88%
+- ⚠️ 20:45 · **Bolton v West Brom** (England - Championship) — BET: Over/Under (total goals) → Under 4.5 · 85%
+- ⚠️ 21:00 · **Lille v Bayern München** (UEFA Champions League) — BET: Bayern München total goals → Over 0.5 · 84%
+- ⚠️ 21:00 · **Inter v Stuttgart** (UEFA Champions League) — BET: Inter total goals → Over 0.5 · 83%
+- ⚠️ 21:00 · **Club Brugge v Liverpool** (UEFA Champions League) — BET: Liverpool total goals → Over 0.5 · 81%
+- ⚠️ 21:00 · **Shakhtar v Fenerbahçe** (UEFA Champions League) — BET: Over/Under (total goals) → Under 4.5 · 79%
+- ⚠️ 21:00 · **Sporting CP v Man Utd** (UEFA Champions League) — BET: Sporting CP total goals → Over 0.5 · 77%
+- ⚠️ 18:45 · **Slavia Praha v Villarreal** (UEFA Champions League) — BET: Over/Under (total goals) → Under 4.5 · 77%
+
 ## 🧾 Results of the last days (bets given before kick-off)
 
 ### Tuesday 17 November
@@ -432,18 +478,9 @@ Results: **11 of 11 bets won** (100%)
 - ⚠️ 20:45 · **Germany v Netherlands** — Over/Under (total goals) → Over 1.5 (85%) → ✅ WON 5-0
 - ⚠️ 20:45 · **Switzerland v Scotland** — Switzerland total goals → Over 0.5 (83%) → ✅ WON 4-0
 
-### Sunday 15 November
-
-Results: **4 of 4 bets won** (100%)
-
-- ⚠️ 20:45 · **France v Turkey** — Double Chance → 1X (France or draw) (90%) → ✅ WON 2-1
-- ⚠️ 20:45 · **Croatia v Czech Republic** — Croatia total goals → Over 0.5 (86%) → ✅ WON 2-1
-- ⚠️ 20:45 · **Spain v England** — Spain total goals → Over 0.5 (81%) → ✅ WON 2-3
-- ⚠️ 20:45 · **Belgium v Italy** — Belgium total goals → Over 0.5 (81%) → ✅ WON 4-1
-
 ## 📈 Live track record of best picks
 
-**991 of 1144 best picks won (87%)** · ✅ 'Your bets' (passed all checks): 29/31 (94%) · 🔒+⭐⭐⭐ picks: 325/363 (90%) · 161 waiting for results
+**991 of 1144 best picks won (87%)** · ✅ 'Your bets' (passed all checks): 29/31 (94%) · 🔒+⭐⭐⭐ picks: 325/363 (90%) · 174 waiting for results
 Banker 137/153 (90%) · Strong 188/210 (90%) · Good 322/367 (88%) · Fair 344/414 (83%)
 
 **🛡️ Rules for low-odds betting (read every time)**
@@ -529,6 +566,18 @@ No bets this week - the prices are fair. That is normal.
   📝 Open the 'Bodø/Glimt total goals' (team goals) market and choose 'Over 0.5' (some bookmakers call it 'Bodø/Glimt to score: Yes'). You WIN if Bodø/Glimt scores at least 1 goal - the final result does not matter. You LOSE only if Bodø/Glimt scores 0. Only place it if your bookmaker's odds for this choice are 1.16 or higher.
 - 20:45 · **Bradford v Barnsley** (England - League One) — ⭐⭐⭐ Under 4.5 goals · 89% · bet at 1.16+  
   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.16 or higher.
+
+**Wednesday 25 November**
+- 18:45 · **Sabah v Barcelona** (UEFA Champions League) — 🔒 Barcelona to score · 92% · bet at 1.12+  
+  📝 Open the 'Barcelona total goals' (team goals) market and choose 'Over 0.5' (some bookmakers call it 'Barcelona to score: Yes'). You WIN if Barcelona scores at least 1 goal - the final result does not matter. You LOSE only if Barcelona scores 0. Only place it if your bookmaker's odds for this choice are 1.12 or higher.
+- 20:45 · **Watford v Blackburn** (England - Championship) — 🔒 Under 4.5 goals · 91% · bet at 1.13+  
+  📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.13 or higher.
+- 21:00 · **Paris v Roma** (UEFA Champions League) — 🔒 Paris to score · 90% · bet at 1.14+  
+  📝 Open the 'Paris total goals' (team goals) market and choose 'Over 0.5' (some bookmakers call it 'Paris to score: Yes'). You WIN if Paris scores at least 1 goal - the final result does not matter. You LOSE only if Paris scores 0. Only place it if your bookmaker's odds for this choice are 1.14 or higher.
+- 21:00 · **Atleti v Viking** (UEFA Champions League) — ⭐⭐⭐ Atleti to score · 90% · bet at 1.14+  
+  📝 Open the 'Atleti total goals' (team goals) market and choose 'Over 0.5' (some bookmakers call it 'Atleti to score: Yes'). You WIN if Atleti scores at least 1 goal - the final result does not matter. You LOSE only if Atleti scores 0. Only place it if your bookmaker's odds for this choice are 1.14 or higher.
+- 21:00 · **Stoke v Millwall** (England - Championship) — ⭐⭐⭐ Under 4.5 goals · 90% · bet at 1.15+  
+  📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.15 or higher.
 
 ## 📅 Every match, day by day
 
@@ -698,6 +747,24 @@ No bets this week - the prices are fair. That is normal.
 | 21:00 | UEFA Champions League | Leipzig v Lens | No odds feed: back Leipzig only at 1.52+ | - | ⭐⭐ Leipzig to score · 86% · bet at 1.19+ | 2-1 | 68 / 16 / 16 | 98 / 88 / 71 / 51 / 31 / 17 / 8 | 2 / 12 / 29 / 49 / 69 / 83 / 92 |
 | 21:00 | UEFA Champions League | S. Bratislava v Real Betis | No odds feed: back Real Betis only at 1.34+ | - | ⭐⭐ Real Betis to score · 86% · bet at 1.20+ | 0-2 | 9 / 14 / 77 | 97 / 83 / 63 / 41 / 23 / 11 / 5 | 3 / 17 / 37 / 59 / 77 / 89 / 95 |
 | 21:00 | UEFA Champions League | Como v AEK Athens | No odds feed: back Como only at 1.20+ | - | 🔒 Como to score · 91% · bet at 1.13+ | 3-1 | 86 / 8 / 6 | 99 / 95 / 87 / 72 / 54 / 36 / 22 | 1 / 5 / 13 / 28 / 46 / 64 / 78 |
+
+### Wednesday 25 November (13 matches)
+
+| Time | Competition | Match | Advice | Stake | 🎯 Best pick | Predicted | H / D / A % | Over 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 / 6.5 % | Under 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 / 6.5 % |
+|---|---|---|---|---|---|---|---|---|---|
+| 18:45 | UEFA Champions League | Slavia Praha v Villarreal | No odds feed: back Villarreal only at 2.28+ | - | ⭐ Under 4.5 goals · 77% · bet at 1.34+ | 1-2 | 33 / 22 / 45 | 96 / 80 / 58 / 36 / 19 / 9 / 4 | 4 / 20 / 42 / 64 / 81 / 91 / 96 |
+| 18:45 | UEFA Champions League | Sabah v Barcelona | No odds feed: back Barcelona only at 1.15+ | - | 🔒 Barcelona to score · 92% · bet at 1.12+ | 1-4 | 4 / 6 / 90 | 100 / 97 / 90 / 78 / 62 / 44 / 29 | 0 / 3 / 10 / 22 / 38 / 56 / 71 |
+| 20:45 | England - Championship | Burnley v Birmingham | Odds not out yet: back Burnley only at 2.55+ (re-check when odds appear) | - | ⭐⭐ Under 4.5 goals · 88% · bet at 1.17+ | 1-0 | 40 / 27 / 32 | 92 / 74 / 48 / 26 / 12 / 5 / 2 | 8 / 26 / 52 / 74 / 88 / 95 / 98 |
+| 20:45 | England - Championship | Bolton v West Brom | Odds not out yet: back West Brom only at 2.42+ (re-check when odds appear) | - | ⭐ Under 4.5 goals · 85% · bet at 1.21+ | 1-2 | 32 / 26 / 43 | 93 / 77 / 53 / 31 / 15 / 6 / 2 | 7 / 23 / 47 / 69 / 85 / 94 / 98 |
+| 20:45 | England - Championship | Watford v Blackburn | Odds not out yet: back Watford only at 2.54+ (re-check when odds appear) | - | 🔒 Under 4.5 goals · 91% · bet at 1.13+ | 1-0 | 41 / 29 / 30 | 90 / 68 / 41 / 20 / 9 / 3 / 1 | 10 / 32 / 59 / 80 / 91 / 97 / 99 |
+| 21:00 | England - Championship | Stoke v Millwall | Odds not out yet: back Millwall only at 2.86+ (re-check when odds appear) | - | ⭐⭐⭐ Under 4.5 goals · 90% · bet at 1.15+ | 0-1 | 36 / 28 / 36 | 91 / 71 / 44 / 23 / 10 / 4 / 1 | 9 / 29 / 56 / 77 / 90 / 96 / 99 |
+| 21:00 | UEFA Champions League | Paris v Roma | No odds feed: back Paris only at 1.23+ | - | 🔒 Paris to score · 90% · bet at 1.14+ | 3-0 | 84 / 10 / 7 | 99 / 93 / 80 / 62 / 43 / 26 / 14 | 1 / 7 / 20 / 38 / 57 / 74 / 86 |
+| 21:00 | UEFA Champions League | Inter v Stuttgart | No odds feed: back Inter only at 1.52+ | - | ⭐ Inter to score · 83% · bet at 1.24+ | 2-0 | 68 / 18 / 15 | 96 / 80 / 59 / 37 / 19 / 9 / 4 | 4 / 20 / 41 / 63 / 81 / 91 / 96 |
+| 21:00 | UEFA Champions League | Atleti v Viking | No odds feed: back Atleti only at 1.28+ | - | ⭐⭐⭐ Atleti to score · 90% · bet at 1.14+ | 3-1 | 80 / 11 / 9 | 99 / 93 / 82 / 65 / 46 / 29 / 16 | 1 / 7 / 18 / 35 / 54 / 71 / 84 |
+| 21:00 | UEFA Champions League | Sporting CP v Man Utd | No odds feed: back Sporting CP only at 2.27+ | - | ⭐ Sporting CP to score · 77% · bet at 1.34+ | 2-1 | 45 / 22 / 33 | 96 / 80 / 59 / 37 / 20 / 9 / 4 | 4 / 20 / 41 / 63 / 80 / 91 / 96 |
+| 21:00 | UEFA Champions League | Club Brugge v Liverpool | No odds feed: back Liverpool only at 2.04+ | - | ⭐ Liverpool to score · 81% · bet at 1.27+ | 1-2 | 29 / 20 / 51 | 98 / 85 / 67 / 46 / 27 / 14 / 6 | 2 / 15 / 33 / 54 / 73 / 86 / 94 |
+| 21:00 | UEFA Champions League | Lille v Bayern München | No odds feed: back Bayern München only at 1.54+ | - | ⭐ Bayern München to score · 84% · bet at 1.22+ | 1-2 | 16 / 17 / 67 | 97 / 83 / 64 / 42 / 24 / 12 / 5 | 3 / 17 / 36 / 58 / 76 / 88 / 95 |
+| 21:00 | UEFA Champions League | Shakhtar v Fenerbahçe | No odds feed: back Shakhtar only at 2.29+ | - | ⭐ Under 4.5 goals · 79% · bet at 1.30+ | 1-0 | 45 / 23 / 32 | 95 / 77 / 54 / 32 / 16 / 7 / 3 | 5 / 23 / 46 / 68 / 84 / 93 / 97 |
 
 ## ☑️ Before you place any bet
 1. Your bookmaker's odds must be **at least** the price shown (for 🏆 games: at least the 'back only at' price). Lower odds = skip the bet.

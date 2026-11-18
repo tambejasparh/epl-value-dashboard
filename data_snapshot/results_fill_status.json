@@ -1,5 +1,5 @@
 {
- "time": "2026-11-18 17:42 UTC",
+ "time": "2026-11-18 21:07 UTC",
  "leagues": {
   "SC2": {
    "season": 2026,
@@ -11,6 +11,15 @@
    "teams": []
   },
   "SC1": {
+   "season": 2026,
+   "finished": 0,
+   "latest": null,
+   "errors": {
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
+   },
+   "teams": []
+  },
+  "EC": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -37,24 +46,6 @@
    },
    "teams": []
   },
-  "EC": {
-   "season": 2026,
-   "finished": 0,
-   "latest": null,
-   "errors": {
-    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
-   },
-   "teams": []
-  },
-  "E1": {
-   "season": 2026,
-   "finished": 0,
-   "latest": null,
-   "errors": {
-    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
-   },
-   "teams": []
-  },
   "E3": {
    "season": 2026,
    "finished": 0,
@@ -73,7 +64,7 @@
    },
    "teams": []
   },
-  "SC3": {
+  "E1": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -82,12 +73,12 @@
    },
    "teams": []
   },
-  "D1": {
+  "SC3": {
    "season": 2026,
    "finished": 0,
    "latest": null,
    "errors": {
-    "http": 429
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
    },
    "teams": []
   },
@@ -100,12 +91,21 @@
    },
    "teams": []
   },
+  "D1": {
+   "season": 2026,
+   "finished": 0,
+   "latest": null,
+   "errors": {
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
+   },
+   "teams": []
+  },
   "I2": {
    "season": 2026,
    "finished": 0,
    "latest": null,
    "errors": {
-    "http": 429
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
    },
    "teams": []
   },
@@ -123,7 +123,7 @@
    "finished": 0,
    "latest": null,
    "errors": {
-    "http": 429
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
    },
    "teams": []
   },
@@ -132,7 +132,7 @@
    "finished": 0,
    "latest": null,
    "errors": {
-    "http": 429
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
    },
    "teams": []
   },
@@ -141,7 +141,7 @@
    "finished": 0,
    "latest": null,
    "errors": {
-    "http": 429
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
    },
    "teams": []
   },
@@ -150,7 +150,7 @@
    "finished": 0,
    "latest": null,
    "errors": {
-    "http": 429
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
    },
    "teams": []
   },
@@ -159,16 +159,7 @@
    "finished": 0,
    "latest": null,
    "errors": {
-    "http": 429
-   },
-   "teams": []
-  },
-  "CHN": {
-   "season": 2026,
-   "finished": 0,
-   "latest": null,
-   "errors": {
-    "http": 429
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
    },
    "teams": []
   },
@@ -190,21 +181,21 @@
    },
    "teams": []
   },
+  "CHN": {
+   "season": 2026,
+   "finished": 0,
+   "latest": null,
+   "errors": {
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
+   },
+   "teams": []
+  },
   "N1": {
    "season": 2026,
    "finished": 0,
    "latest": null,
    "errors": {
-    "http": 429
-   },
-   "teams": []
-  },
-  "P1": {
-   "season": 2026,
-   "finished": 0,
-   "latest": null,
-   "errors": {
-    "http": 429
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
    },
    "teams": []
   },
@@ -213,7 +204,16 @@
    "finished": 0,
    "latest": null,
    "errors": {
-    "http": 429
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
+   },
+   "teams": []
+  },
+  "P1": {
+   "season": 2026,
+   "finished": 0,
+   "latest": null,
+   "errors": {
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
    },
    "teams": []
   },
@@ -222,7 +222,7 @@
    "finished": 0,
    "latest": null,
    "errors": {
-    "http": 429
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
    },
    "teams": []
   }
