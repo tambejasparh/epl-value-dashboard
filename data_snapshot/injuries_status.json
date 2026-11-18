@@ -1,17 +1,17 @@
 {
- "time": "2026-11-18 21:07 UTC",
+ "time": "2026-11-18 23:21 UTC",
  "key_present": true,
  "errors": [
   "fixtures 2026-11-18: {'http': 429}",
-  "fixtures 2026-11-19: {'rateLimit': 'Too many requests. Your rate limit is 10 requests per minute.'}",
-  "fixtures 2026-11-20: {'plan': 'Free plans do not have access to this date, try from 2026-11-17 to 2026-11-19.'}",
-  "fixtures 2026-11-21: {'plan': 'Free plans do not have access to this date, try from 2026-11-17 to 2026-11-19.'}"
+  "fixtures 2026-11-19: {'http': 429}",
+  "fixtures 2026-11-20: {'http': 429}",
+  "fixtures 2026-11-21: {'http': 429}"
  ],
  "leagues_found": {},
  "fixtures": 0,
  "result": "no upcoming fixtures found",
  "requests_used": 4,
- "odds_time": "2026-11-18 21:07 UTC",
+ "odds_time": "2026-11-18 23:21 UTC",
  "odds_calls": 0,
  "odds_rows": 0,
  "odds_fixtures": 0,
