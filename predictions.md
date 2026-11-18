@@ -1,5 +1,5 @@
 # Football predictions — day by day
-_Updated Wed 18 Nov 2026 14:46 (Africa/Douala time). Bankroll for stakes: 100.00_
+_Updated Wed 18 Nov 2026 18:42 (Africa/Douala time). Bankroll for stakes: 100.00_
 
 ## 🟢 Safe goals picks — Under 4.5 / 5.5 / 6.5 85%+, Over 0.5 / 1.5 98%+, BTTS 96%+
 
@@ -434,17 +434,10 @@ Results: **11 of 11 bets won** (100%)
 
 ### Sunday 15 November
 
-Results: **10 of 11 bets won** (91%)
+Results: **4 of 4 bets won** (100%)
 
-- ⚠️ 18:00 · **Belarus v Albania** — Over/Under (total goals) → Under 4.5 (92%) → ✅ WON 0-2
-- ⚠️ 18:00 · **Finland v San Marino** — Over/Under (total goals) → Over 1.5 (91%) → ✅ WON 7-2
 - ⚠️ 20:45 · **France v Turkey** — Double Chance → 1X (France or draw) (90%) → ✅ WON 2-1
-- ⚠️ 15:00 · **Latvia v Armenia** — Over/Under (total goals) → Under 4.5 (88%) → ✅ WON 0-0
-- ⚠️ 18:30 · **Eibar v Cadiz** — Over/Under (total goals) → Under 4.5 (88%) → ✅ WON 1-1
-- ⚠️ 16:15 · **Granada v Las Palmas** — Over/Under (total goals) → Under 4.5 (88%) → ✅ WON 1-0
 - ⚠️ 20:45 · **Croatia v Czech Republic** — Croatia total goals → Over 0.5 (86%) → ✅ WON 2-1
-- ⚠️ 15:00 · **Cyprus v Montenegro** — Over/Under (total goals) → Under 4.5 (85%) → ❌ LOST 1-4
-- ⚠️ 18:30 · **Eldense v Sabadell** — Over/Under (total goals) → Under 3.5 (83%) → ✅ WON 2-0
 - ⚠️ 20:45 · **Spain v England** — Spain total goals → Over 0.5 (81%) → ✅ WON 2-3
 - ⚠️ 20:45 · **Belgium v Italy** — Belgium total goals → Over 0.5 (81%) → ✅ WON 4-1
 
