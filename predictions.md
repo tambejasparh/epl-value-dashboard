@@ -1,5 +1,5 @@
 # Football predictions — day by day
-_Updated Wed 18 Nov 2026 00:49 (Africa/Douala time). Bankroll for stakes: 100.00_
+_Updated Wed 18 Nov 2026 14:46 (Africa/Douala time). Bankroll for stakes: 100.00_
 
 ## 🟢 Safe goals picks — Under 4.5 / 5.5 / 6.5 85%+, Over 0.5 / 1.5 98%+, BTTS 96%+
 
@@ -405,16 +405,16 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 
 ### Tuesday 17 November
 
-⏳ No finished results for this day yet.
+Results: **8 of 8 bets won** (100%) · ✅ checked bets: **2 of 2 won**
 
-- ⚠️ 20:45 · **Hungary v Northern Ireland** — Over/Under (total goals) → Under 4.5 (91%) → ⏳ playing / waiting for result
-- ✅ 20:45 · **Republic of Ireland v Kosovo** — Over/Under (total goals) → Under 4.5 (91%) → ⏳ playing / waiting for result
-- ⚠️ 20:45 · **Ukraine v Georgia** — Over/Under (total goals) → Under 4.5 (87%) → ⏳ playing / waiting for result
-- ✅ 20:45 · **Bosnia and Herzegovina v Romania** — Over/Under (total goals) → Under 4.5 (86%) → ⏳ playing / waiting for result
-- ⚠️ 20:45 · **Wales v Portugal** — Portugal total goals → Over 0.5 (85%) → ⏳ playing / waiting for result
-- ⚠️ 20:45 · **Israel v Austria** — Austria total goals → Over 0.5 (84%) → ⏳ playing / waiting for result
-- ⚠️ 20:45 · **Denmark v Norway** — Over/Under (total goals) → Over 1.5 (81%) → ⏳ playing / waiting for result
-- ⚠️ 20:45 · **Poland v Sweden** — Over/Under (total goals) → Over 1.5 (81%) → ⏳ playing / waiting for result
+- ⚠️ 20:45 · **Hungary v Northern Ireland** — Over/Under (total goals) → Under 4.5 (91%) → ✅ WON 1-1
+- ✅ 20:45 · **Republic of Ireland v Kosovo** — Over/Under (total goals) → Under 4.5 (91%) → ✅ WON 3-0
+- ⚠️ 20:45 · **Ukraine v Georgia** — Over/Under (total goals) → Under 4.5 (87%) → ✅ WON 1-0
+- ✅ 20:45 · **Bosnia and Herzegovina v Romania** — Over/Under (total goals) → Under 4.5 (86%) → ✅ WON 2-1
+- ⚠️ 20:45 · **Wales v Portugal** — Portugal total goals → Over 0.5 (85%) → ✅ WON 2-3
+- ⚠️ 20:45 · **Israel v Austria** — Austria total goals → Over 0.5 (84%) → ✅ WON 1-1
+- ⚠️ 20:45 · **Denmark v Norway** — Over/Under (total goals) → Over 1.5 (81%) → ✅ WON 2-3
+- ⚠️ 20:45 · **Poland v Sweden** — Over/Under (total goals) → Over 1.5 (81%) → ✅ WON 1-1
 
 ### Monday 16 November
 
@@ -434,12 +434,11 @@ Results: **11 of 11 bets won** (100%)
 
 ### Sunday 15 November
 
-Results: **11 of 12 bets won** (92%)
+Results: **10 of 11 bets won** (91%)
 
 - ⚠️ 18:00 · **Belarus v Albania** — Over/Under (total goals) → Under 4.5 (92%) → ✅ WON 0-2
 - ⚠️ 18:00 · **Finland v San Marino** — Over/Under (total goals) → Over 1.5 (91%) → ✅ WON 7-2
 - ⚠️ 20:45 · **France v Turkey** — Double Chance → 1X (France or draw) (90%) → ✅ WON 2-1
-- ⚠️ 14:00 · **Tenerife v Ceuta** — Over/Under (total goals) → Under 4.5 (90%) → ✅ WON 2-0
 - ⚠️ 15:00 · **Latvia v Armenia** — Over/Under (total goals) → Under 4.5 (88%) → ✅ WON 0-0
 - ⚠️ 18:30 · **Eibar v Cadiz** — Over/Under (total goals) → Under 4.5 (88%) → ✅ WON 1-1
 - ⚠️ 16:15 · **Granada v Las Palmas** — Over/Under (total goals) → Under 4.5 (88%) → ✅ WON 1-0
@@ -451,8 +450,8 @@ Results: **11 of 12 bets won** (92%)
 
 ## 📈 Live track record of best picks
 
-**983 of 1136 best picks won (87%)** · ✅ 'Your bets' (passed all checks): 27/29 (93%) · 🔒+⭐⭐⭐ picks: 323/361 (89%) · 169 waiting for results
-Banker 135/151 (89%) · Strong 188/210 (90%) · Good 319/364 (88%) · Fair 341/411 (83%)
+**991 of 1144 best picks won (87%)** · ✅ 'Your bets' (passed all checks): 29/31 (94%) · 🔒+⭐⭐⭐ picks: 325/363 (90%) · 161 waiting for results
+Banker 137/153 (90%) · Strong 188/210 (90%) · Good 322/367 (88%) · Fair 344/414 (83%)
 
 **🛡️ Rules for low-odds betting (read every time)**
 1. **Bet singles** (one match per bet). If you combine, use at most 2-3 picks: 4 picks at 85% all win only ~52% of the time.
