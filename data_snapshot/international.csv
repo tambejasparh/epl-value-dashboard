@@ -6694,12 +6694,12 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,Tournament,Neutral
 2022-03-27,Thailand,Suriname,1,0,Friendly,False
 2022-03-27,Liberia,Sierra Leone,0,1,Friendly,True
 2022-03-27,Guatemala,Haiti,2,1,Friendly,True
-2022-03-27,New Zealand,Tahiti,1,0,FIFA World Cup qualification,True
+2022-03-27,United States,Panama,5,1,FIFA World Cup qualification,False
 2022-03-27,Belize,Cuba,0,3,Friendly,False
 2022-03-27,Barbados,Guyana,0,5,Friendly,True
 2022-03-27,Solomon Islands,Papua New Guinea,3,2,FIFA World Cup qualification,True
+2022-03-27,New Zealand,Tahiti,1,0,FIFA World Cup qualification,True
 2022-03-27,Benin,Zambia,2,1,Friendly,True
-2022-03-27,United States,Panama,5,1,FIFA World Cup qualification,False
 2022-03-27,Honduras,Mexico,0,1,FIFA World Cup qualification,False
 2022-03-27,Canada,Jamaica,4,0,FIFA World Cup qualification,False
 2022-03-27,El Salvador,Costa Rica,1,2,FIFA World Cup qualification,False
@@ -6773,7 +6773,6 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,Tournament,Neutral
 2022-04-27,Mexico,Guatemala,0,0,Friendly,True
 2022-05-12,Bahamas,Turks and Caicos Islands,4,2,Friendly,False
 2022-05-12,Dominica,Saint Vincent and the Grenadines,2,1,Friendly,False
-2022-05-13,Guernsey,Jersey,1,2,Muratti Vase,False
 2022-05-14,Bahamas,Turks and Caicos Islands,1,2,Friendly,False
 2022-05-15,Dominica,Saint Vincent and the Grenadines,3,1,Friendly,False
 2022-05-21,Yoruba Nation,Matabeleland,1,1,CONIFA Africa Football Cup,True
@@ -7335,10 +7334,10 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,Tournament,Neutral
 2022-11-19,Turkey,Czech Republic,2,1,Friendly,False
 2022-11-19,Sweden,Algeria,2,0,Friendly,False
 2022-11-19,Peru,Bolivia,1,0,Friendly,False
-2022-11-19,Guatemala,Nicaragua,3,1,Friendly,True
-2022-11-19,Kosovo,Faroe Islands,1,1,Friendly,False
 2022-11-19,Ivory Coast,Burkina Faso,1,2,Friendly,True
+2022-11-19,Kosovo,Faroe Islands,1,1,Friendly,False
 2022-11-19,Kuwait,Lebanon,2,0,Friendly,True
+2022-11-19,Guatemala,Nicaragua,3,1,Friendly,True
 2022-11-19,Gibraltar,Andorra,1,0,Friendly,False
 2022-11-19,Colombia,Paraguay,2,0,Friendly,True
 2022-11-19,Albania,Armenia,2,0,Friendly,False
@@ -7503,7 +7502,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,Tournament,Neutral
 2023-03-23,Portugal,Liechtenstein,4,0,UEFA Euro qualification,False
 2023-03-23,Bosnia and Herzegovina,Iceland,3,0,UEFA Euro qualification,False
 2023-03-23,Denmark,Finland,3,1,UEFA Euro qualification,False
-2023-03-23,Kazakhstan,Slovenia,1,2,UEFA Euro qualification,False
+2023-03-23,San Marino,Northern Ireland,0,2,UEFA Euro qualification,False
 2023-03-23,Slovakia,Luxembourg,0,0,UEFA Euro qualification,False
 2023-03-23,North Macedonia,Malta,2,1,UEFA Euro qualification,False
 2023-03-23,Barbados,Cuba,0,1,CONCACAF Nations League,False
@@ -7513,7 +7512,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,Tournament,Neutral
 2023-03-23,British Virgin Islands,Puerto Rico,1,3,CONCACAF Nations League,False
 2023-03-23,Suriname,Mexico,0,2,CONCACAF Nations League,False
 2023-03-23,Italy,England,1,2,UEFA Euro qualification,False
-2023-03-23,San Marino,Northern Ireland,0,2,UEFA Euro qualification,False
+2023-03-23,Kazakhstan,Slovenia,1,2,UEFA Euro qualification,False
 2023-03-23,Zambia,Lesotho,3,1,African Cup of Nations qualification,False
 2023-03-23,Argentina,Panama,2,0,Friendly,False
 2023-03-23,Hong Kong,Singapore,1,1,Friendly,False
@@ -7523,8 +7522,8 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,Tournament,Neutral
 2023-03-23,Iran,Russia,1,1,Friendly,False
 2023-03-23,Madagascar,Central African Republic,0,3,African Cup of Nations qualification,False
 2023-03-23,Ghana,Angola,1,0,African Cup of Nations qualification,False
-2023-03-23,Algeria,Niger,2,1,African Cup of Nations qualification,False
 2023-03-23,Gabon,Sudan,1,0,African Cup of Nations qualification,False
+2023-03-23,Algeria,Niger,2,1,African Cup of Nations qualification,False
 2023-03-23,Congo,South Sudan,1,2,African Cup of Nations qualification,False
 2023-03-23,Solomon Islands,Vanuatu,2,0,Friendly,True
 2023-03-24,Moldova,Faroe Islands,1,1,UEFA Euro qualification,False
@@ -7608,19 +7607,19 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,Tournament,Neutral
 2023-03-27,Montenegro,Serbia,0,2,UEFA Euro qualification,False
 2023-03-27,United States,El Salvador,1,0,CONCACAF Nations League,False
 2023-03-27,Guatemala,French Guiana,4,0,CONCACAF Nations League,False
-2023-03-27,Trinidad and Tobago,Nicaragua,1,1,CONCACAF Nations League,False
 2023-03-27,Saint Lucia,Dominica,3,1,CONCACAF Nations League,False
+2023-03-27,Trinidad and Tobago,Nicaragua,1,1,CONCACAF Nations League,False
 2023-03-27,Dominican Republic,Belize,2,0,CONCACAF Nations League,False
 2023-03-27,Saint Kitts and Nevis,Aruba,2,0,CONCACAF Nations League,False
 2023-03-27,Moldova,Czech Republic,0,0,UEFA Euro qualification,False
 2023-03-27,Saint Vincent and the Grenadines,Bahamas,1,1,CONCACAF Nations League,False
 2023-03-27,Poland,Albania,1,0,UEFA Euro qualification,False
-2023-03-27,Oman,Lebanon,2,0,Friendly,False
+2023-03-27,Guinea-Bissau,Nigeria,0,1,African Cup of Nations qualification,False
 2023-03-27,Republic of Ireland,France,0,1,UEFA Euro qualification,False
 2023-03-27,Netherlands,Gibraltar,3,0,UEFA Euro qualification,False
 2023-03-27,Greece,Lithuania,0,0,Friendly,False
 2023-03-27,North Macedonia,Faroe Islands,1,0,Friendly,False
-2023-03-27,Guinea-Bissau,Nigeria,0,1,African Cup of Nations qualification,False
+2023-03-27,Oman,Lebanon,2,0,Friendly,False
 2023-03-27,Ethiopia,Guinea,2,3,African Cup of Nations qualification,True
 2023-03-27,Chile,Paraguay,3,2,Friendly,False
 2023-03-27,Angola,Ghana,1,1,African Cup of Nations qualification,False
@@ -7633,7 +7632,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,Tournament,Neutral
 2023-03-28,Comoros,Ivory Coast,0,2,African Cup of Nations qualification,False
 2023-03-28,Mauritania,DR Congo,1,1,African Cup of Nations qualification,False
 2023-03-28,Botswana,Equatorial Guinea,2,3,African Cup of Nations qualification,False
-2023-03-28,Liberia,South Africa,1,2,African Cup of Nations qualification,False
+2023-03-28,Libya,Tunisia,0,1,African Cup of Nations qualification,False
 2023-03-28,Mozambique,Senegal,0,1,African Cup of Nations qualification,False
 2023-03-28,Scotland,Spain,2,0,UEFA Euro qualification,False
 2023-03-28,Wales,Latvia,1,0,UEFA Euro qualification,False
@@ -7649,8 +7648,9 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,Tournament,Neutral
 2023-03-28,United States Virgin Islands,Sint Maarten,1,2,CONCACAF Nations League,False
 2023-03-28,Turkey,Croatia,0,2,UEFA Euro qualification,False
 2023-03-28,Malawi,Egypt,0,4,African Cup of Nations qualification,False
-2023-03-28,Libya,Tunisia,0,1,African Cup of Nations qualification,False
+2023-03-28,Liberia,South Africa,1,2,African Cup of Nations qualification,False
 2023-03-28,Togo,Burkina Faso,1,1,African Cup of Nations qualification,False
+2023-03-28,Namibia,Cameroon,2,1,African Cup of Nations qualification,True
 2023-03-28,Argentina,Curaçao,7,0,Friendly,False
 2023-03-28,Armenia,Cyprus,2,2,Friendly,False
 2023-03-28,Australia,Ecuador,1,2,Friendly,False
@@ -7660,8 +7660,8 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,Tournament,Neutral
 2023-03-28,India,Kyrgyzstan,2,0,Tri-Nation Series,False
 2023-03-28,Indonesia,Burundi,2,2,Friendly,False
 2023-03-28,Iran,Kenya,2,1,Friendly,False
-2023-03-28,Namibia,Cameroon,2,1,African Cup of Nations qualification,True
 2023-03-28,Japan,Colombia,1,2,Friendly,False
+2023-03-28,Jordan,Philippines,4,0,Friendly,True
 2023-03-28,South Korea,Uruguay,1,2,Friendly,False
 2023-03-28,Kuwait,Tajikistan,2,1,Friendly,False
 2023-03-28,Malaysia,Hong Kong,2,0,Friendly,False
@@ -7671,10 +7671,10 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,Tournament,Neutral
 2023-03-28,United Arab Emirates,Thailand,2,0,Friendly,False
 2023-03-28,Uzbekistan,Venezuela,1,1,Friendly,True
 2023-03-28,Eswatini,Cape Verde,0,1,African Cup of Nations qualification,True
-2023-03-28,Jordan,Philippines,4,0,Friendly,True
 2023-03-29,Rwanda,Benin,1,1,African Cup of Nations qualification,False
 2023-03-31,Nepal,Laos,2,1,Tri Nation Tournament,False
 2023-04-19,United States,Mexico,1,1,Friendly,False
+2023-05-13,Guernsey,Jersey,1,2,Muratti Vase,False
 2023-06-07,Mexico,Guatemala,2,0,Friendly,False
 2023-06-09,Lebanon,Vanuatu,3,1,Intercontinental Cup,True
 2023-06-09,India,Mongolia,2,0,Intercontinental Cup,False
@@ -7694,78 +7694,78 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,Tournament,Neutral
 2023-06-13,Curaçao,Costa Rica,0,0,Friendly,True
 2023-06-14,Uzbekistan,Turkmenistan,2,0,CAFA Nations Cup,False
 2023-06-14,South Sudan,Gambia,2,3,African Cup of Nations qualification,True
-2023-06-14,Guinea-Bissau,São Tomé and Príncipe,1,0,African Cup of Nations qualification,False
+2023-06-14,Guinea,Egypt,1,2,African Cup of Nations qualification,True
 2023-06-14,Mauritius,Djibouti,1,3,Mauritius Four Nations Cup,False
 2023-06-14,Pakistan,Kenya,0,1,Mauritius Four Nations Cup,True
 2023-06-14,Oman,Tajikistan,1,1,CAFA Nations Cup,True
-2023-06-14,Guinea,Egypt,1,2,African Cup of Nations qualification,True
+2023-06-14,Guinea-Bissau,São Tomé and Príncipe,1,0,African Cup of Nations qualification,False
 2023-06-14,Uruguay,Nicaragua,4,1,Friendly,False
 2023-06-14,DR Congo,Uganda,1,0,Friendly,True
 2023-06-14,Indonesia,Palestine,0,0,Friendly,False
 2023-06-14,Netherlands,Croatia,2,4,UEFA Nations League,False
 2023-06-14,Mozambique,Malawi,1,1,Friendly,False
-2023-06-14,Malaysia,Solomon Islands,4,1,Friendly,False
 2023-06-14,Togo,Lesotho,2,0,Friendly,True
-2023-06-15,Spain,Italy,2,1,UEFA Nations League,True
+2023-06-14,Malaysia,Solomon Islands,4,1,Friendly,False
 2023-06-15,Vietnam,Hong Kong,1,0,Friendly,False
+2023-06-15,Spain,Italy,2,1,UEFA Nations League,True
+2023-06-15,Philippines,Nepal,1,0,Friendly,False
 2023-06-15,Japan,El Salvador,6,0,Friendly,False
 2023-06-15,Jamaica,Qatar,1,2,Friendly,True
-2023-06-15,Honduras,Venezuela,0,1,Friendly,True
 2023-06-15,Costa Rica,Guatemala,0,1,Friendly,True
-2023-06-15,Philippines,Nepal,1,0,Friendly,False
+2023-06-15,Honduras,Venezuela,0,1,Friendly,True
 2023-06-15,Argentina,Australia,2,0,Friendly,True
 2023-06-15,United States,Mexico,3,0,CONCACAF Nations League,False
 2023-06-15,Panama,Canada,0,2,CONCACAF Nations League,True
 2023-06-15,India,Lebanon,0,0,Intercontinental Cup,False
 2023-06-15,Vanuatu,Mongolia,1,0,Intercontinental Cup,True
 2023-06-15,Cambodia,Bangladesh,0,1,Friendly,False
+2023-06-16,Finland,Slovenia,2,0,UEFA Euro qualification,False
 2023-06-16,North Macedonia,Ukraine,2,3,UEFA Euro qualification,False
 2023-06-16,Wales,Armenia,2,4,UEFA Euro qualification,False
 2023-06-16,Latvia,Turkey,2,3,UEFA Euro qualification,False
-2023-06-16,Finland,Slovenia,2,0,UEFA Euro qualification,False
 2023-06-16,Denmark,Northern Ireland,1,0,UEFA Euro qualification,False
-2023-06-16,Belarus,Israel,1,2,UEFA Euro qualification,True
+2023-06-16,Sweden,New Zealand,4,1,Friendly,False
 2023-06-16,Andorra,Switzerland,1,2,UEFA Euro qualification,False
+2023-06-16,Belarus,Israel,1,2,UEFA Euro qualification,True
 2023-06-16,Kosovo,Romania,0,0,UEFA Euro qualification,False
 2023-06-16,Kyrgyzstan,Iran,1,5,CAFA Nations Cup,False
 2023-06-16,Malta,England,0,4,UEFA Euro qualification,False
 2023-06-16,San Marino,Kazakhstan,0,3,UEFA Euro qualification,True
 2023-06-16,Greece,Republic of Ireland,2,1,UEFA Euro qualification,False
-2023-06-16,Singapore,Papua New Guinea,2,2,Friendly,False
-2023-06-16,Sweden,New Zealand,4,1,Friendly,False
-2023-06-16,Gibraltar,France,0,3,UEFA Euro qualification,True
-2023-06-16,Antigua and Barbuda,Guadeloupe,0,5,Gold Cup qualification,True
-2023-06-16,Martinique,Saint Lucia,3,1,Gold Cup qualification,True
-2023-06-16,Curaçao,Saint Kitts and Nevis,1,1,Gold Cup qualification,True
-2023-06-16,China,Myanmar,4,0,Friendly,False
-2023-06-16,Chile,Dominican Republic,5,0,Friendly,False
-2023-06-16,Colombia,Iraq,1,0,Friendly,True
 2023-06-16,South Korea,Peru,0,1,Friendly,False
-2023-06-16,Poland,Germany,1,0,Friendly,False
+2023-06-16,Chile,Dominican Republic,5,0,Friendly,False
+2023-06-16,Singapore,Papua New Guinea,2,2,Friendly,False
 2023-06-16,Serbia,Jordan,3,2,Friendly,True
+2023-06-16,Poland,Germany,1,0,Friendly,False
+2023-06-16,Antigua and Barbuda,Guadeloupe,0,5,Gold Cup qualification,True
+2023-06-16,Colombia,Iraq,1,0,Friendly,True
 2023-06-16,Taiwan,Thailand,2,2,Friendly,False
+2023-06-16,China,Myanmar,4,0,Friendly,False
+2023-06-16,Gibraltar,France,0,3,UEFA Euro qualification,True
+2023-06-16,Curaçao,Saint Kitts and Nevis,1,1,Gold Cup qualification,True
+2023-06-16,Martinique,Saint Lucia,3,1,Gold Cup qualification,True
 2023-06-17,Djibouti,Pakistan,3,1,Mauritius Four Nations Cup,True
 2023-06-17,Canton Ticino,Raetia,1,8,CONIFA World Football Cup qualification,False
 2023-06-17,Turkmenistan,Oman,0,2,CAFA Nations Cup,True
-2023-06-17,Uzbekistan,Tajikistan,5,1,CAFA Nations Cup,False
 2023-06-17,Central African Republic,Angola,1,2,African Cup of Nations qualification,True
-2023-06-17,Benin,Senegal,1,1,African Cup of Nations qualification,False
-2023-06-17,Lesotho,Comoros,0,1,African Cup of Nations qualification,True
+2023-06-17,Uzbekistan,Tajikistan,5,1,CAFA Nations Cup,False
+2023-06-17,Zambia,Ivory Coast,3,0,African Cup of Nations qualification,False
+2023-06-17,Cyprus,Georgia,1,2,UEFA Euro qualification,False
 2023-06-17,Equatorial Guinea,Tunisia,1,0,African Cup of Nations qualification,False
 2023-06-17,Botswana,Libya,1,0,African Cup of Nations qualification,False
 2023-06-17,South Africa,Morocco,2,1,African Cup of Nations qualification,False
+2023-06-17,Benin,Senegal,1,1,African Cup of Nations qualification,False
 2023-06-17,Portugal,Bosnia and Herzegovina,3,0,UEFA Euro qualification,False
-2023-06-17,Zambia,Ivory Coast,3,0,African Cup of Nations qualification,False
+2023-06-17,Lesotho,Comoros,0,1,African Cup of Nations qualification,True
 2023-06-17,Iceland,Slovakia,1,2,UEFA Euro qualification,False
-2023-06-17,Cyprus,Georgia,1,2,UEFA Euro qualification,False
+2023-06-17,Brazil,Guinea,4,1,Friendly,True
 2023-06-17,Montenegro,Hungary,0,0,UEFA Euro qualification,False
 2023-06-17,Luxembourg,Liechtenstein,2,0,UEFA Euro qualification,False
 2023-06-17,Guyana,Grenada,1,1,Gold Cup qualification,True
-2023-06-17,Suriname,Puerto Rico,0,0,Gold Cup qualification,True
-2023-06-17,Brazil,Guinea,4,1,Friendly,True
+2023-06-17,French Guiana,Sint Maarten,4,1,Gold Cup qualification,True
 2023-06-17,Ecuador,Bolivia,1,0,Friendly,True
 2023-06-17,Norway,Scotland,1,2,UEFA Euro qualification,False
-2023-06-17,French Guiana,Sint Maarten,4,1,Gold Cup qualification,True
+2023-06-17,Suriname,Puerto Rico,0,0,Gold Cup qualification,True
 2023-06-17,Faroe Islands,Czech Republic,0,3,UEFA Euro qualification,False
 2023-06-17,Albania,Moldova,2,0,UEFA Euro qualification,False
 2023-06-17,Azerbaijan,Estonia,1,1,UEFA Euro qualification,False
@@ -7780,33 +7780,33 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,Tournament,Neutral
 2023-06-18,Eswatini,Togo,0,2,African Cup of Nations qualification,True
 2023-06-18,Rwanda,Mozambique,0,2,African Cup of Nations qualification,False
 2023-06-18,Sierra Leone,Nigeria,2,3,African Cup of Nations qualification,True
-2023-06-18,Singapore,Solomon Islands,1,1,Friendly,False
+2023-06-18,Guatemala,Venezuela,0,1,Friendly,True
 2023-06-18,Croatia,Spain,0,0,UEFA Nations League,True
 2023-06-18,Netherlands,Italy,2,3,UEFA Nations League,False
+2023-06-18,Singapore,Solomon Islands,1,1,Friendly,False
 2023-06-18,Paraguay,Nicaragua,2,0,Friendly,False
-2023-06-18,Guatemala,Venezuela,0,1,Friendly,True
 2023-06-18,Egypt,South Sudan,3,0,Friendly,False
 2023-06-18,United States,Canada,2,0,CONCACAF Nations League,False
 2023-06-18,Panama,Mexico,0,1,CONCACAF Nations League,True
 2023-06-18,India,Lebanon,2,0,Intercontinental Cup,False
 2023-06-18,Mauritius,Kenya,1,0,Mauritius Four Nations Cup,False
 2023-06-19,Finland,San Marino,6,0,UEFA Euro qualification,False
-2023-06-19,Israel,Andorra,2,1,UEFA Euro qualification,False
 2023-06-19,Northern Ireland,Kazakhstan,0,1,UEFA Euro qualification,False
+2023-06-19,Slovenia,Denmark,1,1,UEFA Euro qualification,False
+2023-06-19,Philippines,Taiwan,2,3,Friendly,False
+2023-06-19,Switzerland,Romania,2,2,UEFA Euro qualification,False
+2023-06-19,Israel,Andorra,2,1,UEFA Euro qualification,False
 2023-06-19,Turkey,Wales,2,0,UEFA Euro qualification,False
 2023-06-19,Belarus,Kosovo,2,1,UEFA Euro qualification,True
-2023-06-19,Switzerland,Romania,2,2,UEFA Euro qualification,False
-2023-06-19,Slovenia,Denmark,1,1,UEFA Euro qualification,False
 2023-06-19,Armenia,Latvia,2,1,UEFA Euro qualification,False
-2023-06-19,Philippines,Taiwan,2,3,Friendly,False
-2023-06-19,Ukraine,Malta,1,0,UEFA Euro qualification,True
-2023-06-19,England,North Macedonia,7,0,UEFA Euro qualification,False
-2023-06-19,Hong Kong,Thailand,0,1,Friendly,False
-2023-06-19,Indonesia,Argentina,0,2,Friendly,False
 2023-06-19,Jamaica,Jordan,1,2,Friendly,True
-2023-06-19,Macau,Myanmar,0,2,Friendly,True
-2023-06-19,Republic of Ireland,Gibraltar,3,0,UEFA Euro qualification,False
+2023-06-19,Ukraine,Malta,1,0,UEFA Euro qualification,True
 2023-06-19,France,Greece,1,0,UEFA Euro qualification,False
+2023-06-19,Republic of Ireland,Gibraltar,3,0,UEFA Euro qualification,False
+2023-06-19,Macau,Myanmar,0,2,Friendly,True
+2023-06-19,England,North Macedonia,7,0,UEFA Euro qualification,False
+2023-06-19,Indonesia,Argentina,0,2,Friendly,False
+2023-06-19,Hong Kong,Thailand,0,1,Friendly,False
 2023-06-20,Faroe Islands,Albania,1,3,UEFA Euro qualification,False
 2023-06-20,Moldova,Poland,3,2,UEFA Euro qualification,False
 2023-06-20,Austria,Sweden,2,0,UEFA Euro qualification,False
@@ -7814,16 +7814,16 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,Tournament,Neutral
 2023-06-20,Hungary,Lithuania,2,0,UEFA Euro qualification,False
 2023-06-20,Bulgaria,Serbia,1,1,UEFA Euro qualification,False
 2023-06-20,Iceland,Portugal,0,1,UEFA Euro qualification,False
-2023-06-20,Bosnia and Herzegovina,Luxembourg,0,2,UEFA Euro qualification,False
-2023-06-20,Liechtenstein,Slovakia,0,1,UEFA Euro qualification,False
 2023-06-20,Kyrgyzstan,Oman,0,1,CAFA Nations Cup,True
+2023-06-20,Liechtenstein,Slovakia,0,1,UEFA Euro qualification,False
+2023-06-20,Norway,Cyprus,3,1,UEFA Euro qualification,False
 2023-06-20,Uzbekistan,Iran,0,1,CAFA Nations Cup,False
 2023-06-20,Burundi,Namibia,3,2,African Cup of Nations qualification,True
 2023-06-20,Ethiopia,Malawi,0,0,African Cup of Nations qualification,True
 2023-06-20,Sudan,Mauritania,0,3,African Cup of Nations qualification,True
-2023-06-20,Norway,Cyprus,3,1,UEFA Euro qualification,False
+2023-06-20,Bosnia and Herzegovina,Luxembourg,0,2,UEFA Euro qualification,False
 2023-06-20,Scotland,Georgia,2,0,UEFA Euro qualification,False
-2023-06-20,Vietnam,Syria,1,0,Friendly,False
+2023-06-20,Montenegro,Czech Republic,1,4,Friendly,False
 2023-06-20,Uruguay,Cuba,2,0,Friendly,False
 2023-06-20,Guadeloupe,Guyana,2,0,Gold Cup qualification,True
 2023-06-20,Martinique,Puerto Rico,2,0,Gold Cup qualification,True
@@ -7831,21 +7831,21 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,Tournament,Neutral
 2023-06-20,Algeria,Tunisia,1,1,Friendly,False
 2023-06-20,Bolivia,Chile,0,0,Friendly,False
 2023-06-20,Brazil,Senegal,2,4,Friendly,True
+2023-06-20,Vietnam,Syria,1,0,Friendly,False
 2023-06-20,China,Palestine,2,0,Friendly,False
 2023-06-20,Germany,Colombia,0,2,Friendly,False
 2023-06-20,Haiti,Trinidad and Tobago,0,0,Friendly,True
 2023-06-20,Japan,Peru,4,1,Friendly,False
 2023-06-20,South Korea,El Salvador,1,1,Friendly,False
 2023-06-20,Malaysia,Papua New Guinea,10,0,Friendly,False
-2023-06-20,Montenegro,Czech Republic,1,4,Friendly,False
 2023-06-20,Ecuador,Costa Rica,3,1,Friendly,True
 2023-06-21,Kuwait,Nepal,3,1,SAFF Cup,True
 2023-06-21,India,Pakistan,4,0,SAFF Cup,False
 2023-06-22,Maldives,Bhutan,2,0,SAFF Cup,True
 2023-06-22,Lebanon,Bangladesh,2,0,SAFF Cup,True
-2023-06-24,United States,Jamaica,1,1,Gold Cup,False
-2023-06-24,India,Nepal,2,0,SAFF Cup,False
 2023-06-24,Pakistan,Kuwait,0,4,SAFF Cup,True
+2023-06-24,India,Nepal,2,0,SAFF Cup,False
+2023-06-24,United States,Jamaica,1,1,Gold Cup,False
 2023-06-25,Bangladesh,Maldives,3,1,SAFF Cup,True
 2023-06-25,Bhutan,Lebanon,1,4,SAFF Cup,True
 2023-06-25,Trinidad and Tobago,Saint Kitts and Nevis,3,0,Gold Cup,True
@@ -7854,15 +7854,15 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,Tournament,Neutral
 2023-06-26,Costa Rica,Panama,1,2,Gold Cup,True
 2023-06-26,El Salvador,Martinique,1,2,Gold Cup,True
 2023-06-27,Nepal,Pakistan,1,0,SAFF Cup,True
+2023-06-27,India,Kuwait,1,1,SAFF Cup,False
 2023-06-27,Canada,Guadeloupe,2,2,Gold Cup,False
 2023-06-27,Guatemala,Cuba,1,0,Gold Cup,True
-2023-06-27,India,Kuwait,1,1,SAFF Cup,False
 2023-06-28,Lebanon,Maldives,1,0,SAFF Cup,True
 2023-06-28,Bhutan,Bangladesh,1,3,SAFF Cup,True
 2023-06-28,Jamaica,Trinidad and Tobago,4,1,Gold Cup,True
 2023-06-28,United States,Saint Kitts and Nevis,6,0,Gold Cup,False
-2023-06-29,Haiti,Mexico,1,3,Gold Cup,True
 2023-06-29,Qatar,Honduras,1,1,Gold Cup,True
+2023-06-29,Haiti,Mexico,1,3,Gold Cup,True
 2023-06-30,El Salvador,Costa Rica,0,0,Gold Cup,True
 2023-06-30,Székely Land,Chameria,3,2,CONIFA World Football Cup qualification,False
 2023-06-30,Martinique,Panama,1,2,Gold Cup,True
@@ -7871,11 +7871,11 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,Tournament,Neutral
 2023-07-01,Kuwait,Bangladesh,1,0,SAFF Cup,True
 2023-07-01,Cuba,Guadeloupe,1,4,Gold Cup,True
 2023-07-01,Guatemala,Canada,0,0,Gold Cup,True
-2023-07-02,Mexico,Qatar,0,1,Gold Cup,True
-2023-07-02,Honduras,Haiti,2,1,Gold Cup,True
 2023-07-02,Jamaica,Saint Kitts and Nevis,5,0,Gold Cup,True
-2023-07-02,United States,Trinidad and Tobago,6,0,Gold Cup,False
 2023-07-02,Székely Land,Two Sicilies,7,0,CONIFA World Football Cup qualification,False
+2023-07-02,United States,Trinidad and Tobago,6,0,Gold Cup,False
+2023-07-02,Honduras,Haiti,2,1,Gold Cup,True
+2023-07-02,Mexico,Qatar,0,1,Gold Cup,True
 2023-07-04,India,Kuwait,1,1,SAFF Cup,False
 2023-07-04,Costa Rica,Martinique,6,4,Gold Cup,True
 2023-07-04,Panama,El Salvador,2,2,Gold Cup,True
