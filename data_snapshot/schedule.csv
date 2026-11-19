@@ -666,7 +666,7 @@ E2,Doncaster Rovers,Leyton Orient,2026-11-14 15:00:00+00:00
 E2,Leicester City,Bradford City,2026-11-14 15:00:00+00:00
 E2,Stevenage,Mansfield Town,2026-11-14 15:00:00+00:00
 E2,Wycombe Wanderers,Huddersfield Town,2026-11-14 15:00:00+00:00
-E2,Peterborough United,Oxford United,2026-12-05 19:45:00+00:00
+E2,Peterborough United,Oxford United,2026-12-05 15:00:00+00:00
 E2,Luton Town,Cambridge United,2027-02-02 19:45:00+00:00
 E2,Barnsley,Sheffield Wednesday,2026-11-20 20:00:00+00:00
 E2,Blackpool,Wigan Athletic,2026-11-21 12:30:00+00:00
@@ -1439,16 +1439,16 @@ SP1,RC Deportivo,FC Barcelona,2026-11-29 15:15:00+00:00
 SP1,Celta,Villarreal CF,2026-11-29 17:30:00+00:00
 SP1,Real Sociedad,Sevilla FC,2026-11-29 20:00:00+00:00
 SP1,RCD Espanyol de Barcelona,Getafe CF,2026-11-30 20:00:00+00:00
-SP1,Deportivo Alavés,RCD Espanyol de Barcelona,2026-12-06 00:00:00+00:00
-SP1,Athletic Club,Real Madrid,2026-12-06 00:00:00+00:00
-SP1,Atlético de Madrid,Real Betis,2026-12-06 00:00:00+00:00
-SP1,FC Barcelona,Celta,2026-12-06 00:00:00+00:00
-SP1,Getafe CF,Valencia CF,2026-12-06 00:00:00+00:00
-SP1,CA Osasuna,Elche CF,2026-12-06 00:00:00+00:00
-SP1,R. Racing Club,RC Deportivo,2026-12-06 00:00:00+00:00
-SP1,Rayo Vallecano,Levante UD,2026-12-06 00:00:00+00:00
-SP1,Sevilla FC,Málaga CF,2026-12-06 00:00:00+00:00
-SP1,Villarreal CF,Real Sociedad,2026-12-06 00:00:00+00:00
+SP1,Deportivo Alavés,RCD Espanyol de Barcelona,2026-12-04 20:00:00+00:00
+SP1,R. Racing Club,RC Deportivo,2026-12-05 13:00:00+00:00
+SP1,Rayo Vallecano,Levante UD,2026-12-05 15:15:00+00:00
+SP1,Villarreal CF,Real Sociedad,2026-12-05 17:30:00+00:00
+SP1,FC Barcelona,Celta,2026-12-05 20:00:00+00:00
+SP1,CA Osasuna,Elche CF,2026-12-06 13:00:00+00:00
+SP1,Athletic Club,Real Madrid,2026-12-06 15:15:00+00:00
+SP1,Getafe CF,Valencia CF,2026-12-06 17:30:00+00:00
+SP1,Atlético de Madrid,Real Betis,2026-12-06 20:00:00+00:00
+SP1,Sevilla FC,Málaga CF,2026-12-07 20:00:00+00:00
 SP1,Atlético de Madrid,Valencia CF,2026-12-13 00:00:00+00:00
 SP1,Real Betis,R. Racing Club,2026-12-13 00:00:00+00:00
 SP1,RC Deportivo,Athletic Club,2026-12-13 00:00:00+00:00
@@ -1967,69 +1967,69 @@ D1,VfB Stuttgart,Eintracht Frankfurt,2026-11-28 17:30:00+00:00
 D1,Sport-Club Freiburg,RB Leipzig,2026-11-29 14:30:00+00:00
 D1,TSG Hoffenheim,FC Augsburg,2026-11-29 16:30:00+00:00
 D1,Borussia Dortmund,Bayer 04 Leverkusen,2026-11-29 18:30:00+00:00
-D1,SV Elversberg,VfB Stuttgart,2026-12-04 00:00:00+00:00
-D1,FC Schalke 04,Borussia Dortmund,2026-12-04 00:00:00+00:00
-D1,1. FC Union Berlin,Hamburger SV,2026-12-04 00:00:00+00:00
-D1,FC Augsburg,1. FC Köln,2026-12-04 00:00:00+00:00
-D1,Eintracht Frankfurt,SV Werder Bremen,2026-12-04 00:00:00+00:00
-D1,Sport-Club Freiburg,TSG Hoffenheim,2026-12-04 00:00:00+00:00
-D1,Bayer 04 Leverkusen,Borussia Mönchengladbach,2026-12-04 00:00:00+00:00
-D1,RB Leipzig,1. FSV Mainz 05,2026-12-04 00:00:00+00:00
-D1,FC Bayern München,SC Paderborn 07,2026-12-04 00:00:00+00:00
-D1,SC Paderborn 07,SV Elversberg,2026-12-11 00:00:00+00:00
-D1,SV Werder Bremen,Bayer 04 Leverkusen,2026-12-11 00:00:00+00:00
-D1,1. FC Köln,RB Leipzig,2026-12-11 00:00:00+00:00
-D1,Hamburger SV,FC Schalke 04,2026-12-11 00:00:00+00:00
-D1,Borussia Mönchengladbach,Eintracht Frankfurt,2026-12-11 00:00:00+00:00
-D1,1. FSV Mainz 05,Sport-Club Freiburg,2026-12-11 00:00:00+00:00
-D1,TSG Hoffenheim,FC Bayern München,2026-12-11 00:00:00+00:00
-D1,VfB Stuttgart,1. FC Union Berlin,2026-12-11 00:00:00+00:00
-D1,Borussia Dortmund,FC Augsburg,2026-12-11 00:00:00+00:00
-D1,SV Elversberg,Hamburger SV,2026-12-18 00:00:00+00:00
-D1,FC Schalke 04,Borussia Mönchengladbach,2026-12-18 00:00:00+00:00
-D1,1. FC Union Berlin,TSG Hoffenheim,2026-12-18 00:00:00+00:00
-D1,1. FSV Mainz 05,1. FC Köln,2026-12-18 00:00:00+00:00
-D1,FC Augsburg,SC Paderborn 07,2026-12-18 00:00:00+00:00
-D1,Sport-Club Freiburg,VfB Stuttgart,2026-12-18 00:00:00+00:00
-D1,Bayer 04 Leverkusen,Eintracht Frankfurt,2026-12-18 00:00:00+00:00
-D1,RB Leipzig,Borussia Dortmund,2026-12-18 00:00:00+00:00
-D1,FC Bayern München,SV Werder Bremen,2026-12-18 00:00:00+00:00
-D1,SC Paderborn 07,RB Leipzig,2027-01-08 00:00:00+00:00
-D1,SV Werder Bremen,1. FC Union Berlin,2027-01-08 00:00:00+00:00
-D1,1. FC Köln,Sport-Club Freiburg,2027-01-08 00:00:00+00:00
-D1,Hamburger SV,Bayer 04 Leverkusen,2027-01-08 00:00:00+00:00
-D1,Borussia Mönchengladbach,FC Bayern München,2027-01-08 00:00:00+00:00
-D1,Eintracht Frankfurt,FC Schalke 04,2027-01-08 00:00:00+00:00
-D1,TSG Hoffenheim,SV Elversberg,2027-01-08 00:00:00+00:00
-D1,VfB Stuttgart,FC Augsburg,2027-01-08 00:00:00+00:00
-D1,Borussia Dortmund,1. FSV Mainz 05,2027-01-08 00:00:00+00:00
-D1,SV Elversberg,Eintracht Frankfurt,2027-01-12 00:00:00+00:00
-D1,FC Schalke 04,SV Werder Bremen,2027-01-12 00:00:00+00:00
-D1,1. FC Köln,Borussia Dortmund,2027-01-12 00:00:00+00:00
-D1,1. FC Union Berlin,SC Paderborn 07,2027-01-12 00:00:00+00:00
-D1,1. FSV Mainz 05,TSG Hoffenheim,2027-01-12 00:00:00+00:00
-D1,FC Augsburg,Borussia Mönchengladbach,2027-01-12 00:00:00+00:00
-D1,Sport-Club Freiburg,Hamburger SV,2027-01-12 00:00:00+00:00
-D1,RB Leipzig,VfB Stuttgart,2027-01-12 00:00:00+00:00
-D1,FC Bayern München,Bayer 04 Leverkusen,2027-01-12 00:00:00+00:00
-D1,SC Paderborn 07,1. FC Köln,2027-01-15 00:00:00+00:00
-D1,SV Werder Bremen,SV Elversberg,2027-01-15 00:00:00+00:00
-D1,Hamburger SV,FC Augsburg,2027-01-15 00:00:00+00:00
-D1,Borussia Mönchengladbach,1. FC Union Berlin,2027-01-15 00:00:00+00:00
-D1,Eintracht Frankfurt,FC Bayern München,2027-01-15 00:00:00+00:00
-D1,Bayer 04 Leverkusen,FC Schalke 04,2027-01-15 00:00:00+00:00
-D1,TSG Hoffenheim,RB Leipzig,2027-01-15 00:00:00+00:00
-D1,VfB Stuttgart,1. FSV Mainz 05,2027-01-15 00:00:00+00:00
-D1,Borussia Dortmund,Sport-Club Freiburg,2027-01-15 00:00:00+00:00
-D1,SC Paderborn 07,1. FSV Mainz 05,2027-01-22 00:00:00+00:00
-D1,FC Schalke 04,FC Augsburg,2027-01-22 00:00:00+00:00
-D1,SV Werder Bremen,Sport-Club Freiburg,2027-01-22 00:00:00+00:00
-D1,Hamburger SV,Borussia Dortmund,2027-01-22 00:00:00+00:00
-D1,Borussia Mönchengladbach,RB Leipzig,2027-01-22 00:00:00+00:00
-D1,Eintracht Frankfurt,1. FC Union Berlin,2027-01-22 00:00:00+00:00
-D1,Bayer 04 Leverkusen,SV Elversberg,2027-01-22 00:00:00+00:00
-D1,TSG Hoffenheim,1. FC Köln,2027-01-22 00:00:00+00:00
-D1,VfB Stuttgart,FC Bayern München,2027-01-22 00:00:00+00:00
+D1,FC Bayern München,SC Paderborn 07,2026-12-04 19:30:00+00:00
+D1,1. FC Union Berlin,Hamburger SV,2026-12-05 14:30:00+00:00
+D1,FC Augsburg,1. FC Köln,2026-12-05 14:30:00+00:00
+D1,Sport-Club Freiburg,TSG Hoffenheim,2026-12-05 14:30:00+00:00
+D1,Bayer 04 Leverkusen,Borussia Mönchengladbach,2026-12-05 14:30:00+00:00
+D1,RB Leipzig,1. FSV Mainz 05,2026-12-05 14:30:00+00:00
+D1,Eintracht Frankfurt,SV Werder Bremen,2026-12-05 17:30:00+00:00
+D1,FC Schalke 04,Borussia Dortmund,2026-12-06 14:30:00+00:00
+D1,SV Elversberg,VfB Stuttgart,2026-12-06 16:30:00+00:00
+D1,Hamburger SV,FC Schalke 04,2026-12-11 19:30:00+00:00
+D1,SC Paderborn 07,SV Elversberg,2026-12-12 14:30:00+00:00
+D1,1. FC Köln,RB Leipzig,2026-12-12 14:30:00+00:00
+D1,VfB Stuttgart,1. FC Union Berlin,2026-12-12 14:30:00+00:00
+D1,Borussia Dortmund,FC Augsburg,2026-12-12 14:30:00+00:00
+D1,Borussia Mönchengladbach,Eintracht Frankfurt,2026-12-12 17:30:00+00:00
+D1,1. FSV Mainz 05,Sport-Club Freiburg,2026-12-13 14:30:00+00:00
+D1,TSG Hoffenheim,FC Bayern München,2026-12-13 16:30:00+00:00
+D1,SV Werder Bremen,Bayer 04 Leverkusen,2026-12-13 18:30:00+00:00
+D1,FC Bayern München,SV Werder Bremen,2026-12-18 19:30:00+00:00
+D1,SV Elversberg,Hamburger SV,2026-12-19 14:30:00+00:00
+D1,1. FSV Mainz 05,1. FC Köln,2026-12-19 14:30:00+00:00
+D1,FC Augsburg,SC Paderborn 07,2026-12-19 14:30:00+00:00
+D1,Bayer 04 Leverkusen,Eintracht Frankfurt,2026-12-19 14:30:00+00:00
+D1,RB Leipzig,Borussia Dortmund,2026-12-19 17:30:00+00:00
+D1,Sport-Club Freiburg,VfB Stuttgart,2026-12-20 14:30:00+00:00
+D1,1. FC Union Berlin,TSG Hoffenheim,2026-12-20 16:30:00+00:00
+D1,FC Schalke 04,Borussia Mönchengladbach,2026-12-20 18:30:00+00:00
+D1,Borussia Dortmund,1. FSV Mainz 05,2027-01-08 19:30:00+00:00
+D1,SC Paderborn 07,RB Leipzig,2027-01-09 14:30:00+00:00
+D1,1. FC Köln,Sport-Club Freiburg,2027-01-09 14:30:00+00:00
+D1,Eintracht Frankfurt,FC Schalke 04,2027-01-09 14:30:00+00:00
+D1,TSG Hoffenheim,SV Elversberg,2027-01-09 14:30:00+00:00
+D1,VfB Stuttgart,FC Augsburg,2027-01-09 14:30:00+00:00
+D1,Borussia Mönchengladbach,FC Bayern München,2027-01-09 17:30:00+00:00
+D1,SV Werder Bremen,1. FC Union Berlin,2027-01-10 14:30:00+00:00
+D1,Hamburger SV,Bayer 04 Leverkusen,2027-01-10 16:30:00+00:00
+D1,RB Leipzig,VfB Stuttgart,2027-01-12 17:30:00+00:00
+D1,1. FC Köln,Borussia Dortmund,2027-01-12 19:30:00+00:00
+D1,1. FSV Mainz 05,TSG Hoffenheim,2027-01-12 19:30:00+00:00
+D1,FC Augsburg,Borussia Mönchengladbach,2027-01-12 19:30:00+00:00
+D1,SV Elversberg,Eintracht Frankfurt,2027-01-13 17:30:00+00:00
+D1,1. FC Union Berlin,SC Paderborn 07,2027-01-13 19:30:00+00:00
+D1,Sport-Club Freiburg,Hamburger SV,2027-01-13 19:30:00+00:00
+D1,FC Bayern München,Bayer 04 Leverkusen,2027-01-13 19:30:00+00:00
+D1,FC Schalke 04,SV Werder Bremen,2027-01-14 19:30:00+00:00
+D1,VfB Stuttgart,1. FSV Mainz 05,2027-01-15 19:30:00+00:00
+D1,SC Paderborn 07,1. FC Köln,2027-01-16 14:30:00+00:00
+D1,Hamburger SV,FC Augsburg,2027-01-16 14:30:00+00:00
+D1,Borussia Mönchengladbach,1. FC Union Berlin,2027-01-16 14:30:00+00:00
+D1,TSG Hoffenheim,RB Leipzig,2027-01-16 14:30:00+00:00
+D1,Borussia Dortmund,Sport-Club Freiburg,2027-01-16 14:30:00+00:00
+D1,Eintracht Frankfurt,FC Bayern München,2027-01-16 17:30:00+00:00
+D1,SV Werder Bremen,SV Elversberg,2027-01-17 14:30:00+00:00
+D1,Bayer 04 Leverkusen,FC Schalke 04,2027-01-17 16:30:00+00:00
+D1,SV Werder Bremen,Sport-Club Freiburg,2027-01-22 19:30:00+00:00
+D1,SC Paderborn 07,1. FSV Mainz 05,2027-01-23 14:30:00+00:00
+D1,FC Schalke 04,FC Augsburg,2027-01-23 14:30:00+00:00
+D1,Borussia Mönchengladbach,RB Leipzig,2027-01-23 14:30:00+00:00
+D1,VfB Stuttgart,FC Bayern München,2027-01-23 14:30:00+00:00
+D1,Hamburger SV,Borussia Dortmund,2027-01-23 17:30:00+00:00
+D1,Eintracht Frankfurt,1. FC Union Berlin,2027-01-24 14:30:00+00:00
+D1,Bayer 04 Leverkusen,SV Elversberg,2027-01-24 16:30:00+00:00
+D1,TSG Hoffenheim,1. FC Köln,2027-01-24 18:30:00+00:00
 D1,SV Elversberg,Borussia Mönchengladbach,2027-01-29 00:00:00+00:00
 D1,1. FC Köln,VfB Stuttgart,2027-01-29 00:00:00+00:00
 D1,1. FC Union Berlin,Bayer 04 Leverkusen,2027-01-29 00:00:00+00:00
@@ -2213,11 +2213,11 @@ F1,Olympique Lyonnais,Olympique de Marseille,2026-12-13 19:45:00+00:00
 F1,Stade Brestois 29,Olympique de Marseille,2027-01-02 16:00:00+00:00
 F1,FC Lorient,AJ Auxerre,2027-01-02 20:00:00+00:00
 F1,AS Monaco,OGC Nice,2027-01-02 20:00:00+00:00
-F1,Paris FC,Havre Athletic Club,2027-01-02 20:00:00+00:00
 F1,Toulouse FC,Angers SCO,2027-01-02 20:00:00+00:00
 F1,Estac Troyes,Stade Rennais FC,2027-01-02 20:00:00+00:00
 F1,Le Mans FC,Olympique Lyonnais,2027-01-03 14:00:00+00:00
 F1,LOSC Lille,RC Strasbourg Alsace,2027-01-03 16:15:00+00:00
+F1,Paris FC,Havre Athletic Club,2027-01-03 16:15:00+00:00
 F1,RC Lens,Paris Saint-Germain,2027-01-03 19:45:00+00:00
 F1,Olympique de Marseille,LOSC Lille,2027-01-15 19:45:00+00:00
 F1,Angers SCO,Paris Saint-Germain,2027-01-16 16:15:00+00:00
@@ -2396,8 +2396,8 @@ F2,FC Metz,US Boulogne CO,2026-11-20 19:00:00+00:00
 F2,AS Nancy Lorraine,Dijon FCO,2026-11-20 19:00:00+00:00
 F2,Red Star FC,Pau FC,2026-11-20 19:00:00+00:00
 F2,Stade Lavallois MFC,Montpellier Hérault SC,2026-11-21 13:00:00+00:00
-F2,FC Nantes,Grenoble Foot 38,2026-11-21 13:00:00+00:00
 F2,Stade DE Reims,AS Saint-Étienne,2026-11-21 19:00:00+00:00
+F2,FC Nantes,Grenoble Foot 38,2026-11-23 19:45:00+00:00
 F2,FC Sochaux-Montbéliard,USL Dunkerque,2026-11-23 19:45:00+00:00
 F2,FC Annecy,Stade Lavallois MFC,2026-12-04 19:00:00+00:00
 F2,US Boulogne CO,Pau FC,2026-12-04 19:00:00+00:00
