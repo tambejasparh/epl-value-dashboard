@@ -1,15 +1,6 @@
 {
- "time": "2026-11-19 23:28 UTC",
+ "time": "2026-11-20 13:56 UTC",
  "leagues": {
-  "SC1": {
-   "season": 2026,
-   "finished": 0,
-   "latest": null,
-   "errors": {
-    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
-   },
-   "teams": []
-  },
   "SC2": {
    "season": 2026,
    "finished": 0,
@@ -19,7 +10,7 @@
    },
    "teams": []
   },
-  "SC0": {
+  "SC1": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -37,7 +28,7 @@
    },
    "teams": []
   },
-  "E2": {
+  "SC0": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -55,7 +46,7 @@
    },
    "teams": []
   },
-  "E3": {
+  "E2": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -73,7 +64,43 @@
    },
    "teams": []
   },
+  "E3": {
+   "season": 2026,
+   "finished": 0,
+   "latest": null,
+   "errors": {
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
+   },
+   "teams": []
+  },
   "SC3": {
+   "season": 2026,
+   "finished": 0,
+   "latest": null,
+   "errors": {
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
+   },
+   "teams": []
+  },
+  "D2": {
+   "season": 2026,
+   "finished": 0,
+   "latest": null,
+   "errors": {
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
+   },
+   "teams": []
+  },
+  "I2": {
+   "season": 2026,
+   "finished": 0,
+   "latest": null,
+   "errors": {
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
+   },
+   "teams": []
+  },
+  "I1": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -87,34 +114,7 @@
    "finished": 0,
    "latest": null,
    "errors": {
-    "http": 429
-   },
-   "teams": []
-  },
-  "D2": {
-   "season": 2026,
-   "finished": 0,
-   "latest": null,
-   "errors": {
-    "http": 429
-   },
-   "teams": []
-  },
-  "I1": {
-   "season": 2026,
-   "finished": 0,
-   "latest": null,
-   "errors": {
-    "http": 429
-   },
-   "teams": []
-  },
-  "I2": {
-   "season": 2026,
-   "finished": 0,
-   "latest": null,
-   "errors": {
-    "http": 429
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
    },
    "teams": []
   },
@@ -123,16 +123,7 @@
    "finished": 0,
    "latest": null,
    "errors": {
-    "http": 429
-   },
-   "teams": []
-  },
-  "SP1": {
-   "season": 2026,
-   "finished": 0,
-   "latest": null,
-   "errors": {
-    "http": 429
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
    },
    "teams": []
   },
@@ -141,7 +132,16 @@
    "finished": 0,
    "latest": null,
    "errors": {
-    "http": 429
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
+   },
+   "teams": []
+  },
+  "SP1": {
+   "season": 2026,
+   "finished": 0,
+   "latest": null,
+   "errors": {
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
    },
    "teams": []
   },
@@ -150,30 +150,21 @@
    "finished": 0,
    "latest": null,
    "errors": {
-    "http": 429
-   },
-   "teams": []
-  },
-  "JPN": {
-   "season": 2026,
-   "finished": 0,
-   "latest": null,
-   "errors": {
-    "http": 429
-   },
-   "teams": []
-  },
-  "CHN": {
-   "season": 2026,
-   "finished": 0,
-   "latest": null,
-   "errors": {
-    "http": 429
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
    },
    "teams": []
   },
   "F2": {
    "season": 2026,
+   "finished": 0,
+   "latest": null,
+   "errors": {
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
+   },
+   "teams": []
+  },
+  "JPN": {
+   "season": 2027,
    "finished": 0,
    "latest": null,
    "errors": {
@@ -199,7 +190,7 @@
    },
    "teams": []
   },
-  "P1": {
+  "CHN": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -218,6 +209,15 @@
    "teams": []
   },
   "G1": {
+   "season": 2026,
+   "finished": 0,
+   "latest": null,
+   "errors": {
+    "http": 429
+   },
+   "teams": []
+  },
+  "P1": {
    "season": 2026,
    "finished": 0,
    "latest": null,
