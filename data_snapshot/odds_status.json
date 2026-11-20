@@ -1,10 +1,11 @@
 {
- "time": "2026-11-20 13:56 UTC",
+ "time": "2026-11-20 17:26 UTC",
  "key_present": true,
  "active": [
   "soccer_uefa_champs_league",
   "soccer_uefa_europa_conference_league",
-  "soccer_uefa_europa_league"
+  "soccer_uefa_europa_league",
+  "soccer_uefa_nations_league"
  ],
  "with_matches_soon": [],
  "result": "no cup / national-team matches in the next 3 days"

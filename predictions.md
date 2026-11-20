@@ -1,5 +1,5 @@
 # Football predictions — day by day
-_Updated Fri 20 Nov 2026 14:56 (Africa/Douala time). Bankroll for stakes: 100.00_
+_Updated Fri 20 Nov 2026 18:27 (Africa/Douala time). Bankroll for stakes: 100.00_
 
 ## 🟢 Safe goals picks — Under 4.5 / 5.5 / 6.5 85%+, Over 0.5 / 1.5 98%+, BTTS 96%+
 
@@ -304,6 +304,13 @@ _Safest first. 💚 = 1xBet pays at least the fair minimum._
 
 🎟️ One ticket with the top matches — top 2: 80% · top 3: 72% · top 5: 57% · top 8: 40% · top 10: 32%
 
+### Friday 27 November (2 matches)
+
+1. 18:00 · **Alanyaspor v Konyaspor** (Turkey - Super Lig) — Over/Under → Under 4.5 · 91%
+2. 18:00 · **Rizespor v Kasimpasa** (Turkey - Super Lig) — Over/Under → Under 4.5 · 87%
+
+🎟️ One ticket with the top matches — top 2: 80%
+
 ## ✅ Your bets for each day (already checked - just place them)
 
 _Only 85%+ picks, backed by bookmaker odds (or 88%+ without), with no key player missing for the team you back. Skip a bet if your odds are lower than the number shown._
@@ -410,6 +417,13 @@ _Only 85%+ picks, backed by bookmaker odds (or 88%+ without), with no key player
    ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.16+** (89% chance)
 
 🎟️ All 4 on one ticket: all 4 win about **63%** of the time (lose about 37%). Take it only if the ticket's total odds are at least **1.78**. A 2-pick ticket (#1 + #2) wins about 80%. In testing on 472 past match days, the top-4 ticket won on 72% of days - it still lost about 1 day in 4.
+
+### Friday 27 November
+
+1. 18:00 · **Alanyaspor v Konyaspor** (Turkey - Super Lig)  
+   ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.13+** (91% chance)
+
+🎟️ All 1 on one ticket: all 1 win about **91%** of the time (lose about 9%). Take it only if the ticket's total odds are at least **1.13**. In testing on 472 past match days, the top-1 ticket won on 89% of days - it still lost about 1 day in 9.
 
 ## 📋 Every match: what to bet (whatever the odds)
 
@@ -708,6 +722,11 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 - ⚠️ 18:45 · **Jablonec v Lugano** (UEFA Conference League) — BET: Jablonec total goals → Over 0.5 · 77%
 - ⚠️ 21:00 · **CSKA Sofia v Trabzonspor** (UEFA Conference League) — BET: Over/Under (total goals) → Under 4.5 · 76%
 
+### Friday 27 November (2 matches)
+
+- ✅ 18:00 · **Alanyaspor v Konyaspor** (Turkey - Super Lig) — BET: Over/Under (total goals) → Under 4.5 · 91%
+- ⚠️ 18:00 · **Rizespor v Kasimpasa** (Turkey - Super Lig) — BET: Over/Under (total goals) → Under 4.5 · 87%
+
 ## 🧾 Results of the last days (bets given before kick-off)
 
 ### Tuesday 17 November
@@ -725,7 +744,7 @@ Results: **8 of 8 bets won** (100%) · ✅ checked bets: **2 of 2 won**
 
 ## 📈 Live track record of best picks
 
-**991 of 1144 best picks won (87%)** · ✅ 'Your bets' (passed all checks): 29/31 (94%) · 🔒+⭐⭐⭐ picks: 325/363 (90%) · 292 waiting for results
+**991 of 1144 best picks won (87%)** · ✅ 'Your bets' (passed all checks): 29/31 (94%) · 🔒+⭐⭐⭐ picks: 325/363 (90%) · 294 waiting for results
 Banker 137/153 (90%) · Strong 188/210 (90%) · Good 322/367 (88%) · Fair 344/414 (83%)
 
 **🛡️ Rules for low-odds betting (read every time)**
@@ -846,6 +865,10 @@ Banker 137/153 (90%) · Strong 188/210 (90%) · Good 322/367 (88%) · Fair 344/4
   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.16 or higher.
 - 18:45 · **Olympiacos v Milan** (UEFA Europa League) — ⭐⭐⭐ Under 4.5 goals · 89% · bet at 1.16+  
   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.16 or higher.
+
+**Friday 27 November**
+- 18:00 · **Alanyaspor v Konyaspor** (Turkey - Super Lig) — 🔒 Under 4.5 goals · 91% · bet at 1.13+  
+  📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.13 or higher.
 
 ## 📅 Every match, day by day
 
@@ -1155,6 +1178,13 @@ Banker 137/153 (90%) · Strong 188/210 (90%) · Good 322/367 (88%) · Fair 344/4
 | 21:00 | UEFA Europa League | Torreense v Celtic | No odds feed: back Celtic only at 2.00+ | - | ⭐ Celtic to score · 83% · bet at 1.24+ | 1-2 | 29 / 19 / 51 | 98 / 88 / 72 / 51 / 32 / 17 / 8 | 2 / 12 / 28 / 49 / 68 / 83 / 92 |
 | 21:00 | UEFA Europa League | OFI Crete v Anderlecht | No odds feed: back Anderlecht only at 2.31+ | - | ⭐ Under 4.5 goals · 81% · bet at 1.27+ | 0-1 | 32 / 23 / 45 | 94 / 75 / 51 / 29 / 14 / 6 / 2 | 6 / 25 / 49 / 71 / 86 / 94 / 98 |
 | 21:00 | UEFA Europa League | Ferencváros v Celje | No odds feed: back Ferencváros only at 1.50+ | - | ⭐⭐ Ferencváros to score · 88% · bet at 1.18+ | 2-1 | 68 / 15 / 16 | 99 / 91 / 77 / 58 / 38 / 23 / 12 | 1 / 9 / 23 / 42 / 62 / 77 / 88 |
+
+### Friday 27 November (2 matches)
+
+| Time | Competition | Match | Advice | Stake | 🎯 Best pick | Predicted | H / D / A % | Over 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 / 6.5 % | Under 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 / 6.5 % |
+|---|---|---|---|---|---|---|---|---|---|
+| 18:00 | Turkey - Super Lig | Alanyaspor v Konyaspor | NO BET (model not profitable in this league) | - | 🔒 Under 4.5 goals · 91% · bet at 1.13+ | 1-0 | 41 / 30 / 28 | 89 / 69 / 41 / 21 / 9 / 3 / 1 | 11 / 31 / 59 / 79 / 91 / 97 / 99 |
+| 18:00 | Turkey - Super Lig | Rizespor v Kasimpasa | NO BET (model not profitable in this league) | - | ⭐⭐ Under 4.5 goals · 87% · bet at 1.18+ | 1-0 | 44 / 28 / 28 | 92 / 75 / 49 / 27 / 13 / 5 / 2 | 8 / 25 / 51 / 73 / 87 / 95 / 98 |
 
 ## ☑️ Before you place any bet
 1. Your bookmaker's odds must be **at least** the price shown (for 🏆 games: at least the 'back only at' price). Lower odds = skip the bet.
