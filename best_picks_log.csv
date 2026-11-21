@@ -1360,8 +1360,8 @@ Kickoff (UTC),Match day,League,Competition,HomeTeam,AwayTeam,Pick key,Best pick,
 2026-11-23 19:45,2026-11-23,I1,Italy - Serie A,Monza,Fiorentina,AS,⭐ Fiorentina to score · 82% · bet at 1.26+,81.9,1.26,Fair,below 85%,1.31 - 1.63
 2026-11-23 20:00,2026-11-23,E0,England - Premier League,Brentford,Everton,U45,⭐⭐ Under 4.5 goals · 85% · bet at 1.21+,85.4,1.21,Good,OK,1.49 - 1.15
 2026-11-23 20:00,2026-11-23,SP1,Spain - La Liga,Levante,Elche,U45,⭐ Under 4.5 goals · 82% · bet at 1.25+,82.3,1.25,Fair,below 85%,1.65 - 1.30
-2026-11-24 17:45,2026-11-24,UCL,UEFA Champions League,Bodø/Glimt,LASK,HS,⭐⭐⭐ Bodø/Glimt to score · 89% · bet at 1.16+,89.1,1.16,Strong,OK,3.09 - 1.12
-2026-11-24 17:45,2026-11-24,UCL,UEFA Champions League,Galatasaray,Aston Villa,AS,⭐ Aston Villa to score · 82% · bet at 1.26+,82.1,1.26,Fair,below 85%,1.24 - 2.06
+2026-11-24 17:45,2026-11-24,UCL,UEFA Champions League,Bodø/Glimt,LASK,HS,🔒 Bodø/Glimt to score · 91% · bet at 1.14+,90.5,1.14,Banker,OK,3.09 - 1.12
+2026-11-24 17:45,2026-11-24,UCL,UEFA Champions League,Galatasaray,Aston Villa,AS,⭐ Aston Villa to score · 83% · bet at 1.25+,82.7,1.25,Fair,below 85%,1.24 - 2.06
 2026-11-24 19:45,2026-11-24,E1,England - Championship,Sheffield United,Southampton,U45,⭐ Under 4.5 goals · 83% · bet at 1.24+,83.0,1.24,Fair,below 85%,1.40 - 1.51
 2026-11-24 19:45,2026-11-24,E1,England - Championship,Portsmouth,West Ham,AS,⭐ West Ham to score · 85% · bet at 1.21+,85.0,1.21,Fair,below 85%,1.37 - 1.89
 2026-11-24 19:45,2026-11-24,E1,England - Championship,Norwich,QPR,HS,⭐ Norwich to score · 83% · bet at 1.25+,82.5,1.25,Fair,below 85%,1.75 - 1.23
@@ -1378,26 +1378,26 @@ Kickoff (UTC),Match day,League,Competition,HomeTeam,AwayTeam,Pick key,Best pick,
 2026-11-24 19:45,2026-11-24,SC0,Scotland - Premiership,Hibernian,Dundee,HS,⭐ Hibernian to score · 85% · bet at 1.21+,84.9,1.21,Fair,below 85%,1.89 - 1.01
 2026-11-24 20:00,2026-11-24,E1,England - Championship,Wolves,Derby,HS,⭐⭐ Wolves to score · 86% · bet at 1.20+,86.1,1.2,Good,no bookmaker odds and below 88%,1.97 - 0.84
 2026-11-24 20:00,2026-11-24,SC0,Scotland - Premiership,Rangers,Aberdeen,HS,🔒 Rangers to score · 91% · bet at 1.13+,90.8,1.13,Banker,OK,2.39 - 0.81
-2026-11-24 20:00,2026-11-24,UCL,UEFA Champions League,Real Madrid,PSV,HS,⭐⭐⭐ Real Madrid to score · 90% · bet at 1.15+,89.6,1.15,Strong,OK,3.23 - 1.40
-2026-11-24 20:00,2026-11-24,UCL,UEFA Champions League,Man City,Napoli,HS,⭐⭐ Man City to score · 88% · bet at 1.18+,87.6,1.18,Good,no bookmaker odds and below 88%,2.77 - 0.98
-2026-11-24 20:00,2026-11-24,UCL,UEFA Champions League,Arsenal,B. Dortmund,1X,⭐⭐ Arsenal or draw · 86% · bet at 1.20+,85.8,1.2,Good,no bookmaker odds and below 88%,2.33 - 0.59
-2026-11-24 20:00,2026-11-24,UCL,UEFA Champions League,Feyenoord,Porto,U45,⭐ Under 4.5 goals · 78% · bet at 1.33+,77.5,1.33,Fair,below 85%,1.42 - 1.55
-2026-11-24 20:00,2026-11-24,UCL,UEFA Champions League,Leipzig,Lens,HS,⭐⭐ Leipzig to score · 86% · bet at 1.19+,86.2,1.19,Good,no bookmaker odds and below 88%,2.54 - 1.16
-2026-11-24 20:00,2026-11-24,UCL,UEFA Champions League,S. Bratislava,Real Betis,AS,⭐⭐ Real Betis to score · 86% · bet at 1.20+,86.1,1.2,Good,no bookmaker odds and below 88%,0.73 - 2.52
-2026-11-24 20:00,2026-11-24,UCL,UEFA Champions League,Como,AEK Athens,HS,🔒 Como to score · 91% · bet at 1.13+,91.2,1.13,Banker,OK,3.84 - 1.04
-2026-11-25 17:45,2026-11-25,UCL,UEFA Champions League,Slavia Praha,Villarreal,AS,⭐ Villarreal to score · 77% · bet at 1.34+,76.6,1.34,Fair,below 85%,1.38 - 1.66
-2026-11-25 17:45,2026-11-25,UCL,UEFA Champions League,Sabah,Barcelona,AS,🔒 Barcelona to score · 92% · bet at 1.12+,91.9,1.12,Banker,OK,1.03 - 4.33
+2026-11-24 20:00,2026-11-24,UCL,UEFA Champions League,Real Madrid,PSV,O15,🔒 Over 1.5 goals · 91% · bet at 1.14+,90.6,1.14,Banker,OK,3.23 - 1.40
+2026-11-24 20:00,2026-11-24,UCL,UEFA Champions League,Man City,Napoli,HS,🔒 Man City to score · 91% · bet at 1.14+,90.6,1.14,Banker,OK,2.77 - 0.98
+2026-11-24 20:00,2026-11-24,UCL,UEFA Champions League,Arsenal,B. Dortmund,HS,⭐⭐ Arsenal to score · 87% · bet at 1.19+,86.7,1.19,Good,OK,2.33 - 0.59
+2026-11-24 20:00,2026-11-24,UCL,UEFA Champions League,Feyenoord,Porto,U45,⭐ Under 4.5 goals · 79% · bet at 1.30+,79.2,1.3,Fair,below 85%,1.42 - 1.55
+2026-11-24 20:00,2026-11-24,UCL,UEFA Champions League,Leipzig,Lens,HS,⭐⭐⭐ Leipzig to score · 89% · bet at 1.15+,89.3,1.15,Strong,OK,2.54 - 1.16
+2026-11-24 20:00,2026-11-24,UCL,UEFA Champions League,S. Bratislava,Real Betis,AS,⭐⭐⭐ Real Betis to score · 90% · bet at 1.15+,89.8,1.15,Strong,OK,0.73 - 2.52
+2026-11-24 20:00,2026-11-24,UCL,UEFA Champions League,Como,AEK Athens,O15,⭐⭐⭐ Over 1.5 goals · 88% · bet at 1.17+,88.3,1.17,Strong,OK,3.84 - 1.04
+2026-11-25 17:45,2026-11-25,UCL,UEFA Champions League,Slavia Praha,Villarreal,AS,⭐ Villarreal to score · 79% · bet at 1.30+,79.4,1.3,Fair,below 85%,1.38 - 1.66
+2026-11-25 17:45,2026-11-25,UCL,UEFA Champions League,Sabah,Barcelona,12,🔒 Sabah or Barcelona (no draw) · 91% · bet at 1.14+,90.6,1.14,Banker,OK,1.03 - 4.33
 2026-11-25 19:45,2026-11-25,E1,England - Championship,Burnley,Birmingham,U45,⭐⭐ Under 4.5 goals · 88% · bet at 1.17+,87.8,1.17,Good,no bookmaker odds and below 88%,1.38 - 1.21
 2026-11-25 19:45,2026-11-25,E1,England - Championship,Watford,Blackburn,U45,🔒 Under 4.5 goals · 91% · bet at 1.13+,91.5,1.13,Banker,OK,1.26 - 1.05
 2026-11-25 19:45,2026-11-25,E1,England - Championship,Bolton,West Brom,U45,⭐ Under 4.5 goals · 85% · bet at 1.21+,84.9,1.21,Fair,below 85%,1.27 - 1.52
 2026-11-25 20:00,2026-11-25,E1,England - Championship,Stoke,Millwall,U45,⭐⭐⭐ Under 4.5 goals · 90% · bet at 1.15+,89.9,1.15,Strong,OK,1.22 - 1.22
-2026-11-25 20:00,2026-11-25,UCL,UEFA Champions League,Paris,Roma,HS,🔒 Paris to score · 90% · bet at 1.14+,90.1,1.14,Banker,OK,3.38 - 0.93
-2026-11-25 20:00,2026-11-25,UCL,UEFA Champions League,Inter,Stuttgart,HS,⭐ Inter to score · 83% · bet at 1.24+,83.2,1.24,Fair,below 85%,2.17 - 0.88
-2026-11-25 20:00,2026-11-25,UCL,UEFA Champions League,Atleti,Viking,HS,⭐⭐⭐ Atleti to score · 90% · bet at 1.14+,90.0,1.14,Strong,OK,3.35 - 1.10
-2026-11-25 20:00,2026-11-25,UCL,UEFA Champions League,Sporting CP,Man Utd,HS,⭐ Sporting CP to score · 77% · bet at 1.34+,77.1,1.34,Fair,below 85%,1.69 - 1.39
-2026-11-25 20:00,2026-11-25,UCL,UEFA Champions League,Club Brugge,Liverpool,AS,⭐ Liverpool to score · 81% · bet at 1.27+,81.3,1.27,Fair,below 85%,1.47 - 2.00
-2026-11-25 20:00,2026-11-25,UCL,UEFA Champions League,Lille,Bayern München,AS,⭐ Bayern München to score · 84% · bet at 1.22+,84.2,1.22,Fair,below 85%,1.00 - 2.28
-2026-11-25 20:00,2026-11-25,UCL,UEFA Champions League,Shakhtar,Fenerbahçe,U45,⭐ Under 4.5 goals · 79% · bet at 1.30+,79.1,1.3,Fair,below 85%,1.57 - 1.29
+2026-11-25 20:00,2026-11-25,UCL,UEFA Champions League,Paris,Roma,HS,🔒 Paris to score · 91% · bet at 1.13+,91.5,1.13,Banker,OK,3.38 - 0.93
+2026-11-25 20:00,2026-11-25,UCL,UEFA Champions League,Inter,Stuttgart,HS,⭐⭐⭐ Inter to score · 88% · bet at 1.17+,88.2,1.17,Strong,OK,2.17 - 0.88
+2026-11-25 20:00,2026-11-25,UCL,UEFA Champions League,Atleti,Viking,1X,🔒 Atleti or draw · 90% · bet at 1.14+,90.1,1.14,Banker,OK,3.35 - 1.10
+2026-11-25 20:00,2026-11-25,UCL,UEFA Champions League,Sporting CP,Man Utd,O15,⭐ Over 1.5 goals · 78% · bet at 1.32+,78.1,1.32,Fair,below 85%,1.69 - 1.39
+2026-11-25 20:00,2026-11-25,UCL,UEFA Champions League,Club Brugge,Liverpool,AS,⭐⭐ Liverpool to score · 86% · bet at 1.20+,85.6,1.2,Good,OK,1.47 - 2.00
+2026-11-25 20:00,2026-11-25,UCL,UEFA Champions League,Lille,Bayern München,AS,⭐⭐ Bayern München to score · 86% · bet at 1.20+,86.0,1.2,Good,OK,1.00 - 2.28
+2026-11-25 20:00,2026-11-25,UCL,UEFA Champions League,Shakhtar,Fenerbahçe,U45,⭐ Under 4.5 goals · 81% · bet at 1.27+,81.3,1.27,Fair,below 85%,1.57 - 1.29
 2026-11-26 15:30,2026-11-26,UECL,UEFA Conference League,Kairat Almaty,Mjällby,U45,⭐ Under 4.5 goals · 84% · bet at 1.22+,84.1,1.22,Fair,below 85%,1.15 - 1.31
 2026-11-26 17:45,2026-11-26,UECL,UEFA Conference League,Pafos,Midtjylland,U45,⭐ Under 4.5 goals · 83% · bet at 1.24+,82.7,1.24,Fair,below 85%,1.44 - 1.14
 2026-11-26 17:45,2026-11-26,UECL,UEFA Conference League,Ajax,Thun,HS,⭐ Ajax to score · 84% · bet at 1.22+,84.2,1.22,Fair,below 85%,2.28 - 1.06
@@ -1497,3 +1497,15 @@ Kickoff (UTC),Match day,League,Competition,HomeTeam,AwayTeam,Pick key,Best pick,
 2026-11-28 15:30,2026-11-28,P1,Portugal - Primeira Liga,Moreirense,Santa Clara,U35,⭐ Under 3.5 goals · 84% · bet at 1.23+,83.8,1.23,Fair,below 85%,0.97 - 1.13
 2026-11-28 16:00,2026-11-28,T1,Turkey - Super Lig,Gaziantep,Amedspor,AS,⭐⭐⭐ Amedspor to score · 89% · bet at 1.15+,89.2,1.15,Strong,OK,1.24 - 2.23
 2026-11-28 16:15,2026-11-28,F1,France - Ligue 1,Angers,Lens,U45,⭐⭐ Under 4.5 goals · 86% · bet at 1.20+,86.0,1.2,Good,no bookmaker odds and below 88%,0.97 - 1.75
+2026-11-28 17:00,2026-11-28,I1,Italy - Serie A,Torino,Lazio,U45,⭐⭐ Under 4.5 goals · 88% · bet at 1.18+,87.5,1.18,Good,no bookmaker odds and below 88%,1.11 - 1.51
+2026-11-28 17:30,2026-11-28,E0,England - Premier League,Ipswich,Aston Villa,AS,⭐ Aston Villa to score · 85% · bet at 1.21+,85.0,1.21,Fair,below 85%,1.35 - 1.89
+2026-11-28 17:30,2026-11-28,D1,Germany - Bundesliga,Stuttgart,Ein Frankfurt,HS,🔒 Stuttgart to score · 91% · bet at 1.14+,90.7,1.14,Banker,OK,2.37 - 1.51
+2026-11-28 17:30,2026-11-28,SP1,Spain - La Liga,Elche,Ath Madrid,U45,⭐⭐ Under 4.5 goals · 86% · bet at 1.20+,86.0,1.2,Good,no bookmaker odds and below 88%,1.13 - 1.59
+2026-11-28 17:45,2026-11-28,N1,Netherlands - Eredivisie,PSV Eindhoven,Go Ahead Eagles,1X,⭐⭐⭐ PSV Eindhoven or draw · 89% · bet at 1.16+,88.8,1.16,Strong,OK,3.13 - 1.22
+2026-11-28 17:45,2026-11-28,SC0,Scotland - Premiership,Motherwell,Hibernian,U45,⭐⭐ Under 4.5 goals · 87% · bet at 1.18+,87.4,1.18,Good,no bookmaker odds and below 88%,1.40 - 1.22
+2026-11-28 18:00,2026-11-28,P1,Portugal - Primeira Liga,Academico Viseu,Alverca,U45,⭐⭐⭐ Under 4.5 goals · 89% · bet at 1.16+,89.0,1.16,Strong,OK,1.44 - 1.07
+2026-11-28 19:45,2026-11-28,F1,France - Ligue 1,Paris SG,Lorient,HS,⭐⭐⭐ Paris SG to score · 88% · bet at 1.16+,88.4,1.16,Strong,OK,2.16 - 0.83
+2026-11-28 19:45,2026-11-28,F1,France - Ligue 1,Nice,Troyes,U45,⭐ Under 4.5 goals · 85% · bet at 1.21+,84.9,1.21,Fair,below 85%,1.62 - 1.17
+2026-11-28 19:45,2026-11-28,F1,France - Ligue 1,Le Havre,Strasbourg,U45,⭐ Under 4.5 goals · 82% · bet at 1.25+,82.3,1.25,Fair,below 85%,1.35 - 1.60
+2026-11-28 19:45,2026-11-28,F1,France - Ligue 1,Le Mans,Lille,U45,⭐⭐ Under 4.5 goals · 87% · bet at 1.19+,86.6,1.19,Good,no bookmaker odds and below 88%,1.12 - 1.56
+2026-11-28 19:45,2026-11-28,I1,Italy - Serie A,Inter,Genoa,HS,⭐⭐⭐ Inter to score · 89% · bet at 1.16+,88.9,1.16,Strong,OK,2.20 - 0.80
