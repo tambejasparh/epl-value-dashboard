@@ -1,19 +1,9 @@
 # Football predictions — day by day
-_Updated Sat 21 Nov 2026 20:57 (Africa/Douala time). Bankroll for stakes: 100.00_
+_Updated Sat 21 Nov 2026 23:07 (Africa/Douala time). Bankroll for stakes: 100.00_
 
 ## 🟢 Safe goals picks — Under 4.5 / 5.5 / 6.5 85%+, Over 0.5 / 1.5 98%+, BTTS 96%+
 
 _Safest first. 💚 = 1xBet pays at least the fair minimum._
-
-### Saturday 21 November (5 matches)
-
-1. 21:00 · **Tenerife v Mallorca** (Spain - Segunda Division) — Over/Under → Under 4.5 · 92%
-2. 21:00 · **Motherwell v Rangers** (Scotland - Premiership) — Over/Under → Under 5.5 · 91%
-3. 21:00 · **Telstar v Zwolle** (Netherlands - Eredivisie) — Over/Under → Under 5.5 · 91%
-4. 21:00 · **Groningen v Heerenveen** (Netherlands - Eredivisie) — Over/Under → Under 5.5 · 88%
-5. 21:00 · **Real Madrid v Celta** (Spain - La Liga) — Over/Under → Under 5.5 · 88%
-
-🎟️ One ticket with the top matches — top 2: 84% · top 3: 77% · top 5: 59%
 
 ### Sunday 22 November (44 matches)
 
@@ -176,7 +166,7 @@ _Safest first. 💚 = 1xBet pays at least the fair minimum._
 
 🎟️ One ticket with the top matches — top 2: 83% · top 3: 76% · top 5: 60% · top 8: 40% · top 10: 29%
 
-### Saturday 28 November (64 matches)
+### Saturday 28 November (67 matches)
 
 1. 18:45 · **PSV Eindhoven v Go Ahead Eagles** (Netherlands - Eredivisie) — Over/Under → Over 0.5 · 98%
 2. 16:00 · **Walsall v Northampton** (England - League Two) — Over/Under → Under 4.5 · 95%
@@ -190,71 +180,67 @@ _Safest first. 💚 = 1xBet pays at least the fair minimum._
 10. 16:00 · **Rotherham v Oldham** (England - League Two) — Over/Under → Under 5.5 · 93%
 11. 16:00 · **Luton v Oxford** (England - League One) — Over/Under → Under 5.5 · 93%
 12. 13:30 · **Milton Keynes Dons v Notts County** (England - League One) — Over/Under → Under 5.5 · 93%
-13. 14:00 · **Betis v Vallecano** (Spain - La Liga) — Over/Under → Under 5.5 · 93%
-14. 16:00 · **Stockport v Leyton Orient** (England - League One) — Over/Under → Under 5.5 · 92%
-15. 16:00 · **Leicester v Mansfield** (England - League One) — Over/Under → Under 5.5 · 92%
-16. 16:00 · **Sheffield Weds v Reading** (England - League One) — Over/Under → Under 5.5 · 92%
-17. 16:00 · **Stevenage v Blackpool** (England - League One) — Over/Under → Under 4.5 · 92%
-18. 20:45 · **Le Havre v Strasbourg** (France - Ligue 1) — Over/Under → Under 5.5 · 92%
-19. 16:00 · **Wycombe v Bradford** (England - League One) — Over/Under → Under 4.5 · 92%
-20. 20:45 · **Paris SG v Lorient** (France - Ligue 1) — Over/Under → Under 5.5 · 92%
-21. 20:45 · **Inter v Genoa** (Italy - Serie A) — Over/Under → Under 5.5 · 92%
-22. 13:30 · **Peterboro v Cambridge** (England - League One) — Over/Under → Under 5.5 · 91%
-23. 16:00 · **Rochdale v Barnet** (England - League Two) — Over/Under → Under 5.5 · 91%
-24. 15:30 · **Hamburg v Bayern Munich** (Germany - Bundesliga) — Over/Under → Under 6.5 · 91%
-25. 16:15 · **Malaga v Ath Bilbao** (Spain - La Liga) — Over/Under → Under 4.5 · 90%
-26. 16:00 · **Man United v Brentford** (England - Premier League) — Over/Under → Under 5.5 · 90%
-27. 18:30 · **Stuttgart v Ein Frankfurt** (Germany - Bundesliga) — Over/Under → Under 6.5 · 90%
-28. 15:00 · **Frosinone v Parma** (Italy - Serie A) — Over/Under → Under 5.5 · 90%
-29. 16:00 · **Fleetwood Town v Accrington** (England - League Two) — Over/Under → Under 4.5 · 90%
-30. 16:00 · **Birmingham v Bolton** (England - Championship) — Over/Under → Under 5.5 · 90%
-31. 16:30 · **Excelsior v Telstar** (Netherlands - Eredivisie) — Over/Under → Under 5.5 · 89%
-32. 16:00 · **West Brom v Bristol City** (England - Championship) — Over/Under → Under 4.5 · 89%
-33. 19:00 · **Academico Viseu v Alverca** (Portugal - Primeira Liga) — Over/Under → Under 4.5 · 89%
-34. 18:30 · **Ipswich v Aston Villa** (England - Premier League) — Over/Under → Under 5.5 · 89%
-35. 16:00 · **Derby v Watford** (England - Championship) — Over/Under → Under 4.5 · 89%
-36. 16:00 · **Rangers v Falkirk** (Scotland - Premiership) — Over/Under → Under 5.5 · 89%
-37. 16:00 · **Port Vale v Newport County** (England - League Two) — Over/Under → Under 4.5 · 88%
-38. 16:00 · **Wrexham v Portsmouth** (England - Championship) — Over/Under → Under 4.5 · 88%
-39. 16:00 · **Leeds v Coventry** (England - Premier League) — Over/Under → Under 4.5 · 88%
-40. 16:00 · **Salford v Gillingham** (England - League Two) — Over/Under → Under 4.5 · 88%
-41. 16:00 · **Millwall v Burnley** (England - Championship) — Over/Under → Under 4.5 · 88%
-42. 16:00 · **Wigan v Plymouth** (England - League One) — Over/Under → Under 4.5 · 88%
-43. 15:30 · **FC Koln v Elversberg** (Germany - Bundesliga) — Over/Under → Under 5.5 · 88%
-44. 18:00 · **Torino v Lazio** (Italy - Serie A) — Over/Under → Under 4.5 · 88%
-45. 13:30 · **Bristol Rvs v Tranmere** (England - League Two) — Over/Under → Under 4.5 · 88%
-46. 18:45 · **Motherwell v Hibernian** (Scotland - Premiership) — Over/Under → Under 4.5 · 87%
-47. 16:00 · **Crewe v Grimsby** (England - League Two) — Over/Under → Under 4.5 · 87%
-48. 16:00 · **West Ham v Stoke** (England - Championship) — Over/Under → Under 5.5 · 87%
-49. 14:00 · **Samsunspor v Genclerbirligi** (Turkey - Super Lig) — Over/Under → Under 4.5 · 87%
-50. 16:00 · **Bromley v Burton** (England - League One) — Over/Under → Under 4.5 · 87%
-51. 16:00 · **Shrewsbury v Cheltenham** (England - League Two) — Over/Under → Under 4.5 · 87%
-52. 16:00 · **Aberdeen v Dundee** (Scotland - Premiership) — Over/Under → Under 4.5 · 87%
-53. 20:45 · **Le Mans v Lille** (France - Ligue 1) — Over/Under → Under 4.5 · 87%
-54. 16:00 · **AFC Wimbledon v Barnsley** (England - League One) — Over/Under → Under 4.5 · 87%
-55. 17:00 · **Gaziantep v Amedspor** (Turkey - Super Lig) — Over/Under → Under 5.5 · 86%
-56. 16:00 · **St Mirren v Kilmarnock** (Scotland - Premiership) — Over/Under → Under 4.5 · 86%
-57. 17:15 · **Angers v Lens** (France - Ligue 1) — Over/Under → Under 4.5 · 86%
-58. 16:00 · **Colchester v York** (England - League Two) — Over/Under → Under 4.5 · 86%
-59. 16:00 · **QPR v Sheffield United** (England - Championship) — Over/Under → Under 4.5 · 86%
-60. 13:30 · **Lincoln v Wolves** (England - Championship) — Over/Under → Under 4.5 · 86%
-61. 18:30 · **Elche v Ath Madrid** (Spain - La Liga) — Over/Under → Under 4.5 · 86%
-62. 16:30 · **Arouca v Rio Ave** (Portugal - Primeira Liga) — Over/Under → Under 4.5 · 86%
-63. 16:00 · **Dundee United v St Johnstone** (Scotland - Premiership) — Over/Under → Under 4.5 · 85%
-64. 13:30 · **Preston v Norwich** (England - Championship) — Over/Under → Under 4.5 · 85%
+13. 21:00 · **Cambuur v Sparta Rotterdam** (Netherlands - Eredivisie) — Over/Under → Under 6.5 · 93%
+14. 14:00 · **Betis v Vallecano** (Spain - La Liga) — Over/Under → Under 5.5 · 93%
+15. 16:00 · **Stockport v Leyton Orient** (England - League One) — Over/Under → Under 5.5 · 92%
+16. 16:00 · **Leicester v Mansfield** (England - League One) — Over/Under → Under 5.5 · 92%
+17. 16:00 · **Sheffield Weds v Reading** (England - League One) — Over/Under → Under 5.5 · 92%
+18. 16:00 · **Stevenage v Blackpool** (England - League One) — Over/Under → Under 4.5 · 92%
+19. 20:45 · **Le Havre v Strasbourg** (France - Ligue 1) — Over/Under → Under 5.5 · 92%
+20. 16:00 · **Wycombe v Bradford** (England - League One) — Over/Under → Under 4.5 · 92%
+21. 20:45 · **Paris SG v Lorient** (France - Ligue 1) — Over/Under → Under 5.5 · 92%
+22. 20:45 · **Inter v Genoa** (Italy - Serie A) — Over/Under → Under 5.5 · 92%
+23. 13:30 · **Peterboro v Cambridge** (England - League One) — Over/Under → Under 5.5 · 91%
+24. 16:00 · **Rochdale v Barnet** (England - League Two) — Over/Under → Under 5.5 · 91%
+25. 21:00 · **Real Madrid v Alaves** (Spain - La Liga) — Over/Under → Under 5.5 · 91%
+26. 15:30 · **Hamburg v Bayern Munich** (Germany - Bundesliga) — Over/Under → Under 6.5 · 91%
+27. 16:15 · **Malaga v Ath Bilbao** (Spain - La Liga) — Over/Under → Under 4.5 · 90%
+28. 16:00 · **Man United v Brentford** (England - Premier League) — Over/Under → Under 5.5 · 90%
+29. 18:30 · **Stuttgart v Ein Frankfurt** (Germany - Bundesliga) — Over/Under → Under 6.5 · 90%
+30. 15:00 · **Frosinone v Parma** (Italy - Serie A) — Over/Under → Under 5.5 · 90%
+31. 16:00 · **Fleetwood Town v Accrington** (England - League Two) — Over/Under → Under 4.5 · 90%
+32. 16:00 · **Birmingham v Bolton** (England - Championship) — Over/Under → Under 5.5 · 90%
+33. 16:30 · **Excelsior v Telstar** (Netherlands - Eredivisie) — Over/Under → Under 5.5 · 89%
+34. 16:00 · **West Brom v Bristol City** (England - Championship) — Over/Under → Under 4.5 · 89%
+35. 19:00 · **Academico Viseu v Alverca** (Portugal - Primeira Liga) — Over/Under → Under 4.5 · 89%
+36. 18:30 · **Ipswich v Aston Villa** (England - Premier League) — Over/Under → Under 5.5 · 89%
+37. 16:00 · **Derby v Watford** (England - Championship) — Over/Under → Under 4.5 · 89%
+38. 16:00 · **Rangers v Falkirk** (Scotland - Premiership) — Over/Under → Under 5.5 · 89%
+39. 16:00 · **Port Vale v Newport County** (England - League Two) — Over/Under → Under 4.5 · 88%
+40. 16:00 · **Wrexham v Portsmouth** (England - Championship) — Over/Under → Under 4.5 · 88%
+41. 21:30 · **Guimaraes v Estrela** (Portugal - Primeira Liga) — Over/Under → Under 4.5 · 88%
+42. 16:00 · **Leeds v Coventry** (England - Premier League) — Over/Under → Under 4.5 · 88%
+43. 16:00 · **Salford v Gillingham** (England - League Two) — Over/Under → Under 4.5 · 88%
+44. 16:00 · **Millwall v Burnley** (England - Championship) — Over/Under → Under 4.5 · 88%
+45. 16:00 · **Wigan v Plymouth** (England - League One) — Over/Under → Under 4.5 · 88%
+46. 15:30 · **FC Koln v Elversberg** (Germany - Bundesliga) — Over/Under → Under 5.5 · 88%
+47. 18:00 · **Torino v Lazio** (Italy - Serie A) — Over/Under → Under 4.5 · 88%
+48. 13:30 · **Bristol Rvs v Tranmere** (England - League Two) — Over/Under → Under 4.5 · 88%
+49. 18:45 · **Motherwell v Hibernian** (Scotland - Premiership) — Over/Under → Under 4.5 · 87%
+50. 16:00 · **Crewe v Grimsby** (England - League Two) — Over/Under → Under 4.5 · 87%
+51. 16:00 · **West Ham v Stoke** (England - Championship) — Over/Under → Under 5.5 · 87%
+52. 14:00 · **Samsunspor v Genclerbirligi** (Turkey - Super Lig) — Over/Under → Under 4.5 · 87%
+53. 16:00 · **Bromley v Burton** (England - League One) — Over/Under → Under 4.5 · 87%
+54. 16:00 · **Shrewsbury v Cheltenham** (England - League Two) — Over/Under → Under 4.5 · 87%
+55. 16:00 · **Aberdeen v Dundee** (Scotland - Premiership) — Over/Under → Under 4.5 · 87%
+56. 20:45 · **Le Mans v Lille** (France - Ligue 1) — Over/Under → Under 4.5 · 87%
+57. 16:00 · **AFC Wimbledon v Barnsley** (England - League One) — Over/Under → Under 4.5 · 87%
+58. 17:00 · **Gaziantep v Amedspor** (Turkey - Super Lig) — Over/Under → Under 5.5 · 86%
+59. 16:00 · **St Mirren v Kilmarnock** (Scotland - Premiership) — Over/Under → Under 4.5 · 86%
+60. 17:15 · **Angers v Lens** (France - Ligue 1) — Over/Under → Under 4.5 · 86%
+61. 16:00 · **Colchester v York** (England - League Two) — Over/Under → Under 4.5 · 86%
+62. 16:00 · **QPR v Sheffield United** (England - Championship) — Over/Under → Under 4.5 · 86%
+63. 13:30 · **Lincoln v Wolves** (England - Championship) — Over/Under → Under 4.5 · 86%
+64. 18:30 · **Elche v Ath Madrid** (Spain - La Liga) — Over/Under → Under 4.5 · 86%
+65. 16:30 · **Arouca v Rio Ave** (Portugal - Primeira Liga) — Over/Under → Under 4.5 · 86%
+66. 16:00 · **Dundee United v St Johnstone** (Scotland - Premiership) — Over/Under → Under 4.5 · 85%
+67. 13:30 · **Preston v Norwich** (England - Championship) — Over/Under → Under 4.5 · 85%
 
 🎟️ One ticket with the top matches — top 2: 94% · top 3: 89% · top 5: 78% · top 8: 64% · top 10: 56%
 
 ## ✅ Your bets for each day (already checked - just place them)
 
 _Only 85%+ picks, backed by bookmaker odds (or 88%+ without), with no key player missing for the team you back. Skip a bet if your odds are lower than the number shown._
-
-### Saturday 21 November
-
-1. 21:00 · **Real Madrid v Celta** (Spain - La Liga)  
-   ✅ **BET: Real Madrid total goals → Over 0.5** — only if odds are **1.12+** (92% chance)
-
-🎟️ All 1 on one ticket: all 1 win about **92%** of the time (lose about 8%). Take it only if the ticket's total odds are at least **1.12**. In testing on 472 past match days, the top-1 ticket won on 89% of days - it still lost about 1 day in 9.
 
 ### Sunday 22 November
 
@@ -350,24 +336,16 @@ _Only 85%+ picks, backed by bookmaker odds (or 88%+ without), with no key player
    ✅ **BET: Stuttgart total goals → Over 0.5** — only if odds are **1.14+** (91% chance)
 3. 16:15 · **Malaga v Ath Bilbao** (Spain - La Liga)  
    ✅ **BET: Over/Under (total goals) → Under 4.5** — only if odds are **1.14+** (90% chance)
-4. 16:00 · **West Ham v Stoke** (England - Championship)  
+4. 21:00 · **Real Madrid v Alaves** (Spain - La Liga)  
+   ✅ **BET: Real Madrid total goals → Over 0.5** — only if odds are **1.14+** (90% chance)
+5. 16:00 · **West Ham v Stoke** (England - Championship)  
    ✅ **BET: West Ham total goals → Over 0.5** — only if odds are **1.14+** (90% chance)
-5. 16:00 · **Rangers v Falkirk** (Scotland - Premiership)  
-   ✅ **BET: Rangers total goals → Over 0.5** — only if odds are **1.15+** (90% chance)
 
 🎟️ All 5 on one ticket: all 5 win about **61%** of the time (lose about 39%). Take it only if the ticket's total odds are at least **1.90**. A 2-pick ticket (#1 + #2) wins about 83%. In testing on 472 past match days, the top-5 ticket won on 67% of days - it still lost about 1 day in 3.
 
 ## 📋 Every match: what to bet (whatever the odds)
 
 _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
-
-### Saturday 21 November (5 matches)
-
-- ✅ 21:00 · **Real Madrid v Celta** (Spain - La Liga) — BET: Real Madrid total goals → Over 0.5 · 92%
-- ⚠️ 21:00 · **Motherwell v Rangers** (Scotland - Premiership) — BET: Rangers total goals → Over 0.5 · 85%
-- ⚠️ 21:00 · **Groningen v Heerenveen** (Netherlands - Eredivisie) — BET: Over/Under (total goals) → Over 1.5 · 85%
-- ⚠️ 21:00 · **Telstar v Zwolle** (Netherlands - Eredivisie) — BET: Telstar total goals → Over 0.5 · 83%
-- ⚠️ 21:00 · **Tenerife v Mallorca** (Spain - Segunda Division) — BET: Over/Under (total goals) → Under 3.5 · 81%
 
 ### Sunday 22 November (44 matches)
 
@@ -524,11 +502,12 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 - ⚠️ 20:30 · **Werder Bremen v M'gladbach** (Germany - Bundesliga) — BET: Werder Bremen total goals → Over 0.5 · 84%
 - ⚠️ 21:00 · **Southampton v Middlesbrough** (England - Championship) — BET: Southampton total goals → Over 0.5 · 81%
 
-### Saturday 28 November (64 matches)
+### Saturday 28 November (67 matches)
 
 - ✅ 16:00 · **Wycombe v Bradford** (England - League One) — BET: Over/Under (total goals) → Under 4.5 · 92%
 - ✅ 18:30 · **Stuttgart v Ein Frankfurt** (Germany - Bundesliga) — BET: Stuttgart total goals → Over 0.5 · 91%
 - ✅ 16:15 · **Malaga v Ath Bilbao** (Spain - La Liga) — BET: Over/Under (total goals) → Under 4.5 · 90%
+- ✅ 21:00 · **Real Madrid v Alaves** (Spain - La Liga) — BET: Real Madrid total goals → Over 0.5 · 90%
 - ✅ 16:00 · **West Ham v Stoke** (England - Championship) — BET: West Ham total goals → Over 0.5 · 90%
 - ✅ 16:00 · **Rangers v Falkirk** (Scotland - Premiership) — BET: Rangers total goals → Over 0.5 · 90%
 - ✅ 15:30 · **Hamburg v Bayern Munich** (Germany - Bundesliga) — BET: Over/Under (total goals) → Over 1.5 · 90%
@@ -543,6 +522,8 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 - ✅ 20:45 · **Paris SG v Lorient** (France - Ligue 1) — BET: Paris SG total goals → Over 0.5 · 88%
 - ✅ 16:00 · **Wrexham v Portsmouth** (England - Championship) — BET: Over/Under (total goals) → Under 4.5 · 88%
 - ✅ 16:00 · **Birmingham v Bolton** (England - Championship) — BET: Birmingham total goals → Over 0.5 · 88%
+- ✅ 21:30 · **Guimaraes v Estrela** (Portugal - Primeira Liga) — BET: Over/Under (total goals) → Under 4.5 · 88%
+- ⚠️ 21:00 · **Cambuur v Sparta Rotterdam** (Netherlands - Eredivisie) — BET: Over/Under (total goals) → Over 1.5 · 88%
 - ⚠️ 16:00 · **Leeds v Coventry** (England - Premier League) — BET: Over/Under (total goals) → Under 4.5 · 88%
 - ⚠️ 16:00 · **Salford v Gillingham** (England - League Two) — BET: Over/Under (total goals) → Under 4.5 · 88%
 - ⚠️ 16:00 · **Millwall v Burnley** (England - Championship) — BET: Over/Under (total goals) → Under 4.5 · 88%
@@ -598,6 +579,7 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 ⏳ No finished results for this day yet.
 
 - ✅ 15:00 · **Carrarese v Virtus Entella** — Over/Under (total goals) → Under 4.5 (92%) → ⏳ playing / waiting for result
+- ✅ 21:00 · **Real Madrid v Celta** — Real Madrid total goals → Over 0.5 (92%) → ⏳ playing / waiting for result
 - ✅ 16:00 · **Northampton v Rochdale** — Over/Under (total goals) → Under 4.5 (92%) → ⏳ playing / waiting for result
 - ✅ 16:00 · **Celtic v St Mirren** — Double Chance → 1X (Celtic or draw) (92%) → ⏳ playing / waiting for result
 - ✅ 14:00 · **Alaves v La Coruna** — Over/Under (total goals) → Under 4.5 (91%) → ⏳ playing / waiting for result
@@ -688,7 +670,9 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 - ⚠️ 16:00 · **Bolton v Portsmouth** — Over/Under (total goals) → Under 4.5 (85%) → ⏳ playing / waiting for result
 - ⚠️ 16:00 · **Coventry v Crystal Palace** — Over/Under (total goals) → Under 4.5 (85%) → ⏳ playing / waiting for result
 - ⚠️ 19:30 · **Empoli v Pisa** — Over/Under (total goals) → Under 4.5 (85%) → ⏳ playing / waiting for result
+- ⚠️ 21:00 · **Motherwell v Rangers** — Rangers total goals → Over 0.5 (85%) → ⏳ playing / waiting for result
 - ⚠️ 16:00 · **Burton v Luton** — Over/Under (total goals) → Under 4.5 (85%) → ⏳ playing / waiting for result
+- ⚠️ 21:00 · **Groningen v Heerenveen** — Over/Under (total goals) → Over 1.5 (85%) → ⏳ playing / waiting for result
 - ⚠️ 07:00 · **Cerezo Osaka v FC Tokyo** — Over/Under (total goals) → Under 4.5 (85%) → ⏳ playing / waiting for result
 - ⚠️ 16:00 · **Falkirk v St Johnstone** — Over/Under (total goals) → Under 4.5 (85%) → ⏳ playing / waiting for result
 - ⚠️ 16:00 · **Kilmarnock v Aberdeen** — Over/Under (total goals) → Under 4.5 (85%) → ⏳ playing / waiting for result
@@ -707,6 +691,7 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 - ⚠️ 16:00 · **Huddersfield v Leicester** — Huddersfield total goals → Over 0.5 (83%) → ⏳ playing / waiting for result
 - ⚠️ 16:00 · **Hibernian v Dundee United** — Over/Under (total goals) → Under 4.5 (83%) → ⏳ playing / waiting for result
 - ⚠️ 16:00 · **York v Walsall** — York total goals → Over 0.5 (83%) → ⏳ playing / waiting for result
+- ⚠️ 21:00 · **Telstar v Zwolle** — Telstar total goals → Over 0.5 (83%) → ⏳ playing / waiting for result
 - ⚠️ 16:00 · **Charleroi v St Truiden** — Charleroi total goals → Over 0.5 (83%) → ⏳ playing / waiting for result
 - ⚠️ 16:00 · **Aldershot v Scunthorpe** — Over/Under (total goals) → Over 1.5 (83%) → ⏳ playing / waiting for result
 - ⚠️ 16:00 · **Peterhead v East Kilbride** — East Kilbride total goals → Over 0.5 (82%) → ⏳ playing / waiting for result
@@ -719,6 +704,7 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 - ⚠️ 20:45 · **Strasbourg v Brest** — Strasbourg total goals → Over 0.5 (82%) → ⏳ playing / waiting for result
 - ⚠️ 16:00 · **Mansfield v Milton Keynes Dons** — Over/Under (total goals) → Over 1.5 (82%) → ⏳ playing / waiting for result
 - ⚠️ 16:00 · **Notts County v Stevenage** — Over/Under (total goals) → Under 3.5 (81%) → ⏳ playing / waiting for result
+- ⚠️ 21:00 · **Tenerife v Mallorca** — Over/Under (total goals) → Under 3.5 (81%) → ⏳ playing / waiting for result
 - ⚠️ 16:00 · **Edinburgh City v Kelty Hearts** — Over/Under (total goals) → Over 1.5 (81%) → ⏳ playing / waiting for result
 - ⚠️ 16:00 · **Barrow v Carlisle** — Over/Under (total goals) → Under 4.5 (81%) → ⏳ playing / waiting for result
 - ⚠️ 13:30 · **Solihull v Altrincham** — Over/Under (total goals) → Under 4.5 (81%) → ⏳ playing / waiting for result
@@ -746,7 +732,7 @@ Results: **7 of 9 bets won** (78%) · ✅ checked bets: **4 of 6 won** · 7 stil
 
 ## 📈 Live track record of best picks
 
-**998 of 1153 best picks won (87%)** · ✅ 'Your bets' (passed all checks): 33/37 (89%) · 🔒+⭐⭐⭐ picks: 327/367 (89%) · 357 waiting for results
+**998 of 1153 best picks won (87%)** · ✅ 'Your bets' (passed all checks): 33/37 (89%) · 🔒+⭐⭐⭐ picks: 327/367 (89%) · 360 waiting for results
 Banker 137/155 (88%) · Strong 190/212 (90%) · Good 324/369 (88%) · Fair 347/417 (83%)
 
 **🛡️ Rules for low-odds betting (read every time)**
@@ -766,10 +752,6 @@ Banker 137/155 (88%) · Strong 190/212 (90%) · Good 324/369 (88%) · Fair 347/4
 - 21:00 · Brentford v Everton (England - Premier League) — **Under 2.5 @ 2.10 (Bet365, edge +6.8%)** — stake 1.5% = 1.53
 
 ## 🎯 Strongest best picks (🔒 Banker + ⭐⭐⭐ Strong, same safety checks as 'Your bets'; won ~91% in testing)
-
-**Saturday 21 November**
-- 21:00 · **Real Madrid v Celta** (Spain - La Liga) — 🔒 Real Madrid to score · 92% · bet at 1.12+  
-  📝 Open the 'Real Madrid total goals' (team goals) market and choose 'Over 0.5' (some bookmakers call it 'Real Madrid to score: Yes'). You WIN if Real Madrid scores at least 1 goal - the final result does not matter. You LOSE only if Real Madrid scores 0. Only place it if your bookmaker's odds for this choice are 1.12 or higher.
 
 **Sunday 22 November**
 - 16:30 · **Panathinaikos v OFI Crete** (Greece - Super League) — 🔒 Panathinaikos or draw · 92% · bet at 1.12+  
@@ -856,6 +838,8 @@ Banker 137/155 (88%) · Strong 190/212 (90%) · Good 324/369 (88%) · Fair 347/4
   📝 Open the 'Stuttgart total goals' (team goals) market and choose 'Over 0.5' (some bookmakers call it 'Stuttgart to score: Yes'). You WIN if Stuttgart scores at least 1 goal - the final result does not matter. You LOSE only if Stuttgart scores 0. Only place it if your bookmaker's odds for this choice are 1.14 or higher.
 - 16:15 · **Malaga v Ath Bilbao** (Spain - La Liga) — 🔒 Under 4.5 goals · 90% · bet at 1.14+  
   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.14 or higher.
+- 21:00 · **Real Madrid v Alaves** (Spain - La Liga) — 🔒 Real Madrid to score · 90% · bet at 1.14+  
+  📝 Open the 'Real Madrid total goals' (team goals) market and choose 'Over 0.5' (some bookmakers call it 'Real Madrid to score: Yes'). You WIN if Real Madrid scores at least 1 goal - the final result does not matter. You LOSE only if Real Madrid scores 0. Only place it if your bookmaker's odds for this choice are 1.14 or higher.
 - 16:00 · **West Ham v Stoke** (England - Championship) — 🔒 West Ham to score · 90% · bet at 1.14+  
   📝 Open the 'West Ham total goals' (team goals) market and choose 'Over 0.5' (some bookmakers call it 'West Ham to score: Yes'). You WIN if West Ham scores at least 1 goal - the final result does not matter. You LOSE only if West Ham scores 0. Only place it if your bookmaker's odds for this choice are 1.14 or higher.
 - 16:00 · **Rangers v Falkirk** (Scotland - Premiership) — ⭐⭐⭐ Rangers to score · 90% · bet at 1.15+  
@@ -864,20 +848,8 @@ Banker 137/155 (88%) · Strong 190/212 (90%) · Good 324/369 (88%) · Fair 347/4
   📝 Open the 'Total goals' (Over/Under) market and choose 'Over 1.5'. You WIN if the match has 2 or more goals in total (both teams added together). You LOSE if it has 0 or 1 goal. Only place it if your bookmaker's odds for this choice are 1.15 or higher.
 - 16:00 · **Fleetwood Town v Accrington** (England - League Two) — ⭐⭐⭐ Under 4.5 goals · 90% · bet at 1.15+  
   📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.15 or higher.
-- 16:00 · **West Brom v Bristol City** (England - Championship) — ⭐⭐⭐ Under 4.5 goals · 89% · bet at 1.15+  
-  📝 Open the 'Total goals' (Over/Under) market and choose 'Under 4.5'. You WIN if the match has 0, 1, 2, 3 or 4 goals in total (both teams added together). You LOSE if it has 5 or more goals. Only place it if your bookmaker's odds for this choice are 1.15 or higher.
 
 ## 📅 Every match, day by day
-
-### Saturday 21 November (5 matches)
-
-| Time | Competition | Match | Advice | Stake | 🎯 Best pick | Predicted | H / D / A % | Over 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 / 6.5 % | Under 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 / 6.5 % |
-|---|---|---|---|---|---|---|---|---|---|
-| 21:00 | Netherlands - Eredivisie | Groningen v Heerenveen | NO BET (model not profitable in this league) | - | ⭐ Over 1.5 goals · 85% · bet at 1.22+ | 2-1 | 43 / 24 / 32 | 95 / 84 / 63 / 41 / 23 / 11 / 5 | 5 / 16 / 37 / 59 / 77 / 89 / 95 |
-| 21:00 | Netherlands - Eredivisie | Telstar v Zwolle | NO BET (model not profitable in this league) | - | ⭐ Telstar to score · 83% · bet at 1.24+ | 2-1 | 50 / 24 / 26 | 95 / 83 / 61 / 38 / 21 / 10 / 4 | 5 / 17 / 39 / 62 / 79 / 90 / 96 |
-| 21:00 | Scotland - Premiership | Motherwell v Rangers | NO BET (model not profitable in this league) | - | ⭐ Rangers to score · 85% · bet at 1.21+ | 1-2 | 28 / 23 / 48 | 95 / 80 / 57 / 35 / 18 / 8 / 3 | 5 / 20 / 43 / 65 / 82 / 92 / 97 |
-| 21:00 | Spain - La Liga | Real Madrid v Celta | NO BET (model not profitable in this league) | - | 🔒 Real Madrid to score · 92% · bet at 1.12+ | 2-0 | 69 / 19 / 12 | 95 / 81 / 58 / 36 / 19 / 9 / 3 | 5 / 19 / 42 / 64 / 81 / 91 / 97 |
-| 21:00 | Spain - Segunda Division | Tenerife v Mallorca | NO BET (model not profitable in this league) | - | ⭐ Under 3.5 goals · 81% · bet at 1.27+ | 0-1 | 30 / 30 / 40 | 87 / 60 / 34 / 15 / 6 / 2 / 1 | 13 / 40 / 66 / 85 / 94 / 98 / 99 |
 
 ### Sunday 22 November (44 matches)
 
@@ -1046,7 +1018,7 @@ Banker 137/155 (88%) · Strong 190/212 (90%) · Good 324/369 (88%) · Fair 347/4
 | 21:00 | Spain - La Liga | Levante v Santander | NO BET (model not profitable in this league) | - | 🔒 Levante to score · 91% · bet at 1.14+ | 2-1 | 57 / 20 / 23 | 98 / 90 / 74 / 53 / 34 / 19 / 9 | 2 / 10 / 26 / 47 / 66 / 81 / 91 |
 | 21:15 | Portugal - Primeira Liga | Maritimo v Nacional | NO BET (model not profitable in this league) | - | ⭐⭐ Under 4.5 goals · 87% · bet at 1.18+ | 0-1 | 36 / 24 / 40 | 94 / 73 / 49 / 27 / 13 / 5 / 2 | 6 / 27 / 51 / 73 / 87 / 95 / 98 |
 
-### Saturday 28 November (64 matches)
+### Saturday 28 November (67 matches)
 
 | Time | Competition | Match | Advice | Stake | 🎯 Best pick | Predicted | H / D / A % | Over 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 / 6.5 % | Under 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 / 6.5 % |
 |---|---|---|---|---|---|---|---|---|---|
@@ -1114,6 +1086,9 @@ Banker 137/155 (88%) · Strong 190/212 (90%) · Good 324/369 (88%) · Fair 347/4
 | 20:45 | France - Ligue 1 | Le Havre v Strasbourg | NO BET (model not profitable in this league) | - | ⭐ Under 4.5 goals · 82% · bet at 1.25+ | 1-2 | 32 / 25 / 43 | 94 / 80 / 57 / 34 / 18 / 8 / 3 | 6 / 20 / 43 / 66 / 82 / 92 / 97 |
 | 20:45 | France - Ligue 1 | Le Mans v Lille | NO BET (model not profitable in this league) | - | ⭐⭐ Under 4.5 goals · 87% · bet at 1.19+ | 0-1 | 27 / 26 / 47 | 93 / 75 / 50 / 28 / 13 / 6 / 2 | 7 / 25 / 50 / 72 / 87 / 94 / 98 |
 | 20:45 | Italy - Serie A | Inter v Genoa | NO BET (model not profitable in this league) | - | ⭐⭐⭐ Inter to score · 89% · bet at 1.16+ | 2-0 | 69 / 18 / 12 | 95 / 80 / 57 / 35 / 18 / 8 / 3 | 5 / 20 / 43 / 65 / 82 / 92 / 97 |
+| 21:00 | Netherlands - Eredivisie | Cambuur v Sparta Rotterdam | NO BET (model not profitable in this league) | - | ⭐⭐ Over 1.5 goals · 88% · bet at 1.17+ | 2-1 | 47 / 23 / 31 | 97 / 88 / 70 / 48 / 29 / 16 / 7 | 3 / 12 / 30 / 52 / 71 / 84 / 93 |
+| 21:00 | Spain - La Liga | Real Madrid v Alaves | NO BET (model not profitable in this league) | - | 🔒 Real Madrid to score · 90% · bet at 1.14+ | 2-0 | 72 / 18 / 10 | 95 / 82 / 59 / 37 / 20 / 9 / 4 | 5 / 18 / 41 / 63 / 80 / 91 / 96 |
+| 21:30 | Portugal - Primeira Liga | Guimaraes v Estrela | NO BET (model not profitable in this league) | - | ⭐⭐⭐ Under 4.5 goals · 88% · bet at 1.17+ | 1-0 | 52 / 23 / 25 | 93 / 72 / 48 / 26 / 12 / 5 / 2 | 7 / 28 / 52 / 74 / 88 / 95 / 98 |
 
 ## ☑️ Before you place any bet
 1. Your bookmaker's odds must be **at least** the price shown (for 🏆 games: at least the 'back only at' price). Lower odds = skip the bet.
