@@ -668,7 +668,6 @@ E2,Stevenage,Mansfield Town,2026-11-14 15:00:00+00:00
 E2,Wycombe Wanderers,Huddersfield Town,2026-11-14 15:00:00+00:00
 E2,Peterborough United,Oxford United,2026-12-05 15:00:00+00:00
 E2,Luton Town,Cambridge United,2027-02-02 19:45:00+00:00
-E2,Barnsley,Sheffield Wednesday,2026-11-20 20:00:00+00:00
 E2,Blackpool,Wigan Athletic,2026-11-21 12:30:00+00:00
 E2,Reading,Bromley,2026-11-21 12:30:00+00:00
 E2,Bradford City,Doncaster Rovers,2026-11-21 15:00:00+00:00
@@ -1419,7 +1418,6 @@ E3,Shrewsbury Town,York City,2027-05-08 14:00:00+00:00
 E3,Swindon Town,Gillingham,2027-05-08 14:00:00+00:00
 E3,Walsall,Newport County,2027-05-08 14:00:00+00:00
 SP1,Rayo Vallecano,Athletic Club,2026-12-09 19:00:00+00:00
-SP1,Athletic Club,RCD Espanyol de Barcelona,2026-11-20 20:00:00+00:00
 SP1,Deportivo Alavés,RC Deportivo,2026-11-21 13:00:00+00:00
 SP1,Rayo Vallecano,Valencia CF,2026-11-21 15:15:00+00:00
 SP1,Sevilla FC,Real Betis,2026-11-21 17:30:00+00:00
@@ -1949,7 +1947,6 @@ I1,Milan,Udinese,2027-05-30 00:00:00+00:00
 I1,Monza,Torino,2027-05-30 00:00:00+00:00
 I1,Napoli,Atalanta,2027-05-30 00:00:00+00:00
 I1,Sassuolo,Internazionale,2027-05-30 00:00:00+00:00
-D1,FC Bayern München,1. FC Köln,2026-11-20 19:30:00+00:00
 D1,SV Elversberg,Sport-Club Freiburg,2026-11-21 14:30:00+00:00
 D1,Borussia Mönchengladbach,Borussia Dortmund,2026-11-21 14:30:00+00:00
 D1,1. FC Union Berlin,RB Leipzig,2026-11-21 14:30:00+00:00
@@ -2174,7 +2171,6 @@ D1,FC Augsburg,Hamburger SV,2027-05-22 13:30:00+00:00
 D1,Sport-Club Freiburg,Borussia Dortmund,2027-05-22 13:30:00+00:00
 D1,RB Leipzig,TSG Hoffenheim,2027-05-22 13:30:00+00:00
 D1,FC Bayern München,Eintracht Frankfurt,2027-05-22 13:30:00+00:00
-F1,Estac Troyes,Havre Athletic Club,2026-11-20 19:45:00+00:00
 F1,OGC Nice,Paris Saint-Germain,2026-11-21 16:15:00+00:00
 F1,RC Lens,Toulouse FC,2026-11-21 19:45:00+00:00
 F1,LOSC Lille,Olympique Lyonnais,2026-11-21 19:45:00+00:00
@@ -2390,11 +2386,6 @@ F1,AS Monaco,Estac Troyes,2027-05-28 22:00:00+00:00
 F1,Paris Saint-Germain,Toulouse FC,2027-05-28 22:00:00+00:00
 F1,Stade Rennais FC,Angers SCO,2027-05-28 22:00:00+00:00
 F1,RC Strasbourg Alsace,OGC Nice,2027-05-28 22:00:00+00:00
-F2,FC Annecy,Clermont Foot 63,2026-11-20 19:00:00+00:00
-F2,EN Avant Guingamp,Rodez Aveyron Football,2026-11-20 19:00:00+00:00
-F2,FC Metz,US Boulogne CO,2026-11-20 19:00:00+00:00
-F2,AS Nancy Lorraine,Dijon FCO,2026-11-20 19:00:00+00:00
-F2,Red Star FC,Pau FC,2026-11-20 19:00:00+00:00
 F2,Stade Lavallois MFC,Montpellier Hérault SC,2026-11-21 13:00:00+00:00
 F2,Stade DE Reims,AS Saint-Étienne,2026-11-21 19:00:00+00:00
 F2,FC Nantes,Grenoble Foot 38,2026-11-23 19:45:00+00:00

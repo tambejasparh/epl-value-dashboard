@@ -1,17 +1,17 @@
 {
- "time": "2026-11-20 23:02 UTC",
+ "time": "2026-11-21 13:20 UTC",
  "key_present": true,
  "errors": [
-  "fixtures 2026-11-20: {'http': 429}",
   "fixtures 2026-11-21: {'http': 429}",
   "fixtures 2026-11-22: {'http': 429}",
-  "fixtures 2026-11-23: {'http': 429}"
+  "fixtures 2026-11-23: {'http': 429}",
+  "fixtures 2026-11-24: {'http': 429}"
  ],
  "leagues_found": {},
  "fixtures": 0,
  "result": "no upcoming fixtures found",
  "requests_used": 4,
- "odds_time": "2026-11-20 23:02 UTC",
+ "odds_time": "2026-11-21 13:20 UTC",
  "odds_calls": 0,
  "odds_rows": 0,
  "odds_fixtures": 0,
