@@ -1,5 +1,5 @@
 # Football predictions — day by day
-_Updated Sun 22 Nov 2026 21:10 (Africa/Douala time). Bankroll for stakes: 100.00_
+_Updated Sun 22 Nov 2026 23:23 (Africa/Douala time). Bankroll for stakes: 100.00_
 
 ## 🟢 Safe goals picks — Under 4.5 / 5.5 / 6.5 85%+, Over 0.5 / 1.5 98%+, BTTS 96%+
 
@@ -189,7 +189,7 @@ _Safest first. 💚 = 1xBet pays at least the fair minimum._
 
 🎟️ One ticket with the top matches — top 2: 90% · top 3: 85% · top 5: 74% · top 8: 60% · top 10: 52%
 
-### Sunday 29 November (31 matches)
+### Sunday 29 November (32 matches)
 
 1. 14:00 · **Eyupspor v Buyuksehyr** (Turkey - Super Lig) — Over/Under → Under 5.5 · 93%
 2. 20:45 · **Lyon v Monaco** (France - Ligue 1) — Over/Under → Under 5.5 · 93%
@@ -215,13 +215,14 @@ _Safest first. 💚 = 1xBet pays at least the fair minimum._
 22. 17:00 · **Fenerbahce v Erzurumspor** (Turkey - Super Lig) — Over/Under → Under 5.5 · 88%
 23. 16:15 · **La Coruna v Barcelona** (Spain - La Liga) — Over/Under → Under 5.5 · 88%
 24. 15:05 · **Fulham v Bournemouth** (England - Premier League) — Over/Under → Under 4.5 · 88%
-25. 18:00 · **Roma v Monza** (Italy - Serie A) — Over/Under → Under 5.5 · 87%
-26. 18:30 · **Celta v Villarreal** (Spain - La Liga) — Over/Under → Under 4.5 · 87%
-27. 13:00 · **Everton v Liverpool** (England - Premier League) — Over/Under → Under 4.5 · 87%
-28. 17:30 · **Hoffenheim v Augsburg** (Germany - Bundesliga) — Over/Under → Under 5.5 · 87%
-29. 15:00 · **Sassuolo v Napoli** (Italy - Serie A) — Over/Under → Under 4.5 · 86%
-30. 12:30 · **Udinese v Fiorentina** (Italy - Serie A) — Over/Under → Under 4.5 · 86%
-31. 21:00 · **Sociedad v Sevilla** (Spain - La Liga) — Over/Under → Under 4.5 · 85%
+25. 21:30 · **Porto v Sp Lisbon** (Portugal - Primeira Liga) — Over/Under → Under 4.5 · 88%
+26. 18:00 · **Roma v Monza** (Italy - Serie A) — Over/Under → Under 5.5 · 87%
+27. 18:30 · **Celta v Villarreal** (Spain - La Liga) — Over/Under → Under 4.5 · 87%
+28. 13:00 · **Everton v Liverpool** (England - Premier League) — Over/Under → Under 4.5 · 87%
+29. 17:30 · **Hoffenheim v Augsburg** (Germany - Bundesliga) — Over/Under → Under 5.5 · 87%
+30. 15:00 · **Sassuolo v Napoli** (Italy - Serie A) — Over/Under → Under 4.5 · 86%
+31. 12:30 · **Udinese v Fiorentina** (Italy - Serie A) — Over/Under → Under 4.5 · 86%
+32. 21:00 · **Sociedad v Sevilla** (Spain - La Liga) — Over/Under → Under 4.5 · 85%
 
 🎟️ One ticket with the top matches — top 2: 87% · top 3: 80% · top 5: 67% · top 8: 50% · top 10: 41%
 
@@ -512,7 +513,7 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 - ⚠️ 16:00 · **Luton v Oxford** (England - League One) — BET: Over/Under (total goals) → Over 1.5 · 82%
 - ⚠️ 16:00 · **Stevenage v Blackpool** (England - League One) — BET: Over/Under (total goals) → Under 3.5 · 81%
 
-### Sunday 29 November (31 matches)
+### Sunday 29 November (32 matches)
 
 - ✅ 18:00 · **Roma v Monza** (Italy - Serie A) — BET: Roma total goals → Over 0.5 · 92%
 - ✅ 11:30 · **Corum v Kocaelispor** (Turkey - Super Lig) — BET: Over/Under (total goals) → Under 4.5 · 91%
@@ -524,6 +525,7 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 - ✅ 16:15 · **La Coruna v Barcelona** (Spain - La Liga) — BET: Barcelona total goals → Over 0.5 · 90%
 - ✅ 19:00 · **Gil Vicente v Estoril** (Portugal - Primeira Liga) — BET: Over/Under (total goals) → Under 4.5 · 88%
 - ⚠️ 15:05 · **Fulham v Bournemouth** (England - Premier League) — BET: Over/Under (total goals) → Under 4.5 · 88%
+- ⚠️ 21:30 · **Porto v Sp Lisbon** (Portugal - Primeira Liga) — BET: Over/Under (total goals) → Under 4.5 · 88%
 - ⚠️ 17:30 · **Hoffenheim v Augsburg** (Germany - Bundesliga) — BET: Hoffenheim total goals → Over 0.5 · 87%
 - ⚠️ 18:30 · **Celta v Villarreal** (Spain - La Liga) — BET: Over/Under (total goals) → Under 4.5 · 87%
 - ⚠️ 13:00 · **Everton v Liverpool** (England - Premier League) — BET: Over/Under (total goals) → Under 4.5 · 87%
@@ -755,7 +757,7 @@ Results: **7 of 9 bets won** (78%) · ✅ checked bets: **4 of 6 won** · 7 stil
 
 ## 📈 Live track record of best picks
 
-**1053 of 1228 best picks won (86%)** · ✅ 'Your bets' (passed all checks): 77/92 (84%) · 🔒+⭐⭐⭐ picks: 342/389 (88%) · 316 waiting for results
+**1053 of 1228 best picks won (86%)** · ✅ 'Your bets' (passed all checks): 77/92 (84%) · 🔒+⭐⭐⭐ picks: 342/389 (88%) · 317 waiting for results
 Banker 142/163 (87%) · Strong 200/226 (88%) · Good 351/400 (88%) · Fair 360/439 (82%)
 
 **🛡️ Rules for low-odds betting (read every time)**
@@ -1063,7 +1065,7 @@ Banker 142/163 (87%) · Strong 200/226 (88%) · Good 351/400 (88%) · Fair 360/4
 | 21:00 | Spain - La Liga | Real Madrid v Alaves | NO BET (model not profitable in this league) | - | 🔒 Real Madrid to score · 90% · bet at 1.14+ | 2-0 | 72 / 18 / 11 | 95 / 82 / 60 / 38 / 20 / 10 / 4 | 5 / 18 / 40 / 62 / 80 / 90 / 96 |
 | 21:30 | Portugal - Primeira Liga | Guimaraes v Estrela | NO BET (model not profitable in this league) | - | ⭐⭐⭐ Under 4.5 goals · 88% · bet at 1.17+ | 1-0 | 52 / 23 / 25 | 93 / 72 / 48 / 26 / 12 / 5 / 2 | 7 / 28 / 52 / 74 / 88 / 95 / 98 |
 
-### Sunday 29 November (31 matches)
+### Sunday 29 November (32 matches)
 
 | Time | Competition | Match | Advice | Stake | 🎯 Best pick | Predicted | H / D / A % | Over 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 / 6.5 % | Under 0.5 / 1.5 / 2.5 / 3.5 / 4.5 / 5.5 / 6.5 % |
 |---|---|---|---|---|---|---|---|---|---|
@@ -1098,6 +1100,7 @@ Banker 142/163 (87%) · Strong 200/226 (88%) · Good 351/400 (88%) · Fair 360/4
 | 20:45 | France - Ligue 1 | Lyon v Monaco | NO BET (model not profitable in this league) | - | ⭐ Under 4.5 goals · 84% · bet at 1.23+ | 2-1 | 47 / 25 / 28 | 94 / 78 / 54 / 32 / 16 / 7 / 3 | 6 / 22 / 46 / 68 / 84 / 93 / 97 |
 | 20:45 | Italy - Serie A | Como v Juventus | NO BET (model not profitable in this league) | - | 🔒 Under 4.5 goals · 91% · bet at 1.13+ | 1-0 | 38 / 28 / 35 | 91 / 68 / 42 / 21 / 9 / 3 / 1 | 9 / 32 / 58 / 79 / 91 / 97 / 99 |
 | 21:00 | Spain - La Liga | Sociedad v Sevilla | NO BET (model not profitable in this league) | - | ⭐⭐ Under 4.5 goals · 85% · bet at 1.21+ | 1-0 | 48 / 25 / 27 | 93 / 77 / 53 / 30 / 15 / 6 / 2 | 7 / 23 / 47 / 70 / 85 / 94 / 98 |
+| 21:30 | Portugal - Primeira Liga | Porto v Sp Lisbon | NO BET (model not profitable in this league) | - | ⭐⭐ Under 4.5 goals · 88% · bet at 1.18+ | 1-0 | 40 / 24 / 35 | 94 / 73 / 48 / 27 / 12 / 5 / 2 | 6 / 27 / 52 / 73 / 88 / 95 / 98 |
 
 ## ☑️ Before you place any bet
 1. Your bookmaker's odds must be **at least** the price shown (for 🏆 games: at least the 'back only at' price). Lower odds = skip the bet.
