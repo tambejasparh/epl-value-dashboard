@@ -1,5 +1,5 @@
 {
- "time": "2026-11-25 18:55 UTC",
+ "time": "2026-11-25 22:10 UTC",
  "leagues": {
   "SC1": {
    "season": 2026,
@@ -19,7 +19,7 @@
    },
    "teams": []
   },
-  "E0": {
+  "EC": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -37,25 +37,16 @@
    },
    "teams": []
   },
+  "E0": {
+   "season": 2026,
+   "finished": 0,
+   "latest": null,
+   "errors": {
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
+   },
+   "teams": []
+  },
   "E1": {
-   "season": 2026,
-   "finished": 0,
-   "latest": null,
-   "errors": {
-    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
-   },
-   "teams": []
-  },
-  "EC": {
-   "season": 2026,
-   "finished": 0,
-   "latest": null,
-   "errors": {
-    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
-   },
-   "teams": []
-  },
-  "E2": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -73,7 +64,7 @@
    },
    "teams": []
   },
-  "SC3": {
+  "E2": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -82,12 +73,12 @@
    },
    "teams": []
   },
-  "D2": {
+  "SC3": {
    "season": 2026,
    "finished": 0,
    "latest": null,
    "errors": {
-    "http": 429
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
    },
    "teams": []
   },
@@ -100,7 +91,7 @@
    },
    "teams": []
   },
-  "I2": {
+  "D2": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -118,7 +109,7 @@
    },
    "teams": []
   },
-  "SP2": {
+  "I2": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -137,6 +128,15 @@
    "teams": []
   },
   "F1": {
+   "season": 2026,
+   "finished": 0,
+   "latest": null,
+   "errors": {
+    "http": 429
+   },
+   "teams": []
+  },
+  "SP2": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -190,6 +190,15 @@
    },
    "teams": []
   },
+  "G1": {
+   "season": 2026,
+   "finished": 0,
+   "latest": null,
+   "errors": {
+    "http": 429
+   },
+   "teams": []
+  },
   "N1": {
    "season": 2026,
    "finished": 0,
@@ -200,15 +209,6 @@
    "teams": []
   },
   "P1": {
-   "season": 2026,
-   "finished": 0,
-   "latest": null,
-   "errors": {
-    "http": 429
-   },
-   "teams": []
-  },
-  "G1": {
    "season": 2026,
    "finished": 0,
    "latest": null,
