@@ -1,5 +1,5 @@
 # Football predictions — day by day
-_Updated Tue 24 Nov 2026 23:56 (Africa/Douala time). Bankroll for stakes: 100.00_
+_Updated Wed 25 Nov 2026 02:20 (Africa/Douala time). Bankroll for stakes: 100.00_
 
 ## 🟢 Safe goals picks — Under 4.5 / 5.5 / 6.5 85%+, Over 0.5 / 1.5 98%+, BTTS 96%+
 
@@ -12,7 +12,7 @@ _Safest first. 💚 = 1xBet pays at least the fair minimum._
 3. 20:00 · **Mantova v Arezzo** (Italy - Serie B) — Over/Under → Under 5.5 · 94%
 4. 20:45 · **Bolton v West Brom** (England - Championship) — Over/Under → Under 5.5 · 93%
 5. 20:45 · **Hartlepool v Solihull** (England - National League) — Over/Under → Under 5.5 · 93%
-6. 11:00 · **Avispa Fukuoka v Yokohama F. Marinos** (Japan - J1 League) — Over/Under → Under 4.5 · 92%
+6. 11:00 · **Avispa Fukuoka v Yokohama F. Marinos** (Japan - J1 League) — Over/Under → Under 4.5 · 93%
 7. 11:30 · **Urawa Reds v Cerezo Osaka** (Japan - J1 League) — Over/Under → Under 5.5 · 91%
 8. 20:00 · **Padova v Sampdoria** (Italy - Serie B) — Over/Under → Under 4.5 · 91%
 9. 20:00 · **Boreham Wood v Aldershot** (England - National League) — Over/Under → Under 6.5 · 91%
@@ -33,7 +33,7 @@ _Safest first. 💚 = 1xBet pays at least the fair minimum._
 24. 21:00 · **Paris v Roma** (UEFA Champions League) — Over/Under → Under 6.5 · 86%
 25. 20:45 · **Harrogate v Kidderminster** (England - National League) — Over/Under → Under 4.5 · 86%
 
-🎟️ One ticket with the top matches — top 2: 88% · top 3: 82% · top 5: 71% · top 8: 54% · top 10: 44%
+🎟️ One ticket with the top matches — top 2: 88% · top 3: 82% · top 5: 71% · top 8: 55% · top 10: 45%
 
 ### Thursday 26 November (37 matches)
 
@@ -370,8 +370,8 @@ _✅ = passes all checks (same as 'Your bets'); ⚠️ = riskier._
 - ⚠️ 20:45 · **Hartlepool v Solihull** (England - National League) — BET: Over/Under (total goals) → Under 4.5 · 84%
 - ⚠️ 11:00 · **Okayama v Shimizu S-Pulse** (Japan - J1 League) — BET: Over/Under (total goals) → Under 3.5 · 84%
 - ⚠️ 11:30 · **Urawa Reds v Cerezo Osaka** (Japan - J1 League) — BET: Urawa Reds total goals → Over 0.5 · 83%
+- ⚠️ 11:00 · **Avispa Fukuoka v Yokohama F. Marinos** (Japan - J1 League) — BET: Over/Under (total goals) → Under 3.5 · 82%
 - ⚠️ 21:00 · **Shakhtar v Fenerbahçe** (UEFA Champions League) — BET: Over/Under (total goals) → Under 4.5 · 81%
-- ⚠️ 11:00 · **Avispa Fukuoka v Yokohama F. Marinos** (Japan - J1 League) — BET: Over/Under (total goals) → Under 3.5 · 81%
 - ⚠️ 18:45 · **Slavia Praha v Villarreal** (UEFA Champions League) — BET: Villarreal total goals → Over 0.5 · 80%
 - ⚠️ 21:00 · **Sporting CP v Man Utd** (UEFA Champions League) — BET: Over/Under (total goals) → Over 1.5 · 79%
 
@@ -806,10 +806,10 @@ No bets this week - the prices are fair. That is normal.
 |---|---|---|---|---|---|---|---|---|---|
 | 11:00 | Japan - J1 League | V-Varen Nagasaki v Kawasaki Frontale | NO BET (model not profitable in this league) | - | ⭐ Over 1.5 goals · 85% · bet at 1.22+ | 1-2 | 35 / 23 / 43 | 96 / 85 / 65 / 43 / 25 / 12 / 5 | 4 / 15 / 35 / 57 / 75 / 88 / 95 |
 | 11:00 | Japan - J1 League | Mito v Verdy | NO BET (model not profitable in this league) | - | ⭐ Under 3.5 goals · 84% · bet at 1.22+ | 1-0 | 36 / 30 / 34 | 88 / 62 / 35 / 16 / 6 / 2 / 1 | 12 / 38 / 65 / 84 / 94 / 98 / 99 |
-| 11:00 | Japan - J1 League | FC Tokyo v Sanfrecce Hiroshima | NO BET (model not profitable in this league) | - | 🔒 Under 4.5 goals · 90% · bet at 1.14+ | 0-1 | 36 / 27 / 37 | 91 / 70 / 44 / 23 / 10 / 4 / 1 | 9 / 30 / 56 / 77 / 90 / 96 / 99 |
+| 11:00 | Japan - J1 League | FC Tokyo v Sanfrecce Hiroshima | NO BET (model not profitable in this league) | - | 🔒 Under 4.5 goals · 90% · bet at 1.14+ | 1-0 | 36 / 28 / 36 | 91 / 70 / 44 / 23 / 10 / 4 / 1 | 9 / 30 / 56 / 77 / 90 / 96 / 99 |
 | 11:00 | Japan - J1 League | Okayama v Shimizu S-Pulse | NO BET (model not profitable in this league) | - | ⭐ Under 3.5 goals · 84% · bet at 1.23+ | 1-0 | 45 / 29 / 26 | 88 / 62 / 35 / 16 / 6 / 2 / 1 | 12 / 38 / 65 / 84 / 94 / 98 / 99 |
-| 11:00 | Japan - J1 League | Avispa Fukuoka v Yokohama F. Marinos | NO BET (model not profitable in this league) | - | ⭐ Under 3.5 goals · 81% · bet at 1.27+ | 0-1 | 29 / 28 / 43 | 89 / 65 / 39 / 19 / 8 / 3 / 1 | 11 / 35 / 61 / 81 / 92 / 97 / 99 |
-| 11:00 | Japan - J1 League | Chiba v Nagoya Grampus | NO BET (model not profitable in this league) | - | ⭐⭐⭐ Under 4.5 goals · 89% · bet at 1.16+ | 1-0 | 40 / 27 / 33 | 92 / 72 / 47 / 25 / 11 / 4 / 2 | 8 / 28 / 53 / 75 / 89 / 96 / 98 |
+| 11:00 | Japan - J1 League | Avispa Fukuoka v Yokohama F. Marinos | NO BET (model not profitable in this league) | - | ⭐ Under 3.5 goals · 82% · bet at 1.26+ | 0-1 | 28 / 29 / 43 | 89 / 65 / 38 / 18 / 7 / 3 / 1 | 11 / 35 / 62 / 82 / 93 / 97 / 99 |
+| 11:00 | Japan - J1 League | Chiba v Nagoya Grampus | NO BET (model not profitable in this league) | - | ⭐⭐⭐ Under 4.5 goals · 89% · bet at 1.16+ | 1-0 | 41 / 27 / 33 | 92 / 72 / 47 / 25 / 11 / 4 / 2 | 8 / 28 / 53 / 75 / 89 / 96 / 98 |
 | 11:30 | Japan - J1 League | Urawa Reds v Cerezo Osaka | NO BET (model not profitable in this league) | - | ⭐ Urawa Reds to score · 83% · bet at 1.24+ | 2-1 | 50 / 23 / 27 | 95 / 81 / 59 / 36 / 19 / 9 / 4 | 5 / 19 / 41 / 64 / 81 / 91 / 96 |
 | 18:45 | UEFA Champions League | Slavia Praha v Villarreal | Bookmakers: Slavia Praha 3.06 · draw 3.85 · Villarreal 2.15. Model: back Villarreal only at 2.28+ | - | ⭐ Villarreal to score · 80% · bet at 1.29+ | 1-2 | 33 / 22 / 45 | 96 / 80 / 58 / 36 / 19 / 9 / 4 | 4 / 20 / 42 / 64 / 81 / 91 / 96 |
 | 18:45 | UEFA Champions League | Sabah v Barcelona | Bookmakers: Sabah 22.00 · draw 13.00 · Barcelona 1.08. Model: back Barcelona only at 1.15+ | - | 🔒 Sabah or Barcelona (no draw) · 90% · bet at 1.14+ | 1-4 | 4 / 6 / 90 | 100 / 97 / 90 / 78 / 62 / 44 / 29 | 0 / 3 / 10 / 22 / 38 / 56 / 71 |

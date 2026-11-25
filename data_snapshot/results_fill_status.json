@@ -1,5 +1,5 @@
 {
- "time": "2026-11-24 22:56 UTC",
+ "time": "2026-11-25 01:20 UTC",
  "leagues": {
   "SC1": {
    "season": 2026,
@@ -19,7 +19,7 @@
    },
    "teams": []
   },
-  "E0": {
+  "EC": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -28,7 +28,7 @@
    },
    "teams": []
   },
-  "EC": {
+  "E0": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -46,7 +46,7 @@
    },
    "teams": []
   },
-  "E3": {
+  "E2": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -64,7 +64,7 @@
    },
    "teams": []
   },
-  "E2": {
+  "E3": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -100,15 +100,6 @@
    },
    "teams": []
   },
-  "I1": {
-   "season": 2026,
-   "finished": 0,
-   "latest": null,
-   "errors": {
-    "http": 429
-   },
-   "teams": []
-  },
   "I2": {
    "season": 2026,
    "finished": 0,
@@ -118,7 +109,7 @@
    },
    "teams": []
   },
-  "SP1": {
+  "I1": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -137,6 +128,15 @@
    "teams": []
   },
   "F1": {
+   "season": 2026,
+   "finished": 0,
+   "latest": null,
+   "errors": {
+    "http": 429
+   },
+   "teams": []
+  },
+  "SP1": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -199,15 +199,6 @@
    },
    "teams": []
   },
-  "T1": {
-   "season": 2026,
-   "finished": 0,
-   "latest": null,
-   "errors": {
-    "http": 429
-   },
-   "teams": []
-  },
   "G1": {
    "season": 2026,
    "finished": 0,
@@ -218,6 +209,15 @@
    "teams": []
   },
   "P1": {
+   "season": 2026,
+   "finished": 0,
+   "latest": null,
+   "errors": {
+    "http": 429
+   },
+   "teams": []
+  },
+  "T1": {
    "season": 2026,
    "finished": 0,
    "latest": null,
