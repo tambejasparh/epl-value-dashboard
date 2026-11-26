@@ -1,5 +1,5 @@
 {
- "time": "2026-11-26 14:55 UTC",
+ "time": "2026-11-26 18:43 UTC",
  "key_present": true,
  "errors": [
   "fixtures 2026-11-26: {'http': 429}",
@@ -11,7 +11,7 @@
  "fixtures": 0,
  "result": "no upcoming fixtures found",
  "requests_used": 4,
- "odds_time": "2026-11-26 14:55 UTC",
+ "odds_time": "2026-11-26 18:43 UTC",
  "odds_calls": 0,
  "odds_rows": 0,
  "odds_fixtures": 0,
