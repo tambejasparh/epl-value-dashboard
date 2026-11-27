@@ -1,5 +1,5 @@
 {
- "time": "2026-11-27 00:59 UTC",
+ "time": "2026-11-27 14:53 UTC",
  "leagues": {
   "SC1": {
    "season": 2026,
@@ -55,7 +55,7 @@
    },
    "teams": []
   },
-  "E1": {
+  "E3": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -64,7 +64,7 @@
    },
    "teams": []
   },
-  "E3": {
+  "E1": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -82,7 +82,7 @@
    },
    "teams": []
   },
-  "D2": {
+  "D1": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -91,7 +91,7 @@
    },
    "teams": []
   },
-  "D1": {
+  "D2": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -118,7 +118,7 @@
    },
    "teams": []
   },
-  "SP1": {
+  "SP2": {
    "season": 2026,
    "finished": 0,
    "latest": null,
@@ -127,7 +127,7 @@
    },
    "teams": []
   },
-  "SP2": {
+  "SP1": {
    "season": 2026,
    "finished": 0,
    "latest": null,
