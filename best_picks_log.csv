@@ -1509,13 +1509,13 @@ Kickoff (UTC),Match day,League,Competition,HomeTeam,AwayTeam,Pick key,Best pick,
 2026-11-28 14:30,2026-11-28,D1,Germany - Bundesliga,Mainz,Union Berlin,HS,⭐⭐ Mainz to score · 86% · bet at 1.20+,85.8,1.2,Good,OK,1.80 - 1.09
 2026-11-28 15:00,2026-11-28,E0,England - Premier League,Leeds,Coventry,HS,⭐ Leeds to score · 85% · bet at 1.21+,85.0,1.21,Fair,below 85%,1.75 - 1.02
 2026-11-28 15:00,2026-11-28,E0,England - Premier League,Man United,Brentford,O15,⭐ Over 1.5 goals · 83% · bet at 1.24+,82.9,1.24,Fair,below 85%,1.73 - 1.43
-2026-11-28 15:00,2026-11-28,E1,England - Championship,West Brom,Bristol City,U45,⭐⭐ Under 4.5 goals · 88% · bet at 1.17+,87.9,1.17,Good,OK,1.54 - 0.97
-2026-11-28 15:00,2026-11-28,E1,England - Championship,West Ham,Stoke,HS,⭐⭐ West Ham to score · 87% · bet at 1.19+,86.6,1.19,Good,OK,2.18 - 1.07
-2026-11-28 15:00,2026-11-28,E1,England - Championship,Wrexham,Portsmouth,U45,🔒 Under 4.5 goals · 90% · bet at 1.14+,90.3,1.14,Banker,OK,1.44 - 1.04
-2026-11-28 15:00,2026-11-28,E1,England - Championship,QPR,Sheffield United,U45,⭐⭐ Under 4.5 goals · 86% · bet at 1.20+,86.0,1.2,Good,OK,1.43 - 1.24
-2026-11-28 15:00,2026-11-28,E1,England - Championship,Millwall,Burnley,U45,⭐⭐ Under 4.5 goals · 85% · bet at 1.21+,85.4,1.21,Good,OK,1.48 - 1.17
-2026-11-28 15:00,2026-11-28,E1,England - Championship,Birmingham,Bolton,HS,⭐⭐⭐ Birmingham to score · 88% · bet at 1.17+,88.2,1.17,Strong,OK,2.17 - 1.04
-2026-11-28 15:00,2026-11-28,E1,England - Championship,Derby,Watford,U45,⭐⭐⭐ Under 4.5 goals · 89% · bet at 1.16+,88.6,1.16,Strong,OK,1.41 - 1.12
+2026-11-28 15:00,2026-11-28,E1,England - Championship,West Brom,Bristol City,U45,⭐⭐ Under 4.5 goals · 88% · bet at 1.17+,87.9,1.17,Good,1xBet pays only 1.08 (needs 1.17),1.54 - 0.97
+2026-11-28 15:00,2026-11-28,E1,England - Championship,West Ham,Stoke,HS,⭐⭐ West Ham to score · 87% · bet at 1.19+,86.6,1.19,Good,1xBet pays only 1.07 (needs 1.19),2.18 - 1.07
+2026-11-28 15:00,2026-11-28,E1,England - Championship,Wrexham,Portsmouth,U45,🔒 Under 4.5 goals · 90% · bet at 1.14+,90.3,1.14,Banker,1xBet pays only 1.02 (needs 1.14),1.44 - 1.04
+2026-11-28 15:00,2026-11-28,E1,England - Championship,QPR,Sheffield United,U45,⭐⭐ Under 4.5 goals · 86% · bet at 1.20+,86.0,1.2,Good,1xBet pays only 1.09 (needs 1.20),1.43 - 1.24
+2026-11-28 15:00,2026-11-28,E1,England - Championship,Millwall,Burnley,U45,⭐⭐ Under 4.5 goals · 85% · bet at 1.21+,85.4,1.21,Good,1xBet pays only 1.12 (needs 1.21),1.48 - 1.17
+2026-11-28 15:00,2026-11-28,E1,England - Championship,Birmingham,Bolton,HS,⭐⭐⭐ Birmingham to score · 88% · bet at 1.17+,88.2,1.17,Strong,1xBet pays only 1.02 (needs 1.17),2.17 - 1.04
+2026-11-28 15:00,2026-11-28,E1,England - Championship,Derby,Watford,U45,⭐⭐⭐ Under 4.5 goals · 89% · bet at 1.16+,88.6,1.16,Strong,1xBet pays only 1.07 (needs 1.16),1.41 - 1.12
 2026-11-28 15:00,2026-11-28,B1,Belgium - Pro League,Westerlo,RAAL La Louviere,HS,⭐ Westerlo to score · 84% · bet at 1.22+,84.3,1.22,Fair,below 85%,2.03 - 1.13
 2026-11-28 15:00,2026-11-28,E2,England - League One,AFC Wimbledon,Barnsley,U45,⭐ Under 4.5 goals · 83% · bet at 1.24+,82.8,1.24,Fair,below 85%,1.31 - 1.42
 2026-11-28 15:00,2026-11-28,E2,England - League One,Wigan,Plymouth,U45,⭐⭐ Under 4.5 goals · 86% · bet at 1.20+,85.6,1.2,Good,OK,1.22 - 1.38
@@ -1535,7 +1535,7 @@ Kickoff (UTC),Match day,League,Competition,HomeTeam,AwayTeam,Pick key,Best pick,
 2026-11-28 15:00,2026-11-28,E3,England - League Two,Port Vale,Newport County,U45,⭐⭐⭐ Under 4.5 goals · 89% · bet at 1.16+,88.6,1.16,Strong,OK,1.68 - 0.88
 2026-11-28 15:00,2026-11-28,E3,England - League Two,Fleetwood Town,Accrington,U45,⭐⭐⭐ Under 4.5 goals · 89% · bet at 1.16+,88.7,1.16,Strong,OK,1.37 - 1.07
 2026-11-28 15:00,2026-11-28,E3,England - League Two,Rotherham,Oldham,U45,⭐⭐ Under 4.5 goals · 87% · bet at 1.18+,87.0,1.18,Good,OK,1.25 - 1.39
-2026-11-28 15:00,2026-11-28,E3,England - League Two,Colchester,York,U45,⭐⭐ Under 4.5 goals · 86% · bet at 1.20+,85.7,1.2,Good,OK,1.33 - 1.26
+2026-11-28 15:00,2026-11-28,E3,England - League Two,Colchester,York,U45,⭐⭐ Under 4.5 goals · 86% · bet at 1.20+,85.7,1.2,Good,1xBet pays only 1.14 (needs 1.20),1.33 - 1.26
 2026-11-28 15:00,2026-11-28,EC,England - National League,Altrincham,Worthing,O15,⭐ Over 1.5 goals · 84% · bet at 1.22+,84.3,1.22,Fair,below 85%,1.69 - 1.74
 2026-11-28 15:00,2026-11-28,EC,England - National League,Boreham Wood,Gateshead,O15,🔒 Over 1.5 goals · 91% · bet at 1.14+,90.6,1.14,Banker,OK,2.96 - 0.90
 2026-11-28 15:00,2026-11-28,EC,England - National League,Boston Utd,Kidderminster,U45,⭐⭐ Under 4.5 goals · 88% · bet at 1.17+,87.8,1.17,Good,OK,1.20 - 1.06
@@ -1690,3 +1690,15 @@ Kickoff (UTC),Match day,League,Competition,HomeTeam,AwayTeam,Pick key,Best pick,
 2026-12-02 20:30,2026-12-02,SP1,Spain - La Liga,Barcelona,Ath Madrid,HS,⭐⭐⭐ Barcelona to score · 90% · bet at 1.15+,89.9,1.15,Strong,OK,2.29 - 1.15
 2026-12-03 20:00,2026-12-03,E0,England - Premier League,Tottenham,Fulham,U45,⭐⭐⭐ Under 4.5 goals · 89% · bet at 1.15+,89.3,1.15,Strong,OK,1.34 - 1.15
 2026-12-04 17:00,2026-12-04,T1,Turkey - Super Lig,Galatasaray,Rizespor,HS,🔒 Galatasaray to score · 91% · bet at 1.13+,91.5,1.13,Banker,OK,2.46 - 0.95
+2026-12-04 19:00,2026-12-04,F2,France - Ligue 2,Annecy,Laval,U45,⭐⭐⭐ Under 4.5 goals · 89% · bet at 1.16+,88.7,1.16,Strong,OK,1.52 - 1.00
+2026-12-04 19:00,2026-12-04,F2,France - Ligue 2,Grenoble,Guingamp,U45,⭐⭐ Under 4.5 goals · 87% · bet at 1.19+,86.7,1.19,Good,no bookmaker odds and below 88%,1.27 - 1.40
+2026-12-04 19:00,2026-12-04,F2,France - Ligue 2,Dijon,Sochaux,HS,⭐ Dijon to score · 84% · bet at 1.23+,83.5,1.23,Fair,below 85%,1.80 - 1.08
+2026-12-04 19:00,2026-12-04,F2,France - Ligue 2,Clermont,Metz,U45,⭐⭐ Under 4.5 goals · 86% · bet at 1.20+,85.6,1.2,Good,no bookmaker odds and below 88%,1.21 - 1.53
+2026-12-04 19:00,2026-12-04,F2,France - Ligue 2,Boulogne,Pau FC,U45,🔒 Under 4.5 goals · 91% · bet at 1.13+,91.0,1.13,Banker,OK,1.25 - 1.10
+2026-12-04 19:00,2026-12-04,N1,Netherlands - Eredivisie,Telstar,Groningen,O15,⭐⭐ Over 1.5 goals · 86% · bet at 1.19+,86.4,1.19,Good,no bookmaker odds and below 88%,1.65 - 1.80
+2026-12-04 19:30,2026-12-04,D1,Germany - Bundesliga,Bayern Munich,Paderborn,O15,🔒 Over 1.5 goals · 92% · bet at 1.12+,91.9,1.12,Banker,OK,3.45 - 0.67
+2026-12-04 19:45,2026-12-04,F1,France - Ligue 1,Toulouse,Paris SG,AS,⭐ Paris SG to score · 84% · bet at 1.23+,83.9,1.23,Fair,below 85%,1.15 - 1.83
+2026-12-04 19:45,2026-12-04,I1,Italy - Serie A,Bologna,Roma,U45,⭐⭐ Under 4.5 goals · 86% · bet at 1.20+,86.2,1.2,Good,no bookmaker odds and below 88%,1.19 - 1.52
+2026-12-04 20:00,2026-12-04,E1,England - Championship,Sheffield United,West Ham,O15,⭐ Over 1.5 goals · 84% · bet at 1.22+,84.1,1.22,Fair,below 85%,1.58 - 1.69
+2026-12-04 20:00,2026-12-04,SP1,Spain - La Liga,Alaves,Espanol,U45,🔒 Under 4.5 goals · 91% · bet at 1.13+,90.9,1.13,Banker,OK,1.43 - 0.93
+2026-12-04 20:15,2026-12-04,P1,Portugal - Primeira Liga,Sp Lisbon,Maritimo,12,⭐⭐⭐ Sp Lisbon or Maritimo (no draw) · 89% · bet at 1.15+,89.3,1.15,Strong,OK,2.94 - 0.69
